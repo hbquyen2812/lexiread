@@ -2,10 +2,13 @@ import uuid
 from django.db import transaction
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-from .core import validate_entry,fingerprint,schedule,InputError,validate_progress,clean_text,MAX_READING_CHARS
-from ..models import Vocabulary,Reading,ReviewLog,LessonAttempt,ReadingQuestion
+from .core import (validate_entry,fingerprint,occurrence_fingerprint,schedule,InputError,
+                   validate_progress,clean_text,MAX_READING_CHARS)
+from ..models import Vocabulary,Reading,ReviewLog,LessonAttempt,ReadingQuestion,VocabularyOccurrence,ToeicAttempt
 VOCAB_FIELDS=('word','pos','meaning_vi','synonyms','paraphrases','example','example_vi','context',
               'note','tags','source_label','origin','verified','interval_days','ease','repetitions','lapses')
+BACKUP_VERSION=4
+MAX_BACKUP_BYTES=8*1024*1024
 
 def serial_vocab(v):
     data={key:getattr(v,key) for key in VOCAB_FIELDS}
@@ -33,10 +36,27 @@ def save_entry(user,data,reading=None):
     # Duplicate import never overwrites a reviewed sense or resets the review schedule.
     v,created=Vocabulary.objects.get_or_create(owner=user,fingerprint=fp,defaults={**fields,'reading':reading})
     if not created:
+        changed=[]
         new_tags=list(dict.fromkeys(v.tags+fields['tags']))[:20]
         if new_tags!=v.tags:
-            v.tags=new_tags;v.save(update_fields=['tags','updated_at'])
+            v.tags=new_tags;changed.append('tags')
+        if reading and not v.reading_id:
+            v.reading=reading;changed.append('reading')
+        if not v.source_label and fields['source_label']:
+            v.source_label=fields['source_label'];changed.append('source_label')
+        if not v.context and fields['context']:
+            v.context=fields['context'];changed.append('context')
+        if changed:v.save(update_fields=[*changed,'updated_at'])
+    record_occurrence(user,v,reading,fields['source_label'] or (reading.title if reading else ''),fields['context'])
     return v,created
+
+def record_occurrence(user,vocabulary,reading=None,source_label='',context=''):
+    if reading and reading.owner_id!=user.pk:raise InputError('Bài nguồn không thuộc tài khoản này.')
+    source_label=clean_text(source_label,200);context=clean_text(context,4000)
+    if not (reading or source_label or context):return None,False
+    fp=occurrence_fingerprint(reading.pk if reading else None,source_label,context)
+    return VocabularyOccurrence.objects.get_or_create(owner=user,vocabulary=vocabulary,fingerprint=fp,
+        defaults={'reading':reading,'source_label':source_label,'context':context})
 
 @transaction.atomic
 def review_entry(user,vocab_id,rating,token,mode='flashcard',correct=None):
@@ -54,12 +74,19 @@ def review_entry(user,vocab_id,rating,token,mode='flashcard',correct=None):
     return {'duplicate':False,'due_at':v.due_at.isoformat(),'interval_days':v.interval_days}
 
 def export_library(user):
-    return {'format':'lexiread-backup','version':2,'exported_at':timezone.now().isoformat(),
-            'readings':[backup_reading(r) for r in Reading.objects.filter(owner=user)],
-            'vocabulary':[serial_vocab(v) for v in Vocabulary.objects.filter(owner=user)],
+    readings=list(Reading.objects.filter(owner=user))
+    vocabulary=list(Vocabulary.objects.filter(owner=user).prefetch_related('occurrences'))
+    reviews=list(ReviewLog.objects.filter(owner=user))
+    toeic_attempts=list(ToeicAttempt.objects.filter(owner=user))
+    return {'format':'lexiread-backup','version':BACKUP_VERSION,'exported_at':timezone.now().isoformat(),
+            'counts':{'readings':len(readings),'vocabulary':len(vocabulary),'reviews':len(reviews),'toeic_attempts':len(toeic_attempts)},
+            'readings':[backup_reading(r) for r in readings],
+            'vocabulary':[backup_vocab(v) for v in vocabulary],
             'reviews':[{'vocabulary_id':str(r.vocabulary_id),'token':str(r.token),'rating':r.rating,
               'mode':r.mode,'correct':r.correct,'next_due':r.next_due.isoformat(),'created_at':r.created_at.isoformat()}
-              for r in ReviewLog.objects.filter(owner=user)]}
+              for r in reviews],
+            'toeic_attempts':[{'set_slug':a.set_slug,'token':str(a.token),'answers':a.answers,
+              'duration_seconds':a.duration_seconds,'created_at':a.created_at.isoformat()} for a in toeic_attempts]}
 
 @transaction.atomic
 def import_library(user,payload):
@@ -67,22 +94,26 @@ def import_library(user,payload):
     if isinstance(payload,list): payload={'vocabulary':payload}
     if not isinstance(payload,dict): raise InputError('Cần một danh sách từ hoặc một backup JSON.')
     is_backup=payload.get('format')=='lexiread-backup'
-    if is_backup and payload.get('version') not in (1,2): raise InputError('Phiên bản backup chưa được hỗ trợ.')
+    if is_backup and payload.get('version') not in (1,2,3,4): raise InputError('Phiên bản backup chưa được hỗ trợ.')
     entries=payload.get('vocabulary',[]); readings=payload.get('readings',[]) if is_backup else []
-    if not isinstance(entries,list) or len(entries)>5000 or not isinstance(readings,list) or len(readings)>100:
-        raise InputError('Mỗi lần nhập tối đa 5.000 thẻ và 100 bài đọc.')
+    if not isinstance(entries,list) or not isinstance(readings,list):raise InputError('Danh sách bài đọc hoặc từ vựng không hợp lệ.')
+    if not is_backup and len(entries)>5000:raise InputError('Mỗi lần nhập danh sách tối đa 5.000 thẻ.')
     # Validate all entries before any write; transaction also rolls back later errors.
     clean=[validate_entry(d) for d in entries]
-    reading_map={};word_map={};new_readings=0;created=0
+    reading_map={};word_map={};new_readings=0;created=0;seen_reading_ids=set();seen_word_ids=set()
     from .analysis import validate_analysis
     for raw in readings:
+        if not isinstance(raw,dict):raise InputError('Bài đọc trong backup không hợp lệ.')
         rid=str(raw.get('id',''))
-        try: uuid.UUID(rid)
+        try: source_id=uuid.UUID(rid)
         except (ValueError,TypeError): raise InputError('ID bài đọc trong backup không hợp lệ.')
+        if source_id in seen_reading_ids:raise InputError('Backup có ID bài đọc bị trùng.')
+        seen_reading_ids.add(source_id)
         title=clean_text(raw.get('title',''),200,True); text=clean_text(raw.get('text',''),MAX_READING_CHARS,True)
         slug=clean_text(raw.get('catalog_slug',''),100)
         r=Reading.objects.filter(owner=user,catalog_slug=slug).first() if slug else None
-        if not r:r=Reading.objects.filter(owner=user,title=title,text=text).first()
+        if not r:r=Reading.objects.filter(owner=user,pk=source_id).first()
+        if not r:r=Reading.objects.filter(owner=user,import_key=source_id).first()
         if not r:
             # Never trust an imported primary key: avoid clashes with other accounts.
             analysis=raw.get('analysis') or {}
@@ -93,24 +124,43 @@ def import_library(user,payload):
                     from .analysis import VOCAB_SCHEMA
                     basic['vocabulary']=[{k:v[k] for k in VOCAB_SCHEMA['properties']} for v in basic['vocabulary']]
                 analysis=validate_analysis(basic,text)
-            r=Reading.objects.create(owner=user,title=title,text=text,source_name=clean_text(raw.get('source_name',''),200),analysis=analysis)
+            r=Reading.objects.create(owner=user,title=title,text=text,source_name=clean_text(raw.get('source_name',''),200),
+                analysis=analysis,import_key=source_id)
             restore_reading_extras(r,raw)
             new_readings+=1
         reading_map[rid]=r
     for raw,fields in zip(entries,clean):
+        if not isinstance(raw,dict):raise InputError('Thẻ trong backup không hợp lệ.')
+        source_word_id=None
+        if is_backup:
+            try:source_word_id=uuid.UUID(str(raw.get('id','')))
+            except (ValueError,TypeError):raise InputError('ID thẻ trong backup không hợp lệ.')
+            if source_word_id in seen_word_ids:raise InputError('Backup có ID thẻ bị trùng.')
+            seen_word_ids.add(source_word_id)
         fields['origin']='import'
-        reading=reading_map.get(str(raw.get('reading_id','')))
+        raw_reading_id=str(raw.get('reading_id') or '')
+        reading=reading_map.get(raw_reading_id)
+        if is_backup and raw_reading_id and not reading:raise InputError('Thẻ tham chiếu bài đọc không có trong backup.')
         v,is_new=save_entry(user,fields,reading)
         if is_new and is_backup:
             progress=validate_progress(raw)
             for k,value in progress.items():setattr(v,k,value)
             v.save(update_fields=[*progress,'updated_at'])
         word_map[str(raw.get('id',''))]=v
+        occurrences=raw.get('occurrences',[]) if is_backup else []
+        if not isinstance(occurrences,list) or len(occurrences)>1000:raise InputError('Danh sách ngữ cảnh của thẻ không hợp lệ.')
+        for occurrence in occurrences:
+            if not isinstance(occurrence,dict):raise InputError('Ngữ cảnh trong backup không hợp lệ.')
+            occurrence_reading_id=str(occurrence.get('reading_id') or '')
+            occurrence_reading=reading_map.get(occurrence_reading_id)
+            if occurrence_reading_id and not occurrence_reading:raise InputError('Ngữ cảnh tham chiếu bài đọc không có trong backup.')
+            record_occurrence(user,v,occurrence_reading,occurrence.get('source_label',''),occurrence.get('context',''))
         created+=int(is_new)
     imported_logs=0
+    imported_toeic=0
     if is_backup:
         logs=payload.get('reviews',[])
-        if not isinstance(logs,list) or len(logs)>100000:raise InputError('Backup có quá nhiều lượt ôn.')
+        if not isinstance(logs,list):raise InputError('Lịch sử ôn trong backup không hợp lệ.')
         for log in logs:
             v=word_map.get(str(log.get('vocabulary_id','')))
             if not v:continue
@@ -125,7 +175,35 @@ def import_library(user,payload):
             if new and dates.get('last_reviewed'):
                 ReviewLog.objects.filter(pk=rec.pk).update(created_at=dates['last_reviewed'])
             imported_logs+=int(new)
-    return {'created':created,'skipped':len(entries)-created,'readings_created':new_readings,'reviews_created':imported_logs}
+        toeic_rows=payload.get('toeic_attempts',[]) if payload.get('version')>=4 else []
+        if not isinstance(toeic_rows,list) or len(toeic_rows)>10000:raise InputError('Lịch sử TOEIC trong backup không hợp lệ.')
+        from .toeic import get_toeic_set,grade_toeic
+        for raw in toeic_rows:
+            if not isinstance(raw,dict):raise InputError('Lượt TOEIC trong backup không hợp lệ.')
+            practice=get_toeic_set(clean_text(raw.get('set_slug',''),100,True))
+            result=grade_toeic(practice,raw.get('answers'))
+            try:token=uuid.UUID(raw.get('token',''))
+            except (ValueError,TypeError,AttributeError):raise InputError('Mã lượt TOEIC trong backup không hợp lệ.')
+            duration=raw.get('duration_seconds',0)
+            if not isinstance(duration,int) or isinstance(duration,bool) or not 0<=duration<=7200:
+                raise InputError('Thời gian TOEIC trong backup không hợp lệ.')
+            existing=ToeicAttempt.objects.filter(owner=user,token=token).first()
+            if existing and existing.set_slug!=practice['slug']:raise InputError('Mã lượt TOEIC xung đột với bộ khác.')
+            rec,new=ToeicAttempt.objects.get_or_create(owner=user,token=token,defaults={'set_slug':practice['slug'],
+                'answers':raw['answers'],'result':result,'duration_seconds':duration})
+            if new and raw.get('created_at'):
+                created_at=validate_progress({'last_reviewed':raw['created_at']}).get('last_reviewed')
+                ToeicAttempt.objects.filter(pk=rec.pk).update(created_at=created_at)
+            imported_toeic+=int(new)
+    return {'created':created,'skipped':len(entries)-created,'readings_created':new_readings,
+            'reviews_created':imported_logs,'toeic_attempts_created':imported_toeic}
+
+
+def backup_vocab(v):
+    data=serial_vocab(v)
+    data['occurrences']=[{'reading_id':str(o.reading_id) if o.reading_id else None,
+        'source_label':o.source_label,'context':o.context} for o in v.occurrences.all()]
+    return data
 
 
 def backup_reading(r):

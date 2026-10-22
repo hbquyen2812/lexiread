@@ -28,6 +28,10 @@ def paragraphs(text):
 def fingerprint(word,meaning):
     return hashlib.sha256((normalise(word)+'\x1f'+normalise(meaning)).encode()).hexdigest()
 
+def occurrence_fingerprint(reading_id,source_label,context):
+    raw=str(reading_id or '')+'\x1f'+normalise(source_label)+'\x1f'+normalise(context)
+    return hashlib.sha256(raw.encode()).hexdigest()
+
 def validate_entry(data):
     if not isinstance(data,dict): raise InputError('Mỗi từ vựng phải là một đối tượng JSON.')
     out={k:clean_text(data.get(k,''),limit,k in {'word','meaning_vi'}) for k,limit in ENTRY_TEXT_FIELDS.items()}

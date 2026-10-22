@@ -1,5 +1,18 @@
 from django.contrib import admin
-from .models import Reading,Vocabulary,ReviewLog,AICall
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+from .forms import EmailUserChangeForm,EmailUserCreationForm
+from .models import Reading,Vocabulary,ReviewLog,AICall,VocabularyOccurrence
+
+User=get_user_model()
+admin.site.unregister(User)
+@admin.register(User)
+class EmailUserAdmin(UserAdmin):
+    add_form=EmailUserCreationForm
+    form=EmailUserChangeForm
+    add_fieldsets=UserAdmin.add_fieldsets+(("Email đăng nhập",{'fields':('email',)}),)
+    list_display=('username','email','is_staff','is_active')
+    search_fields=('username','email')
 @admin.register(Reading)
 class ReadingAdmin(admin.ModelAdmin):
     list_display=('title','owner','updated_at')
@@ -16,7 +29,14 @@ class ReviewAdmin(admin.ModelAdmin):
 class AIAdmin(admin.ModelAdmin):
     list_display=('owner','task','model','status','created_at')
 
-from .models import CuratedLesson, LessonAttempt, ReadingQuestion
+@admin.register(VocabularyOccurrence)
+class VocabularyOccurrenceAdmin(admin.ModelAdmin):
+    list_display=('vocabulary','source_label','reading','owner','created_at')
+    search_fields=('vocabulary__word','source_label','context')
+    readonly_fields=('owner','vocabulary','reading','source_label','context','fingerprint','created_at')
+    def has_add_permission(self,request):return False
+
+from .models import CuratedLesson, LessonAttempt, ReadingQuestion, ToeicAttempt, DailyVisit
 @admin.register(CuratedLesson)
 class CuratedLessonAdmin(admin.ModelAdmin):
     list_display=('title','level','topic','revision','published','order')
@@ -29,6 +49,19 @@ class CuratedLessonAdmin(admin.ModelAdmin):
 class LessonAttemptAdmin(admin.ModelAdmin):
     list_display=('reading','created_at')
     readonly_fields=('reading','token','answers','result','created_at')
+    def has_add_permission(self,request):return False
+
+@admin.register(ToeicAttempt)
+class ToeicAttemptAdmin(admin.ModelAdmin):
+    list_display=('owner','set_slug','duration_seconds','created_at')
+    readonly_fields=('owner','set_slug','token','answers','result','duration_seconds','created_at')
+    def has_add_permission(self,request):return False
+
+@admin.register(DailyVisit)
+class DailyVisitAdmin(admin.ModelAdmin):
+    list_display=('date','owner','views','first_seen','last_seen')
+    list_filter=('date',)
+    readonly_fields=('date','visitor_key','owner','views','page_counts','first_seen','last_seen')
     def has_add_permission(self,request):return False
 
 @admin.register(ReadingQuestion)

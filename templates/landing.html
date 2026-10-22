@@ -1,0 +1,55 @@
+{% load static %}
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LexiRead — luyện đọc tiếng Anh, TOEIC Reading và ghi nhớ từ vựng theo lịch ôn cá nhân.">
+  <title>LexiRead · Đọc hiểu và ghi nhớ từ vựng</title>
+  <link rel="stylesheet" href="{% static 'app.css' %}">
+</head>
+<body class="public-page">
+  <header class="public-header">
+    <a class="brand" href="/"><span class="brand-mark">L<span>↗</span></span><span>LexiRead<small>READ. NOTICE. REMEMBER.</small></span></a>
+    <nav aria-label="Điều hướng giới thiệu">
+      <a href="#lessons">Bài luyện đọc</a><a href="#toeic">TOEIC Reading</a><a href="#features">Tính năng</a>
+    </nav>
+    <a class="btn primary" href="/login/">Đăng nhập bằng email →</a>
+  </header>
+  <main class="public-main">
+    <section class="hero public-hero">
+      <div><span class="eyebrow">READ → UNDERSTAND → REMEMBER</span><h1>Nhìn rõ lộ trình<br>trước khi bắt đầu.</h1><p>Xem toàn bộ bài luyện và chức năng của LexiRead. Khi chọn học, hệ thống sẽ yêu cầu đăng nhập để lưu riêng tiến độ, từ vựng và lịch ôn của bạn.</p><div class="button-row"><a class="btn primary" href="#lessons">Xem các bài học ↓</a><a class="btn secondary" href="/login/">Đăng nhập để học</a></div></div>
+      <div class="public-preview panel"><span class="eyebrow">MỖI NGÀY MỘT CHÚT</span><div class="preview-flow"><b>01</b><span>Đọc bài theo trình độ</span><b>02</b><span>Lưu từ ngay trong ngữ cảnh</span><b>03</b><span>Ôn đúng lúc trước khi quên</span><b>04</b><span>Theo dõi tiến bộ thật</span></div></div>
+    </section>
+    <section class="stats public-stats" aria-label="Nội dung hiện có">
+      <div class="stat"><div class="stat-top">Bài đọc soạn sẵn</div><div class="stat-value">{{ lessons|length }}</div><div class="stat-note">Có bản dịch, từ trọng tâm và câu hỏi</div></div>
+      <div class="stat"><div class="stat-top">Chủ đề</div><div class="stat-value">{{ topic_count }}</div><div class="stat-note">Phù hợp luyện đọc mỗi ngày</div></div>
+      <div class="stat"><div class="stat-top">Hướng luyện TOEIC</div><div class="stat-value">{{ practices|length }}</div><div class="stat-note">Part 5–6 và Part 7</div></div>
+      <div class="stat"><div class="stat-top">Dữ liệu học tập</div><div class="stat-value">Riêng</div><div class="stat-note">Tách biệt theo từng tài khoản</div></div>
+    </section>
+    <section id="lessons" class="public-section">
+      <div class="section-title"><div><span class="eyebrow">THƯ VIỆN LUYỆN ĐỌC</span><h2>Xem trước các bài hiện có</h2><p>Tiêu đề và mục tiêu được công khai; nội dung học, đáp án và tiến độ chỉ mở sau đăng nhập.</p></div></div>
+      <div class="lesson-grid">
+        {% for lesson in lessons %}<article class="lesson-card"><div class="lesson-card-top"><span class="level-pill {{ lesson.level|lower }}">{{ lesson.level }} <small>ước lượng</small></span><span class="muted">{{ lesson.topic }}</span></div><h3>{{ lesson.title }}</h3><p class="lesson-summary">{{ lesson.summary }}</p><div class="lesson-meta">{{ lesson.word_count }} từ <span>·</span> {{ lesson.vocabulary_count }} mục từ <span>·</span> {{ lesson.question_count }} câu hỏi</div><div class="card-footer"><span class="fineprint">Đăng nhập để lưu tiến độ</span><a class="btn small secondary" href="/login/?next=/%23lesson/{{ lesson.slug }}">Đăng nhập để học →</a></div></article>{% empty %}<div class="empty-state"><h2>Thư viện đang được chuẩn bị</h2><p>Khởi động lại website để nạp các bài soạn sẵn.</p></div>{% endfor %}
+      </div>
+    </section>
+    <section id="toeic" class="public-section">
+      <div class="section-title"><div><span class="eyebrow">TOEIC READING</span><h2>Hai hướng luyện rõ ràng</h2><p>Nội dung tự biên soạn theo dạng bài, không phải đề ETS chính thức và không quy đổi điểm TOEIC.</p></div></div>
+      <div class="public-toeic-grid">
+        {% for practice in practices %}<article class="panel toeic-option"><span class="chip warm">{{ practice.mode_label }}</span><h2>{{ practice.title }}</h2><p>{{ practice.description }}</p><div class="lesson-meta">Part {{ practice.parts|join:", " }} · {{ practice.question_count }} câu · {{ practice.duration_minutes }} phút</div><a class="btn primary" href="/login/?next=/%23toeic/{{ practice.slug }}">Đăng nhập để làm bài →</a></article>{% endfor %}
+      </div>
+    </section>
+    <section id="features" class="public-section">
+      <div class="section-title"><div><span class="eyebrow">CÓ GÌ TRONG HỆ THỐNG?</span><h2>Một vòng học khép kín</h2></div></div>
+      <div class="public-feature-grid">
+        <article class="panel"><span class="feature-icon">▤</span><h3>Đọc song ngữ có căn cứ</h3><p>Bản dịch theo đoạn, giải thích cấu trúc và câu hỏi đọc hiểu có bằng chứng từ bài.</p></article>
+        <article class="panel"><span class="feature-icon">✦</span><h3>Lưu từ theo ngữ cảnh</h3><p>Chọn từ hoặc cụm từ trong bài; lưu nghĩa, ví dụ, synonym và nguồn xuất hiện vào kho riêng.</p></article>
+        <article class="panel"><span class="feature-icon">↺</span><h3>Ôn tập ngắt quãng</h3><p>Lịch Quên / Khó / Nhớ / Dễ đưa từ quay lại theo mức ghi nhớ thay vì ôn tràn lan.</p></article>
+        <article class="panel"><span class="feature-icon">◎</span><h3>Tiến bộ có số liệu</h3><p>Theo dõi ngày học, lượt ôn, bài hoàn thành, từ khó và điểm luyện TOEIC của chính bạn.</p></article>
+      </div>
+    </section>
+    <section class="public-cta panel"><div><span class="eyebrow">SẴN SÀNG BẮT ĐẦU?</span><h2>Tiến độ chỉ được tạo sau khi đăng nhập.</h2><p>Nhờ vậy bài đã mở, từ đã lưu và lịch ôn luôn gắn đúng tài khoản.</p></div><a class="btn primary" href="/login/">Đăng nhập bằng email →</a></section>
+  </main>
+  <footer class="public-footer">LexiRead · Xem trước công khai, dữ liệu học tập riêng tư.</footer>
+</body>
+</html>

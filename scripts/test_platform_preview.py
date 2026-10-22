@@ -28,7 +28,8 @@ try:
     page.on('request',lambda r: external.append(r.url) if not r.url.startswith(BASE) else None)
     page.on('dialog',lambda d:d.accept())
     page.set_content(content_with_storage(),wait_until='domcontentloaded');page.wait_for_selector('.lesson-card')
-    assert page.locator('.stat-value').all_inner_texts()==['12','0','116','116'];ok('Reading-first home with accurate initial counts')
+    assert page.locator('.stat-value').all_inner_texts()==['12','0','116','116','1','1','0'];ok('Reading-first home with accurate learning-momentum counts')
+    assert page.locator('#analytics-nav').is_hidden();ok('Traffic dashboard stays admin-only')
     assert page.locator('.panel').filter(has_text='KẾ HOẠCH ÔN HÔM NAY').count()==1;ok('Home shows the daily spaced-review plan')
     page.screenshot(path=str(ROOT/'docs/v2_home.png'),full_page=True)
     navigate(page,'catalog','.catalog-filters');assert page.locator('.lesson-card').count()==12;ok('12 curated lessons listed')
@@ -38,6 +39,13 @@ try:
     assert page.locator('.lesson-card').count()==1;ok('Combined level and topic filters')
     page.locator('#catalog-level').select_option('');page.locator('#catalog-topic').select_option('');page.locator('[data-action="catalog-filter"]').click();page.wait_for_timeout(200)
     page.screenshot(path=str(ROOT/'docs/v2_catalog.png'),full_page=True)
+    navigate(page,'toeic','.toeic-mode-grid');assert page.locator('.toeic-mode').count()==2;ok('TOEIC Reading offers exactly two practice paths')
+    page.locator('a[href="#toeic-set/parts-5-6-workplace-basics"]').click();page.wait_for_selector('.toeic-questions');page.wait_for_timeout(150)
+    assert page.locator('.reading-question').count()==12 and all('answer' not in q for q in api(page,'/toeic/parts-5-6-workplace-basics/')['questions']);ok('TOEIC practice renders 12 questions without leaking keys')
+    page.locator('input[data-toeic-question]').evaluate_all("els=>els.filter((_,i)=>i%4===0).forEach(el=>{el.checked=true;el.dispatchEvent(new Event('change',{bubbles:true}))})")
+    page.locator('[data-action="submit-toeic"]').click();page.wait_for_timeout(200)
+    assert page.locator('.toeic-score').count()==1 and api(page,'/toeic/')['items'][1]['attempt_count']==1;ok('TOEIC result and personal attempt persist')
+    navigate(page,'catalog','.catalog-filters')
     page.locator('a[href="#lesson/a-quiet-start"]').click();page.wait_for_selector('.reader-en');page.wait_for_timeout(180)
     rid=page.url.split('#reading/')[1];r=api(page,f'/readings/{rid}/')
     assert len(r['paragraphs'])==4 and r['lesson']['slug']=='a-quiet-start';ok('Opening curated content creates user reading snapshot')
@@ -102,10 +110,19 @@ try:
     assert not page.locator('[data-action="reader-tab"][data-tab="quiz"]').count();ok('Imported reading has no fabricated fixed comprehension test')
     assert len(api(page,'/readings/')['items'])==2 and len(api(page,'/catalog/')['items'])==12;ok('Private imports remain out of the shared catalog')
     page.locator('[data-action="ask-paragraph"][data-index="0"]').click();assert 'A student' in page.locator('.selected-context').inner_text();ok('Ask about a chosen paragraph')
-    backup=api(page,'/backup/');assert backup['version']==2
+    routine=api(page,'/vocabulary/?q=routine')['items'][0]
+    linked=api(page,'/vocabulary/','POST',{'reading_id':private_id,'word':routine['word'],'meaning_vi':routine['meaning_vi'],'context':'A student reads a story every evening.','source_label':'My private practice'})
+    assert linked['created']==0 and private_id in {x['id'] for x in api(page,'/vocabulary/sources/')['items']}
+    assert routine['id'] in {x['id'] for x in api(page,f'/vocabulary/?reading={private_id}')['items']};ok('One sense keeps occurrences from multiple readings')
+    backup=api(page,'/backup/');assert backup['version']==4 and backup['counts']['vocabulary']==117 and backup['counts']['toeic_attempts']==1
     saved=next(x for x in backup['readings'] if x['id']==rid)
-    assert len(saved['lesson_attempts'])==1 and len(saved['qa_history'])==1 and saved['lesson_snapshot']['questions'];ok('V2 backup includes snapshot, quiz attempts and Q&A')
+    saved_routine=next(x for x in backup['vocabulary'] if x['id']==routine['id'])
+    assert len(saved['lesson_attempts'])==1 and len(saved['qa_history'])==1 and saved['lesson_snapshot']['questions'] and len(saved_routine['occurrences'])>=2 and len(backup['toeic_attempts'])==1;ok('V4 backup includes readings, vocabulary occurrences and TOEIC attempts')
     merged=api(page,'/restore/','POST',{'data':backup});assert merged['created']==0 and merged['readings_created']==0;ok('Backup merge keeps existing progress')
+    private_backup=next(x for x in backup['readings'] if x['id']==private_id)
+    duplicate_backup={'format':'lexiread-backup','version':3,'readings':[{**private_backup,'id':'00000000-0000-4000-8000-000000000099'}],'vocabulary':[],'reviews':[]}
+    first_duplicate=api(page,'/restore/','POST',{'data':duplicate_backup});second_duplicate=api(page,'/restore/','POST',{'data':duplicate_backup})
+    assert first_duplicate['readings_created']==1 and second_duplicate['readings_created']==0;ok('Backup preserves distinct readings with identical title and text')
     # Practice sessions retained after the reading-first changes.
     navigate(page,'vocabulary','#vocab-reading');assert page.locator('#vocab-reading option').count()>=3;ok('Vocabulary can be filtered by source reading')
     navigate(page,'reading/'+rid,'.reader-en');page.locator('[data-action="study-reading"]').click();page.wait_for_selector('#study-reading')
@@ -116,6 +133,9 @@ try:
     assert page.evaluate('state.study.retryCount===1 && state.study.cards.some((x,i)=>i>=3&&x._retry===true)');ok('Forgotten flashcard is queued once for same-session relearning')
     assert first_card_id not in [x['id'] for x in api(page,'/vocabulary/?scope=new&limit=500')['items']]
     assert first_card_id in [x['id'] for x in api(page,'/vocabulary/?scope=learning&limit=500')['items']];ok('Forgotten card remains learning, not new')
+    api(page,f'/vocabulary/{first_card_id}/review/','POST',{'token':'00000000-0000-4000-8000-000000000091','rating':'again'})
+    api(page,f'/vocabulary/{first_card_id}/review/','POST',{'token':'00000000-0000-4000-8000-000000000092','rating':'again'})
+    assert first_card_id in [x['id'] for x in api(page,'/vocabulary/?scope=weak&limit=500')['items']] and api(page,'/bootstrap/')['stats']['weak']>=1;ok('Frequently forgotten cards are grouped as weak words')
     for mode in ['meaning','reverse','synonym','paraphrase','cloze','typing']:
         page.locator('#study-mode').select_option(mode);page.locator('[data-action="start-study"]').click();page.wait_for_selector('.question-card')
         if mode=='typing':page.locator('#typing-answer').fill('test');page.locator('#typing-form button').click()

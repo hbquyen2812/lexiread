@@ -6,7 +6,7 @@ from datetime import timedelta
 from django.test import TestCase,Client,override_settings
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-from learning.models import Reading,Vocabulary,ReviewLog
+from learning.models import Reading,Vocabulary,ReviewLog,VocabularyOccurrence
 from learning.services.storage import save_entry,review_entry,export_library,import_library
 
 @override_settings(AI_PROVIDER='none',OPENAI_API_KEY='',ALLOWED_HOSTS=['testserver','localhost'],
@@ -39,6 +39,18 @@ class PrivateLibraryTests(TestCase):
         due=self.word.due_at
         duplicate,new=save_entry(self.alice,{'word':' BOLD ','meaning_vi':'Táo bạo'})
         self.assertFalse(new);self.assertEqual(duplicate.id,self.word.id);self.assertEqual(duplicate.due_at,due)
+    def test_same_sense_keeps_multiple_reading_occurrences(self):
+        second=Reading.objects.create(owner=self.alice,title='Second source',text='A bold new example.')
+        duplicate,new=save_entry(self.alice,{'word':'bold','meaning_vi':'táo bạo','context':'A bold new example.'},second)
+        self.assertFalse(new);self.assertEqual(duplicate.id,self.word.id)
+        self.assertEqual(VocabularyOccurrence.objects.filter(vocabulary=self.word).count(),2)
+        filtered=self.client.get(f'/api/vocabulary/?reading={second.id}').json()['items']
+        self.assertEqual([item['id'] for item in filtered],[str(self.word.id)])
+        sources=self.client.get('/api/vocabulary/sources/').json()['items']
+        self.assertEqual({item['id'] for item in sources},{str(self.reading.id),str(second.id)})
+        loose,_=save_entry(self.alice,{'word':'linked later','meaning_vi':'được liên kết sau'})
+        save_entry(self.alice,{'word':'linked later','meaning_vi':'được liên kết sau','context':'A later context.'},second)
+        loose.refresh_from_db();self.assertEqual(loose.reading_id,second.id);self.assertEqual(loose.context,'A later context.')
     def test_review_idempotency(self):
         token=uuid.uuid4()
         a=review_entry(self.alice,self.word.id,'good',token)
@@ -61,12 +73,24 @@ class PrivateLibraryTests(TestCase):
         self.word.refresh_from_db();self.assertIsNone(self.word.reading_id)
     def test_backup_ownership_and_merge(self):
         payload=export_library(self.alice)
-        self.assertEqual(len(payload['vocabulary']),1)
+        self.assertEqual(payload['version'],4);self.assertEqual(len(payload['vocabulary']),1)
+        self.assertEqual(payload['counts'],{'readings':1,'vocabulary':1,'reviews':0,'toeic_attempts':0})
         result=import_library(self.bob,payload)
         self.assertEqual(result['created'],1)
         clone=Vocabulary.objects.get(owner=self.bob,word='bold')
         self.assertNotEqual(clone.id,self.word.id)
+        self.assertEqual(clone.occurrences.count(),1)
         self.assertEqual(import_library(self.bob,payload)['created'],0)
+    def test_backup_preserves_distinct_identical_readings(self):
+        Reading.objects.create(owner=self.alice,title='Duplicate title',text='Exactly the same text.')
+        Reading.objects.create(owner=self.alice,title='Duplicate title',text='Exactly the same text.')
+        payload=export_library(self.alice)
+        first=import_library(self.bob,payload)
+        self.assertEqual(first['readings_created'],3)
+        self.assertEqual(Reading.objects.filter(owner=self.bob,title='Duplicate title').count(),2)
+        second=import_library(self.bob,payload)
+        self.assertEqual(second['readings_created'],0)
+        self.assertEqual(Reading.objects.filter(owner=self.bob,title='Duplicate title').count(),2)
     def test_exercise_answer_once(self):
         for word,meaning in [('apt','phù hợp'),('new','mới'),('old','cũ')]:
             save_entry(self.alice,{'word':word,'meaning_vi':meaning})
@@ -115,11 +139,15 @@ class PrivateLibraryTests(TestCase):
         self.assertIn(str(forgotten.id),{x['id'] for x in self.client.get('/api/vocabulary/?scope=learning').json()['items']})
         self.assertNotIn(str(forgotten.id),{x['id'] for x in self.client.get('/api/vocabulary/?scope=new').json()['items']})
         self.assertIn(str(mastered.id),{x['id'] for x in self.client.get('/api/vocabulary/?scope=mastered').json()['items']})
+        Vocabulary.objects.filter(pk=forgotten.pk).update(lapses=3)
+        self.assertEqual([x['id'] for x in self.client.get('/api/vocabulary/?scope=weak').json()['items']],[str(forgotten.id)])
         self.assertEqual([x['id'] for x in self.client.get('/api/vocabulary/?scope=overdue').json()['items']],[str(learning.id)])
         words=[x['word'] for x in self.client.get('/api/vocabulary/?sort=word&limit=100').json()['items']]
         self.assertEqual(words,sorted(words,key=str.casefold))
         self.assertEqual(self.client.get('/api/vocabulary/?scope=unknown').status_code,400)
         self.assertEqual(self.client.get('/api/vocabulary/?sort=unknown').status_code,400)
+        for query in ['page=0','page=nope','limit=0','limit=501']:
+            with self.subTest(query=query):self.assertEqual(self.client.get('/api/vocabulary/?'+query).status_code,400)
     def test_bootstrap_learning_stats_streak_and_goal(self):
         now=timezone.now()
         learning,_=save_entry(self.alice,{'word':'learning','meaning_vi':'đang học'})
@@ -129,11 +157,12 @@ class PrivateLibraryTests(TestCase):
             due_at=now-timedelta(days=2),last_reviewed=now)
         Vocabulary.objects.filter(pk=mastered.pk).update(repetitions=8,interval_days=21,
             due_at=now+timedelta(days=5),last_reviewed=now)
-        Vocabulary.objects.filter(pk=forgotten.pk).update(repetitions=0,interval_days=10/1440,
+        Vocabulary.objects.filter(pk=forgotten.pk).update(repetitions=0,interval_days=10/1440,lapses=3,
             due_at=now+timedelta(minutes=10),last_reviewed=now)
         today_log=ReviewLog.objects.create(owner=self.alice,vocabulary=self.word,rating='good',next_due=now)
         yesterday_log=ReviewLog.objects.create(owner=self.alice,vocabulary=self.word,rating='good',next_due=now)
         ReviewLog.objects.filter(pk=yesterday_log.pk).update(created_at=now-timedelta(days=1))
         data=self.client.get('/api/bootstrap/').json()['stats']
         self.assertEqual((data['new'],data['learning'],data['mastered'],data['overdue']),(1,2,1,1))
+        self.assertEqual(data['weak'],1)
         self.assertEqual((data['review_streak'],data['daily_goal'],data['daily_goal_progress'],data['daily_goal_percent']),(2,20,1,5))

@@ -1,4 +1,5 @@
 .env
+.env.*
 .venv
 venv
 .git
@@ -8,4 +9,5 @@ staticfiles
 *.log
 *.dump
 *.sql
+backups
 preview.html

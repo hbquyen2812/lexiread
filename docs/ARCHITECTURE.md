@@ -42,7 +42,9 @@ Không phụ thuộc nhà cung cấp AI khi ôn dữ liệu đã lưu. Không c�
 
 `LessonAttempt` lưu answers/result và unique reading+token; server chấm từ snapshot. `ReadingQuestion` lưu câu hỏi, phần chọn, JSON lời giải, hash văn bản và origin. Đổi bài nguồn làm lịch sử cũ không còn được hiển thị là câu trả lời cho bài mới.
 
-`static/reading_platform.js` triển khai catalog, homepage, quiz, tiến độ và hỏi đáp; `catalog.py` validate/grade; `qa.py` prompt/schema/exact evidence. `storage.py` bổ sung backup v2 và đọc backup v1.
+`static/reading_platform.js` triển khai catalog, homepage, quiz, tiến độ và hỏi đáp; `catalog.py` validate/grade; `qa.py` prompt/schema/exact evidence. `toeic.py` validate bộ Part 5–7, giấu answer key và chấm phía server. `storage.py` xuất backup v4, đọc backup v1–v4 và giữ định danh nguồn để import lặp không tạo trùng bài/lượt TOEIC.
+
+`traffic.py` ghi một `DailyVisit` cho mỗi mã phiên/ngày, cộng lượt xem theo trang và gắn owner sau đăng nhập. Mã phiên được băm với `SECRET_KEY`; không lưu IP. API tổng hợp chỉ cho staff/superuser. Analytics không được đưa vào backup học tập vì là dữ liệu vận hành, không phải tiến độ cá nhân cần chuyển tài khoản.
 
 Routes mới:
 
@@ -55,13 +57,15 @@ GET, POST  /api/readings/<uuid>/questions/
 POST       /api/prompts/ (task=question bổ sung)
 ```
 
-API xem bài không trả answer key trước nộp; backup và HTML offline vẫn có đáp án để người học sở hữu dữ liệu. Không thiết kế để chống gian lận thi cử. API catalog hiện tối đa 300 bài. Danh sách bài riêng dùng phân trang; dropdown nguồn của kho từ tải tối đa 100 bài riêng trong một lần, nên cần endpoint/pagination riêng nếu kho nguồn lớn hơn.
+API xem bài không trả answer key trước nộp; backup và HTML offline vẫn có đáp án để người học sở hữu dữ liệu. Không thiết kế để chống gian lận thi cử. API catalog hiện tối đa 300 bài. Danh sách bài riêng dùng phân trang; dropdown nguồn dùng endpoint riêng và chỉ trả những bài đang có thẻ liên kết.
 
 ## Các bảng và quan hệ
 
 **Reading:** một owner, title, original text, analysis JSON. Analysis giữ đoạn dịch, từ ứng viên và grammar. Sửa text làm analysis mất hiệu lực; xóa reading không xóa thẻ đã học.
 
-**Vocabulary:** một owner, một nghĩa, nhiều tags; có thể liên kết một Reading và một context. Fingerprint từ word + meaning đã chuẩn hóa. Cùng từ có thể nhiều nghĩa. Mỗi thẻ hiện lưu **một ngữ cảnh nguồn chính**, chưa có bảng nhiều lần xuất hiện ở nhiều bài. Import thẻ trùng chỉ gộp tags, không thay nghĩa/lịch ôn.
+**Vocabulary:** một owner, một nghĩa, nhiều tags và một lịch ôn. Fingerprint từ word + meaning đã chuẩn hóa. Cùng từ có thể nhiều nghĩa. Các trường `reading/context/source_label` cũ vẫn là ngữ cảnh chính để tương thích.
+
+**VocabularyOccurrence:** nhiều lần xuất hiện của cùng một nghĩa theo bài nguồn/ngữ cảnh. Lưu lại từ trùng nghĩa ở bài khác tạo occurrence mới nhưng không tạo thẻ mới và không đặt lại lịch ôn. Fingerprint occurrence ngăn ghi trùng cùng bài + nguồn + ngữ cảnh.
 
 **ReviewLog:** lịch sử các lượt ôn, rating, mode, correct nếu trắc nghiệm, next_due. Unique owner+token chống tính hai lần khi browser retry.
 
@@ -79,6 +83,7 @@ GET, POST           /api/readings/
 GET, PATCH, DELETE  /api/readings/<uuid>/
 POST                /api/readings/<uuid>/analyse/
 GET, POST           /api/vocabulary/
+GET                 /api/vocabulary/sources/
 PATCH, DELETE       /api/vocabulary/<uuid>/
 POST                /api/vocabulary/<uuid>/review/
 GET                 /api/exercises/next/
@@ -94,7 +99,9 @@ GET                 /health/
 
 `GET /api/readings/` nhận `q`, `status`, `favorite`, `sort`, `page`, `limit`. `status` là `all/completed/in_progress`; `favorite` là `all/yes/no`; `sort` là `updated/newest/oldest/title`. Kết quả chỉ gồm bài tự nhập của owner và trả `items`, `total`, `page`, `limit`.
 
-`GET /api/vocabulary/` nhận `q`, `tag`, `scope`, `reading`, `sort`, `page`, `limit`. `scope` là `all/due/overdue/new/learning/mastered/mistakes/unchecked`; `sort` là `due/newest/oldest/word`. `new` dùng `last_reviewed IS NULL`; `learning` dùng `last_reviewed IS NOT NULL` và `interval_days < 21`; `mastered` dùng `interval_days >= 21`. API giới hạn một lần đọc 500 thẻ; exercise lấy tối đa 1.000 thẻ từ tập lọc. Không gọi đây là hệ thống không giới hạn: nếu kho rất lớn, bổ sung server-side random selection và phân trang danh sách nguồn thích hợp.
+`GET /api/vocabulary/` nhận `q`, `tag`, `scope`, `reading`, `sort`, `page`, `limit`. `scope` là `all/due/overdue/new/learning/mastered/weak/mistakes/unchecked`; `sort` là `due/newest/oldest/word`. `new` dùng `last_reviewed IS NULL`; `learning` dùng `last_reviewed IS NOT NULL` và `interval_days < 21`; `mastered` dùng `interval_days >= 21`; `weak` dùng `lapses >= 3`. Lọc `reading` kiểm tra cả ngữ cảnh chính và `VocabularyOccurrence`. API giới hạn một lần đọc 500 thẻ; exercise lấy tối đa 1.000 thẻ từ tập lọc.
+
+Backup v4 gồm counts, occurrences, định danh import riêng và lượt TOEIC được chấm lại từ dữ liệu nguồn khi khôi phục. Hai bài riêng có cùng tiêu đề/nội dung vẫn được giữ tách biệt; import cùng một backup lần nữa là idempotent. File backup do ứng dụng phát hành bị giới hạn 8 MB giống đường restore để không tạo ra file mà chính ứng dụng không thể đọc lại. Kho lớn hơn phải backup PostgreSQL.
 
 Một request ôn thẻ:
 
@@ -115,7 +122,7 @@ Adapter hiện hỗ trợ **OpenAI Responses API**. Muốn Gemini, Ollama hoặc
 ## Ưu tiên mở rộng sau khi bản local ổn định
 
 1. **Độ tin cậy:** chạy integration/migration checks; đóng băng dependency đã kiểm thử; thêm test API mock, concurrent review và backup restore đầy đủ; hardened PDF worker riêng nếu mở public.
-2. **Dữ liệu tốt hơn:** tách Lexeme/Sense/Occurrence khi một nghĩa cần nhiều ngữ cảnh; occurrence ghi reading_id, paragraph_index, excerpt, user note. Tránh từ mới ghi đè ngữ cảnh cũ.
+2. **Dữ liệu tốt hơn:** đã có occurrence nhiều bài/ngữ cảnh; bước sau có thể tách sâu Lexeme/Sense, thêm paragraph index và ghi chú riêng cho từng occurrence.
 3. **Lịch ôn nâng cao:** adapter FSRS với phiên bản có nguồn chính thức, migration cho trạng thái và đánh giá trên lịch sử thật. Không gọi scheduler hiện tại là FSRS.
 4. **Bài dài / nhiều người:** hàng đợi phân tích, progress state, retry có idempotency, token budget; index/search/pagination phù hợp; không chạy request AI 150 giây trên nhiều web worker bị chiếm.
 5. **Trải nghiệm:** audio/dictionary adapter có giấy phép; quiz ngữ nghĩa kiểm định tốt hơn, không ghép arbitrary synonym; OCR tùy chọn với duyệt text; đồng bộ và quản lý thiết bị sau khi có auth/deployment vững.
@@ -124,9 +131,9 @@ Adapter hiện hỗ trợ **OpenAI Responses API**. Muốn Gemini, Ollama hoặc
 
 ## Ranh giới production
 
-Compose hiện tại dành cho một máy cá nhân, bind 127.0.0.1:8000, database không publish port trừ override dev. Muốn truy cập từ điện thoại không thể chỉ dùng localhost của điện thoại. Cần deployment HTTPS hoặc cấu hình mạng riêng an toàn; không sửa mapping thành public rồi bỏ qua xác thực/backup.
+`compose.yml` dành cho máy cá nhân, bind `127.0.0.1:8000`; database không publish port trừ override dev. `compose.prod.yml` bổ sung Caddy trên 80/443, ép cấu hình Django HTTPS/host/origin, HSTS khởi đầu và giữ Gunicorn/PostgreSQL sau mạng Compose. Quy trình VPS, backup/restore và cập nhật nằm trong `docs/DEPLOYMENT.md`.
 
-Đặt DEBUG=false, secrets riêng, domain cụ thể, CSRF trusted origins đúng scheme, HTTPS cookies, proxy đáng tin mới bật TRUST_PROXY_HTTPS, ngân sách/quota, logs không lộ nội dung riêng, backup khôi phục được. HSTS chỉ bật khi HTTPS đã ổn định. Tài liệu Django deployment checklist là chuẩn đối chiếu, không phải project tự chứng nhận production.
+Production overlay đặt DEBUG=false, domain/CSRF origin cụ thể, HTTPS cookies và chỉ tin header proxy khi dùng Caddy đi kèm. HSTS mặc định 1 giờ để kiểm tra ban đầu; chỉ tăng hoặc bật includeSubDomains/preload khi toàn bộ HTTPS đã ổn định. Vẫn cần secrets riêng, firewall, ngân sách/quota, logs không lộ nội dung riêng và backup đã thử khôi phục. Deployment checklist là chuẩn đối chiếu, không phải project tự chứng nhận production.
 
 ## Dựng lại bản HTML sau khi sửa giao diện
 

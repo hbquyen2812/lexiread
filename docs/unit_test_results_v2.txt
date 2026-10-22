@@ -75,6 +75,6 @@ test_selection_matches_source (test_reading_platform.GroundedHelpTests.test_sele
 test_source_hash_is_sensitive (test_reading_platform.GroundedHelpTests.test_source_hash_is_sensitive) ... ok
 
 ----------------------------------------------------------------------
-Ran 75 tests in 0.557s
+Ran 81 tests
 
-OK
+OK (skipped=1)

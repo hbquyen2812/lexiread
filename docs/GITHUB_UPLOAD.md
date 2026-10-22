@@ -1,6 +1,6 @@
 # Đưa LexiRead lên GitHub an toàn
 
-Hướng dẫn này dành riêng cho thư mục dự án hiện tại trên Windows. Git đã có trên máy, nhưng `D:\LexiRead` **chưa được khởi tạo thành Git repository**, chưa có commit và chưa có remote. Không cần cài GitHub CLI; có thể tạo repository trên website GitHub rồi dùng PowerShell để đẩy mã nguồn.
+Hướng dẫn này dành riêng cho thư mục dự án hiện tại trên Windows. `D:\LexiRead` đã là Git repository trên nhánh `main`, có commit đầu tiên và remote `origin` trỏ tới `https://github.com/hbquyen2812/lexiread.git`. Các thay đổi mới hiện vẫn ở máy; chưa tự commit hoặc push thay bạn.
 
 ## 1. Chọn private trước
 
@@ -28,27 +28,25 @@ Các file trên đang được ứng dụng demo sử dụng. Không chỉ thêm
 
 `README_VI.md` cũng đang có tên thật và ví dụ username cá nhân. Hãy chủ động quyết định giữ hay ẩn các thông tin này trước khi public.
 
-## 3. Tạo repository trên website GitHub
+## 3. Repository GitHub hiện tại
 
-1. Đăng nhập [GitHub](https://github.com/), chọn **New repository**.
-2. Đặt tên, ví dụ `lexiread`.
-3. Chọn **Private**.
-4. Không chọn tạo sẵn README, `.gitignore` hoặc LICENSE để repository từ xa hoàn toàn trống và tránh xung đột lần push đầu.
-5. Chọn **Create repository**, sau đó sao chép URL HTTPS dạng `https://github.com/USERNAME/lexiread.git`.
+Mở [repository LexiRead](https://github.com/hbquyen2812/lexiread) và kiểm tra **Settings → General → Visibility**. Nên giữ **Private** trong khi dự án còn bài/dữ liệu học cá nhân. Không cần tạo repository mới hoặc chạy lại `git remote add origin`.
 
 Repository hiện chưa có LICENSE. Không chọn giấy phép ngẫu nhiên; chỉ thêm sau khi đã quyết định rõ người khác được phép làm gì với mã nguồn và nội dung học.
 
-## 4. Khởi tạo Git bằng PowerShell
+## 4. Kiểm tra Git hiện tại
 
 Mở PowerShell và chạy:
 
 ```powershell
 cd D:\LexiRead
-git init -b main
 git status --short --branch
+git remote -v
 git config --get user.name
 git config --get user.email
 ```
+
+`git status` cho biết file nào đã sửa/thêm; `git remote -v` xác nhận đúng nơi sẽ push; hai lệnh `git config` cho biết tên/email ghi vào commit. `git init -b main` chỉ dành cho thư mục hoàn toàn chưa có `.git`, nên dự án hiện tại không cần chạy.
 
 Nếu hai lệnh cuối chưa trả về thông tin đúng, cấu hình **riêng cho repository này**:
 
@@ -105,16 +103,17 @@ git rm -r --cached -- DUONG_DAN_THU_MUC
 
 Sau khi sửa `.gitignore` hoặc thay dữ liệu, chạy lại `git add .`, `git status --short` và các kiểm tra trên. Không commit trước khi hiểu rõ mọi file trong danh sách staged.
 
-## 6. Commit và push repository private
+## 6. Commit và push thay đổi hiện tại
 
 Khi phần staged đã an toàn:
 
 ```powershell
-git commit -m "Initial commit"
-git remote add origin https://github.com/USERNAME/lexiread.git
+git commit -m "Add TOEIC reading practice and improve review flows"
 git remote -v
 git push -u origin main
 ```
+
+`git commit` tạo mốc lịch sử **trên máy**; `git remote -v` kiểm tra đích; `git push -u origin main` mới gửi commit lên GitHub và thiết lập nhánh theo dõi. Từ những lần sau chỉ cần `git push`.
 
 Thay `USERNAME` và tên repository bằng URL vừa sao chép. Git Credential Manager trên Windows có thể mở trình duyệt để đăng nhập. Không lưu access token vào file trong dự án và không dán token vào URL remote.
 

@@ -12,11 +12,16 @@ class Reading(models.Model):
     lesson_snapshot = models.JSONField(default=dict,blank=True)
     progress = models.JSONField(default=dict,blank=True)
     analysis = models.JSONField(default=dict,blank=True)
+    import_key = models.UUIDField(null=True,blank=True,editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:
         ordering = ['-updated_at']
-        constraints = [models.UniqueConstraint(fields=['owner','catalog_slug'], condition=~models.Q(catalog_slug=''), name='one_lesson_per_owner')]
+        constraints = [
+            models.UniqueConstraint(fields=['owner','catalog_slug'], condition=~models.Q(catalog_slug=''), name='one_lesson_per_owner'),
+            models.UniqueConstraint(fields=['owner','import_key'], condition=models.Q(import_key__isnull=False), name='unique_owner_import_key'),
+        ]
+        indexes = [models.Index(fields=['owner','updated_at'],name='reading_owner_updated')]
     def __str__(self): return self.title
 class Vocabulary(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -46,8 +51,15 @@ class Vocabulary(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:
         ordering = ['-created_at']
-        constraints = [models.UniqueConstraint(fields=['owner','fingerprint'],name='unique_owner_sense')]
-        indexes = [models.Index(fields=['owner','due_at'],name='vocab_owner_due')]
+        constraints = [
+            models.UniqueConstraint(fields=['owner','fingerprint'],name='unique_owner_sense'),
+            models.CheckConstraint(condition=models.Q(interval_days__gte=0,interval_days__lte=365),name='valid_vocab_interval'),
+            models.CheckConstraint(condition=models.Q(ease__gte=1.3,ease__lte=3),name='valid_vocab_ease'),
+        ]
+        indexes = [
+            models.Index(fields=['owner','due_at'],name='vocab_owner_due'),
+            models.Index(fields=['owner','last_reviewed','interval_days'],name='vocab_owner_progress'),
+        ]
     def save(self, *args, **kwargs):
         from .services.core import fingerprint
         self.fingerprint = fingerprint(self.word, self.meaning_vi)
@@ -59,13 +71,38 @@ class ReviewLog(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     vocabulary = models.ForeignKey(Vocabulary,on_delete=models.CASCADE,related_name='reviews')
     token = models.UUIDField(default=uuid.uuid4)
-    rating = models.CharField(max_length=8)
+    rating = models.CharField(max_length=8,choices=[('again','Again'),('hard','Hard'),('good','Good'),('easy','Easy')])
     mode = models.CharField(max_length=20,default='flashcard')
     correct = models.BooleanField(null=True)
     next_due = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     class Meta:
-        constraints = [models.UniqueConstraint(fields=['owner','token'],name='unique_review_token')]
+        constraints = [
+            models.UniqueConstraint(fields=['owner','token'],name='unique_review_token'),
+            models.CheckConstraint(condition=models.Q(rating__in=['again','hard','good','easy']),name='valid_review_rating'),
+        ]
+        indexes = [models.Index(fields=['owner','created_at'],name='review_owner_created')]
+
+class VocabularyOccurrence(models.Model):
+    """A saved sense may be encountered in several readings without duplicating its schedule."""
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    vocabulary = models.ForeignKey(Vocabulary,on_delete=models.CASCADE,related_name='occurrences')
+    reading = models.ForeignKey(Reading,on_delete=models.SET_NULL,null=True,blank=True,related_name='vocabulary_occurrences')
+    source_label = models.CharField(max_length=200,blank=True)
+    context = models.TextField(blank=True)
+    fingerprint = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ['created_at']
+        constraints = [models.UniqueConstraint(fields=['owner','vocabulary','fingerprint'],name='unique_vocab_occurrence')]
+        indexes = [models.Index(fields=['owner','reading'],name='occurrence_owner_reading')]
+    def save(self,*args,**kwargs):
+        from .services.core import occurrence_fingerprint
+        self.fingerprint=occurrence_fingerprint(self.reading_id,self.source_label,self.context)
+        if kwargs.get('update_fields') is not None:
+            kwargs['update_fields']=set(kwargs['update_fields'])|{'fingerprint'}
+        super().save(*args,**kwargs)
+    def __str__(self): return f'{self.vocabulary} · {self.source_label or "nguồn riêng"}'
 class ExerciseAttempt(models.Model):
     id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
@@ -123,6 +160,40 @@ class LessonAttempt(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     class Meta:
         constraints = [models.UniqueConstraint(fields=['reading','token'], name='unique_lesson_attempt')]
+
+class ToeicAttempt(models.Model):
+    """A personal result for an original TOEIC-style practice set."""
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    set_slug = models.SlugField(max_length=100)
+    token = models.UUIDField(default=uuid.uuid4)
+    answers = models.JSONField(default=dict)
+    result = models.JSONField(default=dict)
+    duration_seconds = models.PositiveIntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ['-created_at']
+        constraints = [
+            models.UniqueConstraint(fields=['owner','token'],name='unique_toeic_attempt_token'),
+            models.CheckConstraint(condition=models.Q(duration_seconds__lte=7200),name='valid_toeic_duration'),
+        ]
+        indexes = [models.Index(fields=['owner','set_slug','created_at'],name='toeic_owner_set_date')]
+
+class DailyVisit(models.Model):
+    """Privacy-preserving daily traffic row; stores a salted session hash, never an IP."""
+    date = models.DateField(default=timezone.localdate)
+    visitor_key = models.CharField(max_length=64)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.SET_NULL,null=True,blank=True)
+    views = models.PositiveIntegerField(default=1)
+    page_counts = models.JSONField(default=dict,blank=True)
+    first_seen = models.DateTimeField(auto_now_add=True)
+    last_seen = models.DateTimeField(auto_now=True)
+    class Meta:
+        ordering = ['-date','-last_seen']
+        constraints = [models.UniqueConstraint(fields=['date','visitor_key'],name='unique_daily_visitor')]
+        indexes = [
+            models.Index(fields=['date'],name='visit_date'),
+            models.Index(fields=['owner','date'],name='visit_owner_date'),
+        ]
 
 class ReadingQuestion(models.Model):
     reading = models.ForeignKey(Reading, on_delete=models.CASCADE, related_name='questions')

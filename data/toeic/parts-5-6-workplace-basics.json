@@ -1,0 +1,43 @@
+{
+  "slug": "parts-5-6-workplace-basics",
+  "title": "Workplace Grammar Sprint",
+  "mode": "parts-5-6",
+  "mode_label": "Ngữ pháp & từ vựng",
+  "parts": [5, 6],
+  "level": "Mục tiêu 450–650",
+  "duration_minutes": 12,
+  "description": "Luyện chọn dạng từ, giới từ, liên từ và hoàn thành một email công việc ngắn.",
+  "instructions": "Chọn một đáp án cho mỗi chỗ trống. Làm liền mạch, chỉ xem giải thích sau khi nộp.",
+  "documents": [
+    {
+      "id": "seminar-email",
+      "kind": "Email",
+      "heading": "Customer Service Seminar",
+      "body": "To: Seminar Participants\nFrom: Training Office\nSubject: Friday's Customer Service Seminar\n\nThank you for registering for our customer service seminar. The session will begin at 9:00 a.m. Please arrive 15 minutes early so that staff can ___(9)___ your attendance. Training materials will be provided, ___(10)___ participants should bring a notebook. Because lunch is included, please inform us of any dietary requirements by Monday. ___(11)___ If you need to cancel, contact the Training Office no later than Wednesday; otherwise, the registration fee cannot be ___(12)___."
+    }
+  ],
+  "questions": [
+    {"id":"p5-01","part":5,"prompt":"The annual safety workshop has been rescheduled ___ Friday because the trainer is unavailable today.","options":["for","since","during","among"],"answer":0,"explanation_vi":"Reschedule for + thời điểm mới: dời lịch sang thứ Sáu.","evidence":"","document_ids":[]},
+    {"id":"p5-02","part":5,"prompt":"All expense reports must be submitted ___ five business days of the trip.","options":["between","within","along","beside"],"answer":1,"explanation_vi":"Within + khoảng thời gian nghĩa là trong vòng, không muộn hơn thời hạn đó.","evidence":"","document_ids":[]},
+    {"id":"p5-03","part":5,"prompt":"Ms. Chen is responsible for ___ the vendor contracts before they are signed.","options":["review","reviewed","reviewing","reviewer"],"answer":2,"explanation_vi":"Sau giới từ for cần danh từ hoặc V-ing; reviewing phù hợp cả ngữ pháp lẫn nghĩa.","evidence":"","document_ids":[]},
+    {"id":"p5-04","part":5,"prompt":"The updated booking system is considerably more ___ than the previous version.","options":["rely","reliable","reliably","reliability"],"answer":1,"explanation_vi":"Sau more cần tính từ để bổ nghĩa cho chủ ngữ; reliable là tính từ.","evidence":"","document_ids":[]},
+    {"id":"p5-05","part":5,"prompt":"Applicants who meet all requirements will be contacted ___ email next week.","options":["by","from","over","into"],"answer":0,"explanation_vi":"By email là cụm cố định chỉ phương thức liên lạc.","evidence":"","document_ids":[]},
+    {"id":"p5-06","part":5,"prompt":"Due to unexpected demand, the factory will operate ___ the weekend.","options":["throughout","toward","except","beneath"],"answer":0,"explanation_vi":"Throughout the weekend nghĩa là trong suốt cả cuối tuần.","evidence":"","document_ids":[]},
+    {"id":"p5-07","part":5,"prompt":"The committee approved the proposal after it ___ the possible financial risks.","options":["reviews","had reviewed","will review","is reviewing"],"answer":1,"explanation_vi":"Việc xem xét xảy ra trước việc phê duyệt trong quá khứ, nên past perfect had reviewed là rõ nhất.","evidence":"","document_ids":[]},
+    {"id":"p5-08","part":5,"prompt":"Please notify reception in advance ___ you expect a visitor after 6:00 p.m.","options":["if","unless","despite","whereas"],"answer":0,"explanation_vi":"If mở điều kiện: hãy báo trước nếu bạn dự kiến có khách.","evidence":"","document_ids":[]},
+    {"id":"p6-09","part":6,"prompt":"Question 9: staff can ___ your attendance.","options":["confirm","confirmation","confirmed","confirms"],"answer":0,"explanation_vi":"Sau động từ khuyết thiếu can dùng động từ nguyên mẫu confirm.","evidence":"staff can ___(9)___ your attendance","document_ids":["seminar-email"]},
+    {"id":"p6-10","part":6,"prompt":"Question 10: Training materials will be provided, ___ participants should bring a notebook.","options":["or","but","because","unless"],"answer":1,"explanation_vi":"Hai ý tương phản nhẹ: có tài liệu nhưng người học vẫn nên mang sổ, nên dùng but.","evidence":"Training materials will be provided, ___(10)___ participants should bring a notebook.","document_ids":["seminar-email"]},
+    {"id":"p6-11","part":6,"prompt":"Question 11: Chọn câu phù hợp nhất với vị trí trống.","options":["This will help us prepare a suitable meal for you.","The seminar was canceled without notice last month.","All offices on the second floor have new printers.","Your manager must approve every business trip."],"answer":0,"explanation_vi":"Câu trước hỏi về yêu cầu ăn uống; câu đúng giải thích mục đích là chuẩn bị bữa ăn phù hợp.","evidence":"Because lunch is included, please inform us of any dietary requirements by Monday.","document_ids":["seminar-email"]},
+    {"id":"p6-12","part":6,"prompt":"Question 12: the registration fee cannot be ___.","options":["refund","refunded","refunding","refundable"],"answer":1,"explanation_vi":"Sau cannot be cần past participle để tạo thể bị động: cannot be refunded.","evidence":"the registration fee cannot be ___(12)___.","document_ids":["seminar-email"]}
+  ],
+  "focus_vocabulary": [
+    {"word":"reschedule","pos":"verb","meaning_vi":"dời lịch, sắp xếp lại thời gian","synonyms":["rearrange"],"paraphrases":["move to a different time"],"example":"We rescheduled the workshop for Friday.","example_vi":"Chúng tôi dời buổi hội thảo sang thứ Sáu.","context":"The annual safety workshop has been rescheduled for Friday.","note":"Thường dùng reschedule something for/to a time.","tags":["TOEIC","Part 5"]},
+    {"word":"within","pos":"preposition","meaning_vi":"trong vòng, không quá một khoảng thời gian","synonyms":[],"paraphrases":["before the end of"],"example":"Please reply within three days.","example_vi":"Vui lòng trả lời trong vòng ba ngày.","context":"within five business days","note":"Khác with in: within nhấn mạnh hạn chót.","tags":["TOEIC","Part 5"]},
+    {"word":"be responsible for","pos":"phrase","meaning_vi":"chịu trách nhiệm về","synonyms":["be in charge of"],"paraphrases":["have responsibility for"],"example":"She is responsible for reviewing contracts.","example_vi":"Cô ấy chịu trách nhiệm xem xét hợp đồng.","context":"is responsible for reviewing the vendor contracts","note":"Theo sau bởi danh từ hoặc V-ing.","tags":["TOEIC","Part 5"]},
+    {"word":"considerably","pos":"adverb","meaning_vi":"đáng kể, nhiều","synonyms":["significantly"],"paraphrases":["by a large amount"],"example":"The new process is considerably faster.","example_vi":"Quy trình mới nhanh hơn đáng kể.","context":"considerably more reliable","note":"Thường bổ nghĩa cho so sánh hơn.","tags":["TOEIC","Part 5"]},
+    {"word":"throughout","pos":"preposition","meaning_vi":"trong suốt, khắp","synonyms":[],"paraphrases":["during the whole of"],"example":"Support is available throughout the week.","example_vi":"Hỗ trợ có sẵn suốt cả tuần.","context":"throughout the weekend","note":"Theo sau bởi danh từ chỉ thời gian hoặc nơi chốn.","tags":["TOEIC","Part 5"]},
+    {"word":"attendance","pos":"noun","meaning_vi":"sự có mặt, việc tham dự","synonyms":["presence"],"paraphrases":["being present at an event"],"example":"Staff will confirm your attendance.","example_vi":"Nhân viên sẽ xác nhận sự tham dự của bạn.","context":"confirm your attendance","note":"Danh từ không đếm được trong nghĩa chung.","tags":["TOEIC","Part 6"]},
+    {"word":"dietary requirement","pos":"noun phrase","meaning_vi":"yêu cầu đặc biệt về chế độ ăn","synonyms":[],"paraphrases":["special food need"],"example":"Tell us about any dietary requirements.","example_vi":"Hãy cho chúng tôi biết mọi yêu cầu đặc biệt về chế độ ăn.","context":"any dietary requirements","note":"Hay gặp trong email sự kiện và đặt tiệc.","tags":["TOEIC","Part 6"]},
+    {"word":"registration fee","pos":"noun phrase","meaning_vi":"phí đăng ký","synonyms":[],"paraphrases":["fee paid to register"],"example":"The registration fee is nonrefundable after Wednesday.","example_vi":"Phí đăng ký không được hoàn lại sau thứ Tư.","context":"the registration fee cannot be refunded","note":"Refund là động từ/danh từ; refundable là tính từ.","tags":["TOEIC","Part 6"]}
+  ]
+}

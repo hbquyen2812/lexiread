@@ -1,5 +1,6 @@
 import csv
 import hashlib
+import ipaddress
 import io
 import json
 import uuid
@@ -16,13 +17,17 @@ from django.http import JsonResponse,HttpResponse
 from django.shortcuts import render,get_object_or_404
 from django.utils import timezone
 from django.views.decorators.csrf import ensure_csrf_cookie
-from .models import Reading,Vocabulary,ReviewLog,ExerciseAttempt,AICall,LoginFailure,CuratedLesson,LessonAttempt,ReadingQuestion
+from .models import (Reading,Vocabulary,ReviewLog,ExerciseAttempt,AICall,LoginFailure,
+                     CuratedLesson,LessonAttempt,ReadingQuestion,VocabularyOccurrence)
+from .models import ToeicAttempt
 from .services.core import (InputError,clean_text,parse_json,validate_entry,fingerprint,normalise,
                             calculate_review_streak,MAX_READING_CHARS)
-from .services.storage import serial_vocab,serial_reading,save_entry,review_entry,export_library,import_library
+from .services.storage import (serial_vocab,serial_reading,save_entry,review_entry,
+                               export_library,import_library,MAX_BACKUP_BYTES)
 from .services.analysis import ANALYSIS_SCHEMA,ENTRY_SCHEMA,arr,obj,prompt_for_reading,prompt_for_word,validate_analysis,SYSTEM
 from .services.exercises import build_question,MODES
 from .services import ai
+from .forms import EmailAuthenticationForm
 
 def api(*methods):
     def decorate(fn):
@@ -45,12 +50,22 @@ def body(request):
     return data
 
 def login_key(request):
-    # X-Forwarded-For is intentionally not trusted. Configure at the trusted proxy later.
-    return hashlib.sha256((settings.SECRET_KEY+request.META.get('REMOTE_ADDR','unknown')).encode()).hexdigest()
+    address=request.META.get('REMOTE_ADDR','unknown')
+    if settings.TRUST_PROXY_HTTPS and request.META.get('HTTP_X_FORWARDED_FOR'):
+        address=request.META['HTTP_X_FORWARDED_FOR'].split(',',1)[0].strip()
+    try:address=str(ipaddress.ip_address(address))
+    except ValueError:address='unknown'
+    return hashlib.sha256((settings.SECRET_KEY+address).encode()).hexdigest()
 
-class PrivateLoginView(LoginView):
+class EmailLoginView(LoginView):
     template_name='registration/login.html'
+    authentication_form=EmailAuthenticationForm
     redirect_authenticated_user=True
+    def get(self,request,*args,**kwargs):
+        from .services.traffic import record_visit
+        response=super().get(request,*args,**kwargs)
+        record_visit(request,'login')
+        return response
     def post(self,request,*args,**kwargs):
         cutoff=timezone.now()-timedelta(minutes=15)
         if LoginFailure.objects.filter(key=login_key(request),created_at__gte=cutoff).count()>=10:
@@ -63,9 +78,23 @@ class PrivateLoginView(LoginView):
         LoginFailure.objects.filter(key=login_key(self.request)).delete()
         return super().form_valid(form)
 
-@login_required
 @ensure_csrf_cookie
-def index(request): return render(request,'app.html')
+def index(request):
+    from .services.traffic import record_visit
+    record_visit(request,'home')
+    if request.user.is_authenticated:return render(request,'app.html')
+    from .services.toeic import toeic_sets
+    lessons=[]
+    for lesson in CuratedLesson.objects.filter(published=True).order_by('order','title'):
+        content=lesson.content or {}
+        lessons.append({'slug':lesson.slug,'title':lesson.title,'level':lesson.level,'topic':lesson.topic,
+            'summary':content.get('summary',''),'word_count':len(content.get('text','').split()),
+            'question_count':len(content.get('questions',[])),
+            'vocabulary_count':len(content.get('analysis',{}).get('vocabulary',[]))})
+    practices=[{key:practice[key] for key in ('slug','title','mode_label','parts','level','duration_minutes','description','question_count')}
+        for practice in toeic_sets()]
+    return render(request,'landing.html',{'lessons':lessons,'practices':practices,
+        'topic_count':len({lesson['topic'] for lesson in lessons})})
 
 def health(request):
     from django.db import connection
@@ -87,10 +116,13 @@ def filtered_vocab(request):
     elif scope=='new':qs=qs.filter(last_reviewed__isnull=True)
     elif scope=='learning':qs=qs.filter(last_reviewed__isnull=False,interval_days__lt=21)
     elif scope=='mastered':qs=qs.filter(interval_days__gte=21)
+    elif scope=='weak':qs=qs.filter(lapses__gte=3)
     elif scope=='mistakes':qs=qs.filter(lapses__gt=0)
     elif scope=='unchecked':qs=qs.filter(verified=False)
     elif scope!='all':raise InputError('Phạm vi từ vựng không hợp lệ.')
-    if request.GET.get('reading'):qs=qs.filter(reading_id=uuid.UUID(request.GET['reading']))
+    if request.GET.get('reading'):
+        reading_id=uuid.UUID(request.GET['reading'])
+        qs=qs.filter(Q(reading_id=reading_id)|Q(occurrences__reading_id=reading_id)).distinct()
     sort=request.GET.get('sort','')
     if sort=='due':qs=qs.order_by('due_at','created_at')
     elif sort=='newest':qs=qs.order_by('-created_at','-id')
@@ -98,7 +130,7 @@ def filtered_vocab(request):
     elif sort=='word':qs=qs.order_by(Lower('word'),'id')
     elif sort:raise InputError('Cách sắp xếp từ vựng không hợp lệ.')
     elif scope in {'due','overdue'}:qs=qs.order_by('due_at','created_at')
-    elif scope=='mistakes':qs=qs.order_by('-lapses','due_at')
+    elif scope in {'weak','mistakes'}:qs=qs.order_by('-lapses','due_at')
     return qs
 
 @api('GET')
@@ -117,19 +149,39 @@ def bootstrap(request):
     for i in range(6,-1,-1):
         d=today-timedelta(days=i)
         days.append({'date':d.isoformat(),'label':d.strftime('%d/%m'),'count':logs.filter(created_at__date=d).count()})
-    return JsonResponse({'user':request.user.get_username(),'ai_enabled':ai.enabled(),
+    from .services.traffic import personal_activity
+    activity=personal_activity(request.user);toeic=ToeicAttempt.objects.filter(owner=request.user)
+    return JsonResponse({'user':request.user.email or request.user.get_username(),'is_staff':request.user.is_staff,'ai_enabled':ai.enabled(),
         'model':settings.OPENAI_MODEL if ai.enabled() else '',
         'ai_calls_today':AICall.objects.filter(owner=request.user,created_at__date=today).count(),
         'ai_daily_limit':settings.AI_DAILY_LIMIT,'stats':{'total':vs.count(),'due':vs.filter(due_at__lte=now).count(),
         'new':vs.filter(last_reviewed__isnull=True).count(),
         'learning':vs.filter(last_reviewed__isnull=False,interval_days__lt=21).count(),
         'mastered':vs.filter(interval_days__gte=21).count(),
+        'weak':vs.filter(lapses__gte=3).count(),
         'overdue':vs.filter(due_at__lte=now-timedelta(days=1)).count(),
         'readings':Reading.objects.filter(owner=request.user,catalog_slug='').count(),'lessons':CuratedLesson.objects.filter(published=True).count(),'completed_readings':Reading.objects.filter(owner=request.user,progress__completed=True).count(),'reviews_today':reviews_today,
         'review_streak':review_streak,'daily_goal':daily_goal,
         'daily_goal_progress':min(reviews_today,daily_goal),
         'daily_goal_percent':min(100,round(100*reviews_today/daily_goal)),
-        'mistakes':vs.filter(lapses__gt=0).count(),'accuracy':round(100*good/n) if n else None},'tags':tags,'activity':days})
+        'mistakes':vs.filter(lapses__gt=0).count(),'accuracy':round(100*good/n) if n else None,
+        'active_days_30':activity['active_days_30'],'page_views_today':activity['page_views_today'],
+        'toeic_attempts':toeic.count(),'toeic_best':max((row.get('score',0) for row in toeic.values_list('result',flat=True)),default=None)},'tags':tags,'activity':days})
+
+@api('POST')
+def activity_visit(request):
+    from .services.traffic import record_visit
+    page=body(request).get('page','')
+    row=record_visit(request,page)
+    return JsonResponse({'recorded':True,'views_today':row.views})
+
+@api('GET')
+def analytics(request):
+    if not request.user.is_staff:return JsonResponse({'error':'Chỉ quản trị viên được xem thống kê tổng.'},status=403)
+    from .services.traffic import traffic_summary
+    try:days=int(request.GET.get('days',30))
+    except (TypeError,ValueError):raise InputError('Số ngày thống kê không hợp lệ.')
+    return JsonResponse(traffic_summary(days))
 
 @api('GET','POST')
 def readings(request):
@@ -187,7 +239,10 @@ def reading_detail(request,pk):
 @api('GET','POST')
 def vocabulary(request):
     if request.method=='GET':
-        qs=filtered_vocab(request); page=max(1,int(request.GET.get('page',1)));limit=max(1,min(500,int(request.GET.get('limit',24))))
+        qs=filtered_vocab(request)
+        try:page=int(request.GET.get('page',1));limit=int(request.GET.get('limit',24))
+        except (TypeError,ValueError):raise InputError('Trang và số mục mỗi trang phải là số nguyên.')
+        if page<1 or not 1<=limit<=500:raise InputError('Trang phải từ 1; mỗi trang cho phép 1–500 thẻ.')
         total=qs.count();start=(page-1)*limit
         return JsonResponse({'items':[serial_vocab(v) for v in qs[start:start+limit]],'total':total,'page':page,'limit':limit})
     data=body(request);items=data.get('items',[data])
@@ -201,6 +256,13 @@ def vocabulary(request):
             if reading and not v['source_label']:v['source_label']=reading.title
             word,new=save_entry(request.user,v,reading);made.append(serial_vocab(word));created+=int(new)
     return JsonResponse({'items':made,'created':created,'skipped':len(items)-created},status=201)
+
+@api('GET')
+def vocabulary_sources(request):
+    rows=VocabularyOccurrence.objects.filter(owner=request.user,reading__isnull=False).values(
+        'reading_id','reading__title').distinct().order_by('reading__title','reading_id')
+    items=[{'id':str(row['reading_id']),'title':row['reading__title']} for row in rows]
+    return JsonResponse({'items':items})
 
 @api('PATCH','DELETE')
 def vocabulary_detail(request,pk):
@@ -320,7 +382,10 @@ def enrich_words(request):
 @api('GET')
 def backup(request):
     data=export_library(request.user)
-    response=HttpResponse(json.dumps(data,ensure_ascii=False,indent=2),content_type='application/json; charset=utf-8')
+    raw=json.dumps(data,ensure_ascii=False,indent=2)
+    if len(raw.encode('utf-8'))>MAX_BACKUP_BYTES:
+        raise InputError('Backup vượt 8 MB nên không thể bảo đảm nhập lại qua ứng dụng. Hãy dùng pg_dump cho database này.')
+    response=HttpResponse(raw,content_type='application/json; charset=utf-8')
     response['Content-Disposition']='attachment; filename="lexiread-backup.json"'
     return response
 
@@ -344,7 +409,7 @@ def export_csv(request):
 def restore(request):
     if request.FILES:
         f=request.FILES.get('file')
-        if not f or f.size>8*1024*1024:raise InputError('Chọn file JSON/CSV không quá 8 MB.')
+        if not f or f.size>MAX_BACKUP_BYTES:raise InputError('Chọn file JSON/CSV không quá 8 MB.')
         raw=f.read().decode('utf-8-sig')
         if f.name.lower().endswith('.csv'):
             reader=csv.DictReader(io.StringIO(raw));payload=[]
@@ -354,6 +419,55 @@ def restore(request):
         else:payload=parse_json(raw)
     else:payload=body(request).get('data',{})
     return JsonResponse(import_library(request.user,payload))
+
+
+@api('GET')
+def toeic_catalog(request):
+    from .services.toeic import toeic_sets
+    attempts=ToeicAttempt.objects.filter(owner=request.user)
+    items=[]
+    for practice in toeic_sets():
+        rows=attempts.filter(set_slug=practice['slug'])
+        best=max((row.result.get('score',0) for row in rows),default=None)
+        latest=rows.first()
+        items.append({k:practice[k] for k in ('slug','title','mode','mode_label','parts','level','duration_minutes','description','question_count')}|{
+            'attempt_count':rows.count(),'best_score':best,
+            'latest_score':latest.result.get('score') if latest else None,
+            'latest_at':latest.created_at.isoformat() if latest else None})
+    return JsonResponse({'items':items,'official_format':{
+        'reading_minutes':75,'reading_questions':100,
+        'parts':[{'part':5,'name':'Incomplete Sentences','questions':30},
+                 {'part':6,'name':'Text Completion','questions':16},
+                 {'part':7,'name':'Reading Comprehension','questions':54}],
+        'note':'Bộ luyện trong LexiRead là nội dung tự biên soạn theo dạng bài, không phải đề ETS chính thức và không quy đổi điểm TOEIC.'}})
+
+
+@api('GET')
+def toeic_detail(request,slug):
+    from .services.toeic import public_toeic_set
+    practice=public_toeic_set(slug)
+    rows=ToeicAttempt.objects.filter(owner=request.user,set_slug=slug)
+    best=max((row.result.get('score',0) for row in rows),default=None)
+    practice['progress']={'attempt_count':rows.count(),'best_score':best}
+    return JsonResponse(practice)
+
+
+@api('POST')
+@transaction.atomic
+def toeic_submit(request,slug):
+    from .services.toeic import get_toeic_set,grade_toeic
+    practice=get_toeic_set(slug);data=body(request);token=uuid.UUID(data.get('token',''))
+    previous=ToeicAttempt.objects.filter(owner=request.user,token=token).first()
+    if previous:
+        if previous.set_slug!=slug:raise InputError('Mã lượt làm bài đã được dùng cho bộ khác.')
+        return JsonResponse({**previous.result,'duplicate':True})
+    duration=data.get('duration_seconds',0)
+    if not isinstance(duration,int) or isinstance(duration,bool) or not 0<=duration<=7200:
+        raise InputError('Thời gian làm bài không hợp lệ.')
+    result=grade_toeic(practice,data.get('answers'))
+    ToeicAttempt.objects.create(owner=request.user,set_slug=slug,token=token,answers=data['answers'],
+        result=result,duration_seconds=duration)
+    return JsonResponse({**result,'duplicate':False})
 
 
 @api('GET')

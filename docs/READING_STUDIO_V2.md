@@ -61,7 +61,7 @@ Bôi đen từ/cụm từ sẽ mở thanh chọn. Với một mục đã đượ
 
 Trong **Bài đọc của tôi**, có thể tìm theo tiêu đề/nguồn/nội dung; lọc tiến độ và yêu thích; sắp xếp; chuyển trang. Trong **Kho từ**, có thể tìm theo nội dung thẻ, lọc tag/bài nguồn/trạng thái và sắp xếp. Các nhóm học gồm đến hạn, quá hạn, mới, đang học, đã ghi nhớ tốt, từng sai và chưa xác nhận. “Mới” chỉ gồm thẻ chưa từng ôn; “đang học” là thẻ đã ôn có khoảng cách dưới 21 ngày.
 
-Chỉ những mục bạn chọn lưu mới vào kho. Các cách ôn cũ vẫn giữ: flashcard; ABCD Anh→Việt; ABCD Việt→Anh; synonym; paraphrase; điền từ; gõ từ. Dashboard có mục tiêu ngày, số lượt hôm nay, streak và các nhóm tiến độ. Hàng đợi đến hạn ưu tiên lịch cũ hơn; đánh giá **Quên** đưa thẻ gặp lại trễ hơn trong cùng lượt, tối đa một lần. Thẻ theo nghĩa đã có thì không bị đặt lại lịch ôn. Một thẻ hiện chỉ giữ một ngữ cảnh chính và một liên kết bài nguồn; lưu từ cùng nghĩa ở bài khác gộp tags chứ chưa có bảng toàn bộ lần xuất hiện.
+Chỉ những mục bạn chọn lưu mới vào kho. Các cách ôn cũ vẫn giữ: flashcard; ABCD Anh→Việt; ABCD Việt→Anh; synonym; paraphrase; điền từ; gõ từ. Dashboard có mục tiêu ngày, số lượt hôm nay, streak, các nhóm tiến độ và **Từ khó** cho thẻ đã quên từ 3 lần. Hàng đợi đến hạn ưu tiên lịch cũ hơn; đánh giá **Quên** đưa thẻ gặp lại trễ hơn trong cùng lượt, tối đa một lần. Thẻ theo nghĩa đã có thì không bị đặt lại lịch ôn. Lưu cùng nghĩa từ bài khác tạo thêm lần xuất hiện theo bài/ngữ cảnh, nên có thể lọc cùng một thẻ từ nhiều bài mà vẫn dùng chung một lịch ôn.
 
 ## 4. Hỏi đáp theo đúng bài đang đọc
 
@@ -89,10 +89,10 @@ docker compose exec web python manage.py createsuperuser
 ```
 
 Entry point chạy migration và `seed_lessons` để nạp thư viện dùng chung. Khi web healthy, mở `http://localhost:8000`.
-Muốn có bộ 116 thẻ cũ và Set in Metal trong tài khoản cá nhân thì chạy thêm (thay đúng username):
+Muốn có bộ 116 thẻ cũ và Set in Metal trong tài khoản cá nhân thì chạy thêm (thay đúng email đăng nhập):
 
 ```powershell
-docker compose exec web python manage.py seed_demo --username quyen
+docker compose exec web python manage.py seed_demo --email ban@example.com
 ```
 
 Chỉ muốn đọc bài và tự lưu từ thì bỏ qua `seed_demo`. `seed_lessons` không cần username và không tự thêm từ vào tài khoản.
@@ -114,7 +114,7 @@ docker compose exec web python manage.py showmigrations learning
 docker compose exec web python manage.py seed_lessons
 ```
 
-Kiểm tra `0001_initial` và `0002_reading_platform` đã đánh dấu `[X]`. Lệnh seed cuối chỉ để kiểm tra/nạp lại an toàn; entry point đã chạy khi khởi động. **Không tạo lại tài khoản và không cần chạy lại `seed_demo`** nếu trước đó đã dùng.
+Kiểm tra `0001_initial`, `0002_reading_platform` và `0003_data_integrity_and_occurrences` đã đánh dấu `[X]`. Migration 0003 tạo bảng ngữ cảnh từ, giữ định danh import và thêm constraint/index; nó không xóa bài, thẻ hay lịch ôn. Lệnh seed cuối chỉ để kiểm tra/nạp lại an toàn; entry point đã chạy khi khởi động. **Không tạo lại tài khoản và không cần chạy lại `seed_demo`** nếu trước đó đã dùng.
 
 Chạy web trực tiếp bằng Python thay vì Docker: dừng tiến trình cũ, giữ `.env` và DB, cập nhật requirements rồi chạy:
 
@@ -126,7 +126,7 @@ Chạy web trực tiếp bằng Python thay vì Docker: dừng tiến trình cũ
 .\.venv\Scripts\python.exe manage.py runserver 127.0.0.1:8000
 ```
 
-Migration bổ sung bảng/trường, không có thao tác chủ động xóa từ, tài khoản hoặc lịch ôn. **Migration vẫn chưa được chạy trên PostgreSQL trong môi trường tạo gói**, nên backup và kiểm thử trên DB bản sao trước khi nâng cấp dữ liệu quan trọng.
+Migration bổ sung bảng/trường, không có thao tác chủ động xóa từ, tài khoản hoặc lịch ôn. Migrations đến `0006_daily_visit` đã chạy trên PostgreSQL phát triển và test database; vẫn phải backup và thử trên bản sao trước khi nâng cấp dữ liệu production quan trọng.
 
 ## 7. Dùng bản HTML và chuyển dữ liệu
 
@@ -134,7 +134,7 @@ Migration bổ sung bảng/trường, không có thao tác chủ động xóa t�
 
 Bản v2 giữ khóa Storage của v1 để không chủ động đặt lại kho đang có. Tuy nhiên, **đổi đường dẫn file/trình duyệt không được bảo đảm dùng cùng vùng lưu trữ**. Cách chuyển tin cậy là xuất backup ở bản cũ → mở bản mới → Cài đặt & dữ liệu → nhập backup. Để khôi phục đúng lịch ôn cho những từ trùng với bộ seed, nên dùng kho đích trống; importer giữ tiến độ sẵn có và không ghi đè.
 
-Backup JSON v2 gồm bài nguồn, snapshot bài cố định, thẻ, lịch ôn, câu đã hỏi của văn bản hiện tại và các lần làm câu hiểu bài. V2 đọc được backup v1. Không nhập backup v2 vào ứng dụng v1 chưa nâng cấp.
+Backup JSON v4 gồm bài nguồn, snapshot bài cố định, thẻ, toàn bộ lần xuất hiện theo bài/ngữ cảnh, lịch ôn, câu đã hỏi của văn bản hiện tại, các lần làm câu hiểu bài và lượt TOEIC. V4 đọc được backup v1/v2/v3. Hai bài riêng trùng tiêu đề/nội dung không còn bị gộp khi khôi phục. File app xuất tối đa 8 MB để bảo đảm nhập lại được; kho lớn hơn cần `pg_dump`. Không nhập backup v4 vào ứng dụng cũ chưa nâng cấp.
 
 Khôi phục kiểu gộp: bài/thẻ có sẵn giữ dữ liệu hiện tại; chỉ đối tượng mới được khôi phục tiến độ. Điểm quiz được tính lại từ bộ đáp án trong snapshot thay vì tin con số do file nhập cung cấp. Thời điểm ghi log hỏi đáp/hiểu bài có thể là thời điểm nhập lại ở backend, không phải bản sao audit đầy đủ. Backup ứng dụng không chứa tài khoản/mật khẩu, không thay backup database hệ thống.
 
@@ -146,9 +146,9 @@ Xem `LESSON_AUTHORING.md`. Dữ liệu gốc ở `data/lessons/*.json`, nạp v�
 
 ## 9. Những gì đã kiểm tra
 
-Ngày 22/10/2026, bộ pure Python chạy 76 test, gồm 75 PASS và 1 test reportlab tùy chọn skip. 49 kiểm tra DOM/luồng bản HTML qua Chromium PASS khi không có fixture v1 cũ; suite có 50 checks nếu cung cấp fixture đó. Ảnh chụp giao diện cũng đã được kiểm tra trực quan. Chi tiết thực tế và hạn chế xem `TEST_REPORT.md`.
+Ngày 22/10/2026, bộ pure Python chạy 81 test, gồm 80 PASS và 1 test reportlab tùy chọn skip. 56 kiểm tra DOM/luồng bản HTML qua Chromium PASS, gồm hai lựa chọn TOEIC, không lộ đáp án, lưu lượt làm và ẩn bảng thống kê quản trị với người học. Chi tiết thực tế và hạn chế xem `TEST_REPORT.md`.
 
-35 integration tests cho Django/PostgreSQL đã được chuẩn bị (16 trong `learning/tests.py`, 19 trong `learning/test_platform.py`), **chưa chạy vì không có PostgreSQL listener**. Django `check` đã PASS và `makemigrations --check --dry-run` báo không có thay đổi khi dùng môi trường xác nhận tạm. Chưa chạy Docker/full database hoặc gọi OpenAI API thật. Kiểm tra DOM dùng Storage giả lập trong bộ nhớ, không chứng minh dữ liệu tồn tại qua việc đóng/mở trình duyệt thật. Website chưa được triển khai public.
+Docker Compose đã build và hai service `db`/`web` đều healthy. Migrations đến `0006_daily_visit` đã áp dụng, Django `check` PASS và 43/43 integration tests Django/PostgreSQL PASS. Landing page, đăng nhập email và responsive mobile đã qua Chromium smoke test. Production Compose/Caddy đã qua deployment check với domain mẫu; hai cảnh báo HSTS mặc định là chủ đích và được giải thích trong `docs/DEPLOYMENT.md`. Chưa gọi OpenAI API thật. Kiểm tra DOM dùng Storage giả lập trong bộ nhớ, không chứng minh dữ liệu tồn tại qua việc đóng/mở trình duyệt thật. Website chưa được triển khai lên domain thật.
 
 ```powershell
 docker compose exec web python manage.py check

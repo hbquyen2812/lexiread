@@ -8,7 +8,8 @@ const uid = () => crypto.randomUUID ? crypto.randomUUID() : '10000000-1000-4000-
 const state = {boot:null,readings:[],reading:null,readingTab:'text',translation:true,selection:null,
   readingFilters:{q:'',status:'all',favorite:'all',sort:'updated',page:1},readingSources:[],
   vocab:[],filters:{q:'',tag:'',scope:'all',reading:'',sort:'newest',page:1},editId:null,editing:null,bulk:[],study:null,
-  studySettings:{mode:'flashcard',scope:'due',tag:'',reading:'',limit:'20'},routeEpoch:0};
+  studySettings:{mode:'flashcard',scope:'due',tag:'',reading:'',limit:'20'},toeicSet:null,toeicSession:null,
+  analyticsDays:30,lastTracked:null,routeEpoch:0};
 const asList = value => Array.isArray(value) ? value.map(String) : typeof value==='string' ? value.split('|').map(s=>s.trim()).filter(Boolean) : [];
 const modes = {flashcard:'Flashcard · Lật thẻ',meaning:'ABCD · Anh → Việt',reverse:'ABCD · Việt → Anh',
   synonym:'Chọn synonym',paraphrase:'Nhận diện paraphrase',cloze:'Điền từ trong câu',typing:'Gõ từ tiếng Anh'};
@@ -43,7 +44,7 @@ function tagOptions(selected=''){
   return '<option value="">Tất cả bộ từ</option>'+(state.boot?.tags||[]).map(t=>`<option value="${esc(t)}" ${selected===t?'selected':''}>${esc(t)}</option>`).join('');
 }
 function scopeOptions(selected='all'){
-  return Object.entries({all:'Tất cả từ',due:'Đến hạn ôn',overdue:'Đã quá hạn',new:'Từ mới',learning:'Đang học',mastered:'Đã ghi nhớ tốt',mistakes:'Từng trả lời sai',unchecked:'Chưa xác nhận nghĩa'})
+  return Object.entries({all:'Tất cả từ',due:'Đến hạn ôn',overdue:'Đã quá hạn',new:'Từ mới',learning:'Đang học',mastered:'Đã ghi nhớ tốt',weak:'Từ khó · quên ≥ 3 lần',mistakes:'Từng trả lời sai',unchecked:'Chưa xác nhận nghĩa'})
     .map(([v,l])=>`<option value="${v}" ${selected===v?'selected':''}>${l}</option>`).join('');
 }
 function readingSourceOptions(selected=''){
@@ -71,6 +72,7 @@ async function refreshBoot(){
   $('#ai-status').textContent=state.boot.ai_enabled?'● AI đã kết nối':'○ Không dùng API';
   $('#avatar').textContent=(state.boot.user||'Q').charAt(0).toUpperCase();
   $('#nav-due').textContent=state.boot.stats.due||'';
+  $('#analytics-nav')?.classList.toggle('hidden',!state.boot.is_staff);
 }
 function heading(title,desc,buttons=''){return `<div class="page-heading"><div><span class="eyebrow">YOUR PERSONAL LEARNING LIBRARY</span><h1>${esc(title)}</h1><p>${esc(desc)}</p></div><div class="button-row">${buttons}</div></div>`;}
 function readingStatus(r){return r.status==='completed'?'Đã đọc':'Đang đọc';}
@@ -126,11 +128,10 @@ function renderReader(){
 }
 async function vocabPage(epoch){
   const f=state.filters,q=new URLSearchParams({...f,limit:24});
-  const [data,readings,catalog]=await Promise.all([api('/vocabulary/?'+q),api('/readings/?sort=title&limit=100'),api('/catalog/')]);
+  const [data,sources]=await Promise.all([api('/vocabulary/?'+q),api('/vocabulary/sources/')]);
   if(epoch!==state.routeEpoch)return;state.vocab=data.items;state.vocabTotal=data.total;
   if(!state.vocab.length&&data.total&&f.page>1){state.filters.page=Math.max(1,Math.ceil(data.total/data.limit));return vocabPage(epoch);}
-  const sources=[...(readings.items||[]).map(r=>({id:r.id,title:r.title})),...(catalog.items||[]).filter(r=>r.reading_id).map(r=>({id:r.reading_id,title:r.title}))];
-  state.readingSources=[...new Map(sources.map(r=>[r.id,r])).values()].sort((a,b)=>a.title.localeCompare(b.title,'vi'));
+  state.readingSources=[...new Map((sources.items||[]).map(r=>[r.id,r])).values()].sort((a,b)=>a.title.localeCompare(b.title,'vi'));
   $('#main').innerHTML=heading('Kho từ của tôi',`${data.total} thẻ theo bộ lọc hiện tại. Từ, nghĩa, ngữ cảnh và lịch ôn — trong cùng một nơi.`,
      '<button class="btn" data-action="bulk-open">Nhập nhiều từ</button><button class="btn primary" data-action="new-word">+ Thêm từ</button>')+
      `<div class="toolbar"><input type="search" id="vocab-search" class="search" placeholder="Tìm từ, nghĩa hoặc ghi chú…" value="${esc(f.q)}" aria-label="Tìm từ"><select id="vocab-tag" aria-label="Bộ từ">${tagOptions(f.tag)}</select><select id="vocab-reading" aria-label="Bài nguồn">${readingSourceOptions(f.reading)}</select><select id="vocab-scope" aria-label="Trạng thái">${scopeOptions(f.scope)}</select><select id="vocab-sort" aria-label="Sắp xếp từ">${[['newest','Mới thêm'],['oldest','Cũ nhất'],['word','Theo từ A–Z'],['due','Lịch ôn gần nhất']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="filter-vocab">Lọc</button></div>`+
@@ -234,7 +235,7 @@ function renderStudy(){
   const p=state.studySettings,s=state.boot.stats;
   $('#main').innerHTML=heading('Luyện nhớ, không học vẹt.','Chọn cách ôn phù hợp. Mỗi lượt trả lời được lưu vào lịch ôn của từng nghĩa.')+
     dailyReviewCallout(s,false)+
-    `<section class="stats">${[[count(s.overdue ?? s.due),'Đã quá hạn','Ưu tiên ôn trước'],[count(s.new),'Từ mới','Chưa bắt đầu lịch ôn'],[count(s.learning),'Đang học','Đang tạo trí nhớ dài hạn'],[count(s.mastered),'Đã ghi nhớ tốt','Vẫn sẽ quay lại đúng lịch']].map(([n,l,h])=>`<div class="stat"><div class="stat-top">${l}</div><div class="stat-value">${n}</div><div class="stat-note">${h}</div></div>`).join('')}</section>`+
+    `<section class="stats">${[[count(s.overdue ?? s.due),'Đã quá hạn','Ưu tiên ôn trước'],[count(s.new),'Từ mới','Chưa bắt đầu lịch ôn'],[count(s.learning),'Đang học','Đang tạo trí nhớ dài hạn'],[count(s.mastered),'Đã ghi nhớ tốt','Vẫn sẽ quay lại đúng lịch'],[count(s.weak),'Từ khó','Quên từ 3 lần · nên sửa ngữ cảnh']].map(([n,l,h])=>`<div class="stat"><div class="stat-top">${l}</div><div class="stat-value">${n}</div><div class="stat-note">${h}</div></div>`).join('')}</section>`+
     `<div class="study-controls"><label>Dạng luyện<select id="study-mode">${Object.entries(modes).map(([k,v])=>`<option value="${k}" ${p.mode===k?'selected':''}>${v}</option>`).join('')}</select></label><label>Bộ từ<select id="study-tag">${tagOptions(p.tag)}</select></label><label>Bài nguồn<select id="study-reading">${readingSourceOptions(p.reading)}</select></label><label>Phạm vi<select id="study-scope">${scopeOptions(p.scope)}</select></label><label>Số thẻ ban đầu<select id="study-limit">${[10,20,30,50].map(n=>`<option ${String(n)===String(p.limit)?'selected':''}>${n}</option>`).join('')}</select></label><button class="btn primary" data-action="start-study">Bắt đầu →</button></div><div class="study-stage" id="study-stage"></div>`;
   renderStage();
 }
@@ -300,10 +301,57 @@ async function answerQuiz(value){
   try{s.result=await api('/exercises/'+q.id+'/answer/',{method:'POST',data:{answer:value}});s.done++;if(s.result.correct)s.correct++;s.seen.push(q.word_id);await refreshBoot();}
   finally{s.busy=false;renderStage();}
 }
+function toeicModeCard(mode,items){
+  const meta=mode==='parts-5-6'?{number:'01',title:'Ngữ pháp & từ vựng',parts:'Part 5–6',desc:'Củng cố dạng từ, giới từ, liên từ và hoàn thành văn bản.'}:{number:'02',title:'Đọc hiểu',parts:'Part 7',desc:'Đọc email, thông báo, bài đơn và bài kép trong ngữ cảnh công việc.'};
+  return `<section class="toeic-mode panel"><div class="toeic-mode-number">${meta.number}</div><span class="eyebrow">${meta.parts}</span><h2>${meta.title}</h2><p>${meta.desc}</p><div class="toeic-set-list">${items.map(item=>`<article><div><strong>${esc(item.title)}</strong><span>${esc(item.level)} · ${item.question_count} câu · ${item.duration_minutes} phút</span>${item.attempt_count?`<small>Đã làm ${item.attempt_count} lượt · tốt nhất ${item.best_score}/${item.question_count}</small>`:'<small>Chưa làm lần nào</small>'}</div><a class="btn small primary" href="#toeic-set/${esc(item.slug)}">${item.attempt_count?'Luyện lại':'Bắt đầu'} →</a></article>`).join('')}</div></section>`;
+}
+async function toeicPage(epoch){
+  const data=await api('/toeic/');if(epoch!==state.routeEpoch)return;
+  const grouped={'parts-5-6':data.items.filter(x=>x.mode==='parts-5-6'),'part-7':data.items.filter(x=>x.mode==='part-7')};
+  $('#main').innerHTML=heading('Luyện TOEIC Reading','Hai hướng luyện ngắn, có chấm điểm và lưu tiến độ riêng cho tài khoản của bạn.')+
+    `<div class="catalog-note"><b>Cấu trúc Reading theo ETS</b><span>75 phút · 100 câu: Part 5 có 30 câu, Part 6 có 16 câu, Part 7 có 54 câu. LexiRead dùng bộ mini tự biên soạn để luyện kỹ năng; không phải đề ETS và không quy đổi điểm TOEIC.</span></div>`+
+    `<div class="toeic-mode-grid">${toeicModeCard('parts-5-6',grouped['parts-5-6'])}${toeicModeCard('part-7',grouped['part-7'])}</div>`+
+    `<section class="panel toeic-strategy"><span class="eyebrow">CÁCH LUYỆN HIỆU QUẢ</span><div class="toeic-steps"><div><b>1. Làm có giờ</b><span>Giữ nhịp và không xem đáp án giữa chừng.</span></div><div><b>2. Đọc bằng chứng</b><span>Mỗi câu sai có giải thích; Part 7 chỉ rõ câu gốc.</span></div><div><b>3. Lưu từ trọng tâm</b><span>Đưa từ vào kho và ôn lại theo lịch chống quên.</span></div></div></section>`;
+}
+function renderToeicSet(){
+  const practice=state.toeicSet,session=state.toeicSession,result=session.result;
+  const resultMap=new Map((result?.results||[]).map(row=>[row.question_id,row]));
+  $('#main').innerHTML=`<a class="link-btn" href="#toeic">← Hai lựa chọn TOEIC Reading</a><div style="height:17px"></div>`+
+    heading(practice.title,`${practice.mode_label} · ${practice.level} · ${practice.question_count} câu · mục tiêu ${practice.duration_minutes} phút`,`<button class="btn secondary" data-action="save-toeic-words">+ Lưu ${practice.focus_vocabulary.length} từ trọng tâm</button>`)+
+    `<div class="notice">${esc(practice.instructions)} Nội dung tự biên soạn theo dạng TOEIC; không phải câu hỏi chính thức của ETS.</div>`+
+    (result?`<div class="reading-score toeic-score" role="status"><strong>${result.score} / ${result.total}</strong><div>${result.percentage}% chính xác<p>${Object.entries(result.by_part).map(([part,row])=>`Part ${part}: ${row.score}/${row.total}`).join(' · ')}. Kết quả đã lưu vào tài khoản.</p></div><button class="btn secondary" data-action="reset-toeic">Làm lại</button></div>`:`<div class="toeic-timer"><span>⏱ Mục tiêu: ${practice.duration_minutes} phút</span><span>Hãy trả lời đủ ${practice.question_count} câu trước khi nộp.</span></div>`)+
+    (practice.documents.length?`<div class="toeic-documents">${practice.documents.map(doc=>`<article class="toeic-document" id="toeic-doc-${esc(doc.id)}"><span class="chip">${esc(doc.kind)}</span><h2>${esc(doc.heading)}</h2><div>${esc(doc.body)}</div></article>`).join('')}</div>`:'')+
+    `<div class="toeic-questions">${practice.questions.map((q,index)=>{const row=resultMap.get(q.id);return `<fieldset class="reading-question"><legend><span class="chip">${index+1} · Part ${q.part}</span><span>${esc(q.prompt)}</span></legend><div class="reading-options">${q.options.map((option,i)=>`<label class="reading-option ${row?(i===row.answer?'is-correct':i===row.submitted?'is-wrong':''):''}"><input type="radio" data-toeic-question="${esc(q.id)}" name="toeic-${esc(q.id)}" value="${i}" ${session.answers[q.id]===i?'checked':''} ${result?'disabled':''}><span class="choice-letter">${'ABCD'[i]}</span><span>${esc(option)}</span></label>`).join('')}</div>${row?`<div class="feedback ${row.correct?'':'wrong'}"><strong>${row.correct?'✓ Đúng':'Chưa đúng'} · ${esc(q.options[row.answer])}</strong><p>${esc(row.explanation_vi)}</p>${row.evidence?`<blockquote class="quote">${esc(row.evidence)}</blockquote>`:''}</div>`:''}</fieldset>`;}).join('')}</div>`+
+    `<div class="button-row toeic-submit">${result?'<button class="btn primary" data-action="reset-toeic">Làm lại bộ này</button><a class="btn" href="#toeic">Chọn hướng khác</a>':'<button class="btn primary" data-action="submit-toeic">Nộp và xem giải thích</button>'}</div>`;
+}
+async function toeicSetPage(slug,epoch){
+  const practice=await api('/toeic/'+encodeURIComponent(slug)+'/');if(epoch!==state.routeEpoch)return;
+  state.toeicSet=practice;
+  if(state.toeicSession?.slug!==slug)state.toeicSession={slug,answers:{},token:uid(),startedAt:Date.now(),result:null};
+  renderToeicSet();
+}
+const analyticsPageLabels={home:'Tổng quan',catalog:'Thư viện',lesson:'Bài thư viện',toeic:'TOEIC',
+  'toeic-set':'Bộ TOEIC',readings:'Bài cá nhân',reading:'Đang đọc',vocabulary:'Kho từ',study:'Ôn từ',settings:'Cài đặt',analytics:'Thống kê',login:'Đăng nhập'};
+async function analyticsPage(epoch){
+  const data=await api('/analytics/?days='+state.analyticsDays);if(epoch!==state.routeEpoch)return;
+  const maxViews=Math.max(1,...data.series.map(day=>day.views));
+  $('#main').innerHTML=heading('Thống kê truy cập','Số liệu first-party để theo dõi mức sử dụng thật, chỉ quản trị viên nhìn thấy.',
+    `<select id="analytics-days" aria-label="Khoảng thống kê">${[7,30,90].map(days=>`<option value="${days}" ${data.days===days?'selected':''}>${days} ngày</option>`).join('')}</select><button class="btn secondary" data-action="reload-analytics">Cập nhật</button>`)+
+    `<section class="stats">${[[data.totals.views,'Lượt xem','Tổng lượt chuyển trang'],[data.totals.visitors,'Khách duy nhất','Ước lượng theo phiên đã băm'],[data.totals.active_users,'Tài khoản hoạt động','Đã đăng nhập trong kỳ'],[Math.round(data.totals.views/Math.max(1,data.totals.visitors)),'Lượt / khách','Mức tương tác trung bình']].map(([n,l,h])=>`<div class="stat"><div class="stat-top">${l}</div><div class="stat-value">${count(n)}</div><div class="stat-note">${h}</div></div>`).join('')}</section>`+
+    `<section class="panel analytics-panel"><div class="section-title"><div><h2>Hoạt động theo ngày</h2><p>Mỗi cột là tổng lượt xem; số bên dưới là khách duy nhất.</p></div></div><div class="traffic-chart">${data.series.map((day,index)=>`<div class="traffic-day" title="${esc(day.date)} · ${day.views} lượt xem · ${day.visitors} khách"><span>${day.views||''}</span><div style="height:${Math.max(3,Math.round(day.views/maxViews*150))}px"></div><small>${data.days<=30||index%7===0?esc(day.date.slice(5)):''}</small><b>${day.visitors}</b></div>`).join('')}</div></section>`+
+    `<div class="grid-2 analytics-bottom"><section class="panel"><h2>Trang được xem nhiều</h2>${data.top_pages.length?`<div class="analytics-list">${data.top_pages.map(row=>`<div><span>${esc(analyticsPageLabels[row.page]||row.page)}</span><strong>${row.views}</strong></div>`).join('')}</div>`:empty('Chưa có lượt xem','Dữ liệu sẽ xuất hiện khi có người sử dụng website.')}</section><section class="panel"><h2>Dùng số liệu để tạo động lực</h2><p>Ưu tiên chỉ số có ích: ngày học đều, số lượt ôn, bài hoàn thành và tiến bộ TOEIC. Không hiển thị số giả hoặc tạo bảng xếp hạng công khai khi chưa có sự đồng ý.</p><div class="notice">${esc(data.privacy_note)}</div></section></div>`;
+}
+function trackVisit(page){
+  if(page==='home')return;
+  const allowed=analyticsPageLabels[page]?page:'home',now=Date.now();
+  if(state.lastTracked?.page===allowed&&now-state.lastTracked.at<30000)return;
+  state.lastTracked={page:allowed,at:now};
+  api('/activity/visit/',{method:'POST',data:{page:allowed}}).catch(error=>console.warn('Không ghi được thống kê:',error.message));
+}
 function settingsPage(){
   const b=state.boot;
   $('#main').innerHTML=heading('Cài đặt & dữ liệu','Bạn sở hữu kho từ và bài đọc của mình. Xuất backup định kỳ để giữ cả tiến độ ôn.')+
-  `<div class="settings-grid"><section class="panel"><span class="eyebrow">AI CONNECTION</span><h2>AI khi bạn cần.</h2><p>Trạng thái: <b>${b.ai_enabled?'Đã bật API · '+esc(b.model):'Chưa bật API'}</b>. Hôm nay đã dùng ${b.ai_calls_today}/${b.ai_daily_limit} lượt gọi trong giới hạn của ứng dụng.</p><pre>AI_PROVIDER=openai\nOPENAI_API_KEY=your_key_here\nOPENAI_MODEL=gpt-4.1-mini\nAI_DAILY_LIMIT=30</pre><p>Chỉnh các biến trên trong <code>.env</code> ở máy chủ, rồi tạo lại container web. Không nhập key vào JavaScript và không commit .env.</p><pre>docker compose up -d --force-recreate web</pre><div class="notice">API được tính phí riêng với gói ChatGPT. Giới hạn lượt gọi không phải hạn mức tiền tuyệt đối. Đặt cảnh báo/ngân sách thêm ở tài khoản API.</div><p class="fineprint">Chưa cần API? Dùng Copy prompt / Dán JSON trong bài đọc hoặc cửa sổ sửa từ.</p></section><section class="panel"><span class="eyebrow">YOUR DATA, YOUR RULES</span><h2>Sao lưu & chuyển dữ liệu</h2><p>Backup JSON gồm bài đọc, thẻ, lịch ôn và lịch sử trả lời. CSV chỉ xuất nội dung thẻ để chỉnh sửa hoặc chuyển sang công cụ khác.</p><div class="button-row"><button class="btn primary" data-action="export-backup">↓ Backup JSON</button><button class="btn" data-action="export-csv">↓ Xuất CSV</button></div><hr style="border:0;border-top:1px solid var(--line);margin:23px 0"><label>Nhập backup JSON / danh sách JSON / CSV<input type="file" id="import-file" accept=".json,.csv"></label><button class="btn secondary" data-action="import-library">Nhập vào kho</button><div class="notice">Nhập theo chế độ gộp: giữ nguyên thẻ và tiến độ đã có. Không xóa dữ liệu hiện tại. File tối đa 8 MB.</div><p class="fineprint">CSV cần cột <code>word</code>, <code>meaning_vi</code>. Có thể thêm pos, synonyms, paraphrases, context, note, tags; ngăn cách các giá trị trong một ô bằng dấu |.</p></section><section class="panel"><h3>Quyền riêng tư</h3><p>${window.LEXIREAD_PREVIEW?"Bản HTML lưu bài và từ trong trình duyệt hiện tại, không gửi lên PostgreSQL và không gọi API trực tiếp.":"Bài đọc và từ vựng lưu trên máy chủ PostgreSQL của bạn. Gọi AI chỉ diễn ra sau khi bạn xác nhận gửi nội dung."} Không có analytics hay CDN trong giao diện.</p><p>Khi tra từ, ứng dụng gửi từ + đoạn ngữ cảnh; khi phân tích bài, ứng dụng gửi toàn bài bạn chọn. <code>store=false</code> được gửi tới API, nhưng không đồng nghĩa nhà cung cấp tuyệt đối không lưu dữ liệu theo chính sách của họ.</p><p class="fineprint">Backup không chứa mật khẩu, API key hoặc phiên đăng nhập. Đừng chia sẻ backup nếu có bài đọc riêng tư.</p></section><section class="panel"><h3>Những giới hạn nên biết</h3><p>PDF cần có lớp chữ; chưa có OCR. Không tự lấy bài từ URL. File nhập cần kiểm tra lại thứ tự đoạn. Mỗi lần phân tích AI tối đa 16.000 ký tự.</p><p>Lịch ôn là thuật toán khoảng cách đơn giản, không phải FSRS. Bài luyện synonym/paraphrase phụ thuộc chất lượng thẻ đã lưu; luôn có thể chỉnh nghĩa và ghi chú.</p><p class="fineprint">Xem README_VI.md và docs/ARCHITECTURE.md để mở rộng website.</p></section></div>`;
+  `<div class="settings-grid"><section class="panel"><span class="eyebrow">AI CONNECTION</span><h2>AI khi bạn cần.</h2><p>Trạng thái: <b>${b.ai_enabled?'Đã bật API · '+esc(b.model):'Chưa bật API'}</b>. Hôm nay đã dùng ${b.ai_calls_today}/${b.ai_daily_limit} lượt gọi trong giới hạn của ứng dụng.</p><pre>AI_PROVIDER=openai\nOPENAI_API_KEY=your_key_here\nOPENAI_MODEL=gpt-4.1-mini\nAI_DAILY_LIMIT=30</pre><p>Chỉnh các biến trên trong <code>.env</code> ở máy chủ, rồi tạo lại container web. Không nhập key vào JavaScript và không commit .env.</p><pre>docker compose up -d --force-recreate web</pre><div class="notice">API được tính phí riêng với gói ChatGPT. Giới hạn lượt gọi không phải hạn mức tiền tuyệt đối. Đặt cảnh báo/ngân sách thêm ở tài khoản API.</div><p class="fineprint">Chưa cần API? Dùng Copy prompt / Dán JSON trong bài đọc hoặc cửa sổ sửa từ.</p></section><section class="panel"><span class="eyebrow">YOUR DATA, YOUR RULES</span><h2>Sao lưu & chuyển dữ liệu</h2><p>Backup JSON v4 gồm bài đọc, thẻ, các ngữ cảnh theo bài, lịch ôn, lịch sử trả lời và lượt TOEIC. CSV chỉ xuất nội dung thẻ để chỉnh sửa hoặc chuyển sang công cụ khác.</p><div class="button-row"><button class="btn primary" data-action="export-backup">↓ Backup JSON</button><button class="btn" data-action="export-csv">↓ Xuất CSV</button></div><hr style="border:0;border-top:1px solid var(--line);margin:23px 0"><label>Nhập backup JSON / danh sách JSON / CSV<input type="file" id="import-file" accept=".json,.csv"></label><button class="btn secondary" data-action="import-library">Nhập vào kho</button><div class="notice">Nhập theo chế độ gộp: giữ nguyên thẻ và tiến độ đã có. Không xóa dữ liệu hiện tại. File tối đa 8 MB.</div><p class="fineprint">Kho lớn hơn 8 MB cần backup PostgreSQL bằng pg_dump. CSV cần cột <code>word</code>, <code>meaning_vi</code>; các giá trị trong một ô ngăn cách bằng dấu |.</p></section><section class="panel"><h3>Quyền riêng tư</h3><p>${window.LEXIREAD_PREVIEW?"Bản HTML lưu bài và từ trong trình duyệt hiện tại, không gửi lên PostgreSQL và không gọi API trực tiếp.":"Bài đọc và từ vựng lưu trên máy chủ PostgreSQL của bạn. Gọi AI chỉ diễn ra sau khi bạn xác nhận gửi nội dung."} Không có analytics hay CDN trong giao diện.</p><p>Khi tra từ, ứng dụng gửi từ + đoạn ngữ cảnh; khi phân tích bài, ứng dụng gửi toàn bài bạn chọn. <code>store=false</code> được gửi tới API, nhưng không đồng nghĩa nhà cung cấp tuyệt đối không lưu dữ liệu theo chính sách của họ.</p><p class="fineprint">Backup không chứa mật khẩu, API key hoặc phiên đăng nhập. Đừng chia sẻ backup nếu có bài đọc riêng tư.</p></section><section class="panel"><h3>Những giới hạn nên biết</h3><p>PDF cần có lớp chữ; chưa có OCR. Không tự lấy bài từ URL. File nhập cần kiểm tra lại thứ tự đoạn. Mỗi lần phân tích AI tối đa 16.000 ký tự.</p><p>Lịch ôn là thuật toán khoảng cách đơn giản, không phải FSRS. Bài luyện synonym/paraphrase phụ thuộc chất lượng thẻ đã lưu; luôn có thể chỉnh nghĩa và ghi chú.</p><p class="fineprint">Xem README_VI.md và docs/ARCHITECTURE.md để mở rộng website.</p></section></div>`;
 }
 function download(name,data,type='application/json'){
   const blob=new Blob([typeof data==='string'?data:JSON.stringify(data,null,2)],{type:type+';charset=utf-8'});
@@ -312,19 +360,23 @@ function download(name,data,type='application/json'){
 async function route(){
   const epoch=++state.routeEpoch;clearSelection();
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
-  const nav=page==='lesson'?'catalog':page==='reading'?'readings':page;
+  const nav=page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
-  $('#page-label').textContent=({home:'Tổng quan',catalog:'Thư viện luyện đọc',lesson:'Đang mở bài',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
+  $('#page-label').textContent=({home:'Tổng quan',catalog:'Thư viện luyện đọc',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
     if(page==='reading'&&id)await readerPage(id,epoch);
     else if(page==='catalog')await catalogPage(epoch);
     else if(page==='lesson'&&id)await lessonRoute(id,epoch);
+    else if(page==='toeic')await toeicPage(epoch);
+    else if(page==='toeic-set'&&id)await toeicSetPage(id,epoch);
     else if(page==='readings')await readingsPage(epoch);
     else if(page==='vocabulary')await vocabPage(epoch);
     else if(page==='study')renderStudy();
+    else if(page==='analytics')await analyticsPage(epoch);
     else if(page==='settings')settingsPage();
     else await homePage(epoch);
+    if(epoch===state.routeEpoch)trackVisit(page);
   }catch(e){if(epoch===state.routeEpoch){$('#main').innerHTML=empty('Chưa tải được dữ liệu',e.message,'<button class="btn primary" data-action="retry">Thử lại</button>');}toast(e.message,true);}
 }
 async function act(button){
@@ -385,6 +437,14 @@ async function act(button){
   case 'rate-card':await rateCard(button.dataset.rating);break;
   case 'answer-quiz':await answerQuiz(state.study.question.options[Number(button.dataset.index)]);break;
   case 'next-quiz':await busy(button,loadNextQuiz);break;
+  case 'submit-toeic':{
+    const session=state.toeicSession,missing=state.toeicSet.questions.filter(q=>session.answers[q.id]===undefined).length;
+    if(missing)throw new Error(`Bạn còn ${missing} câu chưa trả lời.`);
+    await busy(button,async()=>{session.result=await api('/toeic/'+encodeURIComponent(session.slug)+'/submit/',{method:'POST',data:{token:session.token,answers:session.answers,duration_seconds:Math.min(7200,Math.max(0,Math.round((Date.now()-session.startedAt)/1000)))}});renderToeicSet();window.scrollTo({top:0,behavior:'smooth'});},'Đang chấm…');break;
+  }
+  case 'reset-toeic':state.toeicSession={slug:state.toeicSet.slug,answers:{},token:uid(),startedAt:Date.now(),result:null};renderToeicSet();window.scrollTo({top:0,behavior:'smooth'});break;
+  case 'save-toeic-words':await busy(button,async()=>{const items=state.toeicSet.focus_vocabulary.map(word=>({...word,source_label:'TOEIC · '+state.toeicSet.title,tags:[...new Set([...(word.tags||[]),'TOEIC',state.toeicSet.title])]}));const result=await api('/vocabulary/',{method:'POST',data:{items}});await refreshBoot();toast(`Đã thêm ${result.created} từ; ${result.skipped} từ đã có được giữ nguyên.`);});break;
+  case 'reload-analytics':state.analyticsDays=Number($('#analytics-days').value);await analyticsPage(++state.routeEpoch);break;
   case 'export-backup':await busy(button,async()=>download('lexiread-backup-'+new Date().toISOString().slice(0,10)+'.json',await api('/backup/')));break;
   case 'export-csv':await busy(button,async()=>download('lexiread-vocabulary.csv',await api('/export.csv'),'text/csv'));break;
   case 'import-library':{
@@ -397,6 +457,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-action]');
 document.addEventListener('change',e=>{
   if(e.target.id==='translation-toggle'){state.translation=e.target.checked;renderReader();}
   if(e.target.id==='select-all-candidates')$$('.candidate-check').forEach(c=>c.checked=e.target.checked);
+  if(e.target.dataset.toeicQuestion&&state.toeicSession&&!state.toeicSession.result)state.toeicSession.answers[e.target.dataset.toeicQuestion]=Number(e.target.value);
 });
 document.addEventListener('submit',e=>{
   if(e.target.id==='typing-form'){e.preventDefault();answerQuiz($('#typing-answer').value).catch(err=>toast(err.message,true));}

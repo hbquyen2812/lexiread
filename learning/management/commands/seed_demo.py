@@ -7,11 +7,19 @@ from learning.models import Reading
 from learning.services.storage import save_entry
 class Command(BaseCommand):
     help='Load the supplied private Set in Metal reading and 116 study cards; never resets progress.'
-    def add_arguments(self,parser):parser.add_argument('--username',required=True)
+    def add_arguments(self,parser):
+        target=parser.add_mutually_exclusive_group(required=True)
+        target.add_argument('--email')
+        target.add_argument('--username')
     @transaction.atomic
     def handle(self,*args,**options):
-        user=get_user_model().objects.filter(username=options['username']).first()
-        if not user:raise CommandError('Username not found. Run createsuperuser first.')
+        users=get_user_model().objects
+        if options.get('email'):
+            matches=list(users.filter(email__iexact=options['email'])[:2])
+            if len(matches)>1:raise CommandError('Email belongs to multiple accounts. Make account emails unique first.')
+            user=matches[0] if matches else None
+        else:user=users.filter(username=options['username']).first()
+        if not user:raise CommandError('Account not found. Run createsuperuser first.')
         root=settings.BASE_DIR/'data'
         text=(root/'set_in_metal.txt').read_text(encoding='utf-8')
         analysis=json.loads((root/'demo_analysis.json').read_text(encoding='utf-8'))

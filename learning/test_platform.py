@@ -9,16 +9,20 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management import call_command
 from django.test import TestCase,override_settings
-from learning.models import Reading,CuratedLesson,Vocabulary,LessonAttempt,ReadingQuestion
+from django.test import RequestFactory
+from learning.models import Reading,CuratedLesson,Vocabulary,LessonAttempt,ReadingQuestion,ToeicAttempt,DailyVisit
+from learning.services.toeic import toeic_sets
 from learning.services.catalog import validate_lesson
 from learning.services.storage import import_library,export_library
+from learning.forms import EmailUserCreationForm
+from learning.views import login_key
 
 @override_settings(AI_PROVIDER='none',OPENAI_API_KEY='',ALLOWED_HOSTS=['testserver','localhost'],
     STORAGES={'default':{'BACKEND':'django.core.files.storage.FileSystemStorage'},
               'staticfiles':{'BACKEND':'django.contrib.staticfiles.storage.StaticFilesStorage'}})
 class ReadingPlatformTests(TestCase):
     def setUp(self):
-        U=get_user_model();self.alice=U.objects.create_user(username='reading-alice');self.bob=U.objects.create_user(username='reading-bob')
+        U=get_user_model();self.alice=U.objects.create_user(username='reading-alice',email='alice@example.com',password='S3cure-test-pass!');self.bob=U.objects.create_user(username='reading-bob',email='bob@example.com')
         self.client.force_login(self.alice)
         self.lesson=validate_lesson(json.loads((settings.BASE_DIR/'data/lessons/a-quiet-start.json').read_text(encoding='utf-8')))
         c=self.lesson
@@ -39,6 +43,30 @@ class ReadingPlatformTests(TestCase):
         data=self.client.get('/api/catalog/').json();self.assertEqual(len(data['items']),1)
         self.assertEqual(data['items'][0]['title'],self.lesson['title'])
         self.assertEqual(len(self.client.get('/api/readings/').json()['items']),1)
+
+    def test_public_landing_lists_lessons_but_actions_stay_private(self):
+        self.client.logout();response=self.client.get('/')
+        self.assertEqual(response.status_code,200);self.assertTemplateUsed(response,'landing.html')
+        self.assertContains(response,self.lesson['title']);self.assertContains(response,'Đăng nhập để học')
+        self.assertNotContains(response,self.private.text)
+        self.assertEqual(self.client.get('/api/catalog/').status_code,401)
+        self.assertEqual(self.post('/api/catalog/a-quiet-start/open/',{}).status_code,401)
+
+    def test_login_uses_email_not_username(self):
+        self.client.logout()
+        failed=self.client.post('/login/',{'username':'reading-alice','password':'S3cure-test-pass!'})
+        self.assertEqual(failed.status_code,200);self.assertFalse(failed.wsgi_request.user.is_authenticated)
+        success=self.client.post('/login/',{'username':'ALICE@EXAMPLE.COM','password':'S3cure-test-pass!','next':'/#catalog'})
+        self.assertRedirects(success,'/#catalog',fetch_redirect_response=False)
+        duplicate=EmailUserCreationForm(data={'username':'another','email':'Alice@example.com',
+            'password1':'Another-S3cure-pass!','password2':'Another-S3cure-pass!'})
+        self.assertFalse(duplicate.is_valid());self.assertIn('email',duplicate.errors)
+
+    def test_login_throttle_trusts_forwarded_ip_only_in_proxy_mode(self):
+        factory=RequestFactory();first=factory.get('/',REMOTE_ADDR='172.18.0.4',HTTP_X_FORWARDED_FOR='203.0.113.10')
+        second=factory.get('/',REMOTE_ADDR='172.18.0.4',HTTP_X_FORWARDED_FOR='203.0.113.11')
+        with override_settings(TRUST_PROXY_HTTPS=False):self.assertEqual(login_key(first),login_key(second))
+        with override_settings(TRUST_PROXY_HTTPS=True):self.assertNotEqual(login_key(first),login_key(second))
     def test_catalog_favorite_filter_uses_personal_snapshot(self):
         rid=self.open()['id']
         self.post(f'/api/readings/{rid}/progress/',{'favorite':True})
@@ -99,7 +127,7 @@ class ReadingPlatformTests(TestCase):
     def test_backup_roundtrip_includes_attempts_and_help(self):
         rid=self.open()['id'];self.submit(rid);self.post(f'/api/readings/{rid}/questions/',self.qa_payload())
         self.post(f'/api/readings/{rid}/progress/',{'paragraph':2,'completed':True})
-        payload=export_library(self.alice);self.assertEqual(payload['version'],2)
+        payload=export_library(self.alice);self.assertEqual(payload['version'],4)
         import_library(self.bob,payload);clone=Reading.objects.get(owner=self.bob,catalog_slug='a-quiet-start')
         self.assertNotEqual(str(clone.id),rid);self.assertEqual(clone.progress['quiz_best'],4)
         self.assertEqual(clone.progress['paragraph'],2);self.assertEqual(clone.questions.count(),1);self.assertEqual(clone.lesson_attempts.count(),1)
@@ -125,3 +153,35 @@ class ReadingPlatformTests(TestCase):
         self.standard.published=False;self.standard.save()
         self.assertEqual(self.client.get('/api/catalog/').json()['items'],[])
         self.assertEqual(self.post('/api/catalog/a-quiet-start/open/',{}).status_code,404)
+
+    def test_toeic_attempt_is_private_idempotent_and_does_not_leak_keys(self):
+        catalog=self.client.get('/api/toeic/').json();self.assertEqual(len(catalog['items']),2)
+        practice=toeic_sets()[0];public=self.client.get(f"/api/toeic/{practice['slug']}/").json()
+        self.assertTrue(all('answer' not in question for question in public['questions']))
+        answers={q['id']:q['answer'] for q in practice['questions']};token=str(uuid.uuid4())
+        first=self.post(f"/api/toeic/{practice['slug']}/submit/",{'answers':answers,'token':token,'duration_seconds':240})
+        second=self.post(f"/api/toeic/{practice['slug']}/submit/",{'answers':answers,'token':token,'duration_seconds':240})
+        self.assertEqual(first.json()['score'],practice['question_count']);self.assertTrue(second.json()['duplicate'])
+        self.assertEqual(ToeicAttempt.objects.filter(owner=self.alice).count(),1)
+        self.client.force_login(self.bob)
+        self.assertEqual(self.client.get('/api/toeic/').json()['items'][0]['attempt_count'],0)
+        restored=import_library(self.bob,export_library(self.alice));self.assertEqual(restored['toeic_attempts_created'],1)
+        self.assertEqual(ToeicAttempt.objects.filter(owner=self.bob).count(),1)
+
+    def test_private_traffic_and_admin_analytics(self):
+        self.client.get('/')
+        self.post('/api/activity/visit/',{'page':'toeic'})
+        row=DailyVisit.objects.get(owner=self.alice)
+        self.assertEqual(len(row.visitor_key),64);self.assertNotIn('127.0.0.1',row.visitor_key)
+        self.assertEqual(row.views,2);self.assertEqual(row.page_counts,{'home':1,'toeic':1})
+        boot=self.client.get('/api/bootstrap/').json();self.assertEqual(boot['stats']['active_days_30'],1)
+        self.assertEqual(self.client.get('/api/analytics/').status_code,403)
+        self.alice.is_staff=True;self.alice.save(update_fields=['is_staff'])
+        data=self.client.get('/api/analytics/?days=7').json()
+        self.assertEqual(data['totals']['visitors'],1);self.assertEqual(data['totals']['views'],2)
+
+    def test_anonymous_visit_becomes_owned_after_login(self):
+        self.client.logout();self.client.get('/login/')
+        self.assertEqual(DailyVisit.objects.count(),1);self.assertIsNone(DailyVisit.objects.get().owner_id)
+        self.client.force_login(self.alice);self.client.get('/')
+        self.assertEqual(DailyVisit.objects.count(),1);self.assertEqual(DailyVisit.objects.get().owner_id,self.alice.pk)
