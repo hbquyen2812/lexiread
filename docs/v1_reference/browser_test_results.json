@@ -1,0 +1,29 @@
+{
+  "checks_passed": 21,
+  "checks": [
+    "Dashboard: 116 cards",
+    "Open reading",
+    "Select a word from the original paragraph",
+    "Generate manual word prompt using POST",
+    "Ten grounded candidates",
+    "Grammar notes",
+    "Search vocabulary",
+    "Create vocabulary via editor",
+    "Preview duplicate import",
+    "Flashcard flip + review saved",
+    "Exercise submit: meaning",
+    "Exercise submit: reverse",
+    "Exercise submit: synonym",
+    "Exercise submit: paraphrase",
+    "Exercise submit: cloze",
+    "Exercise submit: typing",
+    "Preview review idempotency",
+    "Preview backup export payload",
+    "Data/settings page",
+    "390 px home reflow",
+    "No uncaught JavaScript exceptions"
+  ],
+  "uncaught_errors": [],
+  "storage": "in-memory test double; real browser persistence not tested",
+  "backend": "offline preview only"
+}

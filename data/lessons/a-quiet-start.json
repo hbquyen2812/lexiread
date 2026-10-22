@@ -1,0 +1,268 @@
+{
+  "slug": "a-quiet-start",
+  "title": "A Quiet Start to the Day",
+  "level": "A2",
+  "topic": "Thói quen & đời sống",
+  "summary": "Một thay đổi nhỏ giúp buổi sáng của Mai bớt vội vàng.",
+  "revision": 1,
+  "published": true,
+  "order": 1,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "Mai used to check her phone as soon as she woke up. She read messages while eating breakfast and often left home in a hurry. One Monday, she forgot the notebook she needed for class. That evening, she decided to change her morning routine. She did not want a perfect morning. She wanted a calmer one.\n\nHer new plan was simple. She put her bag beside the door before going to bed. In the morning, she left her phone on a shelf and made breakfast first. She also prepared a short list of three important tasks. A longer list made her feel worried, so she kept it short.\n\nAt first, the change felt strange. Mai reached for her phone without thinking. After a week, however, she found it easier to wait. She did not stop using her phone completely. She checked her messages on the bus, when she had already packed everything she needed.\n\nMai still had busy mornings, especially on rainy days. But she no longer felt that every morning was a race. Her favourite part was not finishing more tasks. It was having enough time to enjoy a warm breakfast. She chose to continue the routine because it suited her, not because someone said it was the best one.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Mai từng kiểm tra điện thoại ngay khi thức dậy. Cô đọc tin nhắn trong lúc ăn sáng và thường vội vã ra khỏi nhà. Một thứ Hai, cô quên cuốn vở cần dùng trên lớp. Tối hôm đó, cô quyết định thay đổi thói quen buổi sáng. Cô không muốn một buổi sáng hoàn hảo. Cô muốn một buổi sáng bình tĩnh hơn."
+      },
+      {
+        "index": 1,
+        "vi": "Kế hoạch mới của cô rất đơn giản. Cô đặt cặp cạnh cửa trước khi đi ngủ. Buổi sáng, cô để điện thoại trên kệ và chuẩn bị bữa sáng trước. Cô cũng viết một danh sách ngắn gồm ba việc quan trọng. Danh sách dài hơn khiến cô lo lắng nên cô giữ nó ngắn gọn."
+      },
+      {
+        "index": 2,
+        "vi": "Lúc đầu, thay đổi này khá lạ lẫm. Mai với lấy điện thoại mà không suy nghĩ. Tuy nhiên, sau một tuần, cô thấy việc chờ đợi dễ hơn. Cô không ngừng dùng điện thoại hoàn toàn. Cô kiểm tra tin nhắn trên xe buýt, khi đã xếp đủ những thứ cần mang theo."
+      },
+      {
+        "index": 3,
+        "vi": "Mai vẫn có những buổi sáng bận rộn, nhất là vào ngày mưa. Nhưng cô không còn cảm thấy sáng nào cũng là một cuộc đua. Điều cô thích nhất không phải là làm xong nhiều việc hơn, mà là có đủ thời gian thưởng thức bữa sáng ấm nóng. Cô tiếp tục thói quen này vì nó phù hợp với mình, không phải vì ai đó nói rằng đó là cách tốt nhất."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "routine",
+        "pos": "n",
+        "meaning_vi": "thói quen hoặc trình tự thường ngày",
+        "synonyms": [
+          "habit",
+          "regular pattern"
+        ],
+        "paraphrases": [
+          "the things you regularly do"
+        ],
+        "context": "Mai used to check her phone as soon as she woke up. She read messages while eating breakfast and often left home in a hurry. One Monday, she forgot the notebook she needed for class. That evening, she decided to change her morning routine. She did not want a perfect morning. She wanted a calmer one.",
+        "example": "",
+        "example_vi": "",
+        "note": "Routine nhấn mạnh trình tự thường làm; habit thường là một hành vi quen thuộc.",
+        "tags": [
+          "Thói quen & đời sống",
+          "A2",
+          "A Quiet Start to the Day"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "in a hurry",
+        "pos": "phrase",
+        "meaning_vi": "vội vàng",
+        "synonyms": [
+          "in a rush"
+        ],
+        "paraphrases": [
+          "without much time to spare"
+        ],
+        "context": "Mai used to check her phone as soon as she woke up. She read messages while eating breakfast and often left home in a hurry. One Monday, she forgot the notebook she needed for class. That evening, she decided to change her morning routine. She did not want a perfect morning. She wanted a calmer one.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thói quen & đời sống",
+          "A2",
+          "A Quiet Start to the Day"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "prepared",
+        "pos": "v",
+        "meaning_vi": "đã chuẩn bị",
+        "synonyms": [
+          "got ready"
+        ],
+        "paraphrases": [
+          "made something ready in advance"
+        ],
+        "context": "Her new plan was simple. She put her bag beside the door before going to bed. In the morning, she left her phone on a shelf and made breakfast first. She also prepared a short list of three important tasks. A longer list made her feel worried, so she kept it short.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thói quen & đời sống",
+          "A2",
+          "A Quiet Start to the Day"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "reached for",
+        "pos": "phrase",
+        "meaning_vi": "với tay lấy",
+        "synonyms": [
+          "stretched towards"
+        ],
+        "paraphrases": [
+          "moved her hand towards something"
+        ],
+        "context": "At first, the change felt strange. Mai reached for her phone without thinking. After a week, however, she found it easier to wait. She did not stop using her phone completely. She checked her messages on the bus, when she had already packed everything she needed.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thói quen & đời sống",
+          "A2",
+          "A Quiet Start to the Day"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "no longer",
+        "pos": "phrase",
+        "meaning_vi": "không còn nữa",
+        "synonyms": [
+          "not anymore"
+        ],
+        "paraphrases": [
+          "not now, although it was true before"
+        ],
+        "context": "Mai still had busy mornings, especially on rainy days. But she no longer felt that every morning was a race. Her favourite part was not finishing more tasks. It was having enough time to enjoy a warm breakfast. She chose to continue the routine because it suited her, not because someone said it was the best one.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thói quen & đời sống",
+          "A2",
+          "A Quiet Start to the Day"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "suited",
+        "pos": "v",
+        "meaning_vi": "phù hợp với",
+        "synonyms": [
+          "was right for"
+        ],
+        "paraphrases": [
+          "matched her needs"
+        ],
+        "context": "Mai still had busy mornings, especially on rainy days. But she no longer felt that every morning was a race. Her favourite part was not finishing more tasks. It was having enough time to enjoy a warm breakfast. She chose to continue the routine because it suited her, not because someone said it was the best one.",
+        "example": "",
+        "example_vi": "",
+        "note": "Suit ở đây là động từ, không phải danh từ bộ com-lê.",
+        "tags": [
+          "Thói quen & đời sống",
+          "A2",
+          "A Quiet Start to the Day"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "used to + V",
+        "evidence": "Mai used to check her phone as soon as she woke up.",
+        "explanation_vi": "Diễn tả thói quen trong quá khứ, nay đã thay đổi. Không nhầm với be used to + V-ing: quen với.",
+        "example": "I used to study late at night.",
+        "example_vi": "Tôi từng học đến khuya."
+      },
+      {
+        "pattern": "before + V-ing",
+        "evidence": "before going to bed",
+        "explanation_vi": "Sau before có thể dùng V-ing khi chủ thể đã rõ và trùng với chủ thể câu chính.",
+        "example": "I pack my bag before leaving.",
+        "example_vi": "Tôi xếp cặp trước khi đi."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What is the main focus of the passage?",
+      "options": [
+        "A small change to a morning routine",
+        "The best phone to buy",
+        "A new bus service",
+        "A difficult school examination"
+      ],
+      "answer": 0,
+      "paragraph_index": 0,
+      "evidence": "she decided to change her morning routine.",
+      "explanation_vi": "Toàn bài theo dõi việc Mai thay đổi nếp sinh hoạt buổi sáng, không đánh giá thiết bị hay kỳ thi."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "When did Mai check messages after changing her routine?",
+      "options": [
+        "Before breakfast",
+        "On the bus",
+        "During class",
+        "Just before going to sleep"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "She checked her messages on the bus",
+      "explanation_vi": "Thông tin ở đoạn 3 nói rõ địa điểm/thời điểm là trên xe buýt."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Mai stopped using her phone completely.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "She did not stop using her phone completely.",
+      "explanation_vi": "Câu hỏi nói ngừng hoàn toàn; bài phủ định trực tiếp điều đó."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "In the final paragraph, “suited her” means:",
+      "options": [
+        "made her famous",
+        "was expensive",
+        "was right for her",
+        "was chosen by her teacher"
+      ],
+      "answer": 2,
+      "paragraph_index": 3,
+      "evidence": "She chose to continue the routine because it suited her",
+      "explanation_vi": "Suited her nghĩa là phù hợp với nhu cầu của cô."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“A calmer one” thay cho điều gì?",
+      "answer_vi": "One thay cho morning để tránh lặp danh từ. A calmer one là một buổi sáng bình tĩnh, ít vội vàng hơn.",
+      "paragraph_index": 0,
+      "evidence": "She wanted a calmer one."
+    },
+    {
+      "question": "“No longer” khác “never” thế nào?",
+      "answer_vi": "No longer nói trước đây có nhưng hiện tại không còn. Never là chưa bao giờ/không bao giờ, không hàm ý một sự thay đổi như vậy.",
+      "paragraph_index": 3,
+      "evidence": "she no longer felt that every morning was a race."
+    }
+  ]
+}

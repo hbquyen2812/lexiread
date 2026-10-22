@@ -1,0 +1,268 @@
+{
+  "slug": "an-afternoon-without-photos",
+  "title": "An Afternoon without Photos",
+  "level": "A2",
+  "topic": "Sở thích & kết nối",
+  "summary": "Hai người bạn thử dành một buổi đi chơi để trò chuyện thay vì chụp ảnh.",
+  "revision": 1,
+  "published": true,
+  "order": 4,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "Every time An met her friend Ruby, they took dozens of photos. They chose a table near the window, moved their drinks and waited for the right light. Sometimes they spent more time looking at the screen than talking to each other. An enjoyed the pictures, but she missed their long conversations.\n\nFor their next meeting, An suggested leaving their phones in their bags for the first hour. Ruby agreed, although she wanted one photo at the end. They visited a small cafe and talked about a book they were both reading. Without a screen on the table, they noticed that their conversation moved more slowly.\n\nHalfway through the meeting, Ruby remembered a funny message and reached for her bag. Then she stopped and told the story in her own words. An laughed, and neither of them felt they needed to see the message. They were interested in the story, not in the exact words on a screen.\n\nBefore leaving, they asked a member of staff to take one picture. The photo was a little dark, but they kept it anyway. They had not decided that photos were bad. They simply wanted their next meeting to include more conversation and fewer interruptions.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Mỗi lần An gặp bạn Ruby, họ chụp hàng chục bức ảnh. Họ chọn bàn gần cửa sổ, di chuyển đồ uống và chờ ánh sáng phù hợp. Đôi lúc họ nhìn màn hình lâu hơn thời gian trò chuyện với nhau. An thích những bức ảnh nhưng nhớ những cuộc nói chuyện dài của hai người."
+      },
+      {
+        "index": 1,
+        "vi": "Lần gặp tiếp theo, An đề nghị để điện thoại trong túi suốt giờ đầu. Ruby đồng ý, dù vẫn muốn chụp một tấm vào cuối buổi. Họ đến quán cà phê nhỏ và nói về cuốn sách cả hai đang đọc. Không có màn hình trên bàn, họ nhận thấy cuộc trò chuyện diễn ra chậm rãi hơn."
+      },
+      {
+        "index": 2,
+        "vi": "Giữa buổi gặp, Ruby nhớ ra một tin nhắn hài hước và với tay lấy túi. Rồi cô dừng lại, kể câu chuyện bằng lời của mình. An bật cười, và cả hai đều không thấy cần đọc tin nhắn. Họ quan tâm đến câu chuyện, không phải từng chữ chính xác trên màn hình."
+      },
+      {
+        "index": 3,
+        "vi": "Trước khi rời đi, họ nhờ một nhân viên chụp một tấm ảnh. Ảnh hơi tối nhưng họ vẫn giữ. Họ không kết luận rằng ảnh là xấu. Họ chỉ muốn lần gặp sau có nhiều trò chuyện hơn và ít gián đoạn hơn."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "dozens of",
+        "pos": "phrase",
+        "meaning_vi": "hàng chục",
+        "synonyms": [
+          "many groups of twelve"
+        ],
+        "paraphrases": [
+          "a large number, measured in tens"
+        ],
+        "context": "Every time An met her friend Ruby, they took dozens of photos. They chose a table near the window, moved their drinks and waited for the right light. Sometimes they spent more time looking at the screen than talking to each other. An enjoyed the pictures, but she missed their long conversations.",
+        "example": "",
+        "example_vi": "",
+        "note": "Dozens of chỉ số lượng ước chừng; không có nghĩa chính xác 24.",
+        "tags": [
+          "Sở thích & kết nối",
+          "A2",
+          "An Afternoon without Photos"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "suggested",
+        "pos": "v",
+        "meaning_vi": "đề nghị, gợi ý",
+        "synonyms": [
+          "proposed"
+        ],
+        "paraphrases": [
+          "offered an idea for consideration"
+        ],
+        "context": "For their next meeting, An suggested leaving their phones in their bags for the first hour. Ruby agreed, although she wanted one photo at the end. They visited a small cafe and talked about a book they were both reading. Without a screen on the table, they noticed that their conversation moved more slowly.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Sở thích & kết nối",
+          "A2",
+          "An Afternoon without Photos"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "although",
+        "pos": "conj",
+        "meaning_vi": "mặc dù",
+        "synonyms": [
+          "even though"
+        ],
+        "paraphrases": [
+          "introduces a contrasting fact"
+        ],
+        "context": "For their next meeting, An suggested leaving their phones in their bags for the first hour. Ruby agreed, although she wanted one photo at the end. They visited a small cafe and talked about a book they were both reading. Without a screen on the table, they noticed that their conversation moved more slowly.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Sở thích & kết nối",
+          "A2",
+          "An Afternoon without Photos"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "in her own words",
+        "pos": "phrase",
+        "meaning_vi": "bằng lời của chính cô ấy",
+        "synonyms": [
+          "using her own expression"
+        ],
+        "paraphrases": [
+          "without copying the original wording"
+        ],
+        "context": "Halfway through the meeting, Ruby remembered a funny message and reached for her bag. Then she stopped and told the story in her own words. An laughed, and neither of them felt they needed to see the message. They were interested in the story, not in the exact words on a screen.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Sở thích & kết nối",
+          "A2",
+          "An Afternoon without Photos"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "anyway",
+        "pos": "adv",
+        "meaning_vi": "dù vậy, vẫn cứ",
+        "synonyms": [
+          "despite that"
+        ],
+        "paraphrases": [
+          "even though there was a reason not to"
+        ],
+        "context": "Before leaving, they asked a member of staff to take one picture. The photo was a little dark, but they kept it anyway. They had not decided that photos were bad. They simply wanted their next meeting to include more conversation and fewer interruptions.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Sở thích & kết nối",
+          "A2",
+          "An Afternoon without Photos"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "interruptions",
+        "pos": "n",
+        "meaning_vi": "những sự gián đoạn",
+        "synonyms": [
+          "breaks",
+          "disruptions"
+        ],
+        "paraphrases": [
+          "things that stop an activity briefly"
+        ],
+        "context": "Before leaving, they asked a member of staff to take one picture. The photo was a little dark, but they kept it anyway. They had not decided that photos were bad. They simply wanted their next meeting to include more conversation and fewer interruptions.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không phải break nào cũng gây gián đoạn không mong muốn; nghĩa phụ thuộc ngữ cảnh.",
+        "tags": [
+          "Sở thích & kết nối",
+          "A2",
+          "An Afternoon without Photos"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "suggest + V-ing",
+        "evidence": "An suggested leaving their phones in their bags",
+        "explanation_vi": "Sau suggest có thể dùng V-ing. Không dùng suggest to leave trong mẫu này.",
+        "example": "She suggested walking home.",
+        "example_vi": "Cô ấy đề nghị đi bộ về."
+      },
+      {
+        "pattern": "more ... than ...",
+        "evidence": "more time looking at the screen than talking to each other",
+        "explanation_vi": "So sánh thời gian dành cho hai hoạt động song song dạng V-ing.",
+        "example": "I spend more time reading than watching TV.",
+        "example_vi": "Tôi dành thời gian đọc nhiều hơn xem tivi."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What did the friends want to change?",
+      "options": [
+        "The amount of conversation during meetings",
+        "The books in the cafe",
+        "The work of the cafe staff",
+        "The price of their phones"
+      ],
+      "answer": 0,
+      "paragraph_index": 3,
+      "evidence": "more conversation and fewer interruptions.",
+      "explanation_vi": "Mục tiêu là nói chuyện nhiều hơn, ít bị gián đoạn hơn."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "How many photos did they ask the staff member to take?",
+      "options": [
+        "None",
+        "One",
+        "Twelve",
+        "Dozens"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "take one picture.",
+      "explanation_vi": "Đoạn cuối nói rõ một bức ảnh."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The friends decided never to take photos again.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "they asked a member of staff to take one picture.",
+      "explanation_vi": "Họ vẫn chụp một ảnh cuối buổi nên không hề từ bỏ việc chụp ảnh."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "“In her own words” means:",
+      "options": [
+        "in a foreign language",
+        "by reading the message aloud",
+        "using her own way of telling it",
+        "by showing a photograph"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "told the story in her own words.",
+      "explanation_vi": "Ruby kể lại bằng cách diễn đạt riêng, không đọc nguyên văn tin nhắn."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Neither of them” chỉ ai?",
+      "answer_vi": "Them chỉ An và Ruby. Neither of them nghĩa là không người nào trong hai người, không phải cả hai đều cần xem tin nhắn.",
+      "paragraph_index": 2,
+      "evidence": "neither of them felt they needed to see the message."
+    },
+    {
+      "question": "“Although” có thể bỏ vế chính không?",
+      "answer_vi": "Mệnh đề although tạo ý nhượng bộ và cần gắn với mệnh đề chính trong câu hoàn chỉnh. Ở đây Ruby agreed là mệnh đề chính.",
+      "paragraph_index": 1,
+      "evidence": "Ruby agreed, although she wanted one photo at the end."
+    }
+  ]
+}

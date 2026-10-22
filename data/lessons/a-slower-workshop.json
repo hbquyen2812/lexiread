@@ -1,0 +1,268 @@
+{
+  "slug": "a-slower-workshop",
+  "title": "A Slower Workshop",
+  "level": "B2",
+  "topic": "Nghệ thuật & kinh doanh",
+  "summary": "Một xưởng gốm điều chỉnh quy mô để giữ chất lượng thay vì nhận mọi đơn hàng.",
+  "revision": 1,
+  "published": true,
+  "order": 12,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "At a small ceramics workshop, orders increased sharply after a photograph of a blue bowl was shared online. The owner, Mara, welcomed the attention. She had spent years developing a recognisable style and hoped that the new interest would support the business. Soon, however, the prospect of accepting every order began to worry her.\n\nThe material was malleable when wet, but the work still demanded care. Each piece had to pass through several stages, and some would need to be made again. Mara could devise a faster way to arrange her tools, but she could not remove every waiting period from the process. A relentless schedule left her tired and made small errors more frequent.\n\nOne customer offered to commission a large collection for a hotel. It was a substantial undertaking for a workshop with only two people. Mara considered hiring temporary help, then calculated how much teaching and supervision would be required. She declined the proposed deadline rather than promise something she could not deliver. The customer later agreed to a smaller order with a longer schedule.\n\nMara also introduced occasional classes. These provided an additional source of income, but she did not regard teaching as effortless. Explaining a familiar movement to a beginner required its own preparation. By the end of the year, the workshop produced fewer items than its busiest month had suggested it might. Mara nevertheless considered the business stronger: she could explain its limits and choose work in line with them.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Tại xưởng gốm nhỏ, đơn đặt hàng tăng mạnh sau khi ảnh chiếc bát xanh được chia sẻ trên mạng. Chủ xưởng Mara đón nhận sự chú ý. Cô đã dành nhiều năm tạo phong cách dễ nhận ra và hy vọng sự quan tâm mới giúp việc kinh doanh. Nhưng rồi viễn cảnh nhận tất cả đơn bắt đầu khiến cô lo."
+      },
+      {
+        "index": 1,
+        "vi": "Vật liệu dễ tạo hình khi ướt, nhưng công việc vẫn cần cẩn thận. Mỗi sản phẩm qua nhiều công đoạn và một số phải làm lại. Mara có thể nghĩ ra cách xếp dụng cụ nhanh hơn nhưng không thể xóa mọi khoảng chờ trong quy trình. Lịch làm việc liên tục không ngơi khiến cô mệt và sai sót nhỏ xảy ra thường xuyên hơn."
+      },
+      {
+        "index": 2,
+        "vi": "Một khách muốn đặt làm bộ sưu tập lớn cho khách sạn. Đây là công việc đáng kể đối với xưởng chỉ có hai người. Mara cân nhắc thuê người tạm thời rồi tính thời gian cần dạy và giám sát. Cô từ chối hạn giao đề xuất thay vì hứa điều không thể thực hiện. Sau đó khách đồng ý đơn nhỏ hơn với lịch dài hơn."
+      },
+      {
+        "index": 3,
+        "vi": "Mara cũng mở lớp thỉnh thoảng. Chúng mang lại nguồn thu thêm nhưng cô không xem dạy học là việc dễ dàng không tốn sức. Giải thích động tác quen thuộc cho người mới cần chuẩn bị riêng. Cuối năm, xưởng làm ít đồ hơn mức tháng bận nhất từng khiến người ta kỳ vọng. Dù vậy, Mara coi doanh nghiệp vững hơn: cô có thể nói rõ giới hạn và chọn việc phù hợp."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "the prospect of",
+        "pos": "phrase",
+        "meaning_vi": "viễn cảnh, khả năng sắp phải/làm điều gì",
+        "synonyms": [
+          "the possibility of"
+        ],
+        "paraphrases": [
+          "the thought of something that may happen"
+        ],
+        "context": "At a small ceramics workshop, orders increased sharply after a photograph of a blue bowl was shared online. The owner, Mara, welcomed the attention. She had spent years developing a recognisable style and hoped that the new interest would support the business. Soon, however, the prospect of accepting every order began to worry her.",
+        "example": "",
+        "example_vi": "",
+        "note": "Sau of dùng danh từ hoặc V-ing. Prospect không có nghĩa chắc chắn sẽ xảy ra.",
+        "tags": [
+          "Nghệ thuật & kinh doanh",
+          "B2",
+          "A Slower Workshop"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "malleable",
+        "pos": "adj",
+        "meaning_vi": "dễ uốn, dễ tạo hình",
+        "synonyms": [
+          "easy to shape"
+        ],
+        "paraphrases": [
+          "able to be shaped without difficulty"
+        ],
+        "context": "The material was malleable when wet, but the work still demanded care. Each piece had to pass through several stages, and some would need to be made again. Mara could devise a faster way to arrange her tools, but she could not remove every waiting period from the process. A relentless schedule left her tired and made small errors more frequent.",
+        "example": "",
+        "example_vi": "",
+        "note": "Nghĩa vật lý trong bài; đôi khi dùng bóng cho người/ý tưởng dễ chịu ảnh hưởng.",
+        "tags": [
+          "Nghệ thuật & kinh doanh",
+          "B2",
+          "A Slower Workshop"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "relentless",
+        "pos": "adj",
+        "meaning_vi": "liên tục khắc nghiệt, không ngơi nghỉ",
+        "synonyms": [
+          "unremitting"
+        ],
+        "paraphrases": [
+          "continuing intensely without a break"
+        ],
+        "context": "The material was malleable when wet, but the work still demanded care. Each piece had to pass through several stages, and some would need to be made again. Mara could devise a faster way to arrange her tools, but she could not remove every waiting period from the process. A relentless schedule left her tired and made small errors more frequent.",
+        "example": "",
+        "example_vi": "",
+        "note": "Sắc thái mạnh; không đồng nghĩa đơn giản với hardworking.",
+        "tags": [
+          "Nghệ thuật & kinh doanh",
+          "B2",
+          "A Slower Workshop"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "commission",
+        "pos": "v",
+        "meaning_vi": "đặt làm sản phẩm hoặc tác phẩm",
+        "synonyms": [
+          "order specially"
+        ],
+        "paraphrases": [
+          "pay someone to create something for a purpose"
+        ],
+        "context": "One customer offered to commission a large collection for a hotel. It was a substantial undertaking for a workshop with only two people. Mara considered hiring temporary help, then calculated how much teaching and supervision would be required. She declined the proposed deadline rather than promise something she could not deliver. The customer later agreed to a smaller order with a longer schedule.",
+        "example": "",
+        "example_vi": "",
+        "note": "Ở đây là động từ đặt làm; commission (n) còn có thể là tiền hoa hồng/ủy ban.",
+        "tags": [
+          "Nghệ thuật & kinh doanh",
+          "B2",
+          "A Slower Workshop"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "undertaking",
+        "pos": "n",
+        "meaning_vi": "công việc hoặc dự án đòi hỏi nỗ lực",
+        "synonyms": [
+          "project",
+          "task"
+        ],
+        "paraphrases": [
+          "a piece of work that requires effort"
+        ],
+        "context": "One customer offered to commission a large collection for a hotel. It was a substantial undertaking for a workshop with only two people. Mara considered hiring temporary help, then calculated how much teaching and supervision would be required. She declined the proposed deadline rather than promise something she could not deliver. The customer later agreed to a smaller order with a longer schedule.",
+        "example": "",
+        "example_vi": "",
+        "note": "Viết undertaking, không phải undetaking. Trong ngữ cảnh khác còn nghĩa cam kết.",
+        "tags": [
+          "Nghệ thuật & kinh doanh",
+          "B2",
+          "A Slower Workshop"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "supervision",
+        "pos": "n",
+        "meaning_vi": "sự giám sát, hướng dẫn công việc",
+        "synonyms": [
+          "oversight"
+        ],
+        "paraphrases": [
+          "watching and guiding how work is done"
+        ],
+        "context": "One customer offered to commission a large collection for a hotel. It was a substantial undertaking for a workshop with only two people. Mara considered hiring temporary help, then calculated how much teaching and supervision would be required. She declined the proposed deadline rather than promise something she could not deliver. The customer later agreed to a smaller order with a longer schedule.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không nhầm overlook = bỏ sót. Oversee = giám sát.",
+        "tags": [
+          "Nghệ thuật & kinh doanh",
+          "B2",
+          "A Slower Workshop"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "the prospect of + V-ing",
+        "evidence": "the prospect of accepting every order",
+        "explanation_vi": "Cụm danh từ nói về viễn cảnh thực hiện một việc. Of là giới từ nên dùng accepting.",
+        "example": "The prospect of studying abroad excites her.",
+        "example_vi": "Viễn cảnh đi du học khiến cô ấy hào hứng."
+      },
+      {
+        "pattern": "rather than + V",
+        "evidence": "rather than promise something she could not deliver.",
+        "explanation_vi": "Đặt hai lựa chọn đối lập: từ chối thời hạn thay vì hứa điều không thể làm.",
+        "example": "I asked for help rather than guess.",
+        "example_vi": "Tôi hỏi giúp đỡ thay vì đoán."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "Why did Mara change the way she accepted work?",
+      "options": [
+        "To stop making ceramics entirely",
+        "To work within realistic limits while maintaining the business",
+        "To accept every deadline without question",
+        "To remove the need for preparation"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "she could explain its limits and choose work in line with them.",
+      "explanation_vi": "Câu kết nhấn mạnh hiểu giới hạn và chọn công việc phù hợp."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "How did the hotel order change?",
+      "options": [
+        "It became larger and more urgent",
+        "It was replaced by a free class",
+        "It became smaller with more time allowed",
+        "It was accepted with the original deadline"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "a smaller order with a longer schedule.",
+      "explanation_vi": "Hai thay đổi là giảm số lượng và kéo dài thời gian."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The classes became the workshop’s largest source of income.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 3,
+      "evidence": "These provided an additional source of income",
+      "explanation_vi": "Additional chỉ nguồn bổ sung; bài không cho tỷ trọng để xác nhận hay bác bỏ largest."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "Here, “commission” means to:",
+      "options": [
+        "pay someone to make something specially",
+        "cancel a payment",
+        "join a government committee",
+        "earn a percentage from a sale"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "commission a large collection for a hotel.",
+      "explanation_vi": "Commission là động từ đặt làm bộ sản phẩm, không phải danh từ tiền hoa hồng."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Commission” ở đây có phải tiền hoa hồng không?",
+      "answer_vi": "Không. Nó đứng sau to và nhận tân ngữ a large collection, nên là động từ đặt làm. Nghĩa danh từ tiền hoa hồng thường thấy trong earn a commission.",
+      "paragraph_index": 2,
+      "evidence": "offered to commission a large collection for a hotel."
+    },
+    {
+      "question": "Vì sao ít sản phẩm hơn mà Mara vẫn thấy doanh nghiệp mạnh hơn?",
+      "answer_vi": "Đây là đánh giá của nhân vật dựa trên việc hiểu giới hạn và chọn đơn phù hợp, không phải kết luận sản lượng ít luôn làm doanh nghiệp mạnh.",
+      "paragraph_index": 3,
+      "evidence": "Mara nevertheless considered the business stronger: she could explain its limits and choose work in line with them."
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "slug": "the-repair-afternoon",
+  "title": "The Repair Afternoon",
+  "level": "B1",
+  "topic": "Môi trường & đồ dùng",
+  "summary": "Một buổi sửa đồ đề cao kỹ năng và quyết định sửa hay bỏ theo từng trường hợp.",
+  "revision": 1,
+  "published": true,
+  "order": 6,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "On the first Saturday of each month, a group of volunteers used a community room as a repair workshop. Visitors brought lamps, bags and small pieces of furniture. The aim was not to promise that everything could be fixed. It was to help people understand what had gone wrong and decide whether a repair was worth attempting.\n\nA retired craft worker named Elena usually examined wooden objects. She could take a chair to pieces and identify the damaged part without replacing the whole frame. She explained each step to the owner. Visitors were encouraged to watch and ask questions rather than simply leave an object and return when the work was finished.\n\nSome repairs were straightforward; others were not. One lamp needed a replacement part that the volunteers did not have. They did not improvise an unsafe solution. Instead, they explained the limitation and suggested asking a qualified specialist. The workshop kept a small box for parts that could be reused, but electrical work was restricted to volunteers with the relevant skills.\n\nAt the end of the afternoon, the organisers counted completed repairs and items that still needed attention. They also recorded what visitors had learned. A bag that was repaired might eventually wear out again, but knowing how to sew a simple seam could remain useful. For Elena, passing on that knowledge was an important part of the project.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Vào thứ Bảy đầu tiên mỗi tháng, nhóm tình nguyện viên dùng phòng sinh hoạt cộng đồng làm xưởng sửa đồ. Người đến mang theo đèn, túi và đồ nội thất nhỏ. Mục tiêu không phải hứa rằng mọi thứ đều sửa được, mà là giúp mọi người hiểu lỗi ở đâu và quyết định việc sửa có đáng thử không."
+      },
+      {
+        "index": 1,
+        "vi": "Một người thợ thủ công đã nghỉ hưu tên Elena thường kiểm tra đồ gỗ. Bà có thể tháo rời ghế và xác định bộ phận hỏng mà không thay cả khung. Bà giải thích từng bước cho chủ đồ vật. Khách được khuyến khích quan sát và đặt câu hỏi thay vì chỉ để đồ lại rồi quay lại khi xong."
+      },
+      {
+        "index": 2,
+        "vi": "Một số việc sửa đơn giản; số khác thì không. Một chiếc đèn cần linh kiện thay thế mà nhóm không có. Họ không ứng biến một giải pháp thiếu an toàn. Thay vào đó, họ giải thích hạn chế và gợi ý tìm người có chuyên môn phù hợp. Xưởng có hộp nhỏ đựng linh kiện tái sử dụng, nhưng việc điện chỉ dành cho tình nguyện viên có kỹ năng liên quan."
+      },
+      {
+        "index": 3,
+        "vi": "Cuối buổi, ban tổ chức đếm số đồ đã sửa và số đồ còn cần xử lý. Họ cũng ghi những gì khách đã học. Chiếc túi đã sửa có thể rồi lại mòn, nhưng biết khâu một đường may đơn giản vẫn có ích. Với Elena, truyền lại kiến thức ấy là phần quan trọng của dự án."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "worth attempting",
+        "pos": "phrase",
+        "meaning_vi": "đáng để thử thực hiện",
+        "synonyms": [
+          "worth trying"
+        ],
+        "paraphrases": [
+          "useful enough to make an effort"
+        ],
+        "context": "On the first Saturday of each month, a group of volunteers used a community room as a repair workshop. Visitors brought lamps, bags and small pieces of furniture. The aim was not to promise that everything could be fixed. It was to help people understand what had gone wrong and decide whether a repair was worth attempting.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Môi trường & đồ dùng",
+          "B1",
+          "The Repair Afternoon"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "take a chair to pieces",
+        "pos": "phrase",
+        "meaning_vi": "tháo rời chiếc ghế",
+        "synonyms": [
+          "dismantle a chair"
+        ],
+        "paraphrases": [
+          "separate a chair into its parts"
+        ],
+        "context": "A retired craft worker named Elena usually examined wooden objects. She could take a chair to pieces and identify the damaged part without replacing the whole frame. She explained each step to the owner. Visitors were encouraged to watch and ask questions rather than simply leave an object and return when the work was finished.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Môi trường & đồ dùng",
+          "B1",
+          "The Repair Afternoon"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "straightforward",
+        "pos": "adj",
+        "meaning_vi": "đơn giản, không phức tạp",
+        "synonyms": [
+          "uncomplicated"
+        ],
+        "paraphrases": [
+          "easy to understand or carry out"
+        ],
+        "context": "Some repairs were straightforward; others were not. One lamp needed a replacement part that the volunteers did not have. They did not improvise an unsafe solution. Instead, they explained the limitation and suggested asking a qualified specialist. The workshop kept a small box for parts that could be reused, but electrical work was restricted to volunteers with the relevant skills.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Môi trường & đồ dùng",
+          "B1",
+          "The Repair Afternoon"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "improvise",
+        "pos": "v",
+        "meaning_vi": "ứng biến bằng những thứ sẵn có",
+        "synonyms": [
+          "make do creatively"
+        ],
+        "paraphrases": [
+          "create a solution without a prepared plan"
+        ],
+        "context": "Some repairs were straightforward; others were not. One lamp needed a replacement part that the volunteers did not have. They did not improvise an unsafe solution. Instead, they explained the limitation and suggested asking a qualified specialist. The workshop kept a small box for parts that could be reused, but electrical work was restricted to volunteers with the relevant skills.",
+        "example": "",
+        "example_vi": "",
+        "note": "Ứng biến không tự đồng nghĩa với bất cẩn; bài chỉ bác bỏ giải pháp ứng biến thiếu an toàn.",
+        "tags": [
+          "Môi trường & đồ dùng",
+          "B1",
+          "The Repair Afternoon"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "restricted to",
+        "pos": "phrase",
+        "meaning_vi": "giới hạn cho một nhóm/phạm vi",
+        "synonyms": [
+          "limited to"
+        ],
+        "paraphrases": [
+          "allowed only for a specified group"
+        ],
+        "context": "Some repairs were straightforward; others were not. One lamp needed a replacement part that the volunteers did not have. They did not improvise an unsafe solution. Instead, they explained the limitation and suggested asking a qualified specialist. The workshop kept a small box for parts that could be reused, but electrical work was restricted to volunteers with the relevant skills.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Môi trường & đồ dùng",
+          "B1",
+          "The Repair Afternoon"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "wear out",
+        "pos": "phrase",
+        "meaning_vi": "hao mòn do sử dụng",
+        "synonyms": [
+          "become worn"
+        ],
+        "paraphrases": [
+          "lose condition through repeated use"
+        ],
+        "context": "At the end of the afternoon, the organisers counted completed repairs and items that still needed attention. They also recorded what visitors had learned. A bag that was repaired might eventually wear out again, but knowing how to sew a simple seam could remain useful. For Elena, passing on that knowledge was an important part of the project.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không đồng nghĩa hoàn toàn với break down: ngừng hoạt động/hỏng máy.",
+        "tags": [
+          "Môi trường & đồ dùng",
+          "B1",
+          "The Repair Afternoon"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "be worth + V-ing",
+        "evidence": "whether a repair was worth attempting",
+        "explanation_vi": "Worth đi với danh từ hoặc V-ing, không dùng worth to attempt trong cấu trúc này.",
+        "example": "This book is worth reading.",
+        "example_vi": "Cuốn sách này đáng đọc."
+      },
+      {
+        "pattern": "be encouraged to + V",
+        "evidence": "Visitors were encouraged to watch and ask questions",
+        "explanation_vi": "Cấu trúc bị động: người tham gia được khuyến khích làm điều gì.",
+        "example": "Students are encouraged to ask questions.",
+        "example_vi": "Sinh viên được khuyến khích đặt câu hỏi."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "Which goal best represents the workshop?",
+      "options": [
+        "Repairing every object without exception",
+        "Teaching visitors while assessing possible repairs",
+        "Selling brand-new furniture",
+        "Collecting objects without returning them"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "help people understand what had gone wrong",
+      "explanation_vi": "Xưởng giúp hiểu lỗi, đánh giá và học kỹ năng; không bảo đảm sửa tất cả."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why was one lamp not repaired there?",
+      "options": [
+        "The owner refused to watch",
+        "There was no room",
+        "A needed replacement part was unavailable",
+        "The volunteers disliked lamps"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "a replacement part that the volunteers did not have.",
+      "explanation_vi": "Bài nêu thiếu linh kiện cần thiết."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The volunteers promised to fix every object brought to the workshop.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "The aim was not to promise that everything could be fixed.",
+      "explanation_vi": "Câu gốc phủ định trực tiếp lời hứa sửa tất cả."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "“Restricted to” has the closest meaning to:",
+      "options": [
+        "open to everybody",
+        "limited to",
+        "delayed by",
+        "paid for by"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "electrical work was restricted to volunteers with the relevant skills.",
+      "explanation_vi": "Việc điện chỉ giao cho nhóm có kỹ năng liên quan."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Had gone wrong” dùng quá khứ hoàn thành để làm gì?",
+      "answer_vi": "Sự hỏng hóc xảy ra trước khi khách và nhóm tìm hiểu. Had + V3 giúp thể hiện quan hệ trước–sau trong câu chuyện quá khứ.",
+      "paragraph_index": 0,
+      "evidence": "what had gone wrong"
+    },
+    {
+      "question": "“Some ...; others ...” có nghĩa là gì?",
+      "answer_vi": "Mẫu này chia nhóm: một số việc sửa đơn giản, các việc khác thì không. Others thay cho other repairs để tránh lặp.",
+      "paragraph_index": 2,
+      "evidence": "Some repairs were straightforward; others were not."
+    }
+  ]
+}

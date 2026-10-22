@@ -1,0 +1,268 @@
+{
+  "slug": "the-book-exchange",
+  "title": "The Book Exchange",
+  "level": "B1",
+  "topic": "Cộng đồng & văn hóa",
+  "summary": "Một tủ sách dùng chung phải cân bằng sự linh hoạt và quy tắc rõ ràng.",
+  "revision": 1,
+  "published": true,
+  "order": 5,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "When a small reading club placed a bookcase in the entrance of an apartment building, the instructions were deliberately simple: take a book, read it and bring it back. Nobody had to register. The organisers hoped that an informal exchange would encourage people who did not usually visit the public library to try reading something new.\n\nFor the first month, the bookcase was busy. Residents left novels, travel stories and children's books. Then a problem appeared. Several popular books disappeared for weeks, while old magazines gradually filled the shelves. The organisers could not tell whether the missing books were still being read or had been lost. They had no record of individual loans.\n\nRather than introducing fines, the club tried a modest change. Borrowers could write a return date on a card and place it in a box. A separate shelf was created for magazines. These measures did not prevent every problem, but they made the system easier to understand. The club also asked residents to suggest titles they wanted to read.\n\nThe exchange remained free and open to everyone in the building. Its success was not measured only by the number of books in circulation. At a meeting, one resident explained that she had started talking to a neighbour because they enjoyed the same novel. For the organisers, that conversation was as valuable as a returned book.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Khi một câu lạc bộ đọc sách nhỏ đặt tủ sách ở lối vào tòa chung cư, hướng dẫn được cố ý giữ đơn giản: lấy sách, đọc rồi mang trả. Không ai phải đăng ký. Ban tổ chức hy vọng hình thức trao đổi không chính thức sẽ khuyến khích những người ít đến thư viện công thử đọc điều mới."
+      },
+      {
+        "index": 1,
+        "vi": "Trong tháng đầu, tủ sách được sử dụng nhiều. Cư dân để lại tiểu thuyết, truyện du lịch và sách thiếu nhi. Sau đó nảy sinh vấn đề: vài cuốn được yêu thích biến mất nhiều tuần, trong khi tạp chí cũ dần lấp đầy các kệ. Ban tổ chức không biết sách còn đang được đọc hay đã thất lạc. Họ không ghi lại từng lượt mượn."
+      },
+      {
+        "index": 2,
+        "vi": "Thay vì đưa ra tiền phạt, câu lạc bộ thử thay đổi nhỏ. Người mượn có thể viết ngày trả dự kiến trên thẻ rồi bỏ vào hộp. Một kệ riêng được dành cho tạp chí. Các biện pháp không ngăn được mọi vấn đề nhưng giúp hệ thống dễ hiểu hơn. Câu lạc bộ cũng đề nghị cư dân gợi ý đầu sách muốn đọc."
+      },
+      {
+        "index": 3,
+        "vi": "Việc trao đổi vẫn miễn phí và mở cho mọi người trong tòa nhà. Thành công không chỉ được đo bằng số sách đang luân chuyển. Trong một cuộc họp, một cư dân kể rằng cô bắt đầu nói chuyện với hàng xóm vì họ thích cùng một tiểu thuyết. Với ban tổ chức, cuộc trò chuyện đó cũng có giá trị như một cuốn sách được trả lại."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "deliberately",
+        "pos": "adv",
+        "meaning_vi": "một cách có chủ đích",
+        "synonyms": [
+          "intentionally"
+        ],
+        "paraphrases": [
+          "on purpose rather than by accident"
+        ],
+        "context": "When a small reading club placed a bookcase in the entrance of an apartment building, the instructions were deliberately simple: take a book, read it and bring it back. Nobody had to register. The organisers hoped that an informal exchange would encourage people who did not usually visit the public library to try reading something new.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Cộng đồng & văn hóa",
+          "B1",
+          "The Book Exchange"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "informal",
+        "pos": "adj",
+        "meaning_vi": "không theo thủ tục chính thức",
+        "synonyms": [
+          "casual"
+        ],
+        "paraphrases": [
+          "without many formal rules"
+        ],
+        "context": "When a small reading club placed a bookcase in the entrance of an apartment building, the instructions were deliberately simple: take a book, read it and bring it back. Nobody had to register. The organisers hoped that an informal exchange would encourage people who did not usually visit the public library to try reading something new.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Cộng đồng & văn hóa",
+          "B1",
+          "The Book Exchange"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "gradually",
+        "pos": "adv",
+        "meaning_vi": "dần dần",
+        "synonyms": [
+          "little by little"
+        ],
+        "paraphrases": [
+          "over time rather than suddenly"
+        ],
+        "context": "For the first month, the bookcase was busy. Residents left novels, travel stories and children's books. Then a problem appeared. Several popular books disappeared for weeks, while old magazines gradually filled the shelves. The organisers could not tell whether the missing books were still being read or had been lost. They had no record of individual loans.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Cộng đồng & văn hóa",
+          "B1",
+          "The Book Exchange"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "modest",
+        "pos": "adj",
+        "meaning_vi": "nhỏ, không quá lớn về quy mô",
+        "synonyms": [
+          "small",
+          "limited"
+        ],
+        "paraphrases": [
+          "not large in scale"
+        ],
+        "context": "Rather than introducing fines, the club tried a modest change. Borrowers could write a return date on a card and place it in a box. A separate shelf was created for magazines. These measures did not prevent every problem, but they made the system easier to understand. The club also asked residents to suggest titles they wanted to read.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không phải nghĩa khiêm tốn về tính cách trong câu này.",
+        "tags": [
+          "Cộng đồng & văn hóa",
+          "B1",
+          "The Book Exchange"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "in circulation",
+        "pos": "phrase",
+        "meaning_vi": "đang được luân chuyển, sử dụng",
+        "synonyms": [
+          "being passed around"
+        ],
+        "paraphrases": [
+          "moving between readers"
+        ],
+        "context": "The exchange remained free and open to everyone in the building. Its success was not measured only by the number of books in circulation. At a meeting, one resident explained that she had started talking to a neighbour because they enjoyed the same novel. For the organisers, that conversation was as valuable as a returned book.",
+        "example": "",
+        "example_vi": "",
+        "note": "Trong ngữ cảnh sách; không phải tuần hoàn máu.",
+        "tags": [
+          "Cộng đồng & văn hóa",
+          "B1",
+          "The Book Exchange"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "valuable",
+        "pos": "adj",
+        "meaning_vi": "có giá trị, đáng quý",
+        "synonyms": [
+          "worthwhile"
+        ],
+        "paraphrases": [
+          "important or useful"
+        ],
+        "context": "The exchange remained free and open to everyone in the building. Its success was not measured only by the number of books in circulation. At a meeting, one resident explained that she had started talking to a neighbour because they enjoyed the same novel. For the organisers, that conversation was as valuable as a returned book.",
+        "example": "",
+        "example_vi": "",
+        "note": "Giá trị ở đây không nhất thiết đo bằng tiền.",
+        "tags": [
+          "Cộng đồng & văn hóa",
+          "B1",
+          "The Book Exchange"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "whether ... or ...",
+        "evidence": "whether the missing books were still being read or had been lost",
+        "explanation_vi": "Nêu hai khả năng mà người nói chưa xác định được. Không khẳng định rằng sách chắc chắn đã mất.",
+        "example": "I do not know whether she is busy or away.",
+        "example_vi": "Tôi không biết cô ấy đang bận hay đi vắng."
+      },
+      {
+        "pattern": "as + adj + as",
+        "evidence": "as valuable as a returned book",
+        "explanation_vi": "So sánh ngang bằng về một đặc tính.",
+        "example": "Practice is as important as theory.",
+        "example_vi": "Thực hành cũng quan trọng như lý thuyết."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What does the passage mainly describe?",
+      "options": [
+        "Why public libraries should close",
+        "How a shared bookcase was adjusted to serve residents",
+        "How a bookshop increased its profits",
+        "Why residents disliked novels"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "the club tried a modest change.",
+      "explanation_vi": "Bài mô tả tủ sách cộng đồng, vấn đề phát sinh và điều chỉnh nhỏ."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What was introduced to help with book returns?",
+      "options": [
+        "A borrowing fee",
+        "A security camera",
+        "A card with a return date",
+        "A ban on popular novels"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "Borrowers could write a return date on a card",
+      "explanation_vi": "Thẻ ghi ngày trả được thêm vào, không có phí hay lệnh cấm."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "All the books that disappeared were lost.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "The organisers could not tell whether the missing books were still being read or had been lost.",
+      "explanation_vi": "Bài nói không biết sách đang được đọc hay đã mất; không thể kết luận tất cả đã mất, cũng chưa có phản ví dụ xác nhận tất cả không mất."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "“A modest change” is a change that is:",
+      "options": [
+        "small in scale",
+        "extremely expensive",
+        "impossible to understand",
+        "legally required"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "the club tried a modest change.",
+      "explanation_vi": "Modest bổ nghĩa quy mô thay đổi, không nói tính cách người thực hiện."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Were still being read” là thì/cấu trúc gì?",
+      "answer_vi": "Đây là quá khứ tiếp diễn bị động: were + being + V3. Sách là đối tượng được đọc; still nhấn mạnh có thể việc đọc vẫn tiếp diễn lúc ấy.",
+      "paragraph_index": 1,
+      "evidence": "were still being read"
+    },
+    {
+      "question": "Vì sao không suy ra “mất sách” từ “disappeared”?",
+      "answer_vi": "Disappeared mô tả sách không còn ở kệ trong thời gian đó. Câu sau nói người tổ chức chưa biết sách đang được đọc hay đã thất lạc, nên không được tự chọn một khả năng.",
+      "paragraph_index": 1,
+      "evidence": "had been lost."
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "slug": "one-meal-at-a-time",
+  "title": "One Meal at a Time",
+  "level": "A2",
+  "topic": "Ẩm thực",
+  "summary": "Nam bắt đầu học nấu ăn bằng một món đơn giản thay vì một thực đơn dài.",
+  "revision": 1,
+  "published": true,
+  "order": 2,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "Nam wanted to cook at home, but online recipes often looked difficult. Some needed ten ingredients or several special tools. His sister suggested a different approach: learn one simple meal first. Nam chose vegetable rice because he already had a pan and most of the ingredients in his kitchen.\n\nOn his first attempt, he cut the carrots into pieces that were too large. They were still hard when the rice was ready. His sister did not cook the meal for him. Instead, she showed him how to cut smaller pieces and asked him to try again the next evening.\n\nNam wrote three short notes beside the recipe. He did not copy every instruction. He only recorded the steps he had forgotten or misunderstood. On Thursday, the meal turned out well. He made enough for himself and his sister, and they ate together at the small kitchen table.\n\nA month later, Nam could prepare three meals without looking at a recipe. He still made mistakes, but he was less worried about them. For him, learning to cook was not a competition. It was a way to become more independent and enjoy time with his family.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Nam muốn nấu ăn ở nhà, nhưng công thức trên mạng thường có vẻ khó. Một số công thức cần mười nguyên liệu hoặc vài dụng cụ đặc biệt. Chị cậu đề xuất cách khác: học một món đơn giản trước. Nam chọn cơm rau củ vì cậu đã có chảo và phần lớn nguyên liệu trong bếp."
+      },
+      {
+        "index": 1,
+        "vi": "Lần thử đầu tiên, cậu cắt cà rốt thành những miếng quá lớn. Chúng vẫn cứng khi cơm đã chín. Chị không nấu hộ cậu. Thay vào đó, chị chỉ cách cắt miếng nhỏ hơn và bảo cậu thử lại vào tối hôm sau."
+      },
+      {
+        "index": 2,
+        "vi": "Nam viết ba ghi chú ngắn bên cạnh công thức. Cậu không chép lại mọi hướng dẫn. Cậu chỉ ghi các bước mình đã quên hoặc hiểu sai. Đến thứ Năm, món ăn có kết quả tốt. Cậu làm đủ cho hai chị em, và họ cùng ăn ở chiếc bàn nhỏ trong bếp."
+      },
+      {
+        "index": 3,
+        "vi": "Một tháng sau, Nam có thể chuẩn bị ba món mà không nhìn công thức. Cậu vẫn mắc lỗi nhưng bớt lo lắng về chúng. Với cậu, học nấu ăn không phải cuộc thi. Đó là cách để tự lập hơn và tận hưởng thời gian bên gia đình."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "ingredients",
+        "pos": "n",
+        "meaning_vi": "nguyên liệu của món ăn",
+        "synonyms": [
+          "food components"
+        ],
+        "paraphrases": [
+          "the foods used to make a dish"
+        ],
+        "context": "Nam wanted to cook at home, but online recipes often looked difficult. Some needed ten ingredients or several special tools. His sister suggested a different approach: learn one simple meal first. Nam chose vegetable rice because he already had a pan and most of the ingredients in his kitchen.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Ẩm thực",
+          "A2",
+          "One Meal at a Time"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "approach",
+        "pos": "n",
+        "meaning_vi": "cách tiếp cận, phương pháp",
+        "synonyms": [
+          "method"
+        ],
+        "paraphrases": [
+          "a way of doing something"
+        ],
+        "context": "Nam wanted to cook at home, but online recipes often looked difficult. Some needed ten ingredients or several special tools. His sister suggested a different approach: learn one simple meal first. Nam chose vegetable rice because he already had a pan and most of the ingredients in his kitchen.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Ẩm thực",
+          "A2",
+          "One Meal at a Time"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "attempt",
+        "pos": "n",
+        "meaning_vi": "lần thử, nỗ lực thực hiện",
+        "synonyms": [
+          "try"
+        ],
+        "paraphrases": [
+          "an effort to do something"
+        ],
+        "context": "On his first attempt, he cut the carrots into pieces that were too large. They were still hard when the rice was ready. His sister did not cook the meal for him. Instead, she showed him how to cut smaller pieces and asked him to try again the next evening.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Ẩm thực",
+          "A2",
+          "One Meal at a Time"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "Instead",
+        "pos": "adv",
+        "meaning_vi": "thay vào đó",
+        "synonyms": [
+          "as an alternative"
+        ],
+        "paraphrases": [
+          "in place of doing that"
+        ],
+        "context": "On his first attempt, he cut the carrots into pieces that were too large. They were still hard when the rice was ready. His sister did not cook the meal for him. Instead, she showed him how to cut smaller pieces and asked him to try again the next evening.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Ẩm thực",
+          "A2",
+          "One Meal at a Time"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "turned out well",
+        "pos": "phrase",
+        "meaning_vi": "cuối cùng có kết quả tốt",
+        "synonyms": [
+          "went well"
+        ],
+        "paraphrases": [
+          "had a successful result"
+        ],
+        "context": "Nam wrote three short notes beside the recipe. He did not copy every instruction. He only recorded the steps he had forgotten or misunderstood. On Thursday, the meal turned out well. He made enough for himself and his sister, and they ate together at the small kitchen table.",
+        "example": "",
+        "example_vi": "",
+        "note": "Turn out không mang nghĩa sản xuất trong cụm này.",
+        "tags": [
+          "Ẩm thực",
+          "A2",
+          "One Meal at a Time"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "independent",
+        "pos": "adj",
+        "meaning_vi": "tự lập, ít phụ thuộc người khác",
+        "synonyms": [
+          "self-reliant"
+        ],
+        "paraphrases": [
+          "able to do things without depending on others"
+        ],
+        "context": "A month later, Nam could prepare three meals without looking at a recipe. He still made mistakes, but he was less worried about them. For him, learning to cook was not a competition. It was a way to become more independent and enjoy time with his family.",
+        "example": "",
+        "example_vi": "",
+        "note": "Trong bài nói về khả năng tự lo cho bản thân, không phải độc lập chính trị.",
+        "tags": [
+          "Ẩm thực",
+          "A2",
+          "One Meal at a Time"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "too + adj",
+        "evidence": "pieces that were too large",
+        "explanation_vi": "Too large là quá lớn so với yêu cầu, không chỉ rất lớn.",
+        "example": "This bag is too heavy.",
+        "example_vi": "Chiếc túi này quá nặng."
+      },
+      {
+        "pattern": "without + V-ing",
+        "evidence": "without looking at a recipe",
+        "explanation_vi": "Without + V-ing: mà không thực hiện hành động đó.",
+        "example": "I answered without checking my notes.",
+        "example_vi": "Tôi trả lời mà không xem ghi chú."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What helped Nam begin learning to cook?",
+      "options": [
+        "Buying expensive tools",
+        "Starting with one simple dish",
+        "Entering a competition",
+        "Memorising ten recipes"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "learn one simple meal first.",
+      "explanation_vi": "Chị gợi ý bắt đầu bằng một món đơn giản."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What was wrong with the carrots on his first attempt?",
+      "options": [
+        "They were missing",
+        "They were too sweet",
+        "The pieces were too large",
+        "There were too few"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "he cut the carrots into pieces that were too large.",
+      "explanation_vi": "Lỗi nằm ở kích thước miếng cà rốt."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Nam bought a new pan before his first attempt.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 0,
+      "evidence": "he already had a pan",
+      "explanation_vi": "Bài nói cậu có sẵn chảo, không cho biết cậu có mua thêm một chiếc mới trước lần thử hay không. Có sẵn không loại trừ việc mua thêm."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "“More independent” means Nam could:",
+      "options": [
+        "depend less on help from others",
+        "cook without ingredients",
+        "win more competitions",
+        "avoid all mistakes"
+      ],
+      "answer": 0,
+      "paragraph_index": 3,
+      "evidence": "become more independent",
+      "explanation_vi": "Independent nhấn mạnh khả năng tự làm, không phải không bao giờ mắc lỗi."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Vì sao “instead” không dịch là “tuy nhiên”?",
+      "answer_vi": "Ở đây chị không nấu hộ mà chọn một hành động thay thế: chỉ cách cắt nhỏ. Instead nhấn mạnh sự thay thế; however chỉ biểu thị tương phản rộng hơn.",
+      "paragraph_index": 1,
+      "evidence": "Instead, she showed him how to cut smaller pieces"
+    },
+    {
+      "question": "“The steps he had forgotten” có thiếu “that” không?",
+      "answer_vi": "Đây là mệnh đề quan hệ xác định. Có thể viết the steps that he had forgotten; that làm tân ngữ nên có thể bỏ.",
+      "paragraph_index": 2,
+      "evidence": "the steps he had forgotten or misunderstood."
+    }
+  ]
+}

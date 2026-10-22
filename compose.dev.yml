@@ -1,0 +1,5 @@
+# Optional: expose PostgreSQL only on localhost for running Django in a local venv.
+services:
+  db:
+    ports:
+      - "127.0.0.1:15432:5432"

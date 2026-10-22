@@ -1,0 +1,11 @@
+.env
+.venv
+venv
+.git
+**/__pycache__
+**/*.pyc
+staticfiles
+*.log
+*.dump
+*.sql
+preview.html

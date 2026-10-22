@@ -1,0 +1,907 @@
+{
+  "vocabulary": [
+    {
+      "word": "apprenticeship",
+      "pos": "n",
+      "meaning_vi": "quá trình học nghề",
+      "synonyms": [
+        "a period of practical job training"
+      ],
+      "paraphrases": [
+        "a period of practical job training"
+      ],
+      "example": "He completed an apprenticeship.",
+      "example_vi": "Anh ấy hoàn thành quá trình học nghề.",
+      "note": "Sửa pprenticeship → apprenticeship. Apprentice là người; apprenticeship là quá trình.",
+      "tags": [
+        "Set in Metal",
+        "Từ học thuật",
+        "Từ cá nhân"
+      ],
+      "context": "The trade that shut down printed timetables, forms and ledgers, and nobody was employed in it who had not served a six-year apprenticeship.",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Set in Metal"
+    },
+    {
+      "word": "pertinent",
+      "pos": "adj",
+      "meaning_vi": "liên quan trực tiếp, thích hợp với vấn đề",
+      "synonyms": [
+        "relevant",
+        "applicable"
+      ],
+      "paraphrases": [
+        "directly related to the matter being discussed"
+      ],
+      "example": "Please keep your comments pertinent to the topic.",
+      "example_vi": "Hãy giữ các nhận xét liên quan đến chủ đề.",
+      "note": "pertinent to + danh từ",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "aptitude",
+      "pos": "n",
+      "meaning_vi": "năng khiếu, khả năng tự nhiên để học hoặc làm việc gì",
+      "synonyms": [
+        "natural ability",
+        "talent"
+      ],
+      "paraphrases": [
+        "a natural ability to learn or do something"
+      ],
+      "example": "She has an aptitude for languages.",
+      "example_vi": "Cô ấy có năng khiếu ngoại ngữ.",
+      "note": "aptitude for + danh từ/V-ing; khác attitude = thái độ",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "flawed",
+      "pos": "adj",
+      "meaning_vi": "có sai sót, có điểm yếu",
+      "synonyms": [
+        "imperfect",
+        "faulty"
+      ],
+      "paraphrases": [
+        "containing errors or weaknesses"
+      ],
+      "example": "Their argument is flawed.",
+      "example_vi": "Lập luận của họ có sai sót.",
+      "note": "Flawed argument/design; defective thường nhấn mạnh lỗi khiến vật không hoạt động đúng. Không thay thế máy móc.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "defective",
+      "pos": "adj",
+      "meaning_vi": "bị lỗi, không hoạt động đúng do khiếm khuyết",
+      "synonyms": [
+        "faulty",
+        "malfunctioning"
+      ],
+      "paraphrases": [
+        "faulty"
+      ],
+      "example": "The shop replaced the defective charger.",
+      "example_vi": "Cửa hàng thay bộ sạc bị lỗi.",
+      "note": "Gần nghĩa flawed trong một số ngữ cảnh; defective equipment, flawed reasoning.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "endeavour",
+      "pos": "v",
+      "meaning_vi": "cố gắng, nỗ lực làm điều gì",
+      "synonyms": [
+        "try",
+        "strive"
+      ],
+      "paraphrases": [
+        "try"
+      ],
+      "example": "We endeavour to improve our service.",
+      "example_vi": "Chúng tôi nỗ lực cải thiện dịch vụ.",
+      "note": "endeavour to + V; cũng là danh từ = nỗ lực; Anh–Mỹ: endeavor.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "embrace",
+      "pos": "v",
+      "meaning_vi": "sẵn sàng đón nhận, chấp nhận",
+      "synonyms": [
+        "accept willingly",
+        "welcome"
+      ],
+      "paraphrases": [
+        "accept willingly"
+      ],
+      "example": "The team embraced the new approach.",
+      "example_vi": "Nhóm sẵn sàng đón nhận cách tiếp cận mới.",
+      "note": "embrace change; nghĩa khác: ôm.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "prevailing",
+      "pos": "adj",
+      "meaning_vi": "phổ biến hoặc đang chiếm ưu thế tại một thời điểm",
+      "synonyms": [
+        "current",
+        "predominant"
+      ],
+      "paraphrases": [
+        "most common or dominant at the time"
+      ],
+      "example": "We must consider the prevailing conditions.",
+      "example_vi": "Chúng ta phải xem xét các điều kiện hiện hành.",
+      "note": "prevailing view/conditions; không đồng nghĩa permanent.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "tally",
+      "pos": "v",
+      "meaning_vi": "khớp, nhất quán với",
+      "synonyms": [
+        "agree",
+        "correspond"
+      ],
+      "paraphrases": [
+        "agree"
+      ],
+      "example": "The figures tally with our records.",
+      "example_vi": "Các số liệu khớp với hồ sơ của chúng tôi.",
+      "note": "tally with + danh từ. Tally còn là đếm/tổng số.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "loosely",
+      "pos": "adv",
+      "meaning_vi": "một cách không chặt chẽ, chỉ dựa theo đại ý",
+      "synonyms": [
+        "not strictly",
+        "broadly"
+      ],
+      "paraphrases": [
+        "not strictly"
+      ],
+      "example": "The film is loosely based on a true story.",
+      "example_vi": "Bộ phim chỉ dựa theo đại ý của một câu chuyện có thật.",
+      "note": "loosely based on; không có nghĩa là hoàn toàn bịa đặt.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "overlook",
+      "pos": "v",
+      "meaning_vi": "bỏ sót, không chú ý đến",
+      "synonyms": [
+        "miss",
+        "fail to notice"
+      ],
+      "paraphrases": [
+        "miss"
+      ],
+      "example": "I overlooked a small error.",
+      "example_vi": "Tôi đã bỏ sót một lỗi nhỏ.",
+      "note": "Nghĩa khác: nhìn ra/bao quát một nơi. Ignore thường là chủ động phớt lờ.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "customary",
+      "pos": "adj",
+      "meaning_vi": "theo thông lệ hoặc thói quen thông thường",
+      "synonyms": [
+        "usual",
+        "habitual"
+      ],
+      "paraphrases": [
+        "usual"
+      ],
+      "example": "It is customary to thank the host.",
+      "example_vi": "Theo thông lệ, nên cảm ơn chủ nhà.",
+      "note": "It is customary to + V; nhấn mạnh tập quán/thói quen.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "conventional",
+      "pos": "adj",
+      "meaning_vi": "theo cách truyền thống hoặc được chấp nhận rộng rãi",
+      "synonyms": [
+        "traditional",
+        "standard"
+      ],
+      "paraphrases": [
+        "traditional"
+      ],
+      "example": "They used a conventional method.",
+      "example_vi": "Họ sử dụng một phương pháp truyền thống.",
+      "note": "conventional methods; không đồng nghĩa hoàn toàn với customary trong mọi câu.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "untapped",
+      "pos": "adj",
+      "meaning_vi": "chưa được khai thác hoặc tận dụng",
+      "synonyms": [
+        "unexploited",
+        "unused"
+      ],
+      "paraphrases": [
+        "not yet put to use"
+      ],
+      "example": "The region has untapped potential.",
+      "example_vi": "Khu vực này có tiềm năng chưa được khai thác.",
+      "note": "untapped potential/resources/market.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "deliberate",
+      "pos": "adj",
+      "meaning_vi": "có chủ ý, có cân nhắc",
+      "synonyms": [
+        "intentional",
+        "planned"
+      ],
+      "paraphrases": [
+        "done intentionally rather than by accident"
+      ],
+      "example": "It was a deliberate choice.",
+      "example_vi": "Đó là một lựa chọn có chủ ý.",
+      "note": "Tính từ deliberate; động từ deliberate = cân nhắc, phát âm khác.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "relentless",
+      "pos": "adj",
+      "meaning_vi": "liên tục, không ngừng hoặc không suy giảm cường độ",
+      "synonyms": [
+        "unremitting",
+        "persistent"
+      ],
+      "paraphrases": [
+        "unremitting"
+      ],
+      "example": "The team faced relentless pressure.",
+      "example_vi": "Nhóm phải đối mặt với áp lực không ngừng.",
+      "note": "relentless pressure; có thể tiêu cực hoặc tích cực tùy danh từ.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "debilitate",
+      "pos": "v",
+      "meaning_vi": "làm suy yếu nghiêm trọng",
+      "synonyms": [
+        "weaken",
+        "enfeeble"
+      ],
+      "paraphrases": [
+        "weaken"
+      ],
+      "example": "The long crisis debilitated the organisation.",
+      "example_vi": "Cuộc khủng hoảng kéo dài làm tổ chức suy yếu nghiêm trọng.",
+      "note": "Mạnh hơn weaken trong nhiều ngữ cảnh.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "malleable",
+      "pos": "adj",
+      "meaning_vi": "dễ uốn, dễ tạo hình",
+      "synonyms": [
+        "pliable",
+        "easily shaped"
+      ],
+      "paraphrases": [
+        "pliable"
+      ],
+      "example": "Gold is a malleable metal.",
+      "example_vi": "Vàng là kim loại dễ tạo hình.",
+      "note": "Nghĩa bóng: dễ bị tác động, uốn nắn.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "distinguished",
+      "pos": "adj",
+      "meaning_vi": "lỗi lạc, xuất sắc và được kính trọng",
+      "synonyms": [
+        "eminent",
+        "renowned"
+      ],
+      "paraphrases": [
+        "eminent"
+      ],
+      "example": "She is a distinguished researcher.",
+      "example_vi": "Cô ấy là một nhà nghiên cứu lỗi lạc.",
+      "note": "a distinguished career; khác distinguish = phân biệt.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "amend",
+      "pos": "v",
+      "meaning_vi": "sửa đổi để chỉnh đúng hoặc cải thiện",
+      "synonyms": [
+        "revise",
+        "modify"
+      ],
+      "paraphrases": [
+        "revise"
+      ],
+      "example": "Please amend the final paragraph.",
+      "example_vi": "Hãy sửa lại đoạn cuối.",
+      "note": "amend a document/law; không nhất thiết viết lại toàn bộ.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "devise",
+      "pos": "v",
+      "meaning_vi": "nghĩ ra, thiết kế một kế hoạch hoặc phương pháp",
+      "synonyms": [
+        "formulate",
+        "invent"
+      ],
+      "paraphrases": [
+        "formulate"
+      ],
+      "example": "We need to devise a better plan.",
+      "example_vi": "Chúng ta cần nghĩ ra một kế hoạch tốt hơn.",
+      "note": "devise a strategy; khác device = thiết bị.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "novel",
+      "pos": "adj",
+      "meaning_vi": "mới lạ, khác với điều đã biết",
+      "synonyms": [
+        "innovative",
+        "original"
+      ],
+      "paraphrases": [
+        "new and different from what was known before"
+      ],
+      "example": "They proposed a novel approach.",
+      "example_vi": "Họ đề xuất một cách tiếp cận mới lạ.",
+      "note": "Tính từ novel; danh từ a novel = một cuốn tiểu thuyết.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "in accordance with",
+      "pos": "phrase",
+      "meaning_vi": "theo đúng, phù hợp với một quy tắc hoặc chỉ dẫn",
+      "synonyms": [
+        "in compliance with",
+        "following"
+      ],
+      "paraphrases": [
+        "following the rules or instructions of"
+      ],
+      "example": "The work was done in accordance with the instructions.",
+      "example_vi": "Công việc được thực hiện theo đúng hướng dẫn.",
+      "note": "Theo sau là danh từ/cụm danh từ; thường trang trọng.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "in line with",
+      "pos": "phrase",
+      "meaning_vi": "phù hợp, nhất quán với",
+      "synonyms": [
+        "consistent with",
+        "aligned with"
+      ],
+      "paraphrases": [
+        "consistent with"
+      ],
+      "example": "The change is in line with our goals.",
+      "example_vi": "Thay đổi này phù hợp với mục tiêu của chúng tôi.",
+      "note": "Có thể gần nghĩa in accordance with; không phải lúc nào cũng nói tuân thủ quy định.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "overrun",
+      "pos": "v",
+      "meaning_vi": "vượt quá thời gian hoặc ngân sách dự kiến",
+      "synonyms": [
+        "exceed",
+        "run over"
+      ],
+      "paraphrases": [
+        "exceed"
+      ],
+      "example": "The project may overrun its budget.",
+      "example_vi": "Dự án có thể vượt ngân sách.",
+      "note": "overrun–overran–overrun; nghĩa khác: tràn ngập/xâm chiếm.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "pull out",
+      "pos": "phrase",
+      "meaning_vi": "rút khỏi việc tham gia một hoạt động hoặc thỏa thuận",
+      "synonyms": [
+        "withdraw",
+        "back out"
+      ],
+      "paraphrases": [
+        "withdraw"
+      ],
+      "example": "They decided to pull out of the deal.",
+      "example_vi": "Họ quyết định rút khỏi thỏa thuận.",
+      "note": "pull out of + dự án/thỏa thuận. Không bằng step down = từ chức.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "step down",
+      "pos": "phrase",
+      "meaning_vi": "rời chức vụ, từ chức",
+      "synonyms": [
+        "resign",
+        "leave office"
+      ],
+      "paraphrases": [
+        "resign"
+      ],
+      "example": "She will step down as director.",
+      "example_vi": "Cô ấy sẽ từ chức giám đốc.",
+      "note": "step down as + chức vụ; step down from + vị trí. Không phải mọi hành động rút lui.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "reinstate",
+      "pos": "v",
+      "meaning_vi": "khôi phục chức vụ hoặc đưa trở lại hiệu lực",
+      "synonyms": [
+        "restore",
+        "reintroduce"
+      ],
+      "paraphrases": [
+        "restore"
+      ],
+      "example": "The school decided to reinstate the rule.",
+      "example_vi": "Nhà trường quyết định khôi phục quy định.",
+      "note": "Sửa chính tả: reinsate → reinstate.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "monumental",
+      "pos": "adj",
+      "meaning_vi": "cực kỳ lớn, quan trọng hoặc đòi hỏi công sức lớn",
+      "synonyms": [
+        "enormous",
+        "momentous"
+      ],
+      "paraphrases": [
+        "enormous"
+      ],
+      "example": "Restoring the building was a monumental task.",
+      "example_vi": "Khôi phục tòa nhà là một nhiệm vụ vô cùng lớn.",
+      "note": "Sửa momumental → monumental; mạnh hơn sizeable, không thay tự động.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "sizeable",
+      "pos": "adj",
+      "meaning_vi": "khá lớn, đáng kể về quy mô hoặc số lượng",
+      "synonyms": [
+        "considerable",
+        "substantial"
+      ],
+      "paraphrases": [
+        "considerable"
+      ],
+      "example": "They received a sizeable donation.",
+      "example_vi": "Họ nhận được một khoản quyên góp đáng kể.",
+      "note": "Cũng viết sizable; không nhất thiết phi thường như monumental.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "the prospect of",
+      "pos": "phrase",
+      "meaning_vi": "khả năng hoặc viễn cảnh một điều sẽ xảy ra",
+      "synonyms": [
+        "the possibility of",
+        "the expectation of"
+      ],
+      "paraphrases": [
+        "the possibility of"
+      ],
+      "example": "She is excited about the prospect of studying abroad.",
+      "example_vi": "Cô ấy hào hứng trước viễn cảnh đi du học.",
+      "note": "the prospect of + danh từ/V-ing; không khẳng định chắc chắn sẽ xảy ra.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "emigrate",
+      "pos": "v",
+      "meaning_vi": "rời nước mình để sống ở nước khác",
+      "synonyms": [
+        "move abroad",
+        "leave one's country"
+      ],
+      "paraphrases": [
+        "move abroad"
+      ],
+      "example": "They plan to emigrate from France to Canada.",
+      "example_vi": "Họ dự định rời Pháp để định cư ở Canada.",
+      "note": "emigrate from; immigrate to nhìn từ nước đến. Không đơn thuần là du lịch.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "bold",
+      "pos": "adj",
+      "meaning_vi": "táo bạo, mạnh dạn",
+      "synonyms": [
+        "daring",
+        "courageous"
+      ],
+      "paraphrases": [
+        "daring"
+      ],
+      "example": "It was a bold decision.",
+      "example_vi": "Đó là một quyết định táo bạo.",
+      "note": "Nghĩa khác: chữ in đậm; bold colours = màu nổi bật.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "circulation",
+      "pos": "n",
+      "meaning_vi": "sự lưu hành hoặc phân phối",
+      "synonyms": [
+        "distribution",
+        "movement"
+      ],
+      "paraphrases": [
+        "distribution"
+      ],
+      "example": "The new notes are now in circulation.",
+      "example_vi": "Các tờ tiền mới hiện đang được lưu hành.",
+      "note": "Nghĩa khác: blood circulation = tuần hoàn máu; newspaper circulation = lượng phát hành.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "depict",
+      "pos": "v",
+      "meaning_vi": "miêu tả, thể hiện bằng hình ảnh hoặc lời nói",
+      "synonyms": [
+        "portray",
+        "represent"
+      ],
+      "paraphrases": [
+        "portray"
+      ],
+      "example": "The painting depicts village life.",
+      "example_vi": "Bức tranh miêu tả cuộc sống làng quê.",
+      "note": "Sửa Despict → depict và potray → portray.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "portray",
+      "pos": "v",
+      "meaning_vi": "khắc họa, miêu tả",
+      "synonyms": [
+        "depict",
+        "represent"
+      ],
+      "paraphrases": [
+        "depict"
+      ],
+      "example": "The film portrays life in a small town.",
+      "example_vi": "Bộ phim khắc họa cuộc sống ở một thị trấn nhỏ.",
+      "note": "portray somebody as ...; gần nghĩa depict trong ngữ cảnh miêu tả.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "commission",
+      "pos": "v",
+      "meaning_vi": "đặt làm, giao chính thức một công việc",
+      "synonyms": [
+        "order",
+        "engage someone to create"
+      ],
+      "paraphrases": [
+        "order"
+      ],
+      "example": "The museum commissioned a new painting.",
+      "example_vi": "Bảo tàng đặt làm một bức tranh mới.",
+      "note": "commission somebody to do something; không nhầm commission (n) = tiền hoa hồng/ủy ban.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "commission",
+      "pos": "n",
+      "meaning_vi": "tiền hoa hồng nhận theo giao dịch",
+      "synonyms": [
+        "sales fee",
+        "percentage payment"
+      ],
+      "paraphrases": [
+        "sales fee"
+      ],
+      "example": "She earns a commission on each sale.",
+      "example_vi": "Cô ấy nhận tiền hoa hồng cho mỗi giao dịch.",
+      "note": "Một nghĩa riêng với commission (v) = đặt làm; học theo ngữ cảnh.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "undertaking",
+      "pos": "n",
+      "meaning_vi": "công việc hoặc dự án quan trọng, khó khăn",
+      "synonyms": [
+        "task",
+        "enterprise"
+      ],
+      "paraphrases": [
+        "task"
+      ],
+      "example": "Building the app is a major undertaking.",
+      "example_vi": "Xây dựng ứng dụng là một công việc lớn.",
+      "note": "Sửa undetaking → undertaking; nghĩa khác: lời cam kết trang trọng.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "administer",
+      "pos": "v",
+      "meaning_vi": "quản lý, điều hành",
+      "synonyms": [
+        "manage",
+        "run"
+      ],
+      "paraphrases": [
+        "manage"
+      ],
+      "example": "She helps administer the programme.",
+      "example_vi": "Cô ấy hỗ trợ điều hành chương trình.",
+      "note": "administer a programme/test; nghĩa khác: cho dùng thuốc.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    },
+    {
+      "word": "on the spur of the moment",
+      "pos": "phrase",
+      "meaning_vi": "bộc phát, không có kế hoạch từ trước",
+      "synonyms": [
+        "spontaneously",
+        "on impulse"
+      ],
+      "paraphrases": [
+        "without planning it beforehand"
+      ],
+      "example": "We booked the trip on the spur of the moment.",
+      "example_vi": "Chúng tôi đặt chuyến đi một cách bộc phát.",
+      "note": "Dùng ON, không phải IN. Trái ý với deliberate/by design.",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    }
+  ]
+}

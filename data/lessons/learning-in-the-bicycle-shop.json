@@ -1,0 +1,268 @@
+{
+  "slug": "learning-in-the-bicycle-shop",
+  "title": "Learning in the Bicycle Shop",
+  "level": "B1",
+  "topic": "Nghề nghiệp",
+  "summary": "Một người học nghề phát hiện sự kiên nhẫn quan trọng không kém năng khiếu.",
+  "revision": 1,
+  "published": true,
+  "order": 7,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "When Leo began his apprenticeship at a bicycle shop, he expected to spend most of his time repairing bikes. In the first week, however, his supervisor asked him to label tools, check deliveries and listen to customers. Leo thought these tasks were less important than technical work. He soon discovered that they were part of learning the trade.\n\nOne customer said that her bicycle made a strange sound only when she rode uphill. Leo wanted to replace a part immediately, but his supervisor asked him to repeat the customer's description first. The missing detail was pertinent to the problem: the sound did not occur on every journey. Without that information, they might replace a part that was working correctly.\n\nLeo showed an aptitude for understanding how parts fitted together. Nevertheless, he sometimes rushed his explanations. The supervisor encouraged him to describe one step at a time and check that the customer understood. Over several months, Leo became more confident both with the tools and with the people who brought their bikes into the shop.\n\nThe shop did not take on an apprentice to obtain cheap labour. The owner set aside time for teaching and accepted that some jobs would take longer. Leo, in turn, had to ask for help when he was uncertain. The arrangement worked because both sides treated learning as a responsibility rather than a lucky extra.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Khi Leo bắt đầu học nghề tại cửa hàng xe đạp, cậu nghĩ phần lớn thời gian sẽ dành để sửa xe. Tuy nhiên, tuần đầu, người hướng dẫn bảo cậu dán nhãn dụng cụ, kiểm hàng giao đến và lắng nghe khách. Leo cho rằng những việc này kém quan trọng hơn việc kỹ thuật. Cậu sớm nhận ra chúng là một phần của quá trình học nghề."
+      },
+      {
+        "index": 1,
+        "vi": "Một khách hàng nói xe chỉ phát tiếng lạ khi đi lên dốc. Leo muốn thay linh kiện ngay nhưng người hướng dẫn yêu cầu cậu nhắc lại mô tả của khách trước. Chi tiết bị bỏ sót liên quan trực tiếp đến vấn đề: âm thanh không xuất hiện ở mọi chuyến đi. Thiếu thông tin ấy, họ có thể thay một linh kiện vẫn đang hoạt động đúng."
+      },
+      {
+        "index": 2,
+        "vi": "Leo có năng khiếu hiểu cách các bộ phận lắp với nhau. Dù vậy, đôi khi cậu giải thích quá vội. Người hướng dẫn khuyến khích cậu mô tả từng bước và kiểm tra khách đã hiểu chưa. Qua vài tháng, Leo tự tin hơn với cả dụng cụ và những người mang xe đến cửa hàng."
+      },
+      {
+        "index": 3,
+        "vi": "Cửa hàng không nhận người học nghề chỉ để có lao động giá rẻ. Chủ dành thời gian dạy và chấp nhận một số việc sẽ lâu hơn. Về phần mình, Leo phải hỏi giúp đỡ khi chưa chắc. Sự hợp tác hiệu quả vì cả hai coi việc học là trách nhiệm chứ không phải lợi ích phụ may mắn có được."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "apprenticeship",
+        "pos": "n",
+        "meaning_vi": "quá trình học nghề có hướng dẫn và thực hành",
+        "synonyms": [
+          "practical job training"
+        ],
+        "paraphrases": [
+          "a period of learning a trade while working"
+        ],
+        "context": "When Leo began his apprenticeship at a bicycle shop, he expected to spend most of his time repairing bikes. In the first week, however, his supervisor asked him to label tools, check deliveries and listen to customers. Leo thought these tasks were less important than technical work. He soon discovered that they were part of learning the trade.",
+        "example": "",
+        "example_vi": "",
+        "note": "Apprentice là người học nghề; apprenticeship là quá trình/chương trình.",
+        "tags": [
+          "Nghề nghiệp",
+          "B1",
+          "Learning in the Bicycle Shop"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "pertinent",
+        "pos": "adj",
+        "meaning_vi": "liên quan trực tiếp đến vấn đề",
+        "synonyms": [
+          "relevant"
+        ],
+        "paraphrases": [
+          "directly connected with the matter being discussed"
+        ],
+        "context": "One customer said that her bicycle made a strange sound only when she rode uphill. Leo wanted to replace a part immediately, but his supervisor asked him to repeat the customer's description first. The missing detail was pertinent to the problem: the sound did not occur on every journey. Without that information, they might replace a part that was working correctly.",
+        "example": "",
+        "example_vi": "",
+        "note": "Thường dùng pertinent to; không đồng nghĩa với important trong mọi câu.",
+        "tags": [
+          "Nghề nghiệp",
+          "B1",
+          "Learning in the Bicycle Shop"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "aptitude",
+        "pos": "n",
+        "meaning_vi": "năng khiếu hoặc khả năng tự nhiên",
+        "synonyms": [
+          "natural ability",
+          "talent"
+        ],
+        "paraphrases": [
+          "a natural ability to learn or do something"
+        ],
+        "context": "Leo showed an aptitude for understanding how parts fitted together. Nevertheless, he sometimes rushed his explanations. The supervisor encouraged him to describe one step at a time and check that the customer understood. Over several months, Leo became more confident both with the tools and with the people who brought their bikes into the shop.",
+        "example": "",
+        "example_vi": "",
+        "note": "Aptitude for + danh từ/V-ing. Không nhầm attitude: thái độ.",
+        "tags": [
+          "Nghề nghiệp",
+          "B1",
+          "Learning in the Bicycle Shop"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "Nevertheless",
+        "pos": "adv",
+        "meaning_vi": "tuy nhiên, dù vậy",
+        "synonyms": [
+          "however"
+        ],
+        "paraphrases": [
+          "despite what has just been said"
+        ],
+        "context": "Leo showed an aptitude for understanding how parts fitted together. Nevertheless, he sometimes rushed his explanations. The supervisor encouraged him to describe one step at a time and check that the customer understood. Over several months, Leo became more confident both with the tools and with the people who brought their bikes into the shop.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Nghề nghiệp",
+          "B1",
+          "Learning in the Bicycle Shop"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "take on",
+        "pos": "phrase",
+        "meaning_vi": "tuyển hoặc nhận người vào làm",
+        "synonyms": [
+          "hire"
+        ],
+        "paraphrases": [
+          "employ someone"
+        ],
+        "context": "The shop did not take on an apprentice to obtain cheap labour. The owner set aside time for teaching and accepted that some jobs would take longer. Leo, in turn, had to ask for help when he was uncertain. The arrangement worked because both sides treated learning as a responsibility rather than a lucky extra.",
+        "example": "",
+        "example_vi": "",
+        "note": "Take on còn nghĩa đảm nhận trách nhiệm; ở đây tân ngữ là người.",
+        "tags": [
+          "Nghề nghiệp",
+          "B1",
+          "Learning in the Bicycle Shop"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "set aside",
+        "pos": "phrase",
+        "meaning_vi": "dành riêng thời gian hoặc nguồn lực",
+        "synonyms": [
+          "reserve"
+        ],
+        "paraphrases": [
+          "keep something available for a particular purpose"
+        ],
+        "context": "The shop did not take on an apprentice to obtain cheap labour. The owner set aside time for teaching and accepted that some jobs would take longer. Leo, in turn, had to ask for help when he was uncertain. The arrangement worked because both sides treated learning as a responsibility rather than a lucky extra.",
+        "example": "",
+        "example_vi": "",
+        "note": "Trong bài là dành thời gian, không phải gạt bỏ một ý kiến.",
+        "tags": [
+          "Nghề nghiệp",
+          "B1",
+          "Learning in the Bicycle Shop"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "might + V",
+        "evidence": "they might replace a part that was working correctly.",
+        "explanation_vi": "Might diễn tả khả năng, không khẳng định việc thay sai đã xảy ra.",
+        "example": "Without a map, we might get lost.",
+        "example_vi": "Không có bản đồ, chúng ta có thể bị lạc."
+      },
+      {
+        "pattern": "rather than + noun phrase",
+        "evidence": "a responsibility rather than a lucky extra",
+        "explanation_vi": "Đối lập cách nhìn A chứ không phải B.",
+        "example": "It is a habit rather than a rule.",
+        "example_vi": "Đó là thói quen chứ không phải quy định."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What does Leo learn about his apprenticeship?",
+      "options": [
+        "It involves people and organisation as well as repairs",
+        "Only replacing parts matters",
+        "Customer descriptions are always unnecessary",
+        "Learning requires no time from the owner"
+      ],
+      "answer": 0,
+      "paragraph_index": 0,
+      "evidence": "they were part of learning the trade.",
+      "explanation_vi": "Toàn bài mở rộng việc học nghề sang nghe khách, tổ chức và giải thích."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "When did the customer report hearing the strange sound?",
+      "options": [
+        "On every journey",
+        "Only while riding uphill",
+        "Only when the bike was parked",
+        "After every repair"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "only when she rode uphill.",
+      "explanation_vi": "Only giới hạn tình huống là khi lên dốc."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Leo was already skilled at repairing cars.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "Leo showed an aptitude for understanding how parts fitted together.",
+      "explanation_vi": "Có năng khiếu cơ khí không xác lập kinh nghiệm sửa ô tô; bài không đề cập kỹ năng đó."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "Which meaning of “pertinent” fits this passage?",
+      "options": [
+        "Beautifully designed",
+        "Relevant to the problem",
+        "Too costly to use",
+        "No longer available"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "pertinent to the problem",
+      "explanation_vi": "Pertinent to = liên quan đến vấn đề đang xét."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Aptitude” có phải “attitude” không?",
+      "answer_vi": "Không. Aptitude là năng khiếu/khả năng tự nhiên, thường đi với for. Attitude là thái độ. Bài nói khả năng hiểu cách các bộ phận khớp nhau.",
+      "paragraph_index": 2,
+      "evidence": "an aptitude for understanding how parts fitted together."
+    },
+    {
+      "question": "Vì sao không thể nói họ chắc chắn đã thay sai linh kiện?",
+      "answer_vi": "Câu dùng might để nêu khả năng nếu thiếu thông tin. Đây là cảnh báo giả định, không phải tường thuật một lỗi chắc chắn xảy ra.",
+      "paragraph_index": 1,
+      "evidence": "Without that information, they might replace a part that was working correctly."
+    }
+  ]
+}

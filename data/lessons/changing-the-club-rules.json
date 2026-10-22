@@ -1,0 +1,269 @@
+{
+  "slug": "changing-the-club-rules",
+  "title": "Changing the Club Rules",
+  "level": "B2",
+  "topic": "Thể thao & tổ chức",
+  "summary": "Một câu lạc bộ cân nhắc sửa quy tắc quen thuộc để phù hợp với thành viên mới.",
+  "revision": 1,
+  "published": true,
+  "order": 11,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "For years, it was customary for members of a small sports club to practise at the same time every Saturday. The arrangement suited the founding members, most of whom lived nearby. As the club grew, however, several newcomers found that the fixed time conflicted with work or family commitments. They asked whether the schedule could be reconsidered.\n\nThe committee initially defended the conventional timetable. It was familiar, and changing it might inconvenience people who had attended for years. But a member pointed out that this argument overlooked those who could never attend in the first place. The attendance records showed who came, not everyone who wanted to come. Treating the records as a complete picture would therefore be misleading.\n\nAfter a discussion, the committee devised a trial with two alternative sessions. The change was in line with the club's stated aim of widening participation, although it required additional volunteer time. Members were asked to report difficulties as well as benefits. The committee wanted feedback that could challenge the proposal, not simply praise it.\n\nWhen the chair decided to step down for personal reasons, another member agreed to lead the trial. This did not mean that the project had been abandoned. At the end of two months, the club retained one additional session and reinstated the original starting time for the other. The final arrangement was a compromise rather than a complete rejection of the old routine.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Trong nhiều năm, thành viên một câu lạc bộ thể thao nhỏ có lệ tập cùng một giờ mỗi thứ Bảy. Cách này phù hợp với thành viên sáng lập, phần lớn sống gần đó. Nhưng khi câu lạc bộ phát triển, vài người mới thấy giờ cố định xung đột công việc hoặc trách nhiệm gia đình. Họ hỏi liệu có thể xem lại lịch không."
+      },
+      {
+        "index": 1,
+        "vi": "Ban đầu, ban điều hành bảo vệ lịch truyền thống. Nó quen thuộc và thay đổi có thể bất tiện cho người đã tham gia nhiều năm. Nhưng một thành viên chỉ ra rằng lập luận bỏ qua người không bao giờ đến được ngay từ đầu. Danh sách điểm danh cho biết ai đã đến, không phải tất cả ai muốn đến. Vì thế, xem đó là bức tranh đầy đủ sẽ gây hiểu sai."
+      },
+      {
+        "index": 2,
+        "vi": "Sau thảo luận, ban điều hành nghĩ ra đợt thử hai buổi thay thế nhau. Điều chỉnh phù hợp với mục tiêu mở rộng người tham gia, dù cần thêm thời gian tình nguyện. Thành viên được đề nghị báo cả khó khăn lẫn lợi ích. Ban muốn phản hồi có thể chất vấn đề xuất, không chỉ khen nó."
+      },
+      {
+        "index": 3,
+        "vi": "Khi chủ nhiệm quyết định rời vị trí vì lý do cá nhân, thành viên khác nhận dẫn dắt thử nghiệm. Điều đó không có nghĩa dự án bị bỏ. Sau hai tháng, câu lạc bộ giữ một buổi bổ sung và khôi phục giờ bắt đầu cũ cho buổi còn lại. Cách cuối cùng là sự dung hòa chứ không phủ nhận hoàn toàn nếp cũ."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "customary",
+        "pos": "adj",
+        "meaning_vi": "theo lệ thường, theo thói quen đã có",
+        "synonyms": [
+          "usual",
+          "traditional"
+        ],
+        "paraphrases": [
+          "normally done in a particular group"
+        ],
+        "context": "For years, it was customary for members of a small sports club to practise at the same time every Saturday. The arrangement suited the founding members, most of whom lived nearby. As the club grew, however, several newcomers found that the fixed time conflicted with work or family commitments. They asked whether the schedule could be reconsidered.",
+        "example": "",
+        "example_vi": "",
+        "note": "Customary nhấn mạnh tập quán/lệ thường; conventional nhấn mạnh cách được chấp nhận phổ biến.",
+        "tags": [
+          "Thể thao & tổ chức",
+          "B2",
+          "Changing the Club Rules"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "conventional",
+        "pos": "adj",
+        "meaning_vi": "theo cách quen thuộc, truyền thống",
+        "synonyms": [
+          "traditional",
+          "established"
+        ],
+        "paraphrases": [
+          "following an established way of doing things"
+        ],
+        "context": "The committee initially defended the conventional timetable. It was familiar, and changing it might inconvenience people who had attended for years. But a member pointed out that this argument overlooked those who could never attend in the first place. The attendance records showed who came, not everyone who wanted to come. Treating the records as a complete picture would therefore be misleading.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không mặc nhiên có nghĩa lỗi thời hoặc sai.",
+        "tags": [
+          "Thể thao & tổ chức",
+          "B2",
+          "Changing the Club Rules"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "overlooked",
+        "pos": "v",
+        "meaning_vi": "đã bỏ sót, không tính đến",
+        "synonyms": [
+          "failed to consider"
+        ],
+        "paraphrases": [
+          "did not notice or take account of"
+        ],
+        "context": "The committee initially defended the conventional timetable. It was familiar, and changing it might inconvenience people who had attended for years. But a member pointed out that this argument overlooked those who could never attend in the first place. The attendance records showed who came, not everyone who wanted to come. Treating the records as a complete picture would therefore be misleading.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không phải nghĩa nhìn ra một cảnh quan.",
+        "tags": [
+          "Thể thao & tổ chức",
+          "B2",
+          "Changing the Club Rules"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "in line with",
+        "pos": "phrase",
+        "meaning_vi": "phù hợp, nhất quán với",
+        "synonyms": [
+          "consistent with"
+        ],
+        "paraphrases": [
+          "agreeing with an aim or approach"
+        ],
+        "context": "After a discussion, the committee devised a trial with two alternative sessions. The change was in line with the club's stated aim of widening participation, although it required additional volunteer time. Members were asked to report difficulties as well as benefits. The committee wanted feedback that could challenge the proposal, not simply praise it.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không phải lúc nào cũng hàm ý tuân thủ quy định chặt như in accordance with.",
+        "tags": [
+          "Thể thao & tổ chức",
+          "B2",
+          "Changing the Club Rules"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "step down",
+        "pos": "phrase",
+        "meaning_vi": "rời chức vụ, từ chức",
+        "synonyms": [
+          "resign"
+        ],
+        "paraphrases": [
+          "leave a position of responsibility"
+        ],
+        "context": "When the chair decided to step down for personal reasons, another member agreed to lead the trial. This did not mean that the project had been abandoned. At the end of two months, the club retained one additional session and reinstated the original starting time for the other. The final arrangement was a compromise rather than a complete rejection of the old routine.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không dùng thay pull out of a walk/match một cách máy móc.",
+        "tags": [
+          "Thể thao & tổ chức",
+          "B2",
+          "Changing the Club Rules"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "reinstated",
+        "pos": "v",
+        "meaning_vi": "khôi phục lại điều đã thay đổi/bãi bỏ",
+        "synonyms": [
+          "restored"
+        ],
+        "paraphrases": [
+          "put something back into its former position"
+        ],
+        "context": "When the chair decided to step down for personal reasons, another member agreed to lead the trial. This did not mean that the project had been abandoned. At the end of two months, the club retained one additional session and reinstated the original starting time for the other. The final arrangement was a compromise rather than a complete rejection of the old routine.",
+        "example": "",
+        "example_vi": "",
+        "note": "Động từ gốc: reinstate, không phải reinsate.",
+        "tags": [
+          "Thể thao & tổ chức",
+          "B2",
+          "Changing the Club Rules"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "most of whom",
+        "evidence": "most of whom lived nearby",
+        "explanation_vi": "Mệnh đề quan hệ bổ sung cho founding members; whom thay người sau giới từ of.",
+        "example": "I met five students, two of whom study IT.",
+        "example_vi": "Tôi gặp năm sinh viên, trong đó hai người học CNTT."
+      },
+      {
+        "pattern": "not simply ...",
+        "evidence": "not simply praise it.",
+        "explanation_vi": "Not simply hạn chế ý chỉ khen; không nói rằng lời khen bị cấm hoàn toàn.",
+        "example": "We need evidence, not simply opinions.",
+        "example_vi": "Chúng ta cần bằng chứng, không chỉ ý kiến."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What is the central issue in the passage?",
+      "options": [
+        "Replacing every member of the club",
+        "Balancing an established routine with wider access",
+        "Removing all volunteer work",
+        "Choosing a new type of sport"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "a compromise rather than a complete rejection of the old routine.",
+      "explanation_vi": "Nhóm điều chỉnh lịch để dung hòa thói quen cũ và nhu cầu mới."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why could attendance records give an incomplete picture?",
+      "options": [
+        "They included only people who actually came",
+        "They recorded every person in the city",
+        "They contained no dates",
+        "They were all destroyed"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "The attendance records showed who came, not everyone who wanted to come.",
+      "explanation_vi": "Người muốn đến nhưng không thể đến không hiện đầy đủ trong số liệu."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The trial was abandoned when the chair stepped down.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "another member agreed to lead the trial.",
+      "explanation_vi": "Có người khác tiếp tục phụ trách; bài còn nói rõ dự án không bị bỏ."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "“Reinstated” means the starting time was:",
+      "options": [
+        "removed permanently",
+        "put back as it had been before",
+        "kept secret",
+        "moved to another building"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "reinstated the original starting time",
+      "explanation_vi": "Khôi phục giờ ban đầu, không phải tạo giờ hoàn toàn mới."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Customary” có đồng nghĩa tuyệt đối với “conventional” không?",
+      "answer_vi": "Hai từ gần nghĩa trong bài nhưng trọng tâm khác. Customary: việc nhóm thường làm theo lệ. Conventional: cách được xem là quen thuộc/truyền thống. Một sự việc customary không tự động được mọi nơi chấp nhận.",
+      "paragraph_index": 0,
+      "evidence": "it was customary for members of a small sports club to practise"
+    },
+    {
+      "question": "Chủ nhiệm “step down” thì dự án có ngừng không?",
+      "answer_vi": "Không suy ra như vậy. Step down chỉ hành động rời chức vụ của một người; đoạn nói người khác nhận phụ trách nên dự án vẫn tiếp tục.",
+      "paragraph_index": 3,
+      "evidence": "another member agreed to lead the trial."
+    }
+  ]
+}

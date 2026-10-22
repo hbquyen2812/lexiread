@@ -1,0 +1,269 @@
+{
+  "slug": "the-empty-shop",
+  "title": "The Empty Shop",
+  "level": "B2",
+  "topic": "Không gian đô thị",
+  "summary": "Một mặt bằng bỏ trống được thử dùng làm nơi học chung với kỳ vọng có giới hạn.",
+  "revision": 1,
+  "published": true,
+  "order": 10,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "An empty shop stood between a bakery and a bus stop for nearly two years. A residents' group saw it as an untapped resource: a place that might host quiet study sessions in the morning and practical workshops in the evening. Their proposal was bold, but it was not a plan to solve every problem in the neighbourhood with a single room.\n\nBefore seeking funding, the group asked who would administer the space. Enthusiasm alone would not open the doors, maintain a booking calendar or respond to complaints. A volunteer coordinator agreed to organise a three-month trial, provided that other members shared the routine work. The group also drew up rules in accordance with the conditions set by the building's owner.\n\nThe first timetable proved unrealistic. A craft session regularly overran, delaying the study group that followed. Rather than blame the participants, the organisers amended the timetable and allowed a gap between activities. They discovered that a flexible room still needed clear arrangements. Flexibility did not mean that every activity could happen at any time.\n\nAt the end of the trial, a sizeable number of residents wanted the project to continue. The organisers welcomed the interest but resisted describing the trial as a monumental success. They had not yet secured funding for another year, and several volunteers were about to leave. What they had demonstrated was narrower: under specific conditions, the room could serve more than one useful purpose.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Một cửa hàng bỏ trống nằm giữa tiệm bánh và trạm xe buýt gần hai năm. Nhóm cư dân xem đó là nguồn lực chưa khai thác: nơi có thể học yên tĩnh buổi sáng và tổ chức hoạt động thực hành buổi tối. Đề xuất táo bạo nhưng không phải kế hoạch giải quyết mọi vấn đề của khu dân cư bằng một căn phòng."
+      },
+      {
+        "index": 1,
+        "vi": "Trước khi xin kinh phí, nhóm hỏi ai sẽ quản lý không gian. Chỉ nhiệt tình không đủ để mở cửa, duy trì lịch đặt chỗ hay giải quyết phàn nàn. Một điều phối viên tình nguyện đồng ý tổ chức thử ba tháng với điều kiện các thành viên khác chia sẻ việc thường ngày. Nhóm cũng soạn quy định tuân theo điều kiện chủ tòa nhà đặt ra."
+      },
+      {
+        "index": 2,
+        "vi": "Lịch đầu tiên không thực tế. Buổi thủ công thường kéo quá giờ, làm nhóm học sau đó bị trễ. Thay vì trách người tham gia, ban tổ chức sửa lịch và chừa khoảng đệm giữa các hoạt động. Họ nhận ra phòng đa năng vẫn cần cách tổ chức rõ ràng. Linh hoạt không có nghĩa hoạt động nào cũng diễn ra lúc nào cũng được."
+      },
+      {
+        "index": 3,
+        "vi": "Cuối đợt thử, số cư dân đáng kể muốn tiếp tục. Nhóm hoan nghênh sự quan tâm nhưng không vội gọi thử nghiệm là thành công cực kỳ lớn. Họ chưa có kinh phí chắc chắn cho năm nữa và vài tình nguyện viên sắp rời đi. Điều đã chứng minh hẹp hơn: trong điều kiện cụ thể, căn phòng có thể phục vụ hơn một mục đích hữu ích."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "untapped",
+        "pos": "adj",
+        "meaning_vi": "chưa được khai thác hoặc tận dụng",
+        "synonyms": [
+          "unexploited",
+          "unused"
+        ],
+        "paraphrases": [
+          "available but not yet made use of"
+        ],
+        "context": "An empty shop stood between a bakery and a bus stop for nearly two years. A residents' group saw it as an untapped resource: a place that might host quiet study sessions in the morning and practical workshops in the evening. Their proposal was bold, but it was not a plan to solve every problem in the neighbourhood with a single room.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Không gian đô thị",
+          "B2",
+          "The Empty Shop"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "bold",
+        "pos": "adj",
+        "meaning_vi": "táo bạo, dám thử điều khó",
+        "synonyms": [
+          "daring"
+        ],
+        "paraphrases": [
+          "willing to attempt something ambitious"
+        ],
+        "context": "An empty shop stood between a bakery and a bus stop for nearly two years. A residents' group saw it as an untapped resource: a place that might host quiet study sessions in the morning and practical workshops in the evening. Their proposal was bold, but it was not a plan to solve every problem in the neighbourhood with a single room.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không phải kiểu chữ in đậm trong ngữ cảnh này.",
+        "tags": [
+          "Không gian đô thị",
+          "B2",
+          "The Empty Shop"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "administer",
+        "pos": "v",
+        "meaning_vi": "quản lý, điều hành",
+        "synonyms": [
+          "manage"
+        ],
+        "paraphrases": [
+          "organise and run an activity or place"
+        ],
+        "context": "Before seeking funding, the group asked who would administer the space. Enthusiasm alone would not open the doors, maintain a booking calendar or respond to complaints. A volunteer coordinator agreed to organise a three-month trial, provided that other members shared the routine work. The group also drew up rules in accordance with the conditions set by the building's owner.",
+        "example": "",
+        "example_vi": "",
+        "note": "Administer có nhiều nghĩa; ở đây không liên quan đến cấp thuốc.",
+        "tags": [
+          "Không gian đô thị",
+          "B2",
+          "The Empty Shop"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "in accordance with",
+        "pos": "phrase",
+        "meaning_vi": "theo đúng, phù hợp với quy định/điều kiện",
+        "synonyms": [
+          "in conformity with"
+        ],
+        "paraphrases": [
+          "following the requirements of"
+        ],
+        "context": "Before seeking funding, the group asked who would administer the space. Enthusiasm alone would not open the doors, maintain a booking calendar or respond to complaints. A volunteer coordinator agreed to organise a three-month trial, provided that other members shared the routine work. The group also drew up rules in accordance with the conditions set by the building's owner.",
+        "example": "",
+        "example_vi": "",
+        "note": "Thường trang trọng và gắn với quy định/hướng dẫn.",
+        "tags": [
+          "Không gian đô thị",
+          "B2",
+          "The Empty Shop"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "amended",
+        "pos": "v",
+        "meaning_vi": "đã sửa đổi để điều chỉnh/cải thiện",
+        "synonyms": [
+          "revised"
+        ],
+        "paraphrases": [
+          "made changes to a document or arrangement"
+        ],
+        "context": "The first timetable proved unrealistic. A craft session regularly overran, delaying the study group that followed. Rather than blame the participants, the organisers amended the timetable and allowed a gap between activities. They discovered that a flexible room still needed clear arrangements. Flexibility did not mean that every activity could happen at any time.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Không gian đô thị",
+          "B2",
+          "The Empty Shop"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "sizeable",
+        "pos": "adj",
+        "meaning_vi": "khá lớn, đáng kể về quy mô",
+        "synonyms": [
+          "considerable",
+          "substantial"
+        ],
+        "paraphrases": [
+          "fairly large in amount or number"
+        ],
+        "context": "At the end of the trial, a sizeable number of residents wanted the project to continue. The organisers welcomed the interest but resisted describing the trial as a monumental success. They had not yet secured funding for another year, and several volunteers were about to leave. What they had demonstrated was narrower: under specific conditions, the room could serve more than one useful purpose.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không tự mang mức độ cực lớn như monumental.",
+        "tags": [
+          "Không gian đô thị",
+          "B2",
+          "The Empty Shop"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "provided that + clause",
+        "evidence": "provided that other members shared the routine work.",
+        "explanation_vi": "Nêu điều kiện: với điều kiện những người khác cùng chia sẻ việc. Không phải khẳng định điều kiện tự động được đáp ứng.",
+        "example": "You can borrow it provided that you return it tomorrow.",
+        "example_vi": "Bạn có thể mượn với điều kiện trả ngày mai."
+      },
+      {
+        "pattern": "what-clause làm chủ ngữ",
+        "evidence": "What they had demonstrated was narrower",
+        "explanation_vi": "What they had demonstrated = điều họ đã chứng minh. Cả mệnh đề làm chủ ngữ của was.",
+        "example": "What we need is a clear plan.",
+        "example_vi": "Điều chúng ta cần là một kế hoạch rõ ràng."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "Which statement best captures the passage?",
+      "options": [
+        "A shared space requires practical organisation as well as enthusiasm",
+        "An empty shop can solve all neighbourhood problems",
+        "Volunteers never need funding",
+        "Flexible spaces should have no timetable"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "a flexible room still needed clear arrangements.",
+      "explanation_vi": "Cả bài nhấn mạnh quản lý, điều kiện, lịch và giới hạn kết luận."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What change followed the craft sessions running late?",
+      "options": [
+        "The study group was permanently banned",
+        "A gap was added between activities",
+        "The building was sold",
+        "All sessions became shorter than ten minutes"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "allowed a gap between activities.",
+      "explanation_vi": "Nhóm sửa lịch và chừa khoảng đệm giữa các hoạt động."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Funding for another year had already been secured at the end of the trial.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "They had not yet secured funding for another year",
+      "explanation_vi": "Had not yet phủ định việc đã có nguồn kinh phí chắc chắn."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "Which phrase best explains “untapped resource”?",
+      "options": [
+        "A resource already used completely",
+        "A resource whose ownership is unknown",
+        "A resource not yet put to use",
+        "A resource that cannot be used"
+      ],
+      "answer": 2,
+      "paragraph_index": 0,
+      "evidence": "an untapped resource",
+      "explanation_vi": "Chưa khai thác không có nghĩa không thể khai thác."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Sizeable” và “monumental” khác nhau ở đây ra sao?",
+      "answer_vi": "Sizeable nói lượng cư dân khá lớn. Monumental success nhấn mạnh thành công cực kỳ lớn/quan trọng; nhóm chủ động tránh mức khẳng định đó vì còn thiếu kinh phí và nhân lực.",
+      "paragraph_index": 3,
+      "evidence": "resisted describing the trial as a monumental success."
+    },
+    {
+      "question": "“Flexibility did not mean ...” đang phản bác gì?",
+      "answer_vi": "Nó phản bác việc đánh đồng linh hoạt với không có giới hạn. Phòng dùng cho nhiều mục đích vẫn phải có lịch rõ ràng.",
+      "paragraph_index": 2,
+      "evidence": "Flexibility did not mean that every activity could happen at any time."
+    }
+  ]
+}

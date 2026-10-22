@@ -1,0 +1,267 @@
+{
+  "slug": "room-for-a-change-of-plan",
+  "title": "Room for a Change of Plan",
+  "level": "B1",
+  "topic": "Du lịch & trải nghiệm",
+  "summary": "Một nhóm bạn học cách đổi kế hoạch chuyến đi mà không bỏ mục tiêu chính.",
+  "revision": 1,
+  "published": true,
+  "order": 8,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "Before their weekend trip, three friends created a timetable for almost every hour. They wanted to visit a museum, walk by the river and try a small restaurant recommended by a friend. The plan looked efficient on paper. However, they had left very little room for delays or unexpected opportunities.\n\nOn Saturday morning, their train arrived late. The first museum visit would therefore overrun the time they had reserved for lunch. At first, they tried to move every activity forward. This made the afternoon feel even more crowded. Eventually, they decided to leave out one shop that none of them particularly wanted to visit.\n\nLater, they noticed a short walking tour starting near the river. On the spur of the moment, they joined it. The guide explained the stories behind a few old buildings, and the friends asked questions they would not have thought of on their own. The tour was not in their original plan, but it became one of their favourite experiences.\n\nOn Sunday, one friend felt tired and chose to pull out of the morning walk. The others went ahead and met her at lunch. Nobody treated the change as a failure. They returned home with fewer photographs than expected, but with a clearer idea of what made a trip enjoyable for them: shared choices, not a perfectly completed timetable.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Trước chuyến đi cuối tuần, ba người bạn lập lịch gần như từng giờ. Họ muốn thăm bảo tàng, đi dọc sông và thử một nhà hàng nhỏ được bạn giới thiệu. Kế hoạch có vẻ hiệu quả trên giấy. Tuy nhiên, họ chừa quá ít thời gian cho chậm trễ hoặc cơ hội bất ngờ."
+      },
+      {
+        "index": 1,
+        "vi": "Sáng thứ Bảy, tàu đến muộn. Vì vậy, chuyến thăm bảo tàng đầu tiên sẽ lấn vào thời gian đã dành cho bữa trưa. Lúc đầu, họ cố dời tất cả hoạt động về sau. Điều này khiến buổi chiều còn chật chội hơn. Cuối cùng, họ bỏ một cửa hàng mà không ai đặc biệt muốn đến."
+      },
+      {
+        "index": 2,
+        "vi": "Sau đó, họ thấy một tour đi bộ ngắn sắp bắt đầu gần sông. Theo hứng ngay lúc ấy, họ tham gia. Hướng dẫn viên kể chuyện phía sau vài tòa nhà cũ, và họ hỏi những câu mà nếu tự đi thì chưa chắc đã nghĩ tới. Tour không có trong lịch ban đầu nhưng trở thành một trải nghiệm họ thích nhất."
+      },
+      {
+        "index": 3,
+        "vi": "Chủ nhật, một người thấy mệt nên rút khỏi buổi đi bộ sáng. Hai người kia vẫn đi và gặp cô vào bữa trưa. Không ai coi thay đổi là thất bại. Họ về với ít ảnh hơn dự tính nhưng hiểu rõ hơn điều làm chuyến đi vui: cùng lựa chọn chứ không phải hoàn tất một lịch trình hoàn hảo."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "efficient",
+        "pos": "adj",
+        "meaning_vi": "hiệu quả về cách sử dụng thời gian/nguồn lực",
+        "synonyms": [
+          "well organised"
+        ],
+        "paraphrases": [
+          "using time or resources without much waste"
+        ],
+        "context": "Before their weekend trip, three friends created a timetable for almost every hour. They wanted to visit a museum, walk by the river and try a small restaurant recommended by a friend. The plan looked efficient on paper. However, they had left very little room for delays or unexpected opportunities.",
+        "example": "",
+        "example_vi": "",
+        "note": "Efficient không tự bảo đảm kết quả đáng mong muốn; khác effective.",
+        "tags": [
+          "Du lịch & trải nghiệm",
+          "B1",
+          "Room for a Change of Plan"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "overrun",
+        "pos": "v",
+        "meaning_vi": "kéo dài vượt quá thời gian dự kiến",
+        "synonyms": [
+          "run beyond the allotted time"
+        ],
+        "paraphrases": [
+          "take longer than the time allowed"
+        ],
+        "context": "On Saturday morning, their train arrived late. The first museum visit would therefore overrun the time they had reserved for lunch. At first, they tried to move every activity forward. This made the afternoon feel even more crowded. Eventually, they decided to leave out one shop that none of them particularly wanted to visit.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không dùng nghĩa tràn ngập/chiếm đóng trong câu này.",
+        "tags": [
+          "Du lịch & trải nghiệm",
+          "B1",
+          "Room for a Change of Plan"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "leave out",
+        "pos": "phrase",
+        "meaning_vi": "bỏ ra, không đưa vào",
+        "synonyms": [
+          "omit"
+        ],
+        "paraphrases": [
+          "not include something"
+        ],
+        "context": "On Saturday morning, their train arrived late. The first museum visit would therefore overrun the time they had reserved for lunch. At first, they tried to move every activity forward. This made the afternoon feel even more crowded. Eventually, they decided to leave out one shop that none of them particularly wanted to visit.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Du lịch & trải nghiệm",
+          "B1",
+          "Room for a Change of Plan"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "On the spur of the moment",
+        "pos": "phrase",
+        "meaning_vi": "ngẫu hứng, không có kế hoạch từ trước",
+        "synonyms": [
+          "spontaneously"
+        ],
+        "paraphrases": [
+          "without planning it in advance"
+        ],
+        "context": "Later, they noticed a short walking tour starting near the river. On the spur of the moment, they joined it. The guide explained the stories behind a few old buildings, and the friends asked questions they would not have thought of on their own. The tour was not in their original plan, but it became one of their favourite experiences.",
+        "example": "",
+        "example_vi": "",
+        "note": "Cụm chuẩn dùng on, không phải in the spur of the moment.",
+        "tags": [
+          "Du lịch & trải nghiệm",
+          "B1",
+          "Room for a Change of Plan"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "pull out of",
+        "pos": "phrase",
+        "meaning_vi": "rút khỏi việc tham gia",
+        "synonyms": [
+          "withdraw from"
+        ],
+        "paraphrases": [
+          "stop taking part in something"
+        ],
+        "context": "On Sunday, one friend felt tired and chose to pull out of the morning walk. The others went ahead and met her at lunch. Nobody treated the change as a failure. They returned home with fewer photographs than expected, but with a clearer idea of what made a trip enjoyable for them: shared choices, not a perfectly completed timetable.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không đồng nghĩa với step down trong mọi ngữ cảnh; step down thường là rời chức vụ.",
+        "tags": [
+          "Du lịch & trải nghiệm",
+          "B1",
+          "Room for a Change of Plan"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "went ahead",
+        "pos": "phrase",
+        "meaning_vi": "vẫn tiến hành như dự định",
+        "synonyms": [
+          "proceeded"
+        ],
+        "paraphrases": [
+          "continued with a plan"
+        ],
+        "context": "On Sunday, one friend felt tired and chose to pull out of the morning walk. The others went ahead and met her at lunch. Nobody treated the change as a failure. They returned home with fewer photographs than expected, but with a clearer idea of what made a trip enjoyable for them: shared choices, not a perfectly completed timetable.",
+        "example": "",
+        "example_vi": "",
+        "note": "Past tense của go ahead.",
+        "tags": [
+          "Du lịch & trải nghiệm",
+          "B1",
+          "Room for a Change of Plan"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "fewer + plural countable noun",
+        "evidence": "fewer photographs than expected",
+        "explanation_vi": "Fewer đi với danh từ đếm được số nhiều; less thường với danh từ không đếm được.",
+        "example": "We took fewer bags this time.",
+        "example_vi": "Lần này chúng tôi mang ít túi hơn."
+      },
+      {
+        "pattern": "not ... but ...",
+        "evidence": "but with a clearer idea of what made a trip enjoyable",
+        "explanation_vi": "Sự tương phản chuyển trọng tâm từ số ảnh sang hiểu biết về trải nghiệm.",
+        "example": "I want fewer tasks but better results.",
+        "example_vi": "Tôi muốn ít việc hơn nhưng kết quả tốt hơn."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What lesson do the friends take from the trip?",
+      "options": [
+        "Every hour must be planned",
+        "A flexible plan can support an enjoyable trip",
+        "Unexpected activities should be avoided",
+        "Taking photos is the only purpose of travel"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "shared choices, not a perfectly completed timetable.",
+      "explanation_vi": "Câu kết nhấn mạnh lựa chọn chung thay vì hoàn thành lịch tuyệt đối."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Which activity did they join without planning it in advance?",
+      "options": [
+        "A cooking class",
+        "A morning train journey",
+        "A short walking tour",
+        "A visit to a shop"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "On the spur of the moment, they joined it.",
+      "explanation_vi": "It chỉ short walking tour ở câu trước."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "All three friends took part in the Sunday morning walk.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "one friend felt tired and chose to pull out of the morning walk.",
+      "explanation_vi": "Một người rút khỏi nên không phải cả ba đều đi."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "“Overrun” refers here to:",
+      "options": [
+        "ending earlier than planned",
+        "taking longer than the scheduled time",
+        "running faster than someone",
+        "paying less than expected"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "overrun the time they had reserved for lunch.",
+      "explanation_vi": "Overrun nói về việc vượt thời lượng, không phải chạy nhanh."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Pull out” có bằng “step down” không?",
+      "answer_vi": "Trong bài, pull out of the walk là rút khỏi một hoạt động. Step down thường là rời chức vụ hoặc từ chức. Không nên dùng step down of the walk.",
+      "paragraph_index": 3,
+      "evidence": "pull out of the morning walk."
+    },
+    {
+      "question": "“It” ở “they joined it” thay cho từ nào?",
+      "answer_vi": "It thay cho a short walking tour, không phải river. Đọc câu liền trước giúp xác định đúng đại từ.",
+      "paragraph_index": 2,
+      "evidence": "they noticed a short walking tour starting near the river. On the spur of the moment, they joined it."
+    }
+  ]
+}

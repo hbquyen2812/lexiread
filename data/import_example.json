@@ -1,0 +1,26 @@
+{
+  "vocabulary": [
+    {
+      "word": "pertinent",
+      "pos": "adj",
+      "meaning_vi": "liên quan trực tiếp, thích hợp với vấn đề",
+      "synonyms": [
+        "relevant",
+        "applicable"
+      ],
+      "paraphrases": [
+        "directly related to the matter being discussed"
+      ],
+      "example": "Please keep your comments pertinent to the topic.",
+      "example_vi": "Hãy giữ các nhận xét liên quan đến chủ đề.",
+      "note": "pertinent to + danh từ",
+      "tags": [
+        "Từ cá nhân"
+      ],
+      "context": "",
+      "origin": "seed",
+      "verified": false,
+      "source_label": "Danh sách từ cá nhân"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "slug": "the-useful-feature",
+  "title": "The Useful Feature",
+  "level": "B2",
+  "topic": "Công nghệ & thiết kế",
+  "summary": "Nhóm phát triển phát hiện số lượt nhấn không đủ để đánh giá ích lợi của một tính năng.",
+  "revision": 1,
+  "published": true,
+  "order": 9,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "A student team devised a reading application with an unusual feature: every unfamiliar word opened a colourful animation. During early demonstrations, visitors clicked repeatedly and praised the design. The team interpreted this enthusiasm as evidence that the feature supported learning. Yet the demonstrations measured immediate attention, not whether readers remembered words later.\n\nTo investigate further, the students invited a small group to read two short passages. One version included the animations; the other displayed a simple explanation. The comparison was not a rigorous experiment: the passages were different, and participants could choose which version to try first. Nevertheless, several comments raised a pertinent concern. Readers sometimes lost their place after closing an animation.\n\nThe prevailing assumption within the team had been that more interaction meant more learning. They now recognised that this reasoning was flawed. A high click count could reflect curiosity, confusion or repeated attempts to dismiss a window. It did not, by itself, distinguish between these possibilities. The students could not claim that the simpler version produced better learning either; their observations did not establish that result.\n\nRather than abandon every novel idea, the team made a deliberate change. Animations became optional, and readers could save a word without leaving the paragraph. The team planned a fairer comparison using the same reading material. Their central question had shifted from whether a feature looked impressive to whether it helped someone complete a reading task without unnecessary interruption.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Một nhóm sinh viên thiết kế ứng dụng đọc với tính năng khác lạ: mỗi từ chưa biết mở ra hoạt ảnh nhiều màu. Trong các buổi giới thiệu ban đầu, khách nhấn liên tục và khen thiết kế. Nhóm xem sự hào hứng là bằng chứng tính năng giúp học. Nhưng buổi giới thiệu đo sự chú ý tức thời, không phải khả năng nhớ từ sau đó."
+      },
+      {
+        "index": 1,
+        "vi": "Để tìm hiểu thêm, nhóm mời một số người đọc hai bài ngắn. Một phiên bản có hoạt ảnh; bản kia chỉ hiện lời giải thích đơn giản. Đây không phải thí nghiệm chặt chẽ: hai bài khác nhau, người tham gia còn được chọn thử bản nào trước. Dù vậy, vài nhận xét nêu lên mối lo liên quan trực tiếp: đôi khi người đọc mất chỗ đang đọc sau khi đóng hoạt ảnh."
+      },
+      {
+        "index": 2,
+        "vi": "Giả định phổ biến trong nhóm là tương tác nhiều hơn đồng nghĩa học nhiều hơn. Giờ họ nhận ra cách suy luận ấy có thiếu sót. Lượt nhấn cao có thể do tò mò, bối rối hoặc nhiều lần cố đóng cửa sổ. Tự nó không phân biệt được các khả năng ấy. Nhóm cũng không thể khẳng định bản đơn giản giúp học tốt hơn; quan sát chưa xác lập kết quả đó."
+      },
+      {
+        "index": 3,
+        "vi": "Thay vì bỏ mọi ý tưởng mới, nhóm chủ động điều chỉnh. Hoạt ảnh trở thành tùy chọn và người đọc có thể lưu từ mà không rời đoạn. Nhóm dự định so sánh công bằng hơn với cùng tài liệu đọc. Câu hỏi chính chuyển từ tính năng có ấn tượng hay không sang việc nó có giúp hoàn thành nhiệm vụ đọc mà không gây gián đoạn thừa hay không."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "devised",
+        "pos": "v",
+        "meaning_vi": "nghĩ ra, thiết kế một cách làm",
+        "synonyms": [
+          "designed",
+          "developed"
+        ],
+        "paraphrases": [
+          "created a plan or solution through thought"
+        ],
+        "context": "A student team devised a reading application with an unusual feature: every unfamiliar word opened a colourful animation. During early demonstrations, visitors clicked repeatedly and praised the design. The team interpreted this enthusiasm as evidence that the feature supported learning. Yet the demonstrations measured immediate attention, not whether readers remembered words later.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Công nghệ & thiết kế",
+          "B2",
+          "The Useful Feature"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "rigorous",
+        "pos": "adj",
+        "meaning_vi": "chặt chẽ, kỹ lưỡng về phương pháp",
+        "synonyms": [
+          "thorough",
+          "careful"
+        ],
+        "paraphrases": [
+          "carried out with strict attention to method"
+        ],
+        "context": "To investigate further, the students invited a small group to read two short passages. One version included the animations; the other displayed a simple explanation. The comparison was not a rigorous experiment: the passages were different, and participants could choose which version to try first. Nevertheless, several comments raised a pertinent concern. Readers sometimes lost their place after closing an animation.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Công nghệ & thiết kế",
+          "B2",
+          "The Useful Feature"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "prevailing",
+        "pos": "adj",
+        "meaning_vi": "phổ biến hoặc chiếm ưu thế trong bối cảnh đó",
+        "synonyms": [
+          "dominant",
+          "widely held"
+        ],
+        "paraphrases": [
+          "held by most people in the relevant group"
+        ],
+        "context": "The prevailing assumption within the team had been that more interaction meant more learning. They now recognised that this reasoning was flawed. A high click count could reflect curiosity, confusion or repeated attempts to dismiss a window. It did not, by itself, distinguish between these possibilities. The students could not claim that the simpler version produced better learning either; their observations did not establish that result.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không đồng nghĩa với đúng. Giới hạn ở within the team trong bài.",
+        "tags": [
+          "Công nghệ & thiết kế",
+          "B2",
+          "The Useful Feature"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "flawed",
+        "pos": "adj",
+        "meaning_vi": "có thiếu sót, sai sót trong lập luận",
+        "synonyms": [
+          "faulty",
+          "unsound"
+        ],
+        "paraphrases": [
+          "containing an error or weakness"
+        ],
+        "context": "The prevailing assumption within the team had been that more interaction meant more learning. They now recognised that this reasoning was flawed. A high click count could reflect curiosity, confusion or repeated attempts to dismiss a window. It did not, by itself, distinguish between these possibilities. The students could not claim that the simpler version produced better learning either; their observations did not establish that result.",
+        "example": "",
+        "example_vi": "",
+        "note": "Flawed reasoning tự nhiên; defective thường dùng về thứ không hoạt động đúng, không thay thế máy móc.",
+        "tags": [
+          "Công nghệ & thiết kế",
+          "B2",
+          "The Useful Feature"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "novel",
+        "pos": "adj",
+        "meaning_vi": "mới, khác những gì quen thuộc",
+        "synonyms": [
+          "new",
+          "original"
+        ],
+        "paraphrases": [
+          "new and unusual"
+        ],
+        "context": "Rather than abandon every novel idea, the team made a deliberate change. Animations became optional, and readers could save a word without leaving the paragraph. The team planned a fairer comparison using the same reading material. Their central question had shifted from whether a feature looked impressive to whether it helped someone complete a reading task without unnecessary interruption.",
+        "example": "",
+        "example_vi": "",
+        "note": "Ở đây là tính từ; novel (n) mới là tiểu thuyết.",
+        "tags": [
+          "Công nghệ & thiết kế",
+          "B2",
+          "The Useful Feature"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "deliberate",
+        "pos": "adj",
+        "meaning_vi": "có chủ đích, đã cân nhắc",
+        "synonyms": [
+          "intentional",
+          "considered"
+        ],
+        "paraphrases": [
+          "chosen intentionally rather than accidentally"
+        ],
+        "context": "Rather than abandon every novel idea, the team made a deliberate change. Animations became optional, and readers could save a word without leaving the paragraph. The team planned a fairer comparison using the same reading material. Their central question had shifted from whether a feature looked impressive to whether it helped someone complete a reading task without unnecessary interruption.",
+        "example": "",
+        "example_vi": "",
+        "note": "Không nhầm động từ deliberate: cân nhắc/thảo luận kỹ.",
+        "tags": [
+          "Công nghệ & thiết kế",
+          "B2",
+          "The Useful Feature"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "not whether ...",
+        "evidence": "not whether readers remembered words later.",
+        "explanation_vi": "Phủ định chính xác thứ đã được đo: sự chú ý được đo, còn khả năng ghi nhớ sau đó thì không.",
+        "example": "The survey measured interest, not whether people actually bought the product.",
+        "example_vi": "Khảo sát đo sự quan tâm chứ không đo liệu mọi người thực sự mua sản phẩm hay không."
+      },
+      {
+        "pattern": "did not, by itself, ...",
+        "evidence": "It did not, by itself, distinguish between these possibilities.",
+        "explanation_vi": "By itself = chỉ riêng nó. Câu không nói số lượt nhấn vô dụng hoàn toàn, mà nói nó không đủ để phân biệt các nguyên nhân.",
+        "example": "A high score does not, by itself, explain the result.",
+        "example_vi": "Chỉ riêng điểm cao không giải thích được kết quả."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What is the main point of the passage?",
+      "options": [
+        "Animations always prevent learning",
+        "All new features should be removed",
+        "Popular interactions are not sufficient evidence of learning value",
+        "A simple interface guarantees better test scores"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "A high click count could reflect curiosity, confusion or repeated attempts to dismiss a window.",
+      "explanation_vi": "Cùng số lượt nhấn có thể phản ánh nhiều nguyên nhân, không đủ chứng minh giá trị học tập."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why was the initial comparison not rigorous?",
+      "options": [
+        "It used different passages and allowed participants to choose the order",
+        "Nobody participated",
+        "Only one version existed",
+        "The team had no application"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "the passages were different, and participants could choose which version to try first.",
+      "explanation_vi": "Cả hai giới hạn phương pháp được nêu trực tiếp."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The observations established that the simpler version led to better learning.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "their observations did not establish that result.",
+      "explanation_vi": "Đề hỏi đã xác lập kết quả hay chưa, và bài nói rõ chưa. Không suy diễn thành bản đơn giản chắc chắn kém hơn."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "In this context, “flawed” describes reasoning that:",
+      "options": [
+        "is very popular",
+        "contains a weakness or error",
+        "has been repaired physically",
+        "has never been discussed"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "this reasoning was flawed.",
+      "explanation_vi": "Flawed nói chất lượng lập luận có thiếu sót, không phải mức phổ biến."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Vì sao nhiều lượt nhấn chưa chắc là học tốt?",
+      "answer_vi": "Theo bài, lượt nhấn có thể xuất phát từ tò mò, bối rối hoặc cố đóng cửa sổ. Đây là nhiều cách giải thích cho cùng số liệu; chưa có phép đo ghi nhớ để chọn một cách.",
+      "paragraph_index": 2,
+      "evidence": "A high click count could reflect curiosity, confusion or repeated attempts to dismiss a window."
+    },
+    {
+      "question": "“Flawed” có bằng “defective” tuyệt đối không?",
+      "answer_vi": "Cả hai đều liên quan đến lỗi, nhưng không thay thế trong mọi kết hợp. Flawed reasoning là lập luận có thiếu sót; defective equipment thường là thiết bị lỗi/không hoạt động đúng.",
+      "paragraph_index": 2,
+      "evidence": "this reasoning was flawed."
+    }
+  ]
+}

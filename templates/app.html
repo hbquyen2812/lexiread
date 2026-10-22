@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LexiRead — đọc, hiểu và giữ lại từ vựng cá nhân.">
+  <title>LexiRead · Không gian học của bạn</title>
+  <link rel="stylesheet" href="{% static 'app.css' %}">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-mark">L<span>↗</span></span><span>LexiRead<small>READ. NOTICE. REMEMBER.</small></span></a>
+    <div class="nav-label">KHÔNG GIAN HỌC</div>
+    <nav aria-label="Điều hướng chính">
+      <a href="#home" data-nav="home"><span class="nav-icon">◫</span> Tổng quan</a>
+      <a href="#catalog" data-nav="catalog"><span class="nav-icon">▤</span> Thư viện luyện đọc</a>
+      <a href="#readings" data-nav="readings"><span class="nav-icon">↥</span> Bài đọc của tôi</a>
+      <a href="#vocabulary" data-nav="vocabulary"><span class="nav-icon">✦</span> Kho từ của tôi</a>
+      <a href="#study" data-nav="study"><span class="nav-icon">↺</span> Luyện nhớ từ <span id="nav-due" class="count-badge"></span></a>
+      <a href="#settings" data-nav="settings"><span class="nav-icon">⚙</span> Cài đặt & dữ liệu</a>
+    </nav>
+    <div class="sidebar-note"><span class="small-dot"></span> Mỗi ngày, một chút.<p>Không chỉ sưu tầm từ.<br>Hãy biến chúng thành vốn từ của bạn.</p></div>
+    <div class="sidebar-bottom"><span class="db-dot"></span><span id="storage-label">Kho riêng · PostgreSQL</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span class="breadcrumb">MY LEARNING SPACE <span>/</span> <b id="page-label">Tổng quan</b></span><div class="top-actions"><span id="ai-status" class="status-pill">Đang kết nối…</span><span class="avatar" id="avatar">Q</span><form method="post" action="/logout/" class="logout">{% csrf_token %}<button class="link-btn" type="submit">Đăng xuất</button></form></div></header>
+    <main id="main" tabindex="-1"><div class="empty-state">Đang mở kho học tập…</div></main>
+    <footer class="page-footer">LexiRead · Từ của bạn. Ngữ cảnh của bạn. Nhịp học của bạn.</footer>
+  </div>
+  <div id="selection-bar" class="selection-bar" hidden><span id="selected-word"></span><button data-action="selected-word" class="btn primary small">+ Lưu từ / cụm từ</button><button data-action="selected-question" class="btn secondary small">Giải thích câu</button><button data-action="clear-selection" aria-label="Đóng" class="icon-btn">×</button></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script src="{% static 'reading_platform.js' %}" defer></script>
+  <script src="{% static 'app.js' %}" defer></script>
+</body></html>

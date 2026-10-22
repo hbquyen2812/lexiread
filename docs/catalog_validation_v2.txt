@@ -1,0 +1,14 @@
+OK A2 | 211 words | A Quiet Start to the Day
+OK B2 | 246 words | A Slower Workshop
+OK A2 | 202 words | An Afternoon without Photos
+OK B2 | 236 words | Changing the Club Rules
+OK B1 | 229 words | Learning in the Bicycle Shop
+OK A2 | 194 words | One Meal at a Time
+OK B1 | 223 words | Room for a Change of Plan
+OK A2 | 198 words | The Balcony Garden
+OK B1 | 228 words | The Book Exchange
+OK B2 | 239 words | The Empty Shop
+OK B1 | 230 words | The Repair Afternoon
+OK B2 | 238 words | The Useful Feature
+12 lessons; {'A2': 4, 'B2': 4, 'B1': 4}; 48 questions; 72 vocabulary suggestions.
+Cấu trúc/trích dẫn hợp lệ không chứng minh nghĩa, bản dịch hoặc mức CEFR đã được chuyên gia kiểm định.

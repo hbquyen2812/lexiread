@@ -1,0 +1,268 @@
+{
+  "slug": "the-balcony-garden",
+  "title": "The Balcony Garden",
+  "level": "A2",
+  "topic": "Thiên nhiên",
+  "summary": "Linh thử trồng cây trong một không gian nhỏ và điều chỉnh kế hoạch của mình.",
+  "revision": 1,
+  "published": true,
+  "order": 3,
+  "author": "LexiRead · nội dung soạn riêng",
+  "provenance": "Bài đọc và tình huống hư cấu được biên soạn cho ứng dụng; không phải đề IELTS chính thức.",
+  "level_note": "Mức độ do người biên soạn ước lượng; chưa được hiệu chuẩn CEFR.",
+  "text": "Linh lived in a flat without a garden, but she wanted to grow something. Her balcony was narrow, with space for a chair and a few pots. She started with two plants rather than filling the whole balcony. A neighbour gave her an old pot, and she bought another one at a small shop.\n\nEach morning, Linh looked at the plants before leaving for work. She kept a notebook with the date and a short observation. One pot stood close to the wall, where it received little light. When that plant looked weak, she moved the pot nearer the front of the balcony.\n\nNot every change worked immediately. Once, she gave a plant too much water and had to ask her neighbour for advice. The neighbour suggested checking the soil first. Linh began to pay attention to each plant instead of following the same routine for both of them.\n\nAfter several weeks, one plant produced a few small flowers. Linh was delighted, but she did not want a much bigger collection. She liked being able to care for the plants she had. The garden remained small, leaving enough room for her chair and a quiet cup of tea.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Linh sống trong căn hộ không có vườn nhưng muốn trồng cây. Ban công của cô hẹp, chỉ đủ chỗ cho một chiếc ghế và vài chậu cây. Cô bắt đầu với hai cây thay vì lấp kín ban công. Một người hàng xóm cho cô chậu cũ, và cô mua thêm một chậu ở cửa hàng nhỏ."
+      },
+      {
+        "index": 1,
+        "vi": "Mỗi sáng, Linh ngắm cây trước khi đi làm. Cô ghi ngày tháng và một quan sát ngắn trong sổ. Một chậu đặt sát tường, nơi nhận được ít ánh sáng. Khi cây trông yếu, cô chuyển chậu ra gần phía trước ban công hơn."
+      },
+      {
+        "index": 2,
+        "vi": "Không phải thay đổi nào cũng có tác dụng ngay. Có lần cô tưới quá nhiều nước và phải hỏi hàng xóm. Người hàng xóm gợi ý kiểm tra đất trước. Linh bắt đầu chú ý đến từng cây thay vì áp dụng cùng một cách chăm sóc cho cả hai."
+      },
+      {
+        "index": 3,
+        "vi": "Sau vài tuần, một cây ra vài bông hoa nhỏ. Linh rất vui nhưng không muốn có một bộ sưu tập cây lớn hơn nhiều. Cô thích việc mình có thể chăm sóc những cây đang có. Khu vườn vẫn nhỏ, để lại đủ chỗ cho chiếc ghế và một tách trà yên tĩnh."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "narrow",
+        "pos": "adj",
+        "meaning_vi": "hẹp",
+        "synonyms": [
+          "not wide"
+        ],
+        "paraphrases": [
+          "having little width"
+        ],
+        "context": "Linh lived in a flat without a garden, but she wanted to grow something. Her balcony was narrow, with space for a chair and a few pots. She started with two plants rather than filling the whole balcony. A neighbour gave her an old pot, and she bought another one at a small shop.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thiên nhiên",
+          "A2",
+          "The Balcony Garden"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "rather than",
+        "pos": "phrase",
+        "meaning_vi": "thay vì, chứ không phải",
+        "synonyms": [
+          "instead of"
+        ],
+        "paraphrases": [
+          "choosing one option instead of another"
+        ],
+        "context": "Linh lived in a flat without a garden, but she wanted to grow something. Her balcony was narrow, with space for a chair and a few pots. She started with two plants rather than filling the whole balcony. A neighbour gave her an old pot, and she bought another one at a small shop.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thiên nhiên",
+          "A2",
+          "The Balcony Garden"
+        ],
+        "paragraph_index": 0,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "observation",
+        "pos": "n",
+        "meaning_vi": "điều quan sát hoặc ghi nhận được",
+        "synonyms": [
+          "something noticed"
+        ],
+        "paraphrases": [
+          "a detail noticed by watching"
+        ],
+        "context": "Each morning, Linh looked at the plants before leaving for work. She kept a notebook with the date and a short observation. One pot stood close to the wall, where it received little light. When that plant looked weak, she moved the pot nearer the front of the balcony.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thiên nhiên",
+          "A2",
+          "The Balcony Garden"
+        ],
+        "paragraph_index": 1,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "immediately",
+        "pos": "adv",
+        "meaning_vi": "ngay lập tức",
+        "synonyms": [
+          "at once"
+        ],
+        "paraphrases": [
+          "without waiting"
+        ],
+        "context": "Not every change worked immediately. Once, she gave a plant too much water and had to ask her neighbour for advice. The neighbour suggested checking the soil first. Linh began to pay attention to each plant instead of following the same routine for both of them.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thiên nhiên",
+          "A2",
+          "The Balcony Garden"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "pay attention to",
+        "pos": "phrase",
+        "meaning_vi": "chú ý đến",
+        "synonyms": [
+          "notice",
+          "focus on"
+        ],
+        "paraphrases": [
+          "look at something carefully"
+        ],
+        "context": "Not every change worked immediately. Once, she gave a plant too much water and had to ask her neighbour for advice. The neighbour suggested checking the soil first. Linh began to pay attention to each plant instead of following the same routine for both of them.",
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "Thiên nhiên",
+          "A2",
+          "The Balcony Garden"
+        ],
+        "paragraph_index": 2,
+        "origin": "curated",
+        "verified": false
+      },
+      {
+        "word": "delighted",
+        "pos": "adj",
+        "meaning_vi": "rất vui, hài lòng",
+        "synonyms": [
+          "very pleased"
+        ],
+        "paraphrases": [
+          "feeling very happy about something"
+        ],
+        "context": "After several weeks, one plant produced a few small flowers. Linh was delighted, but she did not want a much bigger collection. She liked being able to care for the plants she had. The garden remained small, leaving enough room for her chair and a quiet cup of tea.",
+        "example": "",
+        "example_vi": "",
+        "note": "Mức độ mạnh hơn pleased trong nhiều ngữ cảnh.",
+        "tags": [
+          "Thiên nhiên",
+          "A2",
+          "The Balcony Garden"
+        ],
+        "paragraph_index": 3,
+        "origin": "curated",
+        "verified": false
+      }
+    ],
+    "grammar": [
+      {
+        "pattern": "not every + noun",
+        "evidence": "Not every change worked immediately.",
+        "explanation_vi": "Không phải mọi thay đổi đều có tác dụng ngay. Không đồng nghĩa với không thay đổi nào có tác dụng.",
+        "example": "Not every answer is correct.",
+        "example_vi": "Không phải đáp án nào cũng đúng."
+      },
+      {
+        "pattern": "enough + noun",
+        "evidence": "leaving enough room for her chair",
+        "explanation_vi": "Enough đứng trước danh từ: enough room = đủ không gian.",
+        "example": "We have enough time.",
+        "example_vi": "Chúng ta có đủ thời gian."
+      }
+    ],
+    "origin": "curated",
+    "warnings": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What does Linh learn through her small garden?",
+      "options": [
+        "How to sell flowers",
+        "How to move to a larger flat",
+        "How to care for the plants she has",
+        "How to replace all her furniture"
+      ],
+      "answer": 2,
+      "paragraph_index": 3,
+      "evidence": "care for the plants she had.",
+      "explanation_vi": "Trọng tâm là chăm sóc và điều chỉnh cách làm cho số cây hiện có."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why did she move the pot away from the wall?",
+      "options": [
+        "The plant looked weak",
+        "The pot was broken",
+        "She needed a new chair",
+        "Her neighbour wanted it"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "When that plant looked weak, she moved the pot",
+      "explanation_vi": "Đoạn 2 nêu trực tiếp lý do cây trông yếu."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Linh wanted to fill the whole balcony with more plants at the end.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "she did not want a much bigger collection.",
+      "explanation_vi": "Bài phủ định mong muốn có thêm nhiều cây."
+    },
+    {
+      "id": "q4",
+      "kind": "vocabulary",
+      "prompt": "Which expression is closest to “pay attention to”?",
+      "options": [
+        "give away",
+        "notice carefully",
+        "forget about",
+        "wait for"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "pay attention to each plant",
+      "explanation_vi": "Cụm này có nghĩa chú ý, quan sát kỹ từng cây."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "“Little light” và “a little light” khác nhau thế nào?",
+      "answer_vi": "Little light nhấn mạnh ít, có sắc thái thiếu ánh sáng; a little light nhấn mạnh vẫn có một chút ánh sáng. Cả hai đi với danh từ không đếm được light.",
+      "paragraph_index": 1,
+      "evidence": "where it received little light."
+    },
+    {
+      "question": "“Room” ở đoạn cuối có phải phòng không?",
+      "answer_vi": "Không. Trong enough room, room là không gian/chỗ trống, không đếm được. A room mới có thể là một căn phòng.",
+      "paragraph_index": 3,
+      "evidence": "leaving enough room for her chair"
+    }
+  ]
+}
