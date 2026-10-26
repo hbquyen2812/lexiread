@@ -208,6 +208,7 @@ function testPracticeTools() {
 
 function testReaderVisibility() {
   const env = environment(), {scope} = env, app = read('static/app.js');
+  vm.runInContext(read('static/library.js'), scope);
   // Execute the production renderer and its text helper, without booting the SPA.
   vm.runInContext(app.slice(app.indexOf('function escapeRegex('), app.indexOf('async function readerPage(')), scope);
   vm.runInContext(app.slice(app.indexOf('function renderReader('), app.indexOf('async function vocabPage(')), scope);
