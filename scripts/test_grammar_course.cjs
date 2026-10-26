@@ -25,3 +25,12 @@ assert.doesNotMatch(advanced,/undefined|null/);
 assert.match(advanced,/data-quiz/);
 assert.match(ui.cardsHTML(rows),/Bắt đầu với câu đơn/);
 console.log('PASS grammar level/search filters, original lesson content, hidden practice, safe teaching HTML and advanced fallback');
+
+const progressRows=rows.map((r,i)=>({...r,is_read:i<2}));
+assert.equal(ui.filterLessons(progressRows,{level:'',q:'',status:'read'}).length,2);
+assert.equal(ui.filterLessons(progressRows,{level:'basic',q:'',status:'unread'}).length,14);
+assert.equal(ui.filterLessons(progressRows,{level:'B2',q:'',status:'read'}).length,0);
+assert.match(ui.cardsHTML(progressRows.slice(0,3)),/✓ Đã đọc/);
+assert.match(ui.cardsHTML(progressRows.slice(0,3)),/Chưa đọc/);
+assert.match(ui.lessonHTML({...data,is_read:true},'',''),/data-grammar-read="[^"]+" aria-pressed="true"/);
+console.log('PASS combined grammar read/level/search filters and explicit read controls');

@@ -14,3 +14,5 @@
 @media(max-width:700px){.grammar-start,.grammar-practice-callout,.source-lessons{flex-direction:column;align-items:stretch;padding:20px}.grammar-mode{max-width:none}.grammar-mode .btn{flex:1;padding:12px 8px;font-size:14px}.grammar-course-group .section-title{align-items:flex-start}.grammar-course-group .section-title>div{align-items:flex-start;flex-direction:column;gap:8px}.grammar-course-group .section-title h2{font-size:21px}.grammar-walkthrough,.grammar-recap{padding:20px}.grammar-walkthrough h2,.grammar-recap h2{font-size:21px}.grammar-quick-check{padding:16px}.grammar-start h2{font-size:23px}.grammar-next{gap:10px}.grammar-next a{flex-basis:100%}}
 
 @media(max-width:700px){.grammar-mode,.verb-controls{scroll-margin-top:85px}.verb-table tbody th{font-size:14px}}
+
+.grammar-course-card .tags{justify-content:space-between;gap:10px}.grammar-course-card p{font-size:15px;line-height:1.75}.grammar-course-card .academy-card-bottom small{font-size:14px}.grammar-course-card .eyebrow{font-size:13px;letter-spacing:.5px}

@@ -54,6 +54,7 @@ function environment(items = guides) {
     state: {}, toast: message => env.messages.push(message), lexicalDetails: () => '', lexicalContext: () => ''
   };
   vm.createContext(scope);
+  vm.runInContext(read('static/library.js'), scope);
   vm.runInContext(read('static/learning_hub.js'), scope);
   const app = read('static/app.js');
   vm.runInContext(app.slice(app.indexOf('const $ ='), app.indexOf('const uid =')), scope);
@@ -144,7 +145,7 @@ function testToeicFilters() {
     toeicFixture({slug: 'd', title: 'Mixed review', description: 'Ôn hỗn hợp', parts: [5, 6, 7], duration_minutes: 45, question_count: 7, attempt_count: 1})];
   env.hub.toeicCatalog(root, items, '6');
   assert.equal(root.querySelector('[data-toeic-count]').textContent, '2 bộ luyện · 11 câu hỏi');
-  function change(name, value) {const input = root.querySelector('[data-toeic-' + name + ']'); input.value = value; env.fire('change', input);}
+  function change(name, value) {if(name==='status'){env.fire('click',new NodeStub({'data-toeic-progress':value},root));return;}const input = root.querySelector('[data-toeic-' + name + ']'); input.value = value; env.fire('change', input);}
   change('status', 'new'); assert.match(root.querySelector('[data-toeic-count]').textContent, /^0 bộ/);
   change('part', '7'); assert.equal(root.querySelector('[data-toeic-count]').textContent, '1 bộ luyện · 6 câu hỏi');
   change('duration', '15'); assert.match(root.querySelector('[data-toeic-count]').textContent, /^0 bộ/);
@@ -152,7 +153,11 @@ function testToeicFilters() {
   const search = root.querySelector('[data-toeic-search]'); search.value = 'ngu phap'; env.fire('input', search);
   const results = root.querySelector('[data-toeic-results]');
   assert.equal(root.querySelector('[data-toeic-count]').textContent, '1 bộ luyện · 3 câu hỏi');
-  assert.doesNotMatch(results.innerHTML, /<img/); assert.match(results.innerHTML, /&lt;img/);
+  assert.doesNotMatch(results.innerHTML, /<img src=x/); assert.match(results.innerHTML, /&lt;img/);
+  assert.match(results.innerHTML, /src="\/static\/illustrations\/school.svg"/);
+  change('status','done'); assert.match(root.querySelector('[data-toeic-count]').textContent,/^0 bộ/);
+  search.value='';env.fire('input',search); assert.match(root.querySelector('[data-toeic-count]').textContent,/^2 bộ/);
+  assert.doesNotMatch(results.innerHTML,/data-practice-status="new"/);
   env.hub.toeicCatalog(root, Array.from({length: 12}, (_, i) => toeicFixture({slug: 'set-' + i})));
   assert.equal((results.innerHTML.match(/<article/g) || []).length, 9);
   env.fire('click', root.querySelector('[data-toeic-more]'));

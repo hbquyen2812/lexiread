@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.http import JsonResponse, Http404
 from .views import api, body
-from .models import LearningProfile, FoundationAttempt, Vocabulary
+from .models import LearningProfile, FoundationAttempt, Vocabulary, GrammarReadProgress
 from .services.core import InputError, fingerprint
 from .services.storage import save_entry
 from .services.motivation import record_learning
@@ -35,7 +35,8 @@ def overview(request):
     if level and level not in LEVELS:raise InputError('Trình độ chưa hợp lệ.')
     rows=[r for r in rows if (not level or r['level']==level) and (not q or q in fold(r['title']+' '+r.get('summary',r.get('description',''))))]
     progress=progress_for(request.user)
-    return JsonResponse({'items':[summary(r,kind)|{'progress':progress.get(kind+'/'+r['id'])} for r in rows],
+    read_ids=set(GrammarReadProgress.objects.filter(owner=request.user).values_list('unit_id',flat=True)) if kind=='grammar' else set()
+    return JsonResponse({'items':[summary(r,kind)|{'progress':progress.get(kind+'/'+r['id']), 'is_read':r['id'] in read_ids} for r in rows],
                          'profile':profile_for(request.user),'kind':kind})
 
 
@@ -47,6 +48,7 @@ def unit_detail(request, kind, unit_id):
     result['version']=revision(snapshot)
     result['progress']=progress_for(request.user).get(kind+'/'+unit_id)
     if kind == 'grammar':
+        result['is_read'] = GrammarReadProgress.objects.filter(owner=request.user, unit_id=unit_id).exists()
         result['tense_guide'] = lesson_guide(unit_id)
         course = units('grammar')
         index = next(i for i, row in enumerate(course) if row['id'] == unit_id)
@@ -57,6 +59,19 @@ def unit_detail(request, kind, unit_id):
         owned=set(Vocabulary.objects.filter(owner=request.user).values_list('fingerprint',flat=True))
         for w in result['words']:w['saved']=fingerprint(w['word'],w['meaning_vi']) in owned
     return JsonResponse(result)
+
+
+@api('POST')
+def grammar_read(request, unit_id):
+    find_unit('grammar', unit_id)
+    data = body(request)
+    if type(data.get('is_read')) is not bool:
+        raise InputError('Chọn trạng thái đã đọc hoặc chưa đọc.')
+    if data['is_read']:
+        GrammarReadProgress.objects.get_or_create(owner=request.user, unit_id=unit_id)
+    else:
+        GrammarReadProgress.objects.filter(owner=request.user, unit_id=unit_id).delete()
+    return JsonResponse({'is_read': data['is_read']})
 
 
 @api('POST')

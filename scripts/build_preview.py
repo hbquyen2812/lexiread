@@ -50,6 +50,7 @@ html=html.replace('<script src="{% static \'app.js\' %}" defer></script>', '<scr
 html=html.replace("<script src=\"{% static 'reading_platform.js' %}\" defer></script>", '<script>'+(root/'static/reading_platform.js').read_text(encoding='utf-8')+'</script>')
 signature='data:image/webp;base64,'+base64.b64encode((root/'static/illustrations/lexi-reading-garden.webp').read_bytes()).decode()
 html=html.replace('/static/illustrations/lexi-reading-garden.webp',signature)
+html=html.replace('/static/illustrations/toeic-desk.svg','data:image/svg+xml;base64,'+base64.b64encode((root/'static/illustrations/toeic-desk.svg').read_bytes()).decode())
 html=html.replace('<div class="workspace">','<div class="workspace"><div class="preview-banner">BẢN HTML DÙNG THỬ · Lưu trong trình duyệt này, không phải PostgreSQL · Không gọi API · Có thể xuất backup JSON sang bản Django.</div>')
 html=html.replace('Kho riêng · PostgreSQL','Bản HTML · localStorage')
 html=html.replace('<a href="/account/" id="storage-label">Tài khoản của tôi</a>','<span id="storage-label">Bản HTML dùng thử</span>')

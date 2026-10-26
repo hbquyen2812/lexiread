@@ -7,14 +7,34 @@
   --line: #e1e5d9;
   --paper: #fffdf8;
   --apricot: #efc5a7;
-  --font-ui: "Noto Sans", "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+  --font-ui: "Be Vietnam Pro", "Noto Sans", "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
   --font-reading: "Noto Serif", Georgia, "Times New Roman", serif;
 }
 
-body { font-family: var(--font-ui); }
+body { font-family: var(--font-ui); font-size: 16px; line-height: 1.65; }
+button, input, select, textarea { font-family: var(--font-ui); }
 h1, h2, h3 { letter-spacing: -.015em; }
 .reader-en { font-family: var(--font-reading); letter-spacing: 0; }
 .sidebar { overflow-y: auto; }
+
+/* Progress stays visible alongside the content, without relying on color alone. */
+.progress-tabs { display:flex; flex-wrap:wrap; gap:6px; margin:24px 0 18px; padding:5px; width:fit-content; max-width:100%; background:#edf1e7; border-radius:14px; }
+.progress-tabs button { border:0; background:transparent; color:#52634d; padding:10px 18px; min-height:44px; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer; }
+.progress-tabs button[aria-pressed=true] { background:#fffefa; color:#284f3d; box-shadow:0 2px 6px #27433314; }
+.progress-tabs button:focus-visible { outline:2px solid #356a58; outline-offset:3px; }
+.reading-status { display:inline-flex; align-items:center; gap:5px; width:fit-content; padding:5px 10px; font-size:13px; font-weight:600; line-height:1.5; border-radius:8px; background:#f0f2eb; color:#56644e; white-space:nowrap; }
+.reading-status.completed { background:#e2eddd; color:#2e583d; }
+.reading-status.started { background:#fbedd3; color:#795720; }
+.lesson-card[data-read-status=completed] { border-color:#bdd0b2; }
+.lesson-card .lesson-summary { font-size:15px; line-height:1.75; }
+.lesson-card .lesson-meta, .lesson-score { font-size:14px; line-height:1.6; color:#5a6953; }
+.lesson-score:empty { display:none; }
+.lesson-card .card-footer .btn { margin-left:auto; }
+.lesson-card h3 { font-size:21px; line-height:1.45; }
+.library-result-count { font-size:14px; }
+.grammar-read-control { display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin:26px 0; }
+.grammar-read-control [role=status] { color:#52664c; font-size:14px; }
+@media(max-width:600px) { .progress-tabs { width:100%; gap:3px; }.progress-tabs button { flex:1; padding:9px 8px; font-size:13px; } }
 
 .public-page, .login-page { background: var(--bg); }
 .public-header { background: #faf8f2f2; }
@@ -66,7 +86,7 @@ h1, h2, h3 { letter-spacing: -.015em; }
 .level-option[aria-pressed="true"] { background: #356a58; border-color: #356a58; color: #fff; box-shadow: 0 3px 0 #244e4129; }
 .lesson-card { background: #fffefb; border-color: #e0e4d9; border-radius: 20px; box-shadow: 0 3px 0 #e7eadf55; }
 .lesson-card:hover { border-color: #bfcfba; box-shadow: 0 10px 22px #3047310d; }
-.lesson-card h3 { font-family: var(--font-reading); font-weight: 500; font-size: 22px; letter-spacing: 0; }
+.lesson-card h3 { font-family: var(--font-ui); font-weight: 600; font-size: 21px; letter-spacing: -.015em; }
 .lesson-card .lesson-cover.illustrated { border-radius: 12px; }
 .lesson-card .card-footer { padding-top: 15px; }
 .practice-path { background: #eef2e6; border-color: #dfe6d4; padding: 28px; border-radius: 23px; }
@@ -154,3 +174,5 @@ h1, h2, h3 { letter-spacing: -.015em; }
   .signature-scene .word-sample { margin-inline: 5px; padding: 13px 11px; }
   .signature-scene .word-sample button { min-width: 98px; }
 }
+
+.practice-card .btn,.lesson-card .btn,.grammar-course-card .btn {font-size:14px;}

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-26",
+  "scope": "Reading progress tabs, account-owned grammar read markers, typography and illustrated TOEIC library",
+  "automated": {
+    "django": {
+      "total": 147,
+      "passed": 146,
+      "skipped": 1,
+      "skip_reason": "Pre-existing optional dataset folder lexiread_data_v1 is absent from the working checkout."
+    },
+    "python_unittest": {
+      "total": 113,
+      "passed": 112,
+      "skipped": 1,
+      "skip_reason": "Optional reportlab fixture dependency is unavailable."
+    },
+    "node_suites": {
+      "total": 12,
+      "passed": 12
+    },
+    "http_smoke": "passed: login/account pages, catalogue, private answers, dictionary, plan, grammar, vocabulary, static assets",
+    "migration": "0013 applied successfully to the existing QA database; makemigrations --check is clean"
+  },
+  "browser": {
+    "desktop_width": 1265,
+    "mobile_widths": [
+      390,
+      320
+    ],
+    "checks": [
+      "TOEIC all/new/done filters reflect actual attempts (32 total, 30 new, 2 done in QA account)",
+      "Reading unread filter returns 49 unread readings; read filter handles an empty result",
+      "Grammar mark-read survives reload and appears in read-only catalogue; unmark restores original state",
+      "Grammar read markers are separate from scored attempts; API tests cover account isolation, invalid input, CSRF and authentication",
+      "Self-hosted Be Vietnam Pro is the computed UI font",
+      "No horizontal document overflow at 320px or 390px; no broken TOEIC images",
+      "No captured browser errors or warnings on the final TOEIC page"
+    ],
+    "screenshots": [
+      "toeic-redesign-desktop.jpg",
+      "toeic-progress-desktop.jpg",
+      "grammar-read-filter-desktop.jpg",
+      "toeic-hero-mobile.jpg",
+      "toeic-cards-mobile.jpg"
+    ]
+  },
+  "deployment": {
+    "migration_required": "python manage.py migrate",
+    "new_runtime_ai_calls": false,
+    "new_runtime_external_font_calls": false
+  },
+  "git_note": "Unrelated pre-existing deletions under lexiread_data_v1 are excluded from this change."
+}
