@@ -34,7 +34,7 @@ British Council pages were read through the web reader. Some Cambridge pages and
 | b1-past-continuous | B1 | Quá khứ tiếp diễn: chuyện đang xảy ra thì… | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-continuous-past-simple) |
 | b1-conditionals | B1 | Câu điều kiện: việc có thể xảy ra và điều giả định | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second) |
 | b1-relative-clauses | B1 | Mệnh đề quan hệ: nói rõ người hoặc vật nào | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/relative-clauses-defining-relative-clauses) |
-| b1-verb-patterns | B1 | Theo sau động từ: to V hay V-ing? | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/verbs-followed-ing-or-infinitive) |
+| b1-verb-patterns | B1 | Động từ đi với to V hay V-ing? | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/verbs-followed-ing-or-infinitive) |
 | b2-past-perfect | B2 | Quá khứ hoàn thành: việc nào xảy ra trước? | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/past-perfect) |
 | b2-passive | B2 | Câu bị động: tập trung vào việc được làm | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives) |
 | b2-reported-speech | B2 | Tường thuật: kể lại lời người khác | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements) |

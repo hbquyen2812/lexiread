@@ -346,7 +346,7 @@ async function toeicSetPage(slug,epoch){
   if(state.toeicSession?.slug!==slug||state.toeicSession?.revision!==practice.revision)state.toeicSession={slug,revision:practice.revision,answers:{},token:uid(),startedAt:Date.now(),result:null};
   renderToeicSet();
 }
-const analyticsPageLabels={learn:'Lộ trình & nền tảng',grammar:'Ngữ pháp',collection:'Bộ từ theo trình độ',home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
+const analyticsPageLabels={learn:'Lộ trình học',grammar:'Ngữ pháp',collection:'Bộ từ theo trình độ',home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
   'toeic-set':'Bộ TOEIC',readings:'Bài cá nhân',reading:'Đang đọc',vocabulary:'Kho từ','word-import':'Tạo bộ từ',study:'Ôn từ',settings:'Cài đặt',analytics:'Thống kê',login:'Đăng nhập'};
 async function analyticsPage(epoch){
   const data=await api('/analytics/?days='+state.analyticsDays);if(epoch!==state.routeEpoch)return;
@@ -383,7 +383,7 @@ async function route(){
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
   const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
-  $('#page-label').textContent=({learn:'Lộ trình & nền tảng',grammar:'Ngữ pháp',collection:'Từ theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
+  $('#page-label').textContent=({learn:'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
     if(page==='learn'){await window.LexiAcademy.page($('#main'),id||'plan',epoch);}
