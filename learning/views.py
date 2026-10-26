@@ -28,7 +28,7 @@ from .services.analysis import ANALYSIS_SCHEMA,ENTRY_SCHEMA,arr,obj,prompt_for_r
 from .services.exercises import build_question,MODES
 from .services import ai
 from .forms import EmailAuthenticationForm
-from .services.presentation import cover_metadata
+from .services.presentation import cover_metadata, topic_labels, topic_label, topic_matches
 from .services.motivation import record_learning, study_summary
 
 def api(*methods):
@@ -89,7 +89,7 @@ def index(request):
     from .services.community import community_summary
     record_visit(request,'home')
     resources=public_resources()
-    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources,'strategy_guides':strategy_guides(),'learning_channels':learning_channels()})
+    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources,'strategy_guides':strategy_guides(),'learning_channels':learning_channels(),'topic_labels':topic_labels()})
     from .services.toeic_repository import toeic_sets
     lessons=[]
     for lesson in CuratedLesson.objects.filter(published=True).order_by('order','title'):
@@ -543,10 +543,13 @@ def catalog(request):
     track=request.GET.get('track','')
     if track not in {'','general','ielts'}:raise InputError('Loại bài đọc không hợp lệ.')
     if track:qs=qs.filter(track=track)
+    topics=list(qs.order_by().values_list('topic',flat=True).distinct())
     q=clean_text(request.GET.get('q',''),200)
-    if q:qs=qs.filter(Q(title__icontains=q)|Q(topic__icontains=q))
+    if q:qs=qs.filter(Q(title__icontains=q)|Q(topic__icontains=q)|Q(topic__in=[t for t in topics if topic_matches(t,q)]))
     if request.GET.get('level'):qs=qs.filter(level=request.GET['level'][:6])
-    if request.GET.get('topic'):qs=qs.filter(topic=request.GET['topic'][:120])
+    if request.GET.get('topic'):
+        selected_topic=request.GET['topic'][:120]
+        qs=qs.filter(topic__in=[t for t in topics if t==selected_topic or topic_label(t)==selected_topic])
     kind=request.GET.get('kind','')
     if kind:
         if kind not in {'main_idea','detail','tfng','ynng','vocabulary','inference','matching_heading','matching_information','gap_fill','short_answer'}:
@@ -588,7 +591,7 @@ def catalog(request):
         item['status']=status
         items.append(item)
     return JsonResponse({'items':items,'total':total,'page':page,'limit':limit,'has_more':page*limit<total,
-                         'topics':sorted(set(CuratedLesson.objects.filter(published=True,**({'track':track} if track else {})).values_list('topic',flat=True)))})
+                         'topics':sorted({topic_label(t) for t in topics},key=str.casefold)})
 
 @api('POST')
 def open_lesson(request,slug):

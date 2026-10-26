@@ -4,6 +4,8 @@ Latest addition: [public activity statistics and learning methods](docs/COMMUNIT
 
 Previous local review: [foundation learning, personal decks and verified QA](docs/FOUNDATION_LEARNING_REVIEW.md). The interface includes a custom lightweight illustration, prominent personal vocabulary import, an account-based learning path, 33 official IELTS/TOEIC resource links and a catalogue of 40 learning-source links. External materials remain on their publishers' websites; these are not counts of full tests copied into the app.
 
+Reading topic labels stay in English across interface languages, using `data/topic_labels.json`. Search and filters use the displayed English names while retaining stored editorial keys.
+
 A reading-first English/Vietnamese learning app: original lesson and TOEIC-style practice libraries plus private imported readings, with saved-reading search/status/favorites, multi-reading vocabulary occurrences, grounded Q&A and spaced personal review.
 
 Start with [README_VI.md](README_VI.md), the [v2 usage/upgrade guide](docs/READING_STUDIO_V2.md), and the [VPS/HTTPS deployment guide](docs/DEPLOYMENT.md).

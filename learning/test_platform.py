@@ -75,6 +75,18 @@ class ReadingPlatformTests(TestCase):
         item=self.client.get('/api/catalog/?favorite=yes').json()['items'][0]
         self.assertEqual(item['reading_id'],rid);self.assertTrue(item['favorite'])
         self.assertEqual(self.client.get('/api/catalog/?favorite=no').json()['items'],[])
+    def test_english_topics_search_filter_aliases_and_public_labels(self):
+        self.standard.topic='Dữ liệu & quyết định';self.standard.save(update_fields=['topic'])
+        other=copy.deepcopy(self.lesson);other.update(slug='topic-alias',topic='data_decisions')
+        CuratedLesson.objects.create(**{k:other[k] for k in ('slug','title','level','topic','revision','order','published')},content=other)
+        catalog=self.client.get('/api/catalog/').json()
+        self.assertEqual(catalog['topics'],['Data & Decisions'])
+        self.assertTrue(all(item['topic_label']=='Data & Decisions' for item in catalog['items']))
+        self.assertEqual(self.client.get('/api/catalog/',{'q':'data & decisions'}).json()['total'],2)
+        self.assertEqual(self.client.get('/api/catalog/',{'topic':'Data & Decisions'}).json()['total'],2)
+        self.assertEqual(self.client.get('/api/catalog/',{'topic':'data_decisions'}).json()['total'],1)
+        self.client.logout()
+        self.assertContains(self.client.get('/'),'<span class="cover-topic" lang="en" data-no-i18n>Data &amp; Decisions</span>',count=2,html=True)
     def test_open_idempotent_and_owner_specific(self):
         first=self.open();again=self.open();self.assertEqual(first['id'],again['id'])
         self.client.force_login(self.bob);second=self.open();self.assertNotEqual(second['id'],first['id'])

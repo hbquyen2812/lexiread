@@ -1,6 +1,26 @@
 """Local decorative artwork only; never fetch arbitrary image URLs from lesson data."""
 import re
 import unicodedata
+import json
+from functools import lru_cache
+from pathlib import Path
+
+
+@lru_cache(maxsize=1)
+def topic_labels():
+    return json.loads((Path(__file__).resolve().parents[2] / 'data/topic_labels.json').read_text(encoding='utf-8'))
+
+
+def topic_label(topic):
+    value = str(topic or 'Reading')
+    return topic_labels().get(value, value.replace('_', ' '))
+
+
+def topic_matches(topic, query):
+    # Match the label learners see while retaining the editorial key in stored data.
+    def normal(value):
+        return re.sub(r'[^a-z0-9]+', ' ', value.casefold()).strip()
+    return normal(query) in normal(topic_label(topic)) if normal(query) else False
 
 ART_TOPICS = {
     'nature': ('nature','environment','conservation','seed','plant','garden','water','animal','climate','weather','sustainable','outdoor','moi truong','thien nhien'),
@@ -28,4 +48,4 @@ def cover_key(topic='', title=''):
 
 def cover_metadata(topic='',title=''):
     key=cover_key(topic,title)
-    return {'cover_key':key,'cover_path':f'illustrations/{key}.svg'}
+    return {'cover_key':key,'cover_path':f'illustrations/{key}.svg','topic_label':topic_label(topic)}
