@@ -25,21 +25,22 @@
   function stopAudio(){document.querySelectorAll('#modal audio').forEach(a=>a.pause());}
   async function open(selection){
     const word=normalize(selection.word);if(!canLookup(word)){toast('Chọn một từ hoặc cụm từ tiếng Anh ngắn để tra.',true);return;}
-    stopAudio();const id=++run;current={selection:{...selection,word},data:null};
-    openModal('Nghĩa & phát âm',`<div id="dictionary-result"><p role="status">Đang tra <strong lang="en">${esc(word)}</strong>…</p></div>`, '<button class="btn" data-action="close-modal">Đóng</button><button class="btn secondary" data-dictionary-save="new">+ Lưu từ</button>');
+    stopAudio();const id=++run;current={selection:{...selection,word},data:null,pending:true};
+    openModal('Nghĩa & phát âm',`<div id="dictionary-result"><p role="status">Đang tra <strong lang="en">${esc(word)}</strong>…</p></div>`, '<button class="btn" data-action="close-modal">Đóng</button><button class="btn secondary" data-dictionary-save="new" disabled>+ Lưu từ</button>');
     const root=document.getElementById('dictionary-result');
+    const saveButton=document.querySelector('#modal [data-dictionary-save="new"]');
     try{
       let data;
       if(window.LEXIREAD_PREVIEW){const found=(state.reading?.analysis?.vocabulary||[]).filter(w=>normalize(w.word)===word).map(w=>({...w,label:'Trong bài đang đọc'}));data={word,local_entries:found,dictionary:{status:'offline',entries:[]},links:[{title:'Cambridge Dictionary',url:'https://dictionary.cambridge.org/search/english/direct/?q='+encodeURIComponent(word)}]};}
       else data=await api('/dictionary/?word='+encodeURIComponent(word)+(selection.reading_id?'&reading_id='+encodeURIComponent(selection.reading_id):''));
       if(id!==run||!root.isConnected||!document.getElementById('modal').open)return;
-      current.data=data;root.innerHTML=render(data);
+      current.data=data;current.pending=false;root.innerHTML=render(data);saveButton.disabled=false;
       root.querySelectorAll('audio').forEach(a=>{a.addEventListener('play',()=>root.querySelectorAll('audio').forEach(other=>{if(other!==a)other.pause();}));a.addEventListener('error',()=>{const note=document.createElement('p');note.className='fineprint';note.textContent='Chưa phát được bản thu. Bạn có thể mở bản thu gốc trong phần nguồn dữ liệu.';a.replaceWith(note);});});
-    }catch(error){if(id===run&&root.isConnected)root.textContent=error.message;}
+    }catch(error){if(id===run&&root.isConnected&&document.getElementById('modal').open){root.textContent=error.message;current.pending=false;saveButton.disabled=false;saveButton.textContent='+ Nhập nghĩa thủ công';}}
   }
   document.addEventListener('click',e=>{
     const lookup=e.target.closest('[data-dictionary-word]');if(lookup){open({word:lookup.dataset.dictionaryWord});return;}
-    const save=e.target.closest('[data-dictionary-save]');if(!save||!current)return;
+    const save=e.target.closest('[data-dictionary-save]');if(!save||!current||current.pending||!document.getElementById('modal').open)return;
     const entry=current.data?.local_entries?.[save.dataset.dictionarySave==='new'?0:Number(save.dataset.dictionarySave)]||{};
     const pronunciation=current.data?.dictionary?.entries?.flatMap(x=>x.phonetics||[]).find(p=>p.ipa);
     const note=[entry.note,pronunciation?'IPA: '+pronunciation.ipa:''].filter(Boolean).join('\n');

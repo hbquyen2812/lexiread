@@ -213,13 +213,14 @@ async function saveWord(btn){
 function clearSelection(){state.selection=null;$('#selection-bar').hidden=true;}
 function captureSelection(){
   const sel=window.getSelection();
-  if(!sel||sel.isCollapsed||$('#modal').open||!state.reading)return;
+  if($('#modal').open)return;
+  if(!sel||sel.isCollapsed||!state.reading){clearSelection();return;}
   const node=sel.anchorNode?.nodeType===1?sel.anchorNode:sel.anchorNode?.parentElement;
   const end=sel.focusNode?.nodeType===1?sel.focusNode:sel.focusNode?.parentElement;
   const p=node?.closest('.reader-en'),p2=end?.closest('.reader-en');
-  if(!p||p!==p2)return;
+  if(!p||p!==p2){clearSelection();return;}
   const word=sel.toString().trim();
-  if(!word||word.length>4000)return;
+  if(!word||word.length>4000){clearSelection();return;}
   $('[data-action=selected-dictionary]').hidden=!window.LexiDictionary.canLookup(word);
   $('[data-action=selected-word]').disabled=word.length>160||word.split(/\s+/).length>16;
   const para=state.reading.paragraphs[Number(p.dataset.index)];

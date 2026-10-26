@@ -17,7 +17,8 @@ const data={word:'<img src=x>',local_entries:[{word:'test',meaning_vi:'<script>b
 const html=ui.render(data);
 assert.doesNotMatch(html,/<img|<script|href="javascript:|src="javascript:/);
 assert.match(html,/&lt;img/);assert.match(html,/Giải nghĩa Anh–Anh/);assert.match(html,/Chưa có bản thu/);
-for(const status of ['not_found','unavailable','rate_limited','offline'])assert.match(ui.render({word:'test',dictionary:{status,entries:[]}}),/role="status"/);
+for(const [status,message] of Object.entries({not_ready:'Kho từ điển chưa có dữ liệu',not_found:'Chưa tìm thấy mục từ phù hợp',unavailable:'Nguồn từ điển đang không phản hồi',rate_limited:'Bạn vừa tra nhiều từ liên tiếp',offline:'Bản HTML chỉ tra các từ đã có trong bài'}))assert.ok(ui.render({word:'test',dictionary:{status,entries:[]}}).includes(message));
 data.dictionary.entries[0].phonetics=[{ipa:'/test/',accent:'US',audio:'https://api.dictionaryapi.dev/media/pronunciations/en/test-us.mp3',source:'https://commons.wikimedia.org/wiki/Example',license:{name:'BY-SA',url:'https://creativecommons.org/licenses/by-sa/4.0'}}];
 const audio=ui.render(data);assert.match(audio,/<audio controls preload="none"/);assert.doesNotMatch(audio,/autoplay/);assert.match(audio,/Bản thu gốc/);
+assert.match(audio,/<a href="https:\/\/commons.wikimedia.org\/wiki\/Example" target="_blank" rel="noopener noreferrer">Bản thu gốc/);
 console.log('PASS dictionary query limits, URL and HTML safety, missing-source states, pronunciation and attribution');
