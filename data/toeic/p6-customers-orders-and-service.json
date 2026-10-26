@@ -1,0 +1,459 @@
+{
+  "slug": "p6-customers-orders-and-service",
+  "title": "Customer Service · Orders, Repairs & Returns",
+  "mode": "parts-5-6",
+  "mode_label": "Hoàn thành văn bản",
+  "parts": [
+    6
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 20,
+  "description": "Đọc thư về đơn hàng, sửa chữa và giao hàng; chọn từ hoặc câu phù hợp để hoàn thiện từng tin nhắn.",
+  "instructions": "Đọc trọn từng văn bản rồi chọn đáp án cho các chỗ trống được đánh số, gồm cả chỗ cần điền một câu hoàn chỉnh.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "replacement-letter",
+      "kind": "Email",
+      "heading": "Replacement for order NC-482",
+      "body": "Dear Ms. Rivera,\n\nThank you for sending photographs of the cracked storage container in order NC-482. We have reviewed them and ___(1)___ a replacement at no cost. It will leave our warehouse tomorrow and should arrive within three working days.\n\nYou do not need to return the damaged container. ___(2)___ Please check the recycling rules in your area before disposing of it.\n\nThe replacement will be sent to the address shown on your original order. ___(3)___ you have moved since placing that order, please reply by 4 p.m. today with the correct address. We cannot change the destination after the parcel has been collected by the courier.\n\nWe apologize for the ___(4)___ and appreciate the opportunity to resolve the problem.\n\nNadia Wells\nCustomer Care"
+    },
+    {
+      "id": "repair-update",
+      "kind": "Email",
+      "heading": "Repair update: espresso machine",
+      "body": "Dear Mr. Park,\n\nOur technician has examined your espresso machine. The pump needs to be replaced, and the required part is currently out of stock. We expect the part to arrive on Thursday. Once it arrives, the repair can normally ___(5)___ within one working day.\n\nThe estimate you approved last week includes both the replacement pump and labor. ___(6)___ You will therefore not need to authorize a second payment for the same repair.\n\nWe can lend you a basic coffee maker while you wait. This service is free, ___(7)___ a refundable deposit of $20 is required. Please call before visiting the workshop so that we can reserve a loan unit for you. We will contact you ___(8)___ when your espresso machine is ready for collection."
+    },
+    {
+      "id": "pickup-notice",
+      "kind": "Store notice",
+      "heading": "Collecting online orders at Westgate Books",
+      "body": "Online orders can be collected from the customer-service counter between 10 a.m. and 6 p.m. A confirmation email will be sent when all items in an order are ready. Please wait for this message before ___(9)___ the store; an order confirmation sent immediately after payment does not mean that the items are ready for collection.\n\nBring the collection email and a photo ID. If someone else will collect the order, add that person's name through your account first. ___(10)___ Their ID must match the authorized name.\n\nOrders are held for seven calendar days. ___(11)___ this period, uncollected items are returned to stock and the payment is refunded. If you need extra time, contact us before the collection deadline to request an ___(12)___."
+    },
+    {
+      "id": "delivery-update",
+      "kind": "Email",
+      "heading": "Your desk delivery: revised appointment",
+      "body": "Dear Customer,\n\nThe delivery appointment for your standing desk has been moved from Tuesday to Wednesday because the local road will be closed for utility work on Tuesday. The desk itself is in stock and has already been ___(13)___ for shipment.\n\nOur driver will call thirty minutes before arriving. The delivery team can place the package inside the entrance, but assembly is not included in the delivery service. ___(14)___ The illustrated guide and all required screws are inside the box.\n\nPlease check the outer packaging before signing the delivery receipt. If there is visible damage, ask the driver to record it, ___(15)___ this will help us handle any later claim. If Wednesday is unsuitable, contact us by noon tomorrow. We will arrange another date that is mutually ___(16)___."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 6,
+      "prompt": "Blank 1: We have reviewed the photographs and ___ a replacement at no cost.",
+      "options": [
+        "arranged",
+        "arranging",
+        "arranges",
+        "to arrange"
+      ],
+      "answer": 0,
+      "explanation_vi": "Have được dùng chung cho reviewed và arranged: have reviewed ... and arranged. Các dạng còn lại không song song với phân từ reviewed.",
+      "evidence": "We have reviewed them and ___(1)___ a replacement at no cost.",
+      "document_ids": [
+        "replacement-letter"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 6,
+      "prompt": "Blank 2: Choose the sentence that connects the no-return decision with recycling advice.",
+      "options": [
+        "We cannot review photographs of damaged products.",
+        "You may dispose of it locally rather than send it back to us.",
+        "Please return it to our warehouse before we can ship a replacement.",
+        "The replacement can be ordered only by visiting our store."
+      ],
+      "answer": 1,
+      "explanation_vi": "Câu đúng giải thích rằng khách có thể xử lý món hỏng tại địa phương, rồi nối sang lời nhắc kiểm tra quy định tái chế. Yêu cầu gửi trả lại mâu thuẫn với câu trước; hai câu còn lại không phù hợp với việc đã nhận xử lý đơn.",
+      "evidence": "You do not need to return the damaged container.",
+      "document_ids": [
+        "replacement-letter"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 6,
+      "prompt": "Blank 3: ___ you have moved since placing that order, please reply with the correct address.",
+      "options": [
+        "Despite",
+        "During",
+        "If",
+        "Unless"
+      ],
+      "answer": 2,
+      "explanation_vi": "If đưa tình huống cần cập nhật địa chỉ: nếu đã chuyển nhà. Unless đảo ngược điều kiện; despite/during không đi trực tiếp với mệnh đề đầy đủ.",
+      "evidence": "___(3)___ you have moved since placing that order, please reply by 4 p.m. today with the correct address.",
+      "document_ids": [
+        "replacement-letter"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 6,
+      "prompt": "Blank 4: We apologize for the ___.",
+      "options": [
+        "inconvenient",
+        "inconveniently",
+        "inconvenienced",
+        "inconvenience"
+      ],
+      "answer": 3,
+      "explanation_vi": "Sau the cần danh từ chỉ sự bất tiện: inconvenience. Inconvenient là tính từ, inconveniently là trạng từ, inconvenienced là dạng quá khứ/phân từ của động từ, không phù hợp vị trí danh từ trong câu này.",
+      "evidence": "We apologize for the ___(4)___ and appreciate the opportunity to resolve the problem.",
+      "document_ids": [
+        "replacement-letter"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 6,
+      "prompt": "Blank 5: The repair can normally ___ within one working day.",
+      "options": [
+        "be completed",
+        "complete",
+        "completing",
+        "has completed"
+      ],
+      "answer": 0,
+      "explanation_vi": "Repair là công việc được hoàn thành nên can be completed. Sau can phải là động từ nguyên mẫu; has completed vừa sai mẫu vừa mang thể chủ động.",
+      "evidence": "Once it arrives, the repair can normally ___(5)___ within one working day.",
+      "document_ids": [
+        "repair-update"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 6,
+      "prompt": "Blank 6: Choose the sentence that explains why no second payment is needed.",
+      "options": [
+        "Our workshop can no longer obtain the required pump.",
+        "No additional charge will be made for fitting the new pump.",
+        "The original estimate excluded all parts and labor.",
+        "You will be charged twice because the part is arriving late."
+      ],
+      "answer": 1,
+      "explanation_vi": "Báo giá đã gồm cả bơm mới và công lắp, nên câu “không thu thêm phí lắp bơm” giải thích vì sao không cần thanh toán lần hai. Các lựa chọn khác đều trái với thông tin này.",
+      "evidence": "The estimate you approved last week includes both the replacement pump and labor.",
+      "document_ids": [
+        "repair-update"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 6,
+      "prompt": "Blank 7: This service is free, ___ a refundable deposit of $20 is required.",
+      "options": [
+        "so",
+        "or",
+        "but",
+        "because"
+      ],
+      "answer": 2,
+      "explanation_vi": "Dịch vụ cho mượn miễn phí nhưng vẫn cần đặt cọc, nên chọn but. Khoản cọc được hoàn lại nên không phải phí dịch vụ. Because và so tạo quan hệ nguyên nhân không đúng; or biến yêu cầu thành một lựa chọn.",
+      "evidence": "This service is free, ___(7)___ a refundable deposit of $20 is required.",
+      "document_ids": [
+        "repair-update"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 6,
+      "prompt": "Blank 8: We will contact you ___ when your machine is ready.",
+      "options": [
+        "prompt",
+        "promptness",
+        "prompting",
+        "promptly"
+      ],
+      "answer": 3,
+      "explanation_vi": "Promptly là trạng từ bổ nghĩa cho contact, nghĩa là nhanh chóng. Prompt là tính từ; promptness là danh từ, prompting không phù hợp vị trí này.",
+      "evidence": "We will contact you ___(8)___ when your espresso machine is ready for collection.",
+      "document_ids": [
+        "repair-update"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 6,
+      "prompt": "Blank 9: Wait for the collection message before ___ the store.",
+      "options": [
+        "visiting",
+        "visit",
+        "visited",
+        "visits"
+      ],
+      "answer": 0,
+      "explanation_vi": "Chọn before visiting, nghĩa là “trước khi đến cửa hàng”. Sau before có thể dùng V-ing khi người thực hiện hai hành động là một. Visit hoặc visits cần thêm chủ ngữ; visited không phù hợp với hành động chủ động ở đây.",
+      "evidence": "Please wait for this message before ___(9)___ the store;",
+      "document_ids": [
+        "pickup-notice"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 6,
+      "prompt": "Blank 10: Choose the sentence that clarifies third-party collection.",
+      "options": [
+        "Someone collecting for you must purchase an additional book.",
+        "Only a person whose name has been added can collect the order on your behalf.",
+        "Any visitor may collect an order without showing identification.",
+        "Your payment receipt automatically names every member of your family."
+      ],
+      "answer": 1,
+      "explanation_vi": "Người nhận hộ phải được thêm tên trước, và giấy tờ của họ phải trùng tên đó. Câu đúng nối rõ hai yêu cầu này. Những câu khác bỏ qua bước xác minh danh tính hoặc thêm điều kiện không có trong thông báo.",
+      "evidence": "If someone else will collect the order, add that person's name through your account first.",
+      "document_ids": [
+        "pickup-notice"
+      ]
+    },
+    {
+      "id": "q11",
+      "part": 6,
+      "prompt": "Blank 11: ___ this period, uncollected items are returned to stock.",
+      "options": [
+        "Between",
+        "Until",
+        "After",
+        "Among"
+      ],
+      "answer": 2,
+      "explanation_vi": "Hàng chỉ được đưa lại lên kệ sau thời hạn giữ bảy ngày, nên chọn After. Until làm sai thứ tự xử lý, còn between cần hai mốc thời gian.",
+      "evidence": "Orders are held for seven calendar days.",
+      "document_ids": [
+        "pickup-notice"
+      ]
+    },
+    {
+      "id": "q12",
+      "part": 6,
+      "prompt": "Blank 12: Contact us before the deadline to request an ___.",
+      "options": [
+        "extend",
+        "extended",
+        "extensively",
+        "extension"
+      ],
+      "answer": 3,
+      "explanation_vi": "Request an extension là đề nghị gia hạn. Sau an cần danh từ bắt đầu bằng âm nguyên âm; các dạng động từ/trạng từ không phù hợp.",
+      "evidence": "If you need extra time, contact us before the collection deadline to request an ___(12)___.",
+      "document_ids": [
+        "pickup-notice"
+      ]
+    },
+    {
+      "id": "q13",
+      "part": 6,
+      "prompt": "Blank 13: The desk has already been ___ for shipment.",
+      "options": [
+        "packed",
+        "packing",
+        "pack",
+        "packs"
+      ],
+      "answer": 0,
+      "explanation_vi": "Has been packed là hiện tại hoàn thành bị động. Packing mang nghĩa chủ động đang đóng gói và pack/packs sai dạng sau been.",
+      "evidence": "The desk itself is in stock and has already been ___(13)___ for shipment.",
+      "document_ids": [
+        "delivery-update"
+      ]
+    },
+    {
+      "id": "q14",
+      "part": 6,
+      "prompt": "Blank 14: Choose the sentence that prepares the reader for the assembly guide.",
+      "options": [
+        "The assembly instructions can be purchased only after delivery.",
+        "You will need to assemble the desk yourself or arrange a separate assembly service.",
+        "The driver will build the desk before leaving your home.",
+        "No assembly is necessary because the desk arrives fully built."
+      ],
+      "answer": 1,
+      "explanation_vi": "Khách cần tự lắp bàn hoặc đặt dịch vụ riêng vì giao hàng không bao gồm lắp ráp. Câu sau cho biết hướng dẫn và vít đã có trong hộp. Những câu nói tài xế sẽ lắp, bàn được lắp sẵn hoặc phải mua hướng dẫn đều không đúng.",
+      "evidence": "The delivery team can place the package inside the entrance, but assembly is not included in the delivery service.",
+      "document_ids": [
+        "delivery-update"
+      ]
+    },
+    {
+      "id": "q15",
+      "part": 6,
+      "prompt": "Blank 15: Ask the driver to record damage, ___ this will help us handle a later claim.",
+      "options": [
+        "although",
+        "whereas",
+        "as",
+        "unless"
+      ],
+      "answer": 2,
+      "explanation_vi": "As ở đây nghĩa là bởi vì, giải thích lý do ghi nhận hư hỏng. Unless chỉ ngoại lệ; although/whereas chỉ tương phản không đúng mạch.",
+      "evidence": "If there is visible damage, ask the driver to record it, ___(15)___ this will help us handle any later claim.",
+      "document_ids": [
+        "delivery-update"
+      ]
+    },
+    {
+      "id": "q16",
+      "part": 6,
+      "prompt": "Blank 16: We will arrange another date that is mutually ___.",
+      "options": [
+        "convenience",
+        "conveniently",
+        "convene",
+        "convenient"
+      ],
+      "answer": 3,
+      "explanation_vi": "Sau is mutually cần tính từ convenient: thuận tiện cho cả hai bên. Convenience là danh từ; conveniently là trạng từ và convene nghĩa là triệu tập.",
+      "evidence": "We will arrange another date that is mutually ___(16)___.",
+      "document_ids": [
+        "delivery-update"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "replacement",
+      "pos": "noun",
+      "meaning_vi": "sản phẩm hoặc bộ phận thay thế",
+      "usage_pattern": "a replacement for + item; arrange a replacement",
+      "example": "We arranged a replacement for the cracked container.",
+      "example_vi": "Chúng tôi đã thu xếp sản phẩm thay thế cho hộp bị nứt.",
+      "synonyms": [
+        "substitute"
+      ],
+      "paraphrases": [
+        "an item supplied instead of a damaged one"
+      ],
+      "context": "We arranged a replacement for the cracked container.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Customer Service · Orders, Repairs & Returns",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "refundable deposit",
+      "pos": "noun phrase",
+      "meaning_vi": "tiền đặt cọc được hoàn lại",
+      "usage_pattern": "pay/require a refundable deposit",
+      "example": "The loan machine requires a refundable deposit.",
+      "example_vi": "Để mượn máy, bạn cần đặt cọc một khoản có thể được hoàn lại.",
+      "synonyms": [],
+      "paraphrases": [
+        "money held temporarily and returned under stated conditions"
+      ],
+      "context": "The loan machine requires a refundable deposit.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Customer Service · Orders, Repairs & Returns",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "in stock",
+      "pos": "phrase",
+      "meaning_vi": "có sẵn trong kho",
+      "usage_pattern": "be in stock; keep something in stock",
+      "example": "The desk is in stock and ready for shipment.",
+      "example_vi": "Bàn có sẵn trong kho và sẵn sàng giao.",
+      "synonyms": [
+        "available"
+      ],
+      "paraphrases": [
+        "available from current inventory"
+      ],
+      "context": "The desk is in stock and ready for shipment.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Customer Service · Orders, Repairs & Returns",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "on behalf of",
+      "pos": "phrase",
+      "meaning_vi": "thay mặt, đại diện cho",
+      "usage_pattern": "collect/sign on behalf of somebody",
+      "example": "Mina collected the books on behalf of her colleague.",
+      "example_vi": "Mina nhận sách thay đồng nghiệp.",
+      "synonyms": [
+        "for"
+      ],
+      "paraphrases": [
+        "acting for another person"
+      ],
+      "context": "Mina collected the books on behalf of her colleague.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Customer Service · Orders, Repairs & Returns",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "extension",
+      "pos": "noun",
+      "meaning_vi": "sự gia hạn, thời gian được kéo dài",
+      "usage_pattern": "request/grant an extension to a deadline",
+      "example": "The store granted a two-day extension to the collection deadline.",
+      "example_vi": "Cửa hàng gia hạn thời hạn nhận hàng thêm hai ngày.",
+      "synonyms": [
+        "extra time"
+      ],
+      "paraphrases": [
+        "additional time allowed to complete an action"
+      ],
+      "context": "The store granted a two-day extension to the collection deadline.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Customer Service · Orders, Repairs & Returns",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "claim",
+      "pos": "noun",
+      "meaning_vi": "yêu cầu bồi thường hoặc giải quyết quyền lợi",
+      "usage_pattern": "submit/handle a claim for damage",
+      "example": "Keep the packaging until your damage claim has been resolved.",
+      "example_vi": "Giữ bao bì cho đến khi yêu cầu bồi thường hư hỏng được giải quyết.",
+      "synonyms": [
+        "request for compensation"
+      ],
+      "paraphrases": [
+        "a request for payment or action under a policy"
+      ],
+      "context": "Keep the packaging until your damage claim has been resolved.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Customer Service · Orders, Repairs & Returns",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

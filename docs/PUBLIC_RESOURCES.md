@@ -1,6 +1,6 @@
 # Thư viện nguồn đề công khai — 26/10/2026
 
-LexiRead có **23 tài nguyên chính thức** được biên tập từ IELTS.org, British Council, IDP IELTS và ETS. Đây là số liên kết tài nguyên, **không phải 23 đề thi đầy đủ hay 23 bộ câu hỏi không trùng nhau**. Nguồn PDF và bài tương tác có thể dùng lại cùng câu hỏi.
+LexiRead có **33 tài nguyên chính thức** được biên tập từ IELTS.org, British Council, IDP IELTS, ETS và IIBC. Đây là số liên kết tài nguyên, **không phải 33 đề thi đầy đủ hay 33 bộ câu hỏi không trùng nhau**. Nguồn PDF và bài tương tác có thể dùng lại cùng câu hỏi.
 
 | Nhóm | Số tài nguyên | Cách dùng |
 |---|---:|---|
@@ -10,6 +10,9 @@ LexiRead có **23 tài nguyên chính thức** được biên tập từ IELTS.o
 | IELTS Reading, tuyển tập PDF | 2 | Academic 46 trang; General Training 33 trang, đáp án trong tài liệu |
 | ETS TOEIC / TOEIC Bridge | 2 | Mỗi PDF 34 trang, chứa cả Listening và Reading; Bridge là bài thi riêng |
 | IDP Reading | 1 | Trang tập hợp bài luyện Reading |
+| British Council worksheets hiện hành | 7 | PDF tháng 06/2026, có hướng dẫn và bài thực hành; không phải đề đầy đủ |
+| ETS sổ tay thí sinh | 2 | TOEIC L&R 42 trang, TOEIC Bridge 40 trang; tài liệu hướng dẫn |
+| IIBC tuyển tập tương tác | 1 | Part 5–7; có thể trùng ví dụ ETS, không tách thành sáu đề mới |
 
 Nội dung bài đọc tự biên soạn của LexiRead và các liên kết này là hai nguồn riêng. Tài nguyên ngoài mở trên website nhà xuất bản; không lưu điểm hay tiến độ vào LexiRead và không hoạt động ngoại tuyến. Không dùng mức điểm của bài mẫu để hứa hẹn band/điểm thật.
 
@@ -32,6 +35,8 @@ Nguồn gốc chính:
 - [British Council General Training Reading](https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/general-training/reading)
 - [ETS TOEIC preparation](https://www.ets.org/toeic/test-takers/prepare.html)
 - [IDP Reading preparation](https://ielts.idp.com/prepare/all-test-types/reading)
+- [British Council Reading lesson plans](https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading)
+- [IIBC TOEIC sample collection](https://www.iibc-global.org/toeic/test/lr/about/format.html)
 
 Các bài mẫu được cho xem/tải công khai, nhưng chưa xác nhận quyền tái phân phối trên website khác. Tập Academic còn chứa trích đoạn có bản quyền của bên thứ ba. Vì vậy đợt cập nhật này **thu thập metadata và liên kết, không nhập nguyên văn passage/câu hỏi/đáp án vào database bài học**. PDF tiếp tục nằm trên máy chủ nhà xuất bản. Không gỡ paywall, vượt đăng nhập, né robots hoặc dùng bản scan sách thương mại. Muốn nhập nội dung đầy đủ cần tài liệu cho phép tái phân phối hoặc giấy phép phù hợp, kèm attribution và kiểm tra biên tập.
 
@@ -47,7 +52,7 @@ Từ thư mục dự án, không cần `.env` hay quyền truy cập database:
 .\.venv\Scripts\python.exe -m unittest tests.test_public_resources -v
 ```
 
-Có thể giới hạn một nguồn, ví dụ `--source ielts-academic`, hoặc lưu báo cáo riêng bằng `--output <path>`. Mặc định crawler chỉ đọc sáu trang cấu hình, đợi tối thiểu 1,5 giây giữa request, timeout 20 giây, tối đa 2 MB/trang và 100 liên kết/trang. HTTPS, hostname và mọi redirect phải nằm trong allowlist. Trước khi đọc mỗi nguồn, crawler kiểm tra `robots.txt`; thiếu file (404) được tiếp tục, lỗi/403/từ chối thì bỏ qua. Không thử né lỗi.
+Có thể giới hạn một nguồn, ví dụ `--source ielts-academic`, hoặc lưu báo cáo riêng bằng `--output <path>`. Mặc định crawler chỉ đọc tám trang cấu hình, đợi tối thiểu 1,5 giây giữa request, timeout 20 giây, tối đa 2 MB/trang và 100 liên kết/trang. HTTPS, hostname và mọi redirect phải nằm trong allowlist. Trước khi đọc mỗi nguồn, crawler kiểm tra `robots.txt`; thiếu file (404) được tiếp tục, lỗi/403/từ chối thì bỏ qua. Không thử né lỗi.
 
 Crawler xuất báo cáo để duyệt, **không tự thay danh mục đang phục vụ**. Khi bổ sung: xác minh nguồn chính thức → kiểm tra quyền sử dụng → kiểm tra URL/dạng bài/đáp án → thêm metadata vào `catalog.json` → chạy validator/tests → review diff → triển khai code. Không cần migration. Sau khi thay catalog, khởi động lại worker để xóa cache đọc file. Cập nhật ngày `last_checked` chỉ khi thực sự kiểm tra, không thay ngày hàng loạt để che liên kết cũ.
 
@@ -57,4 +62,14 @@ Lần kiểm tra URL: **40 URL khác nhau**, gồm tài liệu và đáp án; **
 
 ## Kiểm thử
 
-9 unit tests xác nhận số tài nguyên/lọc, dữ liệu trả về không sửa cache, không cho URL ngoài allowlist/javascript/localhost/port lạ, phát hiện trùng/thiếu provenance/nội dung đề bị chép, parser loại prose và trùng, chặn redirect ra ngoài, tuân thủ robots và nhận diện trang HTML giả PDF. Các test không truy cập Internet.
+11 unit tests xác nhận số tài nguyên/lọc, dữ liệu trả về không sửa cache, không cho URL ngoài allowlist/javascript/localhost/port lạ, phát hiện trùng/thiếu provenance/nội dung đề bị chép, parser loại prose và trùng, chặn redirect ra ngoài, tuân thủ robots và nhận diện trang HTML giả PDF. Các test không truy cập Internet.
+
+## Đợt mở rộng chiến thuật và tài nguyên
+
+Đã tăng 23 → 33 tài nguyên (28 IELTS, 5 TOEIC); 28 có liên kết đáp án. Bảy worksheet mới lấy từ liên kết hiện tại trong trang lesson plans. Các URL PDF cũ từ kết quả tìm kiếm chuyển hướng về trang chung đã bị loại. Nguồn IIBC được xác minh là đơn vị sử dụng TOEIC tại Nhật Bản theo giấy phép ETS. Parser chỉ khám phá các trang Reading Part 5–7, không lấy Listening hoặc HTML khác.
+
+Báo cáo `learning_expansion_crawl.json`: IIBC trả HTTP 200 và phát hiện 6 liên kết mẫu để biên tập; British Council được bỏ qua vì robots không truy cập được với client crawler. Danh mục chỉ thêm một tuyển tập IIBC, không tự thêm cả sáu liên kết.
+
+Báo cáo `learning_expansion_health.json`: **50 URL khác nhau; 41 HTTP 200 với loại nội dung phù hợp; 9 PDF British Council bỏ qua do robots**. Bảy PDF mới được mở và xác nhận độc lập qua công cụ đọc web, cùng hai PDF cũ đã kiểm tra ở đợt đầu. Mã thoát health vẫn là 1; không ghi một lần bỏ qua là PASS. Nội dung tương tác bên ngoài chưa được kiểm thử hoàn chỉnh.
+
+[18 hướng dẫn và nghiên cứu trải nghiệm học](LEARNING_EXPERIENCE_RESEARCH.md) là nội dung LexiRead tự biên soạn. Bộ mới có 55 bước, 36 lỗi cần tránh và 18 ví dụ nguyên bản; không phải bản sao các đề liên kết.

@@ -84,9 +84,10 @@ class EmailLoginView(LoginView):
 def index(request):
     from .services.traffic import record_visit
     from .services.public_resources import public_resources
+    from .services.strategy_guides import strategy_guides
     record_visit(request,'home')
     resources=public_resources()
-    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources})
+    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources,'strategy_guides':strategy_guides()})
     from .services.toeic_repository import toeic_sets
     lessons=[]
     for lesson in CuratedLesson.objects.filter(published=True).order_by('order','title'):
@@ -110,6 +111,10 @@ def health(request):
         with connection.cursor() as c:c.execute('SELECT 1')
         return JsonResponse({'status':'ok'})
     except Exception:return JsonResponse({'status':'database-unavailable'},status=503)
+
+def guides(request):
+    from .services.strategy_guides import strategy_guides
+    return render(request,'guides.html',{'strategy_guides':strategy_guides()})
 
 def filtered_vocab(request):
     qs=Vocabulary.objects.filter(owner=request.user)
@@ -265,6 +270,40 @@ def vocabulary(request):
             if reading and not v['source_label']:v['source_label']=reading.title
             word,new=save_entry(request.user,v,reading);made.append(serial_vocab(word));created+=int(new)
     return JsonResponse({'items':made,'created':created,'skipped':len(items)-created},status=201)
+
+@api('GET','POST')
+def personal_deck(request):
+    from .services.personal_decks import validate_deck,pack,MAX_ITEMS,MAX_BYTES
+    if request.method=='GET':
+        name=clean_text(request.GET.get('name',''),100,True)
+        words=[serial_vocab(v) for v in Vocabulary.objects.filter(owner=request.user) if name in v.tags]
+        if not words:raise InputError('Chưa có từ nào trong bộ này.')
+        if len(words)>MAX_ITEMS:raise InputError('Bộ này có hơn 500 từ. Bạn có thể xuất toàn bộ kho ở phần Sao lưu.')
+        result=pack(name,words)
+        if len(json.dumps(result,ensure_ascii=False,indent=2).encode('utf-8'))>MAX_BYTES-1024:
+            raise InputError('Bộ từ quá lớn để nhập lại trong một file. Bạn chia nhỏ bộ hoặc dùng sao lưu toàn bộ kho nhé.')
+        return JsonResponse(result)
+    if len(request.body)>MAX_BYTES:raise InputError('File quá lớn. Mỗi lần nhập tối đa 2 MB.')
+    data=body(request)
+    if type(data.get('preview')) is not bool:raise InputError('Hãy xem trước bộ từ rồi chọn lưu vào kho.')
+    name,items,duplicates=validate_deck(data.get('deck'))
+    fingerprints=[fingerprint(v['word'],v['meaning_vi']) for v in items]
+    if data['preview']:
+        existing=set(Vocabulary.objects.filter(owner=request.user,fingerprint__in=fingerprints).values_list('fingerprint',flat=True))
+        return JsonResponse({'name':name,'items':[{**v,'exists':fp in existing} for v,fp in zip(items,fingerprints)],
+            'new':sum(fp not in existing for fp in fingerprints),'existing':sum(fp in existing for fp in fingerprints),
+            'duplicates':duplicates})
+    with transaction.atomic():
+        get_user_model().objects.select_for_update().get(pk=request.user.pk)
+        existing=Vocabulary.objects.filter(owner=request.user,fingerprint__in=fingerprints)
+        if any(name not in v.tags and len(v.tags)>=20 for v in existing):
+            raise InputError('Một từ trùng đã có 20 nhãn. Bớt nhãn của từ đó hoặc bỏ chọn từ trước khi nhập.')
+        created=0
+        for fields in items:
+            _,new=save_entry(request.user,fields)
+            created+=int(new)
+    return JsonResponse({'name':name,'created':created,'existing':len(items)-created,'duplicates':duplicates,'total':len(items)},status=201)
+
 
 @api('GET')
 def vocabulary_sources(request):
@@ -495,6 +534,12 @@ def catalog(request):
     if q:qs=qs.filter(Q(title__icontains=q)|Q(topic__icontains=q))
     if request.GET.get('level'):qs=qs.filter(level=request.GET['level'][:6])
     if request.GET.get('topic'):qs=qs.filter(topic=request.GET['topic'][:120])
+    kind=request.GET.get('kind','')
+    if kind:
+        if kind not in {'main_idea','detail','tfng','ynng','vocabulary','inference','matching_heading','matching_information','gap_fill','short_answer'}:
+            raise InputError('Dạng câu hỏi không hợp lệ.')
+        matched=[lesson.pk for lesson in qs.only('slug','content') if any(q.get('kind')==kind for q in lesson.content.get('questions',[]))]
+        qs=qs.filter(pk__in=matched)
     favorite=request.GET.get('favorite','all')
     if favorite not in {'all','yes','no'}:raise InputError('Bộ lọc yêu thích không hợp lệ.')
     personal=Reading.objects.filter(owner=request.user).exclude(catalog_slug='')
@@ -521,6 +566,8 @@ def catalog(request):
             **cover_metadata(lesson.topic,lesson.title),
             'summary':c.get('summary',''),'revision':lesson.revision,'order':lesson.order,
             'word_count':len(c.get('text','').split()),'question_count':len(c.get('questions',[])),
+            'question_types':sorted({q.get('kind') for q in c.get('questions',[]) if q.get('kind')}),
+            'estimated_minutes':max(5,round(len(c.get('text','').split())/120+len(c.get('questions',[]))*.75)),
             'vocabulary_count':len(c.get('analysis',{}).get('vocabulary',[])),
             'reading_id':str(r.pk) if r else None,'progress':r.progress if r else {},
             'favorite':bool(r and r.progress.get('favorite') is True)}

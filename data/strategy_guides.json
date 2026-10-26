@@ -1,0 +1,922 @@
+{
+  "schema_version": 1,
+  "content_note": "Hướng dẫn và ví dụ ngắn do LexiRead tự biên soạn, có tham khảo cách ra câu hỏi từ nguồn chính thức. Đây không phải đề thi chính thức và không dùng để dự đoán điểm thi.",
+  "guides": [
+    {
+      "id": "ielts-tfng",
+      "exam": "ielts",
+      "title": "True / False / Not Given: sai hay chưa được nói tới?",
+      "summary_vi": "Phân biệt “bài nói ngược lại” với “bài chưa cho biết”. Chỉ dựa vào bài đọc để chọn đáp án, dù bạn đã biết thêm về chủ đề.",
+      "duration_minutes": 6,
+      "question_types": [
+        "tfng"
+      ],
+      "steps": [
+        {
+          "title": "Xem câu hỏi nói về ai và điều gì",
+          "body": "Chú ý người hoặc vật được nói tới, hành động, thời điểm và các từ như all, only, most. Một câu dài có thể đúng ở phần này nhưng sai ở phần khác."
+        },
+        {
+          "title": "Tìm câu trong bài để đối chiếu",
+          "body": "Tìm tên, con số hoặc ý tương tự trong bài. Đọc thêm câu trước và sau để hiểu các từ như he, they đang chỉ ai, và có điều kiện hay ngoại lệ nào không."
+        },
+        {
+          "title": "Chọn đáp án và nói rõ lý do",
+          "body": "Chọn TRUE nếu bài xác nhận, FALSE nếu bài nói ngược lại, NOT GIVEN nếu chưa đủ thông tin để kết luận. Thử giải thích ngắn vì sao bạn chọn trước khi xem đáp án."
+        }
+      ],
+      "traps": [
+        "Bài có thể diễn đạt cùng một ý bằng từ khác. Không thấy từ giống câu hỏi chưa có nghĩa là NOT GIVEN.",
+        "Gặp từ “all” cũng chưa thể chọn FALSE. Hãy kiểm tra bài nói về tất cả hay chỉ một số."
+      ],
+      "worked_example": {
+        "passage": "The garden opens to members at 8 a.m. on Saturdays. Visitors who are not members can enter after 10 a.m. The entrance fee is the same for both groups.",
+        "question": "Non-members pay more to enter the garden. Choose TRUE, FALSE or NOT GIVEN.",
+        "answer": "FALSE",
+        "explanation_vi": "Bài nói hai nhóm trả cùng một mức phí (“the same”), trái với “pay more”, nên chọn FALSE. Hai nhóm được vào lúc khác nhau, nhưng giờ vào không cho biết ai trả nhiều tiền hơn.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "tfng"
+      },
+      "sources": [
+        {
+          "title": "IELTS Academic Reading: official task format",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+        },
+        {
+          "title": "British Council: Reading question types",
+          "url": "https://takeielts.britishcouncil.org/what-is-ielts/how-it-works/test-format/reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-ynng",
+      "exam": "ielts",
+      "title": "Yes / No / Not Given: ai đang nói điều gì?",
+      "summary_vi": "Tìm đúng ý kiến của tác giả. Đừng nhầm lời người khác được nhắc trong bài với điều tác giả tin hoặc đồng ý.",
+      "duration_minutes": 6,
+      "question_types": [
+        "ynng"
+      ],
+      "steps": [
+        {
+          "title": "Xem ý kiến đó là của ai",
+          "body": "Phân biệt lời tác giả với lời nhà nghiên cứu hoặc người được trích dẫn. “Some critics argue” chỉ cho biết ý kiến của một số người phê bình, chưa cho biết tác giả có đồng ý hay không."
+        },
+        {
+          "title": "Chú ý chỗ tác giả đổi ý hoặc giới hạn ý",
+          "body": "Đọc kỹ however, although, yet. So các từ may, likely, essential, impossible với câu hỏi: tác giả chỉ nói có thể, hay khẳng định chắc chắn?"
+        },
+        {
+          "title": "So cả nhận định với ý tác giả",
+          "body": "Chọn YES nếu nhận định đúng với quan điểm tác giả, NO nếu trái ngược, NOT GIVEN nếu tác giả chưa nói rõ về điều được hỏi. Dùng đúng YES / NO / NOT GIVEN theo yêu cầu đề."
+        }
+      ],
+      "traps": [
+        "Tác giả nêu một sự việc chưa có nghĩa là họ ủng hộ giải pháp liên quan đến sự việc đó.",
+        "Đừng ghi TRUE/FALSE khi đề yêu cầu YES/NO."
+      ],
+      "worked_example": {
+        "passage": "Some managers believe that every meeting should be online. I find video calls useful for routine updates, but difficult negotiations still benefit from people sharing a room.",
+        "question": "The writer believes that all meetings should take place online.",
+        "answer": "NO",
+        "explanation_vi": "Tác giả thấy họp video phù hợp với việc cập nhật thường lệ, nhưng vẫn muốn gặp trực tiếp khi đàm phán khó. Vì vậy, tác giả không cho rằng mọi cuộc họp đều nên diễn ra trực tuyến. “Some managers” là ý của người khác.",
+        "options": [
+          "YES",
+          "NO",
+          "NOT GIVEN"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "ynng"
+      },
+      "sources": [
+        {
+          "title": "IELTS Academic Reading: official task format",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-headings",
+      "exam": "ielts",
+      "title": "Matching headings: đặt tên cho cả đoạn",
+      "summary_vi": "Chọn tiêu đề nói được ý chính của cả đoạn. Một chi tiết nổi bật hoặc một từ giống trong bài chưa đủ để chọn.",
+      "duration_minutes": 7,
+      "question_types": [
+        "matching_heading"
+      ],
+      "steps": [
+        {
+          "title": "Tóm tắt đoạn bằng vài từ",
+          "body": "Đọc đoạn rồi thử tóm tắt bằng 5–8 từ của bạn. Câu đầu và cuối thường giúp định hướng; nếu chưa rõ ý, hãy đọc kỹ cả phần giữa."
+        },
+        {
+          "title": "So các tiêu đề dễ nhầm",
+          "body": "Đoạn đang nói về nguyên nhân hay kết quả, khó khăn hay giải pháp, quá khứ hay tương lai? Chọn tiêu đề phù hợp với phần lớn nội dung của đoạn."
+        },
+        {
+          "title": "Xem tiêu đề có vừa với cả đoạn không",
+          "body": "Loại tiêu đề chỉ nói về một ví dụ nhỏ hoặc bao quát quá nhiều điều mà đoạn không đề cập. Ghi đúng mã tiêu đề; nếu còn phân vân, đánh dấu để quay lại."
+        }
+      ],
+      "traps": [
+        "Không có quy tắc ý chính luôn nằm ở câu đầu.",
+        "Một tiêu đề có cùng từ “water” chưa chắc đúng với đoạn nói về giảm thất thoát nước."
+      ],
+      "worked_example": {
+        "passage": "The town once repaired pipes only after residents reported a leak. It now uses sensors to identify unusual water use overnight. Repair teams receive alerts before most residents notice a problem. This change has reduced the time taken to find hidden leaks.",
+        "question": "Choose the best heading for this paragraph.",
+        "answer": "A new way to detect leaks earlier",
+        "explanation_vi": "Đoạn so sánh cách phát hiện rò rỉ trước đây với cách dùng cảm biến, rồi nêu lợi ích của việc phát hiện sớm. Bài không nói về giá nước, cũng không nói rằng có cảm biến thì không cần sửa ống.",
+        "options": [
+          "The rising cost of household water",
+          "A new way to detect leaks earlier",
+          "Why pipe repairs are no longer necessary"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "matching_heading"
+      },
+      "sources": [
+        {
+          "title": "IELTS: preparing for matching headings",
+          "url": "https://ielts.org/news-and-insights/how-to-prepare-learners-for-matching-headings-task-on-the-ielts-reading-test"
+        },
+        {
+          "title": "IELTS Academic Reading: official task format",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-matching-information",
+      "exam": "ielts",
+      "title": "Matching information: chi tiết này nằm ở đoạn nào?",
+      "summary_vi": "Tìm đoạn chứa ví dụ, lý do, phép so sánh hoặc kết quả mà câu hỏi yêu cầu. Bạn cần tìm chi tiết cụ thể, không phải ý chính của cả đoạn.",
+      "duration_minutes": 7,
+      "question_types": [
+        "matching_information"
+      ],
+      "steps": [
+        {
+          "title": "Biết mình cần tìm gì",
+          "body": "Đề đang yêu cầu một ví dụ, lời giải thích, số liệu hay ý kiến trái chiều? Xác định rõ trước khi tìm, để không nhầm với dạng chọn tiêu đề."
+        },
+        {
+          "title": "Ghi nhanh nội dung từng đoạn",
+          "body": "Ghi vài từ cho mỗi đoạn và chú ý tên riêng, con số dễ tìm lại. Câu hỏi có thể diễn đạt lại ý trong bài bằng từ khác."
+        },
+        {
+          "title": "Chỉ ra câu giúp bạn chọn",
+          "body": "Tìm câu có đủ chi tiết được hỏi. Kiểm tra đề có cho dùng lại một chữ cái không; đừng cho rằng thứ tự câu hỏi luôn trùng với thứ tự các đoạn."
+        }
+      ],
+      "traps": [
+        "Đoạn có cùng chủ đề chưa chắc chứa chi tiết được yêu cầu.",
+        "Không tự loại một đoạn đã dùng nếu hướng dẫn cho phép dùng lại."
+      ],
+      "worked_example": {
+        "passage": "A. The library lending scheme began in 2018 with forty donated tools.\nB. Staff ask borrowers to attend a short safety demonstration because unfamiliar equipment can cause injuries.\nC. In the past year, residents borrowed drills more often than any other tool.",
+        "question": "Which paragraph explains a rule for borrowers?",
+        "answer": "B",
+        "explanation_vi": "Đoạn B yêu cầu người mượn tham gia hướng dẫn an toàn và giải thích rằng thiết bị lạ có thể gây chấn thương. A nói về thời điểm thư viện bắt đầu; C nói về loại dụng cụ được mượn nhiều nhất.",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "matching_information"
+      },
+      "sources": [
+        {
+          "title": "IELTS Academic Reading: official task format",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-matching-features",
+      "exam": "ielts",
+      "title": "Matching features: nối phát biểu với đúng người",
+      "summary_vi": "Xác định ai nêu ý kiến hoặc có phát hiện được hỏi. Đọc cả những chỗ tên được nhắc lại hoặc thay bằng he, she, this team.",
+      "duration_minutes": 6,
+      "question_types": [
+        "matching_features"
+      ],
+      "steps": [
+        {
+          "title": "Tìm các tên hoặc mốc trong lựa chọn",
+          "body": "Ghi tên người, năm hoặc nhóm được cho, rồi tìm tất cả những chỗ bài nhắc tới chúng."
+        },
+        {
+          "title": "Xem mỗi người đã làm gì",
+          "body": "Chú ý các từ proposed, challenged, observed, repeated: ai đề xuất, phản đối, quan sát hay nhắc lại ý đó? Theo dõi he, she, this team để không nhầm người."
+        },
+        {
+          "title": "So cả ý trước khi ghép",
+          "body": "Kiểm tra phát biểu có đúng với người hoặc nhóm đó không. Tên đứng gần từ khóa chưa đủ để chọn. Chỉ dùng lại một lựa chọn nếu đề cho phép."
+        }
+      ],
+      "traps": [
+        "Người nhắc lại một ý để phản đối không nhất thiết là người đề xuất ý đó.",
+        "Không dừng ở lần xuất hiện đầu tiên của tên."
+      ],
+      "worked_example": {
+        "passage": "Dr Lin suggested that shaded streets might encourage walking. Dr Rao tested the idea by counting pedestrians on shaded and unshaded routes. Her results supported Lin’s suggestion, although she warned that the study covered only one neighbourhood.",
+        "question": "Who collected evidence to test the suggestion?",
+        "answer": "Dr Rao",
+        "explanation_vi": "Lin đưa ra ý tưởng; Rao kiểm tra ý tưởng đó bằng cách đếm người đi bộ. “Her results” vẫn nói về Rao. Câu hỏi cần người thu thập bằng chứng, nên chọn Dr Rao.",
+        "options": [
+          "Dr Lin",
+          "Dr Rao"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "matching_features"
+      },
+      "sources": [
+        {
+          "title": "IDP: strategies for matching features",
+          "url": "https://ielts.idp.com/prepare/article-ielts-reading-test-strategies-matching-features-questions"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-sentence-endings",
+      "exam": "ielts",
+      "title": "Matching sentence endings: đúng ngữ pháp chưa đủ",
+      "summary_vi": "Chọn phần kết thúc vừa đúng ngữ pháp vừa đúng ý bài đọc. Đặc biệt chú ý lý do, điều kiện và mục đích của hành động.",
+      "duration_minutes": 6,
+      "question_types": [
+        "matching_sentence_endings"
+      ],
+      "steps": [
+        {
+          "title": "Đọc đầu câu trước",
+          "body": "Xem câu nói về ai, làm gì và còn thiếu thông tin nào: lý do, kết quả, đối tượng hay điều kiện."
+        },
+        {
+          "title": "Tìm ý đó trong bài",
+          "body": "Dùng tên hoặc từ khóa ở đầu câu để tìm chỗ liên quan. Đọc trọn câu trong bài để hiểu ý trước khi thử ghép."
+        },
+        {
+          "title": "Đọc lại câu sau khi ghép",
+          "body": "Loại lựa chọn đúng ngữ pháp nhưng nói sai người hoặc đảo ngược nguyên nhân và kết quả. Ghi chữ cái của phần kết thúc theo yêu cầu đề."
+        }
+      ],
+      "traps": [
+        "Số lựa chọn có thể nhiều hơn số câu cần ghép.",
+        "Một kết thúc nghe hợp lý ngoài đời vẫn sai nếu đoạn không nói như vậy."
+      ],
+      "worked_example": {
+        "passage": "The team moved the seedlings indoors because frost was forecast for the following night. They planned to return the plants to the garden when the cold weather passed.",
+        "question": "The seedlings were moved indoors ...",
+        "answer": "because a cold night was expected.",
+        "explanation_vi": "“Frost was forecast” tương đương dự báo một đêm lạnh. Đoạn không nói cây đã chết hay việc chuyển cây làm cho trời lạnh.",
+        "options": [
+          "because a cold night was expected.",
+          "because all the plants had died.",
+          "so that the weather would become colder."
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "matching_sentence_endings"
+      },
+      "sources": [
+        {
+          "title": "IDP: Academic Reading question types",
+          "url": "https://ielts.idp.com/prepare/article-question-types-academic-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-multiple-choice",
+      "exam": "ielts",
+      "title": "Multiple choice: chọn đúng và biết vì sao",
+      "summary_vi": "Đọc rõ câu hỏi cần gì. Với mỗi lựa chọn, tìm chi tiết trong bài để giữ lại hoặc loại bỏ.",
+      "duration_minutes": 6,
+      "question_types": [
+        "multiple_choice"
+      ],
+      "steps": [
+        {
+          "title": "Xem đề cần chọn mấy đáp án",
+          "body": "Đề yêu cầu một hay nhiều lựa chọn? Chú ý những từ như main reason, purpose, according to, likely để biết chính xác điều đang được hỏi."
+        },
+        {
+          "title": "Thử trả lời bằng lời của bạn",
+          "body": "Tìm thông tin trong bài rồi tự trả lời ngắn trước khi so với các lựa chọn. Cách này giúp bạn ít bị cuốn theo một đáp án nghe có vẻ hợp lý."
+        },
+        {
+          "title": "Kiểm tra từng lựa chọn",
+          "body": "Loại đáp án không được nhắc tới, sai thời điểm, sai người, khẳng định quá mức hoặc chỉ đúng một phần. Nếu đề cần nhiều đáp án, hãy tìm căn cứ cho từng đáp án."
+        }
+      ],
+      "traps": [
+        "Trùng từ với bài không chứng minh đáp án đúng.",
+        "Không chọn một sự thật có trong bài nếu nó không trả lời đúng câu hỏi."
+      ],
+      "worked_example": {
+        "passage": "The museum introduced evening visits after local teachers said that school trips could not fit into the daytime timetable. The museum also hoped to sell more guidebooks, but improving access for school groups was its main aim.",
+        "question": "Why did the museum primarily introduce evening visits?",
+        "answer": "To make visits easier for school groups",
+        "explanation_vi": "Câu cuối nói rõ mục tiêu chính là giúp các nhóm học sinh dễ đến tham quan hơn. Bán thêm sách chỉ là mong muốn phụ, nên không trả lời đúng từ “primarily”.",
+        "options": [
+          "To make visits easier for school groups",
+          "To stop selling guidebooks",
+          "To reduce the number of teachers",
+          "To replace all daytime visits"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "multiple_choice"
+      },
+      "sources": [
+        {
+          "title": "IDP: Academic Reading question types",
+          "url": "https://ielts.idp.com/prepare/article-question-types-academic-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-sentence-completion",
+      "exam": "ielts",
+      "title": "Sentence completion: điền đúng từ, không vượt giới hạn",
+      "summary_vi": "Xem chỗ trống cần loại từ nào để tìm nhanh hơn. Khi điền, lấy từ đúng theo yêu cầu đề và kiểm tra số từ.",
+      "duration_minutes": 5,
+      "question_types": [
+        "gap_fill",
+        "sentence_completion"
+      ],
+      "steps": [
+        {
+          "title": "Đọc kỹ giới hạn từ",
+          "body": "Chú ý ONE WORD ONLY hoặc giới hạn khác của đề. Kiểm tra bạn phải lấy từ trong bài hay chọn từ một danh sách."
+        },
+        {
+          "title": "Xem chỗ trống cần gì",
+          "body": "Đọc phần trước và sau chỗ trống: cần danh từ, con số, tính từ hay động từ? Dự đoán để biết mình cần tìm gì, không tự thay đáp án bằng một từ đồng nghĩa."
+        },
+        {
+          "title": "Điền rồi đọc lại cả câu",
+          "body": "Đối chiếu với bài và kiểm tra chính tả, số ít/số nhiều, số từ. Nếu trước chỗ trống đã có a, an hoặc the, đừng chép thêm lần nữa."
+        }
+      ],
+      "traps": [
+        "Nếu đề yêu cầu lấy từ trong bài, đừng thay bằng một từ đồng nghĩa bạn tự nghĩ ra.",
+        "Đừng thêm từ cho câu nghe thuận tai nếu như vậy sẽ vượt giới hạn."
+      ],
+      "worked_example": {
+        "passage": "Before shipping, the company places each glass bowl in a cardboard box. A layer of wool cushions the bowl and prevents it from moving during transport.",
+        "question": "Complete the sentence. ONE WORD ONLY from the passage: The bowls are protected by a layer of ______.",
+        "answer": "wool",
+        "explanation_vi": "Sau “a layer of” cần tên vật liệu. Bài nói wool là lớp đệm giữ bát không xê dịch, nên chỉ điền wool. Chép cả “a layer of wool” sẽ lặp phần đề đã cho và vượt giới hạn một từ."
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "gap_fill"
+      },
+      "sources": [
+        {
+          "title": "IELTS Academic Reading: official task format",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-summary-table",
+      "exam": "ielts",
+      "title": "Summary, note và table: nhìn tổng thể trước khi điền",
+      "summary_vi": "Đọc cả phần tóm tắt, ghi chú hoặc bảng để biết mỗi chỗ trống cần thông tin gì và đang nói về ai, điều gì.",
+      "duration_minutes": 7,
+      "question_types": [
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "gap_fill"
+      ],
+      "steps": [
+        {
+          "title": "Đọc phần đề đã cho sẵn",
+          "body": "Xem tiêu đề, tên cột, từng hàng và những chỗ đã có thông tin. Hiểu phần này đang tóm tắt điều gì trước khi tìm từng từ."
+        },
+        {
+          "title": "Tìm đúng chỗ trong bài",
+          "body": "Dùng thông tin đã cho để tìm đoạn liên quan. So các ô với nhau và với bài đọc; đừng cho rằng mọi đáp án đều xuất hiện theo thứ tự câu hỏi."
+        },
+        {
+          "title": "Điền theo đúng yêu cầu",
+          "body": "Nếu đề cho danh sách, chọn theo hướng dẫn. Nếu lấy từ trong bài, giữ đúng giới hạn từ. Đọc lại cả phần tóm tắt hoặc hàng trong bảng để xem ý đã hợp lý chưa."
+        }
+      ],
+      "traps": [
+        "Hai hàng có thể cùng nói về một vật liệu nhưng hỏi mục đích khác nhau.",
+        "Nếu từ đã chọn đúng nghĩa nhưng không khớp ngữ pháp của câu, hãy kiểm tra lại."
+      ],
+      "worked_example": {
+        "passage": "The trial compared two roof surfaces. White tiles reflected sunlight, while dark tiles absorbed more heat. Sensors showed that the room beneath the white tiles stayed cooler during the afternoon.",
+        "question": "Complete the note. ONE WORD ONLY: White tiles kept the room cooler because they ______ sunlight.",
+        "answer": "reflected",
+        "explanation_vi": "Bài nói white tiles “reflected sunlight”, nên điền reflected. Absorbed nói về dark tiles, không phải loại ngói được hỏi. Đề yêu cầu lấy từ trong bài, vì vậy không tự đổi reflected thành reflect."
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "summary_completion"
+      },
+      "sources": [
+        {
+          "title": "IDP: Academic Reading question types",
+          "url": "https://ielts.idp.com/prepare/article-question-types-academic-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-flowchart-diagram",
+      "exam": "ielts",
+      "title": "Flow-chart và diagram: theo mũi tên, tìm đúng bộ phận",
+      "summary_vi": "Nhìn kỹ các bước và vị trí trên sơ đồ. Bài đọc có thể dùng cách diễn đạt khác để mô tả cùng một quy trình hoặc thiết bị.",
+      "duration_minutes": 7,
+      "question_types": [
+        "flowchart_completion",
+        "diagram_completion",
+        "gap_fill"
+      ],
+      "steps": [
+        {
+          "title": "Xem sơ đồ đang mô tả gì",
+          "body": "Nếu là quy trình, đọc theo chiều mũi tên. Nếu là hình có nhãn các bộ phận, xem chính xác đầu mũi tên đang chỉ vào đâu."
+        },
+        {
+          "title": "Tìm từ chỉ thứ tự và vị trí",
+          "body": "Chú ý then, before, beneath, outlet để hiểu các bước và vị trí. Đọc kỹ phần mô tả tương ứng; đáp án không nhất thiết xuất hiện theo thứ tự câu hỏi."
+        },
+        {
+          "title": "So lại tên gọi và số từ",
+          "body": "Kiểm tra từ vừa chọn có đúng bộ phận, chức năng hoặc vị trí được hỏi không. Đừng lấy nhầm tên bên cạnh; soát chính tả và giới hạn từ trước khi đi tiếp."
+        }
+      ],
+      "traps": [
+        "Không dùng kiến thức khoa học bên ngoài để điền thay cho thông tin trong bài.",
+        "Không mặc định mọi sơ đồ được đọc từ trái sang phải."
+      ],
+      "worked_example": {
+        "passage": "The collected rainwater first passes through a screen that removes leaves. It then enters a tank, where sand settles at the bottom. Finally, a pump sends the water to the vegetable beds.",
+        "question": "Complete the flow-chart. ONE WORD ONLY: Screen removes leaves → water enters a ______ → pump supplies the beds.",
+        "answer": "tank",
+        "explanation_vi": "First, then và finally cho biết thứ tự ba bước. Nước đi qua screen rồi vào tank, nên điền tank. Sand là cát lắng ở đáy bể, không phải nơi nước đi vào tiếp theo."
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "flowchart_completion"
+      },
+      "sources": [
+        {
+          "title": "IDP: Academic Reading question types",
+          "url": "https://ielts.idp.com/prepare/article-question-types-academic-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-short-answers",
+      "exam": "ielts",
+      "title": "Short answers: trả lời đúng trọng tâm và đủ ngắn",
+      "summary_vi": "Xem câu hỏi cần tên người, địa điểm, thời gian hay lý do. Chọn một cụm ngắn trong bài, nhưng vẫn đủ để trả lời rõ ràng.",
+      "duration_minutes": 5,
+      "question_types": [
+        "short_answer"
+      ],
+      "steps": [
+        {
+          "title": "Xem từ hỏi cần thông tin gì",
+          "body": "Who hỏi người, where hỏi nơi chốn, how many hỏi số lượng. Đọc cả phần còn lại của câu hỏi để biết đúng sự việc cần tìm."
+        },
+        {
+          "title": "Tìm thông tin và đọc câu xung quanh",
+          "body": "Kiểm tra đúng người, thời điểm và hành động. Nếu bài nhắc nhiều nơi, tìm nơi diễn ra việc được hỏi, không chọn địa điểm đầu tiên bạn thấy."
+        },
+        {
+          "title": "Trả lời gọn trong giới hạn",
+          "body": "Lấy từ trong bài nếu đề yêu cầu. Giữ những từ cần thiết để đáp án rõ nghĩa, không chép lại cả câu và nhớ đếm số từ."
+        }
+      ],
+      "traps": [
+        "Không cần viết cả câu nếu đề chỉ yêu cầu một cụm ngắn.",
+        "Đừng rút ngắn đến mức mất từ giúp phân biệt đáp án, chẳng hạn north trong north entrance."
+      ],
+      "worked_example": {
+        "passage": "Volunteers should meet at the north entrance at nine o’clock. Tools will be distributed in the courtyard, and refreshments will be available in the old kitchen after the work is finished.",
+        "question": "Where will volunteers receive their tools? NO MORE THAN TWO WORDS from the passage.",
+        "answer": "the courtyard",
+        "explanation_vi": "“Receive their tools” nói cùng ý với “tools will be distributed”: nhận dụng cụ. Việc này diễn ra ở the courtyard. Cả the courtyard (hai từ) và courtyard (một từ) đều trả lời đủ ý. North entrance là nơi tập trung, còn old kitchen là nơi dùng đồ ăn nhẹ.",
+        "accepted_answers": [
+          "the courtyard",
+          "courtyard"
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "short_answer"
+      },
+      "sources": [
+        {
+          "title": "IELTS Academic Reading: official task format",
+          "url": "https://ielts.org/take-a-test/test-types/ielts-academic-test/ielts-academic-format-reading"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-time-paraphrase",
+      "exam": "ielts",
+      "title": "Đọc đúng ý và biết khi nào nên chuyển câu",
+      "summary_vi": "Luyện cách nhận ra cùng một ý được viết bằng từ khác, dành thời gian hợp lý cho câu khó và học lại từ những lỗi vừa mắc.",
+      "duration_minutes": 8,
+      "question_types": [
+        "paraphrase",
+        "time_management"
+      ],
+      "steps": [
+        {
+          "title": "Chọn một điều muốn làm tốt hơn",
+          "body": "Mỗi lượt luyện, tập trung vào một việc: phân biệt NOT GIVEN, tìm ý chính hoặc tránh vượt giới hạn từ. Dùng đồng hồ để biết mình đang mất thời gian ở đâu, không vội đoán chỉ vì thấy đồng hồ chạy."
+        },
+        {
+          "title": "So cả ý, đừng chỉ so từ",
+          "body": "Xem ai làm gì, điều gì gây ra kết quả nào và câu nói có giới hạn không. Hai câu có từ đồng nghĩa vẫn có thể nói ngược nhau nếu đổi người, mức độ hoặc nguyên nhân và kết quả."
+        },
+        {
+          "title": "Tạm bỏ qua câu khó để quay lại",
+          "body": "Nếu đã tìm ở phần liên quan mà vẫn chưa rõ, đánh dấu chỗ phân vân rồi làm câu khác. Chừa thời gian cuối để quay lại câu bỏ trống và soát giới hạn từ."
+        },
+        {
+          "title": "Chữa kỹ một lỗi vừa mắc",
+          "body": "Ghi đáp án bạn đã chọn, câu trong bài cho thấy đáp án đúng và lý do bạn nhầm. Sau đó thử một câu cùng dạng. Thời gian gợi ý cho bài mini chỉ giúp chia buổi luyện, không phải quy tắc cho đề thật."
+        }
+      ],
+      "traps": [
+        "Có từ đồng nghĩa chưa chắc hai câu đã cùng nghĩa.",
+        "IELTS Reading có tổng cộng 60 phút. Hãy điều chỉnh cách chia thời gian theo khả năng và bài đọc, thay vì cố theo một mốc cố định."
+      ],
+      "worked_example": {
+        "passage": "After the booking form was shortened, fewer customers abandoned their reservations halfway through.",
+        "question": "Which sentence preserves the meaning?",
+        "answer": "A simpler form was followed by fewer unfinished bookings.",
+        "explanation_vi": "Trong ngữ cảnh này, mẫu được rút gọn (shortened) được diễn đạt lại là đơn giản hơn (simpler); việc bỏ dở giữa chừng là unfinished bookings. Đáp án giữ đúng ý: sau khi rút gọn mẫu, ít lượt đặt chỗ bị bỏ dở hơn. Bài không nói tất cả khách đều hoàn tất.",
+        "options": [
+          "A simpler form was followed by fewer unfinished bookings.",
+          "A shorter form made every customer finish a booking.",
+          "Shorter forms caused more customers to abandon their bookings."
+        ]
+      },
+      "practice_query": {
+        "track": "ielts",
+        "kind": "paraphrase"
+      },
+      "sources": [
+        {
+          "title": "British Council: reading preparation and reading skills",
+          "url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/reading"
+        },
+        {
+          "title": "British Council: context clues and paraphrasing",
+          "url": "https://takeielts.britishcouncil.org/blog/mastering-context-clues-boost-your-ielts-reading-skills"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "toeic-part5-grammar",
+      "exam": "toeic",
+      "title": "Part 5 ngữ pháp: tìm bộ khung của câu",
+      "summary_vi": "Tìm chủ ngữ, động từ và dấu hiệu thời gian. Từ đó xem chỗ trống cần loại từ nào trước khi so bốn lựa chọn.",
+      "duration_minutes": 6,
+      "question_types": [
+        "part5_grammar"
+      ],
+      "steps": [
+        {
+          "title": "Nhìn các lựa chọn để nhận ra dạng câu hỏi",
+          "body": "Nếu các lựa chọn là nhiều dạng của cùng một từ, đề thường hỏi từ loại hoặc dạng động từ. Nếu là những từ khác nhau, bạn cần chú ý nhiều hơn đến nghĩa của cả câu."
+        },
+        {
+          "title": "Tìm chủ ngữ và động từ chính",
+          "body": "Tạm bỏ qua các cụm bổ sung thông tin để thấy cấu trúc chính. Xem chỗ trống đứng cạnh từ nào, có giới từ hay dấu hiệu thời gian nào giúp chọn đáp án không."
+        },
+        {
+          "title": "Đọc lại câu đã điền",
+          "body": "Kiểm tra câu có đúng cả ngữ pháp lẫn nghĩa không. Chọn đúng từ loại thôi chưa đủ; vẫn cần so thì và số ít/số nhiều."
+        }
+      ],
+      "traps": [
+        "Từ tận cùng -ly không phải lúc nào cũng là trạng từ; phải xem vai trò trong câu.",
+        "Danh từ gần chỗ trống nhất không nhất thiết là chủ ngữ của động từ."
+      ],
+      "worked_example": {
+        "passage": "The revised safety instructions are written clearly, so new employees can follow them without assistance.",
+        "question": "Complete the sentence: The revised safety instructions are written ______.",
+        "answer": "clearly",
+        "explanation_vi": "Chỗ trống nói hướng dẫn được viết như thế nào, nên cần trạng từ clearly để bổ nghĩa cho are written. Clear là tính từ, clarity là danh từ, còn clarify là động từ.",
+        "options": [
+          "clear",
+          "clearly",
+          "clarity",
+          "clarify"
+        ]
+      },
+      "practice_query": {
+        "track": "toeic",
+        "kind": "part5_grammar"
+      },
+      "sources": [
+        {
+          "title": "ETS: TOEIC Listening and Reading sample test",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "toeic-part5-collocations",
+      "exam": "toeic",
+      "title": "Part 5 từ vựng: học cả cụm và ngữ cảnh",
+      "summary_vi": "Chọn những từ thường đi cùng nhau và phù hợp với tình huống. Khi ôn, lưu cả cụm kèm ví dụ để nhớ cách dùng.",
+      "duration_minutes": 6,
+      "question_types": [
+        "part5_vocabulary",
+        "collocation"
+      ],
+      "steps": [
+        {
+          "title": "Hiểu câu đang nói về việc gì",
+          "body": "Câu nói về thanh toán, lịch họp, vận chuyển hay tuyển dụng? Hiểu tình huống sẽ giúp bạn loại những từ không hợp nghĩa."
+        },
+        {
+          "title": "Xem các từ quanh chỗ trống",
+          "body": "Chú ý giới từ và danh từ đi cùng. Với cụm từ cố định, hãy xét cả cụm, đừng chỉ dịch từng từ sang tiếng Việt."
+        },
+        {
+          "title": "Ghi lại cả mẫu để dùng lần sau",
+          "body": "Sau khi chữa, lưu mẫu như be responsible for + danh từ/V-ing cùng một câu ngắn. Thử dùng mẫu đó trong tình huống khác để xem bạn đã hiểu cách dùng chưa."
+        }
+      ],
+      "traps": [
+        "Hai từ đồng nghĩa tiếng Việt không nhất thiết kết hợp được với cùng một danh từ.",
+        "Đừng chỉ dựa vào một cụm quen mà bỏ qua nghĩa của cả câu."
+      ],
+      "worked_example": {
+        "passage": "The design team is responsible for updating the product catalogue before the trade fair.",
+        "question": "Complete the sentence: The design team is responsible ______ updating the catalogue.",
+        "answer": "for",
+        "explanation_vi": "Cụm đúng là be responsible for + V-ing, nên chọn for. Updating đứng sau giới từ này ở dạng V-ing. Hãy nhớ cả responsible for để biết cách dùng, thay vì chỉ nhớ nghĩa “chịu trách nhiệm”.",
+        "options": [
+          "at",
+          "for",
+          "with",
+          "by"
+        ]
+      },
+      "practice_query": {
+        "track": "toeic",
+        "kind": "part5_vocabulary"
+      },
+      "sources": [
+        {
+          "title": "ETS: TOEIC Listening and Reading sample test",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "toeic-part6-cohesion",
+      "exam": "toeic",
+      "title": "Part 6: nối nghĩa giữa các câu",
+      "summary_vi": "Đọc cả câu trước và sau để chọn từ. Từ nối, đại từ và thì của động từ thường chỉ rõ khi bạn hiểu cả đoạn.",
+      "duration_minutes": 6,
+      "question_types": [
+        "part6_cohesion"
+      ],
+      "steps": [
+        {
+          "title": "Xem văn bản được viết để làm gì",
+          "body": "Đọc nhanh người gửi, người nhận và ý chính. Đây là thông báo thay đổi, lời xin lỗi, yêu cầu hay quảng cáo? Biết mục đích sẽ giúp hiểu từng chỗ trống."
+        },
+        {
+          "title": "Đọc cả hai phía chỗ trống",
+          "body": "Đọc câu có chỗ trống cùng câu trước và sau. Ý tiếp theo đang bổ sung, đối lập, giải thích nguyên nhân hay nêu kết quả?"
+        },
+        {
+          "title": "Đọc lại để kiểm tra cả đoạn",
+          "body": "Xem đại từ chỉ đúng người hoặc vật chưa, và thì của động từ có hợp với thời điểm không. Một đáp án có thể đúng ngữ pháp trong một câu nhưng không hợp với phần còn lại."
+        }
+      ],
+      "traps": [
+        "However nối hai ý trái nhau; therefore nối nguyên nhân với kết quả. Hai từ không thay thế cho nhau.",
+        "Đừng chỉ nhìn một câu như khi làm Part 5; Part 6 thường cần đọc thêm các câu xung quanh."
+      ],
+      "worked_example": {
+        "passage": "Demand for the new desk lamps has exceeded our forecast. ______, deliveries may take two extra days. Customers with urgent orders should contact our support team.",
+        "question": "Choose the best connector for the blank.",
+        "answer": "Therefore",
+        "explanation_vi": "Nhu cầu cao hơn dự báo là lý do việc giao hàng có thể chậm thêm hai ngày. Therefore nối nguyên nhân với kết quả, nên phù hợp ở đây. However dùng khi hai ý trái nhau.",
+        "options": [
+          "However",
+          "Therefore",
+          "Similarly",
+          "Meanwhile"
+        ]
+      },
+      "practice_query": {
+        "track": "toeic",
+        "kind": "part6_cohesion"
+      },
+      "sources": [
+        {
+          "title": "ETS: TOEIC Listening and Reading sample test",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "toeic-part6-insertion",
+      "exam": "toeic",
+      "title": "Part 6: chọn câu còn thiếu để đoạn liền mạch",
+      "summary_vi": "Câu cần điền phải nối được với cả câu trước và câu sau. Chú ý chủ đề, thứ tự các việc và những từ như this, these, it.",
+      "duration_minutes": 7,
+      "question_types": [
+        "part6_sentence_insertion"
+      ],
+      "steps": [
+        {
+          "title": "Xem đoạn còn thiếu ý gì",
+          "body": "Câu trước vừa nói điều gì? Câu sau đang giải thích, nhắc lại hay kết luận về điều gì? Thử đoán câu còn thiếu cần thêm thông tin nào."
+        },
+        {
+          "title": "Tìm những từ giúp nối câu",
+          "body": "Chú ý this, these, it, also và số ít/số nhiều. Nếu câu sau dùng một đại từ, hãy xem nó cần nhắc lại người hoặc vật nào ở trước."
+        },
+        {
+          "title": "Đọc liền cả ba câu",
+          "body": "Đọc câu trước, câu bạn chọn và câu sau. Loại đáp án đổi sang chuyện khác, lặp ý không cần thiết hoặc làm các việc xảy ra theo thứ tự vô lý."
+        }
+      ],
+      "traps": [
+        "Cùng chủ đề vẫn chưa đủ: nếu câu sau dùng it hoặc these mà không rõ chỉ điều gì, hãy kiểm tra lại.",
+        "Câu được chọn cần hợp với cả phía trước lẫn phía sau."
+      ],
+      "worked_example": {
+        "passage": "We are introducing reusable delivery boxes next month. ______ These containers can be returned to any of our stores after use. Please keep the return label attached.",
+        "question": "Choose the sentence that best completes the notice.",
+        "answer": "Each order will arrive in a durable green container.",
+        "explanation_vi": "Câu đúng cho biết mỗi đơn hàng sẽ được giao trong một hộp màu xanh, bền và dùng lại được. Nhờ đó, “These containers” ở câu sau có đối tượng rõ ràng để nói tiếp về cách trả hộp.",
+        "options": [
+          "Our stores will stop accepting returned boxes.",
+          "Each order will arrive in a durable green container.",
+          "The design team met for lunch yesterday.",
+          "Delivery fees were reduced last year."
+        ]
+      },
+      "practice_query": {
+        "track": "toeic",
+        "kind": "part6_sentence_insertion"
+      },
+      "sources": [
+        {
+          "title": "ETS: TOEIC Listening and Reading sample test",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "toeic-part7-single",
+      "exam": "toeic",
+      "title": "Part 7 một văn bản: hiểu ý chính, tìm đúng chi tiết",
+      "summary_vi": "Xem ai viết cho ai và để làm gì. Với câu suy luận, tìm chi tiết làm căn cứ thay vì đoán thêm những điều bài chưa nói.",
+      "duration_minutes": 7,
+      "question_types": [
+        "part7_single",
+        "inference"
+      ],
+      "steps": [
+        {
+          "title": "Nhìn nhanh tình huống",
+          "body": "Đọc tiêu đề, người gửi, ngày và loại văn bản. Tự hỏi người đọc cần biết gì hoặc làm gì sau khi đọc."
+        },
+        {
+          "title": "Xem câu hỏi cần cách đọc nào",
+          "body": "Hỏi chi tiết thì tìm thông tin cụ thể. Hỏi mục đích thì nhìn cả văn bản. Hỏi hàm ý thì kết hợp điều được nói với tình huống. Nếu phải chèn câu, kiểm tra cả câu trước và sau."
+        },
+        {
+          "title": "Tìm căn cứ cho đáp án",
+          "body": "Chỉ ra một hoặc hai chi tiết dẫn đến kết luận bạn chọn. Đừng đoán thêm chức vụ, cảm xúc hay kế hoạch nếu bài không cho căn cứ."
+        }
+      ],
+      "traps": [
+        "Một tên công ty, sản phẩm hoặc con số nổi bật chưa chắc là ý chính của bài.",
+        "Một việc có thể xảy ra ngoài đời chưa đủ để chọn đáp án; bài đọc phải có chi tiết cho phép suy ra việc đó."
+      ],
+      "worked_example": {
+        "passage": "To: Training participants\nSubject: Thursday workshop\nThe workshop will now be held in Room 204, which has additional seating. Several employees from our regional office have joined the session. The start time remains 9 a.m.",
+        "question": "What is most likely the reason for changing rooms?",
+        "answer": "More people are expected to attend.",
+        "explanation_vi": "Phòng mới có nhiều chỗ ngồi hơn, đồng thời có thêm nhân viên tham gia. Ghép hai chi tiết này, ta hiểu rằng đổi phòng là để đủ chỗ cho nhiều người hơn. Giờ bắt đầu không đổi; bài không nói phòng cũ đang sửa.",
+        "options": [
+          "The workshop will begin later.",
+          "More people are expected to attend.",
+          "The original room is being repaired.",
+          "The regional office has closed."
+        ]
+      },
+      "practice_query": {
+        "track": "toeic",
+        "kind": "part7_single"
+      },
+      "sources": [
+        {
+          "title": "ETS: TOEIC Listening and Reading sample test",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    },
+    {
+      "id": "toeic-part7-multiple",
+      "exam": "toeic",
+      "title": "Part 7 nhiều văn bản: ghép thông tin để tìm đáp án",
+      "summary_vi": "Dùng tên, mã đơn và thời gian để nối thông tin giữa email, bảng hoặc thông báo. Có câu cần đọc kết hợp hai hay nhiều văn bản mới trả lời được.",
+      "duration_minutes": 8,
+      "question_types": [
+        "part7_multiple",
+        "inference"
+      ],
+      "steps": [
+        {
+          "title": "Xem mỗi văn bản cung cấp điều gì",
+          "body": "Ghi nhanh, chẳng hạn: văn bản 1 nêu chính sách, văn bản 2 là yêu cầu của khách, văn bản 3 là thư trả lời. Tìm xem chúng liên quan với nhau thế nào."
+        },
+        {
+          "title": "Tìm chi tiết chung giữa các văn bản",
+          "body": "So tên người, sản phẩm, mã đặt chỗ và ngày để chắc rằng bạn đang nối đúng thông tin. Kiểm tra thêm loại tiền, số lượng và điều kiện áp dụng."
+        },
+        {
+          "title": "Kiểm tra thông tin mới nhất",
+          "body": "Thư trả lời có đổi lịch hoặc sửa yêu cầu ban đầu không? Khi chọn đáp án, thử chỉ ra mỗi văn bản cho bạn biết điều gì và ghép lại ra kết quả nào."
+        }
+      ],
+      "traps": [
+        "Giá niêm yết có thể khác số tiền cần trả. Hãy kiểm tra giảm giá và điều kiện áp dụng.",
+        "Đừng chọn lịch ban đầu nếu email sau đã đổi lịch."
+      ],
+      "worked_example": {
+        "passage": "NOTICE: Workshop fees are $80 per person. Groups of five or more receive a $10 discount per person.\nEMAIL: Please reserve places for six employees from Pine Studio. All six will attend the same workshop.",
+        "question": "What is the total fee for Pine Studio?",
+        "answer": "$420",
+        "explanation_vi": "Email đăng ký 6 người, đủ điều kiện nhóm từ 5 người được giảm $10 mỗi người trong thông báo. Mỗi người trả $70, nên tổng là 6 × $70 = $420. Chọn $480 là chưa trừ giảm giá; $470 là mới trừ một lần cho cả nhóm.",
+        "options": [
+          "$480",
+          "$470",
+          "$420",
+          "$400"
+        ]
+      },
+      "practice_query": {
+        "track": "toeic",
+        "kind": "part7_multiple"
+      },
+      "sources": [
+        {
+          "title": "ETS: TOEIC Listening and Reading sample test",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf"
+        }
+      ],
+      "checked_at": "2026-10-26"
+    }
+  ]
+}

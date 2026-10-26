@@ -1,0 +1,464 @@
+{
+  "slug": "p5-people-and-workplace-word-forms",
+  "title": "People & Workplace · Word Forms",
+  "mode": "parts-5-6",
+  "mode_label": "Ngữ pháp và từ vựng",
+  "parts": [
+    5
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 15,
+  "description": "Chọn từ đúng trong các tình huống tuyển dụng, đào tạo và làm việc cùng đồng nghiệp; luyện thêm từ loại, đại từ và cách so sánh.",
+  "instructions": "Chọn một đáp án phù hợp nhất để hoàn thành mỗi câu.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 5,
+      "prompt": "The recruitment team will give every applicant a written ___ of the interview arrangements.",
+      "options": [
+        "confirmation",
+        "confirm",
+        "confirmed",
+        "confirming"
+      ],
+      "answer": 0,
+      "explanation_vi": "Sau mạo từ a và tính từ written cần danh từ confirmation. Confirm là động từ; confirmed/confirming không đóng vai trò danh từ chỉ sự xác nhận trong cụm này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q02",
+      "part": 5,
+      "prompt": "Please read the revised policy ___ before signing the acknowledgment form.",
+      "options": [
+        "care",
+        "carefully",
+        "careful",
+        "carefulness"
+      ],
+      "answer": 1,
+      "explanation_vi": "Carefully là trạng từ bổ nghĩa cho read. Careful là tính từ; carefulness/care là danh từ, không diễn tả cách đọc ở vị trí này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q03",
+      "part": 5,
+      "prompt": "During the round of personal introductions, the mentors will give their own names and introduce ___ to their new trainees.",
+      "options": [
+        "them",
+        "theirs",
+        "themselves",
+        "their"
+      ],
+      "answer": 2,
+      "explanation_vi": "Các cố vấn đang tự giới thiệu và nói tên của mình, nên chọn themselves. Đây là đại từ phản thân: người giới thiệu và người được giới thiệu là cùng một nhóm. Them sẽ chỉ những người khác.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q04",
+      "part": 5,
+      "prompt": "The position requires someone who can work independently and communicate ___.",
+      "options": [
+        "effective",
+        "effectiveness",
+        "effect",
+        "effectively"
+      ],
+      "answer": 3,
+      "explanation_vi": "Hai kỹ năng được nối: work independently và communicate effectively. Cần trạng từ sau communicate; effective là tính từ, các lựa chọn còn lại là danh từ/động từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q05",
+      "part": 5,
+      "prompt": "Only employees with a valid security pass are ___ to enter the archive.",
+      "options": [
+        "authorized",
+        "authorization",
+        "authorize",
+        "authorizing"
+      ],
+      "answer": 0,
+      "explanation_vi": "Be authorized to do something là được cho phép làm gì. Authorized tạo bị động; authorization là danh từ và authorizing mang nghĩa chủ động, không phù hợp với employees được cấp quyền.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q06",
+      "part": 5,
+      "prompt": "The new onboarding guide is considerably ___ than the previous version.",
+      "options": [
+        "clarity",
+        "clearer",
+        "clearest",
+        "clearly"
+      ],
+      "answer": 1,
+      "explanation_vi": "Than yêu cầu so sánh hơn clearer; considerably nhấn mạnh mức độ chênh lệch. Clearest là so sánh nhất, clearly là trạng từ và clarity là danh từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q07",
+      "part": 5,
+      "prompt": "The staff survey contains ___ questions, so it should take no more than five minutes.",
+      "options": [
+        "much",
+        "every",
+        "a few",
+        "a little"
+      ],
+      "answer": 2,
+      "explanation_vi": "Questions là danh từ đếm được số nhiều, phù hợp a few. A little/much dùng với danh từ không đếm được; every cần danh từ số ít.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q08",
+      "part": 5,
+      "prompt": "Each of the shortlisted candidates ___ a different professional background.",
+      "options": [
+        "have",
+        "having",
+        "are",
+        "has"
+      ],
+      "answer": 3,
+      "explanation_vi": "Chủ ngữ chính là Each, mang nghĩa “mỗi người”, nên dùng has. Cụm of the shortlisted candidates chỉ nói rõ đó là những người nào, không làm chủ ngữ thành số nhiều.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q09",
+      "part": 5,
+      "prompt": "The supervisor praised the technician for her ___ response to the equipment failure.",
+      "options": [
+        "prompt",
+        "promptly",
+        "promptness",
+        "prompting"
+      ],
+      "answer": 0,
+      "explanation_vi": "Sau her và trước danh từ response cần tính từ prompt. Promptly bổ nghĩa động từ; promptness là danh từ, còn prompting không mang nghĩa 'nhanh chóng' trong cụm này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q10",
+      "part": 5,
+      "prompt": "Applicants must submit two references in ___ to a completed application form.",
+      "options": [
+        "add",
+        "addition",
+        "additional",
+        "additionally"
+      ],
+      "answer": 1,
+      "explanation_vi": "In addition to là cụm cố định nghĩa là ngoài ra/cùng với. Các dạng từ khác không tạo được cụm in ... to này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q11",
+      "part": 5,
+      "prompt": "The company has made a substantial ___ in training its customer-service staff.",
+      "options": [
+        "investing",
+        "invested",
+        "investment",
+        "invest"
+      ],
+      "answer": 2,
+      "explanation_vi": "Make an investment in something là đầu tư vào việc gì. Sau a substantial cần danh từ đếm được số ít investment; các dạng động từ không phù hợp.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q12",
+      "part": 5,
+      "prompt": "The updated handbook is available to ___ employee through the staff portal.",
+      "options": [
+        "all",
+        "both",
+        "several",
+        "every"
+      ],
+      "answer": 3,
+      "explanation_vi": "Employee số ít đi với every. All/both/several phải đi cùng dạng số nhiều employees trong cấu trúc này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q13",
+      "part": 5,
+      "prompt": "Ms. Patel's explanation was so ___ that no one needed to ask a follow-up question.",
+      "options": [
+        "thorough",
+        "thoroughly",
+        "thoroughness",
+        "through"
+      ],
+      "answer": 0,
+      "explanation_vi": "Sau was so cần tính từ thorough (kỹ lưỡng). Thoroughly là trạng từ, thoroughness là danh từ; through là giới từ/trạng từ với nghĩa khác.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q14",
+      "part": 5,
+      "prompt": "To protect confidential files, the archive door must remain ___ at all times.",
+      "options": [
+        "locks",
+        "locked",
+        "locking",
+        "lock"
+      ],
+      "answer": 1,
+      "explanation_vi": "Remain là động từ nối và locked diễn tả trạng thái bị khóa. Locking diễn tả hành động chủ động; lock/locks không diễn tả trạng thái cần thiết ở đây.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q15",
+      "part": 5,
+      "prompt": "We encourage staff to offer ___ suggestions rather than simply list problems.",
+      "options": [
+        "constructively",
+        "construct",
+        "constructive",
+        "construction"
+      ],
+      "answer": 2,
+      "explanation_vi": "Constructive suggestions là các góp ý mang tính xây dựng. Trước suggestions cần tính từ constructive; construction nói về việc xây dựng, còn constructively là trạng từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q16",
+      "part": 5,
+      "prompt": "The new role gives the coordinator greater ___ for the training budget.",
+      "options": [
+        "responsible",
+        "responsibly",
+        "respond",
+        "responsibility"
+      ],
+      "answer": 3,
+      "explanation_vi": "Chỗ trống cần danh từ để nói về trách nhiệm lớn hơn, nên chọn responsibility. Responsible là tính từ, responsibly là trạng từ; respond là động từ mang nghĩa trả lời.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q17",
+      "part": 5,
+      "prompt": "Attendance at the optional lunchtime seminar is entirely ___.",
+      "options": [
+        "voluntary",
+        "volunteer",
+        "voluntarily",
+        "volunteering"
+      ],
+      "answer": 0,
+      "explanation_vi": "Sau is entirely cần tính từ voluntary, nghĩa là tự nguyện. Voluntarily là trạng từ và volunteer/volunteering không diễn đạt tính chất của attendance ở đây.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q18",
+      "part": 5,
+      "prompt": "The director asked for a ___ summary instead of the full twenty-page report.",
+      "options": [
+        "briefed",
+        "brief",
+        "briefly",
+        "briefness"
+      ],
+      "answer": 1,
+      "explanation_vi": "Brief summary là bản tóm tắt ngắn gọn. Cần tính từ trước summary; briefly là trạng từ, briefed mang nghĩa đã được cung cấp thông tin.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q19",
+      "part": 5,
+      "prompt": "The team completed the inventory check without any outside ___.",
+      "options": [
+        "assistant",
+        "assisted",
+        "assistance",
+        "assist"
+      ],
+      "answer": 2,
+      "explanation_vi": "Outside assistance là sự hỗ trợ từ bên ngoài. Assistant chỉ một người trợ lý đếm được nên cần cấu trúc khác; assist/assisted là dạng động từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q20",
+      "part": 5,
+      "prompt": "Of the three proposed training schedules, the afternoon option is the ___ convenient for remote staff.",
+      "options": [
+        "more",
+        "much",
+        "many",
+        "most"
+      ],
+      "answer": 3,
+      "explanation_vi": "Of the three và the cho thấy so sánh nhất: the most convenient. More là so sánh hơn; much/many không tạo so sánh nhất.",
+      "evidence": "",
+      "document_ids": []
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "confirmation",
+      "pos": "noun",
+      "meaning_vi": "sự xác nhận",
+      "usage_pattern": "confirmation of + noun; receive confirmation",
+      "example": "We received confirmation of the revised interview time.",
+      "example_vi": "Chúng tôi đã nhận được xác nhận về giờ phỏng vấn mới.",
+      "synonyms": [
+        "verification"
+      ],
+      "paraphrases": [
+        "a statement showing that an arrangement is definite"
+      ],
+      "context": "We received confirmation of the revised interview time.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "People & Workplace · Word Forms",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "shortlist",
+      "pos": "verb",
+      "meaning_vi": "chọn vào danh sách ứng viên cho vòng tiếp theo",
+      "usage_pattern": "shortlist somebody for + a position",
+      "example": "The panel shortlisted six applicants for the coordinator role.",
+      "example_vi": "Hội đồng chọn sáu ứng viên vào vòng tiếp theo cho vị trí điều phối viên.",
+      "synonyms": [
+        "select"
+      ],
+      "paraphrases": [
+        "choose a small group for further consideration"
+      ],
+      "context": "The panel shortlisted six applicants for the coordinator role.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "People & Workplace · Word Forms",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "onboarding",
+      "pos": "noun",
+      "meaning_vi": "quá trình hướng dẫn nhân viên mới làm quen với công việc",
+      "usage_pattern": "an onboarding guide/process",
+      "example": "The onboarding guide explains how to request equipment.",
+      "example_vi": "Tài liệu dành cho nhân viên mới hướng dẫn cách yêu cầu cấp thiết bị.",
+      "synonyms": [
+        "orientation"
+      ],
+      "paraphrases": [
+        "helping new employees settle into an organization"
+      ],
+      "context": "The onboarding guide explains how to request equipment.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "People & Workplace · Word Forms",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "constructive",
+      "pos": "adjective",
+      "meaning_vi": "mang tính xây dựng, giúp cải thiện",
+      "usage_pattern": "constructive feedback/suggestions",
+      "example": "Her constructive feedback helped us simplify the form.",
+      "example_vi": "Góp ý mang tính xây dựng của cô ấy giúp chúng tôi đơn giản hóa biểu mẫu.",
+      "synonyms": [
+        "helpful"
+      ],
+      "paraphrases": [
+        "intended to improve a situation"
+      ],
+      "context": "Her constructive feedback helped us simplify the form.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "People & Workplace · Word Forms",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "voluntary",
+      "pos": "adjective",
+      "meaning_vi": "tự nguyện, không bắt buộc",
+      "usage_pattern": "participation is voluntary",
+      "example": "Participation in the lunchtime workshop is voluntary.",
+      "example_vi": "Việc tham gia hội thảo giờ trưa là tự nguyện.",
+      "synonyms": [
+        "optional"
+      ],
+      "paraphrases": [
+        "done by choice rather than obligation"
+      ],
+      "context": "Participation in the lunchtime workshop is voluntary.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "People & Workplace · Word Forms",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "thorough",
+      "pos": "adjective",
+      "meaning_vi": "kỹ lưỡng, đầy đủ",
+      "usage_pattern": "a thorough review/explanation",
+      "example": "Please conduct a thorough review of the safety records.",
+      "example_vi": "Vui lòng xem xét kỹ lưỡng hồ sơ an toàn.",
+      "synonyms": [
+        "comprehensive"
+      ],
+      "paraphrases": [
+        "careful and complete"
+      ],
+      "context": "Please conduct a thorough review of the safety records.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "People & Workplace · Word Forms",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "slug": "ielts-rooftop-water",
+  "title": "A Roof, a Tank and Three Different Goals",
+  "level": "B2",
+  "topic": "IELTS · Nước và thiết kế",
+  "summary": "Phân biệt thu nước, tái sử dụng nước và làm chậm thoát nước trong dự án mái nhà giả định.",
+  "track": "ielts",
+  "revision": 2,
+  "order": 124,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc của LexiRead, dùng tình huống và kết quả giả định để luyện đọc. Không phải đề IELTS chính thức hay bài thi thử đầy đủ.",
+  "level_note": "Mức độ do người biên soạn ước lượng, chưa hiệu chuẩn CEFR; không quy đổi band IELTS.",
+  "translation_status": "complete",
+  "text": "A. The managers of a fictional office building want to make better use of rain falling on its flat roof. One proposal is to collect water for cleaning outdoor paths. Another is to create a planted area that holds some rainfall temporarily. Both proposals are described as water-saving measures, but they perform different jobs. A storage tank preserves water for later use; a planted roof may delay the movement of water into drains. Choosing between them requires clarity about which problem the building is trying to solve.\n\nB. The facilities team begins with demand rather than equipment. It records how often paths are cleaned and how much water each task requires. These observations reveal that demand is irregular: a large amount may be needed after a public event, followed by several quiet days. Buying the largest available tank would therefore be an expensive guess. The team compares several tank sizes using a sequence of imagined wet and dry weeks. It wants to know when water would be available, not merely how much could fit inside.\n\nC. Space and weight introduce further restrictions. The roof was not designed to carry an unlimited load, and wet planting material weighs more than dry material. A structural engineer examines the building before any installation is approved. The team also needs a safe route for workers to inspect outlets and remove debris. A design that occupies every available corner might look efficient on a plan while making routine maintenance difficult. Access is treated as part of the design, rather than a problem to solve after construction.\n\nD. The planted option is tested in two small demonstration beds. Water leaving each bed is measured after simulated rainfall, and the results are compared with an unplanted section. The trial records both the total amount and the timing of outflow. A lower peak flow does not necessarily mean that less water eventually leaves the roof. Some water may simply arrive later. Confusing these outcomes would allow a claim about delayed drainage to become an unsupported claim about permanent water retention.\n\nE. For the tank option, staff propose a visible level gauge and a log of each use. A nearly full tank can be reassuring during a dry period, but it offers little empty space for the next storm. The operating plan therefore links storage to realistic demand. Nobody is asked to waste water merely to create capacity. If use is consistently lower than expected, the team will reconsider the tank size or the purpose of the system instead of hiding the mismatch in an annual average.\n\nF. The final recommendation combines a modest tank with a limited planted area, subject to the engineer's approval. This is not presented as the correct design for every building. The useful lesson is that a sustainable project needs an operating plan as well as an installation budget. Water captured, water reused and drainage delayed are related but distinct achievements. Reporting them separately makes it easier to see whether the system is serving the purpose for which it was built.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "A. Ban quản lý một tòa nhà văn phòng hư cấu muốn tận dụng tốt hơn nước mưa rơi trên mái phẳng. Một đề xuất là thu nước để rửa lối đi ngoài trời. Đề xuất khác là tạo khu trồng cây giữ tạm một phần nước mưa. Cả hai được mô tả là giải pháp tiết kiệm nước nhưng lại có chức năng khác nhau. Bể chứa giữ nước để dùng sau; mái trồng cây có thể làm chậm nước chảy vào hệ thống thoát. Muốn chọn được phương án phù hợp, trước hết cần làm rõ tòa nhà đang muốn giải quyết vấn đề gì."
+      },
+      {
+        "index": 1,
+        "vi": "B. Nhóm quản lý cơ sở vật chất bắt đầu bằng việc tìm hiểu nhu cầu, thay vì chọn ngay thiết bị. Họ ghi lại bao lâu lối đi được rửa một lần và mỗi lần cần bao nhiêu nước. Quan sát cho thấy nhu cầu không đều: sau một sự kiện công cộng có thể cần rất nhiều nước, rồi đến vài ngày yên ắng. Vì thế việc mua ngay bể lớn nhất có sẵn sẽ chỉ là một quyết định tốn kém dựa trên phỏng đoán. Nhóm so sánh nhiều kích cỡ bể với một chuỗi tuần mưa và tuần khô được giả định. Họ muốn biết khi nào có nước để dùng, không chỉ bể chứa được bao nhiêu."
+      },
+      {
+        "index": 2,
+        "vi": "C. Không gian và trọng lượng cũng đặt ra những giới hạn. Mái không được thiết kế chịu tải vô hạn, và vật liệu dùng để trồng cây khi ướt sẽ nặng hơn lúc khô. Kỹ sư kết cấu kiểm tra tòa nhà trước khi phê duyệt lắp đặt. Nhóm cũng cần đường đi an toàn để nhân viên kiểm tra lỗ thoát và dọn rác. Một thiết kế tận dụng mọi góc mái có thể trông rất hiệu quả trên bản vẽ, nhưng lại gây khó khăn cho việc bảo trì thường xuyên. Lối đi để kiểm tra và bảo trì được tính ngay trong thiết kế, không phải vấn đề đợi xây xong mới giải quyết."
+      },
+      {
+        "index": 3,
+        "vi": "D. Phương án cây trồng được thử ở hai luống cây nhỏ dùng để thử nghiệm. Sau một trận mưa mô phỏng, nhóm đo nước chảy ra từ mỗi luống rồi so sánh với phần mái không trồng cây. Thử nghiệm ghi lại cả tổng lượng nước chảy ra lẫn thời điểm nước chảy ra. Lưu lượng nước ở thời điểm cao nhất giảm xuống không có nghĩa là tổng lượng nước cuối cùng chảy khỏi mái cũng giảm. Có thể một phần nước chỉ chảy ra muộn hơn. Nếu nhầm lẫn hai kết quả này, người ta có thể từ việc nước thoát chậm hơn mà kết luận thiếu căn cứ rằng nước đã được giữ lại vĩnh viễn."
+      },
+      {
+        "index": 4,
+        "vi": "E. Với phương án bể, nhân viên đề xuất thước đo mực nước dễ nhìn và nhật ký mỗi lần dùng. Bể gần đầy có thể giúp người dùng yên tâm trong thời kỳ khô hạn, nhưng còn rất ít khoảng trống đón trận mưa tới. Vì vậy kế hoạch vận hành gắn lượng nước dự trữ với nhu cầu sử dụng thực tế. Không ai bị yêu cầu lãng phí nước chỉ để tạo chỗ trống. Nếu mức sử dụng liên tục thấp hơn dự kiến, nhóm sẽ xem lại kích cỡ bể hoặc mục đích hệ thống thay vì dùng số trung bình cả năm để che đi sự chênh lệch giữa dự tính và thực tế."
+      },
+      {
+        "index": 5,
+        "vi": "F. Phương án cuối cùng là kết hợp một bể có kích thước vừa phải với một khu trồng cây nhỏ, nhưng vẫn phải được kỹ sư phê duyệt. Nhóm không coi đây là thiết kế phù hợp với mọi tòa nhà. Bài học hữu ích là dự án bền vững cần kế hoạch vận hành bên cạnh ngân sách lắp đặt. Nước thu được, nước tái sử dụng và việc thoát nước chậm lại là những kết quả liên quan nhưng khác biệt. Báo cáo riêng từng kết quả giúp thấy rõ hệ thống có phục vụ mục đích ban đầu hay không."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "temporarily",
+        "pos": "adverb",
+        "meaning_vi": "trong thời gian tạm thời",
+        "paragraph_index": 0,
+        "usage_pattern": "hold / store something temporarily",
+        "example": "We stored the boxes temporarily.",
+        "example_vi": "Chúng tôi cất những hộp đó tạm thời.",
+        "synonyms": [
+          "briefly"
+        ],
+        "paraphrases": [
+          "for a limited period"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Another is to create a planted area that holds some rainfall temporarily."
+      },
+      {
+        "word": "irregular",
+        "pos": "adjective",
+        "meaning_vi": "không đều đặn",
+        "paragraph_index": 1,
+        "usage_pattern": "irregular demand / intervals",
+        "example": "Demand is irregular during the holidays.",
+        "example_vi": "Nhu cầu lên xuống không đều trong kỳ nghỉ.",
+        "synonyms": [
+          "uneven"
+        ],
+        "paraphrases": [
+          "not following a steady pattern"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "These observations reveal that demand is irregular: a large amount may be needed after a public event, followed by several quiet days."
+      },
+      {
+        "word": "restrictions",
+        "pos": "plural noun",
+        "meaning_vi": "những giới hạn hoặc ràng buộc",
+        "paragraph_index": 2,
+        "usage_pattern": "restrictions on + noun",
+        "example": "Weight restrictions affect the design.",
+        "example_vi": "Giới hạn về trọng lượng ảnh hưởng đến thiết kế.",
+        "synonyms": [
+          "limitations"
+        ],
+        "paraphrases": [
+          "conditions that limit what is possible"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Space and weight introduce further restrictions."
+      },
+      {
+        "word": "debris",
+        "pos": "noun",
+        "meaning_vi": "rác hoặc mảnh vụn",
+        "paragraph_index": 2,
+        "usage_pattern": "remove / clear debris",
+        "example": "Clear debris from the drain.",
+        "example_vi": "Hãy dọn rác và mảnh vụn khỏi miệng thoát nước.",
+        "synonyms": [
+          "waste material"
+        ],
+        "paraphrases": [
+          "loose unwanted pieces of material"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "The team also needs a safe route for workers to inspect outlets and remove debris."
+      },
+      {
+        "word": "retention",
+        "pos": "noun",
+        "meaning_vi": "sự giữ lại",
+        "paragraph_index": 3,
+        "usage_pattern": "water retention / retention of + noun",
+        "example": "The test measures water retention.",
+        "example_vi": "Thử nghiệm đo khả năng giữ nước.",
+        "synonyms": [
+          "holding"
+        ],
+        "paraphrases": [
+          "keeping something instead of releasing it"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Confusing these outcomes would allow a claim about delayed drainage to become an unsupported claim about permanent water retention."
+      },
+      {
+        "word": "capacity",
+        "pos": "noun",
+        "meaning_vi": "sức chứa",
+        "paragraph_index": 4,
+        "usage_pattern": "storage capacity / capacity for + noun",
+        "example": "The tank has limited capacity.",
+        "example_vi": "Bể có sức chứa hạn chế.",
+        "synonyms": [
+          "volume"
+        ],
+        "paraphrases": [
+          "the amount a container can hold"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Nobody is asked to waste water merely to create capacity."
+      },
+      {
+        "word": "distinct",
+        "pos": "adjective",
+        "meaning_vi": "khác biệt, cần phân biệt",
+        "paragraph_index": 5,
+        "usage_pattern": "distinct outcomes / categories",
+        "example": "These are two distinct outcomes.",
+        "example_vi": "Đây là hai kết quả khác biệt.",
+        "synonyms": [
+          "separate"
+        ],
+        "paraphrases": [
+          "different enough to consider separately"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Water captured, water reused and drainage delayed are related but distinct achievements."
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "kind": "tfng",
+      "prompt": "The two roof proposals perform exactly the same function.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "they perform different jobs.",
+      "explanation_vi": "FALSE: Bài nói hai phương án perform different jobs, tức có chức năng khác nhau, trái với nhận định chức năng hoàn toàn giống nhau.",
+      "id": "q1"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "The facilities team studies water use before selecting equipment.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "The facilities team begins with demand rather than equipment.",
+      "explanation_vi": "TRUE: nhu cầu được khảo sát trước khi chọn bể.",
+      "id": "q2"
+    },
+    {
+      "kind": "matching_heading",
+      "prompt": "Choose the best heading for paragraph C.",
+      "options": [
+        "Why maintenance is unnecessary",
+        "A competition to design the tallest roof",
+        "Making room for safe long-term access",
+        "The environmental cost of public events"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "Access is treated as part of the design",
+      "explanation_vi": "Đoạn C bàn về giới hạn chịu tải của mái và lối đi cần thiết để kiểm tra, bảo trì. Những lựa chọn còn lại không bao quát nội dung đoạn.",
+      "id": "q3"
+    },
+    {
+      "kind": "short_answer",
+      "prompt": "Answer using NO MORE THAN THREE WORDS from the passage: Who examines the building before installation is approved?",
+      "options": [],
+      "answer": "a structural engineer",
+      "paragraph_index": 2,
+      "evidence": "A structural engineer examines the building before any installation is approved.",
+      "explanation_vi": "Người kiểm tra tòa nhà là a structural engineer, tức kỹ sư kết cấu.",
+      "max_words": 3,
+      "accepted_answers": [
+        "a structural engineer",
+        "structural engineer",
+        "engineer"
+      ],
+      "id": "q4"
+    },
+    {
+      "kind": "gap_fill",
+      "prompt": "Complete using NO MORE THAN TWO WORDS from the passage: Outflow is measured after _____.",
+      "options": [],
+      "answer": "simulated rainfall",
+      "paragraph_index": 3,
+      "evidence": "measured after simulated rainfall",
+      "explanation_vi": "Bài dùng simulated rainfall, tức mưa mô phỏng trong thử nghiệm, không phải số liệu của một trận mưa tự nhiên.",
+      "max_words": 2,
+      "accepted_answers": [
+        "simulated rainfall",
+        "rainfall"
+      ],
+      "id": "q5"
+    },
+    {
+      "kind": "detail",
+      "prompt": "Why does the trial record the timing of outflow?",
+      "options": [
+        "To establish that no water ever leaves",
+        "To measure the age of the roof",
+        "To select the cheapest cleaning company",
+        "To distinguish delayed drainage from a reduced total"
+      ],
+      "answer": 3,
+      "paragraph_index": 3,
+      "evidence": "The trial records both the total amount and the timing of outflow.",
+      "explanation_vi": "Cần phân biệt hai việc: nước chảy ra muộn hơn và tổng lượng nước chảy ra ít hơn. Đoạn D giải thích trực tiếp sự khác biệt này.",
+      "id": "q6"
+    },
+    {
+      "kind": "matching_information",
+      "prompt": "Which paragraph discusses a conflict between stored water and free capacity? Choose A–F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "answer": 4,
+      "paragraph_index": 4,
+      "evidence": "A nearly full tank can be reassuring during a dry period, but it offers little empty space for the next storm.",
+      "explanation_vi": "Đoạn E chỉ ra rằng bể gần đầy giúp dự trữ nước, nhưng lại còn ít chỗ để đón trận mưa tiếp theo.",
+      "id": "q7"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes every building should adopt this particular combination.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 5,
+      "evidence": "This is not presented as the correct design for every building.",
+      "explanation_vi": "NO: Tác giả nói rõ phương án này không được xem là thiết kế phù hợp với mọi tòa nhà.",
+      "id": "q8"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes operating plans are necessary for sustainable projects.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 5,
+      "evidence": "a sustainable project needs an operating plan as well as an installation budget.",
+      "explanation_vi": "YES: Từ needs khẳng định dự án cần kế hoạch vận hành, bên cạnh ngân sách lắp đặt.",
+      "id": "q9"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes publicly owned buildings maintain tanks better than private buildings.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 5,
+      "evidence": "a sustainable project needs an operating plan",
+      "explanation_vi": "NOT GIVEN: Bài không so sánh việc bảo trì ở tòa nhà công và tư. Tác giả chỉ nêu yêu cầu vận hành nói chung.",
+      "id": "q10"
+    }
+  ],
+  "faqs": []
+}

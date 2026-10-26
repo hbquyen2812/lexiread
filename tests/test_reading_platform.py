@@ -14,12 +14,12 @@ class FixedLessonTests(unittest.TestCase):
     def setUp(self):self.raw=load();self.lesson=validate_lesson(self.raw)
     def test_catalog_inventory(self):
         all_lessons=[validate_lesson(json.loads(f.read_text(encoding='utf-8'))) for f in (ROOT/'data/lessons').glob('*.json')]
-        self.assertEqual(len(all_lessons),27)
-        self.assertEqual(len({x['slug'] for x in all_lessons}),27)
-        self.assertEqual(sum(x['track']=='ielts' for x in all_lessons),3)
+        self.assertEqual(len(all_lessons),37)
+        self.assertEqual(len({x['slug'] for x in all_lessons}),37)
+        self.assertEqual(sum(x['track']=='ielts' for x in all_lessons),13)
         self.assertEqual(sum(x['track']=='general' for x in all_lessons),24)
         self.assertEqual({x['level'] for x in all_lessons},{'A1','A2','B1','B2','C1'})
-        self.assertEqual(sum(len(x['questions']) for x in all_lessons),102)
+        self.assertEqual(sum(len(x['questions']) for x in all_lessons),202)
         self.assertEqual(sum(len(x['analysis']['grammar']) for x in all_lessons),24)
         self.assertEqual(sum(len(x['faqs']) for x in all_lessons),24)
         original=[x for x in all_lessons if len(x['questions'])==4]

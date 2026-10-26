@@ -1,0 +1,367 @@
+{
+  "slug": "p7-double-travel-and-purchasing",
+  "title": "Paired Documents · Travel Changes & Orders",
+  "mode": "part-7",
+  "mode_label": "Đọc hiểu",
+  "parts": [
+    7
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 23,
+  "description": "Đối chiếu hai tài liệu để xử lý lịch tàu thay đổi hoặc kiểm tra đơn mua máy in, từ thời gian đến chi phí.",
+  "instructions": "Đọc các tài liệu trong mỗi nhóm và chọn một đáp án, đối chiếu thông tin giữa các tài liệu khi cần.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "travel-plan",
+      "kind": "Itinerary",
+      "heading": "Mara Lee — regional training visit",
+      "body": "Travel arranged for Mara Lee\n16 November\nTrain R42: depart Westford 8:20 a.m.; arrive Eastport Central 10:05 a.m.\nVenue: Eastport Learning Centre, Harbor Street.\nThe centre is a fifteen-minute walk from the station. Registration is open from 10:30 a.m. to 10:55 a.m.; the opening session starts at 11:00 a.m. Lunch is provided at 12:30 p.m.\n\nReturn travel — 17 November\nTrain R57: depart Eastport Central 5:30 p.m.; arrive Westford 7:15 p.m.\n\nApproved transport budget: train fares plus local travel needed for the training visit. Keep receipts for local transport. Meals already provided by the organizer cannot be claimed again."
+    },
+    {
+      "id": "travel-change",
+      "kind": "Email",
+      "heading": "Updated departure time for your outbound train",
+      "body": "To: Mara Lee\nFrom: Corporate Travel Desk\nSubject: Change to train R42 on 16 November\n\nThe railway has moved R42's departure to 9:05 a.m. because of track maintenance. The revised arrival at Eastport Central is 10:50 a.m. Your existing ticket remains valid, and your seat number is unchanged. The return train is not affected.\n\nYou will have only five minutes before registration closes, but the organizer has agreed to check you in at the venue until the opening session begins. A prebooked taxi will be waiting outside the station. The journey to the learning centre takes seven minutes; walking would take fifteen. Please take the taxi and collect a receipt so that the fare can be reimbursed under your approved travel budget.\n\nNo change to your hotel reservation is necessary. Contact us if you receive a further delay notice."
+    },
+    {
+      "id": "printer-quotation",
+      "kind": "Quotation",
+      "heading": "Paperline Office Supply — quotation Q318",
+      "body": "Quote Q318 — valid through 20 June\nCompact Laser 240 printer: $420 per unit.\nDesktop setup and a fifteen-minute user demonstration are included in the unit price. The unit comes with one standard toner cartridge.\n\nDelivery: $35 per order. Delivery is free when the equipment subtotal, excluding all service charges, reaches $900.\nOptional removal and recycling of an old printer: $20 per unit. Removal must be requested when the order is placed; the delivery team cannot add this service on arrival.\n\nPayment is due within fourteen days of delivery. Stock is available for delivery on 18 June, provided the order is confirmed by noon on 15 June. Replacement toner cartridges are sold separately."
+    },
+    {
+      "id": "printer-order",
+      "kind": "Email",
+      "heading": "Re: quotation Q318 — please confirm",
+      "body": "To: Paperline Office Supply\nFrom: Imani Grant, Alder Design\nSent: 15 June, 10:15 a.m.\n\nPlease proceed with two Compact Laser 240 printers at the quoted unit price. We would like delivery on 18 June. Please also remove and recycle our two old printers during the same visit. We do not need any additional toner cartridges at this stage.\n\nOur office is on the ground floor, and reception is staffed from 8:30 a.m. to 5 p.m. Please send the final invoice before dispatch so that our finance team can record the expected payment. We understand that payment is not required until after delivery.\n\nPlease include the user demonstration for our two reception assistants. They will be available at 10 a.m.; let us know whether you can arrange the delivery around that time."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 7,
+      "prompt": "Why did the travel desk email Mara?",
+      "options": [
+        "To explain a change to the outbound train and the necessary local travel",
+        "To cancel her hotel booking",
+        "To replace her return train with a bus",
+        "To ask her to arrange a new training venue"
+      ],
+      "answer": 0,
+      "explanation_vi": "Bộ phận đặt vé gửi thư để báo giờ mới của tàu R42 và hướng dẫn đi taxi tới buổi khai mạc. Tàu chiều về và khách sạn vẫn giữ nguyên, nên các lựa chọn nói hủy hoặc đổi những mục này đều sai.",
+      "evidence": "The railway has moved R42's departure to 9:05 a.m. because of track maintenance.",
+      "document_ids": [
+        "travel-plan",
+        "travel-change"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 7,
+      "prompt": "According to both documents, what would probably happen if Mara walked from the station after the revised arrival?",
+      "options": [
+        "She would reach the venue at exactly 10:55 a.m.",
+        "She would reach the venue after the opening session had started.",
+        "She would arrive before registration originally opened.",
+        "She would miss the return train the following day."
+      ],
+      "answer": 1,
+      "explanation_vi": "Giờ tới mới là 10:50, đi bộ 15 phút đến 11:05. Lịch gốc khai mạc 11:00, vậy sẽ muộn năm phút. 10:55 là giờ đóng đăng ký cũ, không phải giờ đi bộ đến.",
+      "evidence": "The revised arrival at Eastport Central is 10:50 a.m.",
+      "document_ids": [
+        "travel-plan",
+        "travel-change"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 7,
+      "prompt": "With no further delay, what time should the seven-minute taxi journey bring Mara to the venue?",
+      "options": [
+        "11:05 a.m.",
+        "11:15 a.m.",
+        "10:57 a.m.",
+        "10:37 a.m."
+      ],
+      "answer": 2,
+      "explanation_vi": "Theo lịch mới, tàu đến lúc 10:50 và taxi đã chờ sẵn ngoài ga. Đi thêm bảy phút, Mara dự kiến tới lúc 10:57, kịp buổi khai mạc 11:00. Nếu đi bộ, cô sẽ tới lúc 11:05.",
+      "evidence": "The journey to the learning centre takes seven minutes; walking would take fifteen.",
+      "document_ids": [
+        "travel-plan",
+        "travel-change"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 7,
+      "prompt": "What does Mara need in order to claim the taxi fare?",
+      "options": [
+        "A new train ticket purchased at full price",
+        "Proof that she did not eat the provided lunch",
+        "A cancellation notice for her hotel room",
+        "A receipt from the taxi journey"
+      ],
+      "answer": 3,
+      "explanation_vi": "Kế hoạch gốc yêu cầu giữ chứng từ xe địa phương và email nhắc lấy hóa đơn để hoàn tiền. Không cần đổi vé hoặc hủy phòng.",
+      "evidence": "Please take the taxi and collect a receipt so that the fare can be reimbursed under your approved travel budget.",
+      "document_ids": [
+        "travel-plan",
+        "travel-change"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 7,
+      "prompt": "Which arrangement remains unchanged?",
+      "options": [
+        "A return departure from Eastport at 5:30 p.m. on 17 November",
+        "An outbound arrival at Eastport at 10:05 a.m.",
+        "A requirement to walk from the station",
+        "The 8:20 a.m. outbound departure"
+      ],
+      "answer": 0,
+      "explanation_vi": "Email xác nhận tàu về không bị ảnh hưởng; giờ cụ thể phải lấy từ lịch gốc: 17/11 lúc 17:30. Các chi tiết chuyến đi còn lại đã thay đổi.",
+      "evidence": "The return train is not affected.",
+      "document_ids": [
+        "travel-plan",
+        "travel-change"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 7,
+      "prompt": "What is included in the price of each printer?",
+      "options": [
+        "Free delivery on every order",
+        "Setup and a short user demonstration",
+        "Unlimited replacement toner for one year",
+        "Free removal of any number of old printers"
+      ],
+      "answer": 1,
+      "explanation_vi": "Giá mỗi máy đã gồm cài đặt và buổi hướng dẫn 15 phút. Mực bổ sung bán riêng, thu hồi máy cũ có phí, còn miễn giao hàng chỉ áp dụng khi đạt mức mua quy định.",
+      "evidence": "Desktop setup and a fifteen-minute user demonstration are included in the unit price.",
+      "document_ids": [
+        "printer-quotation",
+        "printer-order"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 7,
+      "prompt": "Does Alder Design's requested equipment qualify for free delivery?",
+      "options": [
+        "Yes; all orders placed before noon qualify.",
+        "No; free delivery is available only after 20 June.",
+        "No; the equipment subtotal is $840, below the $900 threshold.",
+        "Yes; the two recycling charges count toward the equipment subtotal."
+      ],
+      "answer": 2,
+      "explanation_vi": "Hai máy có tổng giá $840, chưa đạt mức $900 để được miễn giao. Báo giá chỉ tính tiền thiết bị khi xét mức này, không tính phí dịch vụ. Đặt đúng hạn giúp giữ lịch giao, không giúp miễn phí giao.",
+      "evidence": "Delivery is free when the equipment subtotal, excluding all service charges, reaches $900.",
+      "document_ids": [
+        "printer-quotation",
+        "printer-order"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 7,
+      "prompt": "What is the total quoted cost of the order, including the requested services and delivery?",
+      "options": [
+        "$840",
+        "$875",
+        "$900",
+        "$915"
+      ],
+      "answer": 3,
+      "explanation_vi": "Hai máy giá $840, giao hàng $35 và thu hồi hai máy cũ là 2 × $20 = $40. Tổng cộng $915. Đáp án $875 bỏ sót phí thu hồi; $840 bỏ cả phí giao lẫn thu hồi.",
+      "evidence": "Please also remove and recycle our two old printers during the same visit.",
+      "document_ids": [
+        "printer-quotation",
+        "printer-order"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 7,
+      "prompt": "Why is the time of Imani's email relevant to the delivery request?",
+      "options": [
+        "It confirms the order before the deadline for delivery on 18 June.",
+        "It proves that reception closes before the printers arrive.",
+        "It automatically extends the quotation beyond 20 June.",
+        "It changes the payment deadline to the same morning."
+      ],
+      "answer": 0,
+      "explanation_vi": "Báo giá yêu cầu xác nhận trước trưa ngày 15/6 để giao ngày 18/6. Email được gửi lúc 10:15 ngày 15/6 nên đáp ứng hạn này. Việc đặt đúng hạn không tự thay đổi điều kiện thanh toán hoặc kéo dài hiệu lực báo giá.",
+      "evidence": "Stock is available for delivery on 18 June, provided the order is confirmed by noon on 15 June.",
+      "document_ids": [
+        "printer-quotation",
+        "printer-order"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 7,
+      "prompt": "Which request still needs the supplier's confirmation?",
+      "options": [
+        "Whether old-printer removal has been requested",
+        "Whether delivery and the demonstration can take place around 10 a.m.",
+        "Whether Alder Design wants additional toner",
+        "Whether two printers have been requested"
+      ],
+      "answer": 1,
+      "explanation_vi": "Email đã xác nhận số lượng máy, không mua thêm mực và yêu cầu thu hồi máy cũ. Giao và hướng dẫn vào khoảng 10:00 vẫn là đề nghị cần nhà cung cấp xác nhận, chưa phải thời gian được bảo đảm.",
+      "evidence": "They will be available at 10 a.m.; let us know whether you can arrange the delivery around that time.",
+      "document_ids": [
+        "printer-quotation",
+        "printer-order"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "outbound",
+      "pos": "adjective",
+      "meaning_vi": "thuộc chặng đi",
+      "usage_pattern": "an outbound train/flight/journey",
+      "example": "The outbound train was delayed by track maintenance.",
+      "example_vi": "Chuyến tàu chiều đi bị trễ do bảo trì đường ray.",
+      "synonyms": [
+        "departing"
+      ],
+      "paraphrases": [
+        "traveling toward the main destination"
+      ],
+      "context": "The outbound train was delayed by track maintenance.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Travel Changes & Orders",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "reimburse",
+      "pos": "verb",
+      "meaning_vi": "hoàn lại tiền đã chi",
+      "usage_pattern": "reimburse somebody for + expense",
+      "example": "The company will reimburse staff for approved taxi fares.",
+      "example_vi": "Công ty sẽ hoàn tiền taxi được duyệt cho nhân viên.",
+      "synonyms": [
+        "repay"
+      ],
+      "paraphrases": [
+        "pay someone back for an expense"
+      ],
+      "context": "The company will reimburse staff for approved taxi fares.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Travel Changes & Orders",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "valid",
+      "pos": "adjective",
+      "meaning_vi": "còn hiệu lực, được chấp nhận",
+      "usage_pattern": "remain valid; valid through + date",
+      "example": "Your original ticket remains valid for the revised service.",
+      "example_vi": "Vé ban đầu vẫn có hiệu lực cho chuyến đã đổi giờ.",
+      "synonyms": [
+        "effective"
+      ],
+      "paraphrases": [
+        "still officially acceptable for use"
+      ],
+      "context": "Your original ticket remains valid for the revised service.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Travel Changes & Orders",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "subtotal",
+      "pos": "noun",
+      "meaning_vi": "tổng tiền trước khi cộng thêm một số khoản phí hoặc thuế",
+      "usage_pattern": "the equipment subtotal; calculate a subtotal",
+      "example": "The equipment subtotal excludes delivery and recycling fees.",
+      "example_vi": "Tổng tiền thiết bị chưa gồm phí giao hàng và tái chế.",
+      "synonyms": [],
+      "paraphrases": [
+        "the sum of selected charges before other charges are added"
+      ],
+      "context": "The equipment subtotal excludes delivery and recycling fees.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Travel Changes & Orders",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "dispatch",
+      "pos": "noun",
+      "meaning_vi": "việc gửi hàng đi",
+      "usage_pattern": "before/after dispatch; ready for dispatch",
+      "example": "Please send the invoice before dispatch.",
+      "example_vi": "Vui lòng gửi hóa đơn trước khi gửi hàng.",
+      "synonyms": [
+        "shipment"
+      ],
+      "paraphrases": [
+        "the act of sending goods to a customer"
+      ],
+      "context": "Please send the invoice before dispatch.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Travel Changes & Orders",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "provided",
+      "pos": "conjunction",
+      "meaning_vi": "với điều kiện là",
+      "usage_pattern": "provided (that) + clause",
+      "example": "Delivery is possible provided the order is confirmed by noon.",
+      "example_vi": "Có thể giao hàng với điều kiện đơn được xác nhận trước buổi trưa.",
+      "synonyms": [
+        "if"
+      ],
+      "paraphrases": [
+        "on the condition that"
+      ],
+      "context": "Delivery is possible provided the order is confirmed by noon.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Travel Changes & Orders",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

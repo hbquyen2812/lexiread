@@ -154,9 +154,9 @@
     }
     if(p==='/catalog/'){
       const favorite=q.get('favorite')||'all';if(!['all','yes','no'].includes(favorite))throw new Error('Bộ lọc yêu thích không hợp lệ.');
-      const items=PREVIEW_SEED.lessons.filter(c=>!q.get('track')||(c.track||'general')===q.get('track')).filter(c=>(!q.get('q')||norm(c.title+' '+c.topic).includes(norm(q.get('q'))))&&(!q.get('level')||c.level===q.get('level'))&&(!q.get('topic')||c.topic===q.get('topic'))).map(c=>{
+      const items=PREVIEW_SEED.lessons.filter(c=>!q.get('track')||(c.track||'general')===q.get('track')).filter(c=>(!q.get('q')||norm(c.title+' '+c.topic).includes(norm(q.get('q'))))&&(!q.get('level')||c.level===q.get('level'))&&(!q.get('topic')||c.topic===q.get('topic'))).filter(c=>!q.get('kind')||c.questions.some(question=>question.kind===q.get('kind'))).map(c=>{
         const r=db.readings.find(r=>r.catalog_slug===c.slug),progress=r?.progress||{},status=progress.completed?'completed':r?'started':'new';
-        return {slug:c.slug,title:c.title,level:c.level,track:c.track||'general',topic:c.topic,cover_key:c.cover_key||'reading',translation_status:c.translation_status||'complete',summary:c.summary,revision:c.revision,order:c.order,word_count:c.text.split(/\s+/).length,question_count:c.questions.length,vocabulary_count:c.analysis.vocabulary.length,reading_id:r?.id||null,progress,status,favorite:progress.favorite===true};
+        return {slug:c.slug,title:c.title,level:c.level,track:c.track||'general',topic:c.topic,cover_key:c.cover_key||'reading',translation_status:c.translation_status||'complete',summary:c.summary,revision:c.revision,order:c.order,word_count:c.text.split(/\s+/).length,question_count:c.questions.length,question_types:[...new Set(c.questions.map(q=>q.kind))],estimated_minutes:Math.max(5,Math.round(c.text.split(/\s+/).length/120+c.questions.length*.75)),vocabulary_count:c.analysis.vocabulary.length,reading_id:r?.id||null,progress,status,favorite:progress.favorite===true};
       }).filter(x=>(!q.get('status')||x.status===q.get('status'))&&(favorite==='all'||x.favorite===(favorite==='yes'))).sort((a,b)=>a.order-b.order);
       const page=Math.max(1,Number(q.get('page')||1)),limit=Math.max(1,Math.min(300,Number(q.get('limit')||300)));
       return {items:items.slice((page-1)*limit,page*limit),total:items.length,page,limit,has_more:page*limit<items.length,topics:[...new Set(PREVIEW_SEED.lessons.filter(c=>!q.get('track')||(c.track||'general')===q.get('track')).map(x=>x.topic))].sort()};
@@ -222,6 +222,24 @@
       if(method==='PATCH'){if(r.catalog_slug)throw new Error('Không sửa nội dung bài soạn sẵn.');if(data.text!==r.text){r.analysis={};r.progress=r.progress?.favorite?{favorite:true}:{};}Object.assign(r,data,{updated_at:now()});save();}
       if(method==='DELETE'){db.readings=db.readings.filter(x=>x!==r);db.qa=db.qa.filter(x=>x.reading_id!==r.id);for(const k of Object.keys(db.lesson_attempts)){if(db.lesson_attempts[k].reading_id===r.id)delete db.lesson_attempts[k];}db.words.forEach(w=>{if(w.reading_id===r.id)w.reading_id=null;(w.occurrences||[]).forEach(x=>{if(x.reading_id===r.id)x.reading_id=null;});});save();return {deleted:true};}
       return R(r);
+    }
+    if(p==='/vocabulary/deck/'){
+      const decks=window.LexiDecks;
+      if(method==='GET'){
+        const name=q.get('name'),items=db.words.filter(w=>w.tags.includes(name));
+        if(!items.length||items.length>500)throw new Error('Bộ cần từ 1 đến 500 mục để xuất file.');
+        const payload=decks.pack(name,items);
+        if(new TextEncoder().encode(JSON.stringify(payload,null,2)).length>2*1024*1024-1024)throw new Error('Bộ từ quá lớn. Bạn chia nhỏ bộ hoặc dùng sao lưu toàn bộ kho nhé.');
+        return payload;
+      }
+      if(typeof data?.preview!=='boolean')throw new Error('Hãy xem trước bộ từ rồi lưu vào kho.');
+      const result=decks.normalize(data.deck),existing=new Map(db.words.map(w=>[decks.key(w),w]));
+      const items=result.items.map(w=>({...w,exists:existing.has(decks.key(w))}));
+      if(data.preview)return {name:result.name,items,new:items.filter(w=>!w.exists).length,existing:items.filter(w=>w.exists).length,duplicates:result.duplicates};
+      if(items.some(w=>{const old=existing.get(decks.key(w));return old&&!old.tags.includes(result.name)&&old.tags.length>=20;}))throw new Error('Một từ trùng đã có 20 nhãn. Bớt nhãn hoặc bỏ chọn từ trước khi nhập.');
+      const before=clone(db);let created=0;
+      try{for(const item of items)created+=Number(addWord(item)[1]);save();}catch(error){db=before;throw error;}
+      return {name:result.name,created,existing:items.length-created,total:items.length,duplicates:result.duplicates};
     }
     if(p==='/vocabulary/sources/'){
       const ids=new Set(db.words.flatMap(w=>(w.occurrences||[]).map(x=>x.reading_id)).filter(Boolean));

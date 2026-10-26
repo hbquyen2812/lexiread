@@ -1,0 +1,344 @@
+{
+  "slug": "ielts-citizen-weather",
+  "title": "Finding Weather in Private Diaries",
+  "level": "B2",
+  "topic": "IELTS · Lịch sử và dữ liệu",
+  "summary": "Nhật ký đời thường được chuyển thành dữ liệu nghiên cứu mà vẫn giữ ngày tháng, ngữ cảnh và độ bất định.",
+  "track": "ielts",
+  "revision": 2,
+  "order": 126,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc của LexiRead, dùng tình huống và kết quả giả định để luyện đọc. Không phải đề IELTS chính thức hay bài thi thử đầy đủ.",
+  "level_note": "Mức độ do người biên soạn ước lượng, chưa hiệu chuẩn CEFR; không quy đổi band IELTS.",
+  "translation_status": "complete",
+  "text": "A. In a fictional archive project, volunteers search household diaries for observations about weather. The notebooks were never intended as scientific records. Their writers noted rain because it interrupted a journey, or frost because it damaged a garden. Researchers nevertheless suspect that these ordinary concerns may preserve details absent from an official station record. The goal is not to turn every diary entry into a temperature reading. It is to assemble additional evidence about how weather was noticed and experienced in particular places.\n\nB. The volunteers first transcribe the words exactly as they appear. Spelling is preserved, and an unclear word is marked rather than silently corrected. A second person reviews each transcription against the scanned page. Only after that check does the team add searchable categories such as rain, snow or strong wind. Keeping the original wording beside the category allows later researchers to challenge the classification. Without that link, a convenient database label could gradually acquire more authority than the uncertain handwritten observation behind it.\n\nC. Dates present their own difficulties. A page may describe yesterday's storm even though the date at the top refers to the day of writing. Some diarists also leave several days between entries. Volunteers therefore distinguish an event date from an entry date and record a range when the timing cannot be resolved. The project does not force every observation into a precise day. Apparent precision would make the database easier to sort, but it could place the same storm on different dates for different writers.\n\nD. Language requires interpretation too. One writer's terrible cold might refer to weather, illness or an uncomfortable room. The surrounding sentences often help, but sometimes the meaning remains ambiguous. Those entries are retained with an uncertainty flag rather than included automatically in a cold-weather total. Silence is equally difficult to interpret. A diary without a rain reference may describe a dry day, or its writer may simply have had something more important to record. Missing mention is not treated as proof of missing rain.\n\nE. To examine a possible storm, the researchers compare accounts from nearby places and consult available station observations. Agreement can strengthen the case, but copied descriptions must not be counted as independent witnesses. A school notebook that reproduces a newspaper report adds a new document without necessarily adding a new observation. The team records links between such sources. It also keeps the social context: a farmer and a shopkeeper may describe the same weather differently because its consequences for their daily activities are different.\n\nF. The archive's greatest contribution may be its combination of physical events and human experience. Official measurements and personal descriptions need not compete for the status of the single best record. They answer overlapping but different questions. The responsible approach preserves that distinction and makes editorial choices visible. A database built from diaries becomes more useful when users can trace a claim back to its uncertain beginnings, rather than encounter a polished certainty that the original writer never expressed.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "A. Trong một dự án lưu trữ hư cấu, tình nguyện viên tìm các ghi chép về thời tiết trong những cuốn nhật ký cá nhân được các gia đình lưu giữ. Những cuốn sổ này vốn không được viết để làm tư liệu khoa học. Người viết nhắc đến mưa vì nó làm gián đoạn chuyến đi, hoặc sương giá vì nó làm hại vườn. Dù vậy, nhà nghiên cứu cho rằng những điều người viết quan tâm trong đời sống có thể lưu lại các chi tiết không có trong hồ sơ của trạm thời tiết chính thức. Mục tiêu không phải biến mọi dòng nhật ký thành số đo nhiệt độ. Họ muốn tập hợp thêm bằng chứng về cách con người quan sát và trải qua thời tiết ở từng nơi cụ thể."
+      },
+      {
+        "index": 1,
+        "vi": "B. Trước tiên, tình nguyện viên chép lại nguyên văn từng từ trong nhật ký. Cách viết và chính tả được giữ nguyên, từ khó đọc được đánh dấu chứ không âm thầm sửa. Người thứ hai đối chiếu mỗi bản chép với trang đã quét. Chỉ sau bước kiểm tra này, nhóm mới gắn các nhãn phân loại như mưa, tuyết hoặc gió mạnh để người dùng có thể tìm kiếm. Đặt lời ghi gốc cạnh nhãn phân loại giúp những người nghiên cứu sau này có thể kiểm tra lại cách phân loại đó. Nếu không có liên kết đó, một nhãn tiện dùng trong cơ sở dữ liệu có thể dần được xem là chắc chắn hơn chính ghi chép viết tay còn mơ hồ mà nó dựa vào."
+      },
+      {
+        "index": 2,
+        "vi": "C. Việc xác định ngày tháng cũng có những khó khăn riêng. Một trang có thể kể về cơn bão hôm trước, trong khi ngày ở đầu trang lại là ngày viết nhật ký. Một số người còn để cách vài ngày mới viết tiếp. Vì thế tình nguyện viên phân biệt ngày xảy ra sự kiện với ngày ghi nhật ký, và ghi khoảng thời gian nếu không xác định được. Dự án không cố gán cho mọi quan sát một ngày cụ thể. Việc ghi một ngày chính xác giúp cơ sở dữ liệu dễ sắp xếp hơn, nhưng đó có thể chỉ là sự chính xác bề ngoài: cùng một cơn bão có thể bị xếp vào những ngày khác nhau trong ghi chép của từng người."
+      },
+      {
+        "index": 3,
+        "vi": "D. Ngôn ngữ cũng cần diễn giải. Cụm “terrible cold” trong nhật ký có thể nói về cái lạnh của thời tiết, một cơn cảm nặng hoặc cảm giác khó chịu trong căn phòng. Các câu xung quanh thường giúp ích, nhưng đôi lúc nghĩa vẫn mơ hồ. Những mục đó được giữ kèm nhãn ghi rõ ý nghĩa còn chưa chắc chắn thay vì tự động cộng vào tổng số lần trời lạnh. Việc không nhắc đến thời tiết cũng khó diễn giải như vậy. Một trang nhật ký không nhắc đến mưa có thể đang kể về một ngày khô ráo, hoặc người viết đơn giản có việc quan trọng hơn để ghi. Không nhắc đến mưa không có nghĩa là hôm đó trời không mưa."
+      },
+      {
+        "index": 4,
+        "vi": "E. Để xem xét một cơn bão có thể đã xảy ra, nhà nghiên cứu so sánh các lời kể từ những nơi gần nhau và đối chiếu với số liệu trạm thời tiết hiện có. Sự trùng khớp có thể củng cố nhận định, nhưng những lời kể được chép lại từ nguồn khác không được tính là bằng chứng quan sát độc lập. Một cuốn vở học sinh chép lại tin trên báo giúp kho lưu trữ có thêm tài liệu, nhưng không nhất thiết có thêm một quan sát mới. Nhóm ghi rõ những mối liên hệ như vậy giữa các nguồn. Họ cũng lưu lại bối cảnh xã hội của người viết: nông dân và chủ cửa hàng có thể mô tả cùng một kiểu thời tiết khác nhau vì nó ảnh hưởng đến công việc hằng ngày của mỗi người theo cách khác nhau."
+      },
+      {
+        "index": 5,
+        "vi": "F. Đóng góp lớn nhất của kho tư liệu có thể là kết hợp những diễn biến thời tiết với trải nghiệm của con người. Số liệu chính thức và lời kể cá nhân không cần cạnh tranh để trở thành nguồn tư liệu duy nhất được coi là tốt nhất. Chúng trả lời những câu hỏi có phần giao nhau nhưng không hoàn toàn giống nhau. Cách làm có trách nhiệm là giữ rõ sự khác biệt ấy và công khai những quyết định biên tập. Cơ sở dữ liệu từ nhật ký sẽ hữu ích hơn nếu người dùng có thể lần theo một nhận định về những ghi chép ban đầu còn chưa chắc chắn. Điều đó tốt hơn việc chỉ đọc được một kết luận đã được trau chuốt đến mức chắc chắn, trong khi người viết gốc chưa từng khẳng định như vậy."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "assemble",
+        "pos": "verb",
+        "meaning_vi": "tập hợp lại",
+        "paragraph_index": 0,
+        "usage_pattern": "assemble evidence / information",
+        "example": "The team assembled evidence from several archives.",
+        "example_vi": "Nhóm tập hợp bằng chứng từ nhiều kho lưu trữ.",
+        "synonyms": [
+          "collect"
+        ],
+        "paraphrases": [
+          "bring separate pieces together"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "It is to assemble additional evidence about how weather was noticed and experienced in particular places."
+      },
+      {
+        "word": "transcribe",
+        "pos": "verb",
+        "meaning_vi": "chép lại nguyên văn",
+        "paragraph_index": 1,
+        "usage_pattern": "transcribe a recording / document",
+        "example": "Please transcribe the note exactly.",
+        "example_vi": "Hãy chép lại tờ ghi chú đúng nguyên văn.",
+        "synonyms": [
+          "copy"
+        ],
+        "paraphrases": [
+          "put existing words into a written record"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "The volunteers first transcribe the words exactly as they appear."
+      },
+      {
+        "word": "classification",
+        "pos": "noun",
+        "meaning_vi": "việc phân loại",
+        "paragraph_index": 1,
+        "usage_pattern": "challenge / review a classification",
+        "example": "The classification needs further review.",
+        "example_vi": "Việc phân loại cần được xem xét thêm.",
+        "synonyms": [
+          "categorisation"
+        ],
+        "paraphrases": [
+          "the process of assigning something to a group"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Keeping the original wording beside the category allows later researchers to challenge the classification."
+      },
+      {
+        "word": "resolved",
+        "pos": "verb (past participle)",
+        "meaning_vi": "được làm rõ hoặc giải quyết",
+        "paragraph_index": 2,
+        "usage_pattern": "resolve a difficulty / uncertainty",
+        "example": "The date could not be resolved.",
+        "example_vi": "Không thể xác định rõ ngày tháng.",
+        "synonyms": [
+          "settled"
+        ],
+        "paraphrases": [
+          "made clear after investigation"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Volunteers therefore distinguish an event date from an entry date and record a range when the timing cannot be resolved."
+      },
+      {
+        "word": "ambiguous",
+        "pos": "adjective",
+        "meaning_vi": "mơ hồ, có thể hiểu nhiều cách",
+        "paragraph_index": 3,
+        "usage_pattern": "an ambiguous phrase / statement",
+        "example": "The phrase has an ambiguous meaning.",
+        "example_vi": "Cụm từ có nghĩa mơ hồ.",
+        "synonyms": [
+          "unclear"
+        ],
+        "paraphrases": [
+          "open to more than one interpretation"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "The surrounding sentences often help, but sometimes the meaning remains ambiguous."
+      },
+      {
+        "word": "independent",
+        "pos": "adjective",
+        "meaning_vi": "độc lập, không bắt nguồn từ cùng nguồn",
+        "paragraph_index": 4,
+        "usage_pattern": "independent evidence / witnesses",
+        "example": "We need two independent observations.",
+        "example_vi": "Chúng ta cần hai quan sát độc lập.",
+        "synonyms": [
+          "separate"
+        ],
+        "paraphrases": [
+          "not derived from the same source"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Agreement can strengthen the case, but copied descriptions must not be counted as independent witnesses."
+      },
+      {
+        "word": "trace",
+        "pos": "verb",
+        "meaning_vi": "lần theo để tìm nguồn gốc",
+        "paragraph_index": 5,
+        "usage_pattern": "trace something back to + source",
+        "example": "Readers can trace the claim to its source.",
+        "example_vi": "Người đọc có thể lần theo nhận định để tìm nguồn gốc của nó.",
+        "synonyms": [
+          "track"
+        ],
+        "paraphrases": [
+          "follow the history or origin of something"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "A database built from diaries becomes more useful when users can trace a claim back to its uncertain beginnings, rather than encounter a polished certainty that the original writer never expressed."
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "kind": "matching_heading",
+      "prompt": "Choose the best heading for paragraph B.",
+      "options": [
+        "Teaching diarists to write more clearly",
+        "Correcting every old-fashioned spelling",
+        "Replacing scans with weather forecasts",
+        "Preserving a path from classification back to original words"
+      ],
+      "answer": 3,
+      "paragraph_index": 1,
+      "evidence": "Keeping the original wording beside the category allows later researchers to challenge the classification.",
+      "explanation_vi": "Đoạn B trình bày các bước chép lại, kiểm tra và phân loại, đồng thời giữ lời ghi gốc để người đọc có thể đối chiếu.",
+      "id": "q1"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "The notebooks were originally created as scientific weather records.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "The notebooks were never intended as scientific records.",
+      "explanation_vi": "FALSE: Cụm never intended cho biết những cuốn nhật ký này vốn không được viết nhằm mục đích khoa học.",
+      "id": "q2"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "An unclear handwritten word is marked instead of being silently corrected.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "an unclear word is marked rather than silently corrected.",
+      "explanation_vi": "TRUE: Từ khó đọc được đánh dấu để thể hiện điểm chưa chắc chắn, thay vì bị tự ý sửa.",
+      "id": "q3"
+    },
+    {
+      "kind": "gap_fill",
+      "prompt": "Complete using NO MORE THAN TWO WORDS from the passage: A reviewer checks the transcription against the _____.",
+      "options": [],
+      "answer": "scanned page",
+      "paragraph_index": 1,
+      "evidence": "reviews each transcription against the scanned page",
+      "explanation_vi": "Scanned page là bản quét của trang nhật ký, được dùng để đối chiếu với bản chép lại.",
+      "max_words": 2,
+      "accepted_answers": [
+        "scanned page",
+        "page"
+      ],
+      "id": "q4"
+    },
+    {
+      "kind": "gap_fill",
+      "prompt": "Complete using NO MORE THAN TWO WORDS from the passage: The project distinguishes an event date from an _____.",
+      "options": [],
+      "answer": "entry date",
+      "paragraph_index": 2,
+      "evidence": "distinguish an event date from an entry date",
+      "explanation_vi": "Entry date chỉ ngày ghi nhật ký, có thể khác ngày xảy ra sự kiện.",
+      "max_words": 2,
+      "accepted_answers": [
+        "entry date"
+      ],
+      "id": "q5"
+    },
+    {
+      "kind": "short_answer",
+      "prompt": "Answer using NO MORE THAN TWO WORDS from the passage: What is attached to an entry whose meaning remains ambiguous?",
+      "options": [],
+      "answer": "uncertainty flag",
+      "paragraph_index": 3,
+      "evidence": "retained with an uncertainty flag",
+      "explanation_vi": "Uncertainty flag là dấu đánh dấu rằng ý nghĩa còn chưa chắc chắn. Nhóm vẫn giữ mục đó, chứ không tự loại bỏ.",
+      "max_words": 2,
+      "accepted_answers": [
+        "uncertainty flag",
+        "flag"
+      ],
+      "id": "q6"
+    },
+    {
+      "kind": "matching_information",
+      "prompt": "Which paragraph warns that several documents may represent just one observation? Choose A–F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "answer": 4,
+      "paragraph_index": 4,
+      "evidence": "adds a new document without necessarily adding a new observation.",
+      "explanation_vi": "Đoạn E chỉ ra rằng có thêm một tài liệu chưa chắc đã có thêm một quan sát độc lập, vì tài liệu có thể chép từ nguồn khác.",
+      "id": "q7"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Most diaries in the project were written by farmers.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 4,
+      "evidence": "a farmer and a shopkeeper may describe the same weather differently",
+      "explanation_vi": "NOT GIVEN: Nông dân và chủ cửa hàng chỉ được dùng làm ví dụ. Bài không cho biết bao nhiêu người viết nhật ký thuộc từng nghề.",
+      "id": "q8"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes official and personal records can serve different useful purposes.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 5,
+      "evidence": "They answer overlapping but different questions.",
+      "explanation_vi": "YES: Theo tác giả, số đo chính thức và lời kể cá nhân có thể bổ sung cho nhau khi trả lời những câu hỏi khác nhau.",
+      "id": "q9"
+    },
+    {
+      "kind": "inference",
+      "prompt": "Why is no reference to rain not automatically counted as a dry day?",
+      "options": [
+        "The writer may have chosen to record something else",
+        "Every diarist deliberately avoided weather descriptions",
+        "The project has no access to any station records",
+        "The categories cannot include rain"
+      ],
+      "answer": 0,
+      "paragraph_index": 3,
+      "evidence": "its writer may simply have had something more important to record",
+      "explanation_vi": "Người viết có thể chỉ chọn ghi những việc họ thấy quan trọng hơn. Vì vậy, không nhắc đến mưa chưa đủ để kết luận trời không mưa.",
+      "id": "q10"
+    }
+  ],
+  "faqs": []
+}

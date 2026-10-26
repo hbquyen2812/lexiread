@@ -225,7 +225,7 @@ class EditorialTests(TestCase):
         obj=ToeicPractice.objects.create(slug=content['slug'],title=content['title'],content=content,published=True)
         answers={q['id']:q['answer'] for q in content['questions']}
         ToeicAttempt.objects.create(owner=self.learner,set_slug=obj.pk,answers=answers,result=grade_toeic(content,answers),snapshot=content,token=uuid.uuid4())
-        obj.content=copy.deepcopy(content);obj.revision=2
+        obj.content=copy.deepcopy(content);obj.revision=content['revision']+1
         obj.content['questions'][0]['answer']=(obj.content['questions'][0]['answer']+1)%4
         obj.full_clean();obj.save()
         import_library(self.editor,export_library(self.learner))

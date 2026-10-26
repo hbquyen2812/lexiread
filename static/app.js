@@ -12,7 +12,7 @@ const state = {boot:null,readings:[],reading:null,readingTab:'text',translation:
   analyticsDays:30,lastTracked:null,routeEpoch:0};
 const asList = value => Array.isArray(value) ? value.map(String) : typeof value==='string' ? value.split('|').map(s=>s.trim()).filter(Boolean) : [];
 const modes = {flashcard:'Flashcard · Lật thẻ',meaning:'ABCD · Anh → Việt',reverse:'ABCD · Việt → Anh',
-  synonym:'Chọn synonym',paraphrase:'Nhận diện paraphrase',cloze:'Điền từ trong câu',typing:'Gõ từ tiếng Anh'};
+  synonym:'Chọn từ gần nghĩa',paraphrase:'Chọn cách diễn đạt tương đương',cloze:'Điền từ trong câu',typing:'Gõ từ tiếng Anh'};
 function toast(message, bad=false){
   const d=document.createElement('div');d.className='toast'+(bad?' error':'');d.textContent=message;
   $('#toasts').appendChild(d);setTimeout(()=>d.remove(),bad?9000:4500);
@@ -28,11 +28,11 @@ async function api(path,{method='GET',data=null}={}){
   }
   let r;
   try{r=await fetch('/api'+path,{method,headers,body,credentials:'same-origin'});}
-  catch(e){throw new Error('Không kết nối được máy chủ. Kiểm tra ứng dụng và kết nối mạng.');}
+  catch(e){throw new Error('Chưa kết nối được. Bạn kiểm tra mạng rồi thử lại nhé.');}
   const json=(r.headers.get('content-type')||'').includes('application/json');
   const result=json?await r.json():await r.text();
   if(r.status===401){location.href='/login/';throw new Error('Phiên đăng nhập đã hết hạn.');}
-  if(!r.ok)throw new Error(json?result.error:(r.status===403?'Phiên bảo mật đã hết hạn. Tải lại trang rồi thử lại.':'Máy chủ báo lỗi '+r.status+'. Kiểm tra log ứng dụng.'));
+  if(!r.ok)throw new Error(json?result.error:(r.status===403?'Phiên bảo mật đã hết hạn. Tải lại trang rồi thử lại.':'Chưa thực hiện được lúc này. Bạn thử lại sau nhé.'));
   return result;
 }
 async function busy(button,fn,label='Đang xử lý…'){
@@ -83,7 +83,7 @@ async function refreshBoot(){
   $('#nav-due').textContent=state.boot.stats.due||'';
   $('#analytics-nav')?.classList.toggle('hidden',!state.boot.is_staff);
 }
-function heading(title,desc,buttons=''){return `<div class="page-heading"><div><span class="eyebrow">YOUR PERSONAL LEARNING LIBRARY</span><h1>${esc(title)}</h1><p>${esc(desc)}</p></div><div class="button-row">${buttons}</div></div>`;}
+function heading(title,desc,buttons=''){return `<div class="page-heading"><div><h1>${esc(title)}</h1><p>${esc(desc)}</p></div><div class="button-row">${buttons}</div></div>`;}
 function readingStatus(r){return r.status==='completed'?'Đã đọc':'Đang đọc';}
 function readingCard(r){return `<article class="reading-card"><div class="tags"><span class="chip">${readingStatus(r)}</span>${r.favorite?'<span class="chip warm">★ Yêu thích</span>':''}${r.has_analysis?'<span class="chip warm">Có bản dịch</span>':''}</div><h3 data-no-i18n>${esc(r.title)}</h3><p class="muted" style="font-size:12px;margin:0">${count(r.word_count)} từ · cập nhật ${formatDate(r.updated_at)}</p><div class="card-footer"><span class="muted" style="font-size:11px">${esc(r.source_name||'Bài đọc của bạn')}</span><div class="button-row"><button class="link-btn" data-action="toggle-reading-favorite" data-id="${esc(r.id)}" data-favorite="${r.favorite?'true':'false'}" aria-pressed="${r.favorite?'true':'false'}" aria-label="${r.favorite?'Bỏ yêu thích':'Thêm yêu thích'} ${esc(r.title)}">${r.favorite?'★':'☆'}</button><a href="#reading/${esc(r.id)}" class="btn small secondary">Mở bài →</a></div></div></article>`;}
 async function homePage(epoch){return readingHome(epoch);}
@@ -114,23 +114,25 @@ async function readerPage(id,epoch){
 function renderReader(){
   const r=state.reading,a=r.analysis||{},v=a.vocabulary||[],g=a.grammar||[],curated=!!r.catalog_slug;
   const hasTranslations=!!a.translations?.length, showTranslation=state.translation&&hasTranslations;
-  const tabs=[['text','Bài đọc'],['words',`Từ gợi ý (${v.length})`],['grammar',`Cấu trúc (${g.length})`],...(curated?[['quiz','Hiểu bài']]:[]),['help','Hỏi đáp & giải thích']];
+  const hasHelp=!!(state.boot?.ai_enabled||r.lesson?.faqs?.length||state.qaHistory?.length||state.readingTab==='help');
+  const tabs=[['text','Bài đọc'],...(v.length?[['words',`Từ gợi ý (${v.length})`]]:[]),...(g.length?[['grammar','Cách dùng trong bài']]:[]),...(curated?[['quiz','Hiểu bài']]:[]),...(hasHelp?[['help','Giải thích thêm']]:[])];
+  if(!tabs.some(([key])=>key===state.readingTab))state.readingTab='text';
   $('#main').innerHTML=`<a href="${curated?(r.lesson?.track==='ielts'?'#ielts':'#catalog'):'#readings'}" class="link-btn">← ${curated?(r.lesson?.track==='ielts'?'Luyện IELTS Reading':'Thư viện luyện đọc'):'Bài đọc của tôi'}</a><div style="height:17px"></div>`+
    heading(r.title,`${curated?(r.lesson?.level+' (ước lượng) · '+r.lesson?.topic+' · '):''}${r.word_count} từ · ${r.paragraphs.length} đoạn`,
    `<button class="btn small" data-action="toggle-reading-favorite" data-id="${esc(r.id)}" data-favorite="${r.favorite?'true':'false'}" aria-pressed="${r.favorite?'true':'false'}">${r.favorite?'★ Đã yêu thích':'☆ Yêu thích'}</button>${!curated?'<button class="btn small" data-action="edit-reading">Sửa bài</button><button class="btn small danger" data-action="delete-reading">Xóa</button>':''}<button class="btn small secondary" data-action="study-reading">Ôn từ đã lưu từ bài này ↗</button>`)+
-   `${curated?`<div class="notice">${esc(r.lesson?.provenance||'Bài luyện soạn riêng.')} ${esc(r.lesson?.level_note||'')} Nội dung và câu hỏi được lưu theo phiên bản ${r.lesson?.revision||1}.</div>`:''}
-   <div class="toolbar">${!curated?`<button class="btn primary" data-action="analyse-reading">✦ ${r.has_analysis?'Phân tích lại bằng AI':'Dịch & gợi ý bằng AI'}</button><button class="btn" data-action="reading-prompt">Copy prompt / Dán JSON</button>`:''}${hasTranslations?`<label class="check-label"><input type="checkbox" id="translation-toggle" ${state.translation?'checked':''}> Hiện bản dịch</label>`:'<span class="fineprint">Bài đọc tiếng Anh · chưa có bản dịch</span>'}<label class="font-control">Cỡ chữ<select id="reading-font">${[17,19,22].map(n=>`<option value="${n}" ${(state.readerFont||19)===n?'selected':''}>${n}</option>`).join('')}</select></label></div>
+   `${curated?`<details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(r.lesson?.provenance||'Bài luyện do LexiRead biên soạn.')} ${esc(r.lesson?.level_note||'')}</p><small>Bản bạn đang học: ${r.lesson?.revision||1}.</small></details>`:''}
+   <div class="toolbar">${!curated?`<details class="lesson-about"><summary>Thêm bản dịch và gợi ý</summary><div class="button-row">${state.boot?.ai_enabled?`<button class="btn primary" data-action="analyse-reading">✦ ${r.has_analysis?'Tạo lại gợi ý':'Dịch và gợi ý từ'}</button>`:''}<button class="btn" data-action="reading-prompt">Nhập gợi ý từ công cụ khác</button></div></details>`:''}${hasTranslations?`<label class="check-label"><input type="checkbox" id="translation-toggle" ${state.translation?'checked':''}> Hiện bản dịch</label>`:'<span class="fineprint">Chưa có bản dịch</span>'}<label class="font-control">Cỡ chữ<select id="reading-font">${[17,19,22].map(n=>`<option value="${n}" ${(state.readerFont||19)===n?'selected':''}>${n}</option>`).join('')}</select></label></div>
    <div class="reading-progress-bar"><button class="link-btn" data-action="jump-bookmark">Dấu trang: đoạn ${(r.progress?.paragraph||0)+1} ↗</button><span>${r.progress?.quiz_total?`Hiểu bài: tốt nhất ${r.progress.quiz_best}/${r.progress.quiz_total}`:''}</span><button class="btn small ${r.progress?.completed?'secondary':''}" data-action="complete-reading">${r.progress?.completed?'✓ Đã đọc · bỏ đánh dấu':'Đánh dấu đã đọc'}</button></div>
    <div class="reader-tabs">${tabs.map(([k,l])=>`<button data-action="reader-tab" data-tab="${k}" class="${state.readingTab===k?'active':''}">${l}</button>`).join('')}</div><div id="reader-content" style="--reading-font-size:${state.readerFont||19}px"></div>`;
   const box=$('#reader-content');
   if(state.readingTab==='text'){
     const tr=new Map((a.translations||[]).map(t=>[t.index,t.vi]));
-    box.innerHTML=(!tr.size?'<div class="notice">Bài này chưa có bản dịch tiếng Việt. Bạn vẫn có thể đọc tiếng Anh, làm câu hỏi và lưu từ vựng.</div>':'<p class="fineprint">Từ gợi ý được tô nhẹ. Bôi đen từ để lưu; chọn cả câu để hỏi. Bạn có thể ẩn bản dịch và đọc tiếng Anh trước.</p>')+
+    box.innerHTML='<p class="fineprint">Bôi đen từ hoặc cụm từ bạn muốn lưu.</p>'+
       (showTranslation?'<div class="reader-labels"><b>ENGLISH · VĂN BẢN GỐC</b><span>TIẾNG VIỆT · BẢN DỊCH THAM KHẢO</span></div>':'')+
-      r.paragraphs.map((p,i)=>`<section class="parallel-row ${showTranslation?'':'single'}" data-paragraph="${i}"><div><div class="paragraph-tools"><span class="paragraph-index">ĐOẠN ${String(i+1).padStart(2,'0')}</span><button class="link-btn" data-action="bookmark-paragraph" data-index="${i}">${r.progress?.paragraph===i?'◆':'◇'} Đọc đến đây</button><button class="link-btn" data-action="ask-paragraph" data-index="${i}">Hỏi đoạn này</button></div><p class="reader-en" data-index="${i}">${highlight(p,[...v.map(w=>w.word),...(state.readerWords||[]).map(w=>w.word)])}</p></div>${showTranslation?`<div><span class="paragraph-index">BẢN DỊCH ${String(i+1).padStart(2,'0')}</span><p class="reader-vi">${esc(tr.get(i)||'Chưa dịch đoạn này.')}</p></div>`:''}</section>`).join('');
+      r.paragraphs.map((p,i)=>`<section class="parallel-row ${showTranslation?'':'single'}" data-paragraph="${i}"><div><div class="paragraph-tools"><span class="paragraph-index">ĐOẠN ${String(i+1).padStart(2,'0')}</span><button class="link-btn" data-action="bookmark-paragraph" data-index="${i}">${r.progress?.paragraph===i?'◆':'◇'} Đọc đến đây</button>${state.boot?.ai_enabled?`<button class="link-btn" data-action="ask-paragraph" data-index="${i}">Hỏi đoạn này</button>`:''}</div><p class="reader-en" data-index="${i}">${highlight(p,[...v.map(w=>w.word),...(state.readerWords||[]).map(w=>w.word)])}</p></div>${showTranslation?`<div><span class="paragraph-index">BẢN DỊCH ${String(i+1).padStart(2,'0')}</span><p class="reader-vi">${esc(tr.get(i)||'Chưa dịch đoạn này.')}</p></div>`:''}</section>`).join('');
   }else if(state.readingTab==='words'){
     box.innerHTML=v.length?`<div class="section-title"><div><h2>Chọn những từ bạn cần học</h2><p>Chưa lưu tự động. Bạn có thể sửa lại từng thẻ sau khi lưu.</p></div><button class="btn primary" data-action="save-candidates">Lưu mục đã chọn</button></div><label class="check-label" style="margin-bottom:15px"><input id="select-all-candidates" type="checkbox"> Chọn tất cả</label>`+
-      v.map((w,i)=>`<article class="candidate"><input class="candidate-check" type="checkbox" value="${i}" aria-label="Chọn ${esc(w.word)}"><div class="candidate-body"><h3>${esc(w.word)} <small class="muted">${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}<span class="chip warm">${r.catalog_slug?'Soạn sẵn · có thể chỉnh thẻ sau khi lưu':'Gợi ý AI · cần bạn duyệt'}</span></div></article>`).join(''):empty('Chưa có từ gợi ý','Phân tích bài đọc để chọn từ; hoặc bôi đen từ trong phần tiếng Anh.');
+      v.map((w,i)=>`<article class="candidate"><input class="candidate-check" type="checkbox" value="${i}" aria-label="Chọn ${esc(w.word)}"><div class="candidate-body"><h3>${esc(w.word)} <small class="muted">${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}${r.catalog_slug?'':'<span class="chip warm">Gợi ý AI · cần bạn kiểm tra</span>'}</div></article>`).join(''):empty('Chưa có từ gợi ý','Phân tích bài đọc để chọn từ; hoặc bôi đen từ trong phần tiếng Anh.');
   }else if(state.readingTab==='grammar'){
     box.innerHTML=g.length?g.map(x=>`<article class="panel grammar-card"><h3 class="pattern">${esc(x.pattern)}</h3><blockquote class="quote">${esc(x.evidence)}</blockquote><p>${esc(x.explanation_vi)}</p><div class="notice"><b>Ví dụ luyện tập:</b> ${esc(x.example)}<br>${esc(x.example_vi)}</div></article>`).join(''):empty('Chưa có cấu trúc gợi ý','Dùng phân tích bài đọc hoặc nhập kết quả JSON theo mẫu.');
   }else{readingExtraTab(box,r);}
@@ -143,7 +145,8 @@ async function vocabPage(epoch){
   if(!state.vocab.length&&data.total&&f.page>1){state.filters.page=Math.max(1,Math.ceil(data.total/data.limit));return vocabPage(epoch);}
   state.readingSources=[...new Map((sources.items||[]).map(r=>[r.id,r])).values()].sort((a,b)=>a.title.localeCompare(b.title,'vi'));
   $('#main').innerHTML=heading('Kho từ của tôi',`${data.total} thẻ theo bộ lọc hiện tại. Từ, nghĩa, ngữ cảnh và lịch ôn — trong cùng một nơi.`,
-     '<button class="btn" data-action="bulk-open">Nhập nhiều từ</button><button class="btn primary" data-action="new-word">+ Thêm từ</button>')+
+     '<a class="btn" href="#word-import">Tạo / nhập bộ từ</a><button class="btn primary" data-action="new-word">+ Thêm từ</button>')+
+     (f.tag?`<div class="button-row deck-library-actions"><button class="btn small" data-action="study-deck">Ôn bộ này</button><button class="btn small" data-action="export-deck">Tải bộ từ</button></div>`:'')+
      `<div class="toolbar"><input type="search" id="vocab-search" class="search" placeholder="Tìm từ, nghĩa hoặc ghi chú…" value="${esc(f.q)}" aria-label="Tìm từ"><select id="vocab-tag" aria-label="Bộ từ">${tagOptions(f.tag)}</select><select id="vocab-reading" aria-label="Bài nguồn">${readingSourceOptions(f.reading)}</select><select id="vocab-scope" aria-label="Trạng thái">${scopeOptions(f.scope)}</select><select id="vocab-sort" aria-label="Sắp xếp từ">${[['newest','Mới thêm'],['oldest','Cũ nhất'],['word','Theo từ A–Z'],['due','Lịch ôn gần nhất']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="filter-vocab">Lọc</button></div>`+
      (data.items.length?`<div class="table-wrap"><table><thead><tr><th>TỪ / CỤM TỪ</th><th>NGHĨA ĐANG HỌC</th><th>BỘ TỪ & TIẾN ĐỘ</th><th></th></tr></thead><tbody>${data.items.map(v=>`<tr><td><div class="word">${esc(v.word)}</div><span class="muted">${esc(v.pos||'Từ / cụm từ')}${v.verified?' · Đã duyệt':''}</span></td><td class="meaning-cell">${esc(v.meaning_vi)}${lexicalRelations(v)}<details class="source-context"><summary>Cấu trúc & ví dụ</summary>${lexicalDetails({...v,synonyms:[],paraphrases:[]})}</details></td><td><div class="tags">${chips(v.tags)}</div><span class="muted">${v.due?'Đến hạn ôn':'Ôn tiếp '+formatDate(v.due_at)}${v.lapses?' · '+v.lapses+' lần quên':''}</span>${v.reading_id?`<div><a class="link-btn" href="#reading/${esc(v.reading_id)}">${esc(v.source_label||'Mở bài nguồn')} →</a></div>`:''}</td><td><button class="btn small" data-action="edit-word" data-id="${esc(v.id)}">Sửa</button></td></tr>`).join('')}</tbody></table></div><div class="pagination"><span>Trang ${data.page} / ${Math.max(1,Math.ceil(data.total/data.limit))}</span><div class="button-row"><button class="btn small" data-action="vocab-prev" ${f.page<=1?'disabled':''}>← Trước</button><button class="btn small" data-action="vocab-next" ${f.page*data.limit>=data.total?'disabled':''}>Sau →</button></div></div>`:
        empty('Không có thẻ phù hợp','Thử đổi bộ lọc hoặc thêm những từ đầu tiên.'));
@@ -192,7 +195,7 @@ function blankEntry(){return {word:'',pos:'',meaning_vi:'',synonyms:[],paraphras
 function editor(v=null,id=null){
   if(v!==null){state.editing={...blankEntry(),...v};state.editId=id;}
   const w=state.editing||blankEntry();
-  openModal(state.editId?'Sửa thẻ từ vựng':'Giữ lại một từ mới',`<form id="word-form"><div class="form-grid"><label>Từ / cụm từ<input id="word-word" value="${esc(w.word)}" maxlength="160" required></label><label>Từ loại<input id="word-pos" value="${esc(w.pos)}" placeholder="adj, n, v, phrase…" maxlength="40"></label><label class="span-2">Nghĩa tiếng Việt — theo ngữ cảnh<textarea id="word-meaning" rows="2" required>${esc(w.meaning_vi)}</textarea></label><label class="span-2">Ngữ cảnh gốc<textarea id="word-context" rows="3">${esc(w.context)}</textarea><span class="field-hint">Giữ nguyên câu gốc để phân biệt những nghĩa khác nhau.</span></label><div class="span-2 button-row" style="margin-bottom:18px"><button type="button" class="btn small secondary" data-action="lookup-word">✦ AI gợi ý nghĩa</button><button type="button" class="btn small" data-action="word-prompt">Copy prompt / Dán JSON</button></div><label>Synonyms<input id="word-synonyms" value="${esc(asList(w.synonyms).join(' | '))}" placeholder="relevant | applicable"><span class="field-hint">Ngăn cách các mục bằng dấu |</span></label><label>Paraphrases<input id="word-paraphrases" value="${esc(asList(w.paraphrases).join(' | '))}" placeholder="directly related to the topic"></label><label class="span-2">Cấu trúc / cụm từ thường dùng<input id="word-usage-pattern" value="${esc(w.usage_pattern||'')}" maxlength="300" placeholder="depend on + noun / be interested in + V-ing"></label><label>Ví dụ ngắn (một câu cơ bản)<textarea id="word-example" rows="2">${esc(w.example)}</textarea></label><label>Nghĩa của ví dụ<textarea id="word-example-vi" rows="2">${esc(w.example_vi)}</textarea></label><label class="span-2">Ghi chú phân biệt / giới hạn thay thế<textarea id="word-note" rows="2">${esc(w.note)}</textarea></label><label class="span-2">Bộ từ / tags<input id="word-tags" value="${esc(asList(w.tags).join(' | '))}" placeholder="Từ cá nhân | Công việc"></label><label class="span-2 check-label"><input type="checkbox" id="word-verified" ${w.verified?'checked':''}> Tôi đã kiểm tra nghĩa và ngữ cảnh của thẻ này.</label></div></form><div class="notice">Một từ có nhiều nghĩa có thể có nhiều thẻ. Gợi ý AI không tự được đánh dấu “đã duyệt”.</div>`,
+  openModal(state.editId?'Sửa thẻ từ vựng':'Giữ lại một từ mới',`<form id="word-form"><div class="form-grid"><label>Từ / cụm từ<input id="word-word" value="${esc(w.word)}" maxlength="160" required></label><label>Từ loại<input id="word-pos" value="${esc(w.pos)}" placeholder="adj, n, v, phrase…" maxlength="40"></label><label class="span-2">Nghĩa tiếng Việt — theo ngữ cảnh<textarea id="word-meaning" rows="2" required>${esc(w.meaning_vi)}</textarea></label><label class="span-2">Ngữ cảnh gốc<textarea id="word-context" rows="3">${esc(w.context)}</textarea><span class="field-hint">Giữ nguyên câu gốc để phân biệt những nghĩa khác nhau.</span></label><div class="span-2 button-row" style="margin-bottom:18px">${state.boot?.ai_enabled?'<button type="button" class="btn small secondary" data-action="lookup-word">✦ Gợi ý nghĩa</button>':''}<details class="lesson-about"><summary>Thêm gợi ý từ công cụ khác</summary><button type="button" class="btn small" data-action="word-prompt">Mở hướng dẫn nhập</button></details></div><label>Từ gần nghĩa<input id="word-synonyms" value="${esc(asList(w.synonyms).join(' | '))}" placeholder="relevant | applicable"><span class="field-hint">Ngăn cách các mục bằng dấu |</span></label><label>Cách diễn đạt tương đương<input id="word-paraphrases" value="${esc(asList(w.paraphrases).join(' | '))}" placeholder="directly related to the topic"></label><label class="span-2">Cấu trúc / cụm từ thường dùng<input id="word-usage-pattern" value="${esc(w.usage_pattern||'')}" maxlength="300" placeholder="depend on + noun / be interested in + V-ing"></label><label>Ví dụ ngắn (một câu cơ bản)<textarea id="word-example" rows="2">${esc(w.example)}</textarea></label><label>Nghĩa của ví dụ<textarea id="word-example-vi" rows="2">${esc(w.example_vi)}</textarea></label><label class="span-2">Lưu ý khi dùng từ<textarea id="word-note" rows="2">${esc(w.note)}</textarea></label><label class="span-2">Nhãn để dễ tìm lại<input id="word-tags" value="${esc(asList(w.tags).join(' | '))}" placeholder="Từ cá nhân | Công việc"></label><label class="span-2 check-label"><input type="checkbox" id="word-verified" ${w.verified?'checked':''}> Tôi đã kiểm tra nghĩa và ngữ cảnh của thẻ này.</label></div></form><div class="notice">Một từ có nhiều nghĩa có thể có nhiều thẻ. Gợi ý AI không tự được đánh dấu “đã duyệt”.</div>`,
       `${state.editId?'<button class="btn danger" style="margin-right:auto" data-action="delete-word">Xóa thẻ</button>':''}<button class="btn" data-action="close-modal">Hủy</button><button class="btn primary" data-action="save-word">Lưu thẻ</button>`,true);
 }
 function readEditor(){
@@ -267,7 +270,7 @@ function renderStage(){
   const s=state.study,stage=$('#study-stage');if(!stage)return;
   if(!s){stage.innerHTML=empty('Một lượt ôn nhỏ, một bước tiến','Flashcard để nhớ nghĩa. ABCD và gõ từ để tự kiểm tra. Bạn không cần đặt câu dài.');return;}
   if(s.finished){
-    stage.innerHTML=`<div class="session-finish"><div class="finish-icon">✓</div><h2>Bạn đã hoàn thành lượt ôn.</h2><p class="muted">${s.mode==='flashcard'?`${s.initialCount} thẻ gốc · ${s.done} lượt đánh giá${s.retryCount?` · ${s.retryCount} thẻ được gặp lại`:''}.`:`${s.done} câu đã được lưu tiến độ. Đúng ${s.correct}/${s.done} câu.`}</p><p class="fineprint">Lịch ôn tiếp theo được tính riêng cho từng thẻ. Đây là lịch giãn cách đơn giản, không phải FSRS.</p><div class="button-row"><button class="btn primary" data-action="start-study">Luyện lượt khác</button><a class="btn" href="#vocabulary">Xem kho từ</a></div></div>`;return;
+    stage.innerHTML=`<div class="session-finish"><div class="finish-icon">✓</div><h2>Bạn đã hoàn thành lượt ôn.</h2><p class="muted">${s.mode==='flashcard'?`${s.initialCount} thẻ gốc · ${s.done} lượt đánh giá${s.retryCount?` · ${s.retryCount} thẻ được gặp lại`:''}.`:`${s.done} câu đã được lưu tiến độ. Đúng ${s.correct}/${s.done} câu.`}</p><p class="fineprint">Mỗi thẻ sẽ được hẹn ôn lại theo mức bạn vừa chọn.</p><div class="button-row"><button class="btn primary" data-action="start-study">Luyện lượt khác</button><a class="btn" href="#vocabulary">Xem kho từ</a></div></div>`;return;
   }
   const count=s.mode==='flashcard'?s.cards.length:Number(state.studySettings.limit);
   let content=`<div class="study-top"><span>${esc(modes[s.mode])}${s.mode==='flashcard'&&s.retryCount?` · ${s.retryCount} lượt học lại`:''}</span><span>${s.done} / ${count}</span></div><div class="progress-track"><div class="progress-fill" style="width:${Math.min(100,s.done/count*100)}%"></div></div>${s.lastReview?`<div class="notice success">Đã lưu “${esc(s.lastReview.word)}”. Ôn tiếp ${esc(formatNextDue(s.lastReview.due_at))}.</div>`:''}`;
@@ -329,34 +332,21 @@ function toeicModeCard(mode,items){
   const meta=mode==='parts-5-6'?{number:'01',title:'Ngữ pháp & từ vựng',parts:'Part 5–6',desc:'Củng cố dạng từ, giới từ, liên từ và hoàn thành văn bản.'}:{number:'02',title:'Đọc hiểu',parts:'Part 7',desc:'Đọc email, thông báo, bài đơn và bài kép trong ngữ cảnh công việc.'};
   return `<section class="toeic-mode panel"><div class="toeic-mode-number">${meta.number}</div><span class="eyebrow">${meta.parts}</span><h2>${meta.title}</h2><p>${meta.desc}</p><div class="toeic-set-list">${items.map(item=>`<article><div><strong>${esc(item.title)}</strong><span>${esc(item.level)} · ${item.question_count} câu · ${item.duration_minutes} phút</span>${item.attempt_count?`<small>Đã làm ${item.attempt_count} lượt · tốt nhất ${item.best_score}/${item.question_count}</small>`:'<small>Chưa làm lần nào</small>'}</div><a class="btn small primary" href="#toeic-set/${esc(item.slug)}">${item.attempt_count?'Luyện lại':'Bắt đầu'} →</a></article>`).join('')}</div></section>`;
 }
-async function toeicPage(epoch){
+async function toeicPage(epoch,part=''){
   const data=await api('/toeic/');if(epoch!==state.routeEpoch)return;
-  const grouped={'parts-5-6':data.items.filter(x=>x.mode==='parts-5-6'),'part-7':data.items.filter(x=>x.mode==='part-7')};
-  $('#main').innerHTML=heading('Luyện TOEIC Reading','Hai hướng luyện ngắn, có chấm điểm và lưu tiến độ riêng cho tài khoản của bạn.')+
-    `<div class="catalog-note"><b>Cấu trúc Reading theo ETS</b><span>75 phút · 100 câu: Part 5 có 30 câu, Part 6 có 16 câu, Part 7 có 54 câu. LexiRead dùng bộ mini tự biên soạn để luyện kỹ năng; không phải đề ETS và không quy đổi điểm TOEIC.</span><a class="link-btn" href="#resources/toeic">Tài liệu luyện thi chính thức từ ETS ↗</a></div>`+
-    `<div class="toeic-mode-grid">${toeicModeCard('parts-5-6',grouped['parts-5-6'])}${toeicModeCard('part-7',grouped['part-7'])}</div>`+
-    `<section class="panel toeic-strategy"><span class="eyebrow">CÁCH LUYỆN HIỆU QUẢ</span><div class="toeic-steps"><div><b>1. Làm có giờ</b><span>Giữ nhịp và không xem đáp án giữa chừng.</span></div><div><b>2. Đọc bằng chứng</b><span>Mỗi câu sai có giải thích; Part 7 chỉ rõ câu gốc.</span></div><div><b>3. Lưu từ trọng tâm</b><span>Đưa từ vào kho và ôn lại theo lịch chống quên.</span></div></div></section>`;
+  $('#main').innerHTML=heading('Thư viện TOEIC Reading','Chọn Part, chủ đề và thời gian. Làm bài, đối chiếu bằng chứng rồi lưu từ để ôn.')+
+    `<div class="practice-entry">${[[5,'Ngữ pháp & từ vựng'],[6,'Hoàn thành văn bản'],[7,'Đọc hiểu văn bản']].map(([p,t])=>`<a href="#toeic/${p}"><strong>Part ${p}</strong><span>${t}</span></a>`).join('')}</div><div class="guide-shortcut"><p><b>Chưa chắc cách làm?</b><br>Có hướng dẫn từng Part, ví dụ nhỏ để thử và những bẫy thường gặp.</p><a class="btn secondary" href="#guides/toeic">Mở cẩm nang →</a></div><div data-toeic-library></div><div class="catalog-note"><b>Bài luyện kỹ năng tự biên soạn</b><span>Không phải đề ETS chính thức hoặc bài thi thử đầy đủ; không quy đổi điểm TOEIC. TOEIC Reading chính thức có 100 câu trong 75 phút.</span><a class="link-btn" href="#resources/toeic">Tài liệu chính thức từ ETS ↗</a></div>`;
+  window.LexiHub.toeicCatalog($('[data-toeic-library]'),data.items,part);
 }
-function renderToeicSet(){
-  const practice=state.toeicSet,session=state.toeicSession,result=session.result;
-  const resultMap=new Map((result?.results||[]).map(row=>[row.question_id,row]));
-  $('#main').innerHTML=`<a class="link-btn" href="#toeic">← Hai lựa chọn TOEIC Reading</a><div style="height:17px"></div>`+
-    heading(practice.title,`${practice.mode_label} · ${practice.level} · ${practice.question_count} câu · mục tiêu ${practice.duration_minutes} phút`,`<button class="btn secondary" data-action="save-toeic-words">+ Lưu ${practice.focus_vocabulary.length} từ trọng tâm</button>`)+
-    `<div class="notice">${esc(practice.instructions)} ${esc(practice.provenance||'Nội dung tự biên soạn; không phải câu hỏi chính thức của ETS.')}</div>`+
-    (result?`<div class="reading-score toeic-score" role="status"><strong>${result.score} / ${result.total}</strong><div>${result.percentage}% chính xác<p>${Object.entries(result.by_part).map(([part,row])=>`Part ${part}: ${row.score}/${row.total}`).join(' · ')}. Kết quả đã lưu vào tài khoản.</p></div><button class="btn secondary" data-action="reset-toeic">Làm lại</button></div>`:`<div class="toeic-timer"><span>⏱ Mục tiêu: ${practice.duration_minutes} phút</span><span>Hãy trả lời đủ ${practice.question_count} câu trước khi nộp.</span></div>`)+
-    (practice.documents.length?`<div class="toeic-documents">${practice.documents.map(doc=>`<article class="toeic-document" id="toeic-doc-${esc(doc.id)}"><span class="chip">${esc(doc.kind)}</span><h2>${esc(doc.heading)}</h2><div>${esc(doc.body)}</div></article>`).join('')}</div>`:'')+
-    `<div class="toeic-questions">${practice.questions.map((q,index)=>{const row=resultMap.get(q.id);return `<fieldset class="reading-question"><legend><span class="chip">${index+1} · Part ${q.part}</span><span>${esc(q.prompt)}</span></legend><div class="reading-options">${q.options.map((option,i)=>`<label class="reading-option ${row?(i===row.answer?'is-correct':i===row.submitted?'is-wrong':''):''}"><input type="radio" data-toeic-question="${esc(q.id)}" name="toeic-${esc(q.id)}" value="${i}" ${session.answers[q.id]===i?'checked':''} ${result?'disabled':''}><span class="choice-letter">${'ABCD'[i]}</span><span>${esc(option)}</span></label>`).join('')}</div>${row?`<div class="feedback ${row.correct?'':'wrong'}"><strong>${row.correct?'✓ Đúng':'Chưa đúng'} · ${esc(q.options[row.answer])}</strong><p>${esc(row.explanation_vi)}</p>${row.evidence?`<blockquote class="quote">${esc(row.evidence)}</blockquote>`:''}</div>`:''}</fieldset>`;}).join('')}</div>`+
-    `<div class="button-row toeic-submit">${result?'<button class="btn primary" data-action="reset-toeic">Làm lại bộ này</button><a class="btn" href="#toeic">Chọn hướng khác</a>':'<button class="btn primary" data-action="submit-toeic">Nộp và xem giải thích</button>'}</div>`+
-    (practice.focus_vocabulary.length?`<details class="panel source-context"><summary>Từ vựng trọng tâm · nên ôn sau khi làm bài</summary><div class="glossary-grid">${practice.focus_vocabulary.map(w=>`<article class="candidate-body"><h3 lang="en">${esc(w.word)} <small>${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}</article>`).join('')}</div><button class="btn secondary" data-action="save-toeic-words">Lưu từ vào kho để ôn</button></details>`:'');
-}
+function renderToeicSet(){renderToeicPractice();}
 async function toeicSetPage(slug,epoch){
   const practice=await api('/toeic/'+encodeURIComponent(slug)+'/');if(epoch!==state.routeEpoch)return;
   state.toeicSet=practice;
   if(state.toeicSession?.slug!==slug||state.toeicSession?.revision!==practice.revision)state.toeicSession={slug,revision:practice.revision,answers:{},token:uid(),startedAt:Date.now(),result:null};
   renderToeicSet();
 }
-const analyticsPageLabels={home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',lesson:'Bài thư viện',toeic:'TOEIC',
-  'toeic-set':'Bộ TOEIC',readings:'Bài cá nhân',reading:'Đang đọc',vocabulary:'Kho từ',study:'Ôn từ',settings:'Cài đặt',analytics:'Thống kê',login:'Đăng nhập'};
+const analyticsPageLabels={home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
+  'toeic-set':'Bộ TOEIC',readings:'Bài cá nhân',reading:'Đang đọc',vocabulary:'Kho từ','word-import':'Tạo bộ từ',study:'Ôn từ',settings:'Cài đặt',analytics:'Thống kê',login:'Đăng nhập'};
 async function analyticsPage(epoch){
   const data=await api('/analytics/?days='+state.analyticsDays);if(epoch!==state.routeEpoch)return;
   const maxViews=Math.max(1,...data.series.map(day=>day.views));
@@ -387,19 +377,20 @@ function download(name,data,type='application/json'){
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 async function route(){
-  const epoch=++state.routeEpoch;clearSelection();
+  const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
-  const nav=page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page;
+  const nav=page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
   $('#page-label').textContent=({home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
     if(page==='reading'&&id)await readerPage(id,epoch);
     else if(page==='catalog')await catalogPage(epoch);
-    else if(page==='ielts')await ieltsPage(epoch);
+    else if(page==='ielts')await ieltsPage(epoch,id||'');
     else if(page==='lesson'&&id)await lessonRoute(id,epoch);
-    else if(page==='toeic')await toeicPage(epoch);
+    else if(page==='toeic')await toeicPage(epoch,id||'');
+    else if(page==='guides'){window.LexiHub.guidePage($('#main'),id||'');$('#page-label').textContent='Cẩm nang cách làm';}
     else if(page==='resources'){
       $('#main').innerHTML='<section id="study-resources"></section>';
       window.LexiResources.mount($('#study-resources'),id);
@@ -408,6 +399,7 @@ async function route(){
     else if(page==='toeic-set'&&id)await toeicSetPage(id,epoch);
     else if(page==='readings')await readingsPage(epoch);
     else if(page==='vocabulary')await vocabPage(epoch);
+    else if(page==='word-import'){window.LexiDecks.page($('#main'));$('#page-label').textContent='Tạo bộ từ của bạn';}
     else if(page==='study')renderStudy();
     else if(page==='analytics')await analyticsPage(epoch);
     else if(page==='settings')settingsPage();
@@ -466,6 +458,8 @@ async function act(button){
   case 'vocab-prev':state.filters.page=Math.max(1,state.filters.page-1);await route();break;
   case 'vocab-next':state.filters.page++;await route();break;
   case 'bulk-open':bulkModal();break;
+  case 'study-deck':state.study=null;state.studySettings={...state.studySettings,tag:state.filters.tag,reading:'',scope:'all'};location.hash='study';break;
+  case 'export-deck':await busy(button,async()=>download('lexiread-vocabulary.json',await api('/vocabulary/deck/?name='+encodeURIComponent(state.filters.tag))));break;
   case 'bulk-prompt':{const text=$('#bulk-text').value.trim();if(!text)throw new Error('Dán danh sách từ trước.');await busy(button,async()=>{const r=await api('/prompts/',{method:'POST',data:{task:'words',text}});showPrompt(r.prompt,'words');});break;}
   case 'bulk-ai':{const text=$('#bulk-text').value.trim();if(!text)throw new Error('Dán danh sách từ trước.');if(cloudConsent('Danh sách từ bạn vừa nhập'))await busy(button,async()=>{const r=await api('/ai/words/',{method:'POST',data:{text,allow_cloud:true}});await refreshBoot();previewBulk(r.vocabulary);},'AI đang tạo gợi ý…');break;}
   case 'bulk-parse':{
@@ -482,9 +476,9 @@ async function act(button){
   case 'answer-quiz':await answerQuiz(state.study.question.options[Number(button.dataset.index)]);break;
   case 'next-quiz':await busy(button,loadNextQuiz);break;
   case 'submit-toeic':{
-    const session=state.toeicSession,missing=state.toeicSet.questions.filter(q=>session.answers[q.id]===undefined).length;
-    if(missing)throw new Error(`Bạn còn ${missing} câu chưa trả lời.`);
-    await busy(button,async()=>{session.result=await api('/toeic/'+encodeURIComponent(session.slug)+'/submit/',{method:'POST',data:{token:session.token,revision:state.toeicSet.revision,answers:session.answers,duration_seconds:Math.min(7200,Math.max(0,Math.round((Date.now()-session.startedAt)/1000)))}});renderToeicSet();window.scrollTo({top:0,behavior:'smooth'});},'Đang chấm…');break;
+    const session=state.toeicSession,missing=state.toeicSet.questions.filter(q=>!hasPracticeAnswer(session,q));
+    if(missing.length){jumpPracticeQuestion(missing[0].id);throw new Error(`Bạn còn ${missing.length} câu chưa trả lời. Đã chuyển đến câu đầu tiên còn trống.`);}
+    await busy(button,async()=>{session.result=await api('/toeic/'+encodeURIComponent(session.slug)+'/submit/',{method:'POST',data:{token:session.token,revision:state.toeicSet.revision,answers:session.answers,duration_seconds:Math.min(7200,Math.max(0,Math.round(practiceElapsed(session)/1000)))}});renderToeicSet();window.scrollTo({top:0,behavior:'smooth'});},'Đang chấm…');break;
   }
   case 'reset-toeic':state.toeicSession={slug:state.toeicSet.slug,revision:state.toeicSet.revision,answers:{},token:uid(),startedAt:Date.now(),result:null};renderToeicSet();window.scrollTo({top:0,behavior:'smooth'});break;
   case 'save-toeic-words':await busy(button,async()=>{const items=state.toeicSet.focus_vocabulary.map(word=>({...word,source_label:'TOEIC · '+state.toeicSet.title,tags:[...new Set([...(word.tags||[]),'TOEIC',state.toeicSet.title])]}));const result=await api('/vocabulary/',{method:'POST',data:{items}});await refreshBoot();toast(`Đã thêm ${result.created} từ; ${result.skipped} từ đã có được giữ nguyên.`);});break;

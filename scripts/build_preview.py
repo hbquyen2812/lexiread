@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,sys,base64
+import json,sys,base64,re
 root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root))
 from learning.services.analysis import ENTRY_SCHEMA,ANALYSIS_SCHEMA,SYSTEM
 from learning.services.catalog import validate_lesson
@@ -7,13 +7,23 @@ from learning.services.qa import QA_SCHEMA
 from learning.services.toeic import toeic_sets
 from learning.services.presentation import cover_metadata, ART_TOPICS
 from learning.services.public_resources import public_resources
+from learning.services.strategy_guides import strategy_guides
 seed={'words':json.loads((root/'data/seed_vocab.json').read_text(encoding='utf-8')),'text':(root/'data/set_in_metal.txt').read_text(encoding='utf-8'),'analysis':json.loads((root/'data/demo_analysis.json').read_text(encoding='utf-8')),'entry_schema':ENTRY_SCHEMA,'analysis_schema':ANALYSIS_SCHEMA,'system':SYSTEM}
 seed['lessons']=sorted([validate_lesson(json.loads(p.read_text(encoding='utf-8'))) for p in (root/'data/lessons').glob('*.json')],key=lambda x:x['order'])
 for lesson in seed['lessons']: lesson.update(cover_metadata(lesson['topic'],lesson['title']))
 seed['toeic_sets']=toeic_sets()
 seed['qa_schema']=QA_SCHEMA
 html=(root/'templates/app.html').read_text(encoding='utf-8').replace('{% load static %}','').replace('{% csrf_token %}','')
+html=re.sub(r"({% static '[^']+' %})\?v=[^\"]+",r'\1',html)
 html=html.replace("{% include 'language_switcher.html' %}",(root/'templates/language_switcher.html').read_text(encoding='utf-8'))
+html=html.replace('{{ strategy_guides|json_script:"strategy-guides-data" }}','<script id="strategy-guides-data" type="application/json">'+json.dumps(strategy_guides(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
+for script in ('learning_hub','practice_tools','personal_decks'):
+    html=html.replace('<script src="{% static \''+script+'.js\' %}" defer></script>','<script>'+(root/f'static/{script}.js').read_text(encoding='utf-8')+'</script>')
+html=html.replace('<link rel="stylesheet" href="{% static \'learning_hub.css\' %}">','<style>'+(root/'static/learning_hub.css').read_text(encoding='utf-8')+'</style>')
+fonts=(root/'static/fonts.css').read_text(encoding='utf-8')
+for font in (root/'static/fonts').glob('*.woff2'):
+    fonts=fonts.replace('/static/fonts/'+font.name,'data:font/woff2;base64,'+base64.b64encode(font.read_bytes()).decode())
+html=html.replace('<link rel="stylesheet" href="{% static \'fonts.css\' %}">','<style>'+fonts+'</style>')
 html=html.replace('{{ official_resources|json_script:"official-resources-data" }}','<script id="official-resources-data" type="application/json">'+json.dumps(public_resources(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
 html=html.replace('<script src="{% static \'resources.js\' %}" defer></script>','<script>'+(root/'static/resources.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'resources.css\' %}">','<style>'+(root/'static/resources.css').read_text(encoding='utf-8')+'</style>')

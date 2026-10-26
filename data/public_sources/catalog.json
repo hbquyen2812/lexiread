@@ -538,6 +538,257 @@
       "last_checked": "2026-10-26",
       "content_mode": "external_link",
       "verification": "target_checked"
+    },
+    {
+      "id": "bc-reading-skills-worksheet",
+      "title": "Reading skills · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "skimming",
+        "scanning",
+        "short_answer",
+        "table_completion"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 10 trang có hoạt động đọc lướt, tìm thông tin, bài thực hành và ghi chú chữa bài. Dành cho tự học có hướng dẫn hoặc lớp học; không phải đề thi đầy đủ.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_developing_reading_skills.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_developing_reading_skills.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 10
+    },
+    {
+      "id": "bc-general-reading-worksheet",
+      "title": "General Training · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "general_training",
+        "multiple_texts"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 9 trang giới thiệu Reading General Training và luyện đọc nhiều văn bản; có hoạt động và phần hướng dẫn chữa bài.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/general_training_reading.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/general_training_reading.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 9
+    },
+    {
+      "id": "bc-tfng-ynng-worksheet",
+      "title": "TFNG / YNNG · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "tfng",
+        "ynng"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 15 trang luyện phân biệt TRUE/FALSE/NOT GIVEN và YES/NO/NOT GIVEN, có bài thực hành và hướng dẫn.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_tfng_.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_tfng_.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 15
+    },
+    {
+      "id": "bc-matching-headings-worksheet",
+      "title": "Matching headings · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "matching_heading"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 10 trang tập xác định ý chính, so tiêu đề và kiểm tra bằng chứng. Có bài thực hành cùng hướng dẫn chữa.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_matching_headings_.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_matching_headings_.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 10
+    },
+    {
+      "id": "bc-completion-worksheet",
+      "title": "Completion tasks · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "summary_completion",
+        "note_completion",
+        "table_completion",
+        "flowchart_completion"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 14 trang về các dạng điền tóm tắt, ghi chú, bảng và lưu đồ; tập đọc hướng dẫn và giữ độ chính xác.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_completion_questions_.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_completion_questions_.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 14
+    },
+    {
+      "id": "bc-matching-features-worksheet",
+      "title": "Matching features · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "matching_features"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 10 trang luyện ghép đặc điểm với người hoặc nhóm, gồm hoạt động định hướng và bài thực hành có hướng dẫn.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_matching_features_.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_matching_features_.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 10
+    },
+    {
+      "id": "bc-short-answers-worksheet",
+      "title": "Short answers · worksheet and guided practice",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "short_answer"
+      ],
+      "format": "pdf",
+      "description_vi": "Tài liệu 13 trang luyện câu trả lời ngắn qua từ khóa, diễn đạt tương đương và tìm thông tin, có bài tập và hướng dẫn.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_short_answer_questions_.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/2026-06/reading_short_answer_questions_.pdf",
+      "access": "Miễn phí tại website nguồn; PDF gồm hướng dẫn giáo viên và bài thực hành",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 13
+    },
+    {
+      "id": "ets-toeic-examinee-handbook",
+      "title": "TOEIC L&R · examinee handbook",
+      "publisher": "ETS",
+      "exam": "toeic",
+      "variant": "TOEIC Listening & Reading",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "test_format",
+        "test_preparation"
+      ],
+      "format": "pdf",
+      "description_vi": "Sổ tay thí sinh 42 trang về cấu trúc, quy trình và cách chuẩn bị. Đây là tài liệu hướng dẫn, không được tính là một đề thi thử mới.",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-test-examinee-handbook.pdf",
+      "source_url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "answer_url": "",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc ETS; chỉ lập chỉ mục liên kết, không tái phân phối nội dung.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 42
+    },
+    {
+      "id": "ets-bridge-examinee-handbook",
+      "title": "TOEIC Bridge · examinee handbook",
+      "publisher": "ETS",
+      "exam": "toeic",
+      "variant": "TOEIC Bridge",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "test_format",
+        "test_preparation"
+      ],
+      "format": "pdf",
+      "description_vi": "Sổ tay thí sinh 40 trang về cấu trúc, quy trình và cách chuẩn bị. Đây là tài liệu hướng dẫn, không được tính là một đề thi thử mới.",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-listening-reading-tests-examinee-handbook.pdf",
+      "source_url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "answer_url": "",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc ETS; chỉ lập chỉ mục liên kết, không tái phân phối nội dung.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 40
+    },
+    {
+      "id": "iibc-toeic-interactive-samples",
+      "title": "TOEIC Parts 5–7 · interactive sample collection",
+      "publisher": "IIBC · TOEIC Japan",
+      "exam": "toeic",
+      "variant": "TOEIC Listening & Reading",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "Part 5",
+        "Part 6",
+        "Part 7"
+      ],
+      "format": "collection",
+      "description_vi": "Mở các bài mẫu theo Part và chọn đáp án tại nguồn. Điều hướng tiếng Nhật, câu hỏi tiếng Anh. Một số ví dụ trùng bộ mẫu ETS; không tính là sáu đề mới.",
+      "url": "https://www.iibc-global.org/toeic/test/lr/about/format.html",
+      "source_url": "https://www.iibc-global.org/toeic/test/lr/about/format.html",
+      "answer_url": "",
+      "access": "Bài mẫu công khai miễn phí; giao diện tiếng Nhật",
+      "rights": "TOEIC và nội dung mẫu thuộc ETS, IIBC sử dụng theo giấy phép tại Nhật Bản; LexiRead chỉ liên kết.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
     }
   ]
 }

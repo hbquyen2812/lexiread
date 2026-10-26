@@ -18,10 +18,10 @@ class PublicResourcesTests(unittest.TestCase):
 
     def test_reviewed_inventory_and_filter(self):
         rows = validate_catalog(self.catalog)
-        self.assertEqual(len(rows), 23)
-        self.assertEqual(len(public_resources('ielts')), 21)
-        self.assertEqual(len(public_resources('toeic')), 2)
-        self.assertEqual(sum(bool(x['answer_url']) for x in rows), 21)
+        self.assertEqual(len(rows), 33)
+        self.assertEqual(len(public_resources('ielts')), 28)
+        self.assertEqual(len(public_resources('toeic')), 5)
+        self.assertEqual(sum(bool(x['answer_url']) for x in rows), 28)
         self.assertTrue(all(x['content_mode'] == 'external_link' for x in rows))
         with self.assertRaises(ValueError):
             public_resources('unknown')
@@ -32,6 +32,18 @@ class PublicResourcesTests(unittest.TestCase):
         cards[0]['skills'].clear()
         self.assertNotEqual(public_resources()[0]['title'], 'changed')
         self.assertEqual(public_resources()[0]['skills'], ['Reading'])
+
+    def test_expansion_uses_current_worksheets_and_one_iibc_collection(self):
+        rows = public_resources()
+        worksheets = [r for r in rows if r['id'].endswith('-worksheet')]
+        self.assertEqual(len(worksheets), 7)
+        self.assertTrue(all('/2026-06/' in r['url'] for r in worksheets))
+        iibc = [r for r in rows if 'iibc-global.org' in r['url']]
+        self.assertEqual(len(iibc), 1)
+        self.assertEqual(iibc[0]['format'], 'collection')
+        self.assertTrue(official_resource_url(iibc[0]['url']))
+        self.assertTrue(allowed_url(iibc[0]['url']))
+        self.assertFalse(allowed_url('https://www.iibc-global.org.example.com/'))
 
     def test_rejects_unsafe_and_nonofficial_links(self):
         urls = ['javascript:alert(1)', 'http://ielts.org/test',
@@ -75,6 +87,15 @@ class PublicResourcesTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             SafeRedirects().redirect_request(Request('https://ielts.org/a'), None,
                                              302, '', {}, 'https://localhost/private')
+
+    def test_parser_discovers_iibc_reading_samples_without_listening_or_other_paths(self):
+        parser = ResourceLinks('https://www.iibc-global.org/toeic/test/lr/about/format.html')
+        parser.feed('<a href="format/sample05.html">Part5</a>'
+                    '<a href="format/sample06.html">Part6</a>'
+                    '<a href="format/sample07_04.html">Part7-4</a>'
+                    '<a href="format/sample01.html">Part1</a>'
+                    '<a href="https://example.com/sample05.html">Reading sample</a>')
+        self.assertEqual([x['title'] for x in parser.links], ['Part5', 'Part6', 'Part7-4'])
 
     def test_robots_denial_blocks_fetch_and_is_cached(self):
         fetcher = Fetcher()

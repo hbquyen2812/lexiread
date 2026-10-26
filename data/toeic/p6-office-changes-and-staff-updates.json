@@ -1,0 +1,461 @@
+{
+  "slug": "p6-office-changes-and-staff-updates",
+  "title": "Office Updates · Complete the Message",
+  "mode": "parts-5-6",
+  "mode_label": "Hoàn thành văn bản",
+  "parts": [
+    6
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 20,
+  "description": "Đọc các thông báo nội bộ về chuyển văn phòng, cập nhật hệ thống và thủ tục nhân viên, rồi chọn từ hoặc câu còn thiếu.",
+  "instructions": "Đọc trọn từng văn bản rồi chọn đáp án cho các chỗ trống được đánh số, gồm cả chỗ cần điền một câu hoàn chỉnh.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "move-email",
+      "kind": "Email",
+      "heading": "Operations team: the move to Level 4",
+      "body": "To: Operations Team\nFrom: Facilities Office\nSubject: Move to Level 4\n\nOur department will move to Level 4 on Monday, 9 November. Please pack personal desk items by 5 p.m. on Friday. Each box must be clearly ___(1)___ with your name and workstation number. The movers will transport office equipment; ___(2)___, employees should take laptops home themselves.\n\nLevel 4 has fewer storage cupboards than our current floor. Please send files that you no longer use regularly to the records team by Thursday. ___(3)___ The records team will keep a searchable list so that archived files can still be retrieved.\n\nThe new floor plan ___(4)___ on the staff portal yesterday. Check your assigned desk before arriving on Monday, and report any accessibility concerns to Facilities."
+    },
+    {
+      "id": "system-notice",
+      "kind": "Notice",
+      "heading": "Purchasing portal maintenance",
+      "body": "The purchasing portal will be unavailable from 7 p.m. on Friday until 8 a.m. on Saturday while the IT team installs an update. Employees are advised ___(5)___ any urgent orders before 6 p.m. on Friday. Existing orders will remain in the system and do not need to be entered again.\n\nThe update will add a search function for previously approved suppliers. ___(6)___ Staff will therefore spend less time locating supplier contact details.\n\nPlease do not create duplicate orders if a confirmation message is delayed during the restart. Instead, check the order history first. ___(7)___ the order does not appear after ten minutes, contact the help desk with the original order number. A technician will be available throughout the maintenance period to provide ___(8)___."
+    },
+    {
+      "id": "bike-policy",
+      "kind": "Policy update",
+      "heading": "Cycling support: reimbursement procedure",
+      "body": "From 1 December, employees who cycle to work at least twice a week may claim up to $40 per year for basic bicycle maintenance. This allowance covers brake adjustments and tire repairs, but it does not cover the purchase of a new bicycle.\n\nTo make a claim, submit the original receipt together with a ___(9)___ reimbursement form. Claims should be sent to Payroll within thirty days of the service. ___(10)___ This will allow Payroll to match the receipt with the employee's account.\n\nThe allowance is intended to encourage regular cycling; ___(11)___, staff who cycle only occasionally are not eligible. The program ___(12)___ after six months to determine whether the allowance should be increased."
+    },
+    {
+      "id": "archive-booking",
+      "kind": "Email",
+      "heading": "Using the document consultation room",
+      "body": "To: Research and Legal Teams\nFrom: Records Manager\nSubject: Consultation room bookings\n\nThe document consultation room now accepts online bookings. Sessions last two hours, and each team may reserve a maximum of two sessions per week. To avoid unnecessary delays, please list the files you need when ___(13)___ your request.\n\nSome older records are stored off-site and require two working days to retrieve. ___(14)___ Requests made on the day of a visit may therefore be incomplete.\n\nPencils and laptops are permitted in the room, ___(15)___ food and drinks must be left outside. A staff member will check each file before and after use. If you finish early, please notify the records desk so that the remaining time can be made ___(16)___ to another team."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 6,
+      "prompt": "Blank 1: Each box must be clearly ___ with your name and workstation number.",
+      "options": [
+        "labeled",
+        "label",
+        "labeling",
+        "labels"
+      ],
+      "answer": 0,
+      "explanation_vi": "Must be + quá khứ phân từ tạo bị động: hộp phải được ghi nhãn. Labeling là chủ động/tiếp diễn; label và labels không hoàn chỉnh cấu trúc.",
+      "evidence": "Each box must be clearly ___(1)___ with your name and workstation number.",
+      "document_ids": [
+        "move-email"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 6,
+      "prompt": "Blank 2: The movers will transport office equipment; ___, employees should take laptops home themselves.",
+      "options": [
+        "therefore",
+        "however",
+        "similarly",
+        "for example"
+      ],
+      "answer": 1,
+      "explanation_vi": "Đội chuyển đồ sẽ chở thiết bị, nhưng nhân viên phải tự mang máy tính xách tay về, nên chọn however. Similarly và for example không thể hiện sự khác biệt này; therefore lại chỉ kết quả.",
+      "evidence": "The movers will transport office equipment; ___(2)___, employees should take laptops home themselves.",
+      "document_ids": [
+        "move-email"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 6,
+      "prompt": "Blank 3: Choose the sentence that best connects the storage problem and the searchable archive list.",
+      "options": [
+        "The new office will have more cupboards than the old one.",
+        "The records team will destroy every file it receives.",
+        "These files will be stored in the central archive rather than in desk cupboards.",
+        "All employees must collect their laptops from the archive on Monday."
+      ],
+      "answer": 2,
+      "explanation_vi": "Câu đúng cho biết hồ sơ ít dùng sẽ được chuyển vào kho lưu trữ chung, rồi câu sau giải thích cách tìm lại chúng. Các câu khác nói sang máy tính xách tay, trái thông tin có ít tủ hơn hoặc cho rằng hồ sơ sẽ bị hủy.",
+      "evidence": "The records team will keep a searchable list so that archived files can still be retrieved.",
+      "document_ids": [
+        "move-email"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 6,
+      "prompt": "Blank 4: The new floor plan ___ on the staff portal yesterday.",
+      "options": [
+        "will post",
+        "is posting",
+        "has posted",
+        "was posted"
+      ],
+      "answer": 3,
+      "explanation_vi": "Yesterday đặt hành động trong quá khứ; bản sơ đồ là đối tượng được đăng nên dùng was posted. Will post sai thời; is posting và has posted đều là chủ động, không diễn tả sơ đồ được đăng.",
+      "evidence": "The new floor plan ___(4)___ on the staff portal yesterday.",
+      "document_ids": [
+        "move-email"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 6,
+      "prompt": "Blank 5: Employees are advised ___ any urgent orders before 6 p.m.",
+      "options": [
+        "to submit",
+        "submitting",
+        "submitted",
+        "submit"
+      ],
+      "answer": 0,
+      "explanation_vi": "Cấu trúc là be advised to do something: được khuyên làm gì. Nhân viên được khuyên nộp đơn gấp trước 18:00, nên chọn to submit.",
+      "evidence": "Employees are advised ___(5)___ any urgent orders before 6 p.m. on Friday.",
+      "document_ids": [
+        "system-notice"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 6,
+      "prompt": "Blank 6: Choose the sentence that explains the benefit of the new search function.",
+      "options": [
+        "Employees must submit each existing order a second time.",
+        "Users will be able to find a supplier by entering part of its name.",
+        "All supplier records will be permanently deleted on Saturday.",
+        "The office cafeteria will close at 6 p.m. on Friday."
+      ],
+      "answer": 1,
+      "explanation_vi": "Tìm nhà cung cấp bằng một phần tên sẽ giúp tra thông tin nhanh hơn, đúng với lợi ích được nêu ở câu sau. Xóa dữ liệu hay nhập lại đơn đều trái thông báo; giờ mở nhà ăn không liên quan.",
+      "evidence": "The update will add a search function for previously approved suppliers.",
+      "document_ids": [
+        "system-notice"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 6,
+      "prompt": "Blank 7: ___ the order does not appear after ten minutes, contact the help desk.",
+      "options": [
+        "During",
+        "Unless",
+        "If",
+        "Despite"
+      ],
+      "answer": 2,
+      "explanation_vi": "If đặt điều kiện cần liên hệ: đơn không xuất hiện sau mười phút. Unless đảo điều kiện khiến phải liên hệ khi đơn đã có; despite/during cần cụm danh từ.",
+      "evidence": "___(7)___ the order does not appear after ten minutes, contact the help desk with the original order number.",
+      "document_ids": [
+        "system-notice"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 6,
+      "prompt": "Blank 8: A technician will be available to provide ___.",
+      "options": [
+        "assist",
+        "assisting",
+        "assistant",
+        "assistance"
+      ],
+      "answer": 3,
+      "explanation_vi": "Provide assistance là cung cấp sự hỗ trợ. Assistant là người trợ lý đếm được cần mạo từ; assist/assisting không đóng vai trò danh từ chỉ hỗ trợ trong cụm này.",
+      "evidence": "A technician will be available throughout the maintenance period to provide ___(8)___.",
+      "document_ids": [
+        "system-notice"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 6,
+      "prompt": "Blank 9: Submit the original receipt together with a ___ reimbursement form.",
+      "options": [
+        "completed",
+        "completes",
+        "completion",
+        "completely"
+      ],
+      "answer": 0,
+      "explanation_vi": "Completed form là biểu mẫu đã điền đầy đủ. Completely là trạng từ; completion là danh từ và completes là động từ chia thì.",
+      "evidence": "To make a claim, submit the original receipt together with a ___(9)___ reimbursement form.",
+      "document_ids": [
+        "bike-policy"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 6,
+      "prompt": "Blank 10: Choose the sentence that explains how Payroll can identify the claimant.",
+      "options": [
+        "You may submit a claim without having your bicycle serviced.",
+        "Be sure to include your employee number on the form.",
+        "No identifying information should appear anywhere on the form.",
+        "All bicycle shops must issue receipts in the same color."
+      ],
+      "answer": 1,
+      "explanation_vi": "Mã nhân viên giúp bộ phận phụ trách lương đối chiếu hóa đơn với đúng người nhận. Không ghi thông tin nhận dạng sẽ khiến việc này khó hơn; màu hóa đơn không giúp xác định ai đã chi tiền.",
+      "evidence": "This will allow Payroll to match the receipt with the employee's account.",
+      "document_ids": [
+        "bike-policy"
+      ]
+    },
+    {
+      "id": "q11",
+      "part": 6,
+      "prompt": "Blank 11: The allowance encourages regular cycling; ___, occasional cyclists are not eligible.",
+      "options": [
+        "for instance",
+        "similarly",
+        "therefore",
+        "nevertheless"
+      ],
+      "answer": 2,
+      "explanation_vi": "Khoản hỗ trợ nhằm khuyến khích đạp xe thường xuyên, vì vậy người chỉ thỉnh thoảng đạp xe không đủ điều kiện. Therefore thể hiện đúng quan hệ này; nevertheless chỉ sự tương phản, còn for instance dùng để đưa ví dụ.",
+      "evidence": "The allowance is intended to encourage regular cycling; ___(11)___, staff who cycle only occasionally are not eligible.",
+      "document_ids": [
+        "bike-policy"
+      ]
+    },
+    {
+      "id": "q12",
+      "part": 6,
+      "prompt": "Blank 12: The program ___ after six months.",
+      "options": [
+        "reviewed",
+        "will review",
+        "is reviewing",
+        "will be reviewed"
+      ],
+      "answer": 3,
+      "explanation_vi": "Chương trình sẽ được đánh giá sau sáu tháng, nên dùng tương lai bị động will be reviewed. Reviewed đứng riêng thiếu trợ động từ; will review và is reviewing đều là chủ động, không diễn tả chương trình được đánh giá.",
+      "evidence": "The program ___(12)___ after six months to determine whether the allowance should be increased.",
+      "document_ids": [
+        "bike-policy"
+      ]
+    },
+    {
+      "id": "q13",
+      "part": 6,
+      "prompt": "Blank 13: List the files you need when ___ your request.",
+      "options": [
+        "submitting",
+        "submit",
+        "submitted",
+        "submits"
+      ],
+      "answer": 0,
+      "explanation_vi": "Chọn when submitting, nghĩa là “khi nộp yêu cầu”. Người liệt kê hồ sơ cũng là người nộp, nên có thể dùng cách rút gọn này. Submitted mang nghĩa bị động; submit và submits sẽ cần thêm chủ ngữ.",
+      "evidence": "To avoid unnecessary delays, please list the files you need when ___(13)___ your request.",
+      "document_ids": [
+        "archive-booking"
+      ]
+    },
+    {
+      "id": "q14",
+      "part": 6,
+      "prompt": "Blank 14: Choose the sentence that develops the off-site retrieval requirement.",
+      "options": [
+        "All reservations have been canceled until further notice.",
+        "For these materials, reserve your session and identify the files well in advance.",
+        "Off-site records are delivered immediately after every request.",
+        "You may take original files home after your session."
+      ],
+      "answer": 1,
+      "explanation_vi": "Hồ sơ ở kho bên ngoài cần hai ngày làm việc để lấy về, nên người dùng cần đặt lịch và nêu tài liệu sớm. Immediately trái với thời gian chờ này; việc mang hồ sơ về nhà hoặc hủy mọi lượt đặt không được nhắc tới.",
+      "evidence": "Some older records are stored off-site and require two working days to retrieve.",
+      "document_ids": [
+        "archive-booking"
+      ]
+    },
+    {
+      "id": "q15",
+      "part": 6,
+      "prompt": "Blank 15: Pencils and laptops are permitted, ___ food and drinks must be left outside.",
+      "options": [
+        "because",
+        "or",
+        "but",
+        "so"
+      ],
+      "answer": 2,
+      "explanation_vi": "But thể hiện hai quy định đối lập: cho phép đồ dùng, không cho đồ ăn. So/because tạo quan hệ nguyên nhân không đúng; or diễn tả lựa chọn không tồn tại.",
+      "evidence": "Pencils and laptops are permitted in the room, ___(15)___ food and drinks must be left outside.",
+      "document_ids": [
+        "archive-booking"
+      ]
+    },
+    {
+      "id": "q16",
+      "part": 6,
+      "prompt": "Blank 16: The remaining time can be made ___ to another team.",
+      "options": [
+        "availability",
+        "availably",
+        "avail",
+        "available"
+      ],
+      "answer": 3,
+      "explanation_vi": "Make something available nghĩa là dành thứ gì đó cho người khác sử dụng. Ở đây, thời gian còn trống được nhường cho nhóm khác, nên chọn tính từ available; availability là danh từ.",
+      "evidence": "If you finish early, please notify the records desk so that the remaining time can be made ___(16)___ to another team.",
+      "document_ids": [
+        "archive-booking"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "retrieve",
+      "pos": "verb",
+      "meaning_vi": "tìm và lấy lại tài liệu hoặc dữ liệu",
+      "usage_pattern": "retrieve a file/record from + place",
+      "example": "The records team retrieved the contract from the central archive.",
+      "example_vi": "Nhóm lưu trữ lấy lại hợp đồng từ kho lưu trữ trung tâm.",
+      "synonyms": [
+        "recover"
+      ],
+      "paraphrases": [
+        "find and bring back a stored item"
+      ],
+      "context": "The records team retrieved the contract from the central archive.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Office Updates · Complete the Message",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "duplicate",
+      "pos": "adjective",
+      "meaning_vi": "trùng lặp, có cùng nội dung",
+      "usage_pattern": "a duplicate order/payment/request",
+      "example": "Please check the history before creating a duplicate order.",
+      "example_vi": "Vui lòng kiểm tra lịch sử trước khi tạo đơn hàng trùng.",
+      "synonyms": [
+        "repeated"
+      ],
+      "paraphrases": [
+        "being an extra copy of an existing item"
+      ],
+      "context": "Please check the history before creating a duplicate order.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Office Updates · Complete the Message",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "reimbursement",
+      "pos": "noun",
+      "meaning_vi": "việc hoàn lại chi phí đã trả",
+      "usage_pattern": "submit a reimbursement form; claim reimbursement for",
+      "example": "Submit your reimbursement form within thirty days.",
+      "example_vi": "Nộp phiếu đề nghị hoàn chi phí trong vòng ba mươi ngày.",
+      "synonyms": [
+        "repayment"
+      ],
+      "paraphrases": [
+        "money paid back for an expense"
+      ],
+      "context": "Submit your reimbursement form within thirty days.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Office Updates · Complete the Message",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "eligible",
+      "pos": "adjective",
+      "meaning_vi": "đủ điều kiện",
+      "usage_pattern": "be eligible for + benefit; be eligible to + verb",
+      "example": "Regular cyclists are eligible for the maintenance allowance.",
+      "example_vi": "Người thường xuyên đạp xe đủ điều kiện nhận trợ cấp bảo dưỡng.",
+      "synonyms": [
+        "qualified"
+      ],
+      "paraphrases": [
+        "meeting the requirements for a benefit"
+      ],
+      "context": "Regular cyclists are eligible for the maintenance allowance.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Office Updates · Complete the Message",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "in advance",
+      "pos": "phrase",
+      "meaning_vi": "trước thời điểm cần thiết",
+      "usage_pattern": "book/notify/prepare something in advance",
+      "example": "Please identify off-site records two days in advance.",
+      "example_vi": "Vui lòng báo trước hai ngày những hồ sơ cần lấy từ kho bên ngoài.",
+      "synonyms": [
+        "ahead of time"
+      ],
+      "paraphrases": [
+        "before an event or deadline"
+      ],
+      "context": "Please identify off-site records two days in advance.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Office Updates · Complete the Message",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "allowance",
+      "pos": "noun",
+      "meaning_vi": "khoản tiền được cấp cho một mục đích",
+      "usage_pattern": "an allowance for + expense",
+      "example": "The annual allowance covers basic bicycle repairs.",
+      "example_vi": "Khoản trợ cấp hằng năm chi trả sửa chữa xe đạp cơ bản.",
+      "synonyms": [
+        "allocation"
+      ],
+      "paraphrases": [
+        "an amount of money provided for a particular purpose"
+      ],
+      "context": "The annual allowance covers basic bicycle repairs.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Office Updates · Complete the Message",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

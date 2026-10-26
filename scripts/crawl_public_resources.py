@@ -8,6 +8,7 @@ import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 import sys
 import time
 from datetime import datetime, timezone
@@ -22,7 +23,7 @@ MAX_BYTES = 2_000_000
 MAX_LINKS = 100
 HOSTS = frozenset({'ielts.org', 'www.ielts.org', 'cdn.ielts.org',
     'takeielts.britishcouncil.org', 'ielts.idp.com', 'www.ets.org',
-    'ielts.inspera.com', 'demo-ielts.inspera.com'})
+    'ielts.inspera.com', 'demo-ielts.inspera.com', 'www.iibc-global.org'})
 SOURCES = (
     ('ielts-academic', 'https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test'),
     ('ielts-general', 'https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test'),
@@ -30,6 +31,8 @@ SOURCES = (
     ('british-council-general', 'https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/general-training/reading'),
     ('ets-toeic', 'https://www.ets.org/toeic/test-takers/prepare.html'),
     ('idp-reading', 'https://ielts.idp.com/prepare/all-test-types/reading'),
+    ('british-council-reading-lessons', 'https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading'),
+    ('iibc-toeic-samples', 'https://www.iibc-global.org/toeic/test/lr/about/format.html'),
 )
 
 
@@ -77,10 +80,13 @@ class ResourceLinks(HTMLParser):
             url = urljoin(self.base_url, self.href)
             title = ' '.join(' '.join(self.label).split())[:180]
             haystack = (title + ' ' + url + ' ' + self.heading).lower()
+            parts = urlsplit(url)
+            iibc_reading = (parts.hostname == 'www.iibc-global.org' and
+                            re.fullmatch(r'/toeic/test/lr/about/format/sample(?:0[56]|07_0[1-4])\.html', parts.path))
             if (allowed_url(url) and (any(t in haystack for t in ('reading', 'sample', 'practice'))
                                       or 'inspera.com' in urlsplit(url).hostname)
                     and ('.pdf' in urlsplit(url).path.lower() or 'inspera.com' in urlsplit(url).hostname
-                         or 'practice' in urlsplit(url).path.lower())):
+                         or 'practice' in urlsplit(url).path.lower() or iibc_reading)):
                 item = {'title': title, 'url': url, 'heading': self.heading}
                 if not any(x['url'] == url for x in self.links) and len(self.links) < MAX_LINKS:
                     self.links.append(item)

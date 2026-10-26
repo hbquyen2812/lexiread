@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LexiRead personal vocabulary deck v1",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "deck",
+    "vocabulary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "lexiread-vocabulary"
+    },
+    "version": {
+      "const": 1
+    },
+    "deck": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      }
+    },
+    "vocabulary": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "required": [
+          "word",
+          "meaning_vi"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "word": {
+            "type": "string",
+            "maxLength": 160,
+            "minLength": 1
+          },
+          "pos": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "meaning_vi": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1
+          },
+          "usage_pattern": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "example": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "example_vi": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "context": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "synonyms": {
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "maxLength": 300
+            }
+          },
+          "paraphrases": {
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "maxLength": 300
+            }
+          }
+        }
+      }
+    }
+  }
+}

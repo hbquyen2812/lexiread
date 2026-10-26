@@ -17,7 +17,11 @@ async function run(){
   vm.runInNewContext(read('scripts/preview_adapter.js'),scope);
   const api=scope.window.LEXIREAD_PREVIEW.api;
   assert.equal((await api('/catalog/?track=general')).items.length,24);
-  assert.equal((await api('/catalog/?track=ielts')).items.length,3);
+  assert.equal((await api('/catalog/?track=ielts')).items.length,lessons.filter(l=>l.track==='ielts').length);
+  const filtered=await api('/catalog/?track=ielts&kind=tfng');
+  assert.ok(filtered.items.length>0);
+  assert.ok(filtered.items.every(l=>l.question_types.includes('tfng')));
+  assert.ok(filtered.items.every(l=>Number.isInteger(l.estimated_minutes)&&l.estimated_minutes>=5));
   assert.equal((await api('/catalog/?track=general&level=A2')).items.length,6);
   const paged=await api('/catalog/?track=general&limit=5&page=2');
   assert.equal(paged.items.length,5);assert.equal(paged.total,24);assert.equal(paged.has_more,true);

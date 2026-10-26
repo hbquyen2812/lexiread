@@ -6,7 +6,7 @@ offline adapter to exercise learner flows with browser-local test data.
 import json
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, unquote
 from django.conf import settings
 ROOT=Path(__file__).resolve().parents[1]
 settings.configure(DEBUG=True,SECRET_KEY='preview-only-not-a-production-secret-key-123456789',STATIC_URL='/static/',
@@ -16,6 +16,9 @@ django.setup()
 from django.template.loader import render_to_string
 from django.urls import path
 from learning.services.presentation import cover_metadata
+from learning.services.public_resources import public_resources
+from learning.services.strategy_guides import strategy_guides
+from learning.services.toeic import toeic_sets
 urlpatterns=[path('login/',lambda request:None,name='login'),path('signup/',lambda request:None,name='signup'),path('password-reset/',lambda request:None,name='password_reset')]
 
 def context():
@@ -26,16 +29,17 @@ def context():
         lesson.update(cover_metadata(lesson['topic'],lesson['title']))
         lessons.append(lesson)
     lessons.sort(key=lambda x:(x['order'],x['title']))
-    return dict(lessons=lessons,general_count=sum(x['track']=='general' for x in lessons),ielts_count=sum(x['track']=='ielts' for x in lessons),next='/#catalog',form={})
+    return dict(lessons=lessons,practices=toeic_sets(),general_count=sum(x['track']=='general' for x in lessons),ielts_count=sum(x['track']=='ielts' for x in lessons),next='/#catalog',form={},official_resources=public_resources(),strategy_guides=strategy_guides())
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
     def do_GET(self):
-        path=urlsplit(self.path).path
-        if path in {'/','/login/'}:
-            html=render_to_string('landing.html' if path=='/' else 'registration/login.html',context()).encode()
+        path=unquote(urlsplit(self.path).path)
+        if path in {'/','/login/','/guides/'}:
+            html=render_to_string({'/':'landing.html','/login/':'registration/login.html','/guides/':'guides.html'}[path],context()).encode()
             self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8');self.end_headers();self.wfile.write(html)
-        elif path=='/preview.html' or (path.startswith('/static/') and '..' not in path):super().do_GET()
+        elif path=='/preview.html':super().do_GET()
+        elif path.startswith('/static/') and (ROOT/path.lstrip('/')).resolve().is_relative_to((ROOT/'static').resolve()):super().do_GET()
         else:self.send_error(404)
 
 if __name__=='__main__':

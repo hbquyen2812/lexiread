@@ -24,7 +24,7 @@ const rows=[
 ['stats.readings','bài đọc theo trình độ','graded reading lessons','lectures par niveau','分级阅读文章'],
 ['stats.levels','từ cơ bản đến nâng cao','from beginner to advanced','du débutant à avancé','从入门到高级'],
 ['stats.ielts','bài luyện IELTS Reading','IELTS reading exercises','lectures IELTS','雅思阅读练习'],
-['stats.toeic','hướng luyện TOEIC','TOEIC practice paths','parcours TOEIC','TOEIC 练习方向'],
+['stats.toeic','bộ luyện TOEIC','TOEIC practice sets','séries TOEIC','TOEIC 练习套题'],
 ['library.eyebrow','BẮT ĐẦU TỪ NƠI BẠN ĐANG ĐỨNG','START WHERE YOU ARE','COMMENCEZ À VOTRE NIVEAU','从你现在的水平开始'],
 ['library.title','Một bài đọc vừa sức với bạn.','A good read at your level.','Une lecture à votre portée.','找到适合你的阅读。'],
 ['library.copy','Chọn trình độ để khám phá. Bạn có thể đổi mức bất cứ lúc nào; các mức là ước lượng, không thay thế bài kiểm tra CEFR.','Choose a level to explore. Switch whenever you like; levels are estimates, not a CEFR assessment.','Choisissez un niveau et changez à tout moment. Les niveaux sont estimatifs et ne remplacent pas une évaluation CECR.','选择一个级别，随时可以调整。级别为估计值，不能替代 CEFR 水平测试。'],

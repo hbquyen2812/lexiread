@@ -1,0 +1,344 @@
+{
+  "slug": "ielts-library-of-things",
+  "title": "The Work Behind a Library of Things",
+  "level": "B2",
+  "topic": "IELTS · Dịch vụ cộng đồng",
+  "summary": "Một thư viện cho mượn thiết bị cân bằng nhu cầu, công bằng khi đặt mượn và chi phí vận hành ít thấy.",
+  "track": "ielts",
+  "revision": 2,
+  "order": 127,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc của LexiRead, dùng tình huống và kết quả giả định để luyện đọc. Không phải đề IELTS chính thức hay bài thi thử đầy đủ.",
+  "level_note": "Mức độ do người biên soạn ước lượng, chưa hiệu chuẩn CEFR; không quy đổi band IELTS.",
+  "translation_status": "complete",
+  "text": "A. In the fictional district of Marston, a public library opens a lending collection of useful objects. Members can borrow a drill, a sewing machine or a projector instead of buying equipment they rarely use. The idea attracts attention because the shelves look unusual, but the practical questions resemble those of an ordinary library: what should be stocked, who can borrow it and how should it be returned? Unlike a book, however, an unfamiliar device may need explanation before a borrower can use it safely.\n\nB. The first purchasing list comes from an online poll. Projectors receive many votes, while basic tools attract less enthusiasm. Staff then hold conversations at the library entrance, where people who did not answer the poll mention quite different needs. The final list combines both sources rather than treating the online voters as a complete picture of the community. Staff also distinguish wanting access to an object from wanting the library to own it. An item can sound appealing in a poll while being borrowed very infrequently.\n\nC. Storage decisions depend on the whole borrowing cycle. A small projector may require cables, an adaptor and a protective case, each of which must be checked on return. A larger item with few components can sometimes be simpler to manage. For every new object, staff prepare a checklist and estimate the time required for inspection. This hidden work places a limit on the collection even when shelf space remains available. Accepting a donated device is therefore not cost-free simply because the purchase price is zero.\n\nD. Booking rules create a different problem. Allowing reservations months ahead would help organised users plan, but it could leave little opportunity for people whose needs arise suddenly. The library divides availability between advance reservations and short-notice borrowing. It publishes the rule clearly and reviews whether either group is repeatedly unable to obtain items. The intention is not to guarantee every request. It is to make the trade-off visible and adjustable instead of allowing the quickest users of the booking website to determine access by default.\n\nE. Each borrower receives a demonstration of the essential controls and a concise instruction sheet. Staff do not claim that a short demonstration makes someone competent for every possible task. Certain activities may still require professional assistance. If a device stops working, borrowers are asked to report the fault promptly rather than attempt an unfamiliar repair. The library separates ordinary wear from avoidable damage when reviewing incidents. Otherwise people may hide minor problems because they assume every report will lead automatically to a penalty.\n\nF. The collection's success cannot be inferred from a photograph of full shelves. Objects that never leave the building provide little borrowing value, while constant use without time for inspection can create its own difficulties. A useful service balances demand, access and care. It may need fewer copies of a fashionable device and more support for an ordinary one. The central achievement is not ownership shared in theory, but reliable access that members can understand and use in practice.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "A. Tại quận Marston hư cấu, thư viện công cộng mở một kho đồ dùng hữu ích để cho mượn. Thành viên có thể mượn máy khoan, máy may hoặc máy chiếu thay vì mua những thiết bị họ ít khi sử dụng. Ý tưởng thu hút chú ý vì trên kệ là những món đồ khác hẳn sách thường thấy, nhưng những câu hỏi thực tế vẫn giống như ở một thư viện thông thường: nên có gì, ai được mượn và trả thế nào? Tuy nhiên, khác sách, người mượn có thể cần được hướng dẫn trước khi sử dụng an toàn một thiết bị chưa quen."
+      },
+      {
+        "index": 1,
+        "vi": "B. Danh sách đồ cần mua ban đầu được lập từ kết quả khảo sát trực tuyến. Máy chiếu được nhiều người chọn, trong khi các dụng cụ cơ bản ít được quan tâm hơn. Sau đó nhân viên trò chuyện ở cửa thư viện, nơi những người không tham gia khảo sát lại nêu ra các nhu cầu khá khác. Danh sách cuối kết hợp cả hai nguồn thay vì cho rằng người trả lời trực tuyến đại diện đầy đủ cho cả cộng đồng. Nhân viên cũng phân biệt muốn được dùng đồ vật với muốn thư viện sở hữu nó. Trong khảo sát, một món đồ có thể được đánh giá là hấp dẫn, nhưng trên thực tế lại rất ít người mượn."
+      },
+      {
+        "index": 2,
+        "vi": "C. Việc quyết định giữ món đồ nào trong kho phụ thuộc vào toàn bộ quy trình cho mượn và nhận lại. Máy chiếu nhỏ có thể cần dây, bộ chuyển đổi và hộp bảo vệ; từng thứ đều phải kiểm tra khi trả. Đôi khi, một món đồ lớn hơn nhưng ít bộ phận lại dễ quản lý hơn. Với mỗi món mới, nhân viên lập danh sách kiểm tra và ước tính thời gian cần để kiểm tra. Những công việc hậu trường này vẫn giới hạn số đồ thư viện có thể nhận, ngay cả khi trên kệ còn chỗ. Vì vậy, nhận một thiết bị được tặng không có nghĩa là thư viện không phải tốn gì cho nó, dù không mất tiền mua."
+      },
+      {
+        "index": 3,
+        "vi": "D. Quy tắc đặt mượn tạo vấn đề khác. Cho phép đặt trước nhiều tháng giúp những người biết sắp xếp từ sớm chủ động hơn, nhưng có thể để lại ít cơ hội cho người phát sinh nhu cầu đột xuất. Thư viện dành một phần lượt mượn cho người đặt trước và một phần cho những nhu cầu phát sinh sát ngày. Họ công bố rõ quy tắc và theo dõi xem có nhóm nào thường xuyên không mượn được đồ hay không. Mục đích không phải bảo đảm mọi yêu cầu đều được đáp ứng. Mục đích là để mọi người thấy rõ cách cân bằng hai nhu cầu này và có thể điều chỉnh khi cần, thay vì để cơ hội mượn đồ mặc nhiên thuộc về những người thao tác nhanh nhất trên website."
+      },
+      {
+        "index": 4,
+        "vi": "E. Mỗi người mượn được hướng dẫn thao tác điều khiển cơ bản và nhận tờ hướng dẫn ngắn gọn. Nhân viên không khẳng định một buổi hướng dẫn ngắn là đủ để người dùng làm được mọi công việc với thiết bị. Một số hoạt động vẫn có thể cần chuyên gia hỗ trợ. Nếu máy ngừng hoạt động, người mượn được yêu cầu báo lỗi sớm thay vì tự thử những cách sửa mà mình chưa biết rõ. Khi xem xét sự cố, thư viện phân biệt hao mòn thông thường với hư hại lẽ ra có thể tránh được. Nếu không, mọi người có thể giấu lỗi nhỏ vì tưởng cứ báo là tự động bị phạt."
+      },
+      {
+        "index": 5,
+        "vi": "F. Một bức ảnh chụp những kệ đầy đồ chưa đủ để cho biết dịch vụ có thành công hay không. Những món đồ không bao giờ được mang ra khỏi thư viện thì cũng chẳng giúp ích nhiều cho người mượn, trong khi dùng liên tục không có thời gian kiểm tra cũng gây khó khăn riêng. Một dịch vụ hữu ích cần cân bằng nhu cầu sử dụng, cơ hội được mượn và việc bảo quản đồ. Có khi thư viện nên mua ít hơn một thiết bị đang được ưa chuộng và dành thêm công sức hỗ trợ người dùng những món đồ thông thường. Điều quan trọng không chỉ là ý tưởng cùng sở hữu đồ đạc, mà là tạo ra một dịch vụ cho mượn đáng tin cậy, rõ cách dùng và có thể sử dụng được trên thực tế."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "stocked",
+        "pos": "verb (past participle)",
+        "meaning_vi": "được trang bị hoặc đưa vào kho để sử dụng",
+        "paragraph_index": 0,
+        "usage_pattern": "stock a collection / be stocked with + items",
+        "example": "The room is stocked with basic tools.",
+        "example_vi": "Căn phòng được trang bị các dụng cụ cơ bản.",
+        "synonyms": [
+          "supplied"
+        ],
+        "paraphrases": [
+          "kept available for people to use"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "The idea attracts attention because the shelves look unusual, but the practical questions resemble those of an ordinary library: what should be stocked, who can borrow it and how should it be returned?"
+      },
+      {
+        "word": "enthusiasm",
+        "pos": "noun",
+        "meaning_vi": "sự hào hứng",
+        "paragraph_index": 1,
+        "usage_pattern": "enthusiasm for + noun",
+        "example": "There is enthusiasm for the new service.",
+        "example_vi": "Mọi người hào hứng với dịch vụ mới.",
+        "synonyms": [
+          "eagerness"
+        ],
+        "paraphrases": [
+          "strong interest and willingness"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Projectors receive many votes, while basic tools attract less enthusiasm."
+      },
+      {
+        "word": "components",
+        "pos": "plural noun",
+        "meaning_vi": "các bộ phận cấu thành",
+        "paragraph_index": 2,
+        "usage_pattern": "check / replace components",
+        "example": "Check all components before returning the device.",
+        "example_vi": "Hãy kiểm tra mọi bộ phận trước khi trả máy.",
+        "synonyms": [
+          "parts"
+        ],
+        "paraphrases": [
+          "pieces that form a complete item"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "A larger item with few components can sometimes be simpler to manage."
+      },
+      {
+        "word": "inspection",
+        "pos": "noun",
+        "meaning_vi": "việc kiểm tra tình trạng",
+        "paragraph_index": 2,
+        "usage_pattern": "time required for inspection",
+        "example": "Leave time for inspection after each return.",
+        "example_vi": "Hãy dành thời gian kiểm tra sau mỗi lần trả.",
+        "synonyms": [
+          "examination"
+        ],
+        "paraphrases": [
+          "a careful check of condition"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "For every new object, staff prepare a checklist and estimate the time required for inspection."
+      },
+      {
+        "word": "trade-off",
+        "pos": "noun",
+        "meaning_vi": "sự đánh đổi giữa hai lợi ích",
+        "paragraph_index": 3,
+        "usage_pattern": "a trade-off between + A and B",
+        "example": "There is a trade-off between speed and accuracy.",
+        "example_vi": "Có sự đánh đổi giữa tốc độ và độ chính xác.",
+        "synonyms": [
+          "compromise"
+        ],
+        "paraphrases": [
+          "accepting less of one benefit to gain another"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "It is to make the trade-off visible and adjustable instead of allowing the quickest users of the booking website to determine access by default."
+      },
+      {
+        "word": "concise",
+        "pos": "adjective",
+        "meaning_vi": "ngắn gọn nhưng đủ ý",
+        "paragraph_index": 4,
+        "usage_pattern": "concise instructions / explanation",
+        "example": "The guide gives concise instructions.",
+        "example_vi": "Hướng dẫn trong tài liệu rất ngắn gọn.",
+        "synonyms": [
+          "brief"
+        ],
+        "paraphrases": [
+          "using few words without unnecessary detail"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Each borrower receives a demonstration of the essential controls and a concise instruction sheet."
+      },
+      {
+        "word": "penalty",
+        "pos": "noun",
+        "meaning_vi": "hình phạt hoặc khoản phạt",
+        "paragraph_index": 4,
+        "usage_pattern": "a penalty for + noun / V-ing",
+        "example": "Late returns may lead to a penalty.",
+        "example_vi": "Trả muộn có thể dẫn đến khoản phạt.",
+        "synonyms": [
+          "punishment"
+        ],
+        "paraphrases": [
+          "a consequence imposed for breaking a rule"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Otherwise people may hide minor problems because they assume every report will lead automatically to a penalty."
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "kind": "detail",
+      "prompt": "Why are conversations held with people at the library entrance?",
+      "options": [
+        "To persuade everyone to borrow a projector",
+        "To include needs not captured by the online poll",
+        "To prevent online voters from joining",
+        "To replace the entire lending collection"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "people who did not answer the poll mention quite different needs",
+      "explanation_vi": "Các cuộc trò chuyện giúp thư viện biết thêm nhu cầu của những người không tham gia khảo sát trực tuyến.",
+      "id": "q1"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "A donated device has no costs for the library after acquisition.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "Accepting a donated device is therefore not cost-free simply because the purchase price is zero.",
+      "explanation_vi": "FALSE: Dù không mất tiền mua, thư viện vẫn tốn công sức và thời gian để kiểm tra, quản lý và bảo quản thiết bị.",
+      "id": "q2"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Shelf space is the only factor that limits the size of the collection.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "This hidden work places a limit on the collection even when shelf space remains available.",
+      "explanation_vi": "FALSE: Ngay cả khi kệ còn chỗ, công việc kiểm tra và quản lý vẫn giới hạn số thiết bị có thể nhận. Vì vậy không gian không phải yếu tố duy nhất.",
+      "id": "q3"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Members must live within two kilometres of the library.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 0,
+      "evidence": "Members can borrow a drill, a sewing machine or a projector",
+      "explanation_vi": "NOT GIVEN: chỉ nói thành viên có thể mượn, không nêu giới hạn khoảng cách.",
+      "id": "q4"
+    },
+    {
+      "kind": "matching_heading",
+      "prompt": "Choose the best heading for paragraph D.",
+      "options": [
+        "Removing the booking website entirely",
+        "Why all reservations must be made months ahead",
+        "Balancing planned and unexpected needs",
+        "Giving frequent borrowers permanent ownership"
+      ],
+      "answer": 2,
+      "paragraph_index": 3,
+      "evidence": "The library divides availability between advance reservations and short-notice borrowing.",
+      "explanation_vi": "Đoạn D tập trung cân bằng nhu cầu đặt trước và nhu cầu phát sinh sát ngày. Thư viện không bỏ website hay chuyển quyền sở hữu đồ cho người mượn.",
+      "id": "q5"
+    },
+    {
+      "kind": "gap_fill",
+      "prompt": "Complete using NO MORE THAN TWO WORDS from the passage: Staff use a _____ to check each object and its components.",
+      "options": [],
+      "answer": "checklist",
+      "paragraph_index": 2,
+      "evidence": "For every new object, staff prepare a checklist",
+      "explanation_vi": "Checklist là danh sách kiểm tra, đúng một từ.",
+      "max_words": 2,
+      "accepted_answers": [
+        "checklist"
+      ],
+      "id": "q6"
+    },
+    {
+      "kind": "short_answer",
+      "prompt": "Answer using NO MORE THAN TWO WORDS from the passage: What should borrowers report promptly when a device stops working?",
+      "options": [],
+      "answer": "the fault",
+      "paragraph_index": 4,
+      "evidence": "borrowers are asked to report the fault promptly",
+      "explanation_vi": "Người mượn cần báo lỗi thay vì tự sửa khi chưa biết cách. Fault là từ chỉ lỗi trong bài.",
+      "max_words": 2,
+      "accepted_answers": [
+        "the fault",
+        "fault"
+      ],
+      "id": "q7"
+    },
+    {
+      "kind": "matching_information",
+      "prompt": "Which paragraph explains why borrowers might conceal problems? Choose A–F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "answer": 4,
+      "paragraph_index": 4,
+      "evidence": "people may hide minor problems because they assume every report will lead automatically to a penalty.",
+      "explanation_vi": "Đoạn E giải thích rằng người dùng có thể giấu lỗi vì lo cứ báo là bị phạt.",
+      "id": "q8"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer regards full shelves as sufficient evidence of a successful lending service.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 5,
+      "evidence": "The collection's success cannot be inferred from a photograph of full shelves.",
+      "explanation_vi": "NO: Tác giả cho rằng ảnh những kệ đầy đồ chưa đủ để chứng minh dịch vụ cho mượn có giá trị.",
+      "id": "q9"
+    },
+    {
+      "kind": "inference",
+      "prompt": "What can be inferred about choosing items for the collection?",
+      "options": [
+        "Donated items should never be accepted",
+        "The smallest objects are always easiest to manage",
+        "Poll results guarantee future borrowing",
+        "Management effort matters alongside purchase price and popularity"
+      ],
+      "answer": 3,
+      "paragraph_index": 2,
+      "evidence": "This hidden work places a limit on the collection even when shelf space remains available.",
+      "explanation_vi": "Ngoài giá và mức độ được ưa thích, thư viện còn phải tính công sức kiểm tra, quản lý. Bài không đưa ra quy tắc luôn chọn đồ nhỏ hoặc luôn từ chối đồ được tặng.",
+      "id": "q10"
+    }
+  ],
+  "faqs": []
+}

@@ -146,23 +146,23 @@ class ReadingPlatformTests(TestCase):
         self.standard.title='Edited standard';self.standard.save()
         call_command('seed_lessons',stdout=StringIO());call_command('seed_lessons',stdout=StringIO())
         self.standard.refresh_from_db();self.assertEqual(self.standard.title,'Edited standard')
-        self.assertEqual(CuratedLesson.objects.count(),27);self.assertEqual(Vocabulary.objects.count(),0)
+        self.assertEqual(CuratedLesson.objects.count(),len(list((settings.BASE_DIR/'data/lessons').glob('*.json'))));self.assertEqual(Vocabulary.objects.count(),0)
     def test_seed_update_changes_standard_not_user_snapshot(self):
         rid=self.open()['id'];call_command('seed_lessons',update=True,stdout=StringIO())
         self.assertEqual(Reading.objects.get(pk=rid).lesson_snapshot['revision'],1)
-        self.assertEqual(CuratedLesson.objects.count(),27)
+        self.assertEqual(CuratedLesson.objects.count(),len(list((settings.BASE_DIR/'data/lessons').glob('*.json'))))
     def test_unpublished_cannot_open(self):
         self.standard.published=False;self.standard.save()
         self.assertEqual(self.client.get('/api/catalog/').json()['items'],[])
         self.assertEqual(self.post('/api/catalog/a-quiet-start/open/',{}).status_code,404)
 
     def test_toeic_attempt_is_private_idempotent_and_does_not_leak_keys(self):
-        catalog=self.client.get('/api/toeic/').json();self.assertEqual(len(catalog['items']),2)
+        catalog=self.client.get('/api/toeic/').json();self.assertEqual(len(catalog['items']),len(toeic_sets()))
         practice=toeic_sets()[0];public=self.client.get(f"/api/toeic/{practice['slug']}/").json()
         self.assertTrue(all('answer' not in question for question in public['questions']))
         answers={q['id']:q['answer'] for q in practice['questions']};token=str(uuid.uuid4())
-        first=self.post(f"/api/toeic/{practice['slug']}/submit/",{'answers':answers,'token':token,'duration_seconds':240})
-        second=self.post(f"/api/toeic/{practice['slug']}/submit/",{'answers':answers,'token':token,'duration_seconds':240})
+        first=self.post(f"/api/toeic/{practice['slug']}/submit/",{'answers':answers,'token':token,'duration_seconds':240,'revision':public['revision']})
+        second=self.post(f"/api/toeic/{practice['slug']}/submit/",{'answers':answers,'token':token,'duration_seconds':240,'revision':public['revision']})
         self.assertEqual(first.json()['score'],practice['question_count']);self.assertTrue(second.json()['duplicate'])
         self.assertEqual(ToeicAttempt.objects.filter(owner=self.alice).count(),1)
         self.client.force_login(self.bob)

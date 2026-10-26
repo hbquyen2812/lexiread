@@ -1,0 +1,461 @@
+{
+  "slug": "p6-events-projects-and-community",
+  "title": "Projects & Events · Follow the Logic",
+  "mode": "parts-5-6",
+  "mode_label": "Hoàn thành văn bản",
+  "parts": [
+    6
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 20,
+  "description": "Hoàn thiện bốn thông báo về hội chợ, dịch vụ thử nghiệm, vườn cộng đồng và lớp học trực tuyến.",
+  "instructions": "Đọc trọn từng văn bản rồi chọn đáp án cho các chỗ trống được đánh số, gồm cả chỗ cần điền một câu hoàn chỉnh.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "exhibitor-email",
+      "kind": "Email",
+      "heading": "Harbor Design Fair: exhibitor instructions",
+      "body": "Dear Exhibitors,\n\nWe are looking forward to welcoming you to the Harbor Design Fair on 18 June. Booth setup will take place from 7 a.m. to 9 a.m.; all vehicles must leave the loading area by 8:45 a.m. so that the public entrance can be ___(1)___.\n\nEach booth includes one table and two chairs. If you require additional furniture, please complete the equipment request form by 10 June. ___(2)___ Orders received after that date will depend on remaining stock.\n\nPower outlets are available along the east wall, ___(3)___ they cannot be installed in the central aisle. Exhibitors with electrical displays should check the location assigned to them. Please notify the event office of any problem ___(4)___; booth changes become difficult once setup begins."
+    },
+    {
+      "id": "survey-update",
+      "kind": "Project memo",
+      "heading": "Pilot delivery service: feedback needed",
+      "body": "To: Pilot Project Team\n\nThe two-week trial of our evening delivery service ended yesterday. During the trial, drivers completed 184 deliveries, and 91 percent arrived within the promised time window. We now need customer feedback to understand whether the service is worth ___(5)___.\n\nA short survey will be emailed to every customer who used the trial. It asks about delivery timing, communication and the proposed service fee. ___(6)___ These comments may help explain low ratings that the numerical results alone cannot explain.\n\nPlease do not announce a permanent launch yet. ___(7)___ the survey results have been reviewed, the management team will decide whether to continue, modify or end the service. A summary of the decision will be ___(8)___ to staff next Friday."
+    },
+    {
+      "id": "garden-invitation",
+      "kind": "Invitation",
+      "heading": "Riverside Community Garden opening",
+      "body": "Residents and local businesses are invited to the opening of the Riverside Community Garden on Saturday, 12 September, from 10 a.m. to noon. Visitors can tour the new vegetable beds and meet the volunteers who maintain them. Admission is free, but online registration is ___(9)___ because the garden paths have limited capacity.\n\nThe event will include a seed-planting activity for children. ___(10)___ All tools and seeds will be supplied, so families do not need to bring equipment.\n\nThe garden is a five-minute walk from Riverside Station. There is no visitor parking on the site; ___(11)___, we encourage guests to use public transport. If heavy rain is forecast, registered guests ___(12)___ by email on Friday with details of an alternative indoor activity."
+    },
+    {
+      "id": "training-email",
+      "kind": "Training notice",
+      "heading": "Spreadsheet workshop: preparation and access",
+      "body": "Our practical spreadsheet workshop will be held online on 22 October from 2 p.m. to 4 p.m. Participants should already be comfortable entering data and using basic formulas. The session will focus on cleaning inconsistent records and ___(13)___ useful summaries from large tables.\n\nPlease download the practice file before the workshop. It contains fictional customer records and must not be replaced with real client data. ___(14)___ This ensures that participants can share their screens without revealing personal information.\n\nThe meeting link will be sent to registered participants the day before the session. You can join from a company laptop ___(15)___ you have the desktop version of the spreadsheet software installed. Staff who need installation support should contact IT by Monday to allow ___(16)___ time for setup."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 6,
+      "prompt": "Blank 1: Vehicles must leave so that the public entrance can be ___.",
+      "options": [
+        "cleared",
+        "clearing",
+        "clears",
+        "clearance"
+      ],
+      "answer": 0,
+      "explanation_vi": "Can be cleared là bị động: lối vào được dọn thông thoáng. Clearance là danh từ; clearing/clears không phù hợp sau can be.",
+      "evidence": "all vehicles must leave the loading area by 8:45 a.m. so that the public entrance can be ___(1)___.",
+      "document_ids": [
+        "exhibitor-email"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 6,
+      "prompt": "Blank 2: Choose the sentence that explains the furniture deadline.",
+      "options": [
+        "Additional furniture can be ordered only after the fair closes.",
+        "This gives our supplier time to confirm quantities and schedule delivery.",
+        "Every booth will receive unlimited furniture without a request.",
+        "The fair has been postponed until the following month."
+      ],
+      "answer": 1,
+      "explanation_vi": "Cần gửi yêu cầu sớm để nhà cung cấp kịp xác nhận số lượng và sắp xếp giao đồ. Câu đúng giải thích mốc ngày 10; các lựa chọn khác không khớp với kế hoạch hội chợ.",
+      "evidence": "If you require additional furniture, please complete the equipment request form by 10 June.",
+      "document_ids": [
+        "exhibitor-email"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 6,
+      "prompt": "Blank 3: Outlets are available along the east wall, ___ not in the central aisle.",
+      "options": [
+        "so",
+        "or",
+        "but",
+        "because"
+      ],
+      "answer": 2,
+      "explanation_vi": "But diễn tả tương phản giữa nơi có thể cấp điện và nơi không thể. Because/so sai quan hệ; or không diễn tả hai quy định đồng thời.",
+      "evidence": "Power outlets are available along the east wall, ___(3)___ they cannot be installed in the central aisle.",
+      "document_ids": [
+        "exhibitor-email"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 6,
+      "prompt": "Blank 4: Notify the event office of any problem ___.",
+      "options": [
+        "prompt",
+        "promptness",
+        "prompted",
+        "promptly"
+      ],
+      "answer": 3,
+      "explanation_vi": "Cần trạng từ promptly để bổ nghĩa notify. Việc đổi gian hàng sẽ khó sau khi bắt đầu dựng, nên phải báo sớm; các dạng từ khác sai vị trí.",
+      "evidence": "Please notify the event office of any problem ___(4)___; booth changes become difficult once setup begins.",
+      "document_ids": [
+        "exhibitor-email"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 6,
+      "prompt": "Blank 5: We need feedback to understand whether the service is worth ___.",
+      "options": [
+        "continuing",
+        "continue",
+        "continued",
+        "to continue"
+      ],
+      "answer": 0,
+      "explanation_vi": "Ta dùng be worth doing something để nói một việc đáng làm. Ở đây là cân nhắc xem dịch vụ có đáng tiếp tục hay không, nên chọn continuing. Không dùng to continue sau worth theo cấu trúc này.",
+      "evidence": "We now need customer feedback to understand whether the service is worth ___(5)___.",
+      "document_ids": [
+        "survey-update"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 6,
+      "prompt": "Blank 6: Choose the sentence that introduces the comments mentioned next.",
+      "options": [
+        "Drivers have been instructed to ignore written customer feedback.",
+        "Customers will also have space to describe their experience in their own words.",
+        "Customers may answer only by selecting a number from one to five.",
+        "The survey will not include any questions about the trial."
+      ],
+      "answer": 1,
+      "explanation_vi": "Câu sau nhắc “These comments”, nên trước đó phải nói khách có chỗ viết trải nghiệm của mình. Nếu chỉ cho chọn điểm số thì sẽ không có những lời nhận xét này.",
+      "evidence": "These comments may help explain low ratings that the numerical results alone cannot explain.",
+      "document_ids": [
+        "survey-update"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 6,
+      "prompt": "Blank 7: ___ the survey results have been reviewed, management will decide.",
+      "options": [
+        "During",
+        "Unless",
+        "Once",
+        "Despite"
+      ],
+      "answer": 2,
+      "explanation_vi": "Once + mệnh đề nghĩa là sau khi việc xem xét đã xong thì ra quyết định. Unless đảo điều kiện không hợp quy trình; despite/during cần danh từ.",
+      "evidence": "___(7)___ the survey results have been reviewed, the management team will decide whether to continue, modify or end the service.",
+      "document_ids": [
+        "survey-update"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 6,
+      "prompt": "Blank 8: A summary of the decision will be ___ to staff.",
+      "options": [
+        "distributing",
+        "distribution",
+        "distribute",
+        "distributed"
+      ],
+      "answer": 3,
+      "explanation_vi": "Will be distributed là tương lai bị động: bản tóm tắt được gửi tới nhân viên. Distribution là danh từ, distributing là dạng chủ động.",
+      "evidence": "A summary of the decision will be ___(8)___ to staff next Friday.",
+      "document_ids": [
+        "survey-update"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 6,
+      "prompt": "Blank 9: Admission is free, but online registration is ___.",
+      "options": [
+        "required",
+        "require",
+        "requiring",
+        "requirement"
+      ],
+      "answer": 0,
+      "explanation_vi": "Chọn required: khách cần đăng ký dù vào cửa miễn phí. Lý do đã được nêu rõ là các lối đi trong vườn chỉ đón được số người hạn chế.",
+      "evidence": "Admission is free, but online registration is ___(9)___ because the garden paths have limited capacity.",
+      "document_ids": [
+        "garden-invitation"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 6,
+      "prompt": "Blank 10: Choose the sentence that develops the children's activity.",
+      "options": [
+        "Only professional gardeners may enter the event.",
+        "A volunteer will show each child how to plant a seed in a small reusable pot.",
+        "Visitors must bring their own seeds and gardening tools.",
+        "Children will not be allowed to take part in any activity."
+      ],
+      "answer": 1,
+      "explanation_vi": "Câu đúng mô tả tình nguyện viên hướng dẫn trẻ gieo hạt, nối tự nhiên với việc được cung cấp dụng cụ và hạt giống. Yêu cầu tự mang đồ trái câu sau; hai lựa chọn còn lại không phù hợp với hoạt động dành cho trẻ.",
+      "evidence": "The event will include a seed-planting activity for children.",
+      "document_ids": [
+        "garden-invitation"
+      ]
+    },
+    {
+      "id": "q11",
+      "part": 6,
+      "prompt": "Blank 11: There is no parking; ___, guests are encouraged to use public transport.",
+      "options": [
+        "similarly",
+        "instead of",
+        "therefore",
+        "nevertheless"
+      ],
+      "answer": 2,
+      "explanation_vi": "Therefore nêu hệ quả hợp lý của việc không có chỗ đỗ. Nevertheless chỉ tương phản, similarly chỉ tương đồng; instead of là giới từ nên không phù hợp dấu câu/cấu trúc.",
+      "evidence": "There is no visitor parking on the site; ___(11)___, we encourage guests to use public transport.",
+      "document_ids": [
+        "garden-invitation"
+      ]
+    },
+    {
+      "id": "q12",
+      "part": 6,
+      "prompt": "Blank 12: If rain is forecast, registered guests ___ by email on Friday.",
+      "options": [
+        "notify",
+        "having notified",
+        "to notify",
+        "will be notified"
+      ],
+      "answer": 3,
+      "explanation_vi": "Người đăng ký sẽ được thông báo nếu có dự báo mưa, nên chọn will be notified. Notify là chủ động, trong khi khách là người nhận thông báo. Having notified và to notify chưa tạo thành động từ chính cho câu này.",
+      "evidence": "If heavy rain is forecast, registered guests ___(12)___ by email on Friday with details of an alternative indoor activity.",
+      "document_ids": [
+        "garden-invitation"
+      ]
+    },
+    {
+      "id": "q13",
+      "part": 6,
+      "prompt": "Blank 13: The session focuses on cleaning records and ___ useful summaries.",
+      "options": [
+        "creating",
+        "create",
+        "created",
+        "creation"
+      ],
+      "answer": 0,
+      "explanation_vi": "Hai hành động song song sau focus on là cleaning và creating. Creation là danh từ nhưng không tạo cấu trúc song song 'creation useful summaries' vì thiếu of.",
+      "evidence": "The session will focus on cleaning inconsistent records and ___(13)___ useful summaries from large tables.",
+      "document_ids": [
+        "training-email"
+      ]
+    },
+    {
+      "id": "q14",
+      "part": 6,
+      "prompt": "Blank 14: Choose the sentence that explains the privacy safeguard.",
+      "options": [
+        "Only participants' personal financial information may be shared.",
+        "Everyone will work with the same invented names and contact details.",
+        "Participants should upload their current client lists before the session.",
+        "The trainer will publish all customer records after the workshop."
+      ],
+      "answer": 1,
+      "explanation_vi": "Mọi người dùng cùng dữ liệu giả nên có thể chia sẻ màn hình mà không lộ thông tin cá nhân. Ba lựa chọn khác đều yêu cầu hoặc cho phép dùng dữ liệu thật, trái hướng dẫn trước đó.",
+      "evidence": "It contains fictional customer records and must not be replaced with real client data.",
+      "document_ids": [
+        "training-email"
+      ]
+    },
+    {
+      "id": "q15",
+      "part": 6,
+      "prompt": "Blank 15: You can join from a company laptop ___ the desktop software is installed.",
+      "options": [
+        "because of",
+        "in addition to",
+        "provided that",
+        "despite"
+      ],
+      "answer": 2,
+      "explanation_vi": "Provided that + mệnh đề nêu điều kiện về phần mềm đã cài. Ba lựa chọn kia là cụm giới từ, không đứng trực tiếp trước mệnh đề you have.",
+      "evidence": "You can join from a company laptop ___(15)___ you have the desktop version of the spreadsheet software installed.",
+      "document_ids": [
+        "training-email"
+      ]
+    },
+    {
+      "id": "q16",
+      "part": 6,
+      "prompt": "Blank 16: Contact IT by Monday to allow ___ time for setup.",
+      "options": [
+        "sufficiently",
+        "sufficiency",
+        "suffice",
+        "sufficient"
+      ],
+      "answer": 3,
+      "explanation_vi": "Sufficient là tính từ bổ nghĩa danh từ time. Sufficiently là trạng từ; sufficiency là danh từ và suffice là động từ.",
+      "evidence": "Staff who need installation support should contact IT by Monday to allow ___(16)___ time for setup.",
+      "document_ids": [
+        "training-email"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "exhibitor",
+      "pos": "noun",
+      "meaning_vi": "đơn vị hoặc người trưng bày tại triển lãm",
+      "usage_pattern": "an exhibitor at a fair; exhibitor instructions",
+      "example": "Each exhibitor receives a table and two chairs.",
+      "example_vi": "Mỗi đơn vị trưng bày được cấp một bàn và hai ghế.",
+      "synonyms": [
+        "participant"
+      ],
+      "paraphrases": [
+        "a person or organization displaying products at an event"
+      ],
+      "context": "Each exhibitor receives a table and two chairs.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Projects & Events · Follow the Logic",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "remaining",
+      "pos": "adjective",
+      "meaning_vi": "còn lại",
+      "usage_pattern": "remaining stock/time/places",
+      "example": "Late requests depend on the remaining stock.",
+      "example_vi": "Yêu cầu gửi muộn có được đáp ứng hay không còn tùy lượng hàng còn lại.",
+      "synonyms": [
+        "available"
+      ],
+      "paraphrases": [
+        "still left after other amounts have been used"
+      ],
+      "context": "Late requests depend on the remaining stock.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Projects & Events · Follow the Logic",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "trial",
+      "pos": "noun",
+      "meaning_vi": "đợt thử nghiệm",
+      "usage_pattern": "a trial of + service; run a trial",
+      "example": "The evening delivery trial lasted two weeks.",
+      "example_vi": "Đợt thử nghiệm giao hàng buổi tối kéo dài hai tuần.",
+      "synonyms": [
+        "pilot"
+      ],
+      "paraphrases": [
+        "a limited test before deciding on wider use"
+      ],
+      "context": "The evening delivery trial lasted two weeks.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Projects & Events · Follow the Logic",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "capacity",
+      "pos": "noun",
+      "meaning_vi": "sức chứa, khả năng tiếp nhận",
+      "usage_pattern": "limited capacity; reach capacity",
+      "example": "Registration is necessary because the venue has limited capacity.",
+      "example_vi": "Bạn cần đăng ký trước vì địa điểm chỉ đón được số người hạn chế.",
+      "synonyms": [
+        "limit"
+      ],
+      "paraphrases": [
+        "the maximum number a place can accommodate"
+      ],
+      "context": "Registration is necessary because the venue has limited capacity.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Projects & Events · Follow the Logic",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "fictional",
+      "pos": "adjective",
+      "meaning_vi": "hư cấu, được tạo ra thay vì có thật",
+      "usage_pattern": "fictional names/records/characters",
+      "example": "The practice file contains fictional customer records.",
+      "example_vi": "Tệp thực hành dùng hồ sơ khách hàng được tạo ra để làm ví dụ.",
+      "synonyms": [
+        "invented"
+      ],
+      "paraphrases": [
+        "created for an example rather than describing real people"
+      ],
+      "context": "The practice file contains fictional customer records.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Projects & Events · Follow the Logic",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "sufficient",
+      "pos": "adjective",
+      "meaning_vi": "đủ cho một mục đích",
+      "usage_pattern": "sufficient time/resources; sufficient for",
+      "example": "Allow sufficient time to install the software.",
+      "example_vi": "Dành đủ thời gian để cài phần mềm.",
+      "synonyms": [
+        "adequate"
+      ],
+      "paraphrases": [
+        "enough to meet a particular need"
+      ],
+      "context": "Allow sufficient time to install the software.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 6"
+      ],
+      "source_label": "Projects & Events · Follow the Logic",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

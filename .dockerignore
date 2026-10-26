@@ -10,5 +10,6 @@ staticfiles
 *.dump
 *.sql
 backups
+data/private
 preview.html
 lexiread_data_v1

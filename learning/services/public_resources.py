@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 CATALOG_PATH = Path(__file__).resolve().parents[2] / 'data/public_sources/catalog.json'
 OFFICIAL_HOSTS = frozenset({'ielts.org', 'www.ielts.org', 'cdn.ielts.org',
     'takeielts.britishcouncil.org', 'ielts.idp.com', 'www.ets.org',
-    'ielts.inspera.com', 'demo-ielts.inspera.com'})
+    'ielts.inspera.com', 'demo-ielts.inspera.com', 'www.iibc-global.org'})
 URL_FIELDS = ('url', 'source_url', 'answer_url')
 TEXT_FIELDS = ('title', 'publisher', 'variant', 'description_vi', 'rights', 'access')
 

@@ -1,0 +1,464 @@
+{
+  "slug": "p5-operations-and-verb-patterns",
+  "title": "Daily Operations · Verbs in Context",
+  "mode": "parts-5-6",
+  "mode_label": "Ngữ pháp và từ vựng",
+  "parts": [
+    5
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 15,
+  "description": "Luyện thì, câu bị động và cách dùng động từ qua những câu chuyện về bảo trì, giao hàng và sắp xếp công việc.",
+  "instructions": "Chọn một đáp án phù hợp nhất để hoàn thành mỗi câu.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 5,
+      "prompt": "The loading area ___ by the safety officer every Monday morning.",
+      "options": [
+        "is inspected",
+        "inspects",
+        "has inspected",
+        "is inspecting"
+      ],
+      "answer": 0,
+      "explanation_vi": "Khu vực bốc dỡ được kiểm tra vào mỗi sáng thứ Hai, nên dùng hiện tại đơn bị động: is inspected. Các phương án chủ động lại khiến câu mang nghĩa khu vực này tự thực hiện việc kiểm tra.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q02",
+      "part": 5,
+      "prompt": "The supplier has agreed ___ the damaged units at no additional charge.",
+      "options": [
+        "replaced",
+        "to replace",
+        "replacing",
+        "replace"
+      ],
+      "answer": 1,
+      "explanation_vi": "Agree to do something: đồng ý làm gì. Sau agreed dùng to replace; replacing không thuộc mẫu này và replace thiếu to.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q03",
+      "part": 5,
+      "prompt": "We look forward to ___ your design team at next month's exhibition.",
+      "options": [
+        "met",
+        "be meeting",
+        "meeting",
+        "meet"
+      ],
+      "answer": 2,
+      "explanation_vi": "To trong look forward to là giới từ, nên theo sau là V-ing: meeting. Không nhầm với to của động từ nguyên mẫu.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q04",
+      "part": 5,
+      "prompt": "By the time the courier arrived yesterday, the receptionist ___ all the parcels.",
+      "options": [
+        "will label",
+        "has labeled",
+        "is labeling",
+        "had labeled"
+      ],
+      "answer": 3,
+      "explanation_vi": "Việc dán nhãn đã xong trước khi người giao hàng đến hôm qua, nên chọn had labeled, ở thì quá khứ hoàn thành. Has labeled không phù hợp với mốc quá khứ đã kết thúc trong câu.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q05",
+      "part": 5,
+      "prompt": "Please make sure that the meeting room ___ before the guests arrive.",
+      "options": [
+        "is prepared",
+        "preparing",
+        "has prepared",
+        "prepare"
+      ],
+      "answer": 0,
+      "explanation_vi": "Phòng họp cần được chuẩn bị trước khi khách đến, nên chọn is prepared. Has prepared là dạng chủ động; preparing còn thiếu động từ chính, còn prepare không phù hợp với chủ ngữ số ít.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q06",
+      "part": 5,
+      "prompt": "The technician recommended ___ the filter rather than repairing it.",
+      "options": [
+        "replaced",
+        "replacing",
+        "to replace",
+        "replace"
+      ],
+      "answer": 1,
+      "explanation_vi": "Recommend doing something là cấu trúc đúng khi theo sau trực tiếp là hành động. To replace không dùng trực tiếp sau recommend theo mẫu này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q07",
+      "part": 5,
+      "prompt": "Neither the warehouse manager nor her assistants ___ available this afternoon.",
+      "options": [
+        "be",
+        "being",
+        "are",
+        "is"
+      ],
+      "answer": 2,
+      "explanation_vi": "Với neither ... nor, ta chia động từ theo chủ ngữ đứng gần nó nhất. Ở đây là assistants, số nhiều, nên chọn are. Be và being chưa tạo thành động từ được chia phù hợp trong câu.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q08",
+      "part": 5,
+      "prompt": "The sales report ___ when the power went out, so some changes were lost.",
+      "options": [
+        "has edited",
+        "will be edited",
+        "is editing",
+        "was being edited"
+      ],
+      "answer": 3,
+      "explanation_vi": "When the power went out đặt mốc quá khứ; báo cáo đang được chỉnh sửa lúc đó nên dùng quá khứ tiếp diễn bị động was being edited. Các lựa chọn khác sai thời hoặc thể.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q09",
+      "part": 5,
+      "prompt": "The conference organizers asked attendees ___ their dietary needs in advance.",
+      "options": [
+        "to specify",
+        "specifying",
+        "specified",
+        "specify"
+      ],
+      "answer": 0,
+      "explanation_vi": "Ask somebody to do something: asked attendees to specify. Không dùng V-ing hoặc động từ nguyên mẫu thiếu to sau tân ngữ trong mẫu này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q10",
+      "part": 5,
+      "prompt": "Employees ___ wish to use the company bicycles must complete a short safety course.",
+      "options": [
+        "which",
+        "who",
+        "whose",
+        "whom"
+      ],
+      "answer": 1,
+      "explanation_vi": "Who làm chủ ngữ cho wish và thay cho người employees. Whom làm tân ngữ; whose chỉ sở hữu; which thường thay cho vật.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q11",
+      "part": 5,
+      "prompt": "A copy of the maintenance records ___ attached to this message.",
+      "options": [
+        "have",
+        "be",
+        "is",
+        "are"
+      ],
+      "answer": 2,
+      "explanation_vi": "Chủ ngữ là A copy số ít, không phải records trong cụm of. Do đó dùng is attached; are/have không hòa hợp và be chưa được chia.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q12",
+      "part": 5,
+      "prompt": "The catering company expects ___ the final guest count by noon tomorrow.",
+      "options": [
+        "receiving",
+        "received",
+        "receive",
+        "to receive"
+      ],
+      "answer": 3,
+      "explanation_vi": "Expect to do something: expects to receive. Cần động từ nguyên mẫu có to; các dạng khác không phù hợp sau expects ở đây.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q13",
+      "part": 5,
+      "prompt": "The lift cannot be used until the repairs ___.",
+      "options": [
+        "are completed",
+        "will complete",
+        "completing",
+        "has completed"
+      ],
+      "answer": 0,
+      "explanation_vi": "Các việc sửa chữa phải được hoàn tất nên cần dạng bị động are completed. Sau until nói về thời điểm trong tương lai, ta dùng hiện tại đơn. Will complete là chủ động; completing thiếu động từ chính, còn has completed không phù hợp với repairs số nhiều.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q14",
+      "part": 5,
+      "prompt": "The new barcode system allows staff ___ incoming goods more quickly.",
+      "options": [
+        "register",
+        "to register",
+        "registering",
+        "registered"
+      ],
+      "answer": 1,
+      "explanation_vi": "Allow somebody to do something là mẫu chuẩn: allows staff to register. Register thiếu to; registering không dùng sau tân ngữ staff trong mẫu này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q15",
+      "part": 5,
+      "prompt": "If the replacement parts arrive today, we ___ production tomorrow morning.",
+      "options": [
+        "would have resumed",
+        "had resumed",
+        "will resume",
+        "resumed"
+      ],
+      "answer": 2,
+      "explanation_vi": "Đây là điều kiện có thể xảy ra trong tương lai: If + hiện tại đơn, mệnh đề chính will + động từ. Các lựa chọn quá khứ hoặc điều kiện quá khứ không khớp.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q16",
+      "part": 5,
+      "prompt": "Please avoid ___ confidential documents on the shared printer overnight.",
+      "options": [
+        "to leave",
+        "leave",
+        "left",
+        "leaving"
+      ],
+      "answer": 3,
+      "explanation_vi": "Avoid theo sau bởi V-ing: avoid leaving. Không dùng to-infinitive sau avoid trong cấu trúc này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q17",
+      "part": 5,
+      "prompt": "The outdoor event ___ indoors yesterday because of heavy rain.",
+      "options": [
+        "was moved",
+        "moves",
+        "has moved",
+        "will move"
+      ],
+      "answer": 0,
+      "explanation_vi": "Yesterday đặt hành động trong quá khứ; sự kiện được chuyển vào trong nhà nên was moved. Moves và will move không phù hợp thời điểm; has moved là hiện tại hoàn thành, không dùng với mốc yesterday.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q18",
+      "part": 5,
+      "prompt": "All visitors are required ___ in at the reception desk.",
+      "options": [
+        "sign",
+        "to sign",
+        "signing",
+        "signed"
+      ],
+      "answer": 1,
+      "explanation_vi": "Be required to do something nghĩa là được yêu cầu làm gì. To sign tạo mẫu đúng; signing và sign không hoàn chỉnh cấu trúc.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q19",
+      "part": 5,
+      "prompt": "Over the period from the opening of the new route in May to the present, delivery times ___.",
+      "options": [
+        "will improve tomorrow",
+        "improves",
+        "have improved",
+        "were improving yesterday"
+      ],
+      "answer": 2,
+      "explanation_vi": "Khoảng thời gian bắt đầu trong quá khứ và kéo đến hiện tại dùng hiện tại hoàn thành: have improved. Will improve tomorrow nói tương lai ngoài khoảng đã cho; improves sai hòa hợp với times; were improving yesterday chỉ nói một thời điểm quá khứ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q20",
+      "part": 5,
+      "prompt": "The workshop, ___ was originally scheduled for Tuesday, will now take place on Friday.",
+      "options": [
+        "who",
+        "whose",
+        "what",
+        "which"
+      ],
+      "answer": 3,
+      "explanation_vi": "Which thay cho workshop và mở phần bổ sung thông tin về buổi học. Who dùng cho người; whose cần một danh từ theo sau. What không dùng để nối sau workshop theo cách này.",
+      "evidence": "",
+      "document_ids": []
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "inspect",
+      "pos": "verb",
+      "meaning_vi": "kiểm tra kỹ để đánh giá tình trạng",
+      "usage_pattern": "inspect something for + defects",
+      "example": "The officer inspected the ladder for loose fittings.",
+      "example_vi": "Nhân viên kiểm tra xem thang có chỗ nối nào bị lỏng không.",
+      "synonyms": [
+        "examine"
+      ],
+      "paraphrases": [
+        "check something carefully for problems"
+      ],
+      "context": "The officer inspected the ladder for loose fittings.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Daily Operations · Verbs in Context",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "at no additional charge",
+      "pos": "phrase",
+      "meaning_vi": "không thu thêm phí",
+      "usage_pattern": "replace/deliver something at no additional charge",
+      "example": "The supplier replaced the faulty screen at no additional charge.",
+      "example_vi": "Nhà cung cấp thay màn hình lỗi mà không thu thêm phí.",
+      "synonyms": [
+        "free of extra cost"
+      ],
+      "paraphrases": [
+        "without adding a further fee"
+      ],
+      "context": "The supplier replaced the faulty screen at no additional charge.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Daily Operations · Verbs in Context",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "maintenance",
+      "pos": "noun",
+      "meaning_vi": "việc bảo trì, bảo dưỡng",
+      "usage_pattern": "routine/preventive maintenance; maintenance records",
+      "example": "Routine maintenance keeps the conveyor running safely.",
+      "example_vi": "Bảo dưỡng định kỳ giúp băng chuyền vận hành an toàn.",
+      "synonyms": [
+        "upkeep"
+      ],
+      "paraphrases": [
+        "work done to keep equipment in good condition"
+      ],
+      "context": "Routine maintenance keeps the conveyor running safely.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Daily Operations · Verbs in Context",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "resume",
+      "pos": "verb",
+      "meaning_vi": "tiếp tục sau khi tạm dừng",
+      "usage_pattern": "resume production/work/service",
+      "example": "Production will resume after the safety inspection.",
+      "example_vi": "Sản xuất sẽ tiếp tục sau đợt kiểm tra an toàn.",
+      "synonyms": [
+        "restart"
+      ],
+      "paraphrases": [
+        "start again after an interruption"
+      ],
+      "context": "Production will resume after the safety inspection.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Daily Operations · Verbs in Context",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "specify",
+      "pos": "verb",
+      "meaning_vi": "nêu rõ, chỉ rõ",
+      "usage_pattern": "specify a date/quantity/requirement",
+      "example": "Please specify the number of vegetarian meals required.",
+      "example_vi": "Vui lòng nêu rõ số suất ăn chay cần chuẩn bị.",
+      "synonyms": [
+        "state"
+      ],
+      "paraphrases": [
+        "give exact details of something"
+      ],
+      "context": "Please specify the number of vegetarian meals required.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Daily Operations · Verbs in Context",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "confidential",
+      "pos": "adjective",
+      "meaning_vi": "mật, chỉ dành cho người có quyền truy cập",
+      "usage_pattern": "confidential documents/information",
+      "example": "Confidential records must be stored in a locked cabinet.",
+      "example_vi": "Hồ sơ mật phải được cất trong tủ khóa.",
+      "synonyms": [
+        "private"
+      ],
+      "paraphrases": [
+        "intended only for authorized people"
+      ],
+      "context": "Confidential records must be stored in a locked cabinet.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Daily Operations · Verbs in Context",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

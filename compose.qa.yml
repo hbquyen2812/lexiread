@@ -26,6 +26,8 @@ services:
       - "127.0.0.1:8766:8000"
     volumes:
       - ./lexiread_data_v1:/app/lexiread_data_v1:ro
+      - ./static:/app/static:ro
+      - ./templates:/app/templates:ro
     depends_on:
       qa-db:
         condition: service_healthy

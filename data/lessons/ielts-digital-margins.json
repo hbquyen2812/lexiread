@@ -1,0 +1,343 @@
+{
+  "slug": "ielts-digital-margins",
+  "title": "Who Gets to Speak in the Digital Margin?",
+  "level": "C1",
+  "topic": "IELTS · Đọc và công nghệ",
+  "summary": "Chú giải chung đặt ra câu hỏi về quyền hiển thị, vị trí qua ấn bản, sự im lặng và lập luận có bằng chứng.",
+  "track": "ielts",
+  "revision": 2,
+  "order": 128,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc của LexiRead, dùng tình huống và kết quả giả định để luyện đọc. Không phải đề IELTS chính thức hay bài thi thử đầy đủ.",
+  "level_note": "Mức độ do người biên soạn ước lượng, chưa hiệu chuẩn CEFR; không quy đổi band IELTS.",
+  "translation_status": "complete",
+  "text": "A. A fictional university library is testing a shared annotation system for digitised books. Readers can attach comments to passages and view comments left by others. Supporters hope that difficult texts will become less intimidating when questions and explanations appear beside them. Critics fear that the margin will become crowded with confident but unreliable claims. Both reactions assume that making a note visible is a simple technical act. The trial shows that visibility is also an editorial decision about whose interpretation receives attention.\n\nB. The first design displays the most recent comments at the top. This seems neutral because it uses time rather than a judgement of quality. In practice, a stream of brief reactions pushes carefully argued older notes out of sight. The designers then offer several ways to order comments, including chronological order and a view of notes selected for discussion. They label the selected view as curated rather than pretending it is an objective ranking. Readers can still find the original sequence and inspect what the selection has left out.\n\nC. Moving between editions creates a separate problem. A comment attached to page forty in one edition may appear beside a different passage in another. Page numbers are therefore insufficient as the only anchors. The system stores a short text excerpt with each note and checks whether that excerpt can be found in the new edition. When the wording has changed, the note is marked for review instead of being silently moved. A visible uncertainty is preferable to an apparently precise link that points to the wrong argument.\n\nD. Participation is not evenly distributed. A few readers produce most of the public comments, while others use the tool mainly to keep private notes. The library does not interpret quiet users as disengaged readers. Some may be considering an argument carefully or avoiding public mistakes in a second language. The trial retains a private notebook option and allows a note to be shared later. Publishing becomes a choice within the reading process, rather than a compulsory demonstration that reading has taken place.\n\nE. Disagreement needs more than a button for approval or disapproval. In a moderated discussion, students are asked to link an interpretation to a particular phrase and explain the reasoning that connects them. Alternative readings may remain side by side when each has textual support. Moderators remove personal attacks, but they do not remove an interpretation merely because it is unpopular. This distinction protects discussion without suggesting that every claim is equally persuasive. The grounds for disagreement become more useful than the numerical balance of reactions.\n\nF. A digital margin should help readers return to the text with better questions. If the commentary becomes a substitute for examining the passage, its educational purpose is weakened. Nor does a large quantity of notes automatically represent a wide variety of perspectives. The fictional trial favours tools that expose the origin, context and limits of comments. Shared annotation is valuable when it makes reasoning available for inspection, not when it turns the most visible voice into an unquestionable authority.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "A. Một thư viện đại học hư cấu đang thử nghiệm một hệ thống để người đọc cùng ghi chú trên sách số hóa. Người đọc có thể gắn bình luận vào từng đoạn văn và xem bình luận của người khác. Người ủng hộ hy vọng những văn bản khó sẽ dễ tiếp cận hơn khi câu hỏi và lời giải thích xuất hiện cạnh đó. Người phản đối lại lo phần lề sẽ đầy những nhận định được nói rất tự tin nhưng thiếu đáng tin cậy. Cả hai cách nhìn đều cho rằng việc đưa một ghi chú lên để mọi người thấy chỉ là thao tác kỹ thuật đơn giản. Thử nghiệm cho thấy việc quyết định ghi chú nào được hiển thị cũng là một lựa chọn biên tập: cách diễn giải của ai sẽ được chú ý?"
+      },
+      {
+        "index": 1,
+        "vi": "B. Ở thiết kế ban đầu, bình luận mới nhất nằm trên cùng. Điều này có vẻ trung lập vì dựa vào thời gian đăng chứ không đánh giá chất lượng. Thực tế, hàng loạt phản hồi ngắn lại đẩy những ghi chú cũ có lập luận kỹ lưỡng xuống nơi ít người nhìn thấy. Sau đó nhóm thiết kế bổ sung nhiều cách sắp xếp, gồm thứ tự thời gian và chế độ xem ghi chú được chọn để thảo luận. Họ ghi rõ đây là danh sách đã được biên tập, thay vì coi nó như một bảng xếp hạng khách quan. Người đọc vẫn có thể xem lại toàn bộ ghi chú theo thứ tự ban đầu và biết những ghi chú nào không được chọn."
+      },
+      {
+        "index": 2,
+        "vi": "C. Khi chuyển sang một ấn bản khác, hệ thống lại gặp một vấn đề riêng. Bình luận gắn vào trang bốn mươi ở một bản có thể xuất hiện cạnh đoạn khác trong bản khác. Vì vậy chỉ dùng số trang làm điểm neo là chưa đủ. Hệ thống lưu một trích đoạn ngắn cùng mỗi ghi chú và kiểm tra trích đoạn có trong bản mới không. Khi câu chữ thay đổi, hệ thống đánh dấu ghi chú để kiểm tra lại, chứ không tự chuyển nó sang chỗ khác mà không báo. Nói rõ rằng vị trí ghi chú còn chưa chắc chắn vẫn tốt hơn một liên kết trông có vẻ chính xác nhưng lại trỏ vào sai lập luận."
+      },
+      {
+        "index": 3,
+        "vi": "D. Không phải người đọc nào cũng tham gia như nhau. Vài người viết phần lớn bình luận công khai, trong khi người khác chủ yếu dùng công cụ giữ ghi chú riêng. Thư viện không coi việc ít lên tiếng là dấu hiệu cho thấy một người không chú tâm đọc. Có thể họ đang suy nghĩ kỹ về lập luận hoặc ngại mắc lỗi trước mọi người khi viết bằng ngôn ngữ thứ hai. Trong thử nghiệm, người đọc vẫn được chọn giữ một sổ ghi chú riêng và cho phép chia sẻ ghi chú sau. Chia sẻ ghi chú là một lựa chọn trong quá trình đọc, chứ không phải việc bắt buộc để chứng minh mình đã đọc."
+      },
+      {
+        "index": 4,
+        "vi": "E. Để thảo luận những ý kiến khác nhau, chỉ có nút đồng tình hay phản đối là chưa đủ. Trong thảo luận có điều phối, sinh viên được yêu cầu chỉ ra cụm từ làm căn cứ cho cách hiểu của mình, rồi giải thích vì sao họ hiểu như vậy. Những cách hiểu khác nhau có thể được giữ lại cạnh nhau nếu mỗi cách đều có căn cứ trong văn bản. Người điều phối xóa công kích cá nhân nhưng không xóa cách diễn giải chỉ vì nó ít được ủng hộ. Cách phân biệt này bảo vệ không gian thảo luận, nhưng không có nghĩa là mọi nhận định đều thuyết phục như nhau. Hiểu vì sao mọi người bất đồng có ích hơn việc chỉ đếm số lượt đồng tình và phản đối."
+      },
+      {
+        "index": 5,
+        "vi": "F. Phần ghi chú bên lề sách điện tử nên giúp người đọc quay lại văn bản với những câu hỏi tốt hơn. Nếu bình luận thay thế việc xem xét đoạn văn, giá trị học tập của nó sẽ giảm đi. Nhiều ghi chú cũng không tự động có nghĩa là có nhiều góc nhìn khác nhau. Thử nghiệm giả định này ưu tiên những công cụ giúp người đọc thấy rõ nguồn gốc, ngữ cảnh và giới hạn của mỗi bình luận. Việc cùng nhau chú giải có giá trị khi mọi người có thể xem xét cách lập luận của nhau, chứ không phải khi ý kiến được chú ý nhiều nhất trở thành tiếng nói không ai có thể chất vấn."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "annotation",
+        "pos": "noun",
+        "meaning_vi": "ghi chú hoặc lời giải thích thêm bên cạnh văn bản",
+        "paragraph_index": 0,
+        "usage_pattern": "shared annotation / annotation of + text",
+        "example": "Annotation can make difficult passages easier to discuss.",
+        "example_vi": "Ghi chú bên lề có thể giúp mọi người thảo luận những đoạn khó dễ hơn.",
+        "synonyms": [
+          "commentary"
+        ],
+        "paraphrases": [
+          "notes added to explain or discuss a text"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "A fictional university library is testing a shared annotation system for digitised books."
+      },
+      {
+        "word": "intimidating",
+        "pos": "adjective",
+        "meaning_vi": "khiến e ngại hoặc thiếu tự tin",
+        "paragraph_index": 0,
+        "usage_pattern": "an intimidating task / text",
+        "example": "The long article looked intimidating at first.",
+        "example_vi": "Bài báo dài lúc đầu trông khá đáng ngại.",
+        "synonyms": [
+          "daunting"
+        ],
+        "paraphrases": [
+          "making someone feel nervous about a task"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "Supporters hope that difficult texts will become less intimidating when questions and explanations appear beside them."
+      },
+      {
+        "word": "curated",
+        "pos": "adjective",
+        "meaning_vi": "được chọn lọc và sắp xếp có chủ đích",
+        "paragraph_index": 1,
+        "usage_pattern": "a curated selection / collection",
+        "example": "The page offers a curated selection of notes.",
+        "example_vi": "Trang này cung cấp những ghi chú đã được chọn lọc và sắp xếp.",
+        "synonyms": [
+          "selected"
+        ],
+        "paraphrases": [
+          "chosen and organised by an editor"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "They label the selected view as curated rather than pretending it is an objective ranking."
+      },
+      {
+        "word": "anchors",
+        "pos": "plural noun",
+        "meaning_vi": "điểm neo giúp xác định đúng vị trí liên kết",
+        "paragraph_index": 2,
+        "usage_pattern": "use something as an anchor",
+        "example": "Text excerpts serve as anchors for comments.",
+        "example_vi": "Trích đoạn giúp xác định vị trí gắn bình luận trong văn bản.",
+        "synonyms": [
+          "reference points"
+        ],
+        "paraphrases": [
+          "fixed points used to locate something"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "Page numbers are therefore insufficient as the only anchors."
+      },
+      {
+        "word": "compulsory",
+        "pos": "adjective",
+        "meaning_vi": "bắt buộc",
+        "paragraph_index": 3,
+        "usage_pattern": "compulsory participation / training",
+        "example": "Public sharing is not compulsory.",
+        "example_vi": "Chia sẻ công khai không bắt buộc.",
+        "synonyms": [
+          "mandatory"
+        ],
+        "paraphrases": [
+          "required rather than optional"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "Publishing becomes a choice within the reading process, rather than a compulsory demonstration that reading has taken place."
+      },
+      {
+        "word": "persuasive",
+        "pos": "adjective",
+        "meaning_vi": "có sức thuyết phục",
+        "paragraph_index": 4,
+        "usage_pattern": "a persuasive argument / explanation",
+        "example": "Her explanation was clear and persuasive.",
+        "example_vi": "Lời giải thích của cô ấy rõ ràng và thuyết phục.",
+        "synonyms": [
+          "convincing"
+        ],
+        "paraphrases": [
+          "able to make an idea seem reasonable"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "This distinction protects discussion without suggesting that every claim is equally persuasive."
+      },
+      {
+        "word": "unquestionable",
+        "pos": "adjective",
+        "meaning_vi": "được coi là không thể chất vấn",
+        "paragraph_index": 5,
+        "usage_pattern": "unquestionable authority / truth",
+        "example": "Popularity does not create unquestionable authority.",
+        "example_vi": "Được nhiều người biết đến không có nghĩa là ý kiến của một người không thể bị chất vấn.",
+        "synonyms": [
+          "indisputable"
+        ],
+        "paraphrases": [
+          "treated as beyond doubt or challenge"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "C1"
+        ],
+        "context": "Shared annotation is valuable when it makes reasoning available for inspection, not when it turns the most visible voice into an unquestionable authority."
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "kind": "matching_heading",
+      "prompt": "Choose the best heading for paragraph B.",
+      "options": [
+        "An apparently neutral ordering rule with unequal effects",
+        "Replacing every old note with a newer one",
+        "Proving that recent comments are more accurate",
+        "Preventing readers from seeing the original sequence"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "a stream of brief reactions pushes carefully argued older notes out of sight.",
+      "explanation_vi": "Đoạn B cho thấy sắp theo thời gian tưởng như trung lập, nhưng lại có thể khiến các ghi chú cũ có lập luận tốt bị chìm xuống.",
+      "id": "q1"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "The selected-comment view is described openly as curated.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "They label the selected view as curated",
+      "explanation_vi": "TRUE: Nhãn curated cho biết những ghi chú hiển thị đã qua lựa chọn của người biên tập.",
+      "id": "q2"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Page numbers are the only anchors used by the revised system.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "The system stores a short text excerpt with each note",
+      "explanation_vi": "FALSE: ngoài số trang còn có trích đoạn để đối chiếu.",
+      "id": "q3"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Each reader may keep no more than twenty private notes.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 3,
+      "evidence": "The trial retains a private notebook option and allows a note to be shared later.",
+      "explanation_vi": "NOT GIVEN: Bài cho biết người đọc có thể giữ ghi chú riêng, nhưng không nêu giới hạn số ghi chú của mỗi người. Vì vậy không thể kết luận có hạn mức hai mươi ghi chú.",
+      "id": "q4"
+    },
+    {
+      "kind": "gap_fill",
+      "prompt": "Complete using NO MORE THAN THREE WORDS from the passage: Each note is stored with a _____.",
+      "options": [],
+      "answer": "short text excerpt",
+      "paragraph_index": 2,
+      "evidence": "stores a short text excerpt with each note",
+      "explanation_vi": "Short text excerpt có ba từ, chỉ trích đoạn dùng để tìm đúng vị trí qua các ấn bản. Text excerpt cũng được chấp nhận vì tạo thành cụm a text excerpt đúng ngữ pháp. Không dùng riêng excerpt vì mạo từ a đã có trong câu hỏi.",
+      "max_words": 3,
+      "accepted_answers": [
+        "short text excerpt",
+        "text excerpt"
+      ],
+      "id": "q5"
+    },
+    {
+      "kind": "short_answer",
+      "prompt": "Answer using NO MORE THAN TWO WORDS from the passage: What do moderators remove from discussions?",
+      "options": [],
+      "answer": "personal attacks",
+      "paragraph_index": 4,
+      "evidence": "Moderators remove personal attacks",
+      "explanation_vi": "Personal attacks nghĩa là công kích cá nhân. Đây là điều bị xóa, khác với một cách hiểu chỉ đơn giản là ít người đồng tình.",
+      "max_words": 2,
+      "accepted_answers": [
+        "personal attacks"
+      ],
+      "id": "q6"
+    },
+    {
+      "kind": "matching_information",
+      "prompt": "Which paragraph gives reasons why a reader might avoid posting publicly? Choose A–F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "answer": 3,
+      "paragraph_index": 3,
+      "evidence": "Some may be considering an argument carefully or avoiding public mistakes in a second language.",
+      "explanation_vi": "Đoạn D nêu hai lý do: người đọc có thể đang suy nghĩ kỹ hoặc ngại mắc lỗi khi dùng ngôn ngữ thứ hai. Ít bình luận không đồng nghĩa với không đọc.",
+      "id": "q7"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes that many annotations necessarily mean many different perspectives.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 5,
+      "evidence": "Nor does a large quantity of notes automatically represent a wide variety of perspectives.",
+      "explanation_vi": "NO: Tác giả nói rõ nhiều ghi chú chưa chắc đã thể hiện nhiều góc nhìn khác nhau.",
+      "id": "q8"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes comments should encourage further examination of the original passage.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 5,
+      "evidence": "A digital margin should help readers return to the text with better questions.",
+      "explanation_vi": "YES: Cụm return to the text cho thấy tác giả muốn ghi chú giúp người đọc quay lại tìm hiểu văn bản gốc.",
+      "id": "q9"
+    },
+    {
+      "kind": "inference",
+      "prompt": "Why can two conflicting interpretations remain in the discussion?",
+      "options": [
+        "Moderators are prohibited from reading them",
+        "Each may have support in the text",
+        "Both have received the same number of reactions",
+        "The tool assumes that all claims are equally convincing"
+      ],
+      "answer": 1,
+      "paragraph_index": 4,
+      "evidence": "Alternative readings may remain side by side when each has textual support.",
+      "explanation_vi": "Hai cách hiểu có thể cùng được giữ lại nếu mỗi cách đều có căn cứ trong văn bản. Điều đó không có nghĩa là mọi nhận định đều thuyết phục như nhau.",
+      "id": "q10"
+    }
+  ],
+  "faqs": []
+}
