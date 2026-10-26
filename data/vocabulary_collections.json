@@ -110,7 +110,8 @@
           "example_translation": "Bạn sẵn sàng ăn sáng chưa?",
           "usage_pattern": "ready for + noun"
         }
-      ]
+      ],
+      "topic": "Daily Life"
     },
     {
       "id": "a1-at-home",
@@ -221,7 +222,8 @@
           "example_translation": "Bạn đóng cửa sổ trước khi đi ngủ nhé.",
           "usage_pattern": "close a door / window"
         }
-      ]
+      ],
+      "topic": "Home & Living"
     },
     {
       "id": "a1-food-shopping",
@@ -332,7 +334,8 @@
           "example_translation": "Cho chúng tôi xem thực đơn được không?",
           "usage_pattern": "look at / read the menu"
         }
-      ]
+      ],
+      "topic": "Food & Shopping"
     },
     {
       "id": "a1-around-town",
@@ -443,7 +446,8 @@
           "example_translation": "Bạn nhìn sang phải trước khi qua đường nhé.",
           "usage_pattern": "turn / look right"
         }
-      ]
+      ],
+      "topic": "Travel & Places"
     },
     {
       "id": "a1-people-classroom",
@@ -554,7 +558,8 @@
           "example_translation": "Tôi giúp em trai làm bài tập.",
           "usage_pattern": "help someone with + noun"
         }
-      ]
+      ],
+      "topic": "People & Education"
     },
     {
       "id": "a2-travel-plans",
@@ -666,7 +671,8 @@
           "example_translation": "Chúng ta có thể nhận phòng sau ba giờ.",
           "usage_pattern": "check in at + hotel / airport"
         }
-      ]
+      ],
+      "topic": "Travel & Places"
     },
     {
       "id": "a2-healthy-habits",
@@ -777,7 +783,8 @@
           "example_translation": "Mong bạn sớm khỏe lại.",
           "usage_pattern": "feel better after + noun / V-ing"
         }
-      ]
+      ],
+      "topic": "Health & Wellbeing"
     },
     {
       "id": "a2-workday",
@@ -889,7 +896,8 @@
           "example_translation": "Hôm nay tôi tan làm lúc năm giờ.",
           "usage_pattern": "finish work / finish V-ing"
         }
-      ]
+      ],
+      "topic": "Work & Business"
     },
     {
       "id": "a2-money-shopping",
@@ -1001,7 +1009,8 @@
           "example_translation": "Bạn có mẫu này với cỡ của tôi không?",
           "usage_pattern": "the right size / in a size"
         }
-      ]
+      ],
+      "topic": "Food & Shopping"
     },
     {
       "id": "a2-learning-plans",
@@ -1113,7 +1122,8 @@
           "example_translation": "Kế hoạch học của tôi có cả thời gian nghỉ.",
           "usage_pattern": "make / follow a plan"
         }
-      ]
+      ],
+      "topic": "People & Education"
     },
     {
       "id": "b1-teamwork",
@@ -1226,7 +1236,8 @@
           "example_translation": "Bạn cập nhật lịch chung nhé.",
           "usage_pattern": "update a file / someone on something"
         }
-      ]
+      ],
+      "topic": "Work & Business"
     },
     {
       "id": "b1-greener-living",
@@ -1338,7 +1349,8 @@
           "example_translation": "Vùng đất ngập nước là nơi sinh sống của nhiều loài hoang dã.",
           "usage_pattern": "protect / observe wildlife"
         }
-      ]
+      ],
+      "topic": "Environment"
     },
     {
       "id": "b1-sharing-opinions",
@@ -1450,7 +1462,8 @@
           "example_translation": "Phòng nhỏ, tuy nhiên lại có nhiều ánh sáng.",
           "usage_pattern": "sentence; however, clause"
         }
-      ]
+      ],
+      "topic": "Communication"
     },
     {
       "id": "b1-reading-news",
@@ -1562,7 +1575,8 @@
           "example_translation": "Chúng tôi thử một phương pháp thu thập dữ liệu đơn giản hơn.",
           "usage_pattern": "a method of + V-ing"
         }
-      ]
+      ],
+      "topic": "Media & Technology"
     },
     {
       "id": "b1-relationships",
@@ -1673,7 +1687,8 @@
           "example_translation": "Chúng tôi giữ liên lạc bằng tin nhắn thoại.",
           "usage_pattern": "keep in touch with + person"
         }
-      ]
+      ],
+      "topic": "Relationships"
     },
     {
       "id": "b2-business-projects",
@@ -1785,7 +1800,8 @@
           "example_translation": "Quy trình mới được kỳ vọng sẽ mang lại kết quả tốt hơn.",
           "usage_pattern": "deliver goods / results / a service"
         }
-      ]
+      ],
+      "topic": "Work & Business"
     },
     {
       "id": "b2-academic-analysis",
@@ -1897,7 +1913,8 @@
           "example_translation": "Người đọc có thể diễn giải kết quả theo những cách khác nhau.",
           "usage_pattern": "interpret data / findings"
         }
-      ]
+      ],
+      "topic": "Academic English"
     },
     {
       "id": "b2-media-literacy",
@@ -2009,7 +2026,8 @@
           "example_translation": "Nhân chứng đưa ra lời kể đáng tin về sự việc.",
           "usage_pattern": "a credible account / explanation"
         }
-      ]
+      ],
+      "topic": "Media & Technology"
     },
     {
       "id": "b2-society-change",
@@ -2121,7 +2139,8 @@
           "example_translation": "Dự án cần một nguồn tài trợ có thể duy trì lâu dài.",
           "usage_pattern": "a sustainable approach / source"
         }
-      ]
+      ],
+      "topic": "Society"
     },
     {
       "id": "b2-linking-ideas",
@@ -2233,7 +2252,8 @@
           "example_translation": "Sau khi cân nhắc, những lợi ích nhận được xứng đáng với chi phí tăng thêm.",
           "usage_pattern": "on balance, + overall judgment"
         }
-      ]
+      ],
+      "topic": "Communication"
     },
     {
       "id": "c1-research-quality",
@@ -2345,7 +2365,8 @@
           "example_translation": "Cỡ mẫu nhỏ là một hạn chế lớn của nghiên cứu.",
           "usage_pattern": "a limitation of + noun"
         }
-      ]
+      ],
+      "topic": "Academic English"
     },
     {
       "id": "c1-organizations",
@@ -2456,7 +2477,8 @@
           "example_translation": "Giờ làm linh hoạt có thể là động lực để nhân viên ở lại.",
           "usage_pattern": "an incentive to + verb"
         }
-      ]
+      ],
+      "topic": "Work & Business"
     },
     {
       "id": "c1-evaluating-arguments",
@@ -2567,7 +2589,8 @@
           "example_translation": "Chúng ta không thể suy ra động cơ từ một câu trả lời ngắn.",
           "usage_pattern": "infer something from something"
         }
-      ]
+      ],
+      "topic": "Critical Thinking"
     },
     {
       "id": "c1-environment-policy",
@@ -2679,7 +2702,8 @@
           "example_translation": "Nhóm mang thêm nước để đề phòng.",
           "usage_pattern": "take a precaution / as a precaution"
         }
-      ]
+      ],
+      "topic": "Environment"
     },
     {
       "id": "c1-academic-writing",
@@ -2791,7 +2815,8 @@
           "example_translation": "Bản sửa bỏ các thuật ngữ khó hiểu, qua đó giúp nội dung dễ tiếp cận hơn.",
           "usage_pattern": "clause, thereby + V-ing"
         }
-      ]
+      ],
+      "topic": "Academic English"
     },
     {
       "id": "c2-argument-logic",
@@ -2903,7 +2928,8 @@
           "example_translation": "Chứng minh sử dụng suy luận diễn dịch từ hai tiền đề đã nêu.",
           "usage_pattern": "deductive reasoning / logic"
         }
-      ]
+      ],
+      "topic": "Critical Thinking"
     },
     {
       "id": "c2-meaning-style",
@@ -3015,7 +3041,8 @@
           "example_translation": "Triển lãm sẽ đặt bản đồ cũ cạnh ảnh hiện tại để làm nổi bật sự khác biệt.",
           "usage_pattern": "juxtapose A with B"
         }
-      ]
+      ],
+      "topic": "Communication"
     },
     {
       "id": "c2-institutions",
@@ -3127,7 +3154,8 @@
           "example_translation": "Bầu cử minh bạch có thể củng cố tính chính đáng của hội đồng.",
           "usage_pattern": "establish / question legitimacy"
         }
-      ]
+      ],
+      "topic": "Society"
     },
     {
       "id": "c2-complex-systems",
@@ -3239,7 +3267,8 @@
           "example_translation": "Sự phụ thuộc vào những lựa chọn trước đây giúp giải thích vì sao công ty giữ hệ thống lỗi thời.",
           "usage_pattern": "institutional / technological path dependence"
         }
-      ]
+      ],
+      "topic": "Science & Systems"
     },
     {
       "id": "c2-careful-judgment",
@@ -3351,7 +3380,8 @@
           "example_translation": "Cô ấy khai báo xung đột lợi ích và rút khỏi hội đồng tuyển chọn.",
           "usage_pattern": "declare / disclose a conflict of interest"
         }
-      ]
+      ],
+      "topic": "Critical Thinking"
     }
   ]
 }

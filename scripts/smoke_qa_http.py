@@ -43,12 +43,31 @@ def main():
         assert client.get('/account/').status_code==200
         for kind in ('grammar','vocabulary'):
             units=client.get('/api/learn/overview/',params={'kind':kind}).json()['items']
-            assert len(units)==30
+            assert len(units)==(36 if kind=='grammar' else 30)
             assert {row['level'] for row in units}=={'A1','A2','B1','B2','C1','C2'}
             detail=client.get(f'/api/learn/{kind}/{units[0]["id"]}/').json()
             assert all('answer' not in question for question in detail['questions'])
         assert len(client.get('/api/learn/sources/').json()['items'])==40
+        reference=client.get('/api/learn/grammar-reference/').json()
+        assert len(reference['verbs'])==132 and len(reference['tenses'])==12
+        assert len(reference['comparisons'])==6
+        assert client.get('/static/grammar_reference.js').status_code==200
+        tense=client.get('/api/learn/grammar/b1-present-perfect/').json()
+        assert tense['tense_guide']['tenses'][0]['id']=='present-perfect'
         assert client.get('/api/learn/dictionary/',params={'q':'wake up'}).json()['total']>=1
+        dictionary=client.get('/api/dictionary/search/').json()
+        assert dictionary['available']==127311 and dictionary['ipa_count']==27581
+        lookup=client.get('/api/dictionary/',params={'word':'book'}).json()
+        assert lookup['dictionary']['storage']=='database' and lookup['dictionary']['status']=='ok'
+        assert lookup['local_entries']
+        assert client.get('/api/dictionary/search/',params={'q':'ran'}).json()['total']>=1
+        for entry in lookup['dictionary']['entries']:
+            for p in entry['phonetics']:
+                if p['audio']:
+                    assert p['audio'].startswith('/api/dictionary/audio/')
+                    recording=client.get(p['audio'])
+                    assert recording.status_code==200 and len(recording.content)>100
+                    assert recording.headers['content-type'] in ('audio/ogg','application/ogg','audio/mpeg','audio/wav')
         plan=client.get('/api/learn/plan/').json()
         assert sum(t['minutes'] for t in plan['tasks'])<=plan['profile']['daily_minutes']
         assert client.get('/account/password/').status_code==200
@@ -81,14 +100,14 @@ def main():
         assert client.get('/api/backup/').status_code==200
         assert client.get('/static/app.js').status_code==200
         for asset in ('resources.js','resources.css','brand.css','favicon.svg','learning_hub.js',
-                      'learning_hub.css','practice_tools.js','personal_decks.js','academy.js','academy.css','examples/lexiread-vocabulary.json','fonts.css','fonts/noto-serif-500.woff2'):
+                      'learning_hub.css','practice_tools.js','personal_decks.js','academy.js','academy.css','grammar_course.js','grammar_course.css','examples/lexiread-vocabulary.json','fonts.css','fonts/noto-serif-500.woff2'):
             assert client.get('/static/' + asset).status_code == 200, asset
         artwork = client.get('/static/illustrations/lexi-reading-garden.webp')
         assert artwork.status_code == 200 and artwork.content[:4] == b'RIFF'
         assert client.post('/logout/',headers=csrf).status_code==302
         assert client.get('/api/bootstrap/').status_code==401
     print('PASS QA HTTP: login/logout, profile/password pages, 54 general + 25 IELTS + 32 TOEIC, guides, question-type filter, English-only label, private answers, word patterns, backup, official resource JSON, self-hosted fonts and brand assets.')
-    print('PASS QA HTTP: 30 grammar lessons, 30 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
+    print('PASS QA HTTP: 36 grammar lessons, 30 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
 
 
 if __name__=='__main__': main()

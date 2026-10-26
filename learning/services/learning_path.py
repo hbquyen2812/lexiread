@@ -6,24 +6,24 @@ from .core import InputError
 from .foundation_content import LEVELS, GOALS, units
 
 START = {
- 'A1': {'title':'Bắt đầu bằng những câu quen thuộc', 'intro':'Mỗi buổi học một ít. Hiểu được một câu ngắn đã là một bước tiến.',
-        'steps':[['Ngữ pháp','Học be, đại từ và câu đơn. Đọc ví dụ, tự thay tên hoặc đồ vật rồi làm bài tập.','#learn/grammar'],['Từ vựng','Chọn một bộ về sinh hoạt. Học 5 từ, đọc cả câu ví dụ rồi lưu những từ bạn muốn nhớ.','#learn/vocabulary'],['Đọc & ôn','Chọn bài pre-A1 hoặc A1. Thử đọc trước, mở bản dịch khi cần; hôm sau quay lại ôn từ.','#catalog']],
-        'tip':'Chưa cần làm đề IELTS/TOEIC dài. Video VOA hoặc Easy English là điểm bắt đầu nhẹ nhàng.'},
- 'A2': {'title':'Nối câu thành câu chuyện của bạn', 'intro':'Dùng điều đã học để kể một ngày, một chuyến đi hoặc một dự định.',
-        'steps':[['Ngữ pháp','Ôn quá khứ, tương lai và so sánh. Sau mỗi bài, viết hai câu về chính mình.','#learn/grammar'],['Đọc có mục tiêu','Chọn bài A2. Tìm ý chính trước; chỉ tra những từ làm bạn mất mạch câu chuyện.','#catalog'],['Giữ từ trong ngữ cảnh','Lưu cả cụm từ và câu ví dụ. Ôn các thẻ đến hạn trước khi thêm từ mới.','#study']],
-        'tip':'Nếu muốn TOEIC, bắt đầu với ngữ pháp Part 5 và email ngắn; chưa cần bấm giờ cả đề.'},
- 'B1': {'title':'Hiểu ý chính rồi tìm bằng chứng', 'intro':'Tăng dần độ dài bài đọc và bắt đầu luyện kỹ năng phục vụ mục tiêu của bạn.',
-        'steps':[['Lấp chỗ còn hổng','Xem lại điều kiện, bị động và mệnh đề quan hệ. Ghi một ví dụ cho mỗi lỗi vừa sửa.','#learn/grammar'],['Luyện đúng dạng','IELTS: thử True / False / Not Given. TOEIC: luyện Part 5–6 rồi đọc email Part 7.','#guides'],['Đọc và diễn đạt lại','Chọn bài B1; sau khi kiểm tra đáp án, tóm tắt bằng 2–3 câu và lưu vài cụm hữu ích.','#catalog']],
-        'tip':'Đừng tăng số lượng chỉ để hoàn thành. Một lời giải bạn hiểu rõ có ích hơn nhiều đáp án đoán đúng.'},
- 'B2': {'title':'Đọc sâu hơn, làm bài có chiến lược', 'intro':'Chú ý cách tác giả liên kết ý, dùng từ gần nghĩa và thể hiện quan điểm.',
-        'steps':[['Tăng độ chính xác','Ôn câu điều kiện, động từ khuyết thiếu và cách nối ý; làm lại những dạng còn sai.','#learn/grammar'],['Luyện theo mục tiêu','IELTS: tìm paraphrase và ý chính từng đoạn. TOEIC: nối thông tin giữa hai hoặc ba văn bản.','#guides'],['Mở rộng cách diễn đạt','Học từ theo chủ đề, giữ cả collocation. Thử dùng lại khi tóm tắt bài hoặc viết email.','#learn/vocabulary']],
-        'tip':'Bắt đầu bấm giờ sau khi đã hiểu cách làm. Dành thời gian xem bằng chứng cho cả câu đúng và sai.'},
- 'C1': {'title':'Đọc tinh ý, diễn đạt có chủ đích', 'intro':'Tập nhận ra sắc thái, giới hạn của một nhận định và cách diễn đạt phù hợp từng hoàn cảnh.',
-        'steps':[['Ngữ pháp trong ngữ cảnh','Học đảo ngữ, nhấn mạnh và cách diễn đạt thận trọng; so sánh câu trước và sau khi viết lại.','#learn/grammar'],['Từ chính xác hơn','Tra nghĩa phù hợp ngữ cảnh, collocation và văn phong. Không thay từ chỉ vì từ đó có vẻ khó hơn.','#learn/dictionary'],['Đối chiếu với bài mẫu','Luyện bài học thuật rồi mở tài liệu chính thức để quen yêu cầu của kỳ thi.','#resources']],
-        'tip':'Điểm trong bài luyện nhỏ chỉ phản ánh bộ câu đó. Hãy dùng kết quả để chọn chỗ cần ôn, không tự quy đổi band.'},
- 'C2': {'title':'Tinh chỉnh sắc thái và sự linh hoạt', 'intro':'Thử thách nằm ở độ chính xác, ngụ ý và văn phong, không chỉ ở từ hiếm.',
-        'steps':[['Phân tích lựa chọn câu','So sánh cấu trúc nhấn mạnh, lược bỏ và cách tổ chức thông tin trong từng ngữ cảnh.','#learn/grammar'],['Đọc nhiều góc nhìn','Đọc bài nâng cao, chỉ ra giả định của tác giả và tự diễn đạt lại lập luận.','#catalog'],['Kiểm chứng cách dùng','Đối chiếu từ điển học thuật, ví dụ và collocation; lưu những cách dùng mới thay vì gom từ đơn.','#learn/dictionary']],
-        'tip':'Bạn vẫn có thể ôn bài mức thấp hơn nếu gặp lỗi. Các mức ở đây giúp chọn nội dung, không xác nhận chứng chỉ CEFR.'},
+ 'A1': {'title':'Làm quen với tiếng Anh hằng ngày', 'intro':'Bắt đầu với câu ngắn và từ vựng quen thuộc. Mỗi buổi học một ít rồi ôn lại.',
+        'steps':[['Học ngữ pháp cơ bản','Làm quen với động từ be, đại từ và câu đơn. Đọc ví dụ, thử đặt câu về bản thân rồi làm bài tập.','#learn/grammar'],['Học từ thông dụng','Chọn một bộ từ về sinh hoạt hằng ngày. Học 5 từ cùng câu ví dụ và lưu những từ cần ôn.','#learn/vocabulary'],['Đọc bài ngắn','Chọn bài pre-A1 hoặc A1. Tự đọc trước, xem bản dịch khi cần và ôn lại từ mới vào buổi sau.','#catalog']],
+        'tip':'Ưu tiên câu ngắn và từ thông dụng. Khi đã quen, bạn có thể thử bài đọc dài hơn.'},
+ 'A2': {'title':'Kể về những việc quen thuộc', 'intro':'Dùng từ vựng và ngữ pháp đã học để kể về một ngày, một chuyến đi hoặc dự định của bạn.',
+        'steps':[['Ôn ngữ pháp thường dùng','Ôn thì quá khứ, cách nói về tương lai và câu so sánh. Sau mỗi bài, viết hai câu về bản thân.','#learn/grammar'],['Đọc để hiểu ý chính','Chọn bài A2. Đọc để nắm ý chính trước, rồi tra những từ khiến bạn chưa hiểu câu.','#catalog'],['Ôn từ cùng câu ví dụ','Lưu cả cụm từ và câu ví dụ. Ôn từ theo lịch trước khi học thêm từ mới.','#study']],
+        'tip':'Nếu học TOEIC, bạn có thể bắt đầu với Part 5 và email ngắn ở Part 7. Hãy hiểu cách làm trước khi luyện có bấm giờ.'},
+ 'B1': {'title':'Hiểu bài đọc và giải thích được đáp án', 'intro':'Thử bài đọc dài hơn và luyện các dạng bài phù hợp với mục tiêu của bạn.',
+        'steps':[['Ôn phần còn hay nhầm','Xem lại câu điều kiện, câu bị động và mệnh đề quan hệ. Với mỗi lỗi, viết một câu đúng để ghi nhớ cách dùng.','#learn/grammar'],['Học cách làm từng dạng bài','IELTS: bắt đầu với True / False / Not Given. TOEIC: luyện Part 5–6, sau đó thử đọc email ở Part 7.','#guides'],['Tóm tắt sau khi đọc','Chọn bài B1. Sau khi kiểm tra đáp án, tóm tắt nội dung bằng 2–3 câu và lưu các cụm từ hữu ích.','#catalog']],
+        'tip':'Sau mỗi bài, xem lại câu chưa đúng và tìm chi tiết trong bài giúp bạn chọn đáp án.'},
+ 'B2': {'title':'Đọc kỹ và làm bài chính xác hơn', 'intro':'Chú ý cách tác giả liên kết các ý, diễn đạt cùng một ý bằng từ khác và thể hiện quan điểm.',
+        'steps':[['Củng cố ngữ pháp','Ôn câu điều kiện, động từ khuyết thiếu và cách nối ý. Làm lại những dạng bài bạn còn hay nhầm.','#learn/grammar'],['Luyện theo mục tiêu','IELTS: nhận ra cách diễn đạt tương đương và ý chính từng đoạn. TOEIC: kết hợp thông tin từ hai hoặc ba văn bản.','#guides'],['Học cách kết hợp từ','Học từ theo chủ đề và các từ thường đi cùng nhau (collocations). Thử dùng chúng khi tóm tắt bài hoặc viết email.','#learn/vocabulary']],
+        'tip':'Khi đã nắm cách làm, hãy thử luyện có bấm giờ. Sau đó kiểm tra vì sao từng đáp án đúng hoặc sai.'},
+ 'C1': {'title':'Hiểu sắc thái, dùng từ chính xác', 'intro':'Tập nhận ra quan điểm, hàm ý và mức độ chắc chắn trong lời tác giả.',
+        'steps':[['Luyện cấu trúc nâng cao','Học đảo ngữ, câu nhấn mạnh và cách diễn đạt mức độ chắc chắn. Viết lại câu rồi so sánh sự khác biệt.','#learn/grammar'],['Chọn từ phù hợp','Tra nghĩa trong ngữ cảnh, các từ thường đi cùng nhau và cách dùng trong văn nói hoặc văn viết.','#learn/dictionary'],['Làm quen với đề chính thức','Luyện bài đọc học thuật và xem đề mẫu chính thức để hiểu yêu cầu của kỳ thi.','#resources']],
+        'tip':'Dùng kết quả từng bài để chọn nội dung cần ôn. Điểm luyện tập trên website không quy đổi trực tiếp thành band IELTS.'},
+ 'C2': {'title':'Diễn đạt linh hoạt trong từng ngữ cảnh', 'intro':'Chú ý độ chính xác, hàm ý và văn phong khi đọc cũng như khi viết.',
+        'steps':[['So sánh cách viết câu','Xem cách nhấn mạnh, lược bỏ từ và sắp xếp thông tin làm thay đổi ý nghĩa của câu.','#learn/grammar'],['Phân tích lập luận','Đọc bài nâng cao, tìm những giả định của tác giả và trình bày lại lập luận bằng lời của bạn.','#catalog'],['Tra kỹ cách dùng từ','Đối chiếu định nghĩa, ví dụ và các từ thường đi cùng nhau. Lưu cách dùng mới cùng câu ví dụ.','#learn/dictionary']],
+        'tip':'Bạn có thể quay lại bài ở trình độ thấp hơn để ôn những cấu trúc ít dùng hoặc còn hay nhầm.'},
 }
 
 
@@ -67,7 +67,7 @@ def plan_for(user):
         if used+minutes<=budget and not any(t['href']==href for t in tasks):
             tasks.append(dict(kind=kind,title=title,href=href,minutes=minutes,reason=reason));used+=minutes
     due=Vocabulary.objects.filter(owner=user,due_at__lte=now).count()
-    if due:add('review',f'Ôn từ đến hạn ({due} thẻ)','#study',5,'Gặp lại từ cũ trước khi thêm từ mới; bạn có thể dừng sau 5 phút.')
+    if due:add('review',f'Ôn từ vựng ({due} từ)','#study',5,'Dành 5 phút ôn từ cũ trước khi học thêm từ mới.')
     grammar=units('grammar'); vocab=units('vocabulary'); candidates=[]
     for order,row in enumerate(grammar):
         p=progress.get('grammar/'+row['id']); distance=index-LEVELS.index(row['level'])
@@ -79,7 +79,7 @@ def plan_for(user):
         if p and p['mastery']>=80 and not p['due']:continue
         priority=(100-p['mastery']+ (40 if p['due'] else 0)) if p else 35
         priority += 12 if goal in row.get('tags',[]) else 0
-        reason=(f'Kết quả gần đây {p["mastery"]}%; '+('đã đến lúc ôn lại.' if p['due'] else 'ôn lại để nắm chắc hơn.')) if p else 'Bài mới vừa trình độ, sau những phần nền tảng bạn đã học.'
+        reason=('Đã đến lúc ôn lại bài này. Làm lại bài tập để kiểm tra những gì bạn còn nhớ.' if p['due'] else 'Luyện lại bài này và xem lời giải ở những câu chưa đúng.') if p else f'Bài ngữ pháp phù hợp với trình độ {level} bạn đã chọn.'
         candidates.append((-priority,order,row,reason))
     candidates.sort(key=lambda item:(item[0],item[1]))
     if candidates:
@@ -99,7 +99,7 @@ def plan_for(user):
     row=next((r for r in readings if r.slug not in completed or weak_reading(r)),None)
     if row and not (goal=='toeic' and index>=1):
         minutes=max(8,min(15,round(len(row.content.get('text','').split())/100+len(row.content.get('questions',[]))*.7)))
-        reason='Lần làm gần nhất còn chỗ chưa chắc; đọc lại và tìm bằng chứng cho các câu sai.' if weak_reading(row) else 'Đọc theo mức bạn chọn; dành thời gian này để đọc và kiểm tra bằng chứng, có thể tiếp tục ở buổi sau.'
+        reason='Bài trước còn câu chưa đúng. Đọc lại và tìm chi tiết giúp bạn chọn đáp án.' if weak_reading(row) else 'Đọc bài, trả lời câu hỏi và xem lời giải. Bạn có thể học tiếp vào buổi sau nếu chưa xong.'
         add('reading',row.title,'#lesson/'+row.slug,minutes,reason)
     if goal=='toeic' and index>=1:
         results={}
@@ -113,16 +113,16 @@ def plan_for(user):
         choices.sort(key=priority)
         if choices:
             row=choices[0];result=results.get(row.slug)
-            reason=(f'Lần gần nhất: {result["score"]}/{result["total"]}. Luyện lại và xem kỹ lời giải.' if result else
-                    'Dành 15 phút luyện TOEIC theo mục tiêu. Có thể tiếp tục phần còn lại ở buổi sau.')
+            reason=(f'Lần trước bạn trả lời đúng {result["score"]}/{result["total"]} câu. Làm lại và xem kỹ lời giải.' if result else
+                    'Dành 15 phút luyện TOEIC. Nếu chưa làm xong, bạn có thể tiếp tục vào buổi sau.')
             add('toeic',row.title,'#toeic-set/'+row.slug,15,reason)
     available=[r for r in vocab if r['level']==level]
     available.sort(key=lambda r:(progress.get('vocabulary/'+r['id'],{}).get('mastery',-1),goal not in r.get('tags',[])))
     if available:
-        row=available[0];add('vocabulary',row['title'],'#collection/'+row['id'],5,'Học 5 từ trong câu ví dụ, rồi lưu từ bạn muốn ôn tiếp.')
-    if not tasks:add('guide','Chọn một bài muốn tìm hiểu','#learn/grammar',8,'Bạn đã làm tốt các phần được gợi ý. Có thể thử chủ đề mới hoặc quay lại ôn.')
+        row=available[0];add('vocabulary',row['title'],'#collection/'+row['id'],5,'Học 5 từ cùng câu ví dụ, rồi lưu những từ bạn cần ôn.')
+    if not tasks:add('guide','Chọn bài học tiếp theo','#learn/grammar',8,'Khám phá chủ đề mới hoặc chọn một bài đã học để ôn lại.')
     done=[p for k,p in progress.items() if any(k=='grammar/'+r['id'] and r['level']==level for r in grammar)]
     advance=len(done)>=3 and all(p['mastery']>=80 for p in done) and index<5
     return {'profile':profile,'guidance':START[level],'tasks':tasks,'planned_minutes':used or 8,'progress':progress,
         'next_level':LEVELS[index+1] if advance else None,
-        'method':'Ưu tiên từ đến hạn, bài ngữ pháp còn yếu, rồi bài mới vừa trình độ và mục tiêu. Kết quả ba lượt gần nhất có trọng số 50%, 30%, 20% (chuẩn hóa khi chưa đủ ba lượt). Ôn lại sau 1, 3 hoặc 7 ngày theo kết quả. Thời lượng là gợi ý; không tự nâng trình độ hay quy đổi điểm thành CEFR/band.'}
+        'method':'Lộ trình dựa trên trình độ, mục tiêu, thời gian học và kết quả gần đây của bạn. LexiRead ưu tiên từ cần ôn và bài cần luyện lại, sau đó gợi ý bài mới. Bạn có thể đổi trình độ và thời gian học bất cứ lúc nào.'}

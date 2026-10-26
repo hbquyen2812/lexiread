@@ -5,7 +5,7 @@
 - Home: a prominent personal-deck import action in the hero and a dedicated feature card. The vocabulary library also prioritizes importing a complete set over entering individual words.
 - Level selection: a separate “Tất cả trình độ” control; CEFR tiles show the level only. Removed repeated estimate labels and duplicate level controls. The old browser-local home plan is replaced by the account-based learning path, so two different goals are no longer shown.
 - `/#learn/plan`: level, goal and daily study time; instructions for using LexiRead at each level; recommendations explained in a collapsed detail panel.
-- `/#learn/grammar`: 30 original grammar lessons, five per level A1–C2, with 180 original questions, examples and Vietnamese explanations.
+- `/#learn/grammar`: 36 original grammar lessons (eight each at A1/A2, five each at B1–C2), with 216 original questions, examples and Vietnamese explanations.
 - `/#learn/vocabulary`: 30 collections, 360 original word entries with meanings, usage patterns and translated examples. Each collection also has 12 automatically assembled meaning-in-context questions: 360 questions in total.
 - `/#learn/dictionary`: accent-insensitive local lookup across these entries, plus explicit outbound searches in Cambridge, Oxford and Merriam-Webster. It is a learning-word index, not a complete copied dictionary.
 - `/#learn/sources`: 40 official learning-source links. The metadata crawl verified 31; nine were stopped because robots could not be checked. No publisher passages, answer banks, audio or paid content were copied.
@@ -50,3 +50,6 @@ Only the result fields needed by the planner are read from attempt history, avoi
 Screenshots: [home import feature](qa/import-feature-home-desktop.jpg), [mobile import feature](qa/import-feature-home-mobile.jpg), [learning path](qa/foundation-plan-desktop.jpg), [mobile path](qa/foundation-plan-mobile.jpg).
 
 The QA app runs at `http://127.0.0.1:8766/`. These changes are local, not pushed or deployed to the public site. The temporary QA PostgreSQL data is lost if its database container is removed.
+
+
+The grammar course now defaults to A1–A2 and includes guided teaching in 16 beginner lessons, with separate lesson/practice panels and in-page self-checks. See [Grammar content review](GRAMMAR_CONTENT_REVIEW.md) for the current inventory and references.

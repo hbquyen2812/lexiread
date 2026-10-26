@@ -4,9 +4,10 @@ Reviewed: 2026-10-26. Scope: `data/grammar_lessons.json` only; UI and scoring ar
 
 ## Inventory
 
-- Version 1; 30 lessons, five each at A1, A2, B1, B2, C1 and C2.
-- Six original four-option questions per lesson: 180 questions total.
-- Two explanation cards and two pitfalls per lesson: 60 of each.
+- Version 1; 36 lessons: eight each at A1 and A2, five each at B1, B2, C1 and C2.
+- Six original four-option questions per lesson: 216 questions total.
+- Three explanation sections for each of the 16 beginner lessons, two for each advanced lesson: 88 sections and 72 pitfalls.
+- Each beginner lesson includes a learning objective, a worked example with three reasoning steps, one ungraded self-check with a revealable answer, and two takeaways.
 - Each explanation has an English example and a natural Vietnamese translation.
 - Every question has a single keyed answer and Vietnamese reasoning.
 - Prerequisites refer only to lessons that appear earlier; no cycles or missing references.
@@ -34,7 +35,7 @@ British Council pages were read through the web reader. Some Cambridge pages and
 | b1-past-continuous | B1 | Quá khứ tiếp diễn: chuyện đang xảy ra thì… | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-continuous-past-simple) |
 | b1-conditionals | B1 | Câu điều kiện: việc có thể xảy ra và điều giả định | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second) |
 | b1-relative-clauses | B1 | Mệnh đề quan hệ: nói rõ người hoặc vật nào | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/relative-clauses-defining-relative-clauses) |
-| b1-verb-patterns | B1 | Theo sau động từ: to V hay V-ing? | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/verbs-followed-ing-or-infinitive) |
+| b1-verb-patterns | B1 | Động từ đi với to V hay V-ing? | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/verbs-followed-ing-or-infinitive) |
 | b2-past-perfect | B2 | Quá khứ hoàn thành: việc nào xảy ra trước? | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/past-perfect) |
 | b2-passive | B2 | Câu bị động: tập trung vào việc được làm | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives) |
 | b2-reported-speech | B2 | Tường thuật: kể lại lời người khác | [Nguồn chính](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements) |
@@ -55,7 +56,7 @@ Additional references are retained in each lesson's `source_urls`, including com
 
 ## Ambiguity and language review
 
-All 180 questions were reviewed with their complete option set. The review specifically checked that:
+The original 180 questions retain their answer keys. The 36 added questions were reviewed with their complete option sets; beginner instruction prompts are now in Vietnamese where appropriate. The review specifically checked that:
 
 - Who and that, or may and might, are not presented as competing answers where both fit.
 - Will, going to and the present continuous are not treated as mutually exclusive in all future contexts.
@@ -76,7 +77,7 @@ The questions mix sentence completion, selecting a correctly formed sentence, in
 
 An in-memory Python validation pass completed successfully:
 
-- Exact inventory: 30 lessons / 180 questions / 60 explanation cards / 60 pitfalls.
+- Exact inventory: 36 lessons / 216 questions / 88 explanation cards / 72 pitfalls.
 - Five lessons per level; valid stable IDs and earlier prerequisite IDs.
 - Six unique question IDs per lesson; four nonempty, case-insensitively distinct options.
 - Integer answer indices between 0 and 3.
@@ -86,3 +87,57 @@ An in-memory Python validation pass completed successfully:
 - Answer positions distributed across all four options: A 46, B 45, C 44, D 45.
 
 This review does not replace future learner feedback or an external teacher audit. Changes to a question should preserve its ID when its learning objective stays the same, and recheck every distractor as well as the keyed answer.
+
+
+## Guided beginner course
+
+The default grammar catalogue displays the 16 A1–A2 lessons in teaching order. Learners can filter by level or search without Vietnamese accents; each query word can occur anywhere in the lesson title or summary. Advanced lessons remain available through the level filter.
+
+Each lesson has separate **Bài học** and **Bài tập** panels. Switching panels preserves selected answers. The learner reads explanations, sees a structure and translated example, follows a worked example, tries an ungraded check, then submits six questions for server grading. Answer keys for graded questions stay private until submission; the worked-example answer is intentionally available in a disclosure. Previous/next links use lesson IDs and never change the learner’s selected level automatically.
+
+The sources page now links directly to the on-site lessons. All authored explanations and exercises ship in `data/grammar_lessons.json`; attempts remain in the user’s database. Reading, grading and recommending lessons do not call AI.
+
+Added topics and primary references:
+
+| Lesson | Level | Source |
+| --- | --- | --- |
+| Câu tiếng Anh bắt đầu từ đâu? | A1 | [British Council](https://africa.teachingenglish.org.uk/classroom/grammar/word-order) |
+| Một hay nhiều: danh từ số ít và số nhiều | A1 | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/count-nouns) |
+| Can và can’t: nói về khả năng | A1 | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/can-could) |
+| Always, usually, sometimes: nói việc thường làm | A2 | [British Council](https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/adverbs-frequency) |
+| In, on, at: nói về thời gian và nơi chốn | A2 | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on) |
+| And, but, because, so: nối các ý đơn giản | A2 | [British Council](https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/conjunctions-or-so-because-although) |
+
+The word-order page timed out in the web reader; its official indexed description was used to check the subject–verb–object sequence. Other new rules were cross-checked against the linked British Council pages. The examples, Vietnamese teaching text and exercises are original, not copied publisher exercises.
+
+## Runtime verification
+
+- 142 Django tests passed on isolated PostgreSQL QA; the 12 foundation tests were rerun successfully after adding Vietnamese prompt language metadata.
+- Nine JavaScript suites passed, including the new grammar catalogue/teaching renderer checks; four pure content tests cover the full 216-question grading set and incomplete teaching data.
+- HTTP smoke passed for the full website and new grammar assets.
+- Browser checks: sources → on-site course → first lesson → practice; answers retained while switching panels; 5/6 with a wrong-answer-only view; 6/6 on the be lesson; retry clears choices; next-lesson navigation works; accent-insensitive search and C1 filtering work.
+- Mobile viewport 390 × 844: document and content widths both 375 px with the scrollbar, no horizontal overflow in lesson or practice. Browser error log was empty.
+- Screenshots: `docs/qa/grammar-course-desktop.jpg`, `grammar-worked-example-desktop.jpg`, `grammar-practice-result-desktop.jpg`, `grammar-lesson-mobile.jpg`, `grammar-practice-mobile.jpg`.
+
+QA only; no production deployment or automatic PR merge.
+
+## Tense reference, irregular verbs and question layout
+
+Added `data/grammar_reference.json`, reproducibly authored by `scripts/build_grammar_reference_content.py`:
+
+- 132 common irregular verbs with V1, V2, V3, original Vietnamese glosses and notes for variants, `lie`/`lay`, `got`/`gotten`, and the pronunciation of `read`.
+- 12 tense/aspect summaries: use, affirmative/negative/question structures, translated examples and contextual time expressions. These are reference summaries, not 12 new graded courses.
+- Six comparisons with paired examples and a decision explanation. Seven existing tense lessons embed the relevant reference and comparisons before their original graded practice.
+- `#learn/verbs` supports all-form/accent-insensitive search, pattern filtering, 24-row pagination and hiding V2/V3 for self-review. `#learn/tenses` lets learners choose one tense or comparison at a time. The catalogue has two compact reference links; the main navigation is unchanged.
+
+Verb inflections were checked against the official [British Council irregular-verb reference](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs) and the indexed [Cambridge table](https://dictionary.cambridge.org/grammar/british-grammar/table-of-irregular-verbs) (direct fetch returned 403). The [perfect simple/continuous explanation](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-simple-continuous) and [future continuous/perfect explanation](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-continuous-future-perfect) were also consulted. No publisher exercise sets or prose were copied. Time expressions are explicitly contextual cues, not automatic rules for selecting a tense.
+
+The grammar/vocabulary, reading and TOEIC renderers now put the visible prompt inside the question card. A visually hidden legend retains the accessible group name. Shared question typography uses the UI font, visible keyboard focus and mobile answer stacking. The verb table becomes three compact form columns plus a meaning row on narrow screens.
+
+Verification for this update:
+
+- 143 Django tests ran: 142 passed, one optional incoming-dataset test skipped because the unrelated `lexiread_data_v1/data/lessons.json` is absent in the workspace. Its deletion is excluded from this change.
+- All 10 JavaScript suites and five pure foundation-content tests passed. HTTP smoke passed, including authenticated reference access, private graded answers and zero AI calls in the new API tests.
+- Browser: present-perfect practice scored 6/6; switching lesson/practice retained answers; retry cleared answers. Irregular search `went` found `go`, `doc` found `read`; hide/show, empty results, group filters and pagination worked. The advanced tense selector and past-simple/present-perfect comparison rendered correctly.
+- Desktop and 390-px mobile checks found no document overflow in the grammar quiz, verb table or tense reference. Screenshots are in `docs/qa/grammar-quiz-refined-*.jpg`, `irregular-verbs-*.jpg` and `tense-comparison-desktop.jpg`.
+- Reading and TOEIC question cards were also checked in the browser; TOEIC level labels now omit the redundant estimate suffix. Asset versions were bumped and the QA web process restarted to invalidate cached templates. The static preview builds successfully with the new assets inlined. Foundation learning remains available in the authenticated web app.

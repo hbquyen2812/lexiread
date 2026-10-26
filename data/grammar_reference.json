@@ -1,0 +1,1990 @@
+{
+  "version": 1,
+  "verbs": [
+    {
+      "base": "arise",
+      "past": [
+        "arose"
+      ],
+      "participle": [
+        "arisen"
+      ],
+      "meaning_vi": "phát sinh",
+      "note": ""
+    },
+    {
+      "base": "awake",
+      "past": [
+        "awoke"
+      ],
+      "participle": [
+        "awoken"
+      ],
+      "meaning_vi": "thức giấc",
+      "note": ""
+    },
+    {
+      "base": "be",
+      "past": [
+        "was",
+        "were"
+      ],
+      "participle": [
+        "been"
+      ],
+      "meaning_vi": "là; ở",
+      "note": "V2: I/he/she/it → was; you/we/they → were."
+    },
+    {
+      "base": "bear",
+      "past": [
+        "bore"
+      ],
+      "participle": [
+        "borne",
+        "born"
+      ],
+      "meaning_vi": "chịu đựng; mang",
+      "note": "Born dùng khi nói được sinh ra (was born); borne dùng cho các nghĩa khác."
+    },
+    {
+      "base": "beat",
+      "past": [
+        "beat"
+      ],
+      "participle": [
+        "beaten"
+      ],
+      "meaning_vi": "đánh; đánh bại",
+      "note": ""
+    },
+    {
+      "base": "become",
+      "past": [
+        "became"
+      ],
+      "participle": [
+        "become"
+      ],
+      "meaning_vi": "trở thành",
+      "note": ""
+    },
+    {
+      "base": "begin",
+      "past": [
+        "began"
+      ],
+      "participle": [
+        "begun"
+      ],
+      "meaning_vi": "bắt đầu",
+      "note": ""
+    },
+    {
+      "base": "bend",
+      "past": [
+        "bent"
+      ],
+      "participle": [
+        "bent"
+      ],
+      "meaning_vi": "uốn cong",
+      "note": ""
+    },
+    {
+      "base": "bet",
+      "past": [
+        "bet"
+      ],
+      "participle": [
+        "bet"
+      ],
+      "meaning_vi": "đánh cược",
+      "note": ""
+    },
+    {
+      "base": "bind",
+      "past": [
+        "bound"
+      ],
+      "participle": [
+        "bound"
+      ],
+      "meaning_vi": "buộc; gắn kết",
+      "note": ""
+    },
+    {
+      "base": "bite",
+      "past": [
+        "bit"
+      ],
+      "participle": [
+        "bitten"
+      ],
+      "meaning_vi": "cắn",
+      "note": ""
+    },
+    {
+      "base": "bleed",
+      "past": [
+        "bled"
+      ],
+      "participle": [
+        "bled"
+      ],
+      "meaning_vi": "chảy máu",
+      "note": ""
+    },
+    {
+      "base": "blow",
+      "past": [
+        "blew"
+      ],
+      "participle": [
+        "blown"
+      ],
+      "meaning_vi": "thổi",
+      "note": ""
+    },
+    {
+      "base": "break",
+      "past": [
+        "broke"
+      ],
+      "participle": [
+        "broken"
+      ],
+      "meaning_vi": "làm vỡ; hỏng",
+      "note": ""
+    },
+    {
+      "base": "breed",
+      "past": [
+        "bred"
+      ],
+      "participle": [
+        "bred"
+      ],
+      "meaning_vi": "nuôi sinh sản",
+      "note": ""
+    },
+    {
+      "base": "bring",
+      "past": [
+        "brought"
+      ],
+      "participle": [
+        "brought"
+      ],
+      "meaning_vi": "mang đến",
+      "note": ""
+    },
+    {
+      "base": "broadcast",
+      "past": [
+        "broadcast"
+      ],
+      "participle": [
+        "broadcast"
+      ],
+      "meaning_vi": "phát sóng",
+      "note": ""
+    },
+    {
+      "base": "build",
+      "past": [
+        "built"
+      ],
+      "participle": [
+        "built"
+      ],
+      "meaning_vi": "xây dựng",
+      "note": ""
+    },
+    {
+      "base": "burn",
+      "past": [
+        "burned",
+        "burnt"
+      ],
+      "participle": [
+        "burned",
+        "burnt"
+      ],
+      "meaning_vi": "đốt; cháy",
+      "note": ""
+    },
+    {
+      "base": "burst",
+      "past": [
+        "burst"
+      ],
+      "participle": [
+        "burst"
+      ],
+      "meaning_vi": "vỡ tung",
+      "note": ""
+    },
+    {
+      "base": "buy",
+      "past": [
+        "bought"
+      ],
+      "participle": [
+        "bought"
+      ],
+      "meaning_vi": "mua",
+      "note": ""
+    },
+    {
+      "base": "catch",
+      "past": [
+        "caught"
+      ],
+      "participle": [
+        "caught"
+      ],
+      "meaning_vi": "bắt; đón kịp",
+      "note": ""
+    },
+    {
+      "base": "choose",
+      "past": [
+        "chose"
+      ],
+      "participle": [
+        "chosen"
+      ],
+      "meaning_vi": "chọn",
+      "note": ""
+    },
+    {
+      "base": "cling",
+      "past": [
+        "clung"
+      ],
+      "participle": [
+        "clung"
+      ],
+      "meaning_vi": "bám chặt",
+      "note": ""
+    },
+    {
+      "base": "come",
+      "past": [
+        "came"
+      ],
+      "participle": [
+        "come"
+      ],
+      "meaning_vi": "đến",
+      "note": ""
+    },
+    {
+      "base": "cost",
+      "past": [
+        "cost"
+      ],
+      "participle": [
+        "cost"
+      ],
+      "meaning_vi": "có giá",
+      "note": "Cost–cost–cost khi nói có giá. Costed dùng khi tính hoặc dự toán chi phí."
+    },
+    {
+      "base": "creep",
+      "past": [
+        "crept"
+      ],
+      "participle": [
+        "crept"
+      ],
+      "meaning_vi": "bò; rón rén đi",
+      "note": ""
+    },
+    {
+      "base": "cut",
+      "past": [
+        "cut"
+      ],
+      "participle": [
+        "cut"
+      ],
+      "meaning_vi": "cắt",
+      "note": ""
+    },
+    {
+      "base": "deal",
+      "past": [
+        "dealt"
+      ],
+      "participle": [
+        "dealt"
+      ],
+      "meaning_vi": "xử lý; giao dịch",
+      "note": ""
+    },
+    {
+      "base": "dig",
+      "past": [
+        "dug"
+      ],
+      "participle": [
+        "dug"
+      ],
+      "meaning_vi": "đào",
+      "note": ""
+    },
+    {
+      "base": "do",
+      "past": [
+        "did"
+      ],
+      "participle": [
+        "done"
+      ],
+      "meaning_vi": "làm",
+      "note": ""
+    },
+    {
+      "base": "draw",
+      "past": [
+        "drew"
+      ],
+      "participle": [
+        "drawn"
+      ],
+      "meaning_vi": "vẽ; kéo",
+      "note": ""
+    },
+    {
+      "base": "dream",
+      "past": [
+        "dreamed",
+        "dreamt"
+      ],
+      "participle": [
+        "dreamed",
+        "dreamt"
+      ],
+      "meaning_vi": "mơ",
+      "note": ""
+    },
+    {
+      "base": "drink",
+      "past": [
+        "drank"
+      ],
+      "participle": [
+        "drunk"
+      ],
+      "meaning_vi": "uống",
+      "note": ""
+    },
+    {
+      "base": "drive",
+      "past": [
+        "drove"
+      ],
+      "participle": [
+        "driven"
+      ],
+      "meaning_vi": "lái xe",
+      "note": ""
+    },
+    {
+      "base": "eat",
+      "past": [
+        "ate"
+      ],
+      "participle": [
+        "eaten"
+      ],
+      "meaning_vi": "ăn",
+      "note": ""
+    },
+    {
+      "base": "fall",
+      "past": [
+        "fell"
+      ],
+      "participle": [
+        "fallen"
+      ],
+      "meaning_vi": "rơi; ngã",
+      "note": ""
+    },
+    {
+      "base": "feed",
+      "past": [
+        "fed"
+      ],
+      "participle": [
+        "fed"
+      ],
+      "meaning_vi": "cho ăn",
+      "note": ""
+    },
+    {
+      "base": "feel",
+      "past": [
+        "felt"
+      ],
+      "participle": [
+        "felt"
+      ],
+      "meaning_vi": "cảm thấy",
+      "note": ""
+    },
+    {
+      "base": "fight",
+      "past": [
+        "fought"
+      ],
+      "participle": [
+        "fought"
+      ],
+      "meaning_vi": "chiến đấu; tranh cãi",
+      "note": ""
+    },
+    {
+      "base": "find",
+      "past": [
+        "found"
+      ],
+      "participle": [
+        "found"
+      ],
+      "meaning_vi": "tìm thấy",
+      "note": ""
+    },
+    {
+      "base": "flee",
+      "past": [
+        "fled"
+      ],
+      "participle": [
+        "fled"
+      ],
+      "meaning_vi": "chạy trốn",
+      "note": ""
+    },
+    {
+      "base": "fly",
+      "past": [
+        "flew"
+      ],
+      "participle": [
+        "flown"
+      ],
+      "meaning_vi": "bay",
+      "note": ""
+    },
+    {
+      "base": "forbid",
+      "past": [
+        "forbade"
+      ],
+      "participle": [
+        "forbidden"
+      ],
+      "meaning_vi": "cấm",
+      "note": ""
+    },
+    {
+      "base": "forget",
+      "past": [
+        "forgot"
+      ],
+      "participle": [
+        "forgotten"
+      ],
+      "meaning_vi": "quên",
+      "note": ""
+    },
+    {
+      "base": "forgive",
+      "past": [
+        "forgave"
+      ],
+      "participle": [
+        "forgiven"
+      ],
+      "meaning_vi": "tha thứ",
+      "note": ""
+    },
+    {
+      "base": "freeze",
+      "past": [
+        "froze"
+      ],
+      "participle": [
+        "frozen"
+      ],
+      "meaning_vi": "đóng băng",
+      "note": ""
+    },
+    {
+      "base": "get",
+      "past": [
+        "got"
+      ],
+      "participle": [
+        "got",
+        "gotten"
+      ],
+      "meaning_vi": "nhận; trở nên",
+      "note": "V3 got thường dùng trong Anh–Anh; gotten phổ biến trong Anh–Mỹ khi nói nhận được hoặc trở nên. Have got (có) vẫn dùng got."
+    },
+    {
+      "base": "give",
+      "past": [
+        "gave"
+      ],
+      "participle": [
+        "given"
+      ],
+      "meaning_vi": "cho",
+      "note": ""
+    },
+    {
+      "base": "go",
+      "past": [
+        "went"
+      ],
+      "participle": [
+        "gone"
+      ],
+      "meaning_vi": "đi",
+      "note": ""
+    },
+    {
+      "base": "grow",
+      "past": [
+        "grew"
+      ],
+      "participle": [
+        "grown"
+      ],
+      "meaning_vi": "lớn lên; trồng",
+      "note": ""
+    },
+    {
+      "base": "hang",
+      "past": [
+        "hung"
+      ],
+      "participle": [
+        "hung"
+      ],
+      "meaning_vi": "treo",
+      "note": "Hung cho nghĩa treo đồ vật. Hanged thường dùng cho nghĩa hành hình bằng treo cổ."
+    },
+    {
+      "base": "have",
+      "past": [
+        "had"
+      ],
+      "participle": [
+        "had"
+      ],
+      "meaning_vi": "có",
+      "note": ""
+    },
+    {
+      "base": "hear",
+      "past": [
+        "heard"
+      ],
+      "participle": [
+        "heard"
+      ],
+      "meaning_vi": "nghe thấy",
+      "note": ""
+    },
+    {
+      "base": "hide",
+      "past": [
+        "hid"
+      ],
+      "participle": [
+        "hidden"
+      ],
+      "meaning_vi": "giấu; trốn",
+      "note": ""
+    },
+    {
+      "base": "hit",
+      "past": [
+        "hit"
+      ],
+      "participle": [
+        "hit"
+      ],
+      "meaning_vi": "đánh; va vào",
+      "note": ""
+    },
+    {
+      "base": "hold",
+      "past": [
+        "held"
+      ],
+      "participle": [
+        "held"
+      ],
+      "meaning_vi": "cầm; tổ chức",
+      "note": ""
+    },
+    {
+      "base": "hurt",
+      "past": [
+        "hurt"
+      ],
+      "participle": [
+        "hurt"
+      ],
+      "meaning_vi": "làm đau",
+      "note": ""
+    },
+    {
+      "base": "keep",
+      "past": [
+        "kept"
+      ],
+      "participle": [
+        "kept"
+      ],
+      "meaning_vi": "giữ",
+      "note": ""
+    },
+    {
+      "base": "kneel",
+      "past": [
+        "knelt",
+        "kneeled"
+      ],
+      "participle": [
+        "knelt",
+        "kneeled"
+      ],
+      "meaning_vi": "quỳ",
+      "note": ""
+    },
+    {
+      "base": "know",
+      "past": [
+        "knew"
+      ],
+      "participle": [
+        "known"
+      ],
+      "meaning_vi": "biết",
+      "note": ""
+    },
+    {
+      "base": "lay",
+      "past": [
+        "laid"
+      ],
+      "participle": [
+        "laid"
+      ],
+      "meaning_vi": "đặt; để",
+      "note": "Lay thường cần tân ngữ: lay the book on the desk. Lie = nằm: lie–lay–lain."
+    },
+    {
+      "base": "lead",
+      "past": [
+        "led"
+      ],
+      "participle": [
+        "led"
+      ],
+      "meaning_vi": "dẫn dắt",
+      "note": ""
+    },
+    {
+      "base": "lean",
+      "past": [
+        "leaned",
+        "leant"
+      ],
+      "participle": [
+        "leaned",
+        "leant"
+      ],
+      "meaning_vi": "dựa; nghiêng",
+      "note": ""
+    },
+    {
+      "base": "learn",
+      "past": [
+        "learned",
+        "learnt"
+      ],
+      "participle": [
+        "learned",
+        "learnt"
+      ],
+      "meaning_vi": "học",
+      "note": ""
+    },
+    {
+      "base": "leave",
+      "past": [
+        "left"
+      ],
+      "participle": [
+        "left"
+      ],
+      "meaning_vi": "rời đi; để lại",
+      "note": ""
+    },
+    {
+      "base": "lend",
+      "past": [
+        "lent"
+      ],
+      "participle": [
+        "lent"
+      ],
+      "meaning_vi": "cho mượn",
+      "note": ""
+    },
+    {
+      "base": "let",
+      "past": [
+        "let"
+      ],
+      "participle": [
+        "let"
+      ],
+      "meaning_vi": "cho phép",
+      "note": ""
+    },
+    {
+      "base": "lie",
+      "past": [
+        "lay"
+      ],
+      "participle": [
+        "lain"
+      ],
+      "meaning_vi": "nằm",
+      "note": "Đây là lie = nằm. Lie = nói dối là động từ có quy tắc: lied–lied. Lay = đặt có dạng laid–laid."
+    },
+    {
+      "base": "light",
+      "past": [
+        "lit",
+        "lighted"
+      ],
+      "participle": [
+        "lit",
+        "lighted"
+      ],
+      "meaning_vi": "thắp sáng",
+      "note": ""
+    },
+    {
+      "base": "lose",
+      "past": [
+        "lost"
+      ],
+      "participle": [
+        "lost"
+      ],
+      "meaning_vi": "mất; thua",
+      "note": ""
+    },
+    {
+      "base": "make",
+      "past": [
+        "made"
+      ],
+      "participle": [
+        "made"
+      ],
+      "meaning_vi": "làm; tạo ra",
+      "note": ""
+    },
+    {
+      "base": "mean",
+      "past": [
+        "meant"
+      ],
+      "participle": [
+        "meant"
+      ],
+      "meaning_vi": "có nghĩa là",
+      "note": ""
+    },
+    {
+      "base": "meet",
+      "past": [
+        "met"
+      ],
+      "participle": [
+        "met"
+      ],
+      "meaning_vi": "gặp",
+      "note": ""
+    },
+    {
+      "base": "mistake",
+      "past": [
+        "mistook"
+      ],
+      "participle": [
+        "mistaken"
+      ],
+      "meaning_vi": "nhầm lẫn",
+      "note": ""
+    },
+    {
+      "base": "overcome",
+      "past": [
+        "overcame"
+      ],
+      "participle": [
+        "overcome"
+      ],
+      "meaning_vi": "vượt qua",
+      "note": ""
+    },
+    {
+      "base": "pay",
+      "past": [
+        "paid"
+      ],
+      "participle": [
+        "paid"
+      ],
+      "meaning_vi": "trả tiền",
+      "note": ""
+    },
+    {
+      "base": "prove",
+      "past": [
+        "proved"
+      ],
+      "participle": [
+        "proved",
+        "proven"
+      ],
+      "meaning_vi": "chứng minh",
+      "note": ""
+    },
+    {
+      "base": "put",
+      "past": [
+        "put"
+      ],
+      "participle": [
+        "put"
+      ],
+      "meaning_vi": "đặt",
+      "note": ""
+    },
+    {
+      "base": "quit",
+      "past": [
+        "quit"
+      ],
+      "participle": [
+        "quit"
+      ],
+      "meaning_vi": "bỏ; nghỉ",
+      "note": ""
+    },
+    {
+      "base": "read",
+      "past": [
+        "read"
+      ],
+      "participle": [
+        "read"
+      ],
+      "meaning_vi": "đọc",
+      "note": "Cùng cách viết; V1 đọc /riːd/, V2 và V3 đọc /red/."
+    },
+    {
+      "base": "ride",
+      "past": [
+        "rode"
+      ],
+      "participle": [
+        "ridden"
+      ],
+      "meaning_vi": "đi xe; cưỡi",
+      "note": ""
+    },
+    {
+      "base": "ring",
+      "past": [
+        "rang"
+      ],
+      "participle": [
+        "rung"
+      ],
+      "meaning_vi": "reo; gọi điện",
+      "note": ""
+    },
+    {
+      "base": "rise",
+      "past": [
+        "rose"
+      ],
+      "participle": [
+        "risen"
+      ],
+      "meaning_vi": "tăng; mọc lên",
+      "note": ""
+    },
+    {
+      "base": "run",
+      "past": [
+        "ran"
+      ],
+      "participle": [
+        "run"
+      ],
+      "meaning_vi": "chạy",
+      "note": ""
+    },
+    {
+      "base": "say",
+      "past": [
+        "said"
+      ],
+      "participle": [
+        "said"
+      ],
+      "meaning_vi": "nói",
+      "note": ""
+    },
+    {
+      "base": "see",
+      "past": [
+        "saw"
+      ],
+      "participle": [
+        "seen"
+      ],
+      "meaning_vi": "nhìn thấy",
+      "note": ""
+    },
+    {
+      "base": "seek",
+      "past": [
+        "sought"
+      ],
+      "participle": [
+        "sought"
+      ],
+      "meaning_vi": "tìm kiếm",
+      "note": ""
+    },
+    {
+      "base": "sell",
+      "past": [
+        "sold"
+      ],
+      "participle": [
+        "sold"
+      ],
+      "meaning_vi": "bán",
+      "note": ""
+    },
+    {
+      "base": "send",
+      "past": [
+        "sent"
+      ],
+      "participle": [
+        "sent"
+      ],
+      "meaning_vi": "gửi",
+      "note": ""
+    },
+    {
+      "base": "set",
+      "past": [
+        "set"
+      ],
+      "participle": [
+        "set"
+      ],
+      "meaning_vi": "đặt; thiết lập",
+      "note": ""
+    },
+    {
+      "base": "shake",
+      "past": [
+        "shook"
+      ],
+      "participle": [
+        "shaken"
+      ],
+      "meaning_vi": "lắc",
+      "note": ""
+    },
+    {
+      "base": "shine",
+      "past": [
+        "shone",
+        "shined"
+      ],
+      "participle": [
+        "shone",
+        "shined"
+      ],
+      "meaning_vi": "chiếu sáng; đánh bóng",
+      "note": "Shone thường chỉ phát sáng; shined thường dùng khi đánh bóng một vật. Cách dùng còn tùy biến thể tiếng Anh."
+    },
+    {
+      "base": "shoot",
+      "past": [
+        "shot"
+      ],
+      "participle": [
+        "shot"
+      ],
+      "meaning_vi": "bắn; quay phim",
+      "note": ""
+    },
+    {
+      "base": "show",
+      "past": [
+        "showed"
+      ],
+      "participle": [
+        "shown"
+      ],
+      "meaning_vi": "cho xem",
+      "note": "Shown là V3 thông dụng; showed cũng có thể dùng làm V3 trong một số cách dùng Anh–Mỹ."
+    },
+    {
+      "base": "shrink",
+      "past": [
+        "shrank"
+      ],
+      "participle": [
+        "shrunk"
+      ],
+      "meaning_vi": "co lại",
+      "note": ""
+    },
+    {
+      "base": "shut",
+      "past": [
+        "shut"
+      ],
+      "participle": [
+        "shut"
+      ],
+      "meaning_vi": "đóng",
+      "note": ""
+    },
+    {
+      "base": "sing",
+      "past": [
+        "sang"
+      ],
+      "participle": [
+        "sung"
+      ],
+      "meaning_vi": "hát",
+      "note": ""
+    },
+    {
+      "base": "sink",
+      "past": [
+        "sank"
+      ],
+      "participle": [
+        "sunk"
+      ],
+      "meaning_vi": "chìm",
+      "note": ""
+    },
+    {
+      "base": "sit",
+      "past": [
+        "sat"
+      ],
+      "participle": [
+        "sat"
+      ],
+      "meaning_vi": "ngồi",
+      "note": ""
+    },
+    {
+      "base": "sleep",
+      "past": [
+        "slept"
+      ],
+      "participle": [
+        "slept"
+      ],
+      "meaning_vi": "ngủ",
+      "note": ""
+    },
+    {
+      "base": "slide",
+      "past": [
+        "slid"
+      ],
+      "participle": [
+        "slid"
+      ],
+      "meaning_vi": "trượt",
+      "note": ""
+    },
+    {
+      "base": "smell",
+      "past": [
+        "smelled",
+        "smelt"
+      ],
+      "participle": [
+        "smelled",
+        "smelt"
+      ],
+      "meaning_vi": "ngửi; có mùi",
+      "note": ""
+    },
+    {
+      "base": "speak",
+      "past": [
+        "spoke"
+      ],
+      "participle": [
+        "spoken"
+      ],
+      "meaning_vi": "nói",
+      "note": ""
+    },
+    {
+      "base": "spell",
+      "past": [
+        "spelled",
+        "spelt"
+      ],
+      "participle": [
+        "spelled",
+        "spelt"
+      ],
+      "meaning_vi": "đánh vần",
+      "note": ""
+    },
+    {
+      "base": "spend",
+      "past": [
+        "spent"
+      ],
+      "participle": [
+        "spent"
+      ],
+      "meaning_vi": "tiêu tiền; dành thời gian",
+      "note": ""
+    },
+    {
+      "base": "spill",
+      "past": [
+        "spilled",
+        "spilt"
+      ],
+      "participle": [
+        "spilled",
+        "spilt"
+      ],
+      "meaning_vi": "làm đổ",
+      "note": ""
+    },
+    {
+      "base": "spin",
+      "past": [
+        "spun"
+      ],
+      "participle": [
+        "spun"
+      ],
+      "meaning_vi": "quay",
+      "note": ""
+    },
+    {
+      "base": "split",
+      "past": [
+        "split"
+      ],
+      "participle": [
+        "split"
+      ],
+      "meaning_vi": "chia; tách",
+      "note": ""
+    },
+    {
+      "base": "spread",
+      "past": [
+        "spread"
+      ],
+      "participle": [
+        "spread"
+      ],
+      "meaning_vi": "lan; trải ra",
+      "note": ""
+    },
+    {
+      "base": "stand",
+      "past": [
+        "stood"
+      ],
+      "participle": [
+        "stood"
+      ],
+      "meaning_vi": "đứng",
+      "note": ""
+    },
+    {
+      "base": "steal",
+      "past": [
+        "stole"
+      ],
+      "participle": [
+        "stolen"
+      ],
+      "meaning_vi": "ăn cắp",
+      "note": ""
+    },
+    {
+      "base": "stick",
+      "past": [
+        "stuck"
+      ],
+      "participle": [
+        "stuck"
+      ],
+      "meaning_vi": "dính; mắc kẹt",
+      "note": ""
+    },
+    {
+      "base": "sting",
+      "past": [
+        "stung"
+      ],
+      "participle": [
+        "stung"
+      ],
+      "meaning_vi": "đốt; chích",
+      "note": ""
+    },
+    {
+      "base": "strike",
+      "past": [
+        "struck"
+      ],
+      "participle": [
+        "struck"
+      ],
+      "meaning_vi": "đánh; đình công",
+      "note": "Stricken còn được dùng trong một số cụm chỉ bị tác động nặng, như grief-stricken."
+    },
+    {
+      "base": "swear",
+      "past": [
+        "swore"
+      ],
+      "participle": [
+        "sworn"
+      ],
+      "meaning_vi": "thề",
+      "note": ""
+    },
+    {
+      "base": "sweep",
+      "past": [
+        "swept"
+      ],
+      "participle": [
+        "swept"
+      ],
+      "meaning_vi": "quét",
+      "note": ""
+    },
+    {
+      "base": "swim",
+      "past": [
+        "swam"
+      ],
+      "participle": [
+        "swum"
+      ],
+      "meaning_vi": "bơi",
+      "note": ""
+    },
+    {
+      "base": "swing",
+      "past": [
+        "swung"
+      ],
+      "participle": [
+        "swung"
+      ],
+      "meaning_vi": "đung đưa",
+      "note": ""
+    },
+    {
+      "base": "take",
+      "past": [
+        "took"
+      ],
+      "participle": [
+        "taken"
+      ],
+      "meaning_vi": "lấy; mang",
+      "note": ""
+    },
+    {
+      "base": "teach",
+      "past": [
+        "taught"
+      ],
+      "participle": [
+        "taught"
+      ],
+      "meaning_vi": "dạy",
+      "note": ""
+    },
+    {
+      "base": "tear",
+      "past": [
+        "tore"
+      ],
+      "participle": [
+        "torn"
+      ],
+      "meaning_vi": "xé",
+      "note": ""
+    },
+    {
+      "base": "tell",
+      "past": [
+        "told"
+      ],
+      "participle": [
+        "told"
+      ],
+      "meaning_vi": "kể; bảo",
+      "note": ""
+    },
+    {
+      "base": "think",
+      "past": [
+        "thought"
+      ],
+      "participle": [
+        "thought"
+      ],
+      "meaning_vi": "nghĩ",
+      "note": ""
+    },
+    {
+      "base": "throw",
+      "past": [
+        "threw"
+      ],
+      "participle": [
+        "thrown"
+      ],
+      "meaning_vi": "ném",
+      "note": ""
+    },
+    {
+      "base": "understand",
+      "past": [
+        "understood"
+      ],
+      "participle": [
+        "understood"
+      ],
+      "meaning_vi": "hiểu",
+      "note": ""
+    },
+    {
+      "base": "wake",
+      "past": [
+        "woke"
+      ],
+      "participle": [
+        "woken"
+      ],
+      "meaning_vi": "thức dậy",
+      "note": ""
+    },
+    {
+      "base": "wear",
+      "past": [
+        "wore"
+      ],
+      "participle": [
+        "worn"
+      ],
+      "meaning_vi": "mặc; đeo",
+      "note": ""
+    },
+    {
+      "base": "weep",
+      "past": [
+        "wept"
+      ],
+      "participle": [
+        "wept"
+      ],
+      "meaning_vi": "khóc",
+      "note": ""
+    },
+    {
+      "base": "win",
+      "past": [
+        "won"
+      ],
+      "participle": [
+        "won"
+      ],
+      "meaning_vi": "thắng",
+      "note": ""
+    },
+    {
+      "base": "withdraw",
+      "past": [
+        "withdrew"
+      ],
+      "participle": [
+        "withdrawn"
+      ],
+      "meaning_vi": "rút lại; rút tiền",
+      "note": ""
+    },
+    {
+      "base": "write",
+      "past": [
+        "wrote"
+      ],
+      "participle": [
+        "written"
+      ],
+      "meaning_vi": "viết",
+      "note": ""
+    }
+  ],
+  "tenses": [
+    {
+      "id": "present-simple",
+      "title": "Hiện tại đơn",
+      "uses": [
+        "Thói quen hoặc việc lặp lại.",
+        "Sự thật, đặc điểm hoặc trạng thái hiện tại."
+      ],
+      "forms": {
+        "affirmative": "S + V / V-s, -es",
+        "negative": "S + do/does not + V",
+        "question": "Do/Does + S + V?"
+      },
+      "signals": [
+        {
+          "word": "usually, often, sometimes",
+          "meaning": "Tần suất: thường, hay, đôi khi."
+        },
+        {
+          "word": "every day / on Mondays",
+          "meaning": "Việc lặp lại hằng ngày / mỗi thứ Hai."
+        }
+      ],
+      "example": "Mai walks to work every morning.",
+      "translation_vi": "Mai đi bộ đi làm mỗi sáng.",
+      "note": "V là động từ nguyên mẫu; S là chủ ngữ. Với be, dùng am/is/are, không dùng do/does. He/she/it đi với V-s/-es trong câu khẳng định.",
+      "lesson_id": "a1-present-simple"
+    },
+    {
+      "id": "present-continuous",
+      "title": "Hiện tại tiếp diễn",
+      "uses": [
+        "Việc đang diễn ra lúc nói hoặc quanh thời điểm hiện tại.",
+        "Tình huống tạm thời; kế hoạch tương lai đã sắp xếp."
+      ],
+      "forms": {
+        "affirmative": "S + am/is/are + V-ing",
+        "negative": "S + am/is/are not + V-ing",
+        "question": "Am/Is/Are + S + V-ing?"
+      },
+      "signals": [
+        {
+          "word": "now, right now, at the moment",
+          "meaning": "Việc đang diễn ra."
+        },
+        {
+          "word": "this week / these days",
+          "meaning": "Giai đoạn tạm thời quanh hiện tại."
+        }
+      ],
+      "example": "Mai is working from home this week.",
+      "translation_vi": "Tuần này Mai đang làm việc ở nhà.",
+      "note": "Các động từ chỉ trạng thái như know, believe, own thường dùng hiện tại đơn trong nghĩa này. Không phải cứ thấy now là dùng tiếp diễn.",
+      "lesson_id": "a2-present-continuous"
+    },
+    {
+      "id": "present-perfect",
+      "title": "Hiện tại hoàn thành",
+      "uses": [
+        "Trải nghiệm tính đến hiện tại, không nói rõ thời điểm đã kết thúc.",
+        "Việc đã xảy ra nhưng kết quả còn liên quan đến hiện tại.",
+        "Trạng thái bắt đầu trong quá khứ và vẫn tiếp tục."
+      ],
+      "forms": {
+        "affirmative": "S + have/has + V3",
+        "negative": "S + have/has not + V3",
+        "question": "Have/Has + S + V3?"
+      },
+      "signals": [
+        {
+          "word": "ever / never",
+          "meaning": "Đã từng / chưa từng, khi nói về trải nghiệm."
+        },
+        {
+          "word": "just / already / yet",
+          "meaning": "Vừa mới / đã rồi / chưa hoặc chưa vậy; yet thường ở cuối câu hỏi hoặc câu phủ định."
+        },
+        {
+          "word": "since / for",
+          "meaning": "Since + mốc bắt đầu; for + khoảng thời gian."
+        },
+        {
+          "word": "so far / this week",
+          "meaning": "Tính đến nay / tuần này khi khoảng thời gian vẫn đang tiếp diễn."
+        }
+      ],
+      "example": "I have lived here since 2021.",
+      "translation_vi": "Tôi sống ở đây từ năm 2021 đến nay.",
+      "note": "I/you/we/they dùng have; he/she/it dùng has. V3 là quá khứ phân từ: worked hoặc gone, seen… Khi nêu thời điểm đã kết thúc như yesterday, dùng quá khứ đơn.",
+      "lesson_id": "b1-present-perfect"
+    },
+    {
+      "id": "present-perfect-continuous",
+      "title": "Hiện tại hoàn thành tiếp diễn",
+      "uses": [
+        "Nhấn mạnh hoạt động kéo dài từ trước đến nay.",
+        "Hoạt động vừa dừng và còn dấu hiệu ở hiện tại."
+      ],
+      "forms": {
+        "affirmative": "S + have/has been + V-ing",
+        "negative": "S + have/has not been + V-ing",
+        "question": "Have/Has + S + been + V-ing?"
+      },
+      "signals": [
+        {
+          "word": "for / since / how long",
+          "meaning": "Khoảng thời gian / mốc bắt đầu / câu hỏi kéo dài bao lâu."
+        },
+        {
+          "word": "all morning / recently",
+          "meaning": "Cả buổi sáng / gần đây, khi nhấn mạnh hoạt động."
+        }
+      ],
+      "example": "I have been painting the kitchen all morning.",
+      "translation_vi": "Tôi sơn bếp suốt từ sáng đến giờ.",
+      "note": "Thì này tập trung vào quá trình, không khẳng định công việc đã xong. Với know hoặc own ở nghĩa trạng thái, thường dùng hiện tại hoàn thành đơn.",
+      "lesson_id": null
+    },
+    {
+      "id": "past-simple",
+      "title": "Quá khứ đơn",
+      "uses": [
+        "Sự việc hoặc thói quen thuộc một khoảng thời gian đã kết thúc.",
+        "Kể các sự việc nối tiếp trong quá khứ."
+      ],
+      "forms": {
+        "affirmative": "S + V2 / V-ed",
+        "negative": "S + did not + V",
+        "question": "Did + S + V?"
+      },
+      "signals": [
+        {
+          "word": "yesterday / last week / in 2020",
+          "meaning": "Thời điểm hoặc khoảng thời gian đã kết thúc."
+        },
+        {
+          "word": "two days ago",
+          "meaning": "Cách đây hai ngày."
+        }
+      ],
+      "example": "We visited Hue last summer.",
+      "translation_vi": "Chúng tôi đến Huế hè năm ngoái.",
+      "note": "Sau did/did not dùng V nguyên mẫu: Did she go?, không phải Did she went? Với be, dùng was/were và đảo lên đầu câu hỏi.",
+      "lesson_id": "a2-past-simple"
+    },
+    {
+      "id": "past-continuous",
+      "title": "Quá khứ tiếp diễn",
+      "uses": [
+        "Việc đang diễn ra tại một thời điểm trong quá khứ.",
+        "Bối cảnh đang tiếp diễn khi một sự việc khác xảy ra."
+      ],
+      "forms": {
+        "affirmative": "S + was/were + V-ing",
+        "negative": "S + was/were not + V-ing",
+        "question": "Was/Were + S + V-ing?"
+      },
+      "signals": [
+        {
+          "word": "at 8 p.m. yesterday",
+          "meaning": "Một mốc quá khứ, khi nhấn mạnh việc đang diễn ra lúc đó."
+        },
+        {
+          "word": "while / when",
+          "meaning": "Nối các sự việc; phải xem việc nào đang diễn ra, việc nào xảy đến."
+        }
+      ],
+      "example": "I was cooking when the phone rang.",
+      "translation_vi": "Tôi đang nấu ăn thì điện thoại reo.",
+      "note": "I/he/she/it dùng was; you/we/they dùng were. While và when không tự quyết định thì của động từ.",
+      "lesson_id": "b1-past-continuous"
+    },
+    {
+      "id": "past-perfect",
+      "title": "Quá khứ hoàn thành",
+      "uses": [
+        "Việc đã hoàn tất trước một mốc hoặc một sự việc khác trong quá khứ.",
+        "Làm rõ thứ tự trước–sau khi kể chuyện quá khứ."
+      ],
+      "forms": {
+        "affirmative": "S + had + V3",
+        "negative": "S + had not + V3",
+        "question": "Had + S + V3?"
+      },
+      "signals": [
+        {
+          "word": "by the time / already",
+          "meaning": "Đến lúc một việc quá khứ xảy ra, việc kia đã xong."
+        },
+        {
+          "word": "before / after",
+          "meaning": "Gợi quan hệ trước–sau; không phải lúc nào cũng bắt buộc dùng had."
+        }
+      ],
+      "example": "When I arrived, the meeting had started.",
+      "translation_vi": "Khi tôi đến, cuộc họp đã bắt đầu rồi.",
+      "note": "Dùng had cho mọi chủ ngữ. Cần một điểm nhìn trong quá khứ; không dùng chỉ vì sự việc xảy ra rất lâu trước đây.",
+      "lesson_id": "b2-past-perfect"
+    },
+    {
+      "id": "past-perfect-continuous",
+      "title": "Quá khứ hoàn thành tiếp diễn",
+      "uses": [
+        "Nhấn mạnh một hoạt động đã kéo dài đến trước một mốc trong quá khứ.",
+        "Giải thích nguyên nhân của tình trạng ở thời điểm quá khứ."
+      ],
+      "forms": {
+        "affirmative": "S + had been + V-ing",
+        "negative": "S + had not been + V-ing",
+        "question": "Had + S + been + V-ing?"
+      },
+      "signals": [
+        {
+          "word": "for two hours / since morning",
+          "meaning": "Khoảng thời gian tính đến một mốc quá khứ."
+        },
+        {
+          "word": "before / when",
+          "meaning": "Mốc quá khứ mà hoạt động đã kéo dài đến trước đó."
+        }
+      ],
+      "example": "We had been walking for hours, so we were tired.",
+      "translation_vi": "Chúng tôi đã đi bộ hàng giờ nên lúc đó rất mệt.",
+      "note": "Dùng để nhấn mạnh quá trình trước mốc quá khứ. Với trạng thái như know, thường dùng had known.",
+      "lesson_id": null
+    },
+    {
+      "id": "future-simple",
+      "title": "Tương lai đơn · will",
+      "uses": [
+        "Dự đoán, lời hứa hoặc lời đề nghị giúp đỡ.",
+        "Quyết định ngay lúc nói."
+      ],
+      "forms": {
+        "affirmative": "S + will + V",
+        "negative": "S + will not (won’t) + V",
+        "question": "Will + S + V?"
+      },
+      "signals": [
+        {
+          "word": "tomorrow / next week",
+          "meaning": "Mốc tương lai; cũng có thể đi với các cách diễn đạt tương lai khác."
+        },
+        {
+          "word": "I think / probably",
+          "meaning": "Thường gặp khi đưa ra dự đoán."
+        }
+      ],
+      "example": "That bag looks heavy. I will carry it for you.",
+      "translation_vi": "Túi đó có vẻ nặng. Để tôi xách giúp bạn.",
+      "note": "Kế hoạch đã có thường dùng be going to; lịch hẹn đã thu xếp có thể dùng hiện tại tiếp diễn. Không chọn will chỉ vì thấy tomorrow.",
+      "lesson_id": "a2-future"
+    },
+    {
+      "id": "future-continuous",
+      "title": "Tương lai tiếp diễn",
+      "uses": [
+        "Việc sẽ đang diễn ra tại một thời điểm trong tương lai."
+      ],
+      "forms": {
+        "affirmative": "S + will be + V-ing",
+        "negative": "S + will not be + V-ing",
+        "question": "Will + S + be + V-ing?"
+      },
+      "signals": [
+        {
+          "word": "at this time tomorrow",
+          "meaning": "Vào giờ này ngày mai."
+        },
+        {
+          "word": "at 9 a.m. next Monday",
+          "meaning": "Một mốc tương lai, khi nhấn mạnh quá trình đang diễn ra."
+        }
+      ],
+      "example": "At this time tomorrow, I will be flying to Hanoi.",
+      "translation_vi": "Giờ này ngày mai, tôi sẽ đang bay đến Hà Nội.",
+      "note": "Hình dung bạn dừng thời gian ở mốc tương lai đó: hoạt động nào sẽ đang diễn ra?",
+      "lesson_id": null
+    },
+    {
+      "id": "future-perfect",
+      "title": "Tương lai hoàn thành",
+      "uses": [
+        "Việc sẽ hoàn tất trước hoặc chậm nhất vào một mốc tương lai."
+      ],
+      "forms": {
+        "affirmative": "S + will have + V3",
+        "negative": "S + will not have + V3",
+        "question": "Will + S + have + V3?"
+      },
+      "signals": [
+        {
+          "word": "by Friday / by then",
+          "meaning": "Chậm nhất vào thứ Sáu / đến lúc đó."
+        },
+        {
+          "word": "by the time + hiện tại đơn",
+          "meaning": "Mốc tương lai trong mệnh đề thời gian."
+        }
+      ],
+      "example": "By Friday, I will have finished the report.",
+      "translation_vi": "Đến thứ Sáu, tôi sẽ làm xong báo cáo.",
+      "note": "Trong mệnh đề thời gian chỉ tương lai sau by the time, thường dùng hiện tại đơn: by the time you arrive.",
+      "lesson_id": null
+    },
+    {
+      "id": "future-perfect-continuous",
+      "title": "Tương lai hoàn thành tiếp diễn",
+      "uses": [
+        "Nhấn mạnh hoạt động sẽ kéo dài được bao lâu tính đến một mốc tương lai."
+      ],
+      "forms": {
+        "affirmative": "S + will have been + V-ing",
+        "negative": "S + will not have been + V-ing",
+        "question": "Will + S + have been + V-ing?"
+      },
+      "signals": [
+        {
+          "word": "for + khoảng thời gian, by + mốc",
+          "meaning": "Kết hợp khoảng thời gian với điểm nhìn trong tương lai."
+        }
+      ],
+      "example": "By noon, we will have been travelling for six hours.",
+      "translation_vi": "Đến trưa, chúng tôi sẽ đi được sáu tiếng liên tục.",
+      "note": "Thường dùng khi thời lượng của hoạt động là điều muốn nhấn mạnh. Không cần dùng cấu trúc dài này nếu câu đơn giản hơn đã diễn đạt đúng ý.",
+      "lesson_id": null
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "present-simple-continuous",
+      "title": "Hiện tại đơn hay hiện tại tiếp diễn?",
+      "tip": "Hỏi: đây là thói quen nói chung, hay việc đang diễn ra / chỉ tạm thời?",
+      "sides": [
+        {
+          "title": "Hiện tại đơn",
+          "use": "Thói quen ổn định.",
+          "example": "I work in the office.",
+          "translation_vi": "Tôi làm việc ở văn phòng (thường lệ)."
+        },
+        {
+          "title": "Hiện tại tiếp diễn",
+          "use": "Tình huống tạm thời.",
+          "example": "I am working from home this week.",
+          "translation_vi": "Tuần này tôi đang làm việc ở nhà."
+        }
+      ]
+    },
+    {
+      "id": "past-simple-present-perfect",
+      "title": "Quá khứ đơn hay hiện tại hoàn thành?",
+      "tip": "Nếu thời điểm đã kết thúc là trọng tâm, dùng quá khứ đơn. Nếu nhìn từ hiện tại vào trải nghiệm, kết quả hoặc trạng thái còn tiếp tục, cân nhắc hiện tại hoàn thành.",
+      "sides": [
+        {
+          "title": "Quá khứ đơn",
+          "use": "Khoảng thời gian đã kết thúc.",
+          "example": "I lived in Hue for three years.",
+          "translation_vi": "Tôi từng sống ở Huế ba năm (nay không còn sống ở đó)."
+        },
+        {
+          "title": "Hiện tại hoàn thành",
+          "use": "Trạng thái vẫn tiếp tục đến nay.",
+          "example": "I have lived in Hue for three years.",
+          "translation_vi": "Tôi sống ở Huế được ba năm rồi (hiện vẫn ở đó)."
+        }
+      ]
+    },
+    {
+      "id": "past-simple-continuous",
+      "title": "Quá khứ đơn hay quá khứ tiếp diễn?",
+      "tip": "Trong “I was cooking when the phone rang”, nấu ăn là việc đang diễn ra; điện thoại reo là sự việc xảy đến. Đừng chỉ nhìn when hoặc while để chọn thì.",
+      "sides": [
+        {
+          "title": "Quá khứ đơn",
+          "use": "Kể một sự việc đã xảy ra.",
+          "example": "The phone rang at eight.",
+          "translation_vi": "Điện thoại reo lúc tám giờ."
+        },
+        {
+          "title": "Quá khứ tiếp diễn",
+          "use": "Tả việc đang diễn ra tại một mốc.",
+          "example": "I was cooking at eight.",
+          "translation_vi": "Lúc tám giờ, tôi đang nấu ăn."
+        }
+      ]
+    },
+    {
+      "id": "past-simple-perfect",
+      "title": "Quá khứ đơn hay quá khứ hoàn thành?",
+      "tip": "Chọn mốc quá khứ trước, rồi hỏi việc nào đã xảy ra trước mốc đó. Không phải câu nào có hai hành động quá khứ cũng cần had.",
+      "sides": [
+        {
+          "title": "Quá khứ đơn",
+          "use": "Kể sự việc ở mốc chính.",
+          "example": "When I arrived, the meeting started.",
+          "translation_vi": "Khi tôi đến, cuộc họp bắt đầu."
+        },
+        {
+          "title": "Quá khứ hoàn thành",
+          "use": "Sự việc đã xảy ra trước mốc chính.",
+          "example": "When I arrived, the meeting had started.",
+          "translation_vi": "Khi tôi đến, cuộc họp đã bắt đầu rồi."
+        }
+      ]
+    },
+    {
+      "id": "perfect-simple-continuous",
+      "title": "Hoàn thành đơn hay hoàn thành tiếp diễn?",
+      "tip": "Bạn muốn nhấn mạnh kết quả / số lượng hay quá trình / thời lượng? Một số câu với live hoặc work dùng được cả hai, tùy trọng tâm.",
+      "sides": [
+        {
+          "title": "Hiện tại hoàn thành",
+          "use": "Kết quả đã đạt được.",
+          "example": "I have painted the kitchen.",
+          "translation_vi": "Tôi sơn xong bếp rồi."
+        },
+        {
+          "title": "Hiện tại hoàn thành tiếp diễn",
+          "use": "Quá trình; chưa nói rõ đã xong hay chưa.",
+          "example": "I have been painting the kitchen all morning.",
+          "translation_vi": "Tôi sơn bếp suốt từ sáng đến giờ."
+        }
+      ]
+    },
+    {
+      "id": "will-going-to",
+      "title": "Will, going to hay hiện tại tiếp diễn?",
+      "tip": "Will thường cho quyết định ngay lúc nói; going to thường cho ý định có sẵn hoặc dự đoán dựa trên dấu hiệu. Với lịch hẹn đã thu xếp: “I am meeting Lan at six.” Các cách dùng có thể giao nhau tùy ngữ cảnh.",
+      "sides": [
+        {
+          "title": "Will",
+          "use": "Quyết định lúc nói hoặc đề nghị giúp.",
+          "example": "I will call the restaurant for you.",
+          "translation_vi": "Để tôi gọi nhà hàng giúp bạn."
+        },
+        {
+          "title": "Be going to",
+          "use": "Ý định đã có từ trước.",
+          "example": "I am going to call the restaurant tonight.",
+          "translation_vi": "Tối nay tôi định gọi nhà hàng."
+        }
+      ]
+    }
+  ],
+  "lesson_guides": {
+    "a1-present-simple": {
+      "tenses": [
+        "present-simple"
+      ],
+      "comparisons": [
+        "present-simple-continuous"
+      ]
+    },
+    "a2-present-continuous": {
+      "tenses": [
+        "present-continuous"
+      ],
+      "comparisons": [
+        "present-simple-continuous"
+      ]
+    },
+    "a2-past-simple": {
+      "tenses": [
+        "past-simple"
+      ],
+      "comparisons": [
+        "past-simple-present-perfect",
+        "past-simple-continuous"
+      ]
+    },
+    "a2-future": {
+      "tenses": [
+        "future-simple"
+      ],
+      "comparisons": [
+        "will-going-to"
+      ]
+    },
+    "b1-present-perfect": {
+      "tenses": [
+        "present-perfect"
+      ],
+      "comparisons": [
+        "past-simple-present-perfect",
+        "perfect-simple-continuous"
+      ]
+    },
+    "b1-past-continuous": {
+      "tenses": [
+        "past-continuous"
+      ],
+      "comparisons": [
+        "past-simple-continuous"
+      ]
+    },
+    "b2-past-perfect": {
+      "tenses": [
+        "past-perfect"
+      ],
+      "comparisons": [
+        "past-simple-perfect"
+      ]
+    }
+  },
+  "source_urls": [
+    "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs",
+    "https://dictionary.cambridge.org/grammar/british-grammar/table-of-irregular-verbs",
+    "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-simple-continuous"
+  ]
+}

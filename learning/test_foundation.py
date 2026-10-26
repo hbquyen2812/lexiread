@@ -36,7 +36,7 @@ class FoundationTests(TestCase):
             self.assertTrue(all(r['level']=='B2' for r in response.json()['items']))
             unit=units(kind)[0]
             detail=self.client.get(f'/api/learn/{kind}/{unit["id"]}/').json()
-            self.assertTrue(all(set(q)=={'id','prompt','options'} for q in detail['questions']))
+            self.assertTrue(all({'id','prompt','options'} <= set(q) <= {'id','prompt','options','prompt_lang'} for q in detail['questions']))
         self.assertEqual(self.client.get('/api/learn/grammar/not-a-lesson/').status_code,404)
         self.assertEqual(self.client.get('/api/learn/overview/?kind=invalid').status_code,400)
         self.assertEqual(AICall.objects.count(),0)
@@ -56,6 +56,40 @@ class FoundationTests(TestCase):
         self.assertFalse(self.client.get('/api/learn/plan/').json()['progress'])
         self.assertEqual(self.submit(token=token).status_code,201)
         self.assertEqual(FoundationAttempt.objects.filter(token=token).count(),2)
+
+    def test_guided_grammar_navigation_and_private_graded_answers(self):
+        rows=units('grammar')
+        for index in (0,1,len(rows)-1):
+            response=self.client.get('/api/learn/grammar/'+rows[index]['id']+'/')
+            self.assertEqual(response.status_code,200)
+            detail=response.json()
+            self.assertTrue(all({'id','prompt','options'} <= set(q) <= {'id','prompt','options','prompt_lang'} for q in detail['questions']))
+            previous=detail['navigation']['previous']; following=detail['navigation']['next']
+            self.assertEqual(previous['id'] if previous else None,rows[index-1]['id'] if index else None)
+            self.assertEqual(following['id'] if following else None,rows[index+1]['id'] if index+1<len(rows) else None)
+        first=self.client.get('/api/learn/grammar/'+rows[0]['id']+'/').json()
+        self.assertTrue(first['teaching']['quick_check']['answer'])
+        self.assertNotIn('questions',first['navigation']['next'])
+        self.assertEqual(AICall.objects.count(),0)
+
+    def test_bundled_grammar_reference_and_tense_lessons(self):
+        path='/api/learn/grammar-reference/'
+        self.assertEqual(Client().get(path).status_code,401)
+        self.assertEqual(self.client.post(path,{}).status_code,405)
+        response=self.client.get(path)
+        self.assertEqual(response.status_code,200)
+        data=response.json()
+        self.assertEqual(len(data['verbs']),132)
+        self.assertEqual(len(data['tenses']),12)
+        self.assertEqual(len(data['comparisons']),6)
+        self.assertEqual(len(data['lesson_guides']),7)
+        for lesson_id in data['lesson_guides']:
+            lesson=self.client.get('/api/learn/grammar/'+lesson_id+'/').json()
+            self.assertTrue(lesson['tense_guide']['tenses'])
+            self.assertTrue(lesson['tense_guide']['comparisons'])
+            self.assertTrue(all('answer' not in q for q in lesson['questions']))
+        self.assertIsNone(self.client.get('/api/learn/grammar/a1-sentence-basics/').json()['tense_guide'])
+        self.assertEqual(AICall.objects.count(),0)
 
     def test_reject_incomplete_forged_and_stale_submissions(self):
         path=f'/api/learn/grammar/{self.grammar["id"]}/submit/'

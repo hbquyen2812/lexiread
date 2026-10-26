@@ -127,7 +127,7 @@ function renderReader(){
   const box=$('#reader-content');
   if(state.readingTab==='text'){
     const tr=new Map((a.translations||[]).map(t=>[t.index,t.vi]));
-    box.innerHTML='<p class="fineprint">Bôi đen từ hoặc cụm từ bạn muốn lưu.</p>'+
+    box.innerHTML='<p class="fineprint">Bôi đen từ để tra nghĩa, nghe phát âm hoặc lưu lại.</p>'+
       (showTranslation?'<div class="reader-labels"><b>ENGLISH · VĂN BẢN GỐC</b><span>TIẾNG VIỆT · BẢN DỊCH THAM KHẢO</span></div>':'')+
       r.paragraphs.map((p,i)=>`<section class="parallel-row ${showTranslation?'':'single'}" data-paragraph="${i}"><div><div class="paragraph-tools"><span class="paragraph-index">ĐOẠN ${String(i+1).padStart(2,'0')}</span><button class="link-btn" data-action="bookmark-paragraph" data-index="${i}">${r.progress?.paragraph===i?'◆':'◇'} Đọc đến đây</button>${state.boot?.ai_enabled?`<button class="link-btn" data-action="ask-paragraph" data-index="${i}">Hỏi đoạn này</button>`:''}</div><p class="reader-en" data-index="${i}">${highlight(p,[...v.map(w=>w.word),...(state.readerWords||[]).map(w=>w.word)])}</p></div>${showTranslation?`<div><span class="paragraph-index">BẢN DỊCH ${String(i+1).padStart(2,'0')}</span><p class="reader-vi">${esc(tr.get(i)||'Chưa dịch đoạn này.')}</p></div>`:''}</section>`).join('');
   }else if(state.readingTab==='words'){
@@ -156,7 +156,7 @@ function openModal(title,content,footer='',drawer=false){
   $('#modal-content').innerHTML=`<header class="modal-header"><h2 id="modal-title">${esc(title)}</h2><button class="icon-btn" data-action="close-modal" aria-label="Đóng cửa sổ">×</button></header><div class="modal-body">${content}</div>${footer?`<footer class="modal-footer">${footer}</footer>`:''}`;
   m.showModal();
 }
-function closeModal(){ $('#modal').close(); }
+function closeModal(){ window.LexiDictionary?.stopAudio(); $('#modal').close(); }
 function readingModal(edit=false){
   state.editReading=edit;
   const r=edit?state.reading:{};
@@ -213,13 +213,15 @@ async function saveWord(btn){
 function clearSelection(){state.selection=null;$('#selection-bar').hidden=true;}
 function captureSelection(){
   const sel=window.getSelection();
-  if(!sel||sel.isCollapsed||$('#modal').open||!state.reading)return;
+  if($('#modal').open)return;
+  if(!sel||sel.isCollapsed||!state.reading){clearSelection();return;}
   const node=sel.anchorNode?.nodeType===1?sel.anchorNode:sel.anchorNode?.parentElement;
   const end=sel.focusNode?.nodeType===1?sel.focusNode:sel.focusNode?.parentElement;
   const p=node?.closest('.reader-en'),p2=end?.closest('.reader-en');
-  if(!p||p!==p2)return;
+  if(!p||p!==p2){clearSelection();return;}
   const word=sel.toString().trim();
-  if(!word||word.length>4000)return;
+  if(!word||word.length>4000){clearSelection();return;}
+  $('[data-action=selected-dictionary]').hidden=!window.LexiDictionary.canLookup(word);
   $('[data-action=selected-word]').disabled=word.length>160||word.split(/\s+/).length>16;
   const para=state.reading.paragraphs[Number(p.dataset.index)];
   let context=para;
@@ -345,7 +347,7 @@ async function toeicSetPage(slug,epoch){
   if(state.toeicSession?.slug!==slug||state.toeicSession?.revision!==practice.revision)state.toeicSession={slug,revision:practice.revision,answers:{},token:uid(),startedAt:Date.now(),result:null};
   renderToeicSet();
 }
-const analyticsPageLabels={learn:'Lộ trình & nền tảng',grammar:'Ngữ pháp',collection:'Bộ từ theo trình độ',home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
+const analyticsPageLabels={learn:'Lộ trình học',grammar:'Ngữ pháp',collection:'Bộ từ theo trình độ',home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
   'toeic-set':'Bộ TOEIC',readings:'Bài cá nhân',reading:'Đang đọc',vocabulary:'Kho từ','word-import':'Tạo bộ từ',study:'Ôn từ',settings:'Cài đặt',analytics:'Thống kê',login:'Đăng nhập'};
 async function analyticsPage(epoch){
   const data=await api('/analytics/?days='+state.analyticsDays);if(epoch!==state.routeEpoch)return;
@@ -382,7 +384,7 @@ async function route(){
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
   const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
-  $('#page-label').textContent=({learn:'Lộ trình & nền tảng',grammar:'Ngữ pháp',collection:'Từ theo trình độ',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
+  $('#page-label').textContent=({learn:({plan:'Lộ trình học',grammar:'Học ngữ pháp',verbs:'Động từ bất quy tắc',tenses:'Các thì trong tiếng Anh',vocabulary:'Từ vựng theo chủ đề',dictionary:'Từ điển',sources:'Tài liệu tham khảo'})[id]||'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
     if(page==='learn'){await window.LexiAcademy.page($('#main'),id||'plan',epoch);}
@@ -445,6 +447,7 @@ async function act(button){
     await busy(button,async()=>{const items=selected.map(i=>({...state.reading.analysis.vocabulary[i],tags:[...new Set([...(state.reading.analysis.vocabulary[i].tags||[]),state.reading.title])],verified:false,origin:state.reading.catalog_slug?'curated':'ai'}));const r=await api('/vocabulary/',{method:'POST',data:{items,reading_id:state.reading.id}});await refreshBoot();toast(`Đã thêm ${r.created} thẻ; ${r.skipped} mục đã có được giữ nguyên.`);});break;
   }
   case 'new-word':editor(blankEntry());break;
+  case 'selected-dictionary':if(state.selection)await window.LexiDictionary.open(state.selection);break;
   case 'selected-word':if(state.selection){const candidate=(state.reading.analysis?.vocabulary||[]).find(w=>w.word.toLowerCase()===state.selection.word.toLowerCase());editor({...blankEntry(),...(candidate||{}),...state.selection});}break;
   case 'clear-selection':clearSelection();break;
   case 'edit-word':editor(state.vocab.find(v=>v.id===button.dataset.id),button.dataset.id);break;
@@ -504,6 +507,8 @@ document.addEventListener('submit',e=>{
   if(['word-form','reading-form'].includes(e.target.id))e.preventDefault();
 });
 document.addEventListener('mouseup',()=>setTimeout(captureSelection,10));
+let selectionDelay;
+document.addEventListener('selectionchange',()=>{clearTimeout(selectionDelay);selectionDelay=setTimeout(captureSelection,180);});
 document.addEventListener('touchend',()=>setTimeout(captureSelection,40),{passive:true});
 document.addEventListener('keyup',e=>{if(e.key==='Shift'||e.key.startsWith('Arrow'))captureSelection();});
 document.addEventListener('keydown',e=>{

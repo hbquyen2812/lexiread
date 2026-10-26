@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const context={window:{}};vm.runInNewContext(fs.readFileSync('static/topic_vocabulary.js','utf8'),context);
+const ui=context.window.LexiTopics;
+const rows=[{id:'travel-a1',title:'Đi đây đó',topic:'Travel',level:'A1',description:'Chuyến đi',word_count:12},{id:'work-b1',title:'Công việc',topic:'Work & Business',level:'B1',description:'Đi làm',word_count:12}];
+assert.equal(ui.filterRows(rows,{topic:'Travel',level:'A1',q:''}).length,1);
+assert.equal(ui.filterRows(rows,{topic:'Travel',level:'B1',q:''}).length,0);
+assert.equal(ui.filterRows(rows,{topic:'',level:'',q:'cong viec'})[0].id,'work-b1');
+assert.equal(ui.filterRows(rows,{topic:'',level:'',q:'business'})[0].id,'work-b1');
+const html=ui.card({...rows[0],title:'<script>bad</script>',topic:'<img src=x>'});assert.doesNotMatch(html,/<script|<img/);assert.match(html,/lang="en" data-no-i18n/);assert.match(html,/#collection\/travel-a1/);
+console.log('PASS topic + level + accent-insensitive search, empty combinations, escaped cards and existing collection routes');

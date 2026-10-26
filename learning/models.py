@@ -2,6 +2,58 @@ import uuid
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+
+
+class DictionaryRelease(models.Model):
+    key = models.CharField(max_length=80, primary_key=True)
+    checksum = models.CharField(max_length=64)
+    entry_count = models.PositiveIntegerField(default=0)
+    ipa_count = models.PositiveIntegerField(default=0)
+    imported_at = models.DateTimeField(auto_now=True)
+
+
+class DictionaryEntry(models.Model):
+    word = models.CharField(max_length=160, primary_key=True)
+    display_word = models.CharField(max_length=160)
+    definition = models.TextField(blank=True)
+    content = models.JSONField(default=list)
+    release = models.ForeignKey(DictionaryRelease, on_delete=models.PROTECT)
+
+    class Meta:
+        ordering = ['word']
+
+
+class DictionaryForm(models.Model):
+    form = models.CharField(max_length=160, db_index=True)
+    entry = models.ForeignKey(DictionaryEntry, on_delete=models.CASCADE, related_name='forms')
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=['form', 'entry'], name='unique_dictionary_form')]
+
+
+class DictionaryAudio(models.Model):
+    digest = models.CharField(max_length=64, primary_key=True)
+    data = models.BinaryField()
+    mime = models.CharField(max_length=40)
+    attribution = models.JSONField(default=dict)
+
+
+class DictionarySupplement(models.Model):
+    word = models.CharField(max_length=160, primary_key=True)
+    content = models.JSONField(default=list)
+
+
+class VocabularyCollection(models.Model):
+    slug = models.SlugField(max_length=100, primary_key=True)
+    title = models.CharField(max_length=200)
+    topic = models.CharField(max_length=100, db_index=True)
+    level = models.CharField(max_length=2, db_index=True)
+    order = models.PositiveIntegerField(default=0)
+    content = models.JSONField(default=dict)
+
+    class Meta:
+        ordering = ['order', 'slug']
+
 class Reading(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)

@@ -35,6 +35,24 @@ def validate_unit(unit, kind):
         for section in unit['explanation']:
             if not all(isinstance(section.get(k),str) and section[k].strip() for k in ('title','body','example','translation_vi')):
                 raise InputError('Phần giải thích ngữ pháp còn thiếu.')
+        teaching = unit.get('teaching')
+        if teaching is not None:
+            if not isinstance(teaching, dict) or not all(
+                isinstance(teaching.get(k), str) and teaching[k].strip()
+                for k in ('objective', 'context', 'example', 'translation_vi')
+            ):
+                raise InputError('Bài hướng dẫn cần mục tiêu và ví dụ đầy đủ.')
+            for name in ('steps', 'takeaways'):
+                if not isinstance(teaching.get(name), list) or not 1 <= len(teaching[name]) <= 5 or not all(
+                    isinstance(item, str) and item.strip() for item in teaching[name]
+                ):
+                    raise InputError('Các bước hướng dẫn và ý cần nhớ chưa đầy đủ.')
+            check = teaching.get('quick_check')
+            if not isinstance(check, dict) or not all(
+                isinstance(check.get(k), str) and check[k].strip()
+                for k in ('prompt', 'answer', 'explanation_vi')
+            ):
+                raise InputError('Câu tự luyện cần đề, đáp án và lời giải.')
         validate_questions(unit.get('questions'))
     elif kind == 'vocabulary':
         words=unit.get('words')
@@ -63,6 +81,8 @@ def validate_questions(questions):
         if not isinstance(q,dict) or not isinstance(q.get('id'),str) or q['id'] in ids:
             raise InputError('Mã câu hỏi trùng hoặc không hợp lệ.')
         ids.add(q['id'])
+        if q.get('prompt_lang','en') not in ('en','vi'):
+            raise InputError('Ngôn ngữ câu hỏi chưa hợp lệ.')
         choices=q.get('options')
         if (not isinstance(choices,list) or len(choices)!=4 or
             not all(isinstance(x,str) and x.strip() for x in choices) or len(set(choices))!=4 or
@@ -91,6 +111,14 @@ def _units(kind):
 
 def units(kind):
     if kind not in ('grammar','vocabulary'):raise InputError('Loại bài không được hỗ trợ.')
+    if kind == 'vocabulary':
+        from django.apps import apps
+        if apps.ready:
+            from learning.models import VocabularyCollection
+            saved = list(VocabularyCollection.objects.all())
+            if saved:
+                return [{**row.content, 'id': row.slug, 'title': row.title, 'topic': row.topic, 'level': row.level}
+                        for row in saved]
     return copy.deepcopy(_units(kind))
 
 
@@ -130,7 +158,7 @@ def grade(snapshot, answers):
 
 
 def summary(unit, kind):
-    return {k:unit[k] for k in ('id','title','level','tags') if k in unit} | {
+    return {k:unit[k] for k in ('id','title','level','tags','topic') if k in unit} | {
         'description':unit.get('summary',unit.get('description','')),
         'minutes':unit.get('minutes',8), 'question_count':len(questions_for(unit,kind)),
         'word_count':len(unit.get('words',[]))}

@@ -5,10 +5,11 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="LexiRead — đọc, hiểu và giữ lại từ vựng cá nhân.">
   <title>LexiRead · Không gian học của bạn</title>
-  <link rel="stylesheet" href="{% static 'app.css' %}">
-  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.14">
-  <script src="{% static 'i18n.js' %}?v=20261026.14" defer></script>{{ topic_labels|json_script:"topic-labels-data" }}<script src="{% static 'library.js' %}?v=20261026.14" defer></script>
-<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.14"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.14"><link rel="stylesheet" href="{% static 'academy.css' %}?v=20261026.14"><link rel="stylesheet" href="{% static 'learning_methods.css' %}?v=20261026.14"></head>
+  <link rel="stylesheet" href="{% static 'app.css' %}?v=20261026.20">
+  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.18">
+  <script src="{% static 'i18n.js' %}?v=20261026.18" defer></script>{{ topic_labels|json_script:"topic-labels-data" }}<script src="{% static 'library.js' %}?v=20261026.18" defer></script>
+<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'academy.css' %}?v=20261026.20">
+  <link rel="stylesheet" href="{% static 'grammar_course.css' %}?v=20261026.20"><link rel="stylesheet" href="{% static 'learning_methods.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'dictionary.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'topic_vocabulary.css' %}?v=20261026.18"></head>
 <body>
   <a class="skip-link" href="#main" data-action="skip-content" data-i18n="skip">Đến nội dung chính</a>
   <aside class="sidebar">
@@ -17,7 +18,7 @@
     <button type="button" class="mobile-menu-toggle" data-action="toggle-navigation" aria-expanded="false" aria-controls="study-navigation" data-i18n="nav.menu">☰ Menu</button>
     <nav id="study-navigation" aria-label="Điều hướng chính">
       <a href="#home" data-nav="home"><span class="nav-icon">◫</span> Tổng quan</a>
-      <a href="#learn/plan" data-nav="learn"><span class="nav-icon">◉</span> Lộ trình & nền tảng</a>
+      <a href="#learn/plan" data-nav="learn"><span class="nav-icon">◉</span> Lộ trình học</a>
       <a href="#catalog" data-nav="catalog"><span class="nav-icon">▤</span> Thư viện luyện đọc</a>
       <a href="#ielts" data-nav="ielts"><span class="nav-icon">↗</span> Luyện IELTS Reading</a>
       <a href="#toeic" data-nav="toeic"><span class="nav-icon">◎</span> Luyện TOEIC Reading</a>
@@ -36,18 +37,21 @@
     <main id="main" tabindex="-1"><div class="empty-state">Đang mở kho học tập…</div></main>
     <footer class="page-footer"><span>LexiRead · Từ của bạn. Ngữ cảnh của bạn. Nhịp học của bạn.</span></footer>
   </div>
-  <div id="selection-bar" class="selection-bar" hidden><span id="selected-word"></span><button data-action="selected-word" class="btn primary small">+ Lưu từ / cụm từ</button><button data-action="selected-question" class="btn secondary small">Giải thích câu</button><button data-action="clear-selection" aria-label="Đóng" class="icon-btn">×</button></div>
+  <div id="selection-bar" class="selection-bar" hidden><span id="selected-word"></span><button data-action="selected-dictionary" class="btn primary small">Tra từ & phát âm</button><button data-action="selected-word" class="btn secondary small">+ Lưu từ</button><button data-action="selected-question" class="btn secondary small">Giải thích câu</button><button data-action="clear-selection" aria-label="Đóng" class="icon-btn">×</button></div>
   <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
   <div id="toasts" class="toasts" aria-live="polite"></div>
   {{ official_resources|json_script:"official-resources-data" }}
   {{ strategy_guides|json_script:"strategy-guides-data" }}
   {{ learning_channels|json_script:"learning-channels-data" }}
-  <script src="{% static 'learning_channels.js' %}?v=20261026.14" defer></script>
-  <script src="{% static 'learning_methods.js' %}?v=20261026.14" defer></script><script src="{% static 'learning_hub.js' %}?v=20261026.14" defer></script>
+  <script src="{% static 'learning_channels.js' %}?v=20261026.18" defer></script>
+  <script src="{% static 'learning_methods.js' %}?v=20261026.18" defer></script><script src="{% static 'learning_hub.js' %}?v=20261026.20" defer></script>
   <script src="{% static 'resources.js' %}" defer></script>
-  <script src="{% static 'reading_platform.js' %}?v=20261026.14" defer></script>
-  <script src="{% static 'practice_tools.js' %}?v=20261026.14" defer></script>
-  <script src="{% static 'personal_decks.js' %}?v=20261026.14" defer></script>
-  <script src="{% static 'academy.js' %}?v=20261026.14" defer></script>
-  <script src="{% static 'app.js' %}?v=20261026.14" defer></script>
+  <script src="{% static 'reading_platform.js' %}?v=20261026.20" defer></script>
+  <script src="{% static 'practice_tools.js' %}?v=20261026.20" defer></script>
+  <script src="{% static 'personal_decks.js' %}?v=20261026.18" defer></script>
+  <script src="{% static 'topic_vocabulary.js' %}?v=20261026.18" defer></script>
+  <script src="{% static 'grammar_reference.js' %}?v=20261026.20" defer></script>
+  <script src="{% static 'grammar_course.js' %}?v=20261026.20" defer></script>
+  <script src="{% static 'academy.js' %}?v=20261026.20" defer></script>
+  <script src="{% static 'dictionary.js' %}?v=20261026.21" defer></script><script src="{% static 'app.js' %}?v=20261026.21" defer></script>
 </body></html>
