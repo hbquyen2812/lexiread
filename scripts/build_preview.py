@@ -8,6 +8,7 @@ from learning.services.toeic import toeic_sets
 from learning.services.presentation import cover_metadata, ART_TOPICS
 from learning.services.public_resources import public_resources
 from learning.services.strategy_guides import strategy_guides
+from learning.services.learning_channels import learning_channels
 seed={'words':json.loads((root/'data/seed_vocab.json').read_text(encoding='utf-8')),'text':(root/'data/set_in_metal.txt').read_text(encoding='utf-8'),'analysis':json.loads((root/'data/demo_analysis.json').read_text(encoding='utf-8')),'entry_schema':ENTRY_SCHEMA,'analysis_schema':ANALYSIS_SCHEMA,'system':SYSTEM}
 seed['lessons']=sorted([validate_lesson(json.loads(p.read_text(encoding='utf-8'))) for p in (root/'data/lessons').glob('*.json')],key=lambda x:x['order'])
 for lesson in seed['lessons']: lesson.update(cover_metadata(lesson['topic'],lesson['title']))
@@ -17,9 +18,11 @@ html=(root/'templates/app.html').read_text(encoding='utf-8').replace('{% load st
 html=re.sub(r"({% static '[^']+' %})\?v=[^\"]+",r'\1',html)
 html=html.replace("{% include 'language_switcher.html' %}",(root/'templates/language_switcher.html').read_text(encoding='utf-8'))
 html=html.replace('{{ strategy_guides|json_script:"strategy-guides-data" }}','<script id="strategy-guides-data" type="application/json">'+json.dumps(strategy_guides(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
-for script in ('learning_hub','practice_tools','personal_decks'):
+for script in ('learning_hub','practice_tools','personal_decks','learning_channels'):
     html=html.replace('<script src="{% static \''+script+'.js\' %}" defer></script>','<script>'+(root/f'static/{script}.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'learning_hub.css\' %}">','<style>'+(root/'static/learning_hub.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace('<link rel="stylesheet" href="{% static \'learning_channels.css\' %}">','<style>'+(root/'static/learning_channels.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace('{{ learning_channels|json_script:"learning-channels-data" }}','<script id="learning-channels-data" type="application/json">'+json.dumps(learning_channels(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
 fonts=(root/'static/fonts.css').read_text(encoding='utf-8')
 for font in (root/'static/fonts').glob('*.woff2'):
     fonts=fonts.replace('/static/fonts/'+font.name,'data:font/woff2;base64,'+base64.b64encode(font.read_bytes()).decode())

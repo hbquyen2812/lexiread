@@ -21,3 +21,5 @@
 **Tiến độ:** xuất backup thường xuyên. Import gộp không ghi đè lịch ôn hiện có; chuyển sang tài khoản/kho trống khi cần khôi phục chính xác tiến độ từ bản khác. Không có đồng bộ tự động giữa HTML và server.
 
 Bộ từ cá nhân: vào **Kho từ → Tạo / nhập bộ từ** để tạo prompt AI, nhập file JSON, xem trước và ôn theo bộ. [Hướng dẫn và cấu trúc file](docs/PERSONAL_VOCABULARY_IMPORT.md).
+
+Kênh YouTube theo A1–C2: **Cẩm nang học tập → Học qua YouTube**, hoặc mở `/guides/#guides/youtube`. Có 8 kênh, gợi ý bắt đầu và cách luyện sau mỗi video. [Nguồn và ghi chú](docs/YOUTUBE_LEARNING_CHANNELS.md).

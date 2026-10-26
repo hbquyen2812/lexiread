@@ -21,7 +21,7 @@
   let guideFilter={exam:'',q:''};
   function guideList(root) {
     const items=guideItems();
-    root.innerHTML=`<section class="hub-heading" lang="vi" data-no-i18n><span class="eyebrow">HIỂU CÁCH LÀM, RỒI LUYỆN TẬP</span><h1>Học cách làm từng dạng bài.</h1><p>Chọn dạng bài bạn muốn luyện. Mỗi hướng dẫn có cách làm, chỗ dễ nhầm và một ví dụ ngắn để thử.</p><div class="hub-controls"><div class="filter-chips" role="group" aria-label="Chọn kỳ thi">${[['','Tất cả'],['ielts','IELTS'],['toeic','TOEIC']].map(([v,l])=>`<button type="button" class="filter-chip" data-guide-exam="${v}" aria-pressed="${v===guideFilter.exam}">${l}</button>`).join('')}</div><input type="search" data-guide-search aria-label="Tìm hướng dẫn" placeholder="Tìm dạng bài, ví dụ: Not Given, Part 7…" value="${esc(guideFilter.q)}"></div><p class="hub-result-count" data-guide-count role="status"></p></section><div class="guide-grid" data-guide-results lang="vi" data-no-i18n></div>`;
+    root.innerHTML=`${window.LexiChannels?.tabs("guides")||""}<section class="hub-heading" lang="vi" data-no-i18n><span class="eyebrow">HIỂU CÁCH LÀM, RỒI LUYỆN TẬP</span><h1>Học cách làm từng dạng bài.</h1><p>Chọn dạng bài bạn muốn luyện. Mỗi hướng dẫn có cách làm, chỗ dễ nhầm và một ví dụ ngắn để thử.</p><div class="hub-controls"><div class="filter-chips" role="group" aria-label="Chọn kỳ thi">${[['','Tất cả'],['ielts','IELTS'],['toeic','TOEIC']].map(([v,l])=>`<button type="button" class="filter-chip" data-guide-exam="${v}" aria-pressed="${v===guideFilter.exam}">${l}</button>`).join('')}</div><input type="search" data-guide-search aria-label="Tìm hướng dẫn" placeholder="Tìm dạng bài, ví dụ: Not Given, Part 7…" value="${esc(guideFilter.q)}"></div><p class="hub-result-count" data-guide-count role="status"></p></section><div class="guide-grid" data-guide-results lang="vi" data-no-i18n></div>`;
     updateGuides(root,items);
   }
   function updateGuides(root,items=guideItems()) {
@@ -31,6 +31,7 @@
     root.querySelectorAll('[data-guide-exam]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.guideExam===guideFilter.exam)));
   }
   function guidePage(root,id='') {
+    if(id==='youtube'){window.LexiChannels.page(root);return;}
     root.classList.add('learning-hub');root.dataset.guideRoot='';
     const guide=guideItems().find(g=>g.id===id);
     if(!id || ['ielts','toeic'].includes(id)){if(id)guideFilter.exam=id;guideList(root);return;}

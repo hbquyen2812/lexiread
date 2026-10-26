@@ -85,9 +85,10 @@ def index(request):
     from .services.traffic import record_visit
     from .services.public_resources import public_resources
     from .services.strategy_guides import strategy_guides
+    from .services.learning_channels import learning_channels
     record_visit(request,'home')
     resources=public_resources()
-    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources,'strategy_guides':strategy_guides()})
+    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources,'strategy_guides':strategy_guides(),'learning_channels':learning_channels()})
     from .services.toeic_repository import toeic_sets
     lessons=[]
     for lesson in CuratedLesson.objects.filter(published=True).order_by('order','title'):
@@ -114,7 +115,8 @@ def health(request):
 
 def guides(request):
     from .services.strategy_guides import strategy_guides
-    return render(request,'guides.html',{'strategy_guides':strategy_guides()})
+    from .services.learning_channels import learning_channels
+    return render(request,'guides.html',{'strategy_guides':strategy_guides(),'learning_channels':learning_channels()})
 
 def filtered_vocab(request):
     qs=Vocabulary.objects.filter(owner=request.user)

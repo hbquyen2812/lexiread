@@ -390,7 +390,7 @@ async function route(){
     else if(page==='ielts')await ieltsPage(epoch,id||'');
     else if(page==='lesson'&&id)await lessonRoute(id,epoch);
     else if(page==='toeic')await toeicPage(epoch,id||'');
-    else if(page==='guides'){window.LexiHub.guidePage($('#main'),id||'');$('#page-label').textContent='Cẩm nang cách làm';}
+    else if(page==='guides'){window.LexiHub.guidePage($('#main'),id||'');$('#page-label').textContent=id==='youtube'?'Học qua YouTube':'Cẩm nang học tập';}
     else if(page==='resources'){
       $('#main').innerHTML='<section id="study-resources"></section>';
       window.LexiResources.mount($('#study-resources'),id);

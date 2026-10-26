@@ -18,6 +18,7 @@ from django.urls import path
 from learning.services.presentation import cover_metadata
 from learning.services.public_resources import public_resources
 from learning.services.strategy_guides import strategy_guides
+from learning.services.learning_channels import learning_channels
 from learning.services.toeic import toeic_sets
 urlpatterns=[path('login/',lambda request:None,name='login'),path('signup/',lambda request:None,name='signup'),path('password-reset/',lambda request:None,name='password_reset')]
 
@@ -29,7 +30,7 @@ def context():
         lesson.update(cover_metadata(lesson['topic'],lesson['title']))
         lessons.append(lesson)
     lessons.sort(key=lambda x:(x['order'],x['title']))
-    return dict(lessons=lessons,practices=toeic_sets(),general_count=sum(x['track']=='general' for x in lessons),ielts_count=sum(x['track']=='ielts' for x in lessons),next='/#catalog',form={},official_resources=public_resources(),strategy_guides=strategy_guides())
+    return dict(lessons=lessons,practices=toeic_sets(),general_count=sum(x['track']=='general' for x in lessons),ielts_count=sum(x['track']=='ielts' for x in lessons),next='/#catalog',form={},official_resources=public_resources(),strategy_guides=strategy_guides(),learning_channels=learning_channels())
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
