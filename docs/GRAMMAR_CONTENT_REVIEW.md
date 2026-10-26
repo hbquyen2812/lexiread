@@ -120,3 +120,24 @@ The word-order page timed out in the web reader; its official indexed descriptio
 - Screenshots: `docs/qa/grammar-course-desktop.jpg`, `grammar-worked-example-desktop.jpg`, `grammar-practice-result-desktop.jpg`, `grammar-lesson-mobile.jpg`, `grammar-practice-mobile.jpg`.
 
 QA only; no production deployment or automatic PR merge.
+
+## Tense reference, irregular verbs and question layout
+
+Added `data/grammar_reference.json`, reproducibly authored by `scripts/build_grammar_reference_content.py`:
+
+- 132 common irregular verbs with V1, V2, V3, original Vietnamese glosses and notes for variants, `lie`/`lay`, `got`/`gotten`, and the pronunciation of `read`.
+- 12 tense/aspect summaries: use, affirmative/negative/question structures, translated examples and contextual time expressions. These are reference summaries, not 12 new graded courses.
+- Six comparisons with paired examples and a decision explanation. Seven existing tense lessons embed the relevant reference and comparisons before their original graded practice.
+- `#learn/verbs` supports all-form/accent-insensitive search, pattern filtering, 24-row pagination and hiding V2/V3 for self-review. `#learn/tenses` lets learners choose one tense or comparison at a time. The catalogue has two compact reference links; the main navigation is unchanged.
+
+Verb inflections were checked against the official [British Council irregular-verb reference](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs) and the indexed [Cambridge table](https://dictionary.cambridge.org/grammar/british-grammar/table-of-irregular-verbs) (direct fetch returned 403). The [perfect simple/continuous explanation](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-simple-continuous) and [future continuous/perfect explanation](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-continuous-future-perfect) were also consulted. No publisher exercise sets or prose were copied. Time expressions are explicitly contextual cues, not automatic rules for selecting a tense.
+
+The grammar/vocabulary, reading and TOEIC renderers now put the visible prompt inside the question card. A visually hidden legend retains the accessible group name. Shared question typography uses the UI font, visible keyboard focus and mobile answer stacking. The verb table becomes three compact form columns plus a meaning row on narrow screens.
+
+Verification for this update:
+
+- 143 Django tests ran: 142 passed, one optional incoming-dataset test skipped because the unrelated `lexiread_data_v1/data/lessons.json` is absent in the workspace. Its deletion is excluded from this change.
+- All 10 JavaScript suites and five pure foundation-content tests passed. HTTP smoke passed, including authenticated reference access, private graded answers and zero AI calls in the new API tests.
+- Browser: present-perfect practice scored 6/6; switching lesson/practice retained answers; retry cleared answers. Irregular search `went` found `go`, `doc` found `read`; hide/show, empty results, group filters and pagination worked. The advanced tense selector and past-simple/present-perfect comparison rendered correctly.
+- Desktop and 390-px mobile checks found no document overflow in the grammar quiz, verb table or tense reference. Screenshots are in `docs/qa/grammar-quiz-refined-*.jpg`, `irregular-verbs-*.jpg` and `tense-comparison-desktop.jpg`.
+- Reading and TOEIC question cards were also checked in the browser; TOEIC level labels now omit the redundant estimate suffix. Asset versions were bumped and the QA web process restarted to invalidate cached templates. The static preview builds successfully with the new assets inlined. Foundation learning remains available in the authenticated web app.

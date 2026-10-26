@@ -11,18 +11,19 @@
   const options=value=>`<option value="">Tất cả trình độ</option>${levels.map(l=>`<option value="${l}" ${l===value?'selected':''}>${l}</option>`).join('')}`;
   const shell=active=>tabs(active)+`<section class="academy" data-academy-root><div class="empty-state" role="status">Đang tải bài học…</div></section>`;
   function quizHTML(questions){
-    return `<form class="academy-quiz"><div class="section-title"><div><h2>Luyện tập</h2><p>${questions.length} câu · Có lời giải sau khi nộp bài</p></div></div>${questions.map((q,i)=>`<fieldset class="reading-question"><legend><span class="chip">Câu ${i+1}</span><span lang="${q.prompt_lang==='vi'?'vi':'en'}" data-no-i18n>${e(q.prompt)}</span></legend><div class="reading-options">${q.options.map((answer,j)=>`<label class="reading-option"><input type="radio" name="${e(q.id)}" value="${j}" required><span class="choice-letter">${'ABCD'[j]}</span><span data-no-i18n>${e(answer)}</span></label>`).join('')}</div></fieldset>`).join('')}<button type="submit" class="btn primary">Kiểm tra bài làm</button><p class="academy-feedback" role="status"></p></form>`;
+    return `<form class="academy-quiz"><div class="section-title"><div><h2>Luyện tập</h2><p>${questions.length} câu · Có lời giải sau khi nộp bài</p></div></div>${questions.map((q,i)=>`<fieldset class="reading-question academy-question"><legend class="sr-only">Câu ${i+1}: ${e(q.prompt)}</legend><div class="academy-question-heading" aria-hidden="true"><span class="chip">Câu ${i+1}</span><p lang="${q.prompt_lang==='vi'?'vi':'en'}" data-no-i18n>${e(q.prompt)}</p></div><div class="reading-options">${q.options.map((answer,j)=>`<label class="reading-option"><input type="radio" name="${e(q.id)}" value="${j}" required><span class="choice-letter">${'ABCD'[j]}</span><span data-no-i18n>${e(answer)}</span></label>`).join('')}</div></fieldset>`).join('')}<button type="submit" class="btn primary">Kiểm tra bài làm</button><p class="academy-feedback" role="status"></p></form>`;
   }
   function resultHTML(result){
     return `<section class="academy-result" tabindex="-1"><div class="reading-score"><strong>${result.score}/${result.total}</strong><div>${result.percent>=80?'Bạn đã làm tốt bài này.':'Xem lời giải để hiểu rõ những câu chưa đúng.'}<p>Kết quả đã được lưu để gợi ý bài học tiếp theo.</p></div></div><label class="academy-wrong-toggle"><input type="checkbox" data-wrong-only> Chỉ xem câu chưa đúng</label><div class="academy-answers">${result.results.map((q,i)=>`<article class="academy-answer ${q.correct?'is-correct':'is-wrong'}"><div class="tags"><span class="chip">Câu ${i+1}</span><b>${q.correct?'✓ Đúng':'Cần xem lại'}</b></div><p data-no-i18n>${e(q.prompt)}</p><p>Đáp án: <strong data-no-i18n>${e(q.options[q.answer])}</strong>${q.correct?'':`<br>Bạn chọn: <span data-no-i18n>${e(q.options[q.submitted])}</span>`}</p><p>${e(q.explanation_vi)}</p></article>`).join('')}</div><p class="academy-all-correct" hidden>Bạn đã trả lời đúng tất cả các câu.</p><div class="button-row"><button class="btn secondary" data-academy="retry">Làm lại bài</button><a class="btn primary" href="#learn/plan">Về lộ trình học →</a></div></section>`;
   }
   async function page(root,section='plan',epoch){
     const ticket=++generation,active=()=>ticket===generation&&epoch===state.routeEpoch;
-    if(!Object.hasOwn(names,section))section='plan';
-    root.innerHTML=shell(section); const area=root.querySelector('[data-academy-root]');
+    if(!Object.hasOwn(names,section)&&!['verbs','tenses'].includes(section))section='plan';
+    root.innerHTML=shell(['verbs','tenses'].includes(section)?'grammar':section); const area=root.querySelector('[data-academy-root]');
     if(window.LEXIREAD_PREVIEW){area.innerHTML='<div class="notice"><h1>Góc học nền tảng</h1><p>Ngữ pháp, bộ từ và lộ trình cá nhân có trên bản web có tài khoản. Bản HTML ngoại tuyến vẫn hỗ trợ thư viện và ôn từ đã lưu.</p><a class="btn primary" href="http://127.0.0.1:8766/#learn/plan">Mở bản web đang chạy →</a></div>';return;}
     if(section==='vocabulary'){await window.LexiTopics.topics(area,active);return;}
     if(section==='grammar'){await window.LexiGrammar.catalogue(area,active);return;}
+    if(['verbs','tenses'].includes(section)){await window.LexiGrammarReference.page(area,section,active);return;}
     if(section==='dictionary'){await window.LexiTopics.dictionary(area,active);return;}
     if(section==='plan'){
       let data=await api('/learn/plan/');if(!active())return;

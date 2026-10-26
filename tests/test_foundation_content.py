@@ -3,9 +3,27 @@ import json
 import unittest
 from learning.services.foundation_content import units, questions_for, grade, quiz_snapshot, validate_unit, ROOT, LEVELS
 from learning.services.core import InputError
+from learning.services.grammar_reference import reference, lesson_guide
 
 
 class FoundationContentTests(unittest.TestCase):
+    def test_reference_integrity_and_copy_isolation(self):
+        data=reference()
+        lessons={r['id'] for r in units('grammar')}
+        self.assertLessEqual(set(data['lesson_guides']),lessons)
+        self.assertLessEqual({r['lesson_id'] for r in data['tenses'] if r['lesson_id']},lessons)
+        verbs={r['base']:r for r in data['verbs']}
+        for base,past,participle in [('go','went','gone'),('lie','lay','lain'),('lay','laid','laid'),('write','wrote','written')]:
+            self.assertIn(past,verbs[base]['past'])
+            self.assertIn(participle,verbs[base]['participle'])
+        self.assertIn('/red/',verbs['read']['note'])
+        self.assertIn('gotten',verbs['get']['participle'])
+        guide=lesson_guide('b1-present-perfect')
+        self.assertEqual(guide['tenses'][0]['id'],'present-perfect')
+        guide['tenses'][0]['forms']['affirmative']='changed'
+        self.assertNotEqual(lesson_guide('b1-present-perfect')['tenses'][0]['forms']['affirmative'],'changed')
+        self.assertIsNone(lesson_guide('not-a-lesson'))
+
     def test_complete_graded_curriculum(self):
         for kind,total in [('grammar',216),('vocabulary',360)]:
             rows=units(kind)

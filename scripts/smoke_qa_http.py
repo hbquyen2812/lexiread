@@ -48,6 +48,12 @@ def main():
             detail=client.get(f'/api/learn/{kind}/{units[0]["id"]}/').json()
             assert all('answer' not in question for question in detail['questions'])
         assert len(client.get('/api/learn/sources/').json()['items'])==40
+        reference=client.get('/api/learn/grammar-reference/').json()
+        assert len(reference['verbs'])==132 and len(reference['tenses'])==12
+        assert len(reference['comparisons'])==6
+        assert client.get('/static/grammar_reference.js').status_code==200
+        tense=client.get('/api/learn/grammar/b1-present-perfect/').json()
+        assert tense['tense_guide']['tenses'][0]['id']=='present-perfect'
         assert client.get('/api/learn/dictionary/',params={'q':'wake up'}).json()['total']>=1
         dictionary=client.get('/api/dictionary/search/').json()
         assert dictionary['available']==127311 and dictionary['ipa_count']==27581

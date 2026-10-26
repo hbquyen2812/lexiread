@@ -14,6 +14,12 @@ from .services.motivation import record_learning
 from .services.foundation_content import (ROOT, LEVELS, units, get_unit, summary, quiz_snapshot,
     revision, grade, fold, word_entry)
 from .services.learning_path import clean_profile, profile_for, progress_for, plan_for
+from .services.grammar_reference import reference, lesson_guide
+
+
+@api('GET')
+def grammar_reference(request):
+    return JsonResponse(reference())
 
 
 def find_unit(kind, unit_id):
@@ -41,6 +47,7 @@ def unit_detail(request, kind, unit_id):
     result['version']=revision(snapshot)
     result['progress']=progress_for(request.user).get(kind+'/'+unit_id)
     if kind == 'grammar':
+        result['tense_guide'] = lesson_guide(unit_id)
         course = units('grammar')
         index = next(i for i, row in enumerate(course) if row['id'] == unit_id)
         def nav_item(i):

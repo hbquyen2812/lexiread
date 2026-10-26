@@ -1,0 +1,24 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const scope={window:{}};
+for(const file of ['grammar_reference.js','grammar_course.js'])vm.runInNewContext(fs.readFileSync('static/'+file,'utf8'),scope);
+const ui=scope.window.LexiGrammarReference,data=JSON.parse(fs.readFileSync('data/grammar_reference.json','utf8'));
+assert.equal(ui.filterVerbs(data.verbs,'went')[0].base,'go');
+assert.equal(ui.filterVerbs(data.verbs,'WRITTEN')[0].base,'write');
+assert.equal(ui.filterVerbs(data.verbs,'doc')[0].base,'read');
+assert.equal(ui.filterVerbs(data.verbs,'khong co tu nay').length,0);
+const groups=['same','past-same','different'].flatMap(g=>ui.filterVerbs(data.verbs,'',g).map(v=>v.base));
+assert.equal(groups.length,132);assert.equal(new Set(groups).size,132);
+assert.equal(ui.filterVerbs(data.verbs,'go','same').length,0);
+const row=data.verbs.find(r=>r.base==='write');
+assert.match(ui.verbsHTML([row]),/written/);assert.doesNotMatch(ui.verbsHTML([row],true),/written|wrote/);
+assert.match(ui.verbsHTML([row]),/<th scope="row"/);
+const bad=structuredClone(row);bad.note='<img src=x>';bad.past=['<script>'];
+assert.doesNotMatch(ui.verbsHTML([bad]),/<img|<script/);
+for(const t of data.tenses){const html=ui.tenseHTML(t);assert.doesNotMatch(html,/undefined|null/);assert.match(html,/Khi nào dùng/);assert.match(html,/Dấu hiệu thường gặp/);}
+const lesson=JSON.parse(fs.readFileSync('data/grammar_lessons.json','utf8')).lessons.find(r=>r.id==='b1-present-perfect');
+lesson.tense_guide={tenses:data.tenses.filter(t=>t.id==='present-perfect'),comparisons:data.comparisons.filter(c=>c.id==='past-simple-present-perfect')};
+let html=scope.window.LexiGrammar.lessonHTML(lesson,'','<form>practice</form>');
+assert.match(html,/have\/has \+ V3/);assert.match(html,/Quá khứ đơn hay hiện tại hoàn thành/);assert.equal((html.match(/data-quiz/g)||[]).length,1);
+lesson.tense_guide.tenses[0].note='<img onerror=evil>';lesson.tense_guide.comparisons[0].tip='<script>evil';
+assert.doesNotMatch(scope.window.LexiGrammar.lessonHTML(lesson,'',''),/<img|<script/);
+console.log('PASS irregular verb inflection/accent search, disjoint groups, self-review hiding, escaping and tense lesson integration');
