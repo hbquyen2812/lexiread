@@ -1,0 +1,175 @@
+{
+  "slug": "a2-the-weekend-market",
+  "title": "The Weekend Market",
+  "level": "A2",
+  "topic": "Mua sắm",
+  "summary": "Lên kế hoạch mua hàng và thay đổi lựa chọn khi đến chợ.",
+  "track": "general",
+  "revision": 1,
+  "order": 104,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "Nora usually bought vegetables at the supermarket on her way home from work. Last Saturday, she tried the small outdoor market near the station. Before leaving home, she made a shopping list and put two cloth bags by the door. She wanted enough food for three simple dinners, not a fridge full of things she might forget.\n\nAt the first stall, the tomatoes were more expensive than she expected. The seller explained that the heavy rain had damaged some plants. Nora chose carrots instead. She asked how to keep them fresh, and the seller told her to put them in a cool place. At another stall, she found a small bag of rice.\n\nNora did not buy everything on her list, but she had what she needed. That evening, she cooked rice and vegetables. She wrote the total cost in her notebook so she could compare it with her usual shopping. She decided to return the next weekend, partly because she enjoyed talking to the people who sold her food.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Nora thường mua rau ở siêu thị trên đường đi làm về. Thứ Bảy tuần trước, cô thử đến chợ nhỏ ngoài trời gần ga. Trước khi ra khỏi nhà, cô lập danh sách mua sắm và đặt hai túi vải cạnh cửa. Cô muốn đủ thức ăn cho ba bữa tối đơn giản, không phải một tủ lạnh đầy những thứ có thể bị quên."
+      },
+      {
+        "index": 1,
+        "vi": "Ở quầy đầu tiên, cà chua đắt hơn cô nghĩ. Người bán giải thích mưa lớn đã làm hỏng một số cây. Nora chọn cà rốt thay thế. Cô hỏi cách giữ chúng tươi và được khuyên để ở nơi mát. Tại một quầy khác, cô tìm được một túi gạo nhỏ."
+      },
+      {
+        "index": 2,
+        "vi": "Nora không mua hết danh sách nhưng có những thứ cần thiết. Tối đó, cô nấu cơm và rau. Cô ghi tổng chi phí vào vở để so sánh với việc mua sắm thường ngày. Cô quyết định quay lại vào cuối tuần sau, một phần vì thích trò chuyện với người bán thức ăn cho mình."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "shopping list",
+        "pos": "word / phrase",
+        "meaning_vi": "danh sách mua sắm",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Nora usually bought vegetables at the supermarket on her way home from work. Last Saturday, she tried the small outdoor market near the station. Before leaving home, she made a shopping list and put two cloth bags by the door. She wanted enough food for three simple dinners, not a fridge full of things she might forget.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Mua sắm"
+        ]
+      },
+      {
+        "word": "cloth bags",
+        "pos": "word / phrase",
+        "meaning_vi": "túi vải",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Nora usually bought vegetables at the supermarket on her way home from work. Last Saturday, she tried the small outdoor market near the station. Before leaving home, she made a shopping list and put two cloth bags by the door. She wanted enough food for three simple dinners, not a fridge full of things she might forget.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Mua sắm"
+        ]
+      },
+      {
+        "word": "stall",
+        "pos": "word / phrase",
+        "meaning_vi": "quầy hàng",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "At the first stall, the tomatoes were more expensive than she expected. The seller explained that the heavy rain had damaged some plants. Nora chose carrots instead. She asked how to keep them fresh, and the seller told her to put them in a cool place. At another stall, she found a small bag of rice.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Mua sắm"
+        ]
+      },
+      {
+        "word": "instead",
+        "pos": "word / phrase",
+        "meaning_vi": "thay vào đó",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "At the first stall, the tomatoes were more expensive than she expected. The seller explained that the heavy rain had damaged some plants. Nora chose carrots instead. She asked how to keep them fresh, and the seller told her to put them in a cool place. At another stall, she found a small bag of rice.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Mua sắm"
+        ]
+      },
+      {
+        "word": "compare",
+        "pos": "word / phrase",
+        "meaning_vi": "so sánh",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Nora did not buy everything on her list, but she had what she needed. That evening, she cooked rice and vegetables. She wrote the total cost in her notebook so she could compare it with her usual shopping. She decided to return the next weekend, partly because she enjoyed talking to the people who sold her food.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Mua sắm"
+        ]
+      },
+      {
+        "word": "partly",
+        "pos": "word / phrase",
+        "meaning_vi": "một phần",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Nora did not buy everything on her list, but she had what she needed. That evening, she cooked rice and vegetables. She wrote the total cost in her notebook so she could compare it with her usual shopping. She decided to return the next weekend, partly because she enjoyed talking to the people who sold her food.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Mua sắm"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Why did Nora choose carrots?",
+      "options": [
+        "She did not like tomatoes",
+        "There were no other vegetables",
+        "The tomatoes cost more than expected"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "the tomatoes were more expensive than she expected.",
+      "explanation_vi": "Giá cà chua cao hơn dự kiến khiến cô đổi lựa chọn."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why did she record the total cost?",
+      "options": [
+        "To plan a party",
+        "To compare shopping costs",
+        "To send the seller a bill"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "so she could compare it with her usual shopping.",
+      "explanation_vi": "Cô muốn so sánh chi phí với cách mua sắm thường ngày."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Nora bought everything on her list.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "Nora did not buy everything on her list",
+      "explanation_vi": "Bài phủ định trực tiếp nhận định này: FALSE."
+    }
+  ],
+  "faqs": []
+}

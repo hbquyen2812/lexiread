@@ -11,3 +11,4 @@ staticfiles
 *.sql
 backups
 preview.html
+lexiread_data_v1

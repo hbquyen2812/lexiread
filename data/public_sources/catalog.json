@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-26",
+  "scope": "Official external practice resources; not copied exams or unique full tests.",
+  "resources": [
+    {
+      "id": "ielts-academic-multiple-choice-one",
+      "title": "Multiple choice · one answer",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "multiple_choice"
+      ],
+      "format": "interactive",
+      "description_vi": "Chọn một đáp án. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731922&context=exam#/section/188838305/question/167045955/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-one-answer-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-multiple-choice-many",
+      "title": "Multiple choice · several answers",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "multiple_choice"
+      ],
+      "format": "interactive",
+      "description_vi": "Chọn nhiều đáp án. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731586&context=exam#/section/167017070/question/167017069/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-tfng",
+      "title": "True / False / Not Given",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "tfng"
+      ],
+      "format": "interactive",
+      "description_vi": "Phân biệt thông tin đúng, sai và không được nêu. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189698592&context=exam#/section/145434101/question/145431062/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-identifying-information-true-flase-not-given-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-note-completion",
+      "title": "Note completion",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "note_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Điền ghi chú. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731313&context=exam#/section/181952126/question/181952124/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-note-completion-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-table-completion",
+      "title": "Table completion",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "table_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Điền bảng thông tin. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189698337&context=exam#/section/171765060/question/171765058/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-table-completion-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-matching-features",
+      "title": "Matching features",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "matching_features"
+      ],
+      "format": "interactive",
+      "description_vi": "Ghép đặc điểm. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732026&context=exam#/section/166779699/question/145599956/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-features-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-summary-text",
+      "title": "Summary completion · from text",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "summary_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Điền tóm tắt bằng từ trong bài. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189698831&context=exam#/section/188837197/question/188837195/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-words-from-text-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-summary-list",
+      "title": "Summary completion · from list",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "summary_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Điền tóm tắt từ danh sách cho sẵn. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189699146&context=exam#/section/181951091/question/181951090/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-from-list-of-words-or-phrases-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-sentence-completion",
+      "title": "Sentence completion",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "sentence_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Hoàn thành câu. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731169&context=exam#/section/173942070/question/167043573/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-sentence-completion-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-sentence-endings",
+      "title": "Matching sentence endings",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "matching_sentence_endings"
+      ],
+      "format": "interactive",
+      "description_vi": "Ghép hai phần của câu. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189730855&context=exam#/section/181950576/question/171777129/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-sentence-endings-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-multiple-choice",
+      "title": "Multiple choice",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "multiple_choice"
+      ],
+      "format": "interactive",
+      "description_vi": "Chọn đáp án. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732383&context=exam#/section/185942360/question/185942358/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-multiple-choice-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-tfng",
+      "title": "True / False / Not Given",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "tfng"
+      ],
+      "format": "interactive",
+      "description_vi": "Kiểm tra thông tin trong bài. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732223&context=exam#/section/145445178/question/145436122/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-identifying-information-true-false-not-given-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-matching-information",
+      "title": "Matching information",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "matching_information"
+      ],
+      "format": "interactive",
+      "description_vi": "Ghép thông tin với phần văn bản. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189733214&context=exam#/section/145595569/question/145594138/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-information-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-matching-features",
+      "title": "Matching features",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "matching_features"
+      ],
+      "format": "interactive",
+      "description_vi": "Ghép đặc điểm. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189733329&context=exam#/section/166780192/question/166780191/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-features-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-summary-completion",
+      "title": "Summary completion",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "summary_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Điền tóm tắt. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732477&context=exam#/section/184161323/question/184161321/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-summary-completion-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-note-completion",
+      "title": "Note completion",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "note_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Điền ghi chú. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732842&context=exam#/section/174562393/question/174562392/scorableItem/1",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-general-sentence-completion",
+      "title": "Sentence completion",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "sentence_completion"
+      ],
+      "format": "interactive",
+      "description_vi": "Hoàn thành câu. Bài mẫu có liên kết đáp án riêng.",
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=205994164&context=exam",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "answer_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-sentence-completion-answer-key.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    },
+    {
+      "id": "ielts-academic-computer-experience",
+      "title": "Academic Reading · computer practice",
+      "publisher": "IELTS.org",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "mixed_reading"
+      ],
+      "format": "interactive",
+      "description_vi": "Làm quen giao diện với ba bài đọc và 40 câu hỏi. Bản trải nghiệm không bấm giờ như kỳ thi thật.",
+      "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013388&context=exam",
+      "source_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "answer_url": "",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "question_count": 40
+    },
+    {
+      "id": "british-council-academic-reading-pdf",
+      "title": "Academic Reading · sample tasks",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "Academic",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "mixed_reading"
+      ],
+      "format": "pdf",
+      "description_vi": "Tập bài mẫu nhiều dạng câu hỏi, kèm đáp án trong tài liệu.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-academic-reading-sample-tasks-2023.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic/reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-academic-reading-sample-tasks-2023.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 46
+    },
+    {
+      "id": "british-council-general-reading-pdf",
+      "title": "General Training Reading · sample tasks",
+      "publisher": "British Council",
+      "exam": "ielts",
+      "variant": "General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "mixed_reading"
+      ],
+      "format": "pdf",
+      "description_vi": "Tập bài mẫu nhiều dạng câu hỏi, kèm đáp án trong tài liệu.",
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-general-reading-sample-tasks-2023.pdf",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/general-training/reading",
+      "answer_url": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-general-reading-sample-tasks-2023.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 33
+    },
+    {
+      "id": "ets-toeic-listening-reading-sample-test",
+      "title": "TOEIC Listening & Reading · sample test",
+      "publisher": "ETS",
+      "exam": "toeic",
+      "variant": "Listening & Reading",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "Part 5",
+        "Part 6",
+        "Part 7"
+      ],
+      "format": "pdf",
+      "description_vi": "Bài mẫu ETS; phần Reading gồm câu chưa hoàn chỉnh, hoàn thành văn bản và đọc hiểu.",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf",
+      "source_url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "answer_url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 34
+    },
+    {
+      "id": "ets-toeic-bridge-sample-test-listening-reading",
+      "title": "TOEIC Bridge · sample test",
+      "publisher": "ETS",
+      "exam": "toeic",
+      "variant": "Bridge Listening & Reading",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "Reading"
+      ],
+      "format": "pdf",
+      "description_vi": "Bài mẫu TOEIC Bridge cho người học nền tảng; đây là bài thi riêng, không phải TOEIC Listening & Reading.",
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-sample-test-listening-reading.pdf",
+      "source_url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "answer_url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-sample-test-listening-reading.pdf",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked",
+      "page_count": 34
+    },
+    {
+      "id": "idp-reading-practice-hub",
+      "title": "Reading practice · IDP",
+      "publisher": "IDP IELTS",
+      "exam": "ielts",
+      "variant": "Academic & General Training",
+      "skills": [
+        "Reading"
+      ],
+      "question_types": [
+        "mixed_reading"
+      ],
+      "format": "collection",
+      "description_vi": "Tìm bài luyện Reading theo dạng câu hỏi trong thư viện IDP.",
+      "url": "https://ielts.idp.com/prepare/all-test-types/reading",
+      "source_url": "https://ielts.idp.com/prepare/all-test-types/reading",
+      "answer_url": "",
+      "access": "Miễn phí tại website nguồn",
+      "rights": "Bản quyền thuộc nhà xuất bản; LexiRead chỉ lập chỉ mục liên kết, chưa có quyền tái phân phối.",
+      "last_checked": "2026-10-26",
+      "content_mode": "external_link",
+      "verification": "target_checked"
+    }
+  ]
+}

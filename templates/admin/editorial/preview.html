@@ -1,0 +1,10 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+{% if error %}<p class="errornote">{{ error }}</p>{% endif %}
+{% if batch.applied_at %}<p>Đợt nhập này đã được áp dụng. Không nhập lặp lại.</p>{% else %}
+<p>{{ rows|length }} bài sẽ được lưu <strong>nháp</strong>. Xem trước có hiệu lực 30 phút. Nếu một bài lỗi, toàn bộ đợt nhập không được áp dụng.</p>
+<table><thead><tr><th>Thao tác</th><th>Bài</th><th>Trình độ</th><th>Phiên bản</th><th>Câu hỏi</th><th>Cần duyệt</th></tr></thead>
+<tbody>{% for row in rows %}<tr><td>{{ row.action }}</td><td>{{ row.title }}<br><code>{{ row.slug }}</code><details><summary>Xem văn bản</summary><p style="white-space:pre-wrap;max-width:65ch">{{ row.text }}</p></details></td><td>{{ row.level }}</td><td>{{ row.revision }}</td><td>{{ row.questions }}</td><td>{% if row.needs_translation %}Chưa có bản dịch từng đoạn. {% endif %}Duyệt nội dung, đáp án và quyền sử dụng trước khi xuất bản.</td></tr>{% endfor %}</tbody></table>
+<form method="post">{% csrf_token %}<p><button type="submit" name="confirm" value="yes">Xác nhận lưu {{ rows|length }} bài nháp</button></p></form>
+{% endif %}
+{% endblock %}

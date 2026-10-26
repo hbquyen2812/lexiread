@@ -1,28 +1,33 @@
 'use strict';
 /* Shared UI for the curated library and private reader. Loaded before app.js.
    It never calls a model directly or embeds an API key. All content is escaped. */
-const readingKinds={main_idea:'Ý chính',detail:'Chi tiết',tfng:'TRUE / FALSE / NOT GIVEN',vocabulary:'Từ trong ngữ cảnh',inference:'Suy luận'};
+const readingKinds={main_idea:'Ý chính',detail:'Chi tiết',tfng:'TRUE / FALSE / NOT GIVEN',ynng:'YES / NO / NOT GIVEN',vocabulary:'Từ trong ngữ cảnh',inference:'Suy luận',matching_heading:'Ghép tiêu đề',matching_information:'Ghép thông tin',gap_fill:'Điền từ',short_answer:'Trả lời ngắn'};
 function lessonStatus(r){return r.status==='completed'?'Đã đọc':r.status==='started'?'Đang đọc':'Chưa đọc';}
 function lessonCard(r){
-  const symbols={A2:'01',B1:'02',B2:'03'};
-  return `<article class="lesson-card" data-level="${esc(r.level)}"><div class="lesson-card-top"><span class="level-pill ${esc(r.level.toLowerCase())}">${esc(r.level)} <small>ước lượng</small></span><span class="muted">${r.favorite?'★ Yêu thích · ':''}${lessonStatus(r)}</span></div><div class="lesson-cover"><span>${symbols[r.level]||'↗'}</span><div>${esc(r.topic)}</div></div><h3>${esc(r.title)}</h3><p class="lesson-summary">${esc(r.summary)}</p><div class="lesson-meta">${r.word_count} từ <span>·</span> ${r.vocabulary_count} mục từ <span>·</span> ${r.question_count} câu hỏi</div><div class="card-footer"><span class="fineprint">${r.progress?.quiz_total?`Điểm tốt nhất ${r.progress.quiz_best}/${r.progress.quiz_total}`:'Bản dịch & giải thích có sẵn'}</span><a class="btn small secondary" href="#lesson/${esc(r.slug)}">${r.reading_id?'Đọc tiếp':'Bắt đầu'} →</a></div></article>`;
+  return `<article class="lesson-card" data-level="${esc(r.level)}" data-track="${esc(r.track||'general')}"><div class="lesson-card-top"><span class="level-pill ${esc(r.level.toLowerCase())}">${esc(r.level)} <small>ước lượng</small></span><span class="muted">${r.favorite?'★ Yêu thích · ':''}${lessonStatus(r)}</span></div>${window.LexiLibrary.cover(r)}<h3 data-no-i18n lang="en">${esc(r.title)}</h3><p class="lesson-summary">${esc(r.summary)}</p><div class="lesson-meta">${r.word_count} từ <span>·</span> ${r.vocabulary_count} mục từ <span>·</span> ${r.question_count} câu hỏi</div><div class="card-footer"><span class="fineprint">${r.progress?.quiz_total?`Điểm tốt nhất ${r.progress.quiz_best}/${r.progress.quiz_total}`:(r.translation_status==='not_provided'?'Tiếng Anh · chưa có bản dịch':'Bản dịch & giải thích có sẵn')}</span><a class="btn small secondary" href="#lesson/${esc(r.slug)}">${r.reading_id?'Đọc tiếp':'Bắt đầu'} →</a></div></article>`;
 }
 async function readingHome(epoch){
-  const [c,r]=await Promise.all([api('/catalog/'),api('/readings/')]);if(epoch!==state.routeEpoch)return;
-  const s=state.boot.stats,featured=['A2','B1','B2'].map(l=>c.items.find(x=>x.level===l)).filter(Boolean);
-  $('#main').innerHTML=`<section class="hero reading-hero"><div><span class="eyebrow">YOUR READING & VOCABULARY STUDIO</span><h1>Luyện đọc.<br>Hiểu từng ý.<br><em>Giữ lại vốn từ.</em></h1><p>Bài đọc ngắn, chủ đề mới, một chút mỗi ngày.<br>Chọn bài có sẵn hoặc mang bài của riêng bạn vào.</p><div class="button-row"><a class="btn primary" href="#catalog">Khám phá bài đọc →</a><button class="btn ghost" data-action="new-reading">+ Nhập bài của tôi</button></div></div><div class="hero-card-wrap" aria-hidden="true"><div class="hero-card-back"></div><div class="hero-card"><small>READ → UNDERSTAND → REMEMBER</small><div class="hero-word">A little<br>every day.</div><p>Không chỉ sưu tầm từ.<br>Học từ ngay trong câu chuyện.</p><span class="chip">A2 → B1 → B2</span></div></div></section>
-  <section class="stats">${[[c.items.length,'Bài soạn sẵn','12 chủ đề để bắt đầu'],[s.completed_readings||0,'Bài đã đọc','Bạn chủ động đánh dấu hoàn thành'],[s.total,'Thẻ trong kho riêng','Chỉ thêm từ khi bạn chọn lưu'],[s.due??s.overdue,'Từ đang chờ ôn','Ưu tiên những từ đến hạn'],[s.active_days_30||0,'Ngày học / 30 ngày','Duy trì nhịp học đều đặn'],[s.page_views_today||0,'Hoạt động hôm nay','Lượt mở các khu học trong ngày'],[s.toeic_attempts||0,'Lượt TOEIC','Điểm tốt nhất '+(s.toeic_best??'—')+'/12']].map(([n,l,h])=>`<div class="stat"><div class="stat-top">${l}</div><div class="stat-value">${count(n)}</div><div class="stat-note">${h}</div></div>`).join('')}</section>
-  ${dailyReviewCallout(s)}
-  <div class="section-title"><div><h2>Chọn một điểm bắt đầu</h2><p class="fineprint">Bài luyện do LexiRead biên soạn. Mức độ là ước lượng, không phải đề hay thang điểm IELTS chính thức.</p></div><a class="link-btn" href="#catalog">Xem thư viện →</a></div><div class="lesson-grid">${featured.map(lessonCard).join('')}</div>
-  <div class="two-paths"><section class="panel"><span class="eyebrow">BÀI ĐỌC CỦA TÔI</span><h2>Mang bài bạn đang học vào.</h2><p>Dán passage hoặc nhập file. Chọn một từ, hỏi về câu khó, rồi giữ lại những nghĩa cần ôn.</p><div class="button-row"><button class="btn secondary" data-action="new-reading">+ Nhập bài</button><a href="#readings" class="link-btn">${count(r.total??r.items.length)} bài đã nhập →</a></div></section><section class="panel"><span class="eyebrow">KHO TỪ CÁ NHÂN</span><h2>Học một lần, gặp lại đúng lúc.</h2><p>Từ trong thư viện và từ từ bài tự nhập cùng vào một kho. Ôn nghĩa, synonym và paraphrase, không cần chép lại thẻ.</p><a href="#study" class="btn primary">Ôn từ hôm nay ↗</a></section></div>`;
+  const c=await api('/catalog/?track=general');if(epoch!==state.routeEpoch)return;
+  const s=state.boot.stats,featured=['A1','A2','B1'].map(l=>c.items.find(x=>x.level===l)).filter(Boolean);
+  $('#main').innerHTML=`<section class="hero reading-hero garden-hero"><div><span class="eyebrow" data-i18n="hero.chip">Một thói quen nhỏ. Một thế giới rộng hơn.</span><h1><span data-i18n="hero.title1">Đọc một chút.</span><br><em data-i18n="hero.title2">Tiến xa mỗi ngày.</em></h1><p data-i18n="hero.caption">Luyện đọc với câu hỏi, lời giải và từ vựng theo ngữ cảnh.</p><div class="button-row"><a class="btn primary" href="#catalog" data-i18n="hero.start">Tìm bài đọc của bạn ↗</a><button class="btn ghost" data-action="new-reading">+ Nhập bài của tôi</button></div></div><figure class="garden-welcome"><img src="/static/illustrations/lexi-reading-garden.webp" width="1448" height="1086" alt="Bạn thỏ tai lá đang đọc sách trong khu vườn nhỏ của LexiRead" decoding="async" data-i18n-alt="brand.imageAlt"><figcaption data-i18n="brand.welcome">Góc nhỏ của bạn. Mỗi ngày một điều mới.</figcaption></figure></section>
+  <section class="stats">${[[c.total??c.items.length,'Bài soạn sẵn'],[s.completed_readings||0,'Bài đã đọc'],[s.total,'Thẻ trong kho riêng'],[s.due??s.overdue,'Từ đang chờ ôn']].map(([n,l])=>`<div class="stat"><div class="stat-top">${l}</div><div class="stat-value">${count(n)}</div></div>`).join('')}</section>
+  ${dailyReviewCallout(s)}<div class="section-title"><div><h2>Chọn một điểm bắt đầu</h2><p data-i18n="library.copy">Chọn trình độ để khám phá. Bạn có thể đổi mức bất cứ lúc nào; các mức là ước lượng, không thay thế bài kiểm tra CEFR.</p></div><a class="link-btn" href="#catalog">Xem thư viện →</a></div>
+  ${window.LexiLibrary.levelPicker(window.LexiLibrary.savedLevel('general')).replaceAll('data-action="library-level"','data-action="choose-level"')}<div class="lesson-grid">${featured.map(lessonCard).join('')}</div>
+  <section class="public-section"><div class="section-title"><h2 data-i18n="practice.title">Luyện đúng hướng bạn cần.</h2><a class="link-btn" href="#resources" data-i18n="brand.officialLink">Khám phá đề mẫu chính thức ↗</a></div><div class="practice-grid"><article class="practice-path ielts"><span class="chip" data-i18n="ielts.chip">Đọc học thuật · B1–C1</span><h3>IELTS Reading</h3><p data-i18n="ielts.copy"></p><a class="btn primary" href="#ielts" data-i18n="ielts.start">Khám phá IELTS →</a></article><article class="practice-path"><span class="chip" data-i18n="toeic.chip">Tiếng Anh trong công việc</span><h3>TOEIC Reading</h3><p data-i18n="toeic.copy"></p><a class="btn primary" href="#toeic" data-i18n="toeic.start">Luyện TOEIC →</a></article></div></section>`;
 }
-async function catalogPage(epoch){
-  state.catalogFilters ||= {q:'',level:'',topic:'',status:'',favorite:'all'};const f=state.catalogFilters;
-  const c=await api('/catalog/?'+new URLSearchParams(f));if(epoch!==state.routeEpoch)return;
+async function ieltsPage(epoch){return catalogPage(epoch,'ielts');}
+async function catalogPage(epoch,track='general'){
+  const key=track==='ielts'?'ieltsFilters':'catalogFilters';
+  state[key] ||= {q:'',level:window.LexiLibrary.savedLevel(track),topic:'',status:'',favorite:'all',page:1};
+  const f=state[key];state.libraryTrack=track;
+  const c=await api('/catalog/?'+new URLSearchParams({...f,track}));if(epoch!==state.routeEpoch)return;
   state.catalogItems=c.items;
-  $('#main').innerHTML=heading('Thư viện luyện đọc','Bài soạn sẵn theo chủ đề và mức độ. Mở bài là học được, không cần gọi AI.')+
-    `<div class="catalog-note"><b>Đọc để hiểu, không cần dịch từng chữ.</b><span>Thử đọc tiếng Anh trước, làm câu hỏi, rồi mở bản dịch và lưu từ bạn muốn học.</span></div><div class="catalog-filters"><input id="catalog-search" type="search" placeholder="Tìm tiêu đề hoặc chủ đề…" aria-label="Tìm bài đọc" value="${esc(f.q)}"><select id="catalog-level" aria-label="Trình độ"><option value="">Mọi trình độ</option>${['A2','B1','B2'].map(l=>`<option ${l===f.level?'selected':''}>${l}</option>`).join('')}</select><select id="catalog-topic" aria-label="Chủ đề"><option value="">Mọi chủ đề</option>${c.topics.map(t=>`<option ${f.topic===t?'selected':''}>${esc(t)}</option>`).join('')}</select><select id="catalog-status" aria-label="Tiến độ đọc"><option value="">Mọi trạng thái</option>${[['new','Chưa đọc'],['started','Đang đọc'],['completed','Đã đọc']].map(([k,l])=>`<option value="${k}" ${f.status===k?'selected':''}>${l}</option>`).join('')}</select><select id="catalog-favorite" aria-label="Bài yêu thích">${[['all','Tất cả bài'],['yes','Chỉ yêu thích'],['no','Chưa yêu thích']].map(([v,l])=>`<option value="${v}" ${f.favorite===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="catalog-filter">Lọc</button></div><div class="section-title"><h2>${c.items.length} bài phù hợp</h2><span class="fineprint">A2–B2: mức độ do người biên soạn ước lượng</span></div>`+
-    (c.items.length?`<div class="lesson-grid">${c.items.map(lessonCard).join('')}</div>`:empty('Chưa có bài phù hợp','Thử chủ đề hoặc mức độ khác.'));
+  const intro=track==='ielts'?'<div class="catalog-note"><b>IELTS Reading · luyện kỹ năng theo trình độ</b><span>Bài mini tự biên soạn, không phải đề chính thức. Trình độ CEFR không quy đổi trực tiếp thành band IELTS.</span><a class="link-btn" href="#resources/ielts">Khám phá bài mẫu chính thức ↗</a></div>':'';
+  $('#main').innerHTML=heading(track==='ielts'?'IELTS Reading':'Thư viện luyện đọc','Chọn level, tìm một chủ đề bạn thích và bắt đầu đọc.')+
+    window.LexiLibrary.levelPicker(f.level,track)+intro+
+    `<div class="catalog-filters"><input id="catalog-search" type="search" placeholder="Tìm tiêu đề hoặc chủ đề…" aria-label="Tìm bài đọc" value="${esc(f.q)}"><select id="catalog-level" aria-label="Trình độ"><option value="">Mọi trình độ</option>${window.LexiLibrary.levels.map(([code])=>`<option value="${code}" ${code===f.level?'selected':''}>${code}</option>`).join('')}</select><select id="catalog-topic" aria-label="Chủ đề"><option value="">Mọi chủ đề</option>${c.topics.map(t=>`<option value="${esc(t)}" ${f.topic===t?'selected':''}>${esc(t.replaceAll('_',' '))}</option>`).join('')}</select><select id="catalog-status" aria-label="Tiến độ đọc"><option value="">Mọi trạng thái</option>${[['new','Chưa đọc'],['started','Đang đọc'],['completed','Đã đọc']].map(([k,l])=>`<option value="${k}" ${f.status===k?'selected':''}>${l}</option>`).join('')}</select><select id="catalog-favorite" aria-label="Bài yêu thích">${[['all','Tất cả bài'],['yes','Chỉ yêu thích'],['no','Chưa yêu thích']].map(([v,l])=>`<option value="${v}" ${f.favorite===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="catalog-filter">Lọc</button></div><p class="library-result-count" role="status">${c.total??c.items.length} bài phù hợp${f.level?' · '+esc(f.level):''}</p>`+
+    (c.items.length?`<div class="lesson-grid">${c.items.map(lessonCard).join('')}</div>`:empty('Chưa có bài phù hợp','Thử chọn “Tất cả”, một chủ đề hoặc mức độ khác.'))+
+    `<div class="button-row">${(c.page||1)>1?'<button class="btn" data-action="catalog-prev">← Trang trước</button>':''}${c.has_more?'<button class="btn" data-action="catalog-next">Trang tiếp →</button>':''}</div>`;
 }
 async function lessonRoute(slug,epoch){
   const r=await api('/catalog/'+encodeURIComponent(slug)+'/open/',{method:'POST',data:{}});
@@ -46,7 +51,11 @@ function renderReadingQuiz(box,r){
   const hw=state.homework,res=hw.result;
   box.innerHTML=`<div class="section-title"><div><h2>Hiểu bài trước, đối chiếu sau.</h2><p class="fineprint">${questions.length} câu hỏi soạn sẵn. Chấm xong sẽ hiện giải thích và bằng chứng; không quy đổi thành band IELTS.</p></div></div>`+
     (res?`<div class="reading-score" role="status"><strong>${res.score} / ${res.total}</strong><div>Câu trả lời đúng<p>Đối chiếu câu gốc để hiểu cả câu đúng lẫn câu sai.</p></div></div>`:'')+
-    questions.map((q,i)=>{const result=res?.results.find(x=>x.question_id===q.id);return `<fieldset class="reading-question"><legend><span class="chip">${i+1} · ${readingKinds[q.kind]||'Reading'}</span><span>${esc(q.prompt)}</span></legend><div class="reading-options">${q.options.map((o,j)=>`<label class="reading-option ${result?(j===result.answer?'is-correct':j===result.submitted?'is-wrong':''):''}"><input type="radio" data-lesson-question="${esc(q.id)}" name="lesson-${esc(q.id)}" value="${j}" ${hw.answers[q.id]===j?'checked':''} ${res?'disabled':''}><span class="choice-letter">${'ABCD'[j]}</span><span>${esc(o)}</span></label>`).join('')}</div>${result?`<div class="feedback ${result.correct?'':'wrong'}"><strong>${result.correct?'✓ Đúng':'Chưa đúng'} · ${esc(q.options[result.answer])}</strong><p>${esc(result.explanation_vi)}</p>${evidenceButton(result.paragraph_index,result.evidence)}</div>`:''}</fieldset>`;}).join('')+
+    questions.map((q,i)=>{
+      const result=res?.results.find(x=>x.question_id===q.id),textAnswer=['gap_fill','short_answer'].includes(q.kind);
+      const options=textAnswer?`<label>Trả lời tối đa ${q.max_words} từ<input type="text" maxlength="200" data-lesson-text="${esc(q.id)}" value="${esc(hw.answers[q.id]||'')}" ${res?'disabled':''}></label>`:q.options.map((o,j)=>`<label class="reading-option ${result?(j===result.answer?'is-correct':j===result.submitted?'is-wrong':''):''}"><input type="radio" data-lesson-question="${esc(q.id)}" name="lesson-${esc(q.id)}" value="${j}" ${hw.answers[q.id]===j?'checked':''} ${res?'disabled':''}><span class="choice-letter">${'ABCDEFGH'[j]}</span><span>${esc(o)}</span></label>`).join('');
+      return `<fieldset class="reading-question" data-no-i18n><legend><span class="chip">${i+1} · ${readingKinds[q.kind]||'Reading'}</span><span>${esc(q.prompt)}</span></legend><div class="reading-options">${options}</div>${result?`<div class="feedback ${result.correct?'':'wrong'}"><strong>${result.correct?'✓ Đúng':'Chưa đúng'} · ${esc(textAnswer?result.answer:q.options[result.answer])}</strong><p>${esc(result.explanation_vi)}</p>${evidenceButton(result.paragraph_index,result.evidence)}</div>`:''}</fieldset>`;
+    }).join('')+
     `<div class="button-row">${res?'<button class="btn secondary" data-action="reset-reading-quiz">Làm lại bộ câu hỏi</button>':'<button class="btn primary" data-action="submit-reading-quiz">Kiểm tra câu trả lời</button>'}<button class="btn" data-action="reader-tab" data-tab="text">Quay lại bài đọc</button></div>`;
 }
 function qaResultCard(item){
@@ -73,7 +82,24 @@ function jumpToParagraph(index){
 async function platformAct(button){
   const action=button.dataset.action;
   switch(action){
-    case 'catalog-filter':state.catalogFilters={q:$('#catalog-search').value.trim(),level:$('#catalog-level').value,topic:$('#catalog-topic').value,status:$('#catalog-status').value,favorite:$('#catalog-favorite').value};await catalogPage(++state.routeEpoch);return true;
+    case 'toggle-navigation':{
+      const open=$('.sidebar').classList.toggle('menu-open');button.setAttribute('aria-expanded',String(open));return true;
+    }
+    case 'catalog-prev':case 'catalog-next':{
+      const track=state.libraryTrack||'general',key=track==='ielts'?'ieltsFilters':'catalogFilters';
+      state[key].page=Math.max(1,(state[key].page||1)+(action==='catalog-next'?1:-1));await catalogPage(++state.routeEpoch,track);return true;
+    }
+    case 'choose-level':state.catalogFilters={q:'',level:window.LexiLibrary.saveLevel(button.dataset.level,'general'),topic:'',status:'',favorite:'all',page:1};location.hash='catalog';return true;
+    case 'library-level':{
+      const track=button.dataset.track||'general',key=track==='ielts'?'ieltsFilters':'catalogFilters';
+      state[key]={...state[key],level:window.LexiLibrary.saveLevel(button.dataset.level,track),page:1};
+      await catalogPage(++state.routeEpoch,track);$('#main .level-option[aria-pressed=true]')?.focus({preventScroll:true});return true;
+    }
+    case 'catalog-filter':{
+      const track=state.libraryTrack||'general',key=track==='ielts'?'ieltsFilters':'catalogFilters';
+      state[key]={q:$('#catalog-search').value.trim(),level:window.LexiLibrary.saveLevel($('#catalog-level').value,track),topic:$('#catalog-topic').value,status:$('#catalog-status').value,favorite:$('#catalog-favorite').value,page:1};
+      await catalogPage(++state.routeEpoch,track);return true;
+    }
     case 'bookmark-paragraph':await busy(button,async()=>{const r=await api('/readings/'+state.reading.id+'/progress/',{method:'POST',data:{paragraph:Number(button.dataset.index)}});state.reading.progress=r.progress;toast('Đã lưu vị trí đọc ở đoạn '+(Number(button.dataset.index)+1)+'.');renderReader();});return true;
     case 'jump-bookmark':jumpToParagraph(state.reading.progress?.paragraph||0);return true;
     case 'jump-paragraph':jumpToParagraph(Number(button.dataset.index));return true;
@@ -95,7 +121,7 @@ async function platformAct(button){
       },'Đang giải thích…');return true;
     }
     case 'submit-reading-quiz':{
-      const hw=state.homework;await busy(button,async()=>{const res=await api('/readings/'+state.reading.id+'/quiz/',{method:'POST',data:{token:hw.token,answers:hw.answers}});hw.result=res;state.reading.progress=res.progress;renderReader();});return true;
+      const hw=state.homework;await busy(button,async()=>{const res=await api('/readings/'+state.reading.id+'/quiz/',{method:'POST',data:{token:hw.token,answers:hw.answers}});hw.result=res;state.reading.progress=res.progress;await refreshBoot();renderReader();});return true;
     }
     case 'reset-reading-quiz':state.homework={readingId:state.reading.id,answers:{},token:uid(),result:null};renderReader();return true;
   }
@@ -105,5 +131,5 @@ document.addEventListener('change',e=>{
   if(e.target.dataset.lessonQuestion){state.homework.answers[e.target.dataset.lessonQuestion]=Number(e.target.value);}
   if(e.target.id==='reading-font'){state.readerFont=Number(e.target.value);renderReader();}
 });
-document.addEventListener('input',e=>{if(e.target.id==='reading-question-input')state.qaDraft=e.target.value;});
+document.addEventListener('input',e=>{if(e.target.id==='reading-question-input')state.qaDraft=e.target.value;if(e.target.dataset.lessonText)state.homework.answers[e.target.dataset.lessonText]=e.target.value;});
 document.addEventListener('keydown',e=>{if(e.target.id==='catalog-search'&&e.key==='Enter'){e.preventDefault();platformAct($('[data-action="catalog-filter"]')).catch(err=>toast(err.message,true));}});

@@ -1,0 +1,159 @@
+{
+  "dataset_id": "lexiread_reading_vocab_20261026_v1",
+  "version": "1.0.0",
+  "created_on": "2026-10-26",
+  "content_origin": "original_ai_authored",
+  "publication_status": "draft",
+  "counts": {
+    "datasets": 1,
+    "sources": 20,
+    "lessons": 60,
+    "lesson_sources": 132,
+    "passages": 162,
+    "words": 470,
+    "senses": 500,
+    "lesson_vocabulary": 504,
+    "questions": 840
+  },
+  "distinct_terms": 468,
+  "distinct_topics": 59,
+  "flashcards": 504,
+  "question_types": {
+    "mcq_single": 263,
+    "true_false_not_given": 32,
+    "gap_fill": 16,
+    "short_answer": 6,
+    "matching_heading": 8,
+    "matching_information": 5,
+    "yes_no_not_given": 6
+  },
+  "by_track": {
+    "ielts_academic": {
+      "lessons": 12,
+      "reading_questions": 96,
+      "vocabulary_contexts": 120,
+      "vocabulary_questions": 120,
+      "word_count_min": 329,
+      "word_count_max": 364,
+      "cefr_estimates": {
+        "B1": 2,
+        "B2": 7,
+        "C1": 3
+      }
+    },
+    "school_lower_secondary": {
+      "lessons": 10,
+      "reading_questions": 50,
+      "vocabulary_contexts": 80,
+      "vocabulary_questions": 80,
+      "word_count_min": 153,
+      "word_count_max": 182,
+      "cefr_estimates": {
+        "A2": 10
+      }
+    },
+    "school_primary": {
+      "lessons": 10,
+      "reading_questions": 50,
+      "vocabulary_contexts": 80,
+      "vocabulary_questions": 80,
+      "word_count_min": 78,
+      "word_count_max": 111,
+      "cefr_estimates": {
+        "pre-A1": 2,
+        "A1": 8
+      }
+    },
+    "school_upper_secondary": {
+      "lessons": 10,
+      "reading_questions": 50,
+      "vocabulary_contexts": 80,
+      "vocabulary_questions": 80,
+      "word_count_min": 252,
+      "word_count_max": 280,
+      "cefr_estimates": {
+        "B1": 5,
+        "B2": 5
+      }
+    },
+    "toeic": {
+      "lessons": 18,
+      "reading_questions": 90,
+      "vocabulary_contexts": 144,
+      "vocabulary_questions": 144,
+      "word_count_min": 67,
+      "word_count_max": 320,
+      "cefr_estimates": {
+        "A2": 1,
+        "B1": 8,
+        "B2": 9
+      }
+    }
+  },
+  "files": {
+    "data/csv/datasets.csv": {
+      "bytes": 1266,
+      "sha256": "bfd137f23f480e2fce4bbed4bc3d0e73c2547e3b9be1e4ab476958ca2b7562a6"
+    },
+    "data/csv/lesson_sources.csv": {
+      "bytes": 10160,
+      "sha256": "23d87668ee7b20cb38794929594bbb9dc8a7d9835ed013453673b107e8cd80a0"
+    },
+    "data/csv/lesson_vocabulary.csv": {
+      "bytes": 143950,
+      "sha256": "f5d4773cee8137cd9e1d5d7baa5fbc59d22907d3995e6e824571d000820d4e3b"
+    },
+    "data/csv/lessons.csv": {
+      "bytes": 64954,
+      "sha256": "092408c21a4c64ddda6f142600373455d3c43cd3fcb3c79e74037c56c710cef7"
+    },
+    "data/csv/passages.csv": {
+      "bytes": 81926,
+      "sha256": "41c50330828866fa04ca4b1a93adb1ebfd143219ff04b67b6400e8c15e2af2c4"
+    },
+    "data/csv/questions.csv": {
+      "bytes": 620495,
+      "sha256": "097a725b9babeccbef89a74c07dc5522772283891f8c7d8688bb6b09805d7f74"
+    },
+    "data/csv/senses.csv": {
+      "bytes": 52809,
+      "sha256": "fb2031e9eb6d7796fbcf467e69fd4fe3e524544f8a2c481a657207d1bfa877db"
+    },
+    "data/csv/sources.csv": {
+      "bytes": 12847,
+      "sha256": "7130e35aecf15048beb53051c4c6f8b632611eb198f655c1c0a776bea4984b98"
+    },
+    "data/csv/words.csv": {
+      "bytes": 20252,
+      "sha256": "5a6c393e5f4b69cd7d2830307de1478b5b8188660b1a5134d1aa8bf4fe22bd83"
+    },
+    "data/flashcards.json": {
+      "bytes": 309400,
+      "sha256": "ea0f44a17f9ec4ac98036c5533b1af7894c2a95c609214914b87706b8a4c6e0a"
+    },
+    "data/lessons.json": {
+      "bytes": 1724700,
+      "sha256": "f0bbeb097b4376b8bf2e1ad33d8746cc985ae77e1af3b67641397664acaa5bb5"
+    },
+    "data/lessons.jsonl": {
+      "bytes": 1127812,
+      "sha256": "5e54adc232941992b678fbe13646f7192abe1407c8d495c72fde683b9cde8715"
+    },
+    "data/normalized.json": {
+      "bytes": 1923138,
+      "sha256": "84e6ab1107930da9f28d5c365527305bf6afd736cb22ac39ce469b2fbd9cd6b4"
+    },
+    "data/sources.json": {
+      "bytes": 15082,
+      "sha256": "d4bcb6be29b5574b30987ee06c6cf2db79e2a1337251e5fe5869367a1766c320"
+    },
+    "sql/schema_postgresql.sql": {
+      "bytes": 5191,
+      "sha256": "485a82e120aa64d5e00bafd39f0ad04f13873204fd554ea394107e16c5fe1852"
+    },
+    "sql/seed_postgresql.sql": {
+      "bytes": 1546555,
+      "sha256": "2f67b5da89722b292fc5211c7316cbc6f4f3c788a4b098e030a43dd857281ffc"
+    }
+  }
+}

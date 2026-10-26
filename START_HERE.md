@@ -1,6 +1,10 @@
 # LexiRead v2 — bắt đầu ở đây
 
-**Học ngay:** mở `preview.html`. Có 12 bài biên soạn theo chủ đề/mức khó và khu TOEIC Reading gồm 2 lựa chọn, 24 câu luyện gốc, giải thích và 16 từ trọng tâm; giữ bộ 116 thẻ mẫu. Không cần API để dùng nội dung cố định.
+**Bản mới để kiểm tra (26/10/2026):** mở `http://127.0.0.1:8766/` hoặc `preview.html`. Đã có hình thỏ riêng, giao diện mới và 23 tài liệu IELTS/TOEIC chính thức để tìm/lọc/mở tại nguồn. [Báo cáo, tài khoản QA và ảnh desktop/mobile](docs/REVIEW_2026_10_26.md). Chưa push/deploy bản này.
+
+**Học ngay:** mở `preview.html`. Có 27 bài đọc (24 tổng quát A1–C1 + 3 luyện kỹ năng IELTS), 2 bộ TOEIC/24 câu/16 mục từ; giữ bộ 116 thẻ mẫu. Không cần API cho nội dung cố định.
+
+**Thêm bài không sửa code:** `/admin/` → Curated lessons / Toeic practices → Nhập file → Xem trước → Lưu nháp → Duyệt và xuất bản. [Hướng dẫn, gồm bộ 60 bài mới](docs/LESSON_AUTHORING.md). Bộ mới chưa tự xuất bản; 42 bài đọc thiếu bản dịch từng đoạn.
 
 **Website đầy đủ:** `README_VI.md` hướng dẫn cài Windows/Docker và Python. Backend là Django + PostgreSQL, không dùng SQLite. Khách chưa đăng nhập xem được danh mục bài và tính năng, nhưng phải đăng nhập bằng email mới học hoặc lưu tiến độ. Thư viện dùng chung được nạp bằng `seed_lessons`; `seed_demo --email ...` chỉ là tùy chọn nạp bộ từ cá nhân cũ.
 

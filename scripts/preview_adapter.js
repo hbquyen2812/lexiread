@@ -4,6 +4,8 @@
   const norm=s=>String(s??'').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
   const id=()=>crypto.randomUUID ? crypto.randomUUID() : '10000000-1000-4000-8000-100000000000'.replace(/[018]/g,c=>(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c/4).toString(16));
   const now=()=>new Date().toISOString();
+  const localDay=value=>new Date(value).toLocaleDateString('en-CA',{timeZone:'Asia/Ho_Chi_Minh'});
+  const shiftDay=(value,offset)=>new Date(Date.parse(value+'T12:00:00Z')+offset*86400000).toISOString().slice(0,10);
   const clone=x=>JSON.parse(JSON.stringify(x));
   const paras=t=>t.trim().split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
   let db;
@@ -13,18 +15,29 @@
     db={readings:[r],words:PREVIEW_SEED.words.map(w=>({...w,id:id(),reading_id:w.source_label==='Set in Metal'&&w.context?rid:null,due_at:now(),interval_days:0,ease:2.5,repetitions:0,lapses:0,last_reviewed:null,created_at:now()})),reviews:[],attempts:{}};
   }
   db.qa ||= []; db.lesson_attempts ||= {};db.toeic_attempts ||= [];db.readings.forEach(r=>{r.created_at ||= r.updated_at||now();});
+  db.study_days ||= [];
+  function recordStudy(){const today=localDay(now());if(!db.study_days.includes(today))db.study_days.push(today);}
+  function allStudyDays(){const today=localDay(now());return [...new Set([...db.study_days,...db.reviews.map(r=>localDay(r.created_at)),...db.toeic_attempts.map(r=>localDay(r.created_at)),...Object.values(db.lesson_attempts).map(r=>localDay(r.created_at))])].filter(d=>/^\d{4}-\d{2}-\d{2}$/.test(d)&&d<=today).sort();}
+  function studySummary(){
+    const days=allStudyDays(),today=localDay(now()),active=new Set(days);let current=0,longest=0,run=0,previous=null,cursor=active.has(today)?today:shiftDay(today,-1);
+    while(active.has(cursor)){current++;cursor=shiftDay(cursor,-1);}
+    for(const day of days){run=previous&&shiftDay(previous,1)===day?run+1:1;longest=Math.max(longest,run);previous=day;}
+    const target=[3,7,14,30,60,100,180,365].find(n=>n>current)||(Math.floor(current/100)+1)*100;
+    return {current,longest,active_today:active.has(today),active_days_30:days.filter(day=>day>=shiftDay(today,-29)).length,next_milestone:target,milestone_percent:Math.min(100,Math.round(current/target*100)),timezone:'Asia/Ho_Chi_Minh',week:Array.from({length:7},(_,i)=>{const date=shiftDay(today,i-6);return {date,active:active.has(date),today:date===today};})};
+  }
   db.words.forEach(w=>{w.occurrences ||= (w.reading_id||w.source_label||w.context?[{reading_id:w.reading_id||null,source_label:w.source_label||'',context:w.context||''}]:[]);});
   function save(){try{localStorage.setItem(KEY,JSON.stringify(db));}catch(e){throw new Error('Không lưu được vào trình duyệt. Hãy xuất backup trước khi đóng trang; dùng bản PostgreSQL cho kho lớn.');}}
   save();
-  function publicLesson(snapshot){if(!snapshot)return null;const c=clone(snapshot);delete c.text;delete c.analysis;c.questions=(c.questions||[]).map(q=>({id:q.id,kind:q.kind,prompt:q.prompt,options:q.options}));return c;}
+  function publicLesson(snapshot){if(!snapshot)return null;const c=clone(snapshot);delete c.text;delete c.analysis;delete c.editorial;c.questions=(c.questions||[]).map(q=>({id:q.id,kind:q.kind,prompt:q.prompt,options:q.options,...(q.max_words?{max_words:q.max_words}:{})}));return c;}
   function R(r){const {lesson_snapshot,...base}=r,progress=r.progress||{};return {...base,created_at:r.created_at||r.updated_at,catalog_slug:r.catalog_slug||'',progress,favorite:progress.favorite===true,status:progress.completed?'completed':'in_progress',lesson:publicLesson(lesson_snapshot),paragraphs:paras(r.text),word_count:r.text.trim().split(/\s+/).length,has_analysis:!!r.analysis?.translations?.length};}
   function grade(snapshot,answers){
     const questions=snapshot?.questions||[];
-    if(!questions.length||!answers||Array.isArray(answers)||Object.keys(answers).length!==questions.length||questions.some(q=>!Number.isInteger(answers[q.id])||answers[q.id]<0||answers[q.id]>=q.options.length))throw new Error('Hãy trả lời đầy đủ các câu hỏi trước khi nộp.');
-    const results=questions.map(q=>({question_id:q.id,correct:answers[q.id]===q.answer,submitted:answers[q.id],answer:q.answer,explanation_vi:q.explanation_vi,paragraph_index:q.paragraph_index,evidence:q.evidence}));
+    const isText=q=>['gap_fill','short_answer'].includes(q.kind);
+    if(!questions.length||!answers||Array.isArray(answers)||Object.keys(answers).length!==questions.length||questions.some(q=>isText(q)?typeof answers[q.id]!=='string'||!answers[q.id].trim()||answers[q.id].length>200:!Number.isInteger(answers[q.id])||answers[q.id]<0||answers[q.id]>=q.options.length))throw new Error('Hãy trả lời đầy đủ các câu hỏi trước khi nộp.');
+    const results=questions.map(q=>({question_id:q.id,correct:isText(q)?norm(answers[q.id]).split(/\s+/).length<=q.max_words&&q.accepted_answers.some(a=>norm(a)===norm(answers[q.id])):answers[q.id]===q.answer,submitted:answers[q.id],answer:q.answer,explanation_vi:q.explanation_vi,paragraph_index:q.paragraph_index,evidence:q.evidence}));
     return {score:results.filter(x=>x.correct).length,total:results.length,results};
   }
-  function publicToeic(practice){const result=clone(practice);result.questions=result.questions.map(q=>({id:q.id,part:q.part,prompt:q.prompt,options:q.options,document_ids:q.document_ids}));return result;}
+  function publicToeic(practice){const result=clone(practice);delete result.editorial;result.questions=result.questions.map(q=>({id:q.id,part:q.part,prompt:q.prompt,options:q.options,document_ids:q.document_ids}));return result;}
   function gradeToeic(practice,answers){
     if(!answers||Array.isArray(answers)||Object.keys(answers).length!==practice.questions.length||practice.questions.some(q=>!Number.isInteger(answers[q.id])||answers[q.id]<0||answers[q.id]>3))throw new Error('Hãy trả lời đầy đủ các câu hỏi trước khi nộp.');
     const results=practice.questions.map(q=>({question_id:q.id,correct:answers[q.id]===q.answer,submitted:answers[q.id],answer:q.answer,explanation_vi:q.explanation_vi,evidence:q.evidence})),score=results.filter(x=>x.correct).length,by_part={};
@@ -84,7 +97,7 @@
     else if(rating==='good'){n=r===0?1:r===1?3:Math.max(1,Math.min(365,n*e));r++;}
     else{n=r===0?4:Math.max(4,Math.min(365,n*e*1.3));e=Math.min(3,e+.1);r++;}
     Object.assign(w,{interval_days:n,ease:e,repetitions:r,last_reviewed:now(),due_at:new Date(Date.now()+n*86400000).toISOString()});
-    db.reviews.push({vocabulary_id:w.id,token,rating,mode,correct,next_due:w.due_at,created_at:now()});save();return {duplicate:false,due_at:w.due_at,interval_days:n};
+    db.reviews.push({vocabulary_id:w.id,token,rating,mode,correct,next_due:w.due_at,created_at:now()});recordStudy();save();return {duplicate:false,due_at:w.due_at,interval_days:n};
   }
   const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
   const regex=s=>String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -119,7 +132,7 @@
     await new Promise(r=>setTimeout(r,40));
     const u=new URL(path,'http://preview'),p=u.pathname,q=u.searchParams;
     if(p==='/bootstrap/'){
-      const day=d=>new Date(d).toLocaleDateString('en-CA');const today=day(new Date()),overdueBefore=Date.now()-86400000;
+      const day=localDay;const today=day(new Date()),overdueBefore=Date.now()-86400000;
       const quiz=db.reviews.filter(r=>r.correct!==null),dates=[];
       for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);dates.push({date:day(d),label:d.toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit'}),count:db.reviews.filter(r=>day(r.created_at)===day(d)).length});}
       const reviewedDays=new Set(db.reviews.map(r=>day(r.created_at)));let reviewStreak=0,cursor=new Date();
@@ -137,15 +150,16 @@
       if(method!=='POST')throw new Error('Cần POST để nộp bài.');if(!/^[0-9a-f-]{36}$/i.test(data.token||''))throw new Error('Mã lượt làm bài không hợp lệ.');
       const old=db.toeic_attempts.find(x=>x.token===data.token);if(old){if(old.set_slug!==practice.slug)throw new Error('Mã lượt làm bài đã dùng cho bộ khác.');return {...old.result,duplicate:true};}
       if(!Number.isInteger(data.duration_seconds)||data.duration_seconds<0||data.duration_seconds>7200)throw new Error('Thời gian làm bài không hợp lệ.');
-      const result=gradeToeic(practice,data.answers);db.toeic_attempts.push({set_slug:practice.slug,token:data.token,answers:clone(data.answers),result,created_at:now(),duration_seconds:data.duration_seconds});save();return {...result,duplicate:false};
+      const result=gradeToeic(practice,data.answers);db.toeic_attempts.push({set_slug:practice.slug,token:data.token,answers:clone(data.answers),result,created_at:now(),duration_seconds:data.duration_seconds});recordStudy();save();return {...result,duplicate:false};
     }
     if(p==='/catalog/'){
       const favorite=q.get('favorite')||'all';if(!['all','yes','no'].includes(favorite))throw new Error('Bộ lọc yêu thích không hợp lệ.');
-      const items=PREVIEW_SEED.lessons.filter(c=>(!q.get('q')||norm(c.title+' '+c.topic).includes(norm(q.get('q'))))&&(!q.get('level')||c.level===q.get('level'))&&(!q.get('topic')||c.topic===q.get('topic'))).map(c=>{
+      const items=PREVIEW_SEED.lessons.filter(c=>!q.get('track')||(c.track||'general')===q.get('track')).filter(c=>(!q.get('q')||norm(c.title+' '+c.topic).includes(norm(q.get('q'))))&&(!q.get('level')||c.level===q.get('level'))&&(!q.get('topic')||c.topic===q.get('topic'))).map(c=>{
         const r=db.readings.find(r=>r.catalog_slug===c.slug),progress=r?.progress||{},status=progress.completed?'completed':r?'started':'new';
-        return {slug:c.slug,title:c.title,level:c.level,topic:c.topic,summary:c.summary,revision:c.revision,order:c.order,word_count:c.text.split(/\s+/).length,question_count:c.questions.length,vocabulary_count:c.analysis.vocabulary.length,reading_id:r?.id||null,progress,status,favorite:progress.favorite===true};
+        return {slug:c.slug,title:c.title,level:c.level,track:c.track||'general',topic:c.topic,cover_key:c.cover_key||'reading',translation_status:c.translation_status||'complete',summary:c.summary,revision:c.revision,order:c.order,word_count:c.text.split(/\s+/).length,question_count:c.questions.length,vocabulary_count:c.analysis.vocabulary.length,reading_id:r?.id||null,progress,status,favorite:progress.favorite===true};
       }).filter(x=>(!q.get('status')||x.status===q.get('status'))&&(favorite==='all'||x.favorite===(favorite==='yes'))).sort((a,b)=>a.order-b.order);
-      return {items,topics:[...new Set(PREVIEW_SEED.lessons.map(x=>x.topic))].sort()};
+      const page=Math.max(1,Number(q.get('page')||1)),limit=Math.max(1,Math.min(300,Number(q.get('limit')||300)));
+      return {items:items.slice((page-1)*limit,page*limit),total:items.length,page,limit,has_more:page*limit<items.length,topics:[...new Set(PREVIEW_SEED.lessons.filter(c=>!q.get('track')||(c.track||'general')===q.get('track')).map(x=>x.topic))].sort()};
     }
     let extra=p.match(/^\/catalog\/([^/]+)\/open\/$/);
     if(extra){
@@ -163,12 +177,13 @@
         if('paragraph' in data){if(!Number.isInteger(data.paragraph)||data.paragraph<0||data.paragraph>=paras(r.text).length)throw new Error('Vị trí đọc không hợp lệ.');update.paragraph=data.paragraph;}
         if('completed' in data){if(typeof data.completed!=='boolean')throw new Error('Trạng thái hoàn thành không hợp lệ.');update.completed=data.completed;}
         if('favorite' in data){if(typeof data.favorite!=='boolean')throw new Error('Trạng thái yêu thích không hợp lệ.');update.favorite=data.favorite;}
+        if(update.completed===true&&r.progress?.completed!==true)recordStudy();
         r.progress={...(r.progress||{}),...update};r.updated_at=now();save();return {progress:r.progress};
       }
       if(action==='quiz'){
         if(!/^[0-9a-f-]{36}$/i.test(data.token||''))throw new Error('Mã lượt làm bài không hợp lệ.');
         const key=r.id+':'+data.token,old=db.lesson_attempts[key];if(old)return {...old.result,duplicate:true,progress:r.progress};
-        const result=grade(r.lesson_snapshot,data.answers);db.lesson_attempts[key]={reading_id:r.id,token:data.token,answers:clone(data.answers),result,created_at:now()};
+        const result=grade(r.lesson_snapshot,data.answers);db.lesson_attempts[key]={reading_id:r.id,token:data.token,answers:clone(data.answers),result,created_at:now()};recordStudy();
         r.progress={...(r.progress||{}),quiz_best:Math.max(r.progress?.quiz_best||0,result.score),quiz_total:result.total,quiz_attempts:(r.progress?.quiz_attempts||0)+1};save();return {...result,duplicate:false,progress:r.progress};
       }
       if(method==='GET')return {items:db.qa.filter(x=>x.reading_id===r.id&&x.source_text===r.text).slice(0,30).map(x=>{const {source_text,reading_id,...publicItem}=x;return publicItem;})};
@@ -253,6 +268,8 @@
       let payload=data.data;
       if(data instanceof FormData){const f=data.get('file');if(!f||f.size>8*1024*1024)throw new Error('Chọn file JSON không quá 8 MB.');if(!f.name.toLowerCase().endsWith('.json'))throw new Error('Bản HTML xem thử nhập JSON; dùng bản Django để nhập CSV.');payload=parseJSON(await f.text());}
       const isBackup=payload?.format==='lexiread-backup';
+      const studyDays=isBackup?(payload.study_days||[]):[];
+      if(!Array.isArray(studyDays)||studyDays.length>36600||studyDays.some(d=>typeof d!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(d)||!Number.isFinite(Date.parse(d))||new Date(d).toISOString().slice(0,10)!==d||d<'2000-01-01'||d>localDay(now())))throw new Error('Ngày học trong backup không hợp lệ.');
       if(isBackup&&![1,2,3,4].includes(payload.version))throw new Error('Phiên bản backup chưa được hỗ trợ.');
       const entries=Array.isArray(payload)?payload:payload?.vocabulary,readings=isBackup?(payload.readings||[]):[];
       if(!Array.isArray(entries)||!Array.isArray(readings))throw new Error('JSON cần danh sách vocabulary và readings hợp lệ.');
@@ -298,13 +315,13 @@
         if(old&&old.set_slug!==row.set_slug)throw new Error('Mã lượt TOEIC xung đột với bộ khác.');
         if(!old){db.toeic_attempts.push({...clone(row),result,created_at:row.created_at||now()});toeicCreated++;}
       }
-      save();return {created,skipped:entries.length-created,readings_created:rc,toeic_attempts_created:toeicCreated};
+      db.study_days=[...new Set([...db.study_days,...studyDays])];save();return {created,skipped:entries.length-created,readings_created:rc,toeic_attempts_created:toeicCreated};
     }
     throw new Error('Tính năng này chưa có trong bản HTML xem thử. Dùng bản Django đầy đủ.');
   }
   window.LEXIREAD_PREVIEW={api:async(...args)=>{
     const isWrite=(args[1]?.method||'GET')!=='GET',before=isWrite?clone(db):null;
-    try{return clone(await api(...args));}
+    try{const result=await api(...args);if(args[0]==='/bootstrap/'){result.stats.study=studySummary();result.stats.active_days_30=result.stats.study.active_days_30;}if(args[0]==='/backup/')result.study_days=allStudyDays();return clone(result);}
     catch(e){if(before){db=before;try{save();}catch(_){/* Original storage error is preserved. */}}throw e;}
   }};
 })();

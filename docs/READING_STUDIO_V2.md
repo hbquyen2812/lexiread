@@ -1,5 +1,7 @@
 # LexiRead Reading Studio — bản 2
 
+> Tài liệu lịch sử v2. Cập nhật 26/10/2026: 27 bài đi kèm, chọn 4 ngôn ngữ giao diện, thư viện quản lý qua PostgreSQL/admin, adapter bộ 60 bài nháp. Quy trình hiện hành: [nhập và biên tập](LESSON_AUTHORING.md), [kiểm thử mới](EDITORIAL_UPDATE_QA.md). Các số 12 bài và kết quả Chromium dưới đây thuộc bản v2 cũ.
+
 **Một website chuyên biệt cho đọc tiếng Anh và học từ theo ngữ cảnh.**
 
 Đọc để hiểu → chọn điều cần học → lưu vào kho của mình → ôn lại qua nhiều dạng bài.

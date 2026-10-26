@@ -74,6 +74,20 @@ STORAGES = {'default':{'BACKEND':'django.core.files.storage.FileSystemStorage'},
             'staticfiles':{'BACKEND':'whitenoise.storage.CompressedManifestStaticFilesStorage'}}
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/login/'
+PASSWORD_RESET_TIMEOUT = 3600
+AUTH_DAILY_LIMIT = int_env('AUTH_DAILY_LIMIT', 100, 1, 10000)
+RESEND_API_KEY = os.getenv('RESEND_API_KEY', '')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'LexiRead <noreply@example.com>')
+EMAIL_BACKEND = 'learning.accounts.mail.ResendEmailBackend'
+PUBLIC_SITE_URL = os.getenv('PUBLIC_SITE_URL', '').strip().rstrip('/')
+if PUBLIC_SITE_URL:
+    public_url = urlparse(PUBLIC_SITE_URL)
+    if (public_url.scheme not in ('http','https') or not public_url.hostname or public_url.username or
+            public_url.password or public_url.path or public_url.query or public_url.fragment or
+            (not DEBUG and public_url.scheme != 'https')):
+        raise ImproperlyConfigured('PUBLIC_SITE_URL must be the canonical HTTPS site origin, without a path.')
+# Never build recovery links from a caller-supplied Host in production.
+EMAIL_RECOVERY_ENABLED = bool(RESEND_API_KEY and os.getenv('DEFAULT_FROM_EMAIL', '').strip() and PUBLIC_SITE_URL)
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 SESSION_COOKIE_HTTPONLY = True

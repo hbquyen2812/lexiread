@@ -22,6 +22,7 @@ from learning.views import login_key
               'staticfiles':{'BACKEND':'django.contrib.staticfiles.storage.StaticFilesStorage'}})
 class ReadingPlatformTests(TestCase):
     def setUp(self):
+        call_command('seed_toeic',stdout=StringIO())
         U=get_user_model();self.alice=U.objects.create_user(username='reading-alice',email='alice@example.com',password='S3cure-test-pass!');self.bob=U.objects.create_user(username='reading-bob',email='bob@example.com')
         self.client.force_login(self.alice)
         self.lesson=validate_lesson(json.loads((settings.BASE_DIR/'data/lessons/a-quiet-start.json').read_text(encoding='utf-8')))
@@ -47,15 +48,16 @@ class ReadingPlatformTests(TestCase):
     def test_public_landing_lists_lessons_but_actions_stay_private(self):
         self.client.logout();response=self.client.get('/')
         self.assertEqual(response.status_code,200);self.assertTemplateUsed(response,'landing.html')
-        self.assertContains(response,self.lesson['title']);self.assertContains(response,'Đăng nhập để học')
+        self.assertContains(response,self.lesson['title']);self.assertContains(response,'/login/?next=/%23lesson/a-quiet-start')
         self.assertNotContains(response,self.private.text)
         self.assertEqual(self.client.get('/api/catalog/').status_code,401)
         self.assertEqual(self.post('/api/catalog/a-quiet-start/open/',{}).status_code,401)
 
-    def test_login_uses_email_not_username(self):
+    def test_login_accepts_username_and_legacy_email(self):
         self.client.logout()
-        failed=self.client.post('/login/',{'username':'reading-alice','password':'S3cure-test-pass!'})
-        self.assertEqual(failed.status_code,200);self.assertFalse(failed.wsgi_request.user.is_authenticated)
+        success=self.client.post('/login/',{'username':'READING-ALICE','password':'S3cure-test-pass!'})
+        self.assertEqual(success.status_code,302)
+        self.client.logout()
         success=self.client.post('/login/',{'username':'ALICE@EXAMPLE.COM','password':'S3cure-test-pass!','next':'/#catalog'})
         self.assertRedirects(success,'/#catalog',fetch_redirect_response=False)
         duplicate=EmailUserCreationForm(data={'username':'another','email':'Alice@example.com',
@@ -144,11 +146,11 @@ class ReadingPlatformTests(TestCase):
         self.standard.title='Edited standard';self.standard.save()
         call_command('seed_lessons',stdout=StringIO());call_command('seed_lessons',stdout=StringIO())
         self.standard.refresh_from_db();self.assertEqual(self.standard.title,'Edited standard')
-        self.assertEqual(CuratedLesson.objects.count(),12);self.assertEqual(Vocabulary.objects.count(),0)
+        self.assertEqual(CuratedLesson.objects.count(),27);self.assertEqual(Vocabulary.objects.count(),0)
     def test_seed_update_changes_standard_not_user_snapshot(self):
         rid=self.open()['id'];call_command('seed_lessons',update=True,stdout=StringIO())
         self.assertEqual(Reading.objects.get(pk=rid).lesson_snapshot['revision'],1)
-        self.assertEqual(CuratedLesson.objects.count(),12)
+        self.assertEqual(CuratedLesson.objects.count(),27)
     def test_unpublished_cannot_open(self):
         self.standard.published=False;self.standard.save()
         self.assertEqual(self.client.get('/api/catalog/').json()['items'],[])
@@ -174,7 +176,10 @@ class ReadingPlatformTests(TestCase):
         row=DailyVisit.objects.get(owner=self.alice)
         self.assertEqual(len(row.visitor_key),64);self.assertNotIn('127.0.0.1',row.visitor_key)
         self.assertEqual(row.views,2);self.assertEqual(row.page_counts,{'home':1,'toeic':1})
-        boot=self.client.get('/api/bootstrap/').json();self.assertEqual(boot['stats']['active_days_30'],1)
+        boot=self.client.get('/api/bootstrap/').json()
+        self.assertEqual(boot['stats']['active_days_30'],0)
+        self.assertEqual(boot['stats']['page_views_today'],2)
+        self.assertFalse(boot['stats']['study']['active_today'])
         self.assertEqual(self.client.get('/api/analytics/').status_code,403)
         self.alice.is_staff=True;self.alice.save(update_fields=['is_staff'])
         data=self.client.get('/api/analytics/?days=7').json()

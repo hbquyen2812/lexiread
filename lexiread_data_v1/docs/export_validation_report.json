@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "csv_cells_compared": 26154,
+  "tables_checked": 9,
+  "checks": [
+    "normalized foreign keys",
+    "same-lesson references",
+    "evidence offsets",
+    "CSV JSON round-trip",
+    "SHA-256 manifest"
+  ],
+  "postgresql_execution": "not_run_no_postgresql_server_available",
+  "sql_note": "Schema and seed generated for PostgreSQL; database execution has not been claimed."
+}

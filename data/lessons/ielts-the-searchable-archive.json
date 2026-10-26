@@ -1,0 +1,223 @@
+{
+  "slug": "ielts-the-searchable-archive",
+  "title": "The Searchable Archive",
+  "level": "C1",
+  "topic": "IELTS · Công nghệ & lịch sử",
+  "summary": "Luyện đọc lập luận về số hóa, sai lệch chọn mẫu và điều dữ liệu không thể hiện.",
+  "track": "ielts",
+  "revision": 1,
+  "order": 114,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "Consider an imaginary municipal archive that decides to digitise its collection of local newspapers. For decades, researchers have consulted fragile bound volumes in a reading room with limited opening hours. Digitisation promises to make these records available to people who cannot travel to the archive. A searchable collection might also reveal references that a researcher browsing page by page would miss. The project is therefore presented as an expansion of access. Yet the transformation from paper to searchable text introduces choices that can shape what users find, even when no one intends to alter the historical record.\n\nThe first choice concerns selection. With funding available for only part of the collection, the team prioritises volumes that can be scanned without extensive conservation work. This is reasonable from a practical perspective, but it means that damaged issues are less likely to appear online. A user who sees only the digital catalogue may mistake this absence for evidence that a newspaper was never published on certain dates. To address the problem, archivists retain catalogue entries for undigitised material and explain why some items cannot yet be viewed. They distinguish an absent digital image from an absent historical document.\n\nThe second choice concerns transcription. Software converts the scanned pages into text, but decorative headings, stained paper and unusual typefaces can produce errors. These errors are not distributed evenly. A common word printed clearly may be recognised reliably, while a family name in a damaged advertisement may be distorted beyond recognition. A failed search therefore does not necessarily establish that a name is absent from the newspaper. The archive provides page images alongside the searchable text and invites users to report mistakes, while warning that corrected text will remain incomplete for some time.\n\nFinally, the project changes the habits of research. Searching for a known term is efficient, but browsing an entire page can expose neighbouring reports, advertisements or editorial arrangements that change its meaning. Neither method is inherently superior; they answer different questions. The archive designs its interface so that a search result leads to the full page rather than to an isolated sentence alone. It also documents the scope and limitations of the digitised collection. In this hypothetical case, responsible access involves more than placing documents online. It requires making the boundaries of the available evidence visible, so that convenience is not mistaken for completeness.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Hãy xét kho lưu trữ đô thị giả định quyết định số hóa báo địa phương. Hàng thập kỷ, nhà nghiên cứu xem các tập đóng gáy dễ hỏng trong phòng có giờ mở hạn chế. Số hóa hứa hẹn đưa tài liệu tới người không thể đến trực tiếp. Tìm kiếm có thể phát hiện chi tiết đọc từng trang dễ bỏ sót. Vì vậy dự án được giới thiệu là mở rộng tiếp cận. Tuy nhiên, chuyển giấy thành văn bản tìm kiếm được chứa những lựa chọn định hình kết quả người dùng thấy, ngay cả khi không ai định sửa lịch sử."
+      },
+      {
+        "index": 1,
+        "vi": "Lựa chọn đầu là tuyển tài liệu. Với kinh phí chỉ đủ một phần, nhóm ưu tiên tập có thể quét mà không cần bảo quản sửa chữa lớn. Điều này thực tế nhưng làm số báo hỏng ít xuất hiện trực tuyến hơn. Người chỉ xem danh mục số có thể nhầm rằng báo chưa từng phát hành ngày đó. Để giải quyết, nhân viên giữ mục danh mục cho tài liệu chưa số hóa và giải thích vì sao chưa xem được. Họ phân biệt thiếu ảnh số với thiếu tài liệu lịch sử."
+      },
+      {
+        "index": 2,
+        "vi": "Lựa chọn thứ hai liên quan chuyển thành chữ. Phần mềm chuyển trang quét thành văn bản nhưng tiêu đề trang trí, giấy ố và kiểu chữ lạ có thể gây lỗi. Lỗi không phân bố đều: từ phổ biến in rõ có thể nhận diện tốt, còn họ tên trong quảng cáo hỏng có thể méo tới mức không nhận ra. Tìm không ra không nhất thiết chứng minh tên không có trên báo. Kho cung cấp ảnh trang bên cạnh chữ tìm kiếm được, mời báo lỗi và lưu ý việc sửa còn chưa đầy đủ trong một thời gian."
+      },
+      {
+        "index": 3,
+        "vi": "Cuối cùng, dự án thay đổi thói quen nghiên cứu. Tìm thuật ngữ đã biết hiệu quả nhưng xem cả trang có thể thấy tin, quảng cáo hay cách biên tập cạnh đó làm đổi ý nghĩa. Không cách nào vốn vượt trội; chúng trả lời câu hỏi khác nhau. Giao diện dẫn từ kết quả tìm tới cả trang thay vì chỉ câu tách rời. Kho cũng ghi phạm vi và giới hạn bộ số hóa. Trong trường hợp giả định này, tiếp cận có trách nhiệm không chỉ là đưa tài liệu lên mạng, mà phải làm rõ giới hạn bằng chứng để sự tiện lợi không bị nhầm với tính đầy đủ."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "fragile",
+        "pos": "word / phrase",
+        "meaning_vi": "dễ hỏng",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Consider an imaginary municipal archive that decides to digitise its collection of local newspapers. For decades, researchers have consulted fragile bound volumes in a reading room with limited opening hours. Digitisation promises to make these records available to people who cannot travel to the archive. A searchable collection might also reveal references that a researcher browsing page by page would miss. The project is therefore presented as an expansion of access. Yet the transformation from paper to searchable text introduces choices that can shape what users find, even when no one intends to alter the historical record.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "IELTS · Công nghệ & lịch sử"
+        ]
+      },
+      {
+        "word": "conservation",
+        "pos": "word / phrase",
+        "meaning_vi": "bảo quản, phục chế",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The first choice concerns selection. With funding available for only part of the collection, the team prioritises volumes that can be scanned without extensive conservation work. This is reasonable from a practical perspective, but it means that damaged issues are less likely to appear online. A user who sees only the digital catalogue may mistake this absence for evidence that a newspaper was never published on certain dates. To address the problem, archivists retain catalogue entries for undigitised material and explain why some items cannot yet be viewed. They distinguish an absent digital image from an absent historical document.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "IELTS · Công nghệ & lịch sử"
+        ]
+      },
+      {
+        "word": "distinguish",
+        "pos": "word / phrase",
+        "meaning_vi": "phân biệt",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The first choice concerns selection. With funding available for only part of the collection, the team prioritises volumes that can be scanned without extensive conservation work. This is reasonable from a practical perspective, but it means that damaged issues are less likely to appear online. A user who sees only the digital catalogue may mistake this absence for evidence that a newspaper was never published on certain dates. To address the problem, archivists retain catalogue entries for undigitised material and explain why some items cannot yet be viewed. They distinguish an absent digital image from an absent historical document.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "IELTS · Công nghệ & lịch sử"
+        ]
+      },
+      {
+        "word": "transcription",
+        "pos": "word / phrase",
+        "meaning_vi": "chuyển hình ảnh chữ thành văn bản",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The second choice concerns transcription. Software converts the scanned pages into text, but decorative headings, stained paper and unusual typefaces can produce errors. These errors are not distributed evenly. A common word printed clearly may be recognised reliably, while a family name in a damaged advertisement may be distorted beyond recognition. A failed search therefore does not necessarily establish that a name is absent from the newspaper. The archive provides page images alongside the searchable text and invites users to report mistakes, while warning that corrected text will remain incomplete for some time.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "IELTS · Công nghệ & lịch sử"
+        ]
+      },
+      {
+        "word": "distributed",
+        "pos": "word / phrase",
+        "meaning_vi": "được phân bố",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The second choice concerns transcription. Software converts the scanned pages into text, but decorative headings, stained paper and unusual typefaces can produce errors. These errors are not distributed evenly. A common word printed clearly may be recognised reliably, while a family name in a damaged advertisement may be distorted beyond recognition. A failed search therefore does not necessarily establish that a name is absent from the newspaper. The archive provides page images alongside the searchable text and invites users to report mistakes, while warning that corrected text will remain incomplete for some time.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "IELTS · Công nghệ & lịch sử"
+        ]
+      },
+      {
+        "word": "completeness",
+        "pos": "word / phrase",
+        "meaning_vi": "tính đầy đủ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Finally, the project changes the habits of research. Searching for a known term is efficient, but browsing an entire page can expose neighbouring reports, advertisements or editorial arrangements that change its meaning. Neither method is inherently superior; they answer different questions. The archive designs its interface so that a search result leads to the full page rather than to an isolated sentence alone. It also documents the scope and limitations of the digitised collection. In this hypothetical case, responsible access involves more than placing documents online. It requires making the boundaries of the available evidence visible, so that convenience is not mistaken for completeness.",
+        "paragraph_index": 3,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "IELTS · Công nghệ & lịch sử"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Why are some volumes prioritised for scanning?",
+      "options": [
+        "They contain only advertisements",
+        "They were published most recently",
+        "They need less conservation work",
+        "They mention more famous families"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "volumes that can be scanned without extensive conservation work.",
+      "explanation_vi": "Tiêu chí được nêu là ít cần công việc bảo quản lớn, không phải độ nổi tiếng hay ngày mới nhất."
+    },
+    {
+      "id": "q2",
+      "kind": "inference",
+      "prompt": "What central caution does the passage offer?",
+      "options": [
+        "Every transcription error is deliberately introduced",
+        "Convenient digital access does not guarantee complete evidence",
+        "Digitisation necessarily destroys historical documents",
+        "Searching should replace browsing in all research"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "so that convenience is not mistaken for completeness.",
+      "explanation_vi": "Tác giả nhấn mạnh không nhầm tiện lợi với đầy đủ."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The online catalogue keeps entries for some items that have not been digitised.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "archivists retain catalogue entries for undigitised material",
+      "explanation_vi": "Danh mục vẫn có mục tài liệu chưa số hóa: TRUE."
+    },
+    {
+      "id": "q4",
+      "kind": "tfng",
+      "prompt": "Transcription errors affect every kind of text equally.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "These errors are not distributed evenly.",
+      "explanation_vi": "Lỗi không phân bố đồng đều: FALSE."
+    },
+    {
+      "id": "q5",
+      "kind": "tfng",
+      "prompt": "Users receive a payment for reporting transcription errors.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "invites users to report mistakes",
+      "explanation_vi": "Mời báo lỗi không đồng nghĩa có trả tiền. Bài không nêu thù lao: NOT GIVEN."
+    },
+    {
+      "id": "q6",
+      "kind": "tfng",
+      "prompt": "A search result allows users to view the complete newspaper page.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 3,
+      "evidence": "a search result leads to the full page rather than to an isolated sentence alone.",
+      "explanation_vi": "Giao diện dẫn tới cả trang báo: TRUE."
+    }
+  ],
+  "faqs": []
+}

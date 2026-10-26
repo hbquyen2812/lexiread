@@ -8,7 +8,7 @@ from datetime import datetime,timedelta,timezone
 MAX_READING_CHARS = 60000
 MAX_AI_CHARS = 16000
 ENTRY_TEXT_FIELDS = {'word':160,'pos':40,'meaning_vi':2000,'example':2000,'example_vi':2000,
-                     'context':4000,'note':4000,'source_label':200}
+                     'context':4000,'note':4000,'source_label':200,'usage_pattern':300}
 class InputError(ValueError): pass
 
 def normalise(value):

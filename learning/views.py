@@ -28,6 +28,8 @@ from .services.analysis import ANALYSIS_SCHEMA,ENTRY_SCHEMA,arr,obj,prompt_for_r
 from .services.exercises import build_question,MODES
 from .services import ai
 from .forms import EmailAuthenticationForm
+from .services.presentation import cover_metadata
+from .services.motivation import record_learning, study_summary
 
 def api(*methods):
     def decorate(fn):
@@ -81,20 +83,26 @@ class EmailLoginView(LoginView):
 @ensure_csrf_cookie
 def index(request):
     from .services.traffic import record_visit
+    from .services.public_resources import public_resources
     record_visit(request,'home')
-    if request.user.is_authenticated:return render(request,'app.html')
-    from .services.toeic import toeic_sets
+    resources=public_resources()
+    if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources})
+    from .services.toeic_repository import toeic_sets
     lessons=[]
     for lesson in CuratedLesson.objects.filter(published=True).order_by('order','title'):
         content=lesson.content or {}
         lessons.append({'slug':lesson.slug,'title':lesson.title,'level':lesson.level,'topic':lesson.topic,
+            'track':content.get('track','general'),'translation_status':content.get('translation_status','complete'),
+            **cover_metadata(lesson.topic,lesson.title),
             'summary':content.get('summary',''),'word_count':len(content.get('text','').split()),
             'question_count':len(content.get('questions',[])),
             'vocabulary_count':len(content.get('analysis',{}).get('vocabulary',[]))})
     practices=[{key:practice[key] for key in ('slug','title','mode_label','parts','level','duration_minutes','description','question_count')}
         for practice in toeic_sets()]
-    return render(request,'landing.html',{'lessons':lessons,'practices':practices,
-        'topic_count':len({lesson['topic'] for lesson in lessons})})
+    return render(request,'landing.html',{'lessons':lessons,'practices':practices,'official_resources':resources,
+        'topic_count':len({lesson['topic'] for lesson in lessons}),
+        'general_count':sum(x['track']=='general' for x in lessons),
+        'ielts_count':sum(x['track']=='ielts' for x in lessons)})
 
 def health(request):
     from django.db import connection
@@ -151,7 +159,8 @@ def bootstrap(request):
         days.append({'date':d.isoformat(),'label':d.strftime('%d/%m'),'count':logs.filter(created_at__date=d).count()})
     from .services.traffic import personal_activity
     activity=personal_activity(request.user);toeic=ToeicAttempt.objects.filter(owner=request.user)
-    return JsonResponse({'user':request.user.email or request.user.get_username(),'is_staff':request.user.is_staff,'ai_enabled':ai.enabled(),
+    study=study_summary(request.user)
+    return JsonResponse({'user':request.user.get_full_name().strip() or request.user.get_username(),'is_staff':request.user.is_staff,'ai_enabled':ai.enabled(),
         'model':settings.OPENAI_MODEL if ai.enabled() else '',
         'ai_calls_today':AICall.objects.filter(owner=request.user,created_at__date=today).count(),
         'ai_daily_limit':settings.AI_DAILY_LIMIT,'stats':{'total':vs.count(),'due':vs.filter(due_at__lte=now).count(),
@@ -161,11 +170,11 @@ def bootstrap(request):
         'weak':vs.filter(lapses__gte=3).count(),
         'overdue':vs.filter(due_at__lte=now-timedelta(days=1)).count(),
         'readings':Reading.objects.filter(owner=request.user,catalog_slug='').count(),'lessons':CuratedLesson.objects.filter(published=True).count(),'completed_readings':Reading.objects.filter(owner=request.user,progress__completed=True).count(),'reviews_today':reviews_today,
-        'review_streak':review_streak,'daily_goal':daily_goal,
+        'review_streak':review_streak,'study':study,'daily_goal':daily_goal,
         'daily_goal_progress':min(reviews_today,daily_goal),
         'daily_goal_percent':min(100,round(100*reviews_today/daily_goal)),
         'mistakes':vs.filter(lapses__gt=0).count(),'accuracy':round(100*good/n) if n else None,
-        'active_days_30':activity['active_days_30'],'page_views_today':activity['page_views_today'],
+        'active_days_30':study['active_days_30'],'page_views_today':activity['page_views_today'],
         'toeic_attempts':toeic.count(),'toeic_best':max((row.get('score',0) for row in toeic.values_list('result',flat=True)),default=None)},'tags':tags,'activity':days})
 
 @api('POST')
@@ -392,7 +401,7 @@ def backup(request):
 @api('GET')
 def export_csv(request):
     out=io.StringIO(newline='');writer=csv.writer(out)
-    fields=['word','pos','meaning_vi','synonyms','paraphrases','example','example_vi','context','note','tags']
+    fields=['word','pos','meaning_vi','synonyms','paraphrases','usage_pattern','example','example_vi','context','note','tags']
     writer.writerow(fields)
     for v in Vocabulary.objects.filter(owner=request.user):
         row=[]
@@ -423,11 +432,11 @@ def restore(request):
 
 @api('GET')
 def toeic_catalog(request):
-    from .services.toeic import toeic_sets
+    from .services.toeic_repository import toeic_sets
     attempts=ToeicAttempt.objects.filter(owner=request.user)
     items=[]
     for practice in toeic_sets():
-        rows=attempts.filter(set_slug=practice['slug'])
+        rows=attempts.filter(set_slug=practice['slug'],snapshot__revision=practice['revision'])
         best=max((row.result.get('score',0) for row in rows),default=None)
         latest=rows.first()
         items.append({k:practice[k] for k in ('slug','title','mode','mode_label','parts','level','duration_minutes','description','question_count')}|{
@@ -444,9 +453,9 @@ def toeic_catalog(request):
 
 @api('GET')
 def toeic_detail(request,slug):
-    from .services.toeic import public_toeic_set
+    from .services.toeic_repository import public_toeic_set
     practice=public_toeic_set(slug)
-    rows=ToeicAttempt.objects.filter(owner=request.user,set_slug=slug)
+    rows=ToeicAttempt.objects.filter(owner=request.user,set_slug=slug,snapshot__revision=practice['revision'])
     best=max((row.result.get('score',0) for row in rows),default=None)
     practice['progress']={'attempt_count':rows.count(),'best_score':best}
     return JsonResponse(practice)
@@ -455,35 +464,61 @@ def toeic_detail(request,slug):
 @api('POST')
 @transaction.atomic
 def toeic_submit(request,slug):
-    from .services.toeic import get_toeic_set,grade_toeic
-    practice=get_toeic_set(slug);data=body(request);token=uuid.UUID(data.get('token',''))
+    from .services.toeic_repository import get_toeic_set
+    from .services.toeic import grade_toeic
+    data=body(request);token=uuid.UUID(data.get('token',''))
+    get_user_model().objects.select_for_update().get(pk=request.user.pk)
     previous=ToeicAttempt.objects.filter(owner=request.user,token=token).first()
     if previous:
         if previous.set_slug!=slug:raise InputError('Mã lượt làm bài đã được dùng cho bộ khác.')
         return JsonResponse({**previous.result,'duplicate':True})
+    practice=get_toeic_set(slug)
+    if data.get('revision',1)!=practice['revision']:
+        raise InputError('Bộ luyện đã được cập nhật. Tải lại trang và bắt đầu lượt mới để không chấm nhầm phiên bản.')
     duration=data.get('duration_seconds',0)
     if not isinstance(duration,int) or isinstance(duration,bool) or not 0<=duration<=7200:
         raise InputError('Thời gian làm bài không hợp lệ.')
     result=grade_toeic(practice,data.get('answers'))
     ToeicAttempt.objects.create(owner=request.user,set_slug=slug,token=token,answers=data['answers'],
-        result=result,duration_seconds=duration)
+        result=result,duration_seconds=duration,snapshot=practice)
+    record_learning(request.user)
     return JsonResponse({**result,'duplicate':False})
 
 
 @api('GET')
 def catalog(request):
     qs=CuratedLesson.objects.filter(published=True)
+    track=request.GET.get('track','')
+    if track not in {'','general','ielts'}:raise InputError('Loại bài đọc không hợp lệ.')
+    if track:qs=qs.filter(track=track)
     q=clean_text(request.GET.get('q',''),200)
     if q:qs=qs.filter(Q(title__icontains=q)|Q(topic__icontains=q))
-    if request.GET.get('level'):qs=qs.filter(level=request.GET['level'][:2])
+    if request.GET.get('level'):qs=qs.filter(level=request.GET['level'][:6])
     if request.GET.get('topic'):qs=qs.filter(topic=request.GET['topic'][:120])
     favorite=request.GET.get('favorite','all')
     if favorite not in {'all','yes','no'}:raise InputError('Bộ lọc yêu thích không hợp lệ.')
-    progress={r.catalog_slug:r for r in Reading.objects.filter(owner=request.user).exclude(catalog_slug='')}
+    personal=Reading.objects.filter(owner=request.user).exclude(catalog_slug='')
+    status_filter=request.GET.get('status','')
+    if status_filter not in {'','new','started','completed'}:raise InputError('Bộ lọc trạng thái không hợp lệ.')
+    completed=personal.filter(progress__completed=True).values('catalog_slug')
+    favorites=personal.filter(progress__favorite=True).values('catalog_slug')
+    if status_filter=='new':qs=qs.exclude(slug__in=personal.values('catalog_slug'))
+    elif status_filter=='completed':qs=qs.filter(slug__in=completed)
+    elif status_filter=='started':qs=qs.filter(slug__in=personal.values('catalog_slug')).exclude(slug__in=completed)
+    if favorite=='yes':qs=qs.filter(slug__in=favorites)
+    elif favorite=='no':qs=qs.exclude(slug__in=favorites)
+    page=max(1,int(request.GET.get('page',1)))
+    limit=max(1,min(300,int(request.GET.get('limit',300))))
+    total=qs.count()
+    selected=list(qs[(page-1)*limit:page*limit])
+    progress={r.catalog_slug:r for r in personal.filter(catalog_slug__in=[lesson.slug for lesson in selected])}
     items=[]
-    for lesson in qs[:300]:
+    for lesson in selected:
         r=progress.get(lesson.slug); c=lesson.content
+        lesson_track=c.get('track','general')
         item={'slug':lesson.slug,'title':lesson.title,'level':lesson.level,'topic':lesson.topic,
+            'track':lesson_track,'translation_status':c.get('translation_status','complete'),
+            **cover_metadata(lesson.topic,lesson.title),
             'summary':c.get('summary',''),'revision':lesson.revision,'order':lesson.order,
             'word_count':len(c.get('text','').split()),'question_count':len(c.get('questions',[])),
             'vocabulary_count':len(c.get('analysis',{}).get('vocabulary',[])),
@@ -491,10 +526,9 @@ def catalog(request):
             'favorite':bool(r and r.progress.get('favorite') is True)}
         status='completed' if item['progress'].get('completed') else 'started' if r else 'new'
         item['status']=status
-        if request.GET.get('status') and request.GET['status']!=status:continue
-        if favorite!='all' and item['favorite']!=(favorite=='yes'):continue
         items.append(item)
-    return JsonResponse({'items':items,'topics':sorted(set(CuratedLesson.objects.filter(published=True).values_list('topic',flat=True)))})
+    return JsonResponse({'items':items,'total':total,'page':page,'limit':limit,'has_more':page*limit<total,
+                         'topics':sorted(set(CuratedLesson.objects.filter(published=True,**({'track':track} if track else {})).values_list('topic',flat=True)))})
 
 @api('POST')
 def open_lesson(request,slug):
@@ -512,6 +546,8 @@ def reading_progress(request,pk):
     from .services.catalog import clean_reading_progress
     r=Reading.objects.select_for_update().get(owner=request.user,pk=pk)
     values=clean_reading_progress(body(request),r.text)
+    if values.get('completed') is True and r.progress.get('completed') is not True:
+        record_learning(request.user)
     r.progress={**r.progress,**values};r.save(update_fields=['progress','updated_at'])
     return JsonResponse({'progress':r.progress})
 
@@ -525,6 +561,7 @@ def reading_quiz(request,pk):
     if previous:return JsonResponse({**previous.result,'duplicate':True,'progress':r.progress})
     result=grade_lesson(r.lesson_snapshot,d.get('answers'))
     LessonAttempt.objects.create(reading=r,token=token,answers=d['answers'],result=result)
+    record_learning(request.user)
     best=max(int(r.progress.get('quiz_best',0)),result['score'])
     r.progress={**r.progress,'quiz_best':best,'quiz_total':result['total'],
                 'quiz_attempts':int(r.progress.get('quiz_attempts',0))+1}

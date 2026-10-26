@@ -1,0 +1,223 @@
+{
+  "slug": "ielts-a-cooler-street",
+  "title": "A Cooler Street",
+  "level": "B2",
+  "topic": "IELTS · Đô thị",
+  "summary": "Đọc một thử nghiệm giả định, xác định mục tiêu đo lường và tránh suy luận vượt quá bằng chứng.",
+  "track": "ielts",
+  "revision": 1,
+  "order": 113,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "Imagine a coastal town deciding how to make a busy pedestrian street more comfortable during summer. Shopkeepers complain that customers avoid the street in the early afternoon, while residents ask for more places to sit. The council receives two proposals: plant additional trees or replace dark paving with a lighter surface. Both proposals sound plausible, but the council does not have enough money to apply both along the entire street. It therefore chooses a small trial before committing to a larger investment. The trial is designed to compare practical benefits, not to establish a universal rule for every city.\n\nThree short sections are selected. One receives temporary shade structures intended to approximate some effects of tree cover. Another receives a light-coloured surface coating, and a third remains unchanged for comparison. The sections are not identical: the buildings differ in height and one section is closer to the sea. To make the comparison more informative, staff record conditions in all three locations before and after the changes. They also note the weather and the time of each observation. Without this information, a cooler reading might simply reflect a cloud passing overhead rather than the intervention itself.\n\nThe monitoring team initially plans to measure only surface temperature. A local access group points out that people experience more than the temperature of the ground. They may be exposed to sunlight, reflected light and hot air, and they may need to wait rather than keep walking. The team therefore adds shaded and unshaded seating observations and brief interviews with people using the street. These interviews are not treated as precise thermometers. Instead, they provide information about comfort and use that a surface measurement cannot supply on its own.\n\nAt the end of the trial, the council resists selecting a winner from a single average figure. A design that performs well at midday may offer fewer benefits in the evening, and temporary shade says little about the watering and maintenance that real trees would require. The final report recommends a combination of measures in different locations, together with a budget for upkeep. It also lists unresolved questions, including how the surfaces will perform after several years of wear. In this hypothetical example, the purpose of a trial is to reduce uncertainty enough to support a decision, not to make uncertainty disappear.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Hãy hình dung thị trấn ven biển tìm cách làm phố đi bộ đông đúc dễ chịu hơn mùa hè. Chủ cửa hàng phàn nàn khách tránh phố vào đầu chiều, cư dân muốn thêm chỗ ngồi. Hội đồng nhận hai đề xuất: trồng thêm cây hoặc thay nền tối bằng bề mặt sáng. Cả hai có vẻ hợp lý nhưng không đủ tiền thực hiện toàn tuyến. Vì vậy họ thử nhỏ trước khi đầu tư lớn. Mục đích là so lợi ích thực tế, không xác lập quy tắc chung cho mọi thành phố."
+      },
+      {
+        "index": 1,
+        "vi": "Ba đoạn ngắn được chọn. Một đoạn có cấu trúc che tạm để mô phỏng một phần tác dụng tán cây. Đoạn khác phủ lớp màu sáng; đoạn ba giữ nguyên để so sánh. Các đoạn không giống hệt: chiều cao tòa nhà khác và một đoạn gần biển hơn. Để so sánh có ý nghĩa hơn, nhân viên ghi điều kiện cả ba nơi trước và sau thay đổi, cả thời tiết và giờ quan sát. Thiếu thông tin ấy, nhiệt độ thấp hơn có thể chỉ do mây đi qua chứ không phải can thiệp."
+      },
+      {
+        "index": 2,
+        "vi": "Nhóm giám sát ban đầu định chỉ đo nhiệt độ bề mặt. Nhóm tiếp cận địa phương chỉ ra con người trải nghiệm nhiều hơn nhiệt độ nền: họ chịu nắng, ánh sáng phản xạ, khí nóng và có thể phải chờ thay vì đi liên tục. Vì vậy nhóm thêm quan sát chỗ ngồi có và không có bóng râm, cùng phỏng vấn ngắn người dùng phố. Phỏng vấn không được xem là nhiệt kế chính xác mà bổ sung thông tin về sự dễ chịu và cách sử dụng mà đo bề mặt không tự cung cấp được."
+      },
+      {
+        "index": 3,
+        "vi": "Cuối thử nghiệm, hội đồng không chọn phương án thắng chỉ từ một số trung bình. Thiết kế tốt buổi trưa có thể ít lợi ích hơn tối; mái che tạm không cho biết nhiều về tưới và chăm cây thật. Báo cáo cuối đề nghị kết hợp biện pháp ở các vị trí khác nhau, kèm ngân sách bảo trì. Báo cáo liệt kê câu hỏi chưa giải quyết, như bề mặt hoạt động ra sao sau nhiều năm mòn. Trong ví dụ giả định này, thử nghiệm nhằm giảm bất định đủ để ra quyết định, không xóa hoàn toàn bất định."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "plausible",
+        "pos": "word / phrase",
+        "meaning_vi": "có vẻ hợp lý",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Imagine a coastal town deciding how to make a busy pedestrian street more comfortable during summer. Shopkeepers complain that customers avoid the street in the early afternoon, while residents ask for more places to sit. The council receives two proposals: plant additional trees or replace dark paving with a lighter surface. Both proposals sound plausible, but the council does not have enough money to apply both along the entire street. It therefore chooses a small trial before committing to a larger investment. The trial is designed to compare practical benefits, not to establish a universal rule for every city.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "IELTS · Đô thị"
+        ]
+      },
+      {
+        "word": "committing",
+        "pos": "word / phrase",
+        "meaning_vi": "cam kết dành nguồn lực",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Imagine a coastal town deciding how to make a busy pedestrian street more comfortable during summer. Shopkeepers complain that customers avoid the street in the early afternoon, while residents ask for more places to sit. The council receives two proposals: plant additional trees or replace dark paving with a lighter surface. Both proposals sound plausible, but the council does not have enough money to apply both along the entire street. It therefore chooses a small trial before committing to a larger investment. The trial is designed to compare practical benefits, not to establish a universal rule for every city.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "IELTS · Đô thị"
+        ]
+      },
+      {
+        "word": "approximate",
+        "pos": "word / phrase",
+        "meaning_vi": "mô phỏng hoặc xấp xỉ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Three short sections are selected. One receives temporary shade structures intended to approximate some effects of tree cover. Another receives a light-coloured surface coating, and a third remains unchanged for comparison. The sections are not identical: the buildings differ in height and one section is closer to the sea. To make the comparison more informative, staff record conditions in all three locations before and after the changes. They also note the weather and the time of each observation. Without this information, a cooler reading might simply reflect a cloud passing overhead rather than the intervention itself.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "IELTS · Đô thị"
+        ]
+      },
+      {
+        "word": "intervention",
+        "pos": "word / phrase",
+        "meaning_vi": "biện pháp can thiệp",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Three short sections are selected. One receives temporary shade structures intended to approximate some effects of tree cover. Another receives a light-coloured surface coating, and a third remains unchanged for comparison. The sections are not identical: the buildings differ in height and one section is closer to the sea. To make the comparison more informative, staff record conditions in all three locations before and after the changes. They also note the weather and the time of each observation. Without this information, a cooler reading might simply reflect a cloud passing overhead rather than the intervention itself.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "IELTS · Đô thị"
+        ]
+      },
+      {
+        "word": "reflected",
+        "pos": "word / phrase",
+        "meaning_vi": "được phản xạ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The monitoring team initially plans to measure only surface temperature. A local access group points out that people experience more than the temperature of the ground. They may be exposed to sunlight, reflected light and hot air, and they may need to wait rather than keep walking. The team therefore adds shaded and unshaded seating observations and brief interviews with people using the street. These interviews are not treated as precise thermometers. Instead, they provide information about comfort and use that a surface measurement cannot supply on its own.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "IELTS · Đô thị"
+        ]
+      },
+      {
+        "word": "upkeep",
+        "pos": "word / phrase",
+        "meaning_vi": "việc bảo trì",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "At the end of the trial, the council resists selecting a winner from a single average figure. A design that performs well at midday may offer fewer benefits in the evening, and temporary shade says little about the watering and maintenance that real trees would require. The final report recommends a combination of measures in different locations, together with a budget for upkeep. It also lists unresolved questions, including how the surfaces will perform after several years of wear. In this hypothetical example, the purpose of a trial is to reduce uncertainty enough to support a decision, not to make uncertainty disappear.",
+        "paragraph_index": 3,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "IELTS · Đô thị"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "main_idea",
+      "prompt": "What is the main purpose of the trial?",
+      "options": [
+        "To prove a rule that applies to every city",
+        "To remove all uncertainty about summer weather",
+        "To stop customers entering the street",
+        "To inform a local spending decision"
+      ],
+      "answer": 3,
+      "paragraph_index": 0,
+      "evidence": "It therefore chooses a small trial before committing to a larger investment.",
+      "explanation_vi": "Thử nghiệm hỗ trợ quyết định đầu tư địa phương, không chứng minh quy tắc phổ quát."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why does the team add interviews?",
+      "options": [
+        "To calculate the exact height of each building",
+        "To select the most popular shop",
+        "To learn about comfort and how people use the street",
+        "To replace every temperature measurement"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "information about comfort and use that a surface measurement cannot supply on its own.",
+      "explanation_vi": "Phỏng vấn bổ sung trải nghiệm sử dụng mà số đo bề mặt không đủ phản ánh."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "All three trial sections have identical surrounding conditions.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "The sections are not identical",
+      "explanation_vi": "Các đoạn không có điều kiện giống hệt: FALSE."
+    },
+    {
+      "id": "q4",
+      "kind": "tfng",
+      "prompt": "Staff record the weather when taking observations.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "They also note the weather and the time of each observation.",
+      "explanation_vi": "Thời tiết và thời điểm đều được ghi: TRUE."
+    },
+    {
+      "id": "q5",
+      "kind": "tfng",
+      "prompt": "The council publishes the report in three languages.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 3,
+      "evidence": "The final report recommends a combination of measures in different locations",
+      "explanation_vi": "Bài nói nội dung báo cáo nhưng không nói ngôn ngữ xuất bản: NOT GIVEN."
+    },
+    {
+      "id": "q6",
+      "kind": "tfng",
+      "prompt": "The trial determines how the surfaces will perform after several years.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "unresolved questions, including how the surfaces will perform after several years of wear.",
+      "explanation_vi": "Độ bền sau nhiều năm vẫn là câu hỏi chưa giải quyết: FALSE."
+    }
+  ],
+  "faqs": []
+}

@@ -37,13 +37,10 @@ class VocabularyOccurrenceAdmin(admin.ModelAdmin):
     def has_add_permission(self,request):return False
 
 from .models import CuratedLesson, LessonAttempt, ReadingQuestion, ToeicAttempt, DailyVisit
-@admin.register(CuratedLesson)
-class CuratedLessonAdmin(admin.ModelAdmin):
-    list_display=('title','level','topic','revision','published','order')
-    list_filter=('published','level','topic')
-    search_fields=('title','slug','topic')
-    fields=('slug','title','level','topic','revision','order','published','content')
-    # Django ModelForm invokes clean(), validating every quotation before save.
+from .models import ToeicPractice
+from .editorial.admin import LessonContentAdmin, ToeicContentAdmin
+admin.site.register(CuratedLesson,LessonContentAdmin)
+admin.site.register(ToeicPractice,ToeicContentAdmin)
 
 @admin.register(LessonAttempt)
 class LessonAttemptAdmin(admin.ModelAdmin):
@@ -54,7 +51,7 @@ class LessonAttemptAdmin(admin.ModelAdmin):
 @admin.register(ToeicAttempt)
 class ToeicAttemptAdmin(admin.ModelAdmin):
     list_display=('owner','set_slug','duration_seconds','created_at')
-    readonly_fields=('owner','set_slug','token','answers','result','duration_seconds','created_at')
+    readonly_fields=('owner','set_slug','token','answers','result','snapshot','duration_seconds','created_at')
     def has_add_permission(self,request):return False
 
 @admin.register(DailyVisit)

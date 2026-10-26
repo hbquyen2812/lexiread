@@ -1,4 +1,35 @@
-# Kiến trúc và điểm mở rộng — v2
+# Kiến trúc và điểm mở rộng — v2 + editorial workflow
+
+## Cập nhật 26/10/2026
+
+`CuratedLesson` và `ToeicPractice` trong PostgreSQL là nguồn thư viện runtime. `data/lessons/` và `data/toeic/` chỉ bootstrap/offline demo. Thêm bài qua admin không sửa code/deploy lại. Xem [quy trình nội dung](LESSON_AUTHORING.md).
+
+```text
+learning/
+  models.py, migrations/       dữ liệu và thay đổi schema
+  views.py                    API người học, giới hạn theo owner
+  editorial/
+    admin.py                  nhập → xem trước → xác nhận, xuất JSON
+    forms.py                  biên tập, kiểm tra phiên bản sửa
+    services.py               quyền, atomic import, audit
+    dataset.py                adapter lexiread_data_v1
+  services/
+    catalog.py, toeic.py       validation/scoring thuần
+    toeic_repository.py       TOEIC runtime từ database
+    importers.py              trích xuất văn bản
+    storage.py                backup/restore cá nhân
+templates/admin/editorial/    UI quản trị nội dung
+static/editorial.*           form tạo câu hỏi
+config/test_settings.py      test SQLite tách biệt, không đọc .env
+```
+
+Cấu trúc Django này phù hợp quy mô hiện tại. JSONB cho một bài có phiên bản không phải thiết kế sai; người dùng, bài học, từ và lượt học vẫn relational. Đã tách biên tập khỏi views và tách TOEIC repository khỏi validator. `views.py` / `static/app.js` còn nhiều trách nhiệm, nên tách theo tính năng khi tiếp tục mở rộng; chưa cần microservices hay database thứ hai.
+
+`lexiread_data_v1/` là bộ nguồn người dùng đưa vào, giữ nguyên, không phải schema runtime. Các CSV/SQL/JSONL lặp lại không đi vào Docker image; upload JSON gốc qua admin. Không xóa dữ liệu riêng hoặc backup để làm thư mục trông gọn.
+
+Import kiểm tra 8 MB/100 bài, staff+model permissions, CSRF, owner, hết hạn, khóa hàng và phiên bản kỳ vọng. Ghi batch trong transaction, audit bằng LogEntry. Draft chưa đủ dịch/câu hỏi bị chặn khi publish. `track` có index; API lọc trạng thái/yêu thích trước phân trang.
+
+TOEIC giữ snapshot khi nộp, kiểm tra revision để không chấm nhầm phiên bản. Backup v4 mới kèm snapshot; v4 cũ khôi phục bộ bundled gốc. SQLite smoke tests không chứng minh PostgreSQL lock/concurrency. Phần bên dưới mô tả nền tảng v2; quy trình hiện hành theo tài liệu trên.
 
 ## Lựa chọn thiết kế
 

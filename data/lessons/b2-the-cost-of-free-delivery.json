@@ -1,0 +1,175 @@
+{
+  "slug": "b2-the-cost-of-free-delivery",
+  "title": "The Cost of Free Delivery",
+  "level": "B2",
+  "topic": "Tiêu dùng & lựa chọn",
+  "summary": "Cân nhắc tổng chi phí khi một đơn hàng được miễn phí giao hàng.",
+  "track": "general",
+  "revision": 1,
+  "order": 109,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "Maya intended to order a replacement cable from an online shop. At checkout, a message told her that she was only a small amount away from qualifying for free delivery. She added a notebook she did not need immediately. The delivery charge disappeared, and for a moment the purchase felt like a saving. Only later did she notice that the total payment was higher than it would have been with the cable and paid delivery alone.\n\nShe began comparing orders in a different way. Instead of asking whether delivery was free, she asked how much she would spend to obtain the items she actually needed. Sometimes adding another item made sense: a household product she would otherwise buy next week could reduce a future trip. But an unfamiliar snack or decorative object was harder to justify. The label on the charge mattered less than the final cost and usefulness of the basket.\n\nMaya did not conclude that free-delivery offers were always bad. A promotion could be useful when it matched an existing plan. What troubled her was how easily the offer had changed the question she was trying to answer. She now keeps a short shopping list beside her screen. Before adding anything, she checks whether she wanted it before seeing the promotion. The pause does not guarantee a perfect decision, but it makes the decision more deliberate.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Maya định đặt một dây cáp thay thế từ cửa hàng trực tuyến. Khi thanh toán, thông báo nói cô chỉ thiếu một khoản nhỏ để được miễn phí giao hàng. Cô thêm cuốn sổ chưa cần ngay. Phí vận chuyển biến mất và thoáng chốc cô thấy như mình tiết kiệm được tiền. Sau đó cô mới nhận ra tổng tiền cao hơn phương án chỉ mua dây cáp và trả phí giao hàng."
+      },
+      {
+        "index": 1,
+        "vi": "Cô bắt đầu so sánh đơn hàng theo cách khác. Thay vì hỏi giao hàng có miễn phí không, cô hỏi mình phải chi bao nhiêu cho những món thực sự cần. Đôi khi thêm hàng là hợp lý: một đồ gia dụng tuần sau vẫn phải mua có thể giúp bớt một chuyến đi. Nhưng đồ ăn lạ hay đồ trang trí thì khó biện minh hơn. Tên khoản phí ít quan trọng hơn tổng tiền và tính hữu ích của giỏ hàng."
+      },
+      {
+        "index": 2,
+        "vi": "Maya không kết luận ưu đãi miễn phí giao hàng luôn xấu. Khuyến mãi có thể hữu ích khi phù hợp kế hoạch sẵn có. Điều khiến cô băn khoăn là ưu đãi dễ dàng thay đổi câu hỏi ban đầu của mình. Giờ cô để danh sách mua sắm ngắn cạnh màn hình. Trước khi thêm hàng, cô kiểm tra xem mình có muốn món đó trước khi thấy khuyến mãi không. Việc dừng lại không đảm bảo quyết định hoàn hảo nhưng giúp cô cân nhắc có chủ ý hơn."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "qualifying",
+        "pos": "word / phrase",
+        "meaning_vi": "đáp ứng điều kiện",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Maya intended to order a replacement cable from an online shop. At checkout, a message told her that she was only a small amount away from qualifying for free delivery. She added a notebook she did not need immediately. The delivery charge disappeared, and for a moment the purchase felt like a saving. Only later did she notice that the total payment was higher than it would have been with the cable and paid delivery alone.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Tiêu dùng & lựa chọn"
+        ]
+      },
+      {
+        "word": "purchase",
+        "pos": "word / phrase",
+        "meaning_vi": "việc mua hàng",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Maya intended to order a replacement cable from an online shop. At checkout, a message told her that she was only a small amount away from qualifying for free delivery. She added a notebook she did not need immediately. The delivery charge disappeared, and for a moment the purchase felt like a saving. Only later did she notice that the total payment was higher than it would have been with the cable and paid delivery alone.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Tiêu dùng & lựa chọn"
+        ]
+      },
+      {
+        "word": "justify",
+        "pos": "word / phrase",
+        "meaning_vi": "đưa ra lý do hợp lý cho",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "She began comparing orders in a different way. Instead of asking whether delivery was free, she asked how much she would spend to obtain the items she actually needed. Sometimes adding another item made sense: a household product she would otherwise buy next week could reduce a future trip. But an unfamiliar snack or decorative object was harder to justify. The label on the charge mattered less than the final cost and usefulness of the basket.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Tiêu dùng & lựa chọn"
+        ]
+      },
+      {
+        "word": "usefulness",
+        "pos": "word / phrase",
+        "meaning_vi": "tính hữu ích",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "She began comparing orders in a different way. Instead of asking whether delivery was free, she asked how much she would spend to obtain the items she actually needed. Sometimes adding another item made sense: a household product she would otherwise buy next week could reduce a future trip. But an unfamiliar snack or decorative object was harder to justify. The label on the charge mattered less than the final cost and usefulness of the basket.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Tiêu dùng & lựa chọn"
+        ]
+      },
+      {
+        "word": "promotion",
+        "pos": "word / phrase",
+        "meaning_vi": "chương trình khuyến mãi",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Maya did not conclude that free-delivery offers were always bad. A promotion could be useful when it matched an existing plan. What troubled her was how easily the offer had changed the question she was trying to answer. She now keeps a short shopping list beside her screen. Before adding anything, she checks whether she wanted it before seeing the promotion. The pause does not guarantee a perfect decision, but it makes the decision more deliberate.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Tiêu dùng & lựa chọn"
+        ]
+      },
+      {
+        "word": "deliberate",
+        "pos": "word / phrase",
+        "meaning_vi": "có chủ ý, được cân nhắc",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Maya did not conclude that free-delivery offers were always bad. A promotion could be useful when it matched an existing plan. What troubled her was how easily the offer had changed the question she was trying to answer. She now keeps a short shopping list beside her screen. Before adding anything, she checks whether she wanted it before seeing the promotion. The pause does not guarantee a perfect decision, but it makes the decision more deliberate.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Tiêu dùng & lựa chọn"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Why did Maya add the notebook?",
+      "options": [
+        "To qualify for free delivery",
+        "Her old notebook was full",
+        "The cable was unavailable"
+      ],
+      "answer": 0,
+      "paragraph_index": 0,
+      "evidence": "only a small amount away from qualifying for free delivery.",
+      "explanation_vi": "Cô thêm sổ để đạt ngưỡng miễn phí giao hàng."
+    },
+    {
+      "id": "q2",
+      "kind": "inference",
+      "prompt": "What does Maya now consider most important?",
+      "options": [
+        "Removing every delivery charge",
+        "Buying all discounted products",
+        "Total spending on useful items"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "the final cost and usefulness of the basket.",
+      "explanation_vi": "Cô quan tâm tổng chi phí và tính hữu ích của hàng mua."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Maya believes every free-delivery promotion is harmful.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "Maya did not conclude that free-delivery offers were always bad.",
+      "explanation_vi": "Bài phủ định quan điểm tuyệt đối này: FALSE."
+    }
+  ],
+  "faqs": []
+}

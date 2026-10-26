@@ -34,6 +34,7 @@ class Vocabulary(models.Model):
     paraphrases = models.JSONField(default=list,blank=True)
     example = models.TextField(blank=True)
     example_vi = models.TextField(blank=True)
+    usage_pattern = models.CharField(max_length=300, blank=True)
     context = models.TextField(blank=True)
     note = models.TextField(blank=True)
     tags = models.JSONField(default=list,blank=True)
@@ -126,15 +127,24 @@ class LoginFailure(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+class AuthRateLimit(models.Model):
+    """Persistent, atomic budgets; keys contain hashes, never raw email/IP."""
+    key = models.CharField(max_length=64, primary_key=True)
+    started_at = models.DateTimeField(default=timezone.now)
+    last_at = models.DateTimeField(default=timezone.now)
+    count = models.PositiveIntegerField(default=0)
+
+
 class CuratedLesson(models.Model):
     """Shared editorial content. Opening it creates an immutable per-user snapshot."""
     slug = models.SlugField(primary_key=True, max_length=100)
     title = models.CharField(max_length=200)
-    level = models.CharField(max_length=2)
+    level = models.CharField(max_length=6)
     topic = models.CharField(max_length=120)
+    track = models.CharField(max_length=12, default='general', choices=[('general','General'),('ielts','IELTS')], db_index=True)
     revision = models.PositiveIntegerField(default=1)
     order = models.PositiveIntegerField(default=0)
-    published = models.BooleanField(default=True)
+    published = models.BooleanField(default=False)
     content = models.JSONField(default=dict)
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:
@@ -144,13 +154,52 @@ class CuratedLesson(models.Model):
         from .services.catalog import validate_lesson
         from .services.core import InputError
         try:
-            c = validate_lesson({**self.content,'slug':self.slug,'title':self.title,
+            raw = {**self.content,'slug':self.slug,'title':self.title,
                 'level':self.level,'topic':self.topic,'revision':self.revision,
-                'order':self.order,'published':self.published})
+                'track':self.track,'order':self.order,'published':self.published}
+            if self.published:
+                c = validate_lesson(raw)
+            else:
+                from .editorial.services import validate_draft
+                c = validate_draft(raw)
         except (InputError, TypeError, KeyError, AttributeError) as exc:
-            raise ValidationError({'content': str(exc)}) from exc
+            raise ValidationError(str(exc)) from exc
         self.content = c
     def __str__(self): return self.title
+
+
+class ToeicPractice(models.Model):
+    """Shared TOEIC content; bundled files are bootstrap data, not the live source."""
+    slug = models.SlugField(primary_key=True, max_length=100)
+    title = models.CharField(max_length=200)
+    revision = models.PositiveIntegerField(default=1)
+    published = models.BooleanField(default=False)
+    content = models.JSONField(default=dict)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['title']
+
+    def clean(self):
+        from django.core.exceptions import ValidationError
+        from .services.toeic import validate_toeic_set
+        try:
+            self.content = validate_toeic_set({**self.content, 'slug':self.slug, 'title':self.title, 'revision':self.revision})
+        except (ValueError, TypeError, KeyError, AttributeError) as exc:
+            raise ValidationError({'content':str(exc)}) from exc
+
+    def __str__(self): return self.title
+
+
+class ContentImport(models.Model):
+    """Owner-scoped, short-lived preview. Applied batches cannot be replayed."""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    kind = models.CharField(max_length=12)
+    payload = models.JSONField(default=list)
+    expected = models.JSONField(default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
+    applied_at = models.DateTimeField(null=True, blank=True)
 
 class LessonAttempt(models.Model):
     reading = models.ForeignKey(Reading, on_delete=models.CASCADE, related_name='lesson_attempts')
@@ -168,6 +217,7 @@ class ToeicAttempt(models.Model):
     token = models.UUIDField(default=uuid.uuid4)
     answers = models.JSONField(default=dict)
     result = models.JSONField(default=dict)
+    snapshot = models.JSONField(default=dict, blank=True)
     duration_seconds = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     class Meta:
@@ -177,6 +227,16 @@ class ToeicAttempt(models.Model):
             models.CheckConstraint(condition=models.Q(duration_seconds__lte=7200),name='valid_toeic_duration'),
         ]
         indexes = [models.Index(fields=['owner','set_slug','created_at'],name='toeic_owner_set_date')]
+
+class LearningDay(models.Model):
+    """One real learning day, independent of traffic and deletable source content."""
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    date = models.DateField(default=timezone.localdate)
+
+    class Meta:
+        ordering = ['date']
+        constraints = [models.UniqueConstraint(fields=['owner', 'date'], name='unique_learning_day')]
+
 
 class DailyVisit(models.Model):
     """Privacy-preserving daily traffic row; stores a salted session hash, never an IP."""

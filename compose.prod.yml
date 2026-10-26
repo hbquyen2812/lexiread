@@ -5,6 +5,7 @@ services:
       DJANGO_DEBUG: "false"
       DJANGO_ALLOWED_HOSTS: "${DOMAIN:?Thiếu DOMAIN trong .env}"
       DJANGO_CSRF_TRUSTED_ORIGINS: "https://${DOMAIN:?Thiếu DOMAIN trong .env}"
+      PUBLIC_SITE_URL: "https://${DOMAIN:?Thiếu DOMAIN trong .env}"
       DJANGO_HTTPS: "true"
       TRUST_PROXY_HTTPS: "true"
       DJANGO_HSTS_SECONDS: "${DJANGO_HSTS_SECONDS:-3600}"

@@ -1,0 +1,175 @@
+{
+  "slug": "c1-preserving-a-changing-place",
+  "title": "Preserving a Changing Place",
+  "level": "C1",
+  "topic": "Di sản & đô thị",
+  "summary": "Cân nhắc ý nghĩa của bảo tồn khi một khu phố vẫn đang được sử dụng.",
+  "track": "general",
+  "revision": 1,
+  "order": 111,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "In an imagined riverside town, a proposal to preserve an old market provoked an unexpected disagreement. Supporters agreed that the building mattered, but they disagreed about what preservation should protect. An architectural group emphasised the original roof and stone frontage. Traders were more concerned with affordable rents, access for deliveries and enough shelter to continue working through winter. A beautifully restored market without its familiar stalls, they argued, would preserve a structure while losing much of its purpose.\n\nThe initial consultation invited residents to comment on drawings displayed in the town hall. Attendance was respectable, yet several long-established traders were absent because the meetings coincided with their busiest hours. When organisers later visited the market before opening time, they heard concerns that had barely appeared in the written responses. The difference did not demonstrate that one group cared more than another. It showed how the design of participation could influence whose understanding of a place became visible.\n\nThe revised proposal retained the frontage while permitting reversible changes behind it. It also phased construction so that part of the market could remain open. These compromises satisfied neither every trader nor every conservation enthusiast, and the future rental arrangements still required negotiation. Nevertheless, discussion had shifted from choosing between change and preservation to deciding which changes could sustain the market's continuing life. Protecting a place, in this account, required attention to the relationships and activities that made its physical features meaningful.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Tại một thị trấn ven sông giả định, đề xuất bảo tồn chợ cũ gây ra bất đồng bất ngờ. Những người ủng hộ đồng ý tòa nhà quan trọng nhưng không thống nhất cần bảo vệ điều gì. Nhóm kiến trúc nhấn mạnh mái và mặt tiền đá nguyên bản. Tiểu thương quan tâm hơn tới giá thuê vừa sức, lối giao hàng và mái che đủ để làm việc mùa đông. Họ cho rằng một ngôi chợ được phục hồi đẹp nhưng thiếu các quầy quen thuộc sẽ giữ cấu trúc mà mất phần lớn mục đích."
+      },
+      {
+        "index": 1,
+        "vi": "Cuộc tham vấn đầu mời cư dân nhận xét bản vẽ trưng bày tại tòa thị chính. Số người tham dự khá tốt nhưng một số tiểu thương lâu năm vắng mặt vì họp trùng giờ bận nhất. Khi ban tổ chức đến chợ trước giờ mở cửa, họ nghe những lo ngại gần như không xuất hiện trong phản hồi viết. Khác biệt không chứng tỏ nhóm nào quan tâm hơn, mà cho thấy cách tổ chức tham gia ảnh hưởng đến việc cách nhìn của ai được thể hiện."
+      },
+      {
+        "index": 2,
+        "vi": "Đề xuất sửa đổi giữ mặt tiền nhưng cho phép thay đổi có thể hoàn nguyên phía sau. Việc xây dựng cũng chia giai đoạn để một phần chợ tiếp tục mở. Thỏa hiệp không làm mọi tiểu thương hay người yêu bảo tồn hài lòng, và tiền thuê tương lai vẫn cần thương lượng. Dù vậy, cuộc thảo luận chuyển từ lựa chọn giữa thay đổi và bảo tồn sang quyết định thay đổi nào duy trì đời sống của chợ. Trong câu chuyện này, bảo vệ nơi chốn đòi hỏi quan tâm tới quan hệ và hoạt động tạo ý nghĩa cho đặc điểm vật chất của nó."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "preservation",
+        "pos": "word / phrase",
+        "meaning_vi": "sự bảo tồn",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "In an imagined riverside town, a proposal to preserve an old market provoked an unexpected disagreement. Supporters agreed that the building mattered, but they disagreed about what preservation should protect. An architectural group emphasised the original roof and stone frontage. Traders were more concerned with affordable rents, access for deliveries and enough shelter to continue working through winter. A beautifully restored market without its familiar stalls, they argued, would preserve a structure while losing much of its purpose.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Di sản & đô thị"
+        ]
+      },
+      {
+        "word": "frontage",
+        "pos": "word / phrase",
+        "meaning_vi": "mặt tiền",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "In an imagined riverside town, a proposal to preserve an old market provoked an unexpected disagreement. Supporters agreed that the building mattered, but they disagreed about what preservation should protect. An architectural group emphasised the original roof and stone frontage. Traders were more concerned with affordable rents, access for deliveries and enough shelter to continue working through winter. A beautifully restored market without its familiar stalls, they argued, would preserve a structure while losing much of its purpose.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Di sản & đô thị"
+        ]
+      },
+      {
+        "word": "coincided",
+        "pos": "word / phrase",
+        "meaning_vi": "trùng thời điểm",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The initial consultation invited residents to comment on drawings displayed in the town hall. Attendance was respectable, yet several long-established traders were absent because the meetings coincided with their busiest hours. When organisers later visited the market before opening time, they heard concerns that had barely appeared in the written responses. The difference did not demonstrate that one group cared more than another. It showed how the design of participation could influence whose understanding of a place became visible.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Di sản & đô thị"
+        ]
+      },
+      {
+        "word": "participation",
+        "pos": "word / phrase",
+        "meaning_vi": "sự tham gia",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The initial consultation invited residents to comment on drawings displayed in the town hall. Attendance was respectable, yet several long-established traders were absent because the meetings coincided with their busiest hours. When organisers later visited the market before opening time, they heard concerns that had barely appeared in the written responses. The difference did not demonstrate that one group cared more than another. It showed how the design of participation could influence whose understanding of a place became visible.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Di sản & đô thị"
+        ]
+      },
+      {
+        "word": "reversible",
+        "pos": "word / phrase",
+        "meaning_vi": "có thể hoàn nguyên",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The revised proposal retained the frontage while permitting reversible changes behind it. It also phased construction so that part of the market could remain open. These compromises satisfied neither every trader nor every conservation enthusiast, and the future rental arrangements still required negotiation. Nevertheless, discussion had shifted from choosing between change and preservation to deciding which changes could sustain the market's continuing life. Protecting a place, in this account, required attention to the relationships and activities that made its physical features meaningful.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Di sản & đô thị"
+        ]
+      },
+      {
+        "word": "sustain",
+        "pos": "word / phrase",
+        "meaning_vi": "duy trì",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The revised proposal retained the frontage while permitting reversible changes behind it. It also phased construction so that part of the market could remain open. These compromises satisfied neither every trader nor every conservation enthusiast, and the future rental arrangements still required negotiation. Nevertheless, discussion had shifted from choosing between change and preservation to deciding which changes could sustain the market's continuing life. Protecting a place, in this account, required attention to the relationships and activities that made its physical features meaningful.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Di sản & đô thị"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Why were some traders absent from the first meetings?",
+      "options": [
+        "They were forbidden to attend",
+        "The meetings overlapped with busy working hours",
+        "They opposed all renovation"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "the meetings coincided with their busiest hours.",
+      "explanation_vi": "Thời gian họp trùng giờ làm việc bận, không chứng minh họ thiếu quan tâm."
+    },
+    {
+      "id": "q2",
+      "kind": "inference",
+      "prompt": "What broader idea does the account support?",
+      "options": [
+        "Preservation includes the activities that give a place meaning",
+        "Physical appearance is the only value worth protecting",
+        "Consultation eliminates every disagreement"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "the relationships and activities that made its physical features meaningful.",
+      "explanation_vi": "Bảo tồn cần xét cả hoạt động và quan hệ gắn với không gian."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The revised proposal resolved every disagreement about the market.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "These compromises satisfied neither every trader nor every conservation enthusiast",
+      "explanation_vi": "Vẫn còn bất đồng và vấn đề thuê phải thương lượng: FALSE."
+    }
+  ],
+  "faqs": []
+}

@@ -6,15 +6,17 @@ Bộ mã nguồn dành cho Huỳnh Bảo Quyên. Dự án riêng, không sửa h
 
 ## Bản 2: đọc hiểu, TOEIC và ôn từ trong một luồng
 
-**Thư viện luyện đọc** có 12 bài biên soạn cố định, 12 chủ đề, A2/B1/B2 ước lượng. **Luyện TOEIC Reading** có đúng 2 lựa chọn: Ngữ pháp & từ vựng (Part 5–6) và Đọc hiểu (Part 7), tổng cộng 24 câu tự biên soạn cùng 16 từ trọng tâm. **Bài đọc của tôi** dành cho nội dung tự nhập, tra từ/dịch/hỏi đáp theo bài. Tất cả dùng chung kho từ và bài ôn.
+**Thư viện đi kèm** có 27 bài: 24 tổng quát A1–C1 và 3 bài luyện kỹ năng IELTS, mức độ ước lượng. **TOEIC** có hai hướng Part 5–6 và Part 7, ban đầu 2 bộ/24 câu/16 mục từ. Nội dung chung ở PostgreSQL, thêm qua `/admin/` không sửa code. Bộ `lexiread_data_v1` nhập được 42 bài đọc nháp + 18 bộ TOEIC nháp, chưa tự xuất bản. **Bài đọc của tôi** vẫn riêng từng người.
 
-Xem **[Hướng dẫn dùng và nâng cấp v2](docs/READING_STUDIO_V2.md)** trước khi thay code cũ; có các bước giữ `.env`, database/volume và tiến độ. Thêm nội dung: **[Biên soạn bài đọc](docs/LESSON_AUTHORING.md)**. Không có chứng nhận level hay đề IELTS chính thức trong bộ 12 bài.
+Giao diện chính chọn Việt (mặc định), Anh, Pháp, Trung giản thể. Giữ nguyên bài tiếng Anh và giải nghĩa Việt; một số nhãn cũ vẫn tiếng Việt. Xem [quy trình nội dung](docs/LESSON_AUTHORING.md) và [kiểm thử cập nhật](docs/EDITORIAL_UPDATE_QA.md).
+
+Xem **[Hướng dẫn nâng cấp v2](docs/READING_STUDIO_V2.md)** trước khi thay code; giữ `.env`, database/volume và tiến độ. [Thêm nội dung](docs/LESSON_AUTHORING.md). Không có chứng nhận level hoặc đề IELTS/ETS chính thức.
 
 Muốn lưu mã nguồn lên GitHub: đọc **[Hướng dẫn đưa LexiRead lên GitHub](docs/GITHUB_UPLOAD.md)** trước khi chạy `git add`. Luôn kiểm tra `git status`, xác nhận `.env` bị ignore và xem lại dữ liệu học cá nhân trước khi công khai.
 
 ## 1. Bắt đầu từ đâu?
 
-**Muốn học ngay:** mở `preview.html` bằng Chrome hoặc Edge. Có 12 bài biên soạn sẵn cùng bài tập/giải đáp; giữ bộ 116 thẻ/nghĩa và bài Set in Metal cá nhân từ bản trước. Đây là ứng dụng HTML độc lập dùng localStorage, không phải bản PostgreSQL. Hãy xuất backup JSON định kỳ; không dùng cửa sổ riêng tư để giữ tiến độ. Mỗi trình duyệt/thiết bị giữ kho riêng. Không có đồng bộ tự động.
+**Học ngay:** mở `preview.html` bằng Chrome/Edge. Có 27 bài đi kèm, 116 thẻ và bài Set in Metal. Đây là localStorage, không phải PostgreSQL; không chứa 60 bài nháp mới hoặc đồng bộ với admin. Xuất backup định kỳ và tránh cửa sổ riêng tư.
 
 **Muốn website đầy đủ, mở rộng bằng code:** dùng Django + PostgreSQL theo phần 3. Dữ liệu học từ HTML có thể xuất JSON và nhập vào bản Django. Không cần Node.js, npm hay React để chạy phiên bản này.
 
@@ -24,7 +26,7 @@ Muốn lưu mã nguồn lên GitHub: đọc **[Hướng dẫn đưa LexiRead lê
 
 | Chức năng | Django + PostgreSQL | HTML độc lập |
 |---|---|---|
-| Thư viện 12 bài, lọc chủ đề/mức/trạng thái | Có, `seed_lessons` | Có sẵn |
+| Thư viện 27 bài đi kèm, lọc chủ đề/mức/trạng thái | Có, admin import/publish + seed ban đầu | Có sẵn |
 | TOEIC Reading: 2 lựa chọn, 24 câu, giải thích, lưu lượt làm | Có, theo tài khoản | Có, trong trình duyệt |
 | Thống kê truy cập first-party, không lưu IP | Có, admin xem tổng | Không gửi dữ liệu ra ngoài |
 | Câu hiểu bài/đáp án/bằng chứng cố định | Có | Có |
@@ -155,7 +157,7 @@ Danh sách bài đã lưu có tìm kiếm theo tiêu đề, tên nguồn hoặc 
 
 Giới hạn hiện tại: file tối đa 8 MB, PDF tối đa 30 trang, bài tối đa 60.000 ký tự. PDF cần có lớp chữ. PDF ảnh scan chưa hỗ trợ OCR. DOCX và PDF nhiều cột có thể làm thứ tự đoạn không như mong muốn; đọc kiểm tra rồi dùng **Sửa bài**. Chỉ lưu text đã trích xuất; không lưu bản upload gốc.
 
-Không cần dán cả đề + answer key vào passage. App có bộ câu hỏi hiểu bài cố định cho 12 bài biên soạn; bài tự nhập tập trung đọc hiểu, dịch, chọn từ và hỏi đáp, chưa tự chấm mọi dạng IELTS Reading questions.
+Không dán đề và answer key chung vào passage. Thư viện hỗ trợ trắc nghiệm, TFNG/YNNG, ghép tiêu đề/thông tin, điền từ/trả lời ngắn; chưa phải full mock hoặc mọi dạng IELTS. Bài cá nhân tự nhập tập trung đọc, dịch, lưu từ và hỏi đáp.
 
 ### 4.2. Dịch và gợi ý — không API
 
@@ -275,6 +277,7 @@ Mật khẩu phải khớp `.env` đã dùng để tạo container database. Cá
 ```powershell
 .\.venv\Scripts\python.exe manage.py migrate
 .\.venv\Scripts\python.exe manage.py seed_lessons
+.\.venv\Scripts\python.exe manage.py seed_toeic
 .\.venv\Scripts\python.exe manage.py collectstatic --noinput
 .\.venv\Scripts\python.exe manage.py createsuperuser
 .\.venv\Scripts\python.exe manage.py seed_demo --email ban@example.com
@@ -362,3 +365,4 @@ Xem `docs/ARCHITECTURE.md`: vị trí code, API contract, chỗ thay model/provi
 Base Compose chỉ bind localhost. Overlay production đã có Caddy/HTTPS, cookie an toàn, host/origin cụ thể, HSTS khởi đầu và dependency lock; xem `docs/DEPLOYMENT.md`. Trước khi mời người thật vẫn phải chạy trên domain thật, thử backup/restore, cấu hình firewall/giám sát và đánh giá tải. Không mở cổng database hoặc Gunicorn trực tiếp ra Internet.
 
 **Nguồn tài liệu chính thức:** `docs/SOURCES.md`. **Lưu ý từ vựng:** `docs/VOCAB_NOTES.md`. **Kết quả kiểm thử thực tế:** `docs/TEST_REPORT.md`.
+> Tài khoản mới: đăng ký bằng username, sửa hồ sơ, đổi mật khẩu và khôi phục qua email — xem [hướng dẫn cấu hình mail](docs/ACCOUNT_SETUP.md). Không bắt OTP; SMS chưa bật. Tính năng gửi mail thật cần cấu hình sender và API key trên máy chủ.

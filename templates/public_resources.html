@@ -1,0 +1,4 @@
+<section id="official-resources" class="public-section" aria-label="Tài liệu luyện thi chính thức">
+  <div data-official-resources></div>
+  <noscript><h2>Tài liệu IELTS & TOEIC chính thức</h2><p>Mở bài mẫu tại nguồn chính thức. Tiến độ trên trang ngoài không được lưu vào LexiRead.</p><ul>{% for resource in official_resources %}<li><a href="{{ resource.url }}" target="_blank" rel="noopener noreferrer">{{ resource.title }}</a> · {{ resource.publisher }}</li>{% endfor %}</ul></noscript>
+</section>

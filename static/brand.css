@@ -1,0 +1,126 @@
+/* LexiRead: a quiet reading garden. Shared by the website and offline preview. */
+:root {
+  --bg: #faf8f2;
+  --ink: #263f34;
+  --muted: #617268;
+  --green: #356a58;
+  --line: #e1e5d9;
+  --paper: #fffdf8;
+  --apricot: #efc5a7;
+}
+
+.public-page, .login-page { background: var(--bg); }
+.public-header { background: #faf8f2f2; }
+.brand-mark { box-shadow: 0 3px 0 #244e4120; }
+.public-main { max-width: 1232px; }
+.welcome-hero { grid-template-columns: 1.05fr 1fr; gap: 48px; padding: 58px 0 45px; }
+.welcome-hero > div, .reading-hero > div { min-width: 0; }
+.welcome-hero h1 { font-size: clamp(39px, 4.5vw, 61px); line-height: 1.15; }
+.welcome-hero .hero-accent { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.055em; }
+.intro-chip { background: #eef3e7; border-color: #dce5d4; }
+.hero-copy { font-size: 16px; line-height: 1.8; }
+.signature-scene { position: relative; width: 100%; margin: 0; padding: 0 0 5px; }
+.signature-art { position: relative; overflow: hidden; border-radius: 44% 44% 22px 22px; background: #f2eedf; }
+.signature-art > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.garden-note { position: absolute; left: 16px; bottom: 15px; display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px; background: #fffdf5f2; border: 1px solid #e3e4d4; border-radius: 999px; color: #45614e; font-size: 11px; font-weight: 650; }
+.garden-note::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #82a471; }
+.signature-scene .word-sample { margin: -3px 20px 0; padding: 17px 18px; border-radius: 0 0 15px 15px; box-shadow: 0 8px 16px #30473107; background: var(--paper); }
+.signature-scene .word-sample b { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: 23px; }
+.signature-scene .word-sample b small { display: inline; font-family: "Segoe UI", Arial, sans-serif; font-size: 10px; margin-left: 7px; }
+.signature-scene .word-sample button { min-width: 110px; }
+.signature-scene .scene-caption { min-height: 30px; max-width: 410px; margin: 12px auto 0; color: #647463; font-size: 11px; line-height: 1.55; }
+.trust-strip { padding: 25px 0; }
+.trust-strip > div + div { border-left: 1px solid var(--line); }
+.trust-strip strong { font-family: Georgia, "Times New Roman", serif; font-size: 31px; font-weight: 500; }
+.public-section { padding-top: 46px; }
+.public-section .section-title h2 { font-size: 30px; }
+.public-section .section-title p { max-width: 680px; font-size: 14px; }
+.level-picker { background: #f0f4e9; border-color: #dce4d2; }
+.level-option { border-color: #dce4d4; box-shadow: 0 2px 0 #e1e6d7; }
+.level-option:hover { background: #fffdf7; border-color: #719779; }
+.level-option[aria-pressed="true"] { background: #356a58; border-color: #356a58; color: #fff; box-shadow: 0 3px 0 #244e4129; }
+.lesson-card { background: #fffefb; border-color: #e0e4d9; border-radius: 20px; box-shadow: 0 3px 0 #e7eadf55; }
+.lesson-card:hover { border-color: #bfcfba; box-shadow: 0 10px 22px #3047310d; }
+.lesson-card h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: 23px; letter-spacing: -.025em; }
+.lesson-card .lesson-cover.illustrated { border-radius: 12px; }
+.lesson-card .card-footer { padding-top: 15px; }
+.practice-path { background: #eef2e6; border-color: #dfe6d4; padding: 28px; border-radius: 23px; }
+.practice-path.ielts { background: #f3ece3; border-color: #eadfd1; }
+.practice-path.ielts .btn.primary { background: #8b604d; border-color: #8b604d; }
+.practice-path .path-symbol { color: #56715b; opacity: .6; }
+.practice-path.ielts .path-symbol { color: #a97859; }
+.practice-path h3 { font-size: 27px; }
+.feature-card .feature-icon { border-radius: 12px; background: #e9eedf; transform: rotate(-4deg); font-family: Georgia, serif; }
+.feature-card:nth-child(2) .feature-icon { background: #f4e8d4; transform: rotate(4deg); color: #84643f; }
+.feature-card:nth-child(3) .feature-icon { background: #f0e5dd; color: #8b604d; }
+.public-cta { border-radius: 24px; background: #2d5142; }
+.public-cta h2 { font-family: Georgia, "Times New Roman", serif; font-size: 32px; font-weight: 500; }
+
+/* The illustration stays useful at small sizes without competing with lessons. */
+.reading-hero.garden-hero { grid-template-columns: minmax(0, 1.25fr) minmax(210px, .8fr); gap: 28px; background: #edf2e5; padding: 34px 36px; overflow: hidden; }
+.reading-hero.garden-hero h1 { font-size: clamp(32px, 3.1vw, 43px); }
+.reading-hero.garden-hero h1 em { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-style: normal; }
+.garden-welcome { margin: 0; align-self: center; min-width: 0; }
+.garden-welcome img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 46% 46% 20px 20px; }
+.garden-welcome figcaption { text-align: center; font-size: 11px; color: #5e7258; margin-top: 10px; }
+.reading-hero + .stats .stat { background: #fffefb; }
+.sidebar { background: #fffdf8; }
+.sidebar nav a.active { background: #eaf1e1; }
+.sidebar-note { background: #f0f4e8; }
+.auth-story { background: #eef2e5; }
+.auth-garden { margin: 8px 0 0; max-width: 420px; }
+.auth-garden img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 45% 45% 18px 18px; }
+.auth-story h1 { font-size: 37px; }
+.account-layout .login-card { border: 1px solid var(--line); background: var(--paper); border-radius: 23px; padding: 32px; }
+.login-card input { background: #fffefb; }
+.login-card input:focus { border-color: #72967d; }
+
+@media (max-width: 1100px) {
+  .welcome-hero { gap: 28px; }
+  .welcome-hero h1 { font-size: 46px; }
+  .signature-scene .word-sample { margin-inline: 10px; padding: 14px; gap: 10px; }
+  .signature-scene .word-sample b small { display: block; margin-left: 0; }
+  .reading-hero.garden-hero { padding: 28px; gap: 20px; }
+}
+@media (max-width: 880px) {
+  .welcome-hero { grid-template-columns: 1fr 1fr; gap: 22px; padding-top: 36px; }
+  .welcome-hero h1 { font-size: 39px; }
+  .welcome-hero .button-row { gap: 9px; }
+  .welcome-hero .btn { padding: 11px 15px; font-size: 13px; }
+  .signature-scene .word-sample { flex-wrap: wrap; }
+  .signature-scene .word-sample button { flex: 1; }
+  .garden-note { left: 10px; bottom: 10px; font-size: 10px; padding: 6px 10px; }
+  .reading-hero.garden-hero { grid-template-columns: minmax(0, 1.25fr) minmax(185px, .8fr); }
+  .auth-story h1 { font-size: 30px; }
+}
+@media (max-width: 620px) {
+  .welcome-hero { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 30px 0 27px; }
+  .welcome-hero h1 { font-size: 43px; max-width: 480px; }
+  .welcome-hero .hero-copy { font-size: 15px; }
+  .signature-scene { max-width: 440px; margin-inline: auto; }
+  .signature-art { border-radius: 36% 36% 18px 18px; }
+  .signature-art > img { aspect-ratio: 4 / 3; }
+  .signature-scene .word-sample { flex-wrap: nowrap; margin-inline: 15px; }
+  .signature-scene .word-sample button { flex: 0 0 auto; }
+  .signature-scene .scene-caption { min-height: 0; }
+  .garden-note { bottom: 12px; left: 12px; }
+  .trust-strip { padding: 21px 0; gap: 20px 14px; }
+  .trust-strip > div + div { border-left: 0; }
+  .trust-strip strong { font-size: 27px; }
+  .public-section { padding-top: 34px; }
+  .public-section .section-title h2 { font-size: 26px; }
+  .public-section .section-title p { font-size: 13px; }
+  .practice-path { padding: 24px; }
+  .public-cta h2 { font-size: 28px; }
+  .reading-hero.garden-hero { grid-template-columns: minmax(0, 1fr); padding: 25px; gap: 15px; }
+  .reading-hero.garden-hero h1 { font-size: 35px; }
+  .garden-welcome { display: flex; align-items: center; gap: 18px; width: 100%; padding-top: 16px; border-top: 1px solid #d5dfca; }
+  .garden-welcome img { width: 100px; flex: 0 0 100px; aspect-ratio: 4 / 3; border-radius: 28px; }
+  .garden-welcome figcaption { font-size: 12px; text-align: left; margin: 0; max-width: 180px; }
+  .account-layout .login-card { padding: 24px 20px; }
+}
+@media (max-width: 380px) {
+  .welcome-hero h1 { font-size: 38px; }
+  .signature-scene .word-sample { margin-inline: 5px; padding: 13px 11px; }
+  .signature-scene .word-sample button { min-width: 98px; }
+}
