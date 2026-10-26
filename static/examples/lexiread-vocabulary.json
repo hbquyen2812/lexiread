@@ -1,0 +1,41 @@
+{
+  "format": "lexiread-vocabulary",
+  "version": 1,
+  "deck": {
+    "name": "Email công việc"
+  },
+  "vocabulary": [
+    {
+      "word": "confirm",
+      "pos": "verb",
+      "meaning_vi": "xác nhận",
+      "usage_pattern": "confirm + a booking / an appointment",
+      "example": "Please confirm your appointment by Friday.",
+      "example_vi": "Bạn vui lòng xác nhận lịch hẹn trước thứ Sáu nhé.",
+      "synonyms": [
+        "verify"
+      ],
+      "paraphrases": [
+        "say that something is certain"
+      ],
+      "context": "",
+      "note": "Verify thường nhấn mạnh việc kiểm tra tính chính xác."
+    },
+    {
+      "word": "reschedule",
+      "pos": "verb",
+      "meaning_vi": "đổi lịch",
+      "usage_pattern": "reschedule a meeting for + time",
+      "example": "We rescheduled the meeting for Monday.",
+      "example_vi": "Chúng tôi đã chuyển cuộc họp sang thứ Hai.",
+      "synonyms": [
+        "rearrange"
+      ],
+      "paraphrases": [
+        "move an event to another time"
+      ],
+      "context": "",
+      "note": ""
+    }
+  ]
+}

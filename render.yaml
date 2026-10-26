@@ -16,9 +16,9 @@ services:
       - key: DJANGO_DEBUG
         value: "false"
       - key: DJANGO_ALLOWED_HOSTS
-        value: .onrender.com
+        value: lexiread-a3h8.onrender.com
       - key: DJANGO_CSRF_TRUSTED_ORIGINS
-        value: https://*.onrender.com
+        value: https://lexiread-a3h8.onrender.com
       - key: DJANGO_HTTPS
         value: "true"
       - key: TRUST_PROXY_HTTPS
@@ -31,3 +31,11 @@ services:
         value: "4"
       - key: AI_PROVIDER
         value: none
+      - key: PUBLIC_SITE_URL
+        value: https://lexiread-a3h8.onrender.com
+      - key: AUTH_DAILY_LIMIT
+        value: "100"
+      - key: RESEND_API_KEY
+        sync: false
+      - key: DEFAULT_FROM_EMAIL
+        sync: false

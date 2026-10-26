@@ -1,11 +1,19 @@
 # LexiRead Reading Studio v2
 
+Latest addition: [public activity statistics and learning methods](docs/COMMUNITY_AND_METHODS_REVIEW.md). The homepage shows real 30-day learning aggregates, excludes internal test accounts and keeps detailed study advice inside the guide.
+
+Previous local review: [foundation learning, personal decks and verified QA](docs/FOUNDATION_LEARNING_REVIEW.md). The interface includes a custom lightweight illustration, prominent personal vocabulary import, an account-based learning path, 33 official IELTS/TOEIC resource links and a catalogue of 40 learning-source links. External materials remain on their publishers' websites; these are not counts of full tests copied into the app.
+
+Reading topic labels stay in English across interface languages, using `data/topic_labels.json`. Search and filters use the displayed English names while retaining stored editorial keys.
+
 A reading-first English/Vietnamese learning app: original lesson and TOEIC-style practice libraries plus private imported readings, with saved-reading search/status/favorites, multi-reading vocabulary occurrences, grounded Q&A and spaced personal review.
 
 Start with [README_VI.md](README_VI.md), the [v2 usage/upgrade guide](docs/READING_STUDIO_V2.md), and the [VPS/HTTPS deployment guide](docs/DEPLOYMENT.md).
 
-12 original lessons plus two TOEIC Reading paths (Parts 5–6 and Part 7) containing 24 original questions and 16 focus-vocabulary entries. A2/B1/B2 and target-score labels are author estimates, not calibrated levels or official score predictions. Existing 116 personal seed cards remain optional.
+37 bundled readings (24 general, 13 original IELTS skill exercises), plus 14 TOEIC sets with 192 questions. Foundation learning adds 30 grammar lessons with 180 original questions and 30 vocabulary collections containing 360 entries and 360 meaning-in-context questions. Course levels guide content selection rather than predict scores. Existing personal seed cards remain optional. The main interface has Vietnamese/English/French/Simplified Chinese selection; foundation teaching content and some labels remain Vietnamese.
+
+Staff can import documents/JSON, preview, save drafts, edit, publish and export through Django admin without changing code. Shared content, including TOEIC, lives in PostgreSQL. The supplied dataset adapter supports 42 reading drafts + 18 TOEIC drafts, preserving 336 questions and 504 vocabulary entries; nothing is automatically published. See [content workflow](docs/LESSON_AUTHORING.md).
 
 Django/PostgreSQL source + standalone `preview.html`. No secret keys included. The server edition has a public feature/lesson catalog, while learning actions require email login and stay isolated per account. Offline HTML cannot call AI; manual prompt/JSON import is supported. Review includes a daily goal, streak, learning buckets and a weak-word group. The server edition includes first-party traffic analytics for administrators without storing IP addresses or loading third-party trackers.
 
-The pure Python suite ran 81 tests: 80 passed and one optional reportlab test was skipped. 56 Chromium DOM checks passed. Docker Compose and both health checks passed; migrations through `0006_daily_visit`, Django `check`, and all 43 Django/PostgreSQL integration tests passed. The public landing page, email form and responsive layout also passed a Chromium smoke test. The production Compose/Caddy configuration passes Django deployment checks with a sample domain; a real public deployment, production restore drill and live AI calls were not tested. See [test report](docs/TEST_REPORT.md).
+Current verification and limitations: [foundation learning review](docs/FOUNDATION_LEARNING_REVIEW.md). Earlier reports describe their respective revisions. These local changes have not been deployed to Render.

@@ -1,0 +1,369 @@
+{
+  "slug": "p7-double-events-and-expense-policies",
+  "title": "Paired Documents · Volunteer Plans & Expenses",
+  "mode": "part-7",
+  "mode_label": "Đọc hiểu",
+  "parts": [
+    7
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 23,
+  "description": "Ghép thông tin từ quy định và email để chọn ca tình nguyện phù hợp, kiểm tra thời hạn và tính khoản chi được hoàn.",
+  "instructions": "Đọc các tài liệu trong mỗi nhóm và chọn một đáp án, đối chiếu thông tin giữa các tài liệu khi cần.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "event-plan",
+      "kind": "Volunteer briefing",
+      "heading": "City Skills Day: volunteer roles",
+      "body": "City Skills Day — 14 March\nThe public program runs from 10 a.m. to 4 p.m. at Meridian Hall.\n\nRegistration desk volunteers: 9 a.m.–12:30 p.m. Check ticket QR codes and direct visitors to rooms. Training starts at 8:45 a.m.; attendance is required before the shift.\nWorkshop assistants: 10:30 a.m.–2 p.m. Help presenters distribute materials and count participants. Assistants must be comfortable standing for most of the shift.\nClosing team: 3:30 p.m.–5 p.m. Collect signs, return chairs and check that no personal items remain.\n\nVolunteers may choose more than one role only if shifts do not overlap. A meal voucher is provided for a shift lasting at least three hours. Free parking is available in the north lot, but spaces must be requested by 10 March. Volunteers using public transport do not need to notify the coordinator."
+    },
+    {
+      "id": "volunteer-email",
+      "kind": "Email exchange",
+      "heading": "Availability for City Skills Day",
+      "body": "From: Niko Shah\nTo: Volunteer Coordinator\n\nI can arrive by 8:30 a.m. and must leave by 1 p.m. I have experience checking tickets at a theatre, so I would be comfortable at the registration desk. I can stand for short periods, but a long standing shift would be difficult. I will travel by train and do not need parking. Is there a role that fits my availability?\n\nReply from Coordinator:\nThank you, Niko. I have assigned you to the registration desk. Please attend the full training session before the desk opens. A chair will be available so that you can alternate between sitting and standing. Your meal voucher can be collected from the information point at the end of your shift. You do not need to join the closing team."
+    },
+    {
+      "id": "expense-policy",
+      "kind": "Policy extract",
+      "heading": "Local business travel: reimbursable expenses",
+      "body": "Employees may claim reasonable travel expenses for approved visits to clients within the region. Public-transport fares are reimbursed in full when supported by a receipt or an electronic travel record. Taxi fares require advance approval, except when public transport is canceled unexpectedly. In that situation, attach evidence of the cancellation.\n\nMeals are reimbursed up to $18 per employee per day when a visit lasts more than six hours. Alcohol and meals provided by the client are excluded. Parking is reimbursed only when the use of a private car was approved before the visit.\n\nSubmit the claim within ten working days of the visit. Separate personal expenses from business expenses on the form. Missing documentation delays reimbursement; it does not allow an employee to estimate a fare. Finance may request clarification before approving a claim."
+    },
+    {
+      "id": "expense-email",
+      "kind": "Email",
+      "heading": "Finance review of Sora's claim",
+      "body": "To: Sora Kim\nFrom: Finance Team\nSubject: Client visit on 6 May\n\nWe have reviewed your claim for the approved visit from 8 a.m. to 3 p.m. You supplied an electronic record for the $12 outbound train fare, a $21 lunch receipt with no alcohol, and a $34 taxi receipt for the return journey.\n\nYou explained that the return train was canceled unexpectedly. The taxi may be eligible without advance approval, but we still need the railway's cancellation notice. Please attach a screenshot or forward the notice from the railway. We cannot approve the taxi portion until it is received.\n\nYour lunch was not provided by the client, so it is eligible within the daily limit. The claim was submitted four working days after the visit and is within the deadline. No other expenses were included."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 7,
+      "prompt": "Which role is the best match for Niko's availability and experience?",
+      "options": [
+        "Registration desk volunteer",
+        "Workshop assistant",
+        "Closing-team volunteer",
+        "A combined workshop and closing shift"
+      ],
+      "answer": 0,
+      "explanation_vi": "Niko đến được lúc 8:30 và phải rời đi trước 13:00; anh cũng có kinh nghiệm kiểm vé. Ca đăng ký từ 9:00 đến 12:30 phù hợp cả hai điều kiện. Ca hỗ trợ hội thảo kết thúc lúc 14:00 và đòi hỏi đứng lâu; ca dọn kết thúc diễn ra muộn hơn.",
+      "evidence": "I have experience checking tickets at a theatre, so I would be comfortable at the registration desk.",
+      "document_ids": [
+        "event-plan",
+        "volunteer-email"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 7,
+      "prompt": "By what time must Niko be ready to begin required training?",
+      "options": [
+        "10:00 a.m.",
+        "8:45 a.m.",
+        "8:30 a.m.",
+        "9:00 a.m."
+      ],
+      "answer": 1,
+      "explanation_vi": "Thư yêu cầu tham dự đầy đủ buổi hướng dẫn. Bản phân công cho biết buổi này bắt đầu lúc 8:45. 8:30 là giờ Niko có thể đến, 9:00 là lúc bắt đầu ca và 10:00 là giờ đón công chúng.",
+      "evidence": "Training starts at 8:45 a.m.; attendance is required before the shift.",
+      "document_ids": [
+        "event-plan",
+        "volunteer-email"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 7,
+      "prompt": "Why will Niko receive a meal voucher?",
+      "options": [
+        "Train passengers receive an extra allowance.",
+        "Niko has agreed to work on the closing team.",
+        "The assigned shift lasts at least three hours.",
+        "Every visitor is entitled to a free meal."
+      ],
+      "answer": 2,
+      "explanation_vi": "Ca từ 9:00 đến 12:30 dài 3,5 giờ, đạt điều kiện tối thiểu ba giờ để nhận phiếu ăn. Quyền nhận phiếu dựa trên thời lượng ca, không phải phương tiện đi lại hoặc việc tham gia ca dọn cuối ngày.",
+      "evidence": "A meal voucher is provided for a shift lasting at least three hours.",
+      "document_ids": [
+        "event-plan",
+        "volunteer-email"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 7,
+      "prompt": "Which action is NOT required of Niko under the arrangements?",
+      "options": [
+        "Attending training before the desk opens",
+        "Checking visitor tickets",
+        "Completing the assigned registration shift",
+        "Requesting a parking space"
+      ],
+      "answer": 3,
+      "explanation_vi": "Niko đi tàu nên không cần xin chỗ đỗ xe. Anh vẫn phải dự buổi hướng dẫn, kiểm vé và làm đủ ca đã nhận.",
+      "evidence": "I will travel by train and do not need parking.",
+      "document_ids": [
+        "event-plan",
+        "volunteer-email"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 7,
+      "prompt": "What has the coordinator arranged in response to Niko's physical needs?",
+      "options": [
+        "A chair that allows changes between sitting and standing",
+        "A shorter public program for every visitor",
+        "A vehicle to take Niko home",
+        "Permission to miss all volunteer training"
+      ],
+      "answer": 0,
+      "explanation_vi": "Niko khó đứng lâu nên điều phối viên bố trí ghế để anh có thể đổi giữa ngồi và đứng. Không có thông tin đưa đón, rút ngắn chương trình hoặc miễn buổi hướng dẫn.",
+      "evidence": "A chair will be available so that you can alternate between sitting and standing.",
+      "document_ids": [
+        "event-plan",
+        "volunteer-email"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 7,
+      "prompt": "What further document does Finance need?",
+      "options": [
+        "A request to approve a private car before the visit",
+        "Evidence that the return train was canceled",
+        "A new receipt for the outbound train",
+        "A letter stating that lunch contained alcohol"
+      ],
+      "answer": 1,
+      "explanation_vi": "Bộ phận tài chính đã có hóa đơn taxi nhưng còn thiếu bằng chứng chuyến tàu bị hủy. Giấy tờ này giúp họ xét ngoại lệ không cần duyệt taxi từ trước; chứng từ tàu đi và bữa ăn đã đủ.",
+      "evidence": "we still need the railway's cancellation notice.",
+      "document_ids": [
+        "expense-policy",
+        "expense-email"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 7,
+      "prompt": "How much of Sora's $21 lunch is reimbursable?",
+      "options": [
+        "$12",
+        "$21",
+        "$18",
+        "$0"
+      ],
+      "answer": 2,
+      "explanation_vi": "Chuyến công tác từ 8:00 đến 15:00 dài bảy giờ, vượt điều kiện sáu giờ. Bữa ăn không có rượu và không do khách hàng cung cấp nên đủ điều kiện, nhưng chỉ được hoàn tối đa $18. Sora tự trả $3 còn lại.",
+      "evidence": "Meals are reimbursed up to $18 per employee per day when a visit lasts more than six hours.",
+      "document_ids": [
+        "expense-policy",
+        "expense-email"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 7,
+      "prompt": "If Sora provides the required cancellation notice, what total reimbursement is supported by the stated policy?",
+      "options": [
+        "$46",
+        "$67",
+        "$34",
+        "$64"
+      ],
+      "answer": 3,
+      "explanation_vi": "Tiền tàu đi $12 được hoàn đủ, tiền ăn được giới hạn ở $18 và taxi $34 được chấp nhận khi có bằng chứng hủy tàu. Tổng là $12 + $18 + $34 = $64. $67 tính sai toàn bộ bữa ăn $21; $46 bỏ sót tiền ăn.",
+      "evidence": "You supplied an electronic record for the $12 outbound train fare, a $21 lunch receipt with no alcohol, and a $34 taxi receipt for the return journey.",
+      "document_ids": [
+        "expense-policy",
+        "expense-email"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 7,
+      "prompt": "Why can Sora's taxi fare be considered even without advance approval?",
+      "options": [
+        "An unexpected cancellation of public transport can qualify for an exception.",
+        "All taxi fares are automatically paid in full.",
+        "The visit took place more than ten working days ago.",
+        "The client provided a free return journey."
+      ],
+      "answer": 0,
+      "explanation_vi": "Quy định cho phép xem xét taxi không được duyệt trước nếu giao thông công cộng bất ngờ bị hủy. Sora vẫn cần cung cấp bằng chứng; không phải mọi khoản taxi đều tự động được thanh toán.",
+      "evidence": "Taxi fares require advance approval, except when public transport is canceled unexpectedly.",
+      "document_ids": [
+        "expense-policy",
+        "expense-email"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 7,
+      "prompt": "What does the phrase \"within the deadline\" indicate about Sora's claim?",
+      "options": [
+        "The lunch limit has been increased for this visit.",
+        "It was submitted early enough to meet the ten-working-day rule.",
+        "Every claimed amount has already been approved.",
+        "The taxi receipt is no longer needed."
+      ],
+      "answer": 1,
+      "explanation_vi": "Yêu cầu được nộp sau bốn ngày làm việc, nằm trong hạn mười ngày. Đúng hạn không có nghĩa mọi khoản đã được duyệt: taxi vẫn chờ chứng từ, còn bữa ăn vẫn chịu mức trần.",
+      "evidence": "The claim was submitted four working days after the visit and is within the deadline.",
+      "document_ids": [
+        "expense-policy",
+        "expense-email"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "overlap",
+      "pos": "verb",
+      "meaning_vi": "trùng thời gian, chồng lên nhau",
+      "usage_pattern": "shifts/schedules overlap",
+      "example": "Volunteers cannot accept shifts that overlap.",
+      "example_vi": "Tình nguyện viên không thể nhận ca trùng giờ.",
+      "synonyms": [
+        "coincide"
+      ],
+      "paraphrases": [
+        "take place partly at the same time"
+      ],
+      "context": "Volunteers cannot accept shifts that overlap.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Volunteer Plans & Expenses",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "alternate",
+      "pos": "verb",
+      "meaning_vi": "luân phiên thay đổi giữa hai trạng thái",
+      "usage_pattern": "alternate between A and B",
+      "example": "She alternates between sitting and standing at the desk.",
+      "example_vi": "Cô ấy luân phiên ngồi và đứng tại bàn.",
+      "synonyms": [
+        "switch"
+      ],
+      "paraphrases": [
+        "change repeatedly from one option to another"
+      ],
+      "context": "She alternates between sitting and standing at the desk.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Volunteer Plans & Expenses",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "voucher",
+      "pos": "noun",
+      "meaning_vi": "phiếu dùng để nhận hàng hoặc dịch vụ",
+      "usage_pattern": "a meal/travel voucher; redeem a voucher",
+      "example": "Collect your meal voucher after the shift.",
+      "example_vi": "Nhận phiếu ăn khi kết thúc ca.",
+      "synonyms": [
+        "coupon"
+      ],
+      "paraphrases": [
+        "a document exchanged for a specified service or item"
+      ],
+      "context": "Collect your meal voucher after the shift.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Volunteer Plans & Expenses",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "advance approval",
+      "pos": "noun phrase",
+      "meaning_vi": "sự đồng ý hoặc phê duyệt từ trước",
+      "usage_pattern": "obtain/require advance approval",
+      "example": "Taxi travel normally requires advance approval.",
+      "example_vi": "Đi taxi thường cần được phê duyệt trước.",
+      "synonyms": [
+        "prior authorization"
+      ],
+      "paraphrases": [
+        "permission obtained before an action takes place"
+      ],
+      "context": "Taxi travel normally requires advance approval.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Volunteer Plans & Expenses",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "documentation",
+      "pos": "noun",
+      "meaning_vi": "giấy tờ hoặc tài liệu chứng minh",
+      "usage_pattern": "supporting documentation; provide documentation",
+      "example": "Missing documentation can delay reimbursement.",
+      "example_vi": "Thiếu chứng từ có thể làm chậm việc hoàn chi phí.",
+      "synonyms": [
+        "records"
+      ],
+      "paraphrases": [
+        "documents that support or verify a request"
+      ],
+      "context": "Missing documentation can delay reimbursement.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Volunteer Plans & Expenses",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "clarification",
+      "pos": "noun",
+      "meaning_vi": "lời giải thích giúp thông tin rõ hơn",
+      "usage_pattern": "request/provide clarification about",
+      "example": "Finance requested clarification about the return journey.",
+      "example_vi": "Bộ phận tài chính yêu cầu làm rõ chuyến về.",
+      "synonyms": [
+        "explanation"
+      ],
+      "paraphrases": [
+        "additional information that makes something clear"
+      ],
+      "context": "Finance requested clarification about the return journey.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Paired Documents · Volunteer Plans & Expenses",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

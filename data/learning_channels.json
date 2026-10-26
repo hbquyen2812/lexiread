@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "channels": [
+    {
+      "id": "voa-learning-english", "name": "VOA Learning English", "mark": "VOA", "tone": "sky",
+      "levels": ["A1", "A2"], "skills": ["listening", "speaking", "vocabulary"], "accent_vi": "Giọng Mỹ",
+      "description_vi": "Hội thoại đời thường theo từng bài, dễ theo dõi khi bạn mới bắt đầu học tiếng Anh.",
+      "start_vi": "Let’s Learn English – Level 1, bắt đầu từ Lesson 1: Welcome! rồi học tiếp theo thứ tự.",
+      "task_vi": "Nghe một đoạn chào hỏi, dừng video và tự giới thiệu bản thân bằng 2–3 câu.",
+      "support_vi": "Trang bài học có lời thoại, phần luyện nói và bài tập đi kèm.",
+      "channel_url": "https://www.youtube.com/@VOALearningEnglish",
+      "start_url": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-one/3111026.html",
+      "source_url": "https://learningenglish.voanews.com/p/5644.html", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "easy-english", "name": "Easy English", "mark": "easy", "tone": "peach",
+      "levels": ["A1", "A2", "B1"], "skills": ["listening", "speaking"], "accent_vi": "Chủ yếu giọng Anh",
+      "description_vi": "Học cách người thật trò chuyện qua tình huống hằng ngày và phỏng vấn ngoài phố.",
+      "start_vi": "A1–A2: chọn Slow Easy English. Khi đã quen hơn, thử các Street Interviews.",
+      "task_vi": "Chọn một câu trả lời bạn thích, nghe lại rồi đổi vài từ để nói về chính mình.",
+      "support_vi": "Kênh có phụ đề tiếng Anh. Tài liệu bổ sung trong gói thành viên có thể tính phí.",
+      "channel_url": "https://www.youtube.com/@EasyEnglishVideos",
+      "start_url": "https://www.easyenglish.video/", "source_url": "https://www.easyenglish.video/", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "bbc-learning-english", "name": "BBC Learning English", "mark": "BBC", "tone": "sage",
+      "levels": ["A2", "B1", "B2"], "skills": ["listening", "vocabulary", "pronunciation"], "accent_vi": "Chủ yếu giọng Anh",
+      "description_vi": "Những bài nghe và giải thích ngôn ngữ theo chủ đề, thuận tiện để học một chút mỗi ngày.",
+      "start_vi": "A2: tìm Real Easy English trên kênh. B1–B2: thử 6 Minute English với một chủ đề bạn thích.",
+      "task_vi": "Nghe để nắm ý chính, chọn 3 cụm từ hữu ích rồi kể lại nội dung bằng 2 câu.",
+      "support_vi": "Chọn đúng loạt video: độ khó khác nhau giữa bài hội thoại cơ bản và bài về tin tức.",
+      "channel_url": "https://www.youtube.com/@bbclearningenglish",
+      "start_url": "https://www.youtube.com/@bbclearningenglish",
+      "source_url": "https://www.youtube.com/channel/UCHaHD477h-FeBbVh9Sh7syA", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "rachels-english", "name": "Rachel’s English", "mark": "R", "tone": "lavender",
+      "levels": ["A2", "B1", "B2", "C1"], "skills": ["pronunciation", "listening", "speaking"], "accent_vi": "Giọng Mỹ",
+      "description_vi": "Tập trung vào cách tạo âm, trọng âm và nhịp nói để bạn nghe rõ hơn và nói dễ hiểu hơn.",
+      "start_vi": "Bắt đầu với Sounds of American English. Khi đã quen các âm, chuyển sang bài về nối âm và nhịp câu.",
+      "task_vi": "Chọn một câu ngắn, ghi âm giọng mình rồi nghe lại để so trọng âm và những chỗ nối âm.",
+      "support_vi": "Nhiều video miễn phí; khóa học và tài liệu trong Academy là phần riêng có phí.",
+      "channel_url": "https://www.youtube.com/channel/UCvn_XCl_mgQmt3sD753zdJA",
+      "start_url": "https://rachelsenglish.com/practice-american-sounds/", "source_url": "https://rachelsenglish.com/", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "oxford-online-english", "name": "Oxford Online English", "mark": "OOE", "tone": "sky",
+      "levels": ["A2", "B1", "B2"], "skills": ["speaking", "work", "vocabulary", "ielts"], "accent_vi": "Có giọng Anh và Mỹ",
+      "description_vi": "Bài học theo tình huống cụ thể: nói về công việc, viết email, giao tiếp và chuẩn bị IELTS.",
+      "start_vi": "Thử Office Expressions – Visual Vocabulary. Chọn 3 cụm dùng được trong công việc hoặc việc học của bạn.",
+      "task_vi": "Viết một email ngắn có dùng 2 cụm vừa học. Từ vựng công việc cũng hữu ích khi luyện TOEIC.",
+      "support_vi": "Trang bài gợi ý có nội dung bài và bài tập. Đây là bài học tiếng Anh công việc, không phải đề TOEIC.",
+      "channel_url": "https://www.youtube.com/@Oxfordonlineenglish1",
+      "start_url": "https://www.youtube.com/watch?v=_B2OYMuaXD4", "source_url": "https://www.oxfordonlineenglish.com/office-expressions", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ielts-advantage", "name": "IELTS Advantage", "mark": "IA", "tone": "peach",
+      "levels": ["B1", "B2", "C1"], "skills": ["ielts"], "accent_vi": "Giảng bằng tiếng Anh",
+      "description_vi": "Tìm hiểu cách làm từng kỹ năng IELTS và cách nhận ra những lỗi mình hay mắc.",
+      "start_vi": "Xem bài hướng dẫn IELTS Reading được gợi ý, rồi chọn một dạng câu hỏi để luyện ngay trong LexiRead.",
+      "task_vi": "Làm lại một câu từng sai và ghi rõ bằng chứng trong bài. Đừng chỉ chép mẹo mà bỏ qua phần luyện.",
+      "support_vi": "Kênh luyện thi độc lập, không phải đơn vị tổ chức IELTS. Video miễn phí và khóa học có phí là hai phần riêng.",
+      "channel_url": "https://www.youtube.com/@IELTSadvantage",
+      "start_url": "https://www.youtube.com/watch?v=Kch2Tb_T2Pg", "source_url": "https://www.ieltsadvantage.com/ielts-reading-2/", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ted-ed", "name": "TED-Ed", "mark": "TED-Ed", "tone": "sage",
+      "levels": ["B2", "C1", "C2"], "skills": ["listening", "vocabulary", "ideas"], "accent_vi": "Nhiều người thuyết minh",
+      "description_vi": "Video hoạt hình về khoa học, ngôn ngữ và nhiều câu hỏi thú vị; hợp để mở rộng vốn từ theo chủ đề.",
+      "start_vi": "The benefits of a bilingual brain – Mia Nacamulli. Chọn chủ đề quen thuộc trước nếu thấy nhiều thuật ngữ.",
+      "task_vi": "B2: tóm tắt 3 ý. C1–C2: giải thích lại một ý khó bằng lời đơn giản và nêu câu hỏi bạn còn băn khoăn.",
+      "support_vi": "Đây là video kiến thức, không phải khóa tiếng Anh theo cấp độ. Tốc độ và thuật ngữ tùy bài.",
+      "channel_url": "https://www.youtube.com/@TEDEd",
+      "start_url": "https://www.youtube.com/watch?v=MMmOLN5zBLY", "source_url": "https://ed.ted.com/lessons/how-speaking-multiple-languages-benefits-the-brain-mia-nacamulli", "checked_at": "2026-10-26"
+    },
+    {
+      "id": "ted", "name": "TED", "mark": "TED", "tone": "lavender",
+      "levels": ["B2", "C1", "C2"], "skills": ["listening", "speaking", "ideas"], "accent_vi": "Nhiều giọng tiếng Anh",
+      "description_vi": "Luyện theo dõi một lập luận dài hơn, nghe nhiều giọng và học cách trình bày ý tưởng rõ ràng.",
+      "start_vi": "How to speak so that people want to listen – Julian Treasure. Bắt đầu bằng một đoạn 2–3 phút nếu cần.",
+      "task_vi": "Tóm tắt quan điểm của diễn giả, nêu một ví dụ và nói bạn đồng ý hay chưa đồng ý ở điểm nào.",
+      "support_vi": "Có thể đối chiếu bản chép lời trên TED.com. B2 nên chọn chủ đề quen; C1–C2 thử chủ đề mới và giảm dần phụ đề.",
+      "channel_url": "https://www.youtube.com/@TED",
+      "start_url": "https://www.youtube.com/watch?v=eIho2S0ZahI", "source_url": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen", "checked_at": "2026-10-26"
+    }
+  ]
+}

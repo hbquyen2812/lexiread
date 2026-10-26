@@ -1,0 +1,143 @@
+{
+  "slug": "a1-soup-for-a-neighbour",
+  "title": "Soup for a Neighbour",
+  "level": "A1",
+  "topic": "Gia đình & hàng xóm",
+  "summary": "Một bữa trưa đơn giản và một việc tử tế dành cho hàng xóm.",
+  "track": "general",
+  "revision": 1,
+  "order": 102,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "On Sunday, Ben helps his mother make soup. He washes carrots and potatoes. His mother cuts them into small pieces. There is a big pot on the stove. The kitchen is warm, and Ben is hungry.\n\nTheir neighbour, Mrs Green, is at home today. Her leg hurts, so she cannot go to the market. Ben's mother puts some soup in a box. Ben carries the box carefully to the house next door. He also takes a spoon.\n\nMrs Green opens the door and smiles. She says thank you and asks about Ben's school. They talk for a few minutes. When Ben goes home, his own lunch is ready. He tells his mother that Mrs Green likes the soup.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Chủ nhật, Ben giúp mẹ nấu súp. Em rửa cà rốt và khoai tây. Mẹ cắt chúng thành miếng nhỏ. Có một chiếc nồi lớn trên bếp. Căn bếp ấm áp và Ben thấy đói."
+      },
+      {
+        "index": 1,
+        "vi": "Hôm nay hàng xóm của họ, bà Green, ở nhà. Bà đau chân nên không thể đi chợ. Mẹ Ben cho một ít súp vào hộp. Ben cẩn thận mang hộp sang nhà bên cạnh. Em cũng mang theo một chiếc thìa."
+      },
+      {
+        "index": 2,
+        "vi": "Bà Green mở cửa và mỉm cười. Bà cảm ơn và hỏi về trường của Ben. Họ trò chuyện vài phút. Khi Ben về nhà, bữa trưa của em đã sẵn sàng. Em nói với mẹ rằng bà Green thích món súp."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "hungry",
+        "pos": "word / phrase",
+        "meaning_vi": "đói",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "On Sunday, Ben helps his mother make soup. He washes carrots and potatoes. His mother cuts them into small pieces. There is a big pot on the stove. The kitchen is warm, and Ben is hungry.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Gia đình & hàng xóm"
+        ]
+      },
+      {
+        "word": "neighbour",
+        "pos": "word / phrase",
+        "meaning_vi": "hàng xóm",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Their neighbour, Mrs Green, is at home today. Her leg hurts, so she cannot go to the market. Ben's mother puts some soup in a box. Ben carries the box carefully to the house next door. He also takes a spoon.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Gia đình & hàng xóm"
+        ]
+      },
+      {
+        "word": "carefully",
+        "pos": "word / phrase",
+        "meaning_vi": "cẩn thận",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Their neighbour, Mrs Green, is at home today. Her leg hurts, so she cannot go to the market. Ben's mother puts some soup in a box. Ben carries the box carefully to the house next door. He also takes a spoon.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Gia đình & hàng xóm"
+        ]
+      },
+      {
+        "word": "ready",
+        "pos": "word / phrase",
+        "meaning_vi": "sẵn sàng",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Mrs Green opens the door and smiles. She says thank you and asks about Ben's school. They talk for a few minutes. When Ben goes home, his own lunch is ready. He tells his mother that Mrs Green likes the soup.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Gia đình & hàng xóm"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Why does Mrs Green stay at home?",
+      "options": [
+        "The market is closed",
+        "Her leg hurts",
+        "She is cooking for Ben"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "Her leg hurts, so she cannot go to the market.",
+      "explanation_vi": "Bà đau chân nên không thể đi chợ."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What does Ben carry with the soup?",
+      "options": [
+        "A spoon",
+        "Some flowers",
+        "A book"
+      ],
+      "answer": 0,
+      "paragraph_index": 1,
+      "evidence": "He also takes a spoon.",
+      "explanation_vi": "Ben mang theo một chiếc thìa."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Mrs Green asks Ben about his school.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "asks about Ben's school.",
+      "explanation_vi": "Thông tin được nêu trực tiếp: TRUE."
+    }
+  ],
+  "faqs": []
+}

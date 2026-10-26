@@ -1,0 +1,563 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-26T05:50:32.386070+00:00",
+  "mode": "metadata_only",
+  "sources": [
+    {
+      "id": "ielts-academic",
+      "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "links": [
+        {
+          "title": "Listening Sample task Multiple Choice (one answer)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189697549&context=exam#/section/171826252/question/145591537/scorableItem/1",
+          "heading": "Listening Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Listening Sample task Multiple Choice (one answer) Answer Key (PDF 24 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-one-answer-answer-key.pdf",
+          "heading": "Listening Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Listening Sample task Multiple Choice (one answer) Recording Transcript (PDF 84 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-one-answer-transcript.pdf",
+          "heading": "Listening Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Listening Sample task Multiple Choice (more than one answer)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189696950&context=exam#/section/171824485/question/145454275/scorableItem/1",
+          "heading": "Listening Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Listening Sample task Multiple Choice (more than one answer) Answer Key (PDF 23 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+          "heading": "Listening Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Listening Sample task Multiple Choice (more than one answer) Recording Transcript (PDF 78 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-transcript.pdf",
+          "heading": "Listening Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Listening Sample task Plan/Map/Diagram Labelling",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189695339&context=exam#/section/174541820/question/174541819/scorableItem/1",
+          "heading": "Listening Sample task Plan/Map/Diagram Labelling (Type A)"
+        },
+        {
+          "title": "Listening Sample task Plan/Map/Diagram Labelling Answer Key (PDF 21 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-plan-map-diagram-labelling-answer-key.pdf",
+          "heading": "Listening Sample task Plan/Map/Diagram Labelling (Type A)"
+        },
+        {
+          "title": "Listening Sample task Plan/Map/Diagram Recording Transcript (PDF 75 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-plan-map-diagram-labelling-transcript.pdf",
+          "heading": "Listening Sample task Plan/Map/Diagram Labelling (Type A)"
+        },
+        {
+          "title": "Listening Sample task Note Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189696078&context=exam#/section/184163671/question/184163670/scorableItem/1",
+          "heading": "Listening Sample task Note Completion"
+        },
+        {
+          "title": "Listening Sample task Note Completion Answer Key (PDF 22 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-answer-key.pdf",
+          "heading": "Listening Sample task Note Completion"
+        },
+        {
+          "title": "Listening Sample task Note Completion Recording Transcript (PDF 92 KB - 2 pages)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-transcript.pdf",
+          "heading": "Listening Sample task Note Completion"
+        },
+        {
+          "title": "Listening Sample task Table Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189652254&context=exam#/section/181038775/question/181038772/scorableItem/1",
+          "heading": "Listening Sample task Table Completion"
+        },
+        {
+          "title": "Listening Sample task Table Completion Answer Key (PDF 26 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-table-completion-answer-key.pdf",
+          "heading": "Listening Sample task Table Completion"
+        },
+        {
+          "title": "Listening Sample task Table Completion Recording Transcript (PDF 31 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-table-completion-transcript.pdf",
+          "heading": "Listening Sample task Table Completion"
+        },
+        {
+          "title": "Listening Sample task Flow-chart Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189697842&context=exam#/section/181951855/question/181951854/scorableItem/1",
+          "heading": "Listening Sample task Flow-chart Completion (selecting from a list of words or phrases)"
+        },
+        {
+          "title": "Listening Sample task Flow-chart Completion Answer Key (PDF 92 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-flow-chart-completion-answer-key.pdf",
+          "heading": "Listening Sample task Flow-chart Completion (selecting from a list of words or phrases)"
+        },
+        {
+          "title": "Listening Sample task Flow-chart Completion Recording Transcript (PDF 40 KB - 2 pages)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-flow-chart-completion-transcript.pdf",
+          "heading": "Listening Sample task Flow-chart Completion (selecting from a list of words or phrases)"
+        },
+        {
+          "title": "Listening Sample task Sentence Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189694885&context=exam#/section/184163445/question/171795621/scorableItem/1",
+          "heading": "Listening Sample task Sentence Completion"
+        },
+        {
+          "title": "Listening Sample task Sentence Completion Answer Key (PDF 30 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-sentence-completion-answer-key.pdf",
+          "heading": "Listening Sample task Sentence Completion"
+        },
+        {
+          "title": "Listening Sample task Sentence Completion Recording Transcript (PDF 37 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-sentence-completion-transcript.pdf",
+          "heading": "Listening Sample task Sentence Completion"
+        },
+        {
+          "title": "Listening Sample task Short Answer Questions",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189694459&context=exam#/section/174309255/question/174309254/scorableItem/1",
+          "heading": "Listening Sample task Short Answer Questions"
+        },
+        {
+          "title": "Listening Sample task Short Answer Questions Answer Key (PDF 22 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-short-answer-answer-key.pdf",
+          "heading": "Listening Sample task Short Answer Questions"
+        },
+        {
+          "title": "Listening Sample task Short Answer Questions Recording Transcript (PDF 78 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-short-answer-transcript.pdf",
+          "heading": "Listening Sample task Short Answer Questions"
+        },
+        {
+          "title": "Academic Reading Sample task Multiple Choice (one answer)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189731922&context=exam#/section/188838305/question/167045955/scorableItem/1",
+          "heading": "Academic Reading Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Academic Reading Sample task Multiple Choice (one answer) Answer Key (PDF 21 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-one-answer-answer-key.pdf",
+          "heading": "Academic Reading Sample task Multiple Choice (one answer)"
+        },
+        {
+          "title": "Academic Reading Sample task Multiple Choice (more than one answer)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189731586&context=exam#/section/167017070/question/167017069/scorableItem/1",
+          "heading": "Academic Reading Sample task Multiple Choice (more than one answer)"
+        },
+        {
+          "title": "Academic Reading Sample task Multiple Choice (more than one answer) Answer Key (PDF 21 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+          "heading": "Academic Reading Sample task Multiple Choice (more than one answer)"
+        },
+        {
+          "title": "Academic Reading Sample task Identifying Information (True/False/Not Given)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189698592&context=exam#/section/145434101/question/145431062/scorableItem/1",
+          "heading": "Academic Reading Sample task Identifying Information (True/False/Not Given)"
+        },
+        {
+          "title": "Academic Reading Sample task Identifying Information (True/False/Not Given) Answer Key (PDF 17 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-identifying-information-true-flase-not-given-answer-key.pdf",
+          "heading": "Academic Reading Sample task Identifying Information (True/False/Not Given)"
+        },
+        {
+          "title": "Academic Reading Sample task Note Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189731313&context=exam#/section/181952126/question/181952124/scorableItem/1",
+          "heading": "Academic Reading Sample task Note Completion"
+        },
+        {
+          "title": "Academic Reading Sample task Note Completion Answer Key (PDF 21 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-note-completion-answer-key.pdf",
+          "heading": "Academic Reading Sample task Note Completion"
+        },
+        {
+          "title": "Academic Reading Sample task Table Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189698337&context=exam#/section/171765060/question/171765058/scorableItem/1",
+          "heading": "Academic Reading Sample task Table Completion"
+        },
+        {
+          "title": "Academic Reading Sample task Table Completion Answer Key (PDF 17 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-table-completion-answer-key.pdf",
+          "heading": "Academic Reading Sample task Table Completion"
+        },
+        {
+          "title": "Academic Reading Sample task Matching Features",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189732026&context=exam#/section/166779699/question/145599956/scorableItem/1",
+          "heading": "Academic Reading Sample task Matching Features"
+        },
+        {
+          "title": "Academic Reading Sample task Matching Features Answer Key (PDF 107 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-features-answer-key.pdf",
+          "heading": "Academic Reading Sample task Matching Features"
+        },
+        {
+          "title": "Academic Reading Sample task Summary Completion (selecting words from the text)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189698831&context=exam#/section/188837197/question/188837195/scorableItem/1",
+          "heading": "Academic Reading Sample task Summary Completion (selecting words from the text)"
+        },
+        {
+          "title": "Academic Reading Sample task Summary Completion (selecting words from the text) Answer Key (PDF 17 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-words-from-text-answer-key.pdf",
+          "heading": "Academic Reading Sample task Summary Completion (selecting words from the text)"
+        },
+        {
+          "title": "Academic Reading Sample task Summary Completion (selecting from a list of words or phrases)",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189699146&context=exam#/section/181951091/question/181951090/scorableItem/1",
+          "heading": "Academic Reading Sample task Summary Completion (selecting from a list of words or phrases)"
+        },
+        {
+          "title": "Academic Reading Sample task Summary Completion (selecting from a list of words or phrases) Answer Key (PDF 18 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-from-list-of-words-or-phrases-answer-key.pdf",
+          "heading": "Academic Reading Sample task Summary Completion (selecting from a list of words or phrases)"
+        },
+        {
+          "title": "Academic Reading Sample task Sentence Completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189731169&context=exam#/section/173942070/question/167043573/scorableItem/1",
+          "heading": "Academic Reading Sample task Sentence Completion"
+        },
+        {
+          "title": "Academic Reading Sample task Sentence Completion Answer Key (PDF 17 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-sentence-completion-answer-key.pdf",
+          "heading": "Academic Reading Sample task Sentence Completion"
+        },
+        {
+          "title": "Academic Reading Sample task Matching Sentence Endings",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189730855&context=exam#/section/181950576/question/171777129/scorableItem/1",
+          "heading": "Academic Reading Sample task Matching Sentence Endings"
+        },
+        {
+          "title": "Academic Reading Sample task Matching Sentence Endings Answer Key (PDF 17 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-sentence-endings-answer-key.pdf",
+          "heading": "Academic Reading Sample task Matching Sentence Endings"
+        },
+        {
+          "title": "Academic Writing Sample task Part 1",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=205993150&context=exam#/section/197676238/question/145423613/scorableItem/1",
+          "heading": "Academic Writing Sample tasks"
+        },
+        {
+          "title": "Academic Writing Sample task Part 2",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189733431&context=exam",
+          "heading": "Academic Writing Sample tasks"
+        },
+        {
+          "title": "Responses to Sample Part 2 with band scores and examiner comments (PDF 492 KB - 5 pages)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-writing/ielts-academic-writing-example-responses-to-parts-1-and-2-with-band-scores-and-examiner-comments.pdf",
+          "heading": "Academic Writing Sample tasks"
+        },
+        {
+          "title": "Academic Writing on Paper Sample task Part 1",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=502174689&context=exam",
+          "heading": "Academic Writing Sample tasks"
+        },
+        {
+          "title": "Academic Writing on Paper Sample task Part 2",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=502175647&context=exam",
+          "heading": "Academic Writing Sample tasks"
+        },
+        {
+          "title": "Speaking sample tasks (PDF, 1.31 MB, 7 pages)",
+          "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+          "heading": "Speaking sample tasks"
+        },
+        {
+          "title": "Listening test sample",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131012334&context=exam",
+          "heading": "IELTS practice experience"
+        },
+        {
+          "title": "Academic Reading sample",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013388&context=exam",
+          "heading": "IELTS practice experience"
+        },
+        {
+          "title": "Academic Writing sample",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013741&context=exam",
+          "heading": "IELTS practice experience"
+        },
+        {
+          "title": "Academic Writing on Paper sample",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=502166894&context=exam",
+          "heading": "IELTS practice experience"
+        }
+      ],
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "sha256": "8f5996417c29f3b55b3f906c91328e16791251b5e997606be17ee4bc6ed873d5",
+      "bytes_read": 226731
+    },
+    {
+      "id": "ielts-general",
+      "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "links": [
+        {
+          "title": "Multiple choice (one answer) - Answer key (PDF 24 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-one-answer-answer-key.pdf",
+          "heading": "Multiple choice (one answer)"
+        },
+        {
+          "title": "Multiple choice (one answer) - Recording transcript (PDF 84 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-one-answer-transcript.pdf",
+          "heading": "Multiple choice (one answer)"
+        },
+        {
+          "title": "Multiple choice (more than one answer) - Answer key (PDF 23 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+          "heading": "Multiple choice (more than one answer)"
+        },
+        {
+          "title": "Multiple choice (more than one answer) - Recording transcript (PDF 78 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-transcript.pdf",
+          "heading": "Multiple choice (more than one answer)"
+        },
+        {
+          "title": "Plan/Map/Diagram Labelling - Answer key (PDF 21 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-plan-map-diagram-labelling-answer-key.pdf",
+          "heading": "Plan/Map/Diagram Labelling (Type A)"
+        },
+        {
+          "title": "Plan/Map/Diagram - Recording transcript (PDF 75 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-plan-map-diagram-labelling-transcript.pdf",
+          "heading": "Plan/Map/Diagram Labelling (Type A)"
+        },
+        {
+          "title": "Note completion - Answer key (PDF 22 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-answer-key.pdf",
+          "heading": "Note completion"
+        },
+        {
+          "title": "Note completion - Recording transcript (PDF 92 KB - 2 pages)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-transcript.pdf",
+          "heading": "Note completion"
+        },
+        {
+          "title": "Table completion - Answer key (PDF 26 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-table-completion-answer-key.pdf",
+          "heading": "Table completion"
+        },
+        {
+          "title": "Table completion - Recording transcript (PDF 31 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-table-completion-transcript.pdf",
+          "heading": "Table completion"
+        },
+        {
+          "title": "Sentence completion - Answer key (PDF 30 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-sentence-completion-answer-key.pdf",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "Sentence completion - Recording transcript (PDF 37 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-sentence-completion-transcript.pdf",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "Short-answer questions - Answer key (PDF 22 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-short-answer-answer-key.pdf",
+          "heading": "Short-answer questions"
+        },
+        {
+          "title": "Short-answer questions - Recording transcript (PDF 78 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-short-answer-transcript.pdf",
+          "heading": "Short-answer questions"
+        },
+        {
+          "title": "General Training Sample task - Multiple choice",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189732383&context=exam#/section/185942360/question/185942358/scorableItem/1",
+          "heading": "Multiple choice"
+        },
+        {
+          "title": "General Training Sample task - Multiple choice - Answer key (PDF 49 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-multiple-choice-answer-key.pdf",
+          "heading": "Multiple choice"
+        },
+        {
+          "title": "General Training Sample task - True/False/Not Given",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189732223&context=exam#/section/145445178/question/145436122/scorableItem/1",
+          "heading": "True/False/Not Given"
+        },
+        {
+          "title": "General Training Sample task - True/False/Not Given - Answer key (PDF 49 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-identifying-information-true-false-not-given-answer-key.pdf",
+          "heading": "True/False/Not Given"
+        },
+        {
+          "title": "General Training Sample task - Matching information",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189733214&context=exam#/section/145595569/question/145594138/scorableItem/1",
+          "heading": "Matching information"
+        },
+        {
+          "title": "General Training Sample task - Matching information - Answer key (PDF 156 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-information-answer-key.pdf",
+          "heading": "Matching information"
+        },
+        {
+          "title": "General Training Sample task - Matching features",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189733329&context=exam#/section/166780192/question/166780191/scorableItem/1",
+          "heading": "Matching features"
+        },
+        {
+          "title": "General Training Sample task - Matching features - Answer key (PDF 49 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-features-answer-key.pdf",
+          "heading": "Matching features"
+        },
+        {
+          "title": "General Training Sample task - Summary completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189732477&context=exam#/section/184161323/question/184161321/scorableItem/1",
+          "heading": "Summary completion"
+        },
+        {
+          "title": "General Training Sample task - Summary completion - Answer key (PDF 49 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-summary-completion-answer-key.pdf",
+          "heading": "Summary completion"
+        },
+        {
+          "title": "General Training Sample task - Note completion",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189732842&context=exam#/section/174562393/question/174562392/scorableItem/1",
+          "heading": "Note completion"
+        },
+        {
+          "title": "General Training Sample task - Note completion - Answer key (PDF 65 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-note-completion-answer-key.pdf",
+          "heading": "Note completion"
+        },
+        {
+          "title": "Sentence completion - Answer key (PDF 239 KB - 1 page)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-sentence-completion-answer-key.pdf",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "General Training Sample task - Writing - Part 1",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189733708&context=exam#/section/166780572/question/145425559/scorableItem/1",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "General Training Sample task - Writing - Part 2",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189733579&context=exam#/section/145423437/question/145422735/scorableItem/1",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "General Training Writing sample scripts and examiner comments (PDF 362 KB - 3 pages)",
+          "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-writing/ielts-general-training-writing-example-responses-to-parts-1-and-2-with-band-scores-and-examiner-comments.pdf",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "General Training Sample task - Writing on Paper - Part 1",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=502177167&context=exam",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "General Training Sample task - Writing on Paper - Part 2",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=502177652&context=exam",
+          "heading": "Sentence completion"
+        },
+        {
+          "title": "Speaking sample tasks (PDF, 1.31 MB, 7 pages)",
+          "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+          "heading": "Speaking Sample tasks"
+        },
+        {
+          "title": "Listening test sample",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131012334&context=exam",
+          "heading": "IELTS practice experience"
+        },
+        {
+          "title": "Academic Reading sample",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013388&context=exam",
+          "heading": "IELTS practice experience"
+        },
+        {
+          "title": "Academic Writing sample",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013741&context=exam",
+          "heading": "IELTS practice experience"
+        },
+        {
+          "title": "Academic Writing on Paper sample",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=502166894&context=exam",
+          "heading": "IELTS practice experience"
+        }
+      ],
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "sha256": "3efcd591ae0c0510d0bfa5250855b1fb3375e1a675d22a64cdf2f457292f5fe4",
+      "bytes_read": 216152
+    },
+    {
+      "id": "british-council-academic",
+      "url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic/reading",
+      "links": [],
+      "status": "robots_denied_or_unavailable"
+    },
+    {
+      "id": "british-council-general",
+      "url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/general-training/reading",
+      "links": [],
+      "status": "robots_denied_or_unavailable"
+    },
+    {
+      "id": "ets-toeic",
+      "url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "links": [
+        {
+          "title": "Download (PDF)",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-test-examinee-handbook.pdf",
+          "heading": "Examinee Handbook and Sample Tests"
+        },
+        {
+          "title": "Download (PDF)",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf",
+          "heading": "Examinee Handbook and Sample Tests"
+        },
+        {
+          "title": "Download (PDF)",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-speaking-writing-sample-tests.pdf",
+          "heading": "TOEIC® Speaking and Writing tests"
+        },
+        {
+          "title": "Download (PDF)",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-listening-reading-tests-examinee-handbook.pdf",
+          "heading": "TOEIC Bridge® tests"
+        },
+        {
+          "title": "Download (PDF)",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-sample-test-listening-reading.pdf",
+          "heading": "TOEIC Bridge® tests"
+        },
+        {
+          "title": "Download (PDF)",
+          "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-sample-test-speaking-writing.pdf",
+          "heading": "TOEIC Bridge® tests"
+        }
+      ],
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "sha256": "853916c39e5c5d84abc8634fb4aaeb8c33ac30e6d49653c4061a37d96d46548e",
+      "bytes_read": 133342
+    },
+    {
+      "id": "idp-reading",
+      "url": "https://ielts.idp.com/prepare/all-test-types/reading",
+      "links": [
+        {
+          "title": "IELTS practice tests",
+          "url": "https://ielts.idp.com/prepare/all-test-types/reading/practice-test",
+          "heading": "Explore our official IDP IELTS preparation materials Reading"
+        },
+        {
+          "title": "",
+          "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013388&context=exam#/section/128121930/question/128121896/scorableItem/1",
+          "heading": "IELTS Practice tests"
+        },
+        {
+          "title": "",
+          "url": "https://ielts.inspera.com/player/?assessmentRunId=189698337&context=exam#/section/171765060/question/171765058/scorableItem/1",
+          "heading": "IELTS Academic Reading : Summary Completion (select from list of words)"
+        }
+      ],
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.idp.com/prepare/all-test-types/reading",
+      "sha256": "5f5d281f13f982c29e1e81b3844d75f531e4f4bd28b7f7b5bb6c1f84dcb30ab9",
+      "bytes_read": 493728
+    }
+  ]
+}

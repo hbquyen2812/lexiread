@@ -1,0 +1,143 @@
+{
+  "slug": "a1-a-bus-to-the-park",
+  "title": "A Bus to the Park",
+  "level": "A1",
+  "topic": "Đi lại",
+  "summary": "Đọc lịch xe buýt và tìm đường đến công viên cùng Linh.",
+  "track": "general",
+  "revision": 1,
+  "order": 101,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "It is Saturday. Linh wants to visit the park with her brother. They walk to the bus stop near their home. A sign says that bus number eight goes to the park. The next bus comes at nine o'clock.\n\nThey wait on a bench. Her brother has a blue bag with two bottles of water. Linh has some bread. When the bus arrives, they get on and sit near the front. They can see the shops through the window.\n\nThe driver stops outside the park. Linh thanks him. The children find a quiet place under a tree and eat their bread. They do not need to hurry. Their bus home leaves in the afternoon.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Hôm nay là thứ Bảy. Linh muốn đến công viên cùng em trai. Hai chị em đi bộ đến trạm xe buýt gần nhà. Một tấm biển cho biết xe buýt số tám đến công viên. Chuyến tiếp theo đến lúc chín giờ."
+      },
+      {
+        "index": 1,
+        "vi": "Hai chị em ngồi chờ trên ghế. Em trai mang một chiếc túi xanh có hai chai nước. Linh mang ít bánh mì. Khi xe đến, họ lên xe và ngồi gần phía trước. Qua cửa sổ, họ nhìn thấy các cửa hàng."
+      },
+      {
+        "index": 2,
+        "vi": "Tài xế dừng bên ngoài công viên. Linh cảm ơn bác. Hai chị em tìm một chỗ yên tĩnh dưới gốc cây và ăn bánh mì. Họ không cần vội. Xe về nhà khởi hành vào buổi chiều."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "bus stop",
+        "pos": "word / phrase",
+        "meaning_vi": "trạm xe buýt",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "It is Saturday. Linh wants to visit the park with her brother. They walk to the bus stop near their home. A sign says that bus number eight goes to the park. The next bus comes at nine o'clock.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Đi lại"
+        ]
+      },
+      {
+        "word": "wait",
+        "pos": "word / phrase",
+        "meaning_vi": "chờ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "They wait on a bench. Her brother has a blue bag with two bottles of water. Linh has some bread. When the bus arrives, they get on and sit near the front. They can see the shops through the window.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Đi lại"
+        ]
+      },
+      {
+        "word": "arrives",
+        "pos": "word / phrase",
+        "meaning_vi": "đến",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "They wait on a bench. Her brother has a blue bag with two bottles of water. Linh has some bread. When the bus arrives, they get on and sit near the front. They can see the shops through the window.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Đi lại"
+        ]
+      },
+      {
+        "word": "hurry",
+        "pos": "word / phrase",
+        "meaning_vi": "vội",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The driver stops outside the park. Linh thanks him. The children find a quiet place under a tree and eat their bread. They do not need to hurry. Their bus home leaves in the afternoon.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Đi lại"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Which bus goes to the park?",
+      "options": [
+        "Number two",
+        "Number nine",
+        "Number eight"
+      ],
+      "answer": 2,
+      "paragraph_index": 0,
+      "evidence": "bus number eight goes to the park.",
+      "explanation_vi": "Xe số tám đến công viên; chín là giờ xe đến."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Where do the children eat?",
+      "options": [
+        "On the bus",
+        "Under a tree",
+        "In a shop"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "under a tree and eat their bread.",
+      "explanation_vi": "Hai chị em ăn dưới gốc cây."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Linh and her brother sit near the back of the bus.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "sit near the front.",
+      "explanation_vi": "Họ ngồi gần phía trước, không phải phía sau."
+    }
+  ],
+  "faqs": []
+}

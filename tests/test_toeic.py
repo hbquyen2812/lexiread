@@ -7,8 +7,9 @@ class ToeicContentTests(unittest.TestCase):
     def test_two_modes_and_inventory(self):
         sets=toeic_sets()
         self.assertEqual({item['mode'] for item in sets},{'parts-5-6','part-7'})
-        self.assertEqual(sum(item['question_count'] for item in sets),24)
-        self.assertEqual(sum(len(item['focus_vocabulary']) for item in sets),16)
+        self.assertEqual(len(sets),14)
+        self.assertEqual(sum(item['question_count'] for item in sets),192)
+        self.assertEqual(sum(len(item['focus_vocabulary']) for item in sets),88)
 
     def test_public_payload_hides_keys_and_explanations(self):
         for practice in toeic_sets():

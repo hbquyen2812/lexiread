@@ -6,22 +6,23 @@ from django.core.exceptions import ValidationError
 
 
 class EmailAuthenticationForm(AuthenticationForm):
-    username = forms.EmailField(
-        label="Email",
-        widget=forms.EmailInput(
-            attrs={"autocomplete": "email", "autofocus": True, "placeholder": "ban@example.com"}
+    username = forms.CharField(
+        label="Tên đăng nhập hoặc email", max_length=254,
+        widget=forms.TextInput(
+            attrs={"autocomplete": "username", "autofocus": True, "placeholder": "Tên đăng nhập hoặc email"}
         ),
     )
     error_messages = {
-        "invalid_login": "Email hoặc mật khẩu không đúng.",
+        "invalid_login": "Tên đăng nhập/email hoặc mật khẩu không đúng.",
         "inactive": "Tài khoản này đang bị khóa.",
     }
 
     def clean(self):
-        email = self.cleaned_data.get("username")
-        if email:
+        identifier = self.cleaned_data.get("username", "").strip()
+        if identifier:
+            query = {"email__iexact": identifier} if "@" in identifier else {"username__iexact": identifier}
             matches = list(
-                get_user_model().objects.filter(email__iexact=email).values_list("username", flat=True)[:2]
+                get_user_model().objects.filter(**query).values_list("username", flat=True)[:2]
             )
             if len(matches) != 1:
                 raise ValidationError(self.error_messages["invalid_login"], code="invalid_login")

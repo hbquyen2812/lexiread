@@ -1,66 +1,87 @@
-# Biên soạn và mở rộng thư viện LexiRead
+# Quản lý và nhập nội dung LexiRead
 
-## Hợp đồng nội dung
+## Hằng ngày — không sửa code, không deploy lại
 
-Mỗi file UTF-8 JSON trong `data/lessons` là một bài hoàn chỉnh. Để tạo bài mới, sao chép một file hiện có, đổi slug, tiêu đề, nội dung và toàn bộ phần học tương ứng. Không thay passage mà để nguyên câu hỏi/bằng chứng của bài khác.
+1. Đăng nhập `/admin/` bằng tài khoản có `is_staff` và quyền **add + change** cho CuratedLesson hoặc ToeicPractice.
+2. Vào **Curated lessons** (tổng quát/IELTS) hoặc **Toeic practices** → **Nhập file / bộ dữ liệu**.
+3. Chọn file → **Kiểm tra & xem trước**. Xem mã, trình độ, số câu và văn bản; bước này chưa tạo bài trong thư viện.
+4. **Xác nhận lưu nháp**. Cả đợt nhập thành công hoặc không bài nào bị thay đổi. Xem trước hết hạn sau 30 phút và chỉ người tạo dùng được.
+5. Mở bài nháp, duyệt nguồn/quyền sử dụng, bản dịch, đáp án và dẫn chứng. Tick **published** → Lưu. Website đọc trực tiếp PostgreSQL, không cần build/deploy lại.
 
-| Trường | Quy tắc |
-|---|---|
-| `slug` | ID bền vững, chữ thường/số/gạch nối, duy nhất. Ví dụ `a-quiet-start`. |
-| `title`, `topic`, `summary` | Tiêu đề tiếng Anh, chủ đề và giới thiệu ngắn tiếng Việt. |
-| `level`, `level_note` | A1–C2 được schema hỗ trợ; phải nói rõ khi chỉ ước lượng. Bộ hiện có A2/B1/B2. |
-| `revision`, `order`, `published` | Phiên bản ≥1, thứ tự không âm, boolean xuất bản. |
-| `text` | Văn bản Anh; một dòng trống giữa các đoạn. |
-| `author`, `provenance` | Ai biên soạn và quyền/nguồn sử dụng. |
-| `analysis.translations` | Đủ mọi đoạn; `paragraph_index` bắt đầu từ 0. |
-| `analysis.vocabulary` | Từ/cụm thực sự có trong ngữ cảnh; nghĩa, từ loại, synonym, paraphrase, note. |
-| `analysis.grammar` | Cấu trúc, giải thích, ví dụ ngắn và bằng chứng nguyên văn. |
-| `questions` | 1–20 câu, id riêng, loại, prompt, 2–4 options, answer index, lý do Việt, đoạn+quote. |
-| `faqs` | 0–20 giải đáp soạn sẵn, question/answer_vi/paragraph_index/evidence. |
+Cũng có thể chọn 1–100 bài ở danh sách → **Duyệt và xuất bản các bài đã chọn** → xem danh sách → xác nhận. Bản xác nhận có hiệu lực 30 phút, gắn với phiên bản và người quản trị. Nếu một bài lỗi hoặc đã bị sửa, cả đợt không xuất bản; không công khai nửa chừng.
 
-Xem `data/lessons/a-quiet-start.json` để dùng đúng tên trường. Schema nội bộ và validator ở `learning/services/analysis.py`, `catalog.py`. Không đưa HTML/JavaScript vào nội dung; app hiển thị như chữ.
+Nhập luôn lưu nháp, kể cả JSON có `published: true`. Trùng slug bị từ chối mặc định. Muốn thay bài: bỏ xuất bản, tăng `revision` trong JSON, bật cho phép cập nhật rồi xem trước. Bản học của người đã mở bài giữ nguyên. Sửa qua form tự tăng revision; từ chối form cũ khi người khác đã sửa.
 
-`answer` là **chỉ số bắt đầu từ 0**, không phải A/B/C/D. Câu `tfng` dùng options đúng thứ tự `TRUE`, `FALSE`, `NOT GIVEN`. Với NOT GIVEN, trích thông tin gần nhất và giải thích rõ điều gì chưa được nói, không tạo một câu trích giả để chứng minh sự vắng mặt.
+Không xóa bài seed chỉ để ẩn: lần khởi động sau có thể thêm lại. Dùng **published = false** để ẩn bền vững.
 
-## Quy trình biên soạn
+## Định dạng
 
-Viết bài với độ dài và độ khó nhất quán → dịch theo đúng đoạn → chọn ít từ có giá trị → thêm cấu trúc cần học → viết câu hỏi chỉ dựa trên bài → chọn bằng chứng đúng → soát đáp án và phương án nhiễu → kiểm tra máy → duyệt ngôn ngữ → xuất bản.
+- **JSON:** một bài, danh sách 1–100 bài, gói xuất từ admin hoặc `lexiread_data_v1/data/lessons.json`.
+- **TXT/MD UTF-8, DOCX, PDF có lớp chữ:** tạo bài đọc nháp. Điền slug, tên, trình độ, chủ đề trong form. Không tự sinh bản dịch/đáp án. PDF tối đa 30 trang; chưa có OCR.
+- Tối đa 8 MB/file; bài đọc tối đa 60.000 ký tự. Không nhận ZIP, SQL hoặc URL fetch.
+- **Xuất:** chọn tối đa 100 bài → action Xuất JSON. File chứa đáp án và metadata quản trị; không đưa vào `static/`.
 
-Các ví dụ hư cấu được ghi là hư cấu. Bài giải thích kiến thức khoa học, y tế, xã hội hoặc dữ liệu thật cần nguồn và kiểm chứng phù hợp; không biến câu chuyện trong bài thành khẳng định thực tế. Không gán level chính thức hoặc “đạt band” chỉ từ độ dài/từ khó.
+Gói xuất có `format: "lexiread-content"`, `version: 1`, `kind: "lesson"` hoặc `"toeic"`, và `items` là danh sách bài. Xuất một bài hiện có để lấy mẫu; xem thêm `data/lessons/a-quiet-start.json`, `data/toeic/`.
+
+## Bộ lexiread_data_v1
+
+Không chạy SQL của gói: schema đó tách rời, website không tự đọc được. Adapter `learning/editorial/dataset.py` ánh xạ vào models hiện tại.
+
+Nhập **cùng file `data/lessons.json` hai lần, ở hai mục khác nhau**:
+
+| Mục admin | Bản ghi nháp | Cần làm tiếp |
+|---|---:|---|
+| Curated lessons | 42 | 12 IELTS + 30 phổ thông; chưa có bản dịch từng đoạn |
+| Toeic practices | 18 | 6 Part 5, 6 Part 6, 6 Part 7; duyệt nội dung trước publish |
+
+Giữ đủ 336 câu đọc/ngữ pháp và 504 mục từ theo ngữ cảnh. 504 câu ôn nghĩa bổ sung được giữ trong `editorial.original.vocabulary_questions`, **chưa có màn làm riêng cho bộ câu này**. Sau publish, người học vẫn lưu các mục từ vào kho để ôn theo chế độ sẵn có.
+
+ID bền vững: `iel_001` → `pack-v1-iel-001`, không trùng bài cũ. Giữ nhánh học/tuổi/nguồn và dữ liệu gốc trong `editorial` để truy vết. Bài phổ thông ở nhánh general, phân mức pre-A1–C2; chưa có bộ lọc cấp trường riêng.
+
+Theo metadata gói: AI tự biên soạn, tình huống hư cấu, chưa có giáo viên đánh giá độc lập; nguồn ngoài chỉ tham khảo cấu trúc/trình độ. Không gắn nhãn đề chính thức, full mock, dự đoán điểm hay chứng nhận CEFR. Kiểm tra cấu trúc không chứng minh nội dung đúng về sư phạm.
+
+## Biên tập và chấm bài
+
+Form bài đọc có ô văn bản, bản dịch và bộ tạo câu hỏi, không phải viết JSON cho các phần này. Mỗi đoạn/bản dịch cách nhau một dòng trống, đúng thứ tự. Chỉ số đoạn đầu là **0**. Từ vựng/ngữ pháp/FAQ là JSON nâng cao, không bắt buộc. TOEIC hiện nhập theo mẫu và sửa JSON trong admin; chưa có form trực quan cho từng câu TOEIC.
+
+- Trắc nghiệm ý chính/chi tiết/từ vựng/suy luận, ghép tiêu đề/thông tin: 2–8 lựa chọn, `answer` là chỉ số từ 0.
+- `tfng`: TRUE, FALSE, NOT GIVEN. `ynng`: YES, NO, NOT GIVEN, đúng thứ tự.
+- `gap_fill`, `short_answer`: `options: []`, đáp án chữ, `accepted_answers`, `max_words`. Chấm chính xác sau chuẩn hóa Unicode/chữ hoa–thường/khoảng trắng; không chấm gần đúng, không bỏ dấu câu. Từ có gạch nối tính là một từ.
+
+Publish cần 1–20 câu và trích dẫn đúng đoạn. Bản dịch có hai chế độ rõ ràng:
+
+- `translation_status: "complete"` (mặc định): đủ bản dịch cho mọi đoạn (`analysis.translations`: `index`, `vi`).
+- `translation_status: "not_provided"`: `translations: []`, giao diện ghi **chưa có bản dịch**, không hiện cột dịch rỗng. Gói 42 bài được nhập ở chế độ này. Không dùng bản dịch giả hoặc bản dịch chỉ có vài đoạn để vượt kiểm tra.
+
+Với NOT GIVEN, trích đoạn liên quan và giải thích điều còn thiếu; không bịa dẫn chứng. Validator không kiểm định CEFR hoặc chất lượng học thuật. Tài liệu này chỉ hướng dẫn xuất bản; không chứng nhận gói AI đã được giáo viên duyệt.
+
+## Từ vựng và flashcard
+
+Mỗi mục nên có `word`, `pos`, `meaning_vi`, `usage_pattern` (cấu trúc hoặc collocation), `example` (một câu đơn giản), `example_vi`, `synonyms`, `paraphrases`. `context` giữ trích đoạn gốc để tra cứu, **không thay ví dụ trên mặt thẻ**. Nếu chưa có ví dụ/cấu trúc, giao diện báo thiếu và cho sửa; không tự bịa.
+
+Adapter lấy `collocation` → `usage_pattern`; lấy `paraphrases` nếu có, nếu không thì dùng `definition_en` để diễn giải nghĩa, không khẳng định có thể thay nguyên cụm vào mọi câu. Từ gần nghĩa phụ thuộc ngữ cảnh. Các bộ TOEIC cũng có mục từ vựng trọng tâm để xem/lưu.
+
+Thẻ cũ vẫn đọc được; trường mới mặc định rỗng. Thẻ đã lưu và snapshot bài cũ không bị tự ghi đè khi cập nhật thư viện. Có thể sửa thẻ cá nhân trong **Kho từ → Sửa**. CSV và backup học tập giữ được `usage_pattern`.
+
+## Ranh giới dữ liệu
+
+- CuratedLesson / ToeicPractice: nội dung chung trong PostgreSQL.
+- Reading.lesson_snapshot: bài người học đã mở, không bị đổi khi sửa thư viện.
+- ToeicAttempt.snapshot: đề lúc nộp. Nếu nguồn đổi giữa lúc làm, server từ chối revision cũ và yêu cầu bắt đầu lại.
+- Vocabulary và tiến độ thuộc người học; nhập thư viện không tự thêm thẻ cá nhân.
+- ContentImport: bản xem trước; áp dụng xong xóa bản sao payload. `cleanup_content_imports` dọn bản quá 7 ngày; lịch sử thao tác ở admin LogEntry.
+
+Backup học tập v4 vẫn tương thích bản cũ; lượt TOEIC mới kèm snapshot. Backup này không thay thế backup PostgreSQL cho thư viện chung/tài khoản/nhật ký.
+
+## CLI tùy chọn
 
 ```powershell
-python scripts/validate_lessons.py
-python -m unittest discover -s tests -v
-python scripts/build_preview.py
+# Chỉ kiểm tra; không ghi database
+python manage.py import_content lexiread_data_v1/data/lessons.json --kind lesson
+python manage.py import_content lexiread_data_v1/data/lessons.json --kind toeic
+
+# Lưu nháp trên database đã xác nhận là đích cần nhập
+python manage.py import_content lexiread_data_v1/data/lessons.json --kind lesson --apply --editor YOUR_ADMIN_USERNAME
 ```
 
-Lệnh unit test có inventory test cho bộ 12 bài khởi đầu; khi chủ động thêm nội dung, cập nhật kỳ vọng số lượng trong `tests/test_reading_platform.py`. `validate_lessons.py` không cố định số 12. Cần cài dependency của project; riêng validator cơ bản dùng jsonschema và các module Python nội bộ.
-
-`build_preview.py` đưa file JSON vào HTML. Với backend:
-
-```powershell
-# Thêm bài chưa tồn tại, không đụng nội dung/tiến độ hiện có
-python manage.py seed_lessons
-
-# Chủ động cập nhật bài chuẩn theo file (nên tăng revision trước)
-python manage.py seed_lessons --update
-```
-
-Bản Docker mặc định COPY code/data vào image, không bind-mount. Khi sửa file trong máy, build lại image trước:
-
-```powershell
-docker compose up --build -d
-docker compose exec web python manage.py seed_lessons --update
-```
-
-Seed không cập nhật snapshot đã mở; đây là lựa chọn giữ ổn định bài đang học, không phải lỗi đồng bộ. Muốn quản lý nhiều phiên bản và chuyển bản học cũ, cần thêm workflow duyệt nâng cấp có chủ đích, chưa có trong v2.
-
-## Dữ liệu chung không phải dữ liệu người học
-
-`CuratedLesson` là nội dung biên tập dùng chung; `Reading` với `catalog_slug` là bản riêng của một người; `Vocabulary`, `ReadingQuestion`, `LessonAttempt` thuộc bản học/tài khoản đó. Không chuyển bài tự import sang `CuratedLesson` nếu chưa được phép xuất bản.
-
-File `scripts/author_lessons.py` là nguồn biên soạn bộ khởi đầu. Chạy lại nó có thể ghi đè các file JSON bài mẫu; không dùng như lệnh học hằng ngày và không chạy sau khi đã tự sửa bài mà chưa backup. Thêm JSON độc lập không cần sửa script này.
-
-## Hạn chế kiểm tra tự động
-
-Validator kiểm tra hình thức, option index, chỉ số đoạn, câu trích có thật và bản dịch đủ đoạn. Nó không chấm được bản dịch tự nhiên hay câu hỏi chỉ có duy nhất một đáp án đúng về nghĩa. Người biên soạn vẫn cần đọc duyệt. Đáp án ẩn khỏi API xem bài, nhưng có trong backup và HTML offline; đây là học cá nhân, không phải nền tảng thi chống gian lận.
+Không cần terminal Render để thêm bài: upload qua `/admin/` là luồng chính. `seed_lessons` / `seed_toeic` chỉ bootstrap bài đi kèm, mặc định không ghi đè. `seed_lessons --update` chỉ nhận revision cao hơn. Các script `author_lessons.py` / `author_expansion.py` tái tạo seed, không chạy lại sau khi tự sửa file mà chưa backup. `preview.html` chỉ đóng gói seed công khai, không đồng bộ admin/bài nháp.

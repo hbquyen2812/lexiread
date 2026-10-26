@@ -73,8 +73,8 @@ class PrivateLibraryTests(TestCase):
         self.word.refresh_from_db();self.assertIsNone(self.word.reading_id)
     def test_backup_ownership_and_merge(self):
         payload=export_library(self.alice)
-        self.assertEqual(payload['version'],4);self.assertEqual(len(payload['vocabulary']),1)
-        self.assertEqual(payload['counts'],{'readings':1,'vocabulary':1,'reviews':0,'toeic_attempts':0})
+        self.assertEqual(payload['version'],5);self.assertEqual(len(payload['vocabulary']),1)
+        self.assertEqual(payload['counts'],{'readings':1,'vocabulary':1,'reviews':0,'toeic_attempts':0,'foundation_attempts':0})
         result=import_library(self.bob,payload)
         self.assertEqual(result['created'],1)
         clone=Vocabulary.objects.get(owner=self.bob,word='bold')

@@ -1,0 +1,143 @@
+{
+  "slug": "a1-the-red-notebook",
+  "title": "The Red Notebook",
+  "level": "A1",
+  "topic": "Trường học",
+  "summary": "Một cuốn vở nhỏ giúp An nhớ những điều mới mỗi ngày.",
+  "track": "general",
+  "revision": 1,
+  "order": 100,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "An has a small red notebook. He takes it to school every day. In the morning, he writes three English words in it. He does not write long sentences. He draws a small picture next to each word.\n\nAfter lunch, An opens the notebook with his friend Lan. Lan looks at the pictures and says the words. Then An closes the book and tries to remember them. Sometimes he forgets a word. Lan helps him, and they try again.\n\nAt home, An shows one new word to his father. Today the word is garden. They look out of the window together. There is a little garden outside. An smiles. Now the word is part of his day.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "An có một cuốn vở nhỏ màu đỏ. Em mang nó đến trường mỗi ngày. Buổi sáng, em viết ba từ tiếng Anh vào vở. Em không viết câu dài. Em vẽ một bức tranh nhỏ bên cạnh mỗi từ."
+      },
+      {
+        "index": 1,
+        "vi": "Sau bữa trưa, An mở vở cùng bạn Lan. Lan nhìn tranh và đọc các từ. Sau đó An đóng vở và cố nhớ lại. Đôi khi em quên một từ. Lan giúp em và cả hai thử lại."
+      },
+      {
+        "index": 2,
+        "vi": "Ở nhà, An chỉ cho bố một từ mới. Hôm nay đó là từ garden, nghĩa là khu vườn. Hai bố con cùng nhìn ra cửa sổ. Bên ngoài có một khu vườn nhỏ. An mỉm cười. Giờ đây từ đó là một phần trong ngày của em."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "notebook",
+        "pos": "word / phrase",
+        "meaning_vi": "cuốn vở",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "An has a small red notebook. He takes it to school every day. In the morning, he writes three English words in it. He does not write long sentences. He draws a small picture next to each word.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Trường học"
+        ]
+      },
+      {
+        "word": "draws",
+        "pos": "word / phrase",
+        "meaning_vi": "vẽ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "An has a small red notebook. He takes it to school every day. In the morning, he writes three English words in it. He does not write long sentences. He draws a small picture next to each word.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Trường học"
+        ]
+      },
+      {
+        "word": "remember",
+        "pos": "word / phrase",
+        "meaning_vi": "nhớ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "After lunch, An opens the notebook with his friend Lan. Lan looks at the pictures and says the words. Then An closes the book and tries to remember them. Sometimes he forgets a word. Lan helps him, and they try again.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Trường học"
+        ]
+      },
+      {
+        "word": "garden",
+        "pos": "word / phrase",
+        "meaning_vi": "khu vườn",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "At home, An shows one new word to his father. Today the word is garden. They look out of the window together. There is a little garden outside. An smiles. Now the word is part of his day.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Trường học"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "What does An draw beside each word?",
+      "options": [
+        "A small picture",
+        "A long sentence",
+        "A number"
+      ],
+      "answer": 0,
+      "paragraph_index": 0,
+      "evidence": "He draws a small picture next to each word.",
+      "explanation_vi": "An vẽ một bức tranh nhỏ bên cạnh mỗi từ."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Who studies with An after lunch?",
+      "options": [
+        "His father",
+        "His teacher",
+        "Lan"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "After lunch, An opens the notebook with his friend Lan.",
+      "explanation_vi": "Lan cùng An xem vở sau bữa trưa."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "An writes ten new words every morning.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "he writes three English words in it.",
+      "explanation_vi": "Bài nói ba từ, không phải mười từ: FALSE."
+    }
+  ],
+  "faqs": []
+}

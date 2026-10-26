@@ -1,0 +1,175 @@
+{
+  "slug": "b1-a-different-lunch-break",
+  "title": "A Different Lunch Break",
+  "level": "B1",
+  "topic": "Công việc & cân bằng",
+  "summary": "Thử thay đổi giờ nghỉ trưa và nhìn lại điều thật sự có ích.",
+  "track": "general",
+  "revision": 1,
+  "order": 107,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "For months, Leo had eaten lunch at his desk while answering messages. He believed that this habit saved time. Yet by mid-afternoon, he often reread the same paragraph without understanding it. When a colleague invited him on a short lunchtime walk, he almost refused. There were still several tasks on his list, and leaving the office felt irresponsible.\n\nHe agreed to try it for a week. They walked slowly around the block, without checking their phones. Some days they talked about work; on others they noticed the changing displays in a shop window. Leo still had busy afternoons, but returning to his desk felt less difficult. He began writing down which tasks he finished instead of counting only the minutes he spent sitting there.\n\nThe experiment did not solve every problem. On rainy days, Leo preferred to eat in the shared kitchen. He also learned that his colleague enjoyed walking alone sometimes. They stopped treating the walk as a daily appointment and kept it as an option. The useful change was not a particular route or companion. It was allowing himself a real break.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Suốt nhiều tháng, Leo ăn trưa tại bàn trong khi trả lời tin nhắn. Anh tin thói quen ấy tiết kiệm thời gian. Nhưng đến giữa chiều, anh thường đọc lại cùng một đoạn mà không hiểu. Khi đồng nghiệp rủ đi bộ ngắn vào giờ trưa, anh suýt từ chối. Danh sách vẫn còn nhiều việc và rời văn phòng khiến anh cảm thấy thiếu trách nhiệm."
+      },
+      {
+        "index": 1,
+        "vi": "Anh đồng ý thử trong một tuần. Họ đi chậm quanh khu nhà, không kiểm tra điện thoại. Có ngày họ nói về công việc, ngày khác họ để ý những thay đổi trong tủ trưng bày của cửa hàng. Buổi chiều của Leo vẫn bận nhưng trở lại bàn làm việc có vẻ bớt khó khăn. Anh bắt đầu ghi những việc hoàn thành thay vì chỉ đếm số phút ngồi tại bàn."
+      },
+      {
+        "index": 2,
+        "vi": "Thử nghiệm không giải quyết mọi vấn đề. Ngày mưa, Leo thích ăn trong bếp chung. Anh cũng biết đồng nghiệp đôi khi thích đi một mình. Họ không còn coi cuộc đi bộ là lịch hẹn bắt buộc mỗi ngày mà giữ nó như một lựa chọn. Thay đổi hữu ích không nằm ở tuyến đường hay người đi cùng, mà ở việc cho phép bản thân nghỉ thực sự."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "habit",
+        "pos": "word / phrase",
+        "meaning_vi": "thói quen",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "For months, Leo had eaten lunch at his desk while answering messages. He believed that this habit saved time. Yet by mid-afternoon, he often reread the same paragraph without understanding it. When a colleague invited him on a short lunchtime walk, he almost refused. There were still several tasks on his list, and leaving the office felt irresponsible.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Công việc & cân bằng"
+        ]
+      },
+      {
+        "word": "refused",
+        "pos": "word / phrase",
+        "meaning_vi": "từ chối",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "For months, Leo had eaten lunch at his desk while answering messages. He believed that this habit saved time. Yet by mid-afternoon, he often reread the same paragraph without understanding it. When a colleague invited him on a short lunchtime walk, he almost refused. There were still several tasks on his list, and leaving the office felt irresponsible.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Công việc & cân bằng"
+        ]
+      },
+      {
+        "word": "displays",
+        "pos": "word / phrase",
+        "meaning_vi": "các phần trưng bày",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "He agreed to try it for a week. They walked slowly around the block, without checking their phones. Some days they talked about work; on others they noticed the changing displays in a shop window. Leo still had busy afternoons, but returning to his desk felt less difficult. He began writing down which tasks he finished instead of counting only the minutes he spent sitting there.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Công việc & cân bằng"
+        ]
+      },
+      {
+        "word": "finished",
+        "pos": "word / phrase",
+        "meaning_vi": "hoàn thành",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "He agreed to try it for a week. They walked slowly around the block, without checking their phones. Some days they talked about work; on others they noticed the changing displays in a shop window. Leo still had busy afternoons, but returning to his desk felt less difficult. He began writing down which tasks he finished instead of counting only the minutes he spent sitting there.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Công việc & cân bằng"
+        ]
+      },
+      {
+        "word": "companion",
+        "pos": "word / phrase",
+        "meaning_vi": "người đồng hành",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The experiment did not solve every problem. On rainy days, Leo preferred to eat in the shared kitchen. He also learned that his colleague enjoyed walking alone sometimes. They stopped treating the walk as a daily appointment and kept it as an option. The useful change was not a particular route or companion. It was allowing himself a real break.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Công việc & cân bằng"
+        ]
+      },
+      {
+        "word": "allowing",
+        "pos": "word / phrase",
+        "meaning_vi": "cho phép",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The experiment did not solve every problem. On rainy days, Leo preferred to eat in the shared kitchen. He also learned that his colleague enjoyed walking alone sometimes. They stopped treating the walk as a daily appointment and kept it as an option. The useful change was not a particular route or companion. It was allowing himself a real break.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Công việc & cân bằng"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "What did Leo originally think about eating at his desk?",
+      "options": [
+        "It made food taste better",
+        "It helped his colleagues",
+        "It saved time"
+      ],
+      "answer": 2,
+      "paragraph_index": 0,
+      "evidence": "He believed that this habit saved time.",
+      "explanation_vi": "Leo ban đầu tin rằng ăn tại bàn giúp tiết kiệm thời gian."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What did Leo start recording?",
+      "options": [
+        "How many shops were open",
+        "Tasks he completed",
+        "The length of every street"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "writing down which tasks he finished",
+      "explanation_vi": "Anh chuyển sang ghi nhận kết quả công việc."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Leo and his colleague continued to walk together every day.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "They stopped treating the walk as a daily appointment and kept it as an option.",
+      "explanation_vi": "Họ giữ đi bộ như một lựa chọn, không phải lịch hẹn hằng ngày."
+    }
+  ],
+  "faqs": []
+}

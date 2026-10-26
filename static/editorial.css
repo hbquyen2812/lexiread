@@ -1,0 +1,5 @@
+.editorial-question{border:1px solid var(--hairline-color);border-radius:8px;padding:16px;margin:12px 0;background:var(--body-bg)}
+.editorial-question label{display:block!important;float:none!important;width:auto!important;margin:8px 0 4px!important}
+.editorial-question textarea{width:min(96%,850px);min-height:65px}
+.editorial-question input{max-width:95%}.editorial-question .help{margin-left:0!important}
+.editorial-question button{margin-top:12px}.editorial-question-list{max-width:950px}

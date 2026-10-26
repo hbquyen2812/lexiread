@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-26T05:54:51.982828+00:00",
+  "mode": "http_metadata_only",
+  "links": [
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731922&context=exam#/section/188838305/question/167045955/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189731922&context=exam#/section/188838305/question/167045955/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-one-answer-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-one-answer-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731586&context=exam#/section/167017070/question/167017069/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189731586&context=exam#/section/167017070/question/167017069/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189698592&context=exam#/section/145434101/question/145431062/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189698592&context=exam#/section/145434101/question/145431062/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-identifying-information-true-flase-not-given-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-identifying-information-true-flase-not-given-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731313&context=exam#/section/181952126/question/181952124/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189731313&context=exam#/section/181952126/question/181952124/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-note-completion-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-note-completion-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189698337&context=exam#/section/171765060/question/171765058/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189698337&context=exam#/section/171765060/question/171765058/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-table-completion-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-table-completion-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732026&context=exam#/section/166779699/question/145599956/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189732026&context=exam#/section/166779699/question/145599956/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-features-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-features-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189698831&context=exam#/section/188837197/question/188837195/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189698831&context=exam#/section/188837197/question/188837195/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-words-from-text-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-words-from-text-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189699146&context=exam#/section/181951091/question/181951090/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189699146&context=exam#/section/181951091/question/181951090/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-from-list-of-words-or-phrases-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-summary-completion-selecting-from-list-of-words-or-phrases-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189731169&context=exam#/section/173942070/question/167043573/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189731169&context=exam#/section/173942070/question/167043573/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-sentence-completion-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-sentence-completion-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189730855&context=exam#/section/181950576/question/171777129/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189730855&context=exam#/section/181950576/question/171777129/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-sentence-endings-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-academic-reading/ielts-academic-reading-computer-delivered-matching-sentence-endings-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732383&context=exam#/section/185942360/question/185942358/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189732383&context=exam#/section/185942360/question/185942358/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-multiple-choice-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-multiple-choice-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732223&context=exam#/section/145445178/question/145436122/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189732223&context=exam#/section/145445178/question/145436122/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-identifying-information-true-false-not-given-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-identifying-information-true-false-not-given-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189733214&context=exam#/section/145595569/question/145594138/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189733214&context=exam#/section/145595569/question/145594138/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-information-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-information-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189733329&context=exam#/section/166780192/question/166780191/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189733329&context=exam#/section/166780192/question/166780191/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-features-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-matching-features-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732477&context=exam#/section/184161323/question/184161321/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189732477&context=exam#/section/184161323/question/184161321/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-summary-completion-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-summary-completion-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=189732842&context=exam#/section/174562393/question/174562392/scorableItem/1",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=189732842&context=exam#/section/174562393/question/174562392/scorableItem/1",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-note-completion-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.inspera.com/player/?assessmentRunId=205994164&context=exam",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.inspera.com/player/?assessmentRunId=205994164&context=exam",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-sentence-completion-answer-key.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.org/cdn/computer-delivered-sample-tests-general-training-reading/ielts-general-training-reading-computer-delivered-sentence-completion-answer-key.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013388&context=exam",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://demo-ielts.inspera.com/player/?assessmentRunId=131013388&context=exam",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-academic-reading-sample-tasks-2023.pdf",
+      "status": "robots_denied_or_unavailable"
+    },
+    {
+      "url": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-general-reading-sample-tasks-2023.pdf",
+      "status": "robots_denied_or_unavailable"
+    },
+    {
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-listening-reading-sample-test.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://www.ets.org/pdfs/toeic/toeic-listening-reading-sample-test.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://www.ets.org/content/dam/ets-org/pdfs/toeic/toeic-bridge-sample-test-listening-reading.pdf",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://www.ets.org/pdfs/toeic/toeic-bridge-sample-test-listening-reading.pdf",
+      "content_type": "application/pdf",
+      "bytes_inspected": 4096
+    },
+    {
+      "url": "https://ielts.idp.com/prepare/all-test-types/reading",
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://ielts.idp.com/prepare/all-test-types/reading",
+      "content_type": "text/html",
+      "bytes_inspected": 4096
+    }
+  ]
+}

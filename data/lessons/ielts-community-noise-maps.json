@@ -1,0 +1,344 @@
+{
+  "slug": "ielts-community-noise-maps",
+  "title": "Listening to the Gaps on a Noise Map",
+  "level": "B2",
+  "topic": "IELTS · Khoa học cộng đồng",
+  "summary": "Cộng đồng lập bản đồ tiếng ồn, học cách xử lý dữ liệu thiếu, quyền riêng tư và bất đồng.",
+  "track": "ielts",
+  "revision": 2,
+  "order": 122,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc của LexiRead, dùng tình huống và kết quả giả định để luyện đọc. Không phải đề IELTS chính thức hay bài thi thử đầy đủ.",
+  "level_note": "Mức độ do người biên soạn ước lượng, chưa hiệu chuẩn CEFR; không quy đổi band IELTS.",
+  "translation_status": "complete",
+  "text": "A. In an imagined neighbourhood called Eastbank, residents disagree about which streets suffer most from noise. A busy shopping road seems the obvious answer, yet people living beside a quiet-looking service lane complain about deliveries before dawn. The council invites volunteers to build a community noise map. Its purpose is not to settle every dispute with a single number. The project is intended to reveal patterns that a short inspection might miss and to help officials choose where more detailed investigation is needed.\n\nB. Volunteers initially use their own phones to take readings. During a training session, the devices display different values while placed beside the same sound source. Rather than pretending that every phone is equally accurate, the project lends participants a small set of standard meters. Each meter is checked against the same reference device. Volunteers also record wind and rain because weather can affect a reading. Training emphasises consistent procedures, not the promise that inexpensive equipment can reproduce every feature of a specialist survey.\n\nC. Location alone proves insufficient. A map made entirely from lunchtime observations would describe only lunchtime conditions. The organisers divide the day into several periods and ask volunteers to repeat visits. They also mark locations where no observations have been collected. These blank areas remain visible in the final display. Filling them with a neighbourhood average would create an attractive continuous picture, but it would conceal the difference between a measured result and an estimate based on other places.\n\nD. Sound levels do not explain every disagreement. A repeated reversing alarm may disturb someone more than an equally loud but steady background sound. Participants therefore add short descriptions such as traffic, music or machinery. They do not upload recordings of conversations. The project deliberately collects less detail than a phone could capture, because publishing identifiable speech would introduce a privacy problem unrelated to the map's purpose. Descriptions remain optional, so the organisers avoid assuming that a missing description means there was nothing worth noticing.\n\nE. When the map is presented, shopkeepers argue that a few unusually noisy delivery days could damage their reputation. Residents worry that averaging results will hide precisely those events that interrupt sleep. The final display allows users to view both individual observations and summaries over time. Neither group receives the power to delete an inconvenient result. Entries can be corrected when a documented measurement error is found, and the correction remains visible. Disagreement becomes a reason to inspect the evidence rather than erase it.\n\nF. A community map is most useful when its limits are easy to see. It should not turn the busiest volunteers into the only voices that count, nor should it imply that unmeasured streets are silent. In Eastbank, officials use the findings to arrange professional monitoring in selected locations. That follow-up is a sign that the project has identified worthwhile questions, not that the volunteers have failed. Participation and technical expertise can serve different stages of the same investigation.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "A. Trong khu dân cư giả định Eastbank, cư dân chưa thống nhất được những đường phố nào ồn ào nhất. Con phố mua sắm đông đúc có vẻ là câu trả lời rõ ràng nhất, nhưng người sống cạnh một ngõ dịch vụ trông yên tĩnh lại phàn nàn về tiếng giao hàng từ trước khi trời sáng. Hội đồng địa phương mời tình nguyện viên lập bản đồ tiếng ồn cộng đồng. Mục đích không phải giải quyết mọi tranh chấp bằng một con số duy nhất. Dự án nhằm phát hiện quy luật mà đợt kiểm tra ngắn có thể bỏ sót và giúp cán bộ chọn nơi cần điều tra kỹ hơn."
+      },
+      {
+        "index": 1,
+        "vi": "B. Ban đầu tình nguyện viên dùng điện thoại riêng để đo. Trong buổi tập huấn, các máy hiển thị giá trị khác nhau dù đặt cạnh cùng nguồn âm. Thay vì mặc định mọi điện thoại đều chính xác như nhau, dự án cho người tham gia mượn một số máy đo tiêu chuẩn. Mỗi máy được kiểm tra đối chiếu với cùng một thiết bị tham chiếu. Tình nguyện viên cũng ghi lại tình hình gió và mưa vì thời tiết có thể ảnh hưởng kết quả. Tập huấn nhấn mạnh quy trình nhất quán, chứ không hứa rằng thiết bị rẻ có thể làm được mọi việc như trong một cuộc khảo sát chuyên nghiệp."
+      },
+      {
+        "index": 2,
+        "vi": "C. Biết địa điểm đo thôi vẫn chưa đủ. Nếu tất cả quan sát đều được thực hiện vào giờ ăn trưa, bản đồ cũng chỉ phản ánh tiếng ồn trong khoảng thời gian đó. Ban tổ chức chia ngày thành nhiều khoảng và đề nghị tình nguyện viên quay lại đo. Họ cũng đánh dấu nơi chưa có quan sát. Những vùng chưa có dữ liệu vẫn để trống trên bản đồ cuối cùng. Dùng mức trung bình của khu vực để lấp chỗ trống sẽ khiến bản đồ trông liền mạch, đẹp mắt hơn. Nhưng cách đó che mất sự khác biệt giữa số đo thực tế và con số ước tính từ những nơi khác."
+      },
+      {
+        "index": 3,
+        "vi": "D. Độ lớn của âm thanh không giải thích được mọi bất đồng. Tiếng báo xe lùi lặp lại có thể làm một người khó chịu hơn âm nền đều đặn dù lớn ngang nhau. Vì vậy người tham gia thêm mô tả ngắn như giao thông, âm nhạc hoặc máy móc. Họ không tải lên bản ghi các cuộc trò chuyện. Dự án chủ động thu ít chi tiết hơn khả năng của điện thoại, vì công bố lời nói có thể khiến người nói bị nhận diện, tạo ra vấn đề riêng tư không liên quan đến mục tiêu của bản đồ. Người tham gia có thể thêm mô tả hoặc không nên ban tổ chức không mặc nhiên cho rằng thiếu mô tả nghĩa là không có gì đáng chú ý."
+      },
+      {
+        "index": 4,
+        "vi": "E. Khi bản đồ được trình bày, chủ cửa hàng cho rằng vài ngày giao hàng đặc biệt ồn có thể làm hại danh tiếng của họ. Cư dân lo số trung bình sẽ che mất chính những tiếng động làm họ mất ngủ. Bản đồ cuối cùng cho phép người dùng xem từng quan sát và bản tổng hợp theo thời gian. Không nhóm nào được quyền xóa kết quả bất lợi. Một mục dữ liệu có thể được sửa nếu tìm thấy bằng chứng cho thấy phép đo bị lỗi; người xem vẫn thấy được phần đã chỉnh sửa. Bất đồng trở thành lý do xem xét bằng chứng thay vì xóa bỏ nó."
+      },
+      {
+        "index": 5,
+        "vi": "F. Bản đồ cộng đồng hữu ích nhất khi giới hạn của nó dễ nhận thấy. Nó không nên khiến những người tình nguyện tích cực nhất trở thành những người duy nhất có ý kiến được lắng nghe, cũng không nên ám chỉ những con đường chưa được đo thì không có tiếng ồn. Tại Eastbank, cán bộ dùng kết quả để tổ chức những đợt theo dõi chuyên môn tại các điểm được chọn. Bước tiếp theo này cho thấy dự án đã xác định câu hỏi đáng tìm hiểu, không phải tình nguyện viên thất bại. Sự tham gia của cộng đồng và chuyên môn kỹ thuật có thể đóng góp ở những giai đoạn khác nhau của cùng một cuộc tìm hiểu."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "inspection",
+        "pos": "noun",
+        "meaning_vi": "cuộc kiểm tra tại chỗ",
+        "paragraph_index": 0,
+        "usage_pattern": "carry out an inspection",
+        "example": "The inspection revealed a damaged door.",
+        "example_vi": "Cuộc kiểm tra phát hiện một cánh cửa hỏng.",
+        "synonyms": [
+          "examination"
+        ],
+        "paraphrases": [
+          "a careful check of a place or object"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "The project is intended to reveal patterns that a short inspection might miss and to help officials choose where more detailed investigation is needed."
+      },
+      {
+        "word": "consistent",
+        "pos": "adjective",
+        "meaning_vi": "nhất quán",
+        "paragraph_index": 1,
+        "usage_pattern": "consistent procedures / results",
+        "example": "Use consistent procedures at every site.",
+        "example_vi": "Hãy dùng quy trình nhất quán tại mọi địa điểm.",
+        "synonyms": [
+          "uniform"
+        ],
+        "paraphrases": [
+          "following the same approach each time"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Training emphasises consistent procedures, not the promise that inexpensive equipment can reproduce every feature of a specialist survey."
+      },
+      {
+        "word": "insufficient",
+        "pos": "adjective",
+        "meaning_vi": "không đủ",
+        "paragraph_index": 2,
+        "usage_pattern": "insufficient evidence / data",
+        "example": "One observation is insufficient evidence.",
+        "example_vi": "Một lần quan sát là bằng chứng chưa đủ.",
+        "synonyms": [
+          "inadequate"
+        ],
+        "paraphrases": [
+          "not enough for the intended purpose"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Location alone proves insufficient."
+      },
+      {
+        "word": "conceal",
+        "pos": "verb",
+        "meaning_vi": "che giấu",
+        "paragraph_index": 2,
+        "usage_pattern": "conceal a difference / problem",
+        "example": "A smooth average can conceal variation.",
+        "example_vi": "Con số trung bình trông ổn định có thể che đi những biến động bên trong.",
+        "synonyms": [
+          "hide"
+        ],
+        "paraphrases": [
+          "prevent something from being noticed"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Filling them with a neighbourhood average would create an attractive continuous picture, but it would conceal the difference between a measured result and an estimate based on other places."
+      },
+      {
+        "word": "identifiable",
+        "pos": "adjective",
+        "meaning_vi": "có thể xác định được danh tính",
+        "paragraph_index": 3,
+        "usage_pattern": "identifiable information / speech",
+        "example": "Remove identifiable information before sharing the file.",
+        "example_vi": "Hãy xóa thông tin có thể nhận diện một người trước khi chia sẻ tệp.",
+        "synonyms": [
+          "recognisable"
+        ],
+        "paraphrases": [
+          "able to be linked to a particular person"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "The project deliberately collects less detail than a phone could capture, because publishing identifiable speech would introduce a privacy problem unrelated to the map's purpose."
+      },
+      {
+        "word": "documented",
+        "pos": "adjective",
+        "meaning_vi": "có tài liệu hoặc bằng chứng ghi nhận",
+        "paragraph_index": 4,
+        "usage_pattern": "a documented error / case",
+        "example": "The team corrected a documented error.",
+        "example_vi": "Nhóm đã sửa một lỗi được ghi nhận rõ ràng.",
+        "synonyms": [
+          "recorded"
+        ],
+        "paraphrases": [
+          "supported by a written or saved record"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Entries can be corrected when a documented measurement error is found, and the correction remains visible."
+      },
+      {
+        "word": "expertise",
+        "pos": "noun",
+        "meaning_vi": "kiến thức và kỹ năng chuyên môn",
+        "paragraph_index": 5,
+        "usage_pattern": "technical expertise / expertise in + field",
+        "example": "We need expertise in acoustic measurement.",
+        "example_vi": "Chúng tôi cần chuyên môn về đo âm thanh.",
+        "synonyms": [
+          "specialist knowledge"
+        ],
+        "paraphrases": [
+          "advanced knowledge and skill in a field"
+        ],
+        "note": "Các từ gợi ý gần nghĩa trong câu này, nhưng không phải lúc nào cũng thay thế được cho nhau.",
+        "tags": [
+          "IELTS",
+          "B2"
+        ],
+        "context": "Participation and technical expertise can serve different stages of the same investigation."
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "kind": "matching_information",
+      "prompt": "Which paragraph explains a decision not to collect a type of sensitive information? Choose A–F.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "answer": 3,
+      "paragraph_index": 3,
+      "evidence": "They do not upload recordings of conversations.",
+      "explanation_vi": "Đoạn D nói rõ không tải lên bản ghi các cuộc trò chuyện để tránh làm lộ danh tính và ảnh hưởng quyền riêng tư.",
+      "id": "q1"
+    },
+    {
+      "kind": "matching_heading",
+      "prompt": "Choose the best heading for paragraph C.",
+      "options": [
+        "Choosing the quietest street for a new school",
+        "Showing gaps instead of inventing complete coverage",
+        "Replacing volunteers with automatic sensors",
+        "Why all measurements should be taken at noon"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "These blank areas remain visible in the final display.",
+      "explanation_vi": "Đoạn C nhấn mạnh việc đo ở nhiều thời điểm và giữ rõ những vùng chưa có dữ liệu. Đoạn này không đề xuất chỉ đo vào buổi trưa.",
+      "id": "q2"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Different phones gave identical readings during training.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "the devices display different values while placed beside the same sound source.",
+      "explanation_vi": "FALSE: Different values nghĩa là các giá trị khác nhau, trái với identical readings là các số đo giống hệt nhau.",
+      "id": "q3"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "Descriptions of sounds are compulsory.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 3,
+      "evidence": "Descriptions remain optional",
+      "explanation_vi": "FALSE: Optional nghĩa là tùy chọn, trong khi compulsory nghĩa là bắt buộc.",
+      "id": "q4"
+    },
+    {
+      "kind": "tfng",
+      "prompt": "The council bought the meters from a local manufacturer.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "the project lends participants a small set of standard meters.",
+      "explanation_vi": "NOT GIVEN: bài nói cho mượn máy, không nói nhà sản xuất hoặc nơi mua.",
+      "id": "q5"
+    },
+    {
+      "kind": "gap_fill",
+      "prompt": "Complete using NO MORE THAN TWO WORDS from the passage: All meters are checked against one _____.",
+      "options": [],
+      "answer": "reference device",
+      "paragraph_index": 1,
+      "evidence": "Each meter is checked against the same reference device.",
+      "explanation_vi": "Reference device là thiết bị dùng làm chuẩn đối chiếu. Cụm này có hai từ, đúng giới hạn của câu hỏi.",
+      "max_words": 2,
+      "accepted_answers": [
+        "reference device",
+        "device"
+      ],
+      "id": "q6"
+    },
+    {
+      "kind": "short_answer",
+      "prompt": "Answer using NO MORE THAN THREE WORDS from the passage: What weather conditions are recorded?",
+      "options": [],
+      "answer": "wind and rain",
+      "paragraph_index": 1,
+      "evidence": "Volunteers also record wind and rain",
+      "explanation_vi": "Đáp án là wind and rain, gồm ba từ. Câu hỏi cho phép tối đa ba từ.",
+      "max_words": 3,
+      "accepted_answers": [
+        "wind and rain"
+      ],
+      "id": "q7"
+    },
+    {
+      "kind": "detail",
+      "prompt": "When may an observation be corrected?",
+      "options": [
+        "When residents request a quieter-looking map",
+        "Whenever a shopkeeper dislikes it",
+        "When a documented measurement error is discovered",
+        "Whenever it is above the neighbourhood average"
+      ],
+      "answer": 2,
+      "paragraph_index": 4,
+      "evidence": "Entries can be corrected when a documented measurement error is found",
+      "explanation_vi": "Chỉ được sửa kết quả khi có bằng chứng cho thấy phép đo bị lỗi. Việc một kết quả gây bất lợi cho ai đó không đủ để sửa hoặc xóa nó.",
+      "id": "q8"
+    },
+    {
+      "kind": "ynng",
+      "prompt": "The writer believes professional follow-up demonstrates that volunteers have failed.",
+      "options": [
+        "YES",
+        "NO",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 5,
+      "evidence": "not that the volunteers have failed.",
+      "explanation_vi": "NO: Tác giả xem việc theo dõi chuyên môn tiếp theo là dấu hiệu dự án đã tìm ra vấn đề đáng nghiên cứu, không phải bằng chứng tình nguyện viên thất bại.",
+      "id": "q9"
+    },
+    {
+      "kind": "inference",
+      "prompt": "Why are individual observations shown alongside time summaries?",
+      "options": [
+        "They allow shopkeepers to erase disturbing events",
+        "They guarantee that all streets have equal noise",
+        "They remove the need to record observation times",
+        "They expose occasional events that an average may hide"
+      ],
+      "answer": 3,
+      "paragraph_index": 4,
+      "evidence": "Residents worry that averaging results will hide precisely those events that interrupt sleep.",
+      "explanation_vi": "Hiển thị cả từng quan sát lẫn bản tổng hợp giúp người xem nhận ra những đợt tiếng ồn riêng lẻ có thể bị che mất trong số trung bình.",
+      "id": "q10"
+    }
+  ],
+  "faqs": []
+}

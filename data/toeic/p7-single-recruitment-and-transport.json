@@ -1,0 +1,347 @@
+{
+  "slug": "p7-single-recruitment-and-transport",
+  "title": "Single Documents · Recruitment & Transport",
+  "mode": "part-7",
+  "mode_label": "Đọc hiểu",
+  "parts": [
+    7
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 21,
+  "description": "Đọc tin tuyển dụng và bản tin về xe đưa đón; tìm yêu cầu quan trọng, hiểu chi tiết và suy ra điều có căn cứ trong bài.",
+  "instructions": "Đọc các tài liệu trong mỗi nhóm và chọn một đáp án, đối chiếu thông tin giữa các tài liệu khi cần.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "job-advertisement",
+      "kind": "Job advertisement",
+      "heading": "Brookfield Museum: visitor-program coordinator",
+      "body": "Brookfield Museum seeks a part-time visitor-program coordinator for a six-month contract beginning in January. The coordinator will organize school visits, confirm bookings and prepare simple attendance reports. The role is based at the museum for three days each week, including one Saturday per month. It does not involve giving historical tours; volunteer guides carry out that work.\n\nApplicants must have experience organizing schedules and communicating with the public. Knowledge of museum collections is welcome but is not essential, as an induction program is provided. A valid driver's license is not required. Applicants should, however, be comfortable using spreadsheets to maintain booking records.\n\nTo apply, email a résumé and a cover letter of no more than 400 words by 18 November. Explain how you have dealt with a last-minute change to an event or schedule. Applications containing only a résumé will not be considered. Shortlisted candidates will be invited to a practical interview in which they will reorganize a sample booking schedule; no presentation is required.\n\nThe hourly rate is $24. This is a temporary position funded by a visitor-access grant, so applicants should not assume that the contract will be extended. Questions about working hours may be directed to the visitor-services manager before the application deadline."
+    },
+    {
+      "id": "transport-news",
+      "kind": "News article",
+      "heading": "Business district shuttle trial produces mixed results",
+      "body": "The Lakeside Business Association has completed an eight-week trial of a lunchtime shuttle between the office district and Central Station. The service ran every fifteen minutes from 11:30 a.m. to 2:30 p.m., Monday to Friday. Employees could travel free of charge after showing a workplace ID.\n\nPassenger numbers were higher than expected on Tuesdays and Thursdays, when most participating firms scheduled office-based team meetings. On Fridays, however, several journeys carried fewer than five passengers. The association does not plan to cancel the shuttle entirely. Instead, it is considering a reduced Friday timetable while keeping the current frequency on the busiest days.\n\nA passenger survey showed that reliability mattered more than adding extra stops. Many respondents said they used the shuttle to make short trips during a limited lunch break and would avoid it if journey times became unpredictable. For this reason, the association has rejected a proposal to add three stops near the shopping district.\n\nThe trial was paid for by a temporary transport grant. To continue the service after December, the association will need contributions from local employers. It will publish a revised timetable only after enough companies have confirmed their financial support. Employees have been asked to send further feedback through their workplace representatives rather than directly to the bus operator."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 7,
+      "prompt": "Which duty belongs to the museum coordinator?",
+      "options": [
+        "Arranging and confirming school visits",
+        "Leading all historical tours",
+        "Driving students to the museum",
+        "Managing the museum's permanent collection"
+      ],
+      "answer": 0,
+      "explanation_vi": "Điều phối viên phụ trách lịch thăm của trường học, xác nhận đặt chỗ và lập báo cáo tham dự. Việc dẫn tham quan do tình nguyện viên đảm nhận; lái xe và quản lý hiện vật không nằm trong nhiệm vụ.",
+      "evidence": "The coordinator will organize school visits, confirm bookings and prepare simple attendance reports.",
+      "document_ids": [
+        "job-advertisement"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 7,
+      "prompt": "Which qualification is required?",
+      "options": [
+        "A qualification in historical tour guiding",
+        "Experience organizing schedules and communicating with the public",
+        "A valid driver's license",
+        "Previous knowledge of every museum collection"
+      ],
+      "answer": 1,
+      "explanation_vi": "Kinh nghiệm sắp xếp lịch và giao tiếp với công chúng là yêu cầu bắt buộc. Hiểu bộ sưu tập chỉ là lợi thế, bằng lái không cần thiết và thông báo không yêu cầu bằng hướng dẫn viên.",
+      "evidence": "Applicants must have experience organizing schedules and communicating with the public.",
+      "document_ids": [
+        "job-advertisement"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 7,
+      "prompt": "What should an applicant describe in the cover letter?",
+      "options": [
+        "A plan to replace the volunteer guides",
+        "The reasons the museum should increase admission charges",
+        "An occasion when they handled an unexpected schedule change",
+        "Their preferred topics for a museum presentation"
+      ],
+      "answer": 2,
+      "explanation_vi": "Trong thư ứng tuyển, ứng viên cần kể một lần đã xử lý thay đổi sát giờ của sự kiện hoặc lịch trình. Các lựa chọn khác không trả lời yêu cầu này.",
+      "evidence": "Explain how you have dealt with a last-minute change to an event or schedule.",
+      "document_ids": [
+        "job-advertisement"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 7,
+      "prompt": "What can be inferred about an application consisting only of a résumé?",
+      "options": [
+        "It will automatically receive an interview.",
+        "It will be accepted if sent before January.",
+        "It will be considered only for a driving role.",
+        "It will not progress to the selection process."
+      ],
+      "answer": 3,
+      "explanation_vi": "Hồ sơ chỉ có CV sẽ không được xét. Nộp sớm không thay thế được thư ứng tuyển còn thiếu; thông báo cũng không tuyển tài xế.",
+      "evidence": "Applications containing only a résumé will not be considered.",
+      "document_ids": [
+        "job-advertisement"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 7,
+      "prompt": "Why does the advertisement mention the visitor-access grant?",
+      "options": [
+        "To explain why continued employment cannot be assumed",
+        "To guarantee a permanent job after six months",
+        "To require applicants to apply for their own grant",
+        "To announce an increase in the hourly rate"
+      ],
+      "answer": 0,
+      "explanation_vi": "Công việc có thời hạn và được chi trả từ một khoản tài trợ, nên chưa thể chắc sẽ được gia hạn. Thông báo không hứa việc lâu dài và không yêu cầu ứng viên tự xin tài trợ.",
+      "evidence": "This is a temporary position funded by a visitor-access grant, so applicants should not assume that the contract will be extended.",
+      "document_ids": [
+        "job-advertisement"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 7,
+      "prompt": "On which days did shuttle use exceed expectations?",
+      "options": [
+        "Every weekday equally",
+        "Tuesdays and Thursdays",
+        "Mondays and Fridays",
+        "Saturdays and Sundays"
+      ],
+      "answer": 1,
+      "explanation_vi": "Bài báo nêu rõ thứ Ba và thứ Năm, khi nhiều công ty có lịch họp trực tiếp tại văn phòng. Không thể từ đó kết luận ngày nào cũng đông khách.",
+      "evidence": "Passenger numbers were higher than expected on Tuesdays and Thursdays",
+      "document_ids": [
+        "transport-news"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 7,
+      "prompt": "What change is the association considering?",
+      "options": [
+        "Charging employees for every lunchtime trip",
+        "Extending the trial service to weekends",
+        "Running fewer shuttle services on Fridays",
+        "Ending all shuttle operations immediately"
+      ],
+      "answer": 2,
+      "explanation_vi": "Hiệp hội đang cân nhắc giảm số chuyến vào thứ Sáu và giữ tần suất hiện tại ở những ngày đông khách. Bài không nói sẽ dừng toàn bộ, thu phí hay mở thêm cuối tuần.",
+      "evidence": "it is considering a reduced Friday timetable while keeping the current frequency on the busiest days.",
+      "document_ids": [
+        "transport-news"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 7,
+      "prompt": "Why was the proposal for three additional stops rejected?",
+      "options": [
+        "The shopping district had permanently closed.",
+        "No passengers wanted to travel at lunchtime.",
+        "The bus operator had already withdrawn every vehicle.",
+        "Passengers valued predictable travel times more than extra destinations."
+      ],
+      "answer": 3,
+      "explanation_vi": "Hành khách coi trọng thời gian đi lại ổn định hơn việc có thêm điểm dừng. Thêm điểm có thể khiến hành trình khó dự đoán; bài không nói khu mua sắm đóng cửa hoặc nhà xe rút phương tiện.",
+      "evidence": "A passenger survey showed that reliability mattered more than adding extra stops.",
+      "document_ids": [
+        "transport-news"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 7,
+      "prompt": "What must happen before a revised timetable is published?",
+      "options": [
+        "Enough employers must confirm financial contributions.",
+        "Every employee must submit an individual survey.",
+        "The station must build three new platforms.",
+        "The operator must make all journeys longer."
+      ],
+      "answer": 0,
+      "explanation_vi": "Khoản tài trợ hiện tại chỉ có thời hạn. Hiệp hội sẽ công bố lịch mới sau khi đủ doanh nghiệp xác nhận góp tiền duy trì tuyến; các điều kiện khác không được nêu.",
+      "evidence": "It will publish a revised timetable only after enough companies have confirmed their financial support.",
+      "document_ids": [
+        "transport-news"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 7,
+      "prompt": "In the article, \"contributions\" most nearly means what?",
+      "options": [
+        "Complaints sent directly to drivers",
+        "Amounts of money provided to support the service",
+        "Reports of the number of passengers",
+        "Changes to the route's stopping places"
+      ],
+      "answer": 1,
+      "explanation_vi": "Đoạn này nói về nguồn tiền để duy trì tuyến xe, nên contributions là các khoản đóng góp tài chính. Từ này không chỉ ý kiến, số liệu hành khách hay thay đổi điểm dừng.",
+      "evidence": "the association will need contributions from local employers.",
+      "document_ids": [
+        "transport-news"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "induction",
+      "pos": "noun",
+      "meaning_vi": "buổi hoặc chương trình hướng dẫn khi bắt đầu công việc",
+      "usage_pattern": "an induction program/course",
+      "example": "New coordinators attend an induction program.",
+      "example_vi": "Điều phối viên mới tham gia chương trình định hướng.",
+      "synonyms": [
+        "orientation"
+      ],
+      "paraphrases": [
+        "initial training for someone joining an organization"
+      ],
+      "context": "New coordinators attend an induction program.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Recruitment & Transport",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "shortlisted",
+      "pos": "adjective",
+      "meaning_vi": "được chọn vào vòng tiếp theo",
+      "usage_pattern": "shortlisted candidates/applicants",
+      "example": "Shortlisted candidates complete a practical task.",
+      "example_vi": "Các ứng viên vào vòng tiếp theo sẽ làm một bài thực hành.",
+      "synonyms": [
+        "selected"
+      ],
+      "paraphrases": [
+        "chosen for further consideration from a larger group"
+      ],
+      "context": "Shortlisted candidates complete a practical task.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Recruitment & Transport",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "last-minute",
+      "pos": "adjective",
+      "meaning_vi": "xảy ra sát thời điểm dự kiến",
+      "usage_pattern": "a last-minute change/cancellation",
+      "example": "We found another room after a last-minute cancellation.",
+      "example_vi": "Chúng tôi tìm phòng khác sau một lần hủy sát giờ.",
+      "synonyms": [
+        "unexpected late"
+      ],
+      "paraphrases": [
+        "happening shortly before an event"
+      ],
+      "context": "We found another room after a last-minute cancellation.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Recruitment & Transport",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "reliability",
+      "pos": "noun",
+      "meaning_vi": "độ tin cậy, tính ổn định",
+      "usage_pattern": "service reliability; improve reliability",
+      "example": "Passengers valued reliability more than extra stops.",
+      "example_vi": "Hành khách coi trọng tính ổn định hơn số điểm dừng tăng thêm.",
+      "synonyms": [
+        "dependability"
+      ],
+      "paraphrases": [
+        "the quality of working consistently as expected"
+      ],
+      "context": "Passengers valued reliability more than extra stops.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Recruitment & Transport",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "frequency",
+      "pos": "noun",
+      "meaning_vi": "tần suất, mức độ thường xuyên",
+      "usage_pattern": "increase/reduce the frequency of a service",
+      "example": "The association may reduce Friday service frequency.",
+      "example_vi": "Hiệp hội có thể giảm tần suất phục vụ vào thứ Sáu.",
+      "synonyms": [
+        "regularity"
+      ],
+      "paraphrases": [
+        "how often an event or service occurs"
+      ],
+      "context": "The association may reduce Friday service frequency.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Recruitment & Transport",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "financial support",
+      "pos": "noun phrase",
+      "meaning_vi": "hỗ trợ tài chính",
+      "usage_pattern": "confirm/provide financial support",
+      "example": "Local employers provided financial support for the shuttle.",
+      "example_vi": "Các doanh nghiệp địa phương hỗ trợ tài chính cho tuyến xe.",
+      "synonyms": [
+        "funding"
+      ],
+      "paraphrases": [
+        "money given to help an activity continue"
+      ],
+      "context": "Local employers provided financial support for the shuttle.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Recruitment & Transport",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

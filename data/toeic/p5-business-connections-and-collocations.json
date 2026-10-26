@@ -1,0 +1,464 @@
+{
+  "slug": "p5-business-connections-and-collocations",
+  "title": "Business Decisions · Connectors & Collocations",
+  "mode": "parts-5-6",
+  "mode_label": "Ngữ pháp và từ vựng",
+  "parts": [
+    5
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 16,
+  "description": "Luyện từ nối, giới từ và các cụm từ thường gặp khi mua hàng, báo giá và trao đổi công việc.",
+  "instructions": "Chọn một đáp án phù hợp nhất để hoàn thành mỗi câu.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 5,
+      "prompt": "___ the supplier offered a lower price, the buyer chose a more reliable company.",
+      "options": [
+        "Although",
+        "Despite",
+        "Because of",
+        "During"
+      ],
+      "answer": 0,
+      "explanation_vi": "Chọn Although vì phía sau là một mệnh đề đầy đủ: the supplier offered a lower price. Câu nói dù giá thấp hơn, bên mua vẫn chọn công ty đáng tin cậy hơn. Despite, because of và during thường đi với danh từ hoặc cụm danh từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q02",
+      "part": 5,
+      "prompt": "Safety rules require closure whenever conditions become dangerous. The outdoor market will remain open ___ heavy rain makes the site unsafe.",
+      "options": [
+        "while",
+        "unless",
+        "because",
+        "although"
+      ],
+      "answer": 1,
+      "explanation_vi": "Quy định yêu cầu đóng cửa khi không còn an toàn. Vì vậy, unless mang nghĩa “trừ khi”: chợ vẫn mở, trừ khi mưa lớn khiến địa điểm nguy hiểm. Although lại mang nghĩa vẫn mở dù nguy hiểm, trái quy định.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q03",
+      "part": 5,
+      "prompt": "The invoice must be paid ___ thirty days of its issue date.",
+      "options": [
+        "during",
+        "until",
+        "within",
+        "among"
+      ],
+      "answer": 2,
+      "explanation_vi": "Within thirty days nghĩa là trong vòng ba mươi ngày, thể hiện hạn thanh toán. Among chỉ trong một nhóm; during of và until to không phải cấu trúc đúng.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q04",
+      "part": 5,
+      "prompt": "The new contract will take ___ on the first day of next month.",
+      "options": [
+        "affect",
+        "effective",
+        "effectively",
+        "effect"
+      ],
+      "answer": 3,
+      "explanation_vi": "Take effect là cụm cố định: có hiệu lực. Affect là động từ, effective là tính từ và effectively là trạng từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q05",
+      "part": 5,
+      "prompt": "Our accounting team found a ___ between the purchase order and the invoice total.",
+      "options": [
+        "discrepancy",
+        "permission",
+        "destination",
+        "subscription"
+      ],
+      "answer": 0,
+      "explanation_vi": "Discrepancy là một điểm chênh lệch hoặc không khớp, đúng với việc so đơn mua hàng và hóa đơn. Các từ còn lại nói về sự cho phép, điểm đến hoặc đăng ký dịch vụ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q06",
+      "part": 5,
+      "prompt": "___ a temporary shortage of staff, deliveries may take an extra day.",
+      "options": [
+        "Whereas",
+        "Because of",
+        "Although",
+        "Even though"
+      ],
+      "answer": 1,
+      "explanation_vi": "Sau chỗ trống là cụm danh từ a temporary shortage nên dùng because of. Although/even though/whereas cần mệnh đề có động từ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q07",
+      "part": 5,
+      "prompt": "Please retain your receipt ___ you need to exchange the item.",
+      "options": [
+        "during",
+        "due to",
+        "in case",
+        "because of"
+      ],
+      "answer": 2,
+      "explanation_vi": "In case diễn tả dự phòng: giữ hóa đơn phòng khi cần đổi hàng. Due to không đứng trước mệnh đề you need; hai cụm còn lại không tạo nghĩa/cấu trúc phù hợp.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q08",
+      "part": 5,
+      "prompt": "The proposal is promising; ___, we need a more detailed cost estimate before approving it.",
+      "options": [
+        "therefore",
+        "similarly",
+        "for example",
+        "however"
+      ],
+      "answer": 3,
+      "explanation_vi": "Đề xuất có triển vọng, nhưng vẫn cần bản ước tính chi phí chi tiết hơn, nên chọn however. Therefore chỉ kết quả, similarly nói về điểm giống nhau, còn for example dùng để đưa ví dụ.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q09",
+      "part": 5,
+      "prompt": "The discount is available ___ customers who place their orders before Friday.",
+      "options": [
+        "to",
+        "at",
+        "from",
+        "by"
+      ],
+      "answer": 0,
+      "explanation_vi": "Be available to somebody là có sẵn/dành cho ai. Available at thường dùng với địa điểm, không phù hợp customers trong câu này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q10",
+      "part": 5,
+      "prompt": "The branch manager will be ___ charge of coordinating the relocation.",
+      "options": [
+        "by",
+        "in",
+        "on",
+        "at"
+      ],
+      "answer": 1,
+      "explanation_vi": "In charge of là cụm cố định nghĩa là phụ trách. On/at/by không tạo cụm này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q11",
+      "part": 5,
+      "prompt": "The company increased its advertising budget in response ___ declining sales.",
+      "options": [
+        "of",
+        "for",
+        "to",
+        "from"
+      ],
+      "answer": 2,
+      "explanation_vi": "Ta dùng cụm in response to, nghĩa là để đáp lại hoặc xử lý một tình huống. Vì vậy cần điền to; of, for và from không tạo được cụm này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q12",
+      "part": 5,
+      "prompt": "Both the product specifications ___ the delivery schedule must be included in the quotation.",
+      "options": [
+        "or",
+        "nor",
+        "but",
+        "and"
+      ],
+      "answer": 3,
+      "explanation_vi": "Cặp từ đúng là both A and B, nghĩa là “cả A lẫn B”. Or đi với either, còn nor đi với neither; but không hoàn thành cấu trúc both.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q13",
+      "part": 5,
+      "prompt": "Orders placed after 4 p.m. will be processed on the ___ business day.",
+      "options": [
+        "following",
+        "former",
+        "previous",
+        "past"
+      ],
+      "answer": 0,
+      "explanation_vi": "Following business day là ngày làm việc tiếp theo, phù hợp đơn được đặt sau giờ xử lý. Former/previous/past chỉ thời điểm trước đó.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q14",
+      "part": 5,
+      "prompt": "The hotel will waive the cancellation fee ___ the booking is canceled at least forty-eight hours in advance.",
+      "options": [
+        "in addition to",
+        "provided that",
+        "despite",
+        "because of"
+      ],
+      "answer": 1,
+      "explanation_vi": "Provided that + mệnh đề diễn tả điều kiện: miễn phí nếu hủy đủ sớm. Các lựa chọn còn lại là cụm giới từ nên không đi trực tiếp với mệnh đề này.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q15",
+      "part": 5,
+      "prompt": "The two departments will work ___, rather than independently, to prepare a single customer-service plan.",
+      "options": [
+        "elsewhere",
+        "backward",
+        "together",
+        "apart"
+      ],
+      "answer": 2,
+      "explanation_vi": "Câu nói hai phòng ban làm việc cùng nhau thay vì làm riêng, nên chọn together. Apart nghĩa là tách biệt, elsewhere là ở nơi khác, còn backward nói về hướng ngược lại.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q16",
+      "part": 5,
+      "prompt": "Sales rose by 8 percent in April ___ remained unchanged in May.",
+      "options": [
+        "because",
+        "unless",
+        "so that",
+        "but"
+      ],
+      "answer": 3,
+      "explanation_vi": "But nối sự tương phản giữa tăng trong tháng Tư và không thay đổi trong tháng Năm. Because chỉ nguyên nhân; unless chỉ điều kiện ngoại lệ; so that chỉ mục đích.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q17",
+      "part": 5,
+      "prompt": "The finance director asked us to ___ the total cost, including transport and insurance.",
+      "options": [
+        "calculate",
+        "compete",
+        "attend",
+        "recruit"
+      ],
+      "answer": 0,
+      "explanation_vi": "Calculate the total cost là tính tổng chi phí. Compete là cạnh tranh, attend là tham dự, recruit là tuyển dụng; không đi với total cost theo nghĩa cần thiết.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q18",
+      "part": 5,
+      "prompt": "The policy excludes all damage caused by improper use. The warranty covers manufacturing defects ___ damage caused by improper use.",
+      "options": [
+        "in addition to",
+        "but not",
+        "as well as",
+        "together with"
+      ],
+      "answer": 1,
+      "explanation_vi": "Câu trước đã nói hư hỏng do dùng sai không được bảo hành. Vì vậy chọn but not để nối phần được bảo hành với phần bị loại trừ. Các lựa chọn còn lại đều mang nghĩa thêm vào, trái quy định.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q19",
+      "part": 5,
+      "prompt": "The sales representative apologized ___ the delay in sending the quotation.",
+      "options": [
+        "of",
+        "from",
+        "for",
+        "with"
+      ],
+      "answer": 2,
+      "explanation_vi": "Apologize for something là xin lỗi về việc gì. Người nhận lời xin lỗi đi với to; with/of/from không phù hợp.",
+      "evidence": "",
+      "document_ids": []
+    },
+    {
+      "id": "q20",
+      "part": 5,
+      "prompt": "We cannot finalize the order ___ we receive written approval from the client.",
+      "options": [
+        "despite",
+        "during",
+        "because of",
+        "until"
+      ],
+      "answer": 3,
+      "explanation_vi": "Not ... until nghĩa là chưa thể hoàn tất cho đến khi nhận phê duyệt. Sau until có thể là mệnh đề; despite/during/because of cần cụm danh từ.",
+      "evidence": "",
+      "document_ids": []
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "discrepancy",
+      "pos": "noun",
+      "meaning_vi": "sự chênh lệch hoặc không khớp",
+      "usage_pattern": "a discrepancy between A and B",
+      "example": "We found a discrepancy between the invoice and our records.",
+      "example_vi": "Chúng tôi thấy một điểm không khớp giữa hóa đơn và hồ sơ.",
+      "synonyms": [
+        "inconsistency"
+      ],
+      "paraphrases": [
+        "a difference between things that should agree"
+      ],
+      "context": "We found a discrepancy between the invoice and our records.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Business Decisions · Connectors & Collocations",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "quotation",
+      "pos": "noun",
+      "meaning_vi": "báo giá",
+      "usage_pattern": "request/provide a quotation for something",
+      "example": "Please provide a quotation for installing the new shelves.",
+      "example_vi": "Vui lòng cung cấp báo giá lắp đặt các kệ mới.",
+      "synonyms": [
+        "price estimate"
+      ],
+      "paraphrases": [
+        "a statement of the price a supplier will charge"
+      ],
+      "context": "Please provide a quotation for installing the new shelves.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Business Decisions · Connectors & Collocations",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "waive",
+      "pos": "verb",
+      "meaning_vi": "miễn một khoản phí hoặc bỏ một yêu cầu theo quy định",
+      "usage_pattern": "waive a fee/requirement",
+      "example": "The hotel waived the cancellation fee after the flight was canceled.",
+      "example_vi": "Khách sạn miễn phí hủy phòng sau khi chuyến bay bị hủy.",
+      "synonyms": [
+        "forgo"
+      ],
+      "paraphrases": [
+        "decide not to require a payment"
+      ],
+      "context": "The hotel waived the cancellation fee after the flight was canceled.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Business Decisions · Connectors & Collocations",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "take effect",
+      "pos": "phrase",
+      "meaning_vi": "bắt đầu có hiệu lực",
+      "usage_pattern": "a policy/contract takes effect on + date",
+      "example": "The revised prices take effect on 1 November.",
+      "example_vi": "Giá mới có hiệu lực từ ngày 1 tháng Mười Một.",
+      "synonyms": [
+        "become effective"
+      ],
+      "paraphrases": [
+        "begin to apply"
+      ],
+      "context": "The revised prices take effect on 1 November.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Business Decisions · Connectors & Collocations",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "retain",
+      "pos": "verb",
+      "meaning_vi": "giữ lại để sử dụng về sau",
+      "usage_pattern": "retain a receipt/copy/record",
+      "example": "Retain a copy of the signed agreement for your records.",
+      "example_vi": "Giữ một bản thỏa thuận đã ký để lưu hồ sơ.",
+      "synonyms": [
+        "keep"
+      ],
+      "paraphrases": [
+        "continue to keep something"
+      ],
+      "context": "Retain a copy of the signed agreement for your records.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Business Decisions · Connectors & Collocations",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "in response to",
+      "pos": "phrase",
+      "meaning_vi": "để đáp lại, nhằm phản hồi",
+      "usage_pattern": "in response to + request/change/problem",
+      "example": "We extended our opening hours in response to customer feedback.",
+      "example_vi": "Chúng tôi kéo dài giờ mở cửa theo phản hồi của khách hàng.",
+      "synonyms": [
+        "as a reaction to"
+      ],
+      "paraphrases": [
+        "because of something that has happened"
+      ],
+      "context": "We extended our opening hours in response to customer feedback.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 5"
+      ],
+      "source_label": "Business Decisions · Connectors & Collocations",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

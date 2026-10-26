@@ -1,0 +1,3354 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "a1-be",
+      "level": "A1",
+      "title": "Am, is, are: giới thiệu và mô tả",
+      "summary": "Nói bạn là ai, ở đâu và đang cảm thấy thế nào.",
+      "minutes": 8,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [],
+      "explanation": [
+        {
+          "title": "Chọn be theo chủ ngữ",
+          "body": "I đi với am; he, she, it đi với is; you, we, they đi với are. Be nối chủ ngữ với nghề nghiệp, tính chất hoặc nơi chốn.",
+          "pattern": "I am · he/she/it is · you/we/they are",
+          "example": "Our reading room is quiet.",
+          "translation_vi": "Phòng đọc của chúng tôi yên tĩnh."
+        },
+        {
+          "title": "Phủ định và đặt câu hỏi",
+          "body": "Thêm not ngay sau be để phủ định. Khi hỏi, đưa be lên trước chủ ngữ; không thêm do hoặc does.",
+          "pattern": "Be + chủ ngữ ...? · chủ ngữ + be + not",
+          "example": "Are your notebooks in this bag?",
+          "translation_vi": "Sổ của bạn có trong túi này không?"
+        }
+      ],
+      "pitfalls": [
+        "Không bỏ be trước tính từ: dùng I am tired, không dùng I tired.",
+        "Không dùng do với câu hỏi có be."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple-be"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "I ___ the new library assistant.",
+          "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "answer": 0,
+          "explanation_vi": "I đi với am. Câu giới thiệu công việc hiện tại."
+        },
+        {
+          "id": "q2",
+          "prompt": "The reading lamps ___ on the desk.",
+          "options": [
+            "am",
+            "are",
+            "is",
+            "be"
+          ],
+          "answer": 1,
+          "explanation_vi": "Lamps là số nhiều nên dùng are."
+        },
+        {
+          "id": "q3",
+          "prompt": "___ your sister at home now?",
+          "options": [
+            "Am",
+            "Are",
+            "Is",
+            "Be"
+          ],
+          "answer": 2,
+          "explanation_vi": "Your sister là một người. Đưa is lên trước chủ ngữ để hỏi."
+        },
+        {
+          "id": "q4",
+          "prompt": "We ___ not ready to leave yet.",
+          "options": [
+            "am",
+            "is",
+            "be",
+            "are"
+          ],
+          "answer": 3,
+          "explanation_vi": "We đi với are; not đứng sau are."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the correct short answer: “Are you the new volunteers?”",
+          "options": [
+            "Yes, we are.",
+            "Yes, we is.",
+            "Yes, we am.",
+            "Yes, we be."
+          ],
+          "answer": 0,
+          "explanation_vi": "Nhóm người trả lời bằng we, nên câu trả lời ngắn là Yes, we are."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the correct negative sentence.",
+          "options": [
+            "The cupboard not empty.",
+            "The cupboard is not empty.",
+            "The cupboard does not is empty.",
+            "The cupboard are not empty."
+          ],
+          "answer": 1,
+          "explanation_vi": "Cupboard số ít cần is; phủ định bằng is not trước tính từ empty."
+        }
+      ]
+    },
+    {
+      "id": "a1-present-simple",
+      "level": "A1",
+      "title": "Hiện tại đơn: thói quen mỗi ngày",
+      "summary": "Kể những việc thường làm và đặt câu hỏi về lịch sinh hoạt.",
+      "minutes": 8,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a1-be"
+      ],
+      "explanation": [
+        {
+          "title": "Thêm s với he, she, it",
+          "body": "Dùng hiện tại đơn cho thói quen và điều thường đúng. Với chủ ngữ số ít như she hoặc the shop, động từ thường thêm s hoặc es.",
+          "pattern": "She works · they work",
+          "example": "The café closes at six every weekday.",
+          "translation_vi": "Quán cà phê đóng cửa lúc sáu giờ vào các ngày trong tuần."
+        },
+        {
+          "title": "Sau do hoặc does, dùng động từ nguyên mẫu",
+          "body": "Dùng do/does để hỏi và do not/does not để phủ định. Does đã thể hiện ngôi thứ ba nên động từ sau nó không thêm s.",
+          "pattern": "Does she work? · She does not work.",
+          "example": "Does Minh cycle to the office?",
+          "translation_vi": "Minh có đạp xe đến văn phòng không?"
+        }
+      ],
+      "pitfalls": [
+        "Không viết does she works: sau does dùng work.",
+        "Đừng dùng am/is/are trước một động từ thường ở hiện tại đơn."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Every morning, Lan ___ the shop at seven.",
+          "options": [
+            "open",
+            "opening",
+            "is open",
+            "opens"
+          ],
+          "answer": 3,
+          "explanation_vi": "Lan là chủ ngữ số ít; thói quen mỗi sáng dùng opens."
+        },
+        {
+          "id": "q2",
+          "prompt": "We usually ___ lunch in the courtyard.",
+          "options": [
+            "eat",
+            "eating",
+            "are eat",
+            "eats"
+          ],
+          "answer": 0,
+          "explanation_vi": "We dùng động từ nguyên mẫu eat ở hiện tại đơn."
+        },
+        {
+          "id": "q3",
+          "prompt": "___ this bus stop near the museum every day?",
+          "options": [
+            "Is",
+            "Does",
+            "Are",
+            "Do"
+          ],
+          "answer": 1,
+          "explanation_vi": "Bus số ít, câu hỏi với động từ stop cần Does."
+        },
+        {
+          "id": "q4",
+          "prompt": "Bao does not ___ coffee in the evening.",
+          "options": [
+            "drinking",
+            "drank",
+            "drink",
+            "drinks"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau does not dùng nguyên mẫu drink."
+        },
+        {
+          "id": "q5",
+          "prompt": "How often ___ your neighbours use the shared garden?",
+          "options": [
+            "does",
+            "is",
+            "are",
+            "do"
+          ],
+          "answer": 3,
+          "explanation_vi": "Neighbours số nhiều nên câu hỏi dùng do."
+        },
+        {
+          "id": "q6",
+          "prompt": "My cousin ___ English on Tuesday evenings.",
+          "options": [
+            "studies",
+            "studying",
+            "are studying",
+            "study"
+          ],
+          "answer": 0,
+          "explanation_vi": "Cousin số ít; study đổi y thành ies: studies."
+        }
+      ]
+    },
+    {
+      "id": "a1-articles",
+      "level": "A1",
+      "title": "A, an, the: nhắc đến một người hay vật",
+      "summary": "Chọn mạo từ theo âm đầu và theo điều người nghe đã biết.",
+      "minutes": 8,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-be"
+      ],
+      "explanation": [
+        {
+          "title": "A hay an phụ thuộc âm đầu",
+          "body": "Dùng a/an trước danh từ đếm được số ít khi giới thiệu một người hoặc vật chưa xác định. Nghe âm đầu của từ theo sau: âm nguyên âm dùng an.",
+          "pattern": "a + âm phụ âm · an + âm nguyên âm",
+          "example": "We found an empty basket beside a bench.",
+          "translation_vi": "Chúng tôi thấy một chiếc giỏ trống cạnh một ghế dài."
+        },
+        {
+          "title": "Dùng the khi đã biết đang nói đến cái nào",
+          "body": "Khi đã nhắc một vật và tiếp tục nói về chính vật đó, dùng the. Danh từ số nhiều hoặc không đếm được nói chung thường không cần mạo từ.",
+          "pattern": "a book → the book · books nói chung",
+          "example": "I bought a map. The map shows every walking trail.",
+          "translation_vi": "Tôi mua một tấm bản đồ. Tấm bản đồ chỉ tất cả các đường đi bộ."
+        }
+      ],
+      "pitfalls": [
+        "Chọn a/an theo âm, không chỉ theo chữ: hour bắt đầu bằng âm nguyên âm.",
+        "Không thêm a/an trước danh từ số nhiều."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Choose a or an: We need ___ extra chair.",
+          "options": [
+            "some",
+            "many",
+            "an",
+            "a"
+          ],
+          "answer": 2,
+          "explanation_vi": "Extra bắt đầu bằng âm nguyên âm; chair là danh từ đếm được số ít."
+        },
+        {
+          "id": "q2",
+          "prompt": "Choose a or an: Mai is ___ university student.",
+          "options": [
+            "some",
+            "many",
+            "an",
+            "a"
+          ],
+          "answer": 3,
+          "explanation_vi": "University bắt đầu bằng âm /j/ như trong you, nên dùng a."
+        },
+        {
+          "id": "q3",
+          "prompt": "Choose a or an: Please wait for ___ hour.",
+          "options": [
+            "an",
+            "any",
+            "a",
+            "many"
+          ],
+          "answer": 0,
+          "explanation_vi": "Hour có h câm và bắt đầu bằng âm nguyên âm, nên dùng an."
+        },
+        {
+          "id": "q4",
+          "prompt": "I borrowed a red notebook. I mean that same notebook: ___ notebook is now on my desk.",
+          "options": [
+            "Some",
+            "The",
+            "A",
+            "An"
+          ],
+          "answer": 1,
+          "explanation_vi": "Đây là chính cuốn sổ đã được nhắc, nên dùng The."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose a or an: My uncle is ___ baker.",
+          "options": [
+            "many",
+            "some",
+            "a",
+            "an"
+          ],
+          "answer": 2,
+          "explanation_vi": "Baker bắt đầu bằng âm phụ âm; nghề nghiệp số ít dùng a baker."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the sentence that talks about cats in general.",
+          "options": [
+            "An cats need clean water.",
+            "Cats needs clean water.",
+            "A cats need clean water.",
+            "Cats need clean water."
+          ],
+          "answer": 3,
+          "explanation_vi": "Cats là số nhiều nói chung, không cần mạo từ và đi với need."
+        }
+      ]
+    },
+    {
+      "id": "a1-pronouns",
+      "level": "A1",
+      "title": "I, me, my, mine: chọn đúng vai trò",
+      "summary": "Phân biệt người làm việc, người nhận việc và đồ thuộc về ai.",
+      "minutes": 8,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-be"
+      ],
+      "explanation": [
+        {
+          "title": "Chủ ngữ và tân ngữ",
+          "body": "I, he, she, we, they thường đứng làm chủ ngữ. Sau động từ hoặc giới từ, dùng me, him, her, us, them khi cần tân ngữ.",
+          "pattern": "She helps me. · I speak to her.",
+          "example": "They invited us to the book club.",
+          "translation_vi": "Họ mời chúng tôi tham gia câu lạc bộ sách."
+        },
+        {
+          "title": "My cần danh từ; mine đứng riêng",
+          "body": "My, your, his, her, our, their đứng trước danh từ. Mine, yours, hers, ours, theirs thay cả cụm chỉ đồ vật; his có cùng dạng ở cả hai vị trí.",
+          "pattern": "my bag · the bag is mine",
+          "example": "These are our seats. Those are yours.",
+          "translation_vi": "Đây là chỗ của chúng tôi. Những chỗ kia là của bạn."
+        }
+      ],
+      "pitfalls": [
+        "Không dùng mine trước danh từ: dùng my notebook.",
+        "Its chỉ sở hữu; it’s là dạng rút gọn của it is hoặc it has."
+      ],
+      "source_urls": [
+        "https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/personal-pronouns-possessives"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Anna is my neighbour. ___ works at the station.",
+          "options": [
+            "Herself",
+            "She",
+            "Her",
+            "Hers"
+          ],
+          "answer": 1,
+          "explanation_vi": "Chỗ trống là chủ ngữ của works, nên dùng She."
+        },
+        {
+          "id": "q2",
+          "prompt": "This parcel is for Tom. Please give it to ___.",
+          "options": [
+            "himself",
+            "he",
+            "him",
+            "his"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau to cần tân ngữ chỉ Tom: him."
+        },
+        {
+          "id": "q3",
+          "prompt": "We brought ___ own mugs to the picnic.",
+          "options": [
+            "we",
+            "ours",
+            "us",
+            "our"
+          ],
+          "answer": 3,
+          "explanation_vi": "Trước own mugs cần từ chỉ sở hữu our."
+        },
+        {
+          "id": "q4",
+          "prompt": "That blue scarf belongs to me. It is ___.",
+          "options": [
+            "mine",
+            "my",
+            "me",
+            "I"
+          ],
+          "answer": 0,
+          "explanation_vi": "Không còn danh từ sau chỗ trống, nên dùng mine để thay my scarf."
+        },
+        {
+          "id": "q5",
+          "prompt": "The two visitors are waiting. Can you help ___?",
+          "options": [
+            "theirs",
+            "them",
+            "they",
+            "their"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau help cần tân ngữ; two visitors được thay bằng them."
+        },
+        {
+          "id": "q6",
+          "prompt": "The bicycle has a basket. ___ basket is very small.",
+          "options": [
+            "Theirs",
+            "It's",
+            "Its",
+            "It"
+          ],
+          "answer": 2,
+          "explanation_vi": "Its đứng trước basket để chỉ giỏ của chiếc xe. It’s không dùng để chỉ sở hữu."
+        }
+      ]
+    },
+    {
+      "id": "a1-there-is",
+      "level": "A1",
+      "title": "There is, there are: có gì ở đây?",
+      "summary": "Mô tả đồ vật và tiện ích trong một nơi chốn.",
+      "minutes": 8,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-be",
+        "a1-articles"
+      ],
+      "explanation": [
+        {
+          "title": "Chọn is hoặc are theo danh từ",
+          "body": "There is đi với một vật hoặc danh từ không đếm được. There are đi với danh từ số nhiều. Bài này luyện cách dùng chuẩn trong câu viết.",
+          "pattern": "There is a ... · There are two ...",
+          "example": "There are three benches beside the pond.",
+          "translation_vi": "Có ba ghế dài cạnh ao."
+        },
+        {
+          "title": "Đổi vị trí để hỏi",
+          "body": "Hỏi bằng Is there hoặc Are there. Phủ định bằng there isn’t hoặc there aren’t; any thường đi với câu hỏi và phủ định.",
+          "pattern": "Is there ...? · There aren’t any ...",
+          "example": "Is there any water in the bottle?",
+          "translation_vi": "Trong chai còn nước không?"
+        }
+      ],
+      "pitfalls": [
+        "Không dùng it is khi muốn giới thiệu sự hiện diện của một vật mới.",
+        "Câu trả lời ngắn khẳng định dùng Yes, there is, không rút gọn thành Yes, there’s."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/using-there-there-are"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "There ___ a small fountain outside the hall.",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ],
+          "answer": 0,
+          "explanation_vi": "A small fountain là số ít nên dùng is."
+        },
+        {
+          "id": "q2",
+          "prompt": "There ___ four lockers near the entrance.",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ],
+          "answer": 1,
+          "explanation_vi": "Four lockers là số nhiều, nên dùng are."
+        },
+        {
+          "id": "q3",
+          "prompt": "___ there any milk left in the jug?",
+          "options": [
+            "Are",
+            "Am",
+            "Is",
+            "Be"
+          ],
+          "answer": 2,
+          "explanation_vi": "Milk không đếm được nên hỏi Is there."
+        },
+        {
+          "id": "q4",
+          "prompt": "There ___ any spare chairs; every chair is in use.",
+          "options": [
+            "is not",
+            "am not",
+            "be not",
+            "are not"
+          ],
+          "answer": 3,
+          "explanation_vi": "Chairs số nhiều; câu cho biết không còn ghế thừa, nên dùng are not."
+        },
+        {
+          "id": "q5",
+          "prompt": "“Is there a printer upstairs?” Choose the correct short answer.",
+          "options": [
+            "Yes, there is.",
+            "Yes, there’s.",
+            "Yes, there are.",
+            "Yes, it there."
+          ],
+          "answer": 0,
+          "explanation_vi": "Với Is there, câu trả lời ngắn khẳng định là Yes, there is."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the correct question about several cafés.",
+          "options": [
+            "Is there any cafés nearby?",
+            "Are there any cafés nearby?",
+            "There are any cafés nearby?",
+            "Do there any cafés nearby?"
+          ],
+          "answer": 1,
+          "explanation_vi": "Cafés số nhiều và câu hỏi đưa are lên trước there."
+        }
+      ]
+    },
+    {
+      "id": "a2-past-simple",
+      "level": "A2",
+      "title": "Quá khứ đơn: kể việc đã xảy ra",
+      "summary": "Nói về việc đã kết thúc và dùng did đúng trong câu hỏi, phủ định.",
+      "minutes": 8,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a1-present-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Việc đã kết thúc",
+          "body": "Dùng quá khứ đơn cho một sự việc ở thời điểm đã qua như yesterday hoặc last Friday. Động từ có thể thêm ed hoặc đổi sang dạng bất quy tắc.",
+          "pattern": "worked · bought · went",
+          "example": "We repaired the gate last Saturday.",
+          "translation_vi": "Chúng tôi sửa cổng vào thứ Bảy tuần trước."
+        },
+        {
+          "title": "Did đi cùng nguyên mẫu",
+          "body": "Trong câu hỏi và phủ định với động từ thường, dùng did/didn’t rồi trở về động từ nguyên mẫu. Với be, dùng was/were trực tiếp.",
+          "pattern": "Did they go? · They didn’t go.",
+          "example": "Did you find the missing receipt?",
+          "translation_vi": "Bạn đã tìm thấy hóa đơn bị thất lạc chưa?"
+        }
+      ],
+      "pitfalls": [
+        "Không dùng didn’t went; dùng didn’t go.",
+        "Không chọn quá khứ hoàn thành chỉ vì sự việc xảy ra từ lâu."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/past-simple"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Yesterday, Huy ___ a new folder for the project.",
+          "options": [
+            "buy",
+            "buys",
+            "buying",
+            "bought"
+          ],
+          "answer": 3,
+          "explanation_vi": "Yesterday chỉ thời điểm đã kết thúc; quá khứ của buy là bought."
+        },
+        {
+          "id": "q2",
+          "prompt": "We did not ___ the office early last night.",
+          "options": [
+            "leave",
+            "leaves",
+            "leaving",
+            "left"
+          ],
+          "answer": 0,
+          "explanation_vi": "Sau did not dùng nguyên mẫu leave."
+        },
+        {
+          "id": "q3",
+          "prompt": "___ you send the invitation yesterday?",
+          "options": [
+            "Does",
+            "Did",
+            "Are",
+            "Do"
+          ],
+          "answer": 1,
+          "explanation_vi": "Hỏi về yesterday với động từ send cần Did."
+        },
+        {
+          "id": "q4",
+          "prompt": "The café ___ closed when we arrived last Monday.",
+          "options": [
+            "is",
+            "be",
+            "was",
+            "were"
+          ],
+          "answer": 2,
+          "explanation_vi": "The café là số ít và thời điểm ở quá khứ, nên dùng was."
+        },
+        {
+          "id": "q5",
+          "prompt": "Our volunteers ___ the path last weekend.",
+          "options": [
+            "clean",
+            "cleans",
+            "are clean",
+            "cleaned"
+          ],
+          "answer": 3,
+          "explanation_vi": "Last weekend đã kết thúc; dùng quá khứ cleaned."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the correct question.",
+          "options": [
+            "Where did you put the spare key?",
+            "Where you did put the spare key?",
+            "Where did you puts the spare key?",
+            "Where did you putted the spare key?"
+          ],
+          "answer": 0,
+          "explanation_vi": "Câu hỏi có did theo thứ tự where + did + chủ ngữ + nguyên mẫu put."
+        }
+      ]
+    },
+    {
+      "id": "a2-present-continuous",
+      "level": "A2",
+      "title": "Hiện tại tiếp diễn: việc đang diễn ra",
+      "summary": "Dùng be + V-ing để mô tả điều đang xảy ra hoặc tạm thời.",
+      "minutes": 8,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-be",
+        "a1-present-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Ghép be với động từ thêm ing",
+          "body": "Chọn am/is/are theo chủ ngữ, rồi dùng V-ing. Cấu trúc này thường diễn tả hoạt động đang diễn ra hoặc tình huống tạm thời.",
+          "pattern": "am/is/are + V-ing",
+          "example": "The volunteers are sorting donated books.",
+          "translation_vi": "Các tình nguyện viên đang phân loại sách quyên góp."
+        },
+        {
+          "title": "Phân biệt với thói quen",
+          "body": "Hiện tại đơn thường kể thói quen; hiện tại tiếp diễn cho biết việc đang diễn ra. Một số động từ chỉ trạng thái như know thường không dùng tiếp diễn trong nghĩa thông thường.",
+          "pattern": "usually works · is working now",
+          "example": "I usually walk, but I am taking the bus today.",
+          "translation_vi": "Tôi thường đi bộ, nhưng hôm nay tôi đang đi xe buýt."
+        }
+      ],
+      "pitfalls": [
+        "Không bỏ am/is/are trước V-ing.",
+        "Không cứ thấy now là đổi mọi động từ sang tiếp diễn: I know vẫn dùng để nói tôi biết."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-continuous"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Look! The children ___ a kite in the park.",
+          "options": [
+            "flying",
+            "are fly",
+            "are flying",
+            "is flying"
+          ],
+          "answer": 2,
+          "explanation_vi": "The children số nhiều; hoạt động đang diễn ra dùng are flying."
+        },
+        {
+          "id": "q2",
+          "prompt": "I ___ dinner at the moment, so please call later.",
+          "options": [
+            "cooking",
+            "am cook",
+            "is cooking",
+            "am cooking"
+          ],
+          "answer": 3,
+          "explanation_vi": "I đi với am; tiếp diễn cần cooking."
+        },
+        {
+          "id": "q3",
+          "prompt": "___ your colleague working from home today?",
+          "options": [
+            "Is",
+            "Am",
+            "Does",
+            "Do"
+          ],
+          "answer": 0,
+          "explanation_vi": "Cấu trúc working cần be; your colleague số ít nên dùng Is."
+        },
+        {
+          "id": "q4",
+          "prompt": "Nora is not ___ the printer right now.",
+          "options": [
+            "used",
+            "using",
+            "use",
+            "uses"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau is not trong tiếp diễn cần using."
+        },
+        {
+          "id": "q5",
+          "prompt": "Every day, Sam walks to work. Today he ___ a taxi because his ankle hurts.",
+          "options": [
+            "taking",
+            "is take",
+            "is taking",
+            "are taking"
+          ],
+          "answer": 2,
+          "explanation_vi": "Hôm nay là tình huống tạm thời; he đi với is taking."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the standard sentence expressing knowledge now.",
+          "options": [
+            "I knowing the answer.",
+            "I knows the answer.",
+            "I am knowing the answer.",
+            "I know the answer."
+          ],
+          "answer": 3,
+          "explanation_vi": "Know chỉ trạng thái biết trong ngữ cảnh này nên dùng hiện tại đơn I know."
+        }
+      ]
+    },
+    {
+      "id": "a2-quantity",
+      "level": "A2",
+      "title": "How much, how many: đếm và nói số lượng",
+      "summary": "Phân biệt danh từ đếm được với những thứ thường không đếm trực tiếp.",
+      "minutes": 8,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a1-articles",
+        "a1-there-is"
+      ],
+      "explanation": [
+        {
+          "title": "Many cho vật đếm được; much cho thứ không đếm được",
+          "body": "Chairs, tickets có dạng số nhiều để đếm. Water, advice, information thường không đếm trực tiếp; muốn đếm phải thêm đơn vị phù hợp.",
+          "pattern": "many tickets · much information",
+          "example": "How many labels do we need?",
+          "translation_vi": "Chúng ta cần bao nhiêu nhãn?"
+        },
+        {
+          "title": "Some, any và đơn vị đo",
+          "body": "Some thường dùng khi khẳng định hoặc mời, đề nghị; any thường dùng khi hỏi và phủ định. Dùng a piece of advice hoặc two bottles of water khi cần số lượng cụ thể.",
+          "pattern": "some water · any chairs · a piece of advice",
+          "example": "Could I have some water, please?",
+          "translation_vi": "Cho tôi xin một ít nước được không?"
+        }
+      ],
+      "pitfalls": [
+        "Trong nghĩa thông thường, không thêm s vào information hoặc advice.",
+        "A lot of dùng được với cả danh từ đếm được số nhiều và không đếm được."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/nouns-countable-uncountable"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "How ___ tickets have you printed?",
+          "options": [
+            "an",
+            "many",
+            "much",
+            "a"
+          ],
+          "answer": 1,
+          "explanation_vi": "Tickets đếm được và ở số nhiều, nên hỏi how many."
+        },
+        {
+          "id": "q2",
+          "prompt": "How ___ flour is left in the bag?",
+          "options": [
+            "an",
+            "many",
+            "much",
+            "a"
+          ],
+          "answer": 2,
+          "explanation_vi": "Flour không đếm trực tiếp trong câu này, nên hỏi how much."
+        },
+        {
+          "id": "q3",
+          "prompt": "The adviser gave me two useful ___ of advice.",
+          "options": [
+            "an",
+            "piece",
+            "advices",
+            "pieces"
+          ],
+          "answer": 3,
+          "explanation_vi": "Đếm advice bằng pieces of advice; sau two cần pieces."
+        },
+        {
+          "id": "q4",
+          "prompt": "There is not ___ information on this label.",
+          "options": [
+            "much",
+            "many",
+            "a",
+            "an"
+          ],
+          "answer": 0,
+          "explanation_vi": "Information không đếm được; not much information nghĩa là không có nhiều thông tin."
+        },
+        {
+          "id": "q5",
+          "prompt": "We need three ___ of water for the walk.",
+          "options": [
+            "a bottle",
+            "bottles",
+            "bottle",
+            "waters"
+          ],
+          "answer": 1,
+          "explanation_vi": "Three đi với bottles số nhiều; of water cho biết thứ bên trong."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the standard sentence.",
+          "options": [
+            "There are a chair in the hall.",
+            "There is many chairs in the hall.",
+            "There are a lot of chairs in the hall.",
+            "There are much chairs in the hall."
+          ],
+          "answer": 2,
+          "explanation_vi": "Chairs là số nhiều: there are và a lot of đều phù hợp."
+        }
+      ]
+    },
+    {
+      "id": "a2-comparisons",
+      "level": "A2",
+      "title": "So sánh: hơn, nhất và bằng nhau",
+      "summary": "So sánh giá, khoảng cách và đặc điểm bằng cấu trúc rõ ràng.",
+      "minutes": 8,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a1-be"
+      ],
+      "explanation": [
+        {
+          "title": "So sánh hai đối tượng",
+          "body": "Tính từ ngắn thường thêm er; tính từ dài thường dùng more. Sau so sánh hơn, dùng than khi nêu đối tượng thứ hai.",
+          "pattern": "smaller than · more useful than",
+          "example": "This route is shorter than the coastal road.",
+          "translation_vi": "Tuyến này ngắn hơn đường ven biển."
+        },
+        {
+          "title": "So sánh nhất và ngang bằng",
+          "body": "Dùng the + dạng so sánh nhất để chọn trong một nhóm. Dùng as + tính từ gốc + as khi nói hai đối tượng bằng nhau về một đặc điểm.",
+          "pattern": "the smallest · the most useful · as tall as",
+          "example": "The blue shelf is as wide as the white one.",
+          "translation_vi": "Kệ màu xanh rộng bằng kệ màu trắng."
+        }
+      ],
+      "pitfalls": [
+        "Không ghép more với cheaper: cheaper đã là so sánh hơn.",
+        "Good đổi thành better và best, không dùng gooder."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/comparative-adjectives",
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/comparative-superlative-adjectives"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "This box is ___ than the one we used yesterday.",
+          "options": [
+            "lighter",
+            "lightest",
+            "more lighter",
+            "as light"
+          ],
+          "answer": 0,
+          "explanation_vi": "Có than nên cần so sánh hơn; light → lighter."
+        },
+        {
+          "id": "q2",
+          "prompt": "Of all five rooms, this one is the ___.",
+          "options": [
+            "quieter",
+            "quietest",
+            "most quieter",
+            "as quiet"
+          ],
+          "answer": 1,
+          "explanation_vi": "So trong cả năm phòng và có the, nên dùng quietest."
+        },
+        {
+          "id": "q3",
+          "prompt": "The revised map is more useful ___ the old one.",
+          "options": [
+            "as",
+            "of",
+            "than",
+            "that"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau more useful dùng than để giới thiệu đối tượng được so sánh."
+        },
+        {
+          "id": "q4",
+          "prompt": "My new desk is as ___ as the old one.",
+          "options": [
+            "wider",
+            "widest",
+            "more wide",
+            "wide"
+          ],
+          "answer": 3,
+          "explanation_vi": "Cấu trúc as ... as dùng tính từ gốc wide."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the correct comparative form of good.",
+          "options": [
+            "better",
+            "gooder",
+            "more better",
+            "best"
+          ],
+          "answer": 0,
+          "explanation_vi": "Better là so sánh hơn của good; best là so sánh nhất."
+        },
+        {
+          "id": "q6",
+          "prompt": "This documentary is ___ than the short advertisement.",
+          "options": [
+            "informativest",
+            "more informative",
+            "more informativer",
+            "most informative"
+          ],
+          "answer": 1,
+          "explanation_vi": "Informative là tính từ dài, nên dùng more informative trước than."
+        }
+      ]
+    },
+    {
+      "id": "a2-future",
+      "level": "A2",
+      "title": "Nói về dự định và lời hứa",
+      "summary": "Luyện will, be going to và hiện tại tiếp diễn với ý nghĩa tương lai.",
+      "minutes": 8,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a2-present-continuous"
+      ],
+      "explanation": [
+        {
+          "title": "Will và be going to",
+          "body": "Will thường dùng cho lời hứa hoặc quyết định ngay lúc nói. Be going to thường nói dự định đã có hoặc dự đoán dựa vào dấu hiệu hiện tại; nhiều tình huống cho phép hơn một cách nói.",
+          "pattern": "will + nguyên mẫu · be going to + nguyên mẫu",
+          "example": "I am going to join the evening reading group.",
+          "translation_vi": "Tôi dự định tham gia nhóm đọc buổi tối."
+        },
+        {
+          "title": "Hiện tại tiếp diễn cho việc đã sắp xếp",
+          "body": "Dùng am/is/are + V-ing khi đã có cuộc hẹn hoặc sự sắp xếp cụ thể. Mốc thời gian giúp người nghe hiểu đang nói về tương lai.",
+          "pattern": "am/is/are + V-ing + thời gian tương lai",
+          "example": "We are meeting the librarian at ten tomorrow.",
+          "translation_vi": "Chúng tôi sẽ gặp thủ thư lúc mười giờ ngày mai."
+        }
+      ],
+      "pitfalls": [
+        "Sau will dùng nguyên mẫu, không thêm to.",
+        "Be going to vẫn cần am/is/are; đừng bỏ be."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-forms-will-be-going-present-continuous"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "I promise I will ___ the borrowed camera tomorrow.",
+          "options": [
+            "returns",
+            "returning",
+            "to return",
+            "return"
+          ],
+          "answer": 3,
+          "explanation_vi": "Sau will dùng động từ nguyên mẫu return."
+        },
+        {
+          "id": "q2",
+          "prompt": "We ___ going to repaint the front door this weekend.",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "answer": 0,
+          "explanation_vi": "We cần are trong cấu trúc be going to."
+        },
+        {
+          "id": "q3",
+          "prompt": "Mina is going to ___ a place on the course.",
+          "options": [
+            "booking",
+            "book",
+            "booked",
+            "books"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau going to dùng nguyên mẫu book."
+        },
+        {
+          "id": "q4",
+          "prompt": "The appointment is confirmed: we are ___ the designer at two tomorrow.",
+          "options": [
+            "meets",
+            "met",
+            "meeting",
+            "meet"
+          ],
+          "answer": 2,
+          "explanation_vi": "Đã có lịch hẹn; hiện tại tiếp diễn cần meeting sau are."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the correctly formed promise.",
+          "options": [
+            "I will not to forget your message.",
+            "I will not forgetting your message.",
+            "I will not forgets your message.",
+            "I will not forget your message."
+          ],
+          "answer": 3,
+          "explanation_vi": "Will not đi với nguyên mẫu forget, không thêm to, ing hoặc s."
+        },
+        {
+          "id": "q6",
+          "prompt": "Which sentence clearly describes an arrangement for next Monday?",
+          "options": [
+            "I am visiting the supplier next Monday.",
+            "I visit the supplier every Monday.",
+            "I was visiting the supplier on Monday.",
+            "I visited the supplier last Monday."
+          ],
+          "answer": 0,
+          "explanation_vi": "Am visiting cùng next Monday diễn tả lịch hẹn sắp tới; các câu khác nói quá khứ hoặc thói quen."
+        }
+      ]
+    },
+    {
+      "id": "b1-present-perfect",
+      "level": "B1",
+      "title": "Hiện tại hoàn thành: từ trước đến bây giờ",
+      "summary": "Nối trải nghiệm hoặc sự việc đã xảy ra với hiện tại.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "a2-past-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Have/has đi với quá khứ phân từ",
+          "body": "Dùng hiện tại hoàn thành cho trải nghiệm không nêu thời điểm kết thúc, hoặc tình trạng kéo dài đến bây giờ. Quá khứ phân từ không phải lúc nào cũng giống quá khứ đơn.",
+          "pattern": "have/has + past participle",
+          "example": "I have known our neighbour for twelve years.",
+          "translation_vi": "Tôi đã quen người hàng xóm này được mười hai năm."
+        },
+        {
+          "title": "Chú ý mốc thời gian",
+          "body": "Since chỉ thời điểm bắt đầu; for chỉ khoảng thời gian. Khi nêu thời điểm đã kết thúc như last Tuesday, thường dùng quá khứ đơn.",
+          "pattern": "since 2020 · for six years",
+          "example": "She joined the club in May and has attended every week since then.",
+          "translation_vi": "Cô ấy tham gia câu lạc bộ vào tháng Năm và từ đó đến nay đi sinh hoạt hằng tuần."
+        }
+      ],
+      "pitfalls": [
+        "Không dùng have went; quá khứ phân từ của go là gone.",
+        "Phân biệt thời gian đã kết thúc với khoảng kéo dài đến hiện tại."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "I still work here. I have worked here ___ 2021.",
+          "options": [
+            "during",
+            "from",
+            "since",
+            "for"
+          ],
+          "answer": 2,
+          "explanation_vi": "Since đứng trước mốc bắt đầu 2021; for đứng trước khoảng thời gian."
+        },
+        {
+          "id": "q2",
+          "prompt": "They have owned this shop ___ eight years.",
+          "options": [
+            "at",
+            "by",
+            "since",
+            "for"
+          ],
+          "answer": 3,
+          "explanation_vi": "Eight years là khoảng thời gian, nên dùng for."
+        },
+        {
+          "id": "q3",
+          "prompt": "The delivery arrived yesterday. We ___ it at noon yesterday.",
+          "options": [
+            "received",
+            "receiving",
+            "have received",
+            "has received"
+          ],
+          "answer": 0,
+          "explanation_vi": "At noon yesterday là thời điểm đã kết thúc, nên dùng quá khứ đơn received."
+        },
+        {
+          "id": "q4",
+          "prompt": "Has Nhi ever ___ a public talk?",
+          "options": [
+            "giving",
+            "given",
+            "gave",
+            "give"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau has cần quá khứ phân từ given của give."
+        },
+        {
+          "id": "q5",
+          "prompt": "So far this month, the team ___ twelve requests.",
+          "options": [
+            "processing",
+            "has process",
+            "has processed",
+            "have processed"
+          ],
+          "answer": 2,
+          "explanation_vi": "Team được dùng như một đơn vị số ít; so far nối với hiện tại, nên dùng has processed."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the sentence that says the friendship continues now.",
+          "options": [
+            "We became friends tomorrow.",
+            "We are friends since ten years.",
+            "We were friends for ten years, but no longer are.",
+            "We have been friends for ten years."
+          ],
+          "answer": 3,
+          "explanation_vi": "Have been ... for diễn tả tình trạng bắt đầu trước đây và còn tiếp tục."
+        }
+      ]
+    },
+    {
+      "id": "b1-past-continuous",
+      "level": "B1",
+      "title": "Quá khứ tiếp diễn: chuyện đang xảy ra thì…",
+      "summary": "Kể bối cảnh và sự việc chen vào một thời điểm trong quá khứ.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "a2-past-simple",
+        "a2-present-continuous"
+      ],
+      "explanation": [
+        {
+          "title": "Một việc đang diễn ra tại thời điểm quá khứ",
+          "body": "Dùng was/were + V-ing để nhìn hoạt động như đang diễn ra ở mốc được kể. Was đi với I/he/she/it, were đi với you/we/they.",
+          "pattern": "was/were + V-ing",
+          "example": "At eight last night, I was preparing the workshop notes.",
+          "translation_vi": "Lúc tám giờ tối qua, tôi đang chuẩn bị ghi chú cho buổi hướng dẫn."
+        },
+        {
+          "title": "Bối cảnh và việc xảy đến",
+          "body": "Quá khứ tiếp diễn thường làm nền; quá khứ đơn kể một việc xảy đến trong lúc đó. Không phải cứ có when là bắt buộc dùng một thì cố định.",
+          "pattern": "was/were + V-ing ... when + past simple",
+          "example": "We were planting beans when the rain started.",
+          "translation_vi": "Chúng tôi đang trồng đậu thì trời bắt đầu mưa."
+        }
+      ],
+      "pitfalls": [
+        "Cần cả was/were và V-ing, không dùng was cook.",
+        "Chọn thì theo ý muốn kể, đừng chỉ tìm when hoặc while."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-continuous-past-simple"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "At 6 p.m. yesterday, I ___ the entrance signs.",
+          "options": [
+            "am painting",
+            "was painting",
+            "were painting",
+            "was paint"
+          ],
+          "answer": 1,
+          "explanation_vi": "Mốc quá khứ và I cần was painting để nói việc đang diễn ra."
+        },
+        {
+          "id": "q2",
+          "prompt": "The visitors ___ waiting outside when the guide arrived.",
+          "options": [
+            "be",
+            "was",
+            "were",
+            "are"
+          ],
+          "answer": 2,
+          "explanation_vi": "Visitors số nhiều; quá khứ tiếp diễn dùng were waiting."
+        },
+        {
+          "id": "q3",
+          "prompt": "I was checking the route when my phone suddenly ___.",
+          "options": [
+            "was ring",
+            "ring",
+            "rings",
+            "rang"
+          ],
+          "answer": 3,
+          "explanation_vi": "Suddenly rang là sự việc xảy đến trong lúc checking đang diễn ra."
+        },
+        {
+          "id": "q4",
+          "prompt": "What ___ you doing when the alarm sounded?",
+          "options": [
+            "were",
+            "was",
+            "did",
+            "are"
+          ],
+          "answer": 0,
+          "explanation_vi": "Câu hỏi quá khứ tiếp diễn: were + you + doing."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the sentence describing an activity in progress at noon yesterday.",
+          "options": [
+            "We were carry the boxes at noon yesterday.",
+            "We were carrying the boxes at noon yesterday.",
+            "We are carrying the boxes at noon yesterday.",
+            "We was carrying the boxes at noon yesterday."
+          ],
+          "answer": 1,
+          "explanation_vi": "We were carrying đúng cả thì quá khứ, sự hòa hợp và dạng V-ing."
+        },
+        {
+          "id": "q6",
+          "prompt": "Mai was not ___ when I knocked; she was reading.",
+          "options": [
+            "sleeps",
+            "sleep",
+            "sleeping",
+            "slept"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau was not cần V-ing để diễn tả hoạt động đang diễn ra lúc tôi gõ cửa."
+        }
+      ]
+    },
+    {
+      "id": "b1-conditionals",
+      "level": "B1",
+      "title": "Câu điều kiện: việc có thể xảy ra và điều giả định",
+      "summary": "Phân biệt khả năng sắp tới với tình huống trái thực tế hoặc ít khả năng.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "a2-future",
+        "a2-past-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Điều kiện có thể xảy ra",
+          "body": "Một cách dùng phổ biến cho tương lai là if + hiện tại đơn, rồi will + nguyên mẫu. Mệnh đề if nêu điều kiện, mệnh đề còn lại nêu kết quả.",
+          "pattern": "If + present simple, will + verb",
+          "example": "If the parcel arrives today, I will bring it to you.",
+          "translation_vi": "Nếu bưu kiện đến hôm nay, tôi sẽ mang sang cho bạn."
+        },
+        {
+          "title": "Giả định khác với hiện tại",
+          "body": "Dùng if + quá khứ đơn, would + nguyên mẫu để nói tình huống giả định. Dạng quá khứ ở đây không nhất thiết nói về thời gian quá khứ.",
+          "pattern": "If + past simple, would + verb",
+          "example": "If I had a larger balcony, I would grow tomatoes.",
+          "translation_vi": "Nếu có ban công rộng hơn, tôi sẽ trồng cà chua."
+        }
+      ],
+      "pitfalls": [
+        "Không tự động thêm will ngay sau if trong câu điều kiện tương lai thông thường.",
+        "Would have + phân từ nói về giả định quá khứ, không thay cho would + nguyên mẫu khi nói hiện tại."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "If the weather stays dry tomorrow, we ___ the mural.",
+          "options": [
+            "will finish",
+            "would finished",
+            "will finished",
+            "had finish"
+          ],
+          "answer": 0,
+          "explanation_vi": "Điều kiện tương lai có thể xảy ra; kết quả dùng will finish."
+        },
+        {
+          "id": "q2",
+          "prompt": "If Minh ___ early tomorrow, he will help us set up.",
+          "options": [
+            "will arrives",
+            "arrives",
+            "arrive",
+            "arriving"
+          ],
+          "answer": 1,
+          "explanation_vi": "Trong mệnh đề if này dùng hiện tại đơn; Minh số ít nên arrives."
+        },
+        {
+          "id": "q3",
+          "prompt": "I do not own a car. If I owned one, I ___ to the remote site.",
+          "options": [
+            "will drove",
+            "would drove",
+            "would drive",
+            "had drive"
+          ],
+          "answer": 2,
+          "explanation_vi": "Tình huống giả định khác hiện tại dùng would + nguyên mẫu drive."
+        },
+        {
+          "id": "q4",
+          "prompt": "If we ___ more storage space, we would keep the old furniture.",
+          "options": [
+            "have",
+            "will have",
+            "having",
+            "had"
+          ],
+          "answer": 3,
+          "explanation_vi": "Would keep cho biết giả định hiện tại; mệnh đề if dùng had."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the usual advice form with an unreal condition.",
+          "options": [
+            "If I were you, I would check the receipt.",
+            "If I were you, I will checked the receipt.",
+            "If I am you, I would checked the receipt.",
+            "If I were you, I would checking the receipt."
+          ],
+          "answer": 0,
+          "explanation_vi": "If I were you là cách đưa lời khuyên; phía sau dùng would check."
+        },
+        {
+          "id": "q6",
+          "prompt": "Which sentence presents buying a boat as an imaginary situation now?",
+          "options": [
+            "I bought a boat last year.",
+            "If I had enough money, I would buy a boat.",
+            "I have enough money and am buying a boat today.",
+            "I will inspect the boat tomorrow."
+          ],
+          "answer": 1,
+          "explanation_vi": "If I had ... I would ... thể hiện điều giả định, không phải hành động đã xảy ra hoặc kế hoạch đã quyết."
+        }
+      ]
+    },
+    {
+      "id": "b1-relative-clauses",
+      "level": "B1",
+      "title": "Mệnh đề quan hệ: nói rõ người hoặc vật nào",
+      "summary": "Thêm thông tin cần thiết ngay sau danh từ để người đọc nhận ra đúng đối tượng.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "a1-pronouns",
+        "a2-past-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Who, which và that",
+          "body": "Who thường chỉ người, which chỉ vật; that có thể thay trong nhiều mệnh đề xác định. Phần bổ sung này giúp người đọc biết chính xác bạn đang nói đến ai hoặc vật nào.",
+          "pattern": "the person who ... · the book that ...",
+          "example": "The woman who runs the repair café is an engineer.",
+          "translation_vi": "Người phụ nữ điều hành quán sửa đồ là một kỹ sư."
+        },
+        {
+          "title": "Phân biệt người làm và người nhận hành động",
+          "body": "Khi từ quan hệ là chủ ngữ, không bỏ nó và không thêm một chủ ngữ trùng. Khi nó làm tân ngữ trong mệnh đề xác định, đôi khi có thể bỏ.",
+          "pattern": "the key that opens ... · the key (that) I found",
+          "example": "The guide I met yesterday works at the museum.",
+          "translation_vi": "Người hướng dẫn tôi gặp hôm qua làm việc ở bảo tàng."
+        }
+      ],
+      "pitfalls": [
+        "Không viết the woman who she called: who đã làm chủ ngữ nếu người phụ nữ là người gọi.",
+        "Không dùng dấu phẩy để tách thông tin cần thiết giúp nhận ra đối tượng trong dạng xác định."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/relative-clauses-defining-relative-clauses"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "The technician ___ repaired our scanner was very patient.",
+          "options": [
+            "which",
+            "where",
+            "whose",
+            "who"
+          ],
+          "answer": 3,
+          "explanation_vi": "Technician là người và trực tiếp làm hành động repaired, nên dùng who."
+        },
+        {
+          "id": "q2",
+          "prompt": "The cupboard ___ holds the cleaning supplies is locked.",
+          "options": [
+            "which",
+            "where",
+            "whose",
+            "who"
+          ],
+          "answer": 0,
+          "explanation_vi": "Cupboard là vật và là chủ ngữ của holds, nên dùng which."
+        },
+        {
+          "id": "q3",
+          "prompt": "The visitor ___ bag was missing contacted reception.",
+          "options": [
+            "which",
+            "whose",
+            "where",
+            "who"
+          ],
+          "answer": 1,
+          "explanation_vi": "Whose đứng trước bag để nói chiếc túi thuộc về người khách."
+        },
+        {
+          "id": "q4",
+          "prompt": "This is the room ___ we keep the maps.",
+          "options": [
+            "whose",
+            "which",
+            "where",
+            "who"
+          ],
+          "answer": 2,
+          "explanation_vi": "We keep the maps cần nơi chốn, nên dùng where, tương đương in which."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the correctly shortened sentence.",
+          "options": [
+            "The book borrowed I is on the shelf.",
+            "The book I borrowed it is on the shelf.",
+            "The book who I borrowed is on the shelf.",
+            "The book I borrowed is on the shelf."
+          ],
+          "answer": 3,
+          "explanation_vi": "Từ quan hệ làm tân ngữ của borrowed có thể bỏ; không thêm it để lặp lại the book."
+        },
+        {
+          "id": "q6",
+          "prompt": "The woman made the call herself. Choose the sentence that says this.",
+          "options": [
+            "The woman who called left a message.",
+            "The woman called left a message.",
+            "The woman which called left a message.",
+            "The woman who she called left a message."
+          ],
+          "answer": 0,
+          "explanation_vi": "Who làm chủ ngữ của called nên phải giữ, không thêm she."
+        }
+      ]
+    },
+    {
+      "id": "b1-verb-patterns",
+      "level": "B1",
+      "title": "Theo sau động từ: to V hay V-ing?",
+      "summary": "Học cả cụm để dùng enjoy, avoid, decide và những động từ quen thuộc.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a2-present-continuous"
+      ],
+      "explanation": [
+        {
+          "title": "Ghi nhớ mẫu cùng với động từ",
+          "body": "Enjoy, avoid, finish thường đi với V-ing. Decide, hope, plan thường đi với to + nguyên mẫu. Không có một quy tắc duy nhất đoán đúng mọi động từ.",
+          "pattern": "enjoy doing · decide to do",
+          "example": "We decided to hold the meeting outdoors.",
+          "translation_vi": "Chúng tôi quyết định tổ chức cuộc họp ngoài trời."
+        },
+        {
+          "title": "Sau giới từ, thường dùng V-ing",
+          "body": "Khi một động từ theo sau giới từ, dùng dạng ing. Trong look forward to, to là giới từ nên không theo bằng nguyên mẫu.",
+          "pattern": "interested in doing · look forward to doing",
+          "example": "I look forward to meeting the new volunteers.",
+          "translation_vi": "Tôi mong được gặp các tình nguyện viên mới."
+        }
+      ],
+      "pitfalls": [
+        "Một số động từ nhận cả hai dạng nhưng đổi nghĩa; bài này chỉ luyện những mẫu có đáp án rõ.",
+        "Đừng cho rằng mọi to đều phải đứng trước động từ nguyên mẫu."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/verbs-followed-ing-or-infinitive"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Nhi enjoys ___ sketches of old buildings.",
+          "options": [
+            "to make",
+            "made",
+            "making",
+            "make"
+          ],
+          "answer": 2,
+          "explanation_vi": "Enjoy đi với V-ing: enjoys making."
+        },
+        {
+          "id": "q2",
+          "prompt": "They decided ___ the damaged shelf.",
+          "options": [
+            "replace",
+            "replaced",
+            "replacing",
+            "to replace"
+          ],
+          "answer": 3,
+          "explanation_vi": "Decide theo sau bằng to + nguyên mẫu: to replace."
+        },
+        {
+          "id": "q3",
+          "prompt": "Please avoid ___ the wet paint.",
+          "options": [
+            "touching",
+            "touched",
+            "touch",
+            "to touch"
+          ],
+          "answer": 0,
+          "explanation_vi": "Avoid đi với V-ing nên dùng touching."
+        },
+        {
+          "id": "q4",
+          "prompt": "We hope ___ the new catalogue on Friday.",
+          "options": [
+            "published",
+            "to publish",
+            "publishing",
+            "publish"
+          ],
+          "answer": 1,
+          "explanation_vi": "Hope đi với to publish khi nói việc hy vọng làm."
+        },
+        {
+          "id": "q5",
+          "prompt": "I am interested in ___ furniture.",
+          "options": [
+            "to repair",
+            "repaired",
+            "repairing",
+            "repair"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau giới từ in, động từ dùng dạng ing."
+        },
+        {
+          "id": "q6",
+          "prompt": "The team looks forward to ___ your ideas.",
+          "options": [
+            "to hear",
+            "heard",
+            "hear",
+            "hearing"
+          ],
+          "answer": 3,
+          "explanation_vi": "To trong look forward to là giới từ, nên dùng hearing."
+        }
+      ]
+    },
+    {
+      "id": "b2-past-perfect",
+      "level": "B2",
+      "title": "Quá khứ hoàn thành: việc nào xảy ra trước?",
+      "summary": "Làm rõ thứ tự hai sự việc khi kể lại một câu chuyện.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b1-present-perfect",
+        "b1-past-continuous"
+      ],
+      "explanation": [
+        {
+          "title": "Nhìn từ một mốc trong quá khứ",
+          "body": "Had + quá khứ phân từ cho biết một việc đã xảy ra trước mốc quá khứ đang kể. Mốc đó có thể nằm ở câu trước, không nhất thiết cùng câu.",
+          "pattern": "had + past participle",
+          "example": "When we reached the hall, the caretaker had unlocked the doors.",
+          "translation_vi": "Khi chúng tôi tới hội trường, người trông coi đã mở khóa cửa trước đó."
+        },
+        {
+          "title": "Đừng đổi mọi việc quá khứ sang had",
+          "body": "Quá khứ hoàn thành giúp làm rõ việc xảy ra trước. Một việc riêng lẻ ở thời điểm quá khứ thường chỉ cần quá khứ đơn.",
+          "pattern": "past perfect: việc trước · past simple: mốc kể",
+          "example": "I realised that I had left the tickets at home.",
+          "translation_vi": "Tôi nhận ra mình đã để vé ở nhà."
+        }
+      ],
+      "pitfalls": [
+        "Sau had dùng phân từ như written, không dùng wrote.",
+        "Không có quy tắc việc xảy ra càng lâu càng phải dùng quá khứ hoàn thành."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/past-perfect"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "By the time the guests arrived, we had ___ all the chairs.",
+          "options": [
+            "arranges",
+            "arranged",
+            "arrange",
+            "arranging"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau had cần quá khứ phân từ arranged."
+        },
+        {
+          "id": "q2",
+          "prompt": "Choose the sentence that explicitly says the train left before our arrival.",
+          "options": [
+            "When we arrive, the train leaves.",
+            "When we arrived, the train was leaving.",
+            "When we arrived, the train had left.",
+            "When we arrived, the train left."
+          ],
+          "answer": 2,
+          "explanation_vi": "Had left cho biết tàu đã rời đi trước khi chúng tôi tới; was leaving là đang rời đi."
+        },
+        {
+          "id": "q3",
+          "prompt": "Had you ever ___ a night shift before that week?",
+          "options": [
+            "works",
+            "work",
+            "working",
+            "worked"
+          ],
+          "answer": 3,
+          "explanation_vi": "Câu hỏi quá khứ hoàn thành dùng had + chủ ngữ + worked."
+        },
+        {
+          "id": "q4",
+          "prompt": "She could not open the file because she had ___ the password.",
+          "options": [
+            "forgotten",
+            "forgot",
+            "forget",
+            "forgetting"
+          ],
+          "answer": 0,
+          "explanation_vi": "Quá khứ phân từ của forget là forgotten, đi sau had."
+        },
+        {
+          "id": "q5",
+          "prompt": "At that point, we had not ___ the final report.",
+          "options": [
+            "seeing",
+            "seen",
+            "saw",
+            "see"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau had not dùng phân từ seen, không phải quá khứ đơn saw."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the natural sentence about one finished event in 2014, with no later past reference.",
+          "options": [
+            "The shop had opens in 2014.",
+            "The shop had opening in 2014.",
+            "The shop opened in 2014.",
+            "The shop has opened in 2014."
+          ],
+          "answer": 2,
+          "explanation_vi": "Một sự việc đã kết thúc có năm cụ thể dùng quá khứ đơn opened."
+        }
+      ]
+    },
+    {
+      "id": "b2-passive",
+      "level": "B2",
+      "title": "Câu bị động: tập trung vào việc được làm",
+      "summary": "Dùng be + phân từ khi điều quan trọng là kết quả hoặc đối tượng chịu tác động.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "toeic",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b1-present-perfect",
+        "b2-past-perfect"
+      ],
+      "explanation": [
+        {
+          "title": "Giữ nghĩa, đổi trọng tâm",
+          "body": "Đưa đối tượng nhận hành động lên làm chủ ngữ. Chia be theo thì và chủ ngữ, rồi thêm quá khứ phân từ; người làm có thể thêm bằng by nếu cần.",
+          "pattern": "be + past participle",
+          "example": "The entrance was widened last spring.",
+          "translation_vi": "Lối vào được nới rộng vào mùa xuân năm ngoái."
+        },
+        {
+          "title": "Thì nằm ở cụm trợ động từ",
+          "body": "Hiện tại tiếp diễn bị động dùng is/are being + phân từ. Hiện tại hoàn thành bị động dùng has/have been + phân từ.",
+          "pattern": "is being repaired · has been repaired",
+          "example": "The damaged labels are being replaced today.",
+          "translation_vi": "Những nhãn bị hỏng đang được thay hôm nay."
+        }
+      ],
+      "pitfalls": [
+        "Không bỏ be: dùng will be delivered, không dùng will delivered.",
+        "Không phải động từ nào cũng chuyển bị động được; bài này dùng động từ có tân ngữ."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Every parcel ___ before it leaves the warehouse.",
+          "options": [
+            "is weighed",
+            "weigh",
+            "is weighing",
+            "weighed"
+          ],
+          "answer": 0,
+          "explanation_vi": "Parcel nhận hành động cân; thói quen hiện tại dùng is weighed."
+        },
+        {
+          "id": "q2",
+          "prompt": "The old sign ___ by a local artist in 2018.",
+          "options": [
+            "painted",
+            "was painted",
+            "has painted",
+            "is painting"
+          ],
+          "answer": 1,
+          "explanation_vi": "Có mốc 2018 và sign nhận hành động, nên dùng was painted."
+        },
+        {
+          "id": "q3",
+          "prompt": "The windows are ___ cleaned at the moment.",
+          "options": [
+            "been",
+            "be",
+            "being",
+            "were"
+          ],
+          "answer": 2,
+          "explanation_vi": "Bị động tiếp diễn dùng are being cleaned."
+        },
+        {
+          "id": "q4",
+          "prompt": "All the invitations have ___ sent.",
+          "options": [
+            "being",
+            "be",
+            "was",
+            "been"
+          ],
+          "answer": 3,
+          "explanation_vi": "Bị động hiện tại hoàn thành: have been sent."
+        },
+        {
+          "id": "q5",
+          "prompt": "The results will ___ published on Monday.",
+          "options": [
+            "be",
+            "been",
+            "being",
+            "are"
+          ],
+          "answer": 0,
+          "explanation_vi": "Sau will dùng be, rồi phân từ published."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the passive sentence that keeps the meaning of “The team repaired the bridge.”",
+          "options": [
+            "The team was repaired by the bridge.",
+            "The bridge was repaired by the team.",
+            "The bridge repaired the team.",
+            "The bridge was repairing by the team."
+          ],
+          "answer": 1,
+          "explanation_vi": "Bridge là đối tượng được sửa; was repaired giữ đúng thời quá khứ và vai trò của team."
+        }
+      ]
+    },
+    {
+      "id": "b2-reported-speech",
+      "level": "B2",
+      "title": "Tường thuật: kể lại lời người khác",
+      "summary": "Giữ đúng người, thời gian và cấu trúc khi chuyển từ lời nói trực tiếp.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "b2-past-perfect"
+      ],
+      "explanation": [
+        {
+          "title": "Đổi theo góc nhìn người kể",
+          "body": "Khi kể lại lời nói từ một thời điểm khác, thường lùi thì và đổi đại từ, từ chỉ thời gian cho phù hợp. Nếu điều đó vẫn đúng, giữ thì hiện tại cũng có thể được.",
+          "pattern": "said that ... · told someone that ...",
+          "example": "Yesterday, Thu said that she was waiting for a reply.",
+          "translation_vi": "Hôm qua, Thu nói rằng cô ấy đang chờ phản hồi."
+        },
+        {
+          "title": "Phân biệt say và tell",
+          "body": "Tell thường cần người nghe ngay sau nó. Say không nhận người nghe trực tiếp; dùng say to someone. Không máy móc đổi từ nếu góc nhìn thời gian chưa thay đổi.",
+          "pattern": "told me · said to me",
+          "example": "The manager told us that the meeting had been cancelled.",
+          "translation_vi": "Người quản lý nói với chúng tôi rằng cuộc họp đã bị hủy."
+        }
+      ],
+      "pitfalls": [
+        "Không dùng said me; dùng told me hoặc said to me.",
+        "Lùi thì là lựa chọn theo ngữ cảnh, không phải yêu cầu bất biến cho mọi lời tường thuật."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Linh ___ me that the delivery was late.",
+          "options": [
+            "said",
+            "spoke",
+            "talked",
+            "told"
+          ],
+          "answer": 3,
+          "explanation_vi": "Tell nhận người nghe trực tiếp: told me. Say cần to trước me."
+        },
+        {
+          "id": "q2",
+          "prompt": "Linh said ___ me that the delivery was late.",
+          "options": [
+            "to",
+            "at",
+            "on",
+            "for"
+          ],
+          "answer": 0,
+          "explanation_vi": "Dùng said to me khi nêu người nghe sau say."
+        },
+        {
+          "id": "q3",
+          "prompt": "Use backshift: Nam said, “I am tired.” Nam said that he ___ tired.",
+          "options": [
+            "were",
+            "was",
+            "be",
+            "is being"
+          ],
+          "answer": 1,
+          "explanation_vi": "Theo yêu cầu lùi thì, am chuyển thành was và I chuyển thành he."
+        },
+        {
+          "id": "q4",
+          "prompt": "Use backshift: “We have finished,” they said. They said that they ___ finished.",
+          "options": [
+            "were",
+            "will",
+            "had",
+            "have been"
+          ],
+          "answer": 2,
+          "explanation_vi": "Have finished lùi thành had finished."
+        },
+        {
+          "id": "q5",
+          "prompt": "Last Monday, Kim said, “I will call on Tuesday.” Report this on Friday using backshift: Kim said she ___ call on Tuesday.",
+          "options": [
+            "will to",
+            "would to",
+            "had",
+            "would"
+          ],
+          "answer": 3,
+          "explanation_vi": "Will lùi thành would; sau would dùng call nguyên mẫu."
+        },
+        {
+          "id": "q6",
+          "prompt": "Which sentence correctly reports a message to a group?",
+          "options": [
+            "The guide told us that the gate was closed.",
+            "The guide told that us the gate was closed.",
+            "The guide told to us that the gate was closed.",
+            "The guide said us that the gate was closed."
+          ],
+          "answer": 0,
+          "explanation_vi": "Told + người nghe + that ... là cấu trúc đúng."
+        }
+      ]
+    },
+    {
+      "id": "b2-mixed-conditionals",
+      "level": "B2",
+      "title": "Giả định quá khứ và kết quả hiện tại",
+      "summary": "Nói điều đã không xảy ra và hình dung một kết quả khác.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b1-conditionals",
+        "b2-past-perfect"
+      ],
+      "explanation": [
+        {
+          "title": "Giả định một quá khứ khác",
+          "body": "If + had + phân từ kết hợp would have + phân từ để tưởng tượng điều kiện và kết quả khác trong quá khứ.",
+          "pattern": "If + past perfect, would have + past participle",
+          "example": "If we had checked the address, we would have found the studio sooner.",
+          "translation_vi": "Nếu kiểm tra địa chỉ trước, chúng tôi đã tìm được xưởng sớm hơn."
+        },
+        {
+          "title": "Quá khứ có thể ảnh hưởng đến hiện tại",
+          "body": "Khi điều kiện giả định ở quá khứ nhưng kết quả ở hiện tại, dùng would + nguyên mẫu ở phần kết quả. Xem thời gian của từng phần, không chỉ nhìn nhãn loại câu.",
+          "pattern": "If + past perfect, would + verb + now",
+          "example": "If I had saved the file, I would have the figures now.",
+          "translation_vi": "Nếu đã lưu tệp, bây giờ tôi đã có các số liệu."
+        }
+      ],
+      "pitfalls": [
+        "Không nhầm would have a key (sẽ có chìa khóa) với would have found (đã tìm thấy).",
+        "Trong mẫu giả định quá khứ cơ bản, phần if dùng had, không dùng would have."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-third-mixed"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "If we had left earlier yesterday, we would have ___ the first ferry.",
+          "options": [
+            "catching",
+            "catches",
+            "caught",
+            "catch"
+          ],
+          "answer": 2,
+          "explanation_vi": "Would have cần quá khứ phân từ caught của catch."
+        },
+        {
+          "id": "q2",
+          "prompt": "If Mai ___ checked the date, she would not have missed the meeting.",
+          "options": [
+            "has",
+            "will",
+            "would",
+            "had"
+          ],
+          "answer": 3,
+          "explanation_vi": "Điều kiện giả định quá khứ dùng had checked."
+        },
+        {
+          "id": "q3",
+          "prompt": "I did not charge the battery last night, so it is empty now. If I had charged it, it ___ usable now.",
+          "options": [
+            "would be",
+            "had be",
+            "would have be",
+            "will been"
+          ],
+          "answer": 0,
+          "explanation_vi": "Kết quả giả định là tình trạng hiện tại, nên dùng would be."
+        },
+        {
+          "id": "q4",
+          "prompt": "Choose the sentence that imagines a different result in the past.",
+          "options": [
+            "They book seats whenever they travel.",
+            "If they had booked seats, they would have travelled together.",
+            "If they book seats, they will travel together.",
+            "They booked seats and travelled together."
+          ],
+          "answer": 1,
+          "explanation_vi": "Had booked và would have travelled cùng nói về một quá khứ khác với thực tế."
+        },
+        {
+          "id": "q5",
+          "prompt": "If the address had been correct, the parcel would not have ___ returned.",
+          "options": [
+            "be",
+            "was",
+            "been",
+            "being"
+          ],
+          "answer": 2,
+          "explanation_vi": "Kết quả bị động hoàn thành dùng would not have been returned."
+        },
+        {
+          "id": "q6",
+          "prompt": "Which sentence links a past decision to an imaginary present result?",
+          "options": [
+            "I accepted that job and moved last year.",
+            "If I lived near the sea, I would swim every day.",
+            "If I accept that job, I will move next month.",
+            "If I had accepted that job, I would live closer to the sea now."
+          ],
+          "answer": 3,
+          "explanation_vi": "Had accepted là quyết định quá khứ; would live ... now là kết quả giả định hiện tại."
+        }
+      ]
+    },
+    {
+      "id": "b2-modal-deduction",
+      "level": "B2",
+      "title": "Must have, might have, can’t have: suy đoán quá khứ",
+      "summary": "Chọn cách nói đúng với mức độ chắc chắn của người nói.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "b1-present-perfect"
+      ],
+      "explanation": [
+        {
+          "title": "Nói mức độ chắc chắn",
+          "body": "Must have + phân từ thể hiện suy đoán rất chắc; might/may/could have diễn tả khả năng. Đây là đánh giá từ thông tin có được, không tự biến suy đoán thành sự thật.",
+          "pattern": "must have done · might have done",
+          "example": "The floor is wet; someone might have washed it recently.",
+          "translation_vi": "Sàn đang ướt; có thể ai đó vừa lau."
+        },
+        {
+          "title": "Diễn tả điều được cho là không thể",
+          "body": "Can’t have hoặc couldn’t have + phân từ dùng khi người nói cho rằng việc đó không thể đã xảy ra. Mustn’t thường nói sự cấm đoán, không thay cho phủ định của suy đoán must.",
+          "pattern": "can’t have + past participle",
+          "example": "She can’t have used this key; it has been in my pocket all morning.",
+          "translation_vi": "Cô ấy không thể đã dùng chìa này; nó ở trong túi tôi suốt buổi sáng."
+        }
+      ],
+      "pitfalls": [
+        "Sau modal + have vẫn cần phân từ: must have gone, không phải must have went.",
+        "Nếu đề chỉ hỏi khả năng, may và might có thể đều đúng; cần đọc cả ngữ cảnh và yêu cầu."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/modals-deductions-about-past"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Choose the form that expresses a strong positive deduction about the past: “He ___ left already; his desk is empty and his coat is gone.”",
+          "options": [
+            "could have",
+            "must have",
+            "might have",
+            "may have"
+          ],
+          "answer": 1,
+          "explanation_vi": "Must have thể hiện suy đoán khẳng định mạnh. Các lựa chọn còn lại chỉ nêu khả năng."
+        },
+        {
+          "id": "q2",
+          "prompt": "We are unsure who moved the box. It might have ___ the cleaner.",
+          "options": [
+            "was",
+            "be",
+            "been",
+            "being"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau might have cần phân từ been."
+        },
+        {
+          "id": "q3",
+          "prompt": "Choose the form meaning “it is impossible that she sent it”: She ___ sent it; she had no access to the account.",
+          "options": [
+            "might have",
+            "must have",
+            "may have",
+            "can’t have"
+          ],
+          "answer": 3,
+          "explanation_vi": "Can’t have phủ định khả năng đã xảy ra; các lựa chọn khác không mang nghĩa không thể."
+        },
+        {
+          "id": "q4",
+          "prompt": "The courier must have ___ the side entrance.",
+          "options": [
+            "used",
+            "use",
+            "using",
+            "uses"
+          ],
+          "answer": 0,
+          "explanation_vi": "Must have cần quá khứ phân từ used."
+        },
+        {
+          "id": "q5",
+          "prompt": "Which sentence leaves the cause uncertain?",
+          "options": [
+            "Fog definitely caused the delay.",
+            "The delay may have been caused by fog.",
+            "The delay was certainly caused by fog.",
+            "The delay must have been caused by fog."
+          ],
+          "answer": 1,
+          "explanation_vi": "May have giữ lại khả năng chưa chắc chắn; các câu còn lại khẳng định hoặc suy đoán rất chắc."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the correctly formed past deduction.",
+          "options": [
+            "They might had taken a different route.",
+            "They might took a different route.",
+            "They might have taken a different route.",
+            "They might have took a different route."
+          ],
+          "answer": 2,
+          "explanation_vi": "Mẫu đúng là might + have + taken, quá khứ phân từ của take."
+        }
+      ]
+    },
+    {
+      "id": "c1-inversion",
+      "level": "C1",
+      "title": "Đảo ngữ: nhấn mạnh bằng never, only, not until",
+      "summary": "Nhận ra khi nào cần đưa trợ động từ lên trước chủ ngữ.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b2-past-perfect"
+      ],
+      "explanation": [
+        {
+          "title": "Từ phủ định ở đầu làm đổi trật tự",
+          "body": "Khi đưa never, rarely hoặc một số cụm phủ định lên đầu để nhấn mạnh, đặt trợ động từ trước chủ ngữ. Nếu chưa có trợ động từ, thêm do/does/did.",
+          "pattern": "Never/Rarely + auxiliary + subject + verb",
+          "example": "Rarely do we receive such detailed feedback.",
+          "translation_vi": "Hiếm khi chúng tôi nhận được phản hồi chi tiết như vậy."
+        },
+        {
+          "title": "Đảo ở mệnh đề chính sau only hoặc not until",
+          "body": "Với only after, only when, not until, giữ trật tự bình thường trong phần đi sau chúng; đảo trợ động từ ở mệnh đề chính. Hardly thường đi với when; no sooner đi với than.",
+          "pattern": "Only after ... did we ... · Hardly had ... when ...",
+          "example": "Only after the lights came on did we notice the damage.",
+          "translation_vi": "Chỉ khi đèn bật lên, chúng tôi mới nhận ra chỗ hư hỏng."
+        }
+      ],
+      "pitfalls": [
+        "Không đảo cả phần sau only after nếu đó là mệnh đề phụ.",
+        "Sau did, động từ chính trở về nguyên mẫu."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/inversion-after-negative-adverbials"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Never ___ such a crowded reading room before that day.",
+          "options": [
+            "had I seen",
+            "I had seen",
+            "had I saw",
+            "I seen"
+          ],
+          "answer": 0,
+          "explanation_vi": "Never ở đầu cần had trước I; sau had dùng seen."
+        },
+        {
+          "id": "q2",
+          "prompt": "Only after the inspector left ___ the machines again.",
+          "options": [
+            "we did start",
+            "did we start",
+            "did we started",
+            "we starting"
+          ],
+          "answer": 1,
+          "explanation_vi": "Đảo ở mệnh đề chính: did we start. Phần after the inspector left giữ nguyên."
+        },
+        {
+          "id": "q3",
+          "prompt": "Hardly had the session begun ___ the power failed.",
+          "options": [
+            "than",
+            "then",
+            "when",
+            "as if"
+          ],
+          "answer": 2,
+          "explanation_vi": "Cặp thông dụng là hardly ... when; no sooner mới đi với than."
+        },
+        {
+          "id": "q4",
+          "prompt": "No sooner had the doors opened ___ the first guests arrived.",
+          "options": [
+            "when",
+            "then",
+            "that",
+            "than"
+          ],
+          "answer": 3,
+          "explanation_vi": "No sooner kết hợp với than."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the correct emphatic warning.",
+          "options": [
+            "Under no circumstances should visitors touch the exhibits.",
+            "Under no circumstances visitors should touch the exhibits.",
+            "Under no circumstances should visitors touched the exhibits.",
+            "Under no circumstances visitors touching the exhibits."
+          ],
+          "answer": 0,
+          "explanation_vi": "Cụm phủ định đầu câu yêu cầu should đứng trước visitors, sau đó là nguyên mẫu touch."
+        },
+        {
+          "id": "q6",
+          "prompt": "Not only did An ___ the report, but she also checked every figure.",
+          "options": [
+            "wrote",
+            "write",
+            "written",
+            "writing"
+          ],
+          "answer": 1,
+          "explanation_vi": "Did đã mang thì quá khứ; động từ chính dùng nguyên mẫu write."
+        }
+      ]
+    },
+    {
+      "id": "c1-participles",
+      "level": "C1",
+      "title": "Mệnh đề phân từ: viết gọn mà không nhầm chủ ngữ",
+      "summary": "Rút gọn thông tin bằng V-ing, phân từ bị động và having + phân từ.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b2-passive",
+        "b2-past-perfect"
+      ],
+      "explanation": [
+        {
+          "title": "Ai làm hành động ở phần rút gọn?",
+          "body": "Với các cụm mở đầu như walking hoặc knowing, chủ ngữ được hiểu thường là chủ ngữ của mệnh đề chính. V-ing thường mang nghĩa chủ động; phân từ quá khứ thường mang nghĩa bị động.",
+          "pattern": "V-ing ..., subject ... · past participle ..., subject ...",
+          "example": "Designed for small rooms, the desk folds against the wall.",
+          "translation_vi": "Được thiết kế cho phòng nhỏ, chiếc bàn có thể gập vào sát tường."
+        },
+        {
+          "title": "Having cho biết việc xảy ra trước",
+          "body": "Having + phân từ nhấn mạnh việc đã xong trước hành động chính. Nếu chủ ngữ nhận hành động, dùng having been + phân từ.",
+          "pattern": "having done · having been done",
+          "example": "Having checked the figures, Le sent the report.",
+          "translation_vi": "Sau khi kiểm tra các số liệu, Lê gửi báo cáo."
+        }
+      ],
+      "pitfalls": [
+        "Tránh khiến đồ vật vô tình thành người thực hiện hành động: Walking home, the rain ... dễ gắn sai chủ ngữ.",
+        "V-ing trong cụm phân từ không tự xác định thì; đọc mệnh đề chính để biết thời gian."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/participle-clauses"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Having ___ the forms, Mai handed them to reception.",
+          "options": [
+            "complete",
+            "completing",
+            "completes",
+            "completed"
+          ],
+          "answer": 3,
+          "explanation_vi": "Having đi với quá khứ phân từ completed để nói việc hoàn tất trước khi nộp."
+        },
+        {
+          "id": "q2",
+          "prompt": "___ in clear language, the guide is easy to follow.",
+          "options": [
+            "Written",
+            "Wrote",
+            "Has written",
+            "Writing"
+          ],
+          "answer": 0,
+          "explanation_vi": "Guide được viết, nên cụm mở đầu mang nghĩa bị động: Written."
+        },
+        {
+          "id": "q3",
+          "prompt": "Choose the sentence whose opening action clearly belongs to the main subject.",
+          "options": [
+            "Walking through the gallery, the lights were dim.",
+            "Walking through the gallery, I noticed a cracked frame.",
+            "Walking through the gallery, a label was missing.",
+            "Walking through the gallery, a cracked frame caught my eye."
+          ],
+          "answer": 1,
+          "explanation_vi": "I là người đi qua phòng tranh. Ở các câu khác, chủ ngữ chính không phải người thực hiện walking."
+        },
+        {
+          "id": "q4",
+          "prompt": "Not ___ the access code, I called the caretaker.",
+          "options": [
+            "knew",
+            "known",
+            "knowing",
+            "know"
+          ],
+          "answer": 2,
+          "explanation_vi": "Knowing mang nghĩa chủ động: tôi không biết mã nên gọi người trông coi."
+        },
+        {
+          "id": "q5",
+          "prompt": "Having been ___ about the delay, the guests changed their plans.",
+          "options": [
+            "warning",
+            "warn",
+            "warns",
+            "warned"
+          ],
+          "answer": 3,
+          "explanation_vi": "Guests nhận lời cảnh báo; dùng having been warned."
+        },
+        {
+          "id": "q6",
+          "prompt": "“Having locked the cabinet, she left.” What happened first?",
+          "options": [
+            "She locked the cabinet.",
+            "She unlocked the cabinet.",
+            "Both actions must have happened at exactly the same time.",
+            "She left the building."
+          ],
+          "answer": 0,
+          "explanation_vi": "Having locked cho biết khóa tủ đã hoàn tất trước khi cô ấy rời đi."
+        }
+      ]
+    },
+    {
+      "id": "c1-reporting-patterns",
+      "level": "C1",
+      "title": "Động từ tường thuật: admit, insist, recommend",
+      "summary": "Chọn mẫu câu đúng để thể hiện chính xác điều người nói làm.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "toeic",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b1-verb-patterns",
+        "b2-reported-speech"
+      ],
+      "explanation": [
+        {
+          "title": "Học mẫu riêng của mỗi động từ",
+          "body": "Promise thường đi với to V; remind cần người được nhắc rồi to V; admit, deny thường đi với V-ing. Dùng động từ đúng để phân biệt lời hứa, lời khuyên và việc thừa nhận.",
+          "pattern": "promise to do · remind someone to do · admit doing",
+          "example": "The organiser reminded us to bring identification.",
+          "translation_vi": "Người tổ chức nhắc chúng tôi mang giấy tờ tùy thân."
+        },
+        {
+          "title": "Giới từ và mẫu that",
+          "body": "Insist on, apologise for, object to đi với V-ing. Một số lời đề nghị hoặc yêu cầu dùng that + chủ ngữ + động từ nguyên mẫu; dạng should + nguyên mẫu cũng phổ biến trong tiếng Anh Anh.",
+          "pattern": "insist on doing · recommend that someone do",
+          "example": "The panel recommended that the team revise the schedule.",
+          "translation_vi": "Hội đồng đề nghị nhóm chỉnh lại lịch."
+        }
+      ],
+      "pitfalls": [
+        "Không viết suggest someone to do trong mẫu đề xuất thông thường; dùng suggest doing hoặc suggest that ....",
+        "Nhận ra to là giới từ trong object to, nên theo sau bằng V-ing."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/patterns-reporting-verbs"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "The supplier apologised for ___ the wrong parts.",
+          "options": [
+            "to send",
+            "sent",
+            "sending",
+            "send"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau giới từ for dùng sending."
+        },
+        {
+          "id": "q2",
+          "prompt": "The supervisor reminded us ___ the windows.",
+          "options": [
+            "close",
+            "closed",
+            "closing",
+            "to close"
+          ],
+          "answer": 3,
+          "explanation_vi": "Remind + người + to V: reminded us to close."
+        },
+        {
+          "id": "q3",
+          "prompt": "He admitted ___ the incorrect total.",
+          "options": [
+            "entering",
+            "entered",
+            "enter",
+            "to enter"
+          ],
+          "answer": 0,
+          "explanation_vi": "Admit có thể đi trực tiếp với V-ing; ở đây là admitted entering."
+        },
+        {
+          "id": "q4",
+          "prompt": "The tenant insisted ___ receiving a written receipt.",
+          "options": [
+            "with",
+            "on",
+            "at",
+            "for"
+          ],
+          "answer": 1,
+          "explanation_vi": "Cụm đúng là insist on + V-ing."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the mandative subjunctive form: The committee recommends that every applicant ___ a sample.",
+          "options": [
+            "submitted",
+            "submitting",
+            "submit",
+            "submits"
+          ],
+          "answer": 2,
+          "explanation_vi": "Đề yêu cầu dạng giả định của lời đề nghị: that + chủ ngữ + nguyên mẫu submit, dù applicant số ít."
+        },
+        {
+          "id": "q6",
+          "prompt": "The editor accused the writer ___ copying a paragraph.",
+          "options": [
+            "with",
+            "to",
+            "for",
+            "of"
+          ],
+          "answer": 3,
+          "explanation_vi": "Accuse someone of + V-ing: accused the writer of copying."
+        }
+      ]
+    },
+    {
+      "id": "c1-concession",
+      "level": "C1",
+      "title": "Although, despite, even if: nối hai ý trái nhau",
+      "summary": "Chọn từ nối theo cấu trúc và theo điều đã biết hay chỉ giả định.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b1-conditionals",
+        "b1-verb-patterns"
+      ],
+      "explanation": [
+        {
+          "title": "Nhìn phần theo sau từ nối",
+          "body": "Although và even though đi với chủ ngữ + động từ. Despite và in spite of đi với danh từ hoặc V-ing; muốn nối mệnh đề, thêm the fact that.",
+          "pattern": "although + clause · despite + noun/V-ing",
+          "example": "Despite the narrow entrance, the room feels spacious.",
+          "translation_vi": "Dù lối vào hẹp, căn phòng vẫn tạo cảm giác rộng rãi."
+        },
+        {
+          "title": "Điều có thật và điều giả định",
+          "body": "Even though thường nhượng bộ một điều được xem là thật. Even if nghĩa là dù có hay không, kết quả vẫn như vậy. Much as có thể nhượng bộ một mong muốn hoặc sự đồng tình.",
+          "pattern": "even though: dù sự thật là ... · even if: dù có ...",
+          "example": "Even if the hall is full, we will find seats outside.",
+          "translation_vi": "Dù hội trường có kín chỗ, chúng tôi vẫn sẽ tìm chỗ ngồi bên ngoài."
+        }
+      ],
+      "pitfalls": [
+        "Không viết despite of; dùng despite hoặc in spite of.",
+        "Đừng chọn even though khi muốn nhấn mạnh điều kiện còn chưa biết sẽ xảy ra hay không."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/contrasting-ideas"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "___ the heavy traffic, we reached the venue on time.",
+          "options": [
+            "Much as",
+            "Despite",
+            "Although",
+            "Even though"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau chỗ trống là cụm danh từ the heavy traffic, nên dùng Despite."
+        },
+        {
+          "id": "q2",
+          "prompt": "___ the route was longer, it was much safer.",
+          "options": [
+            "Because of",
+            "Despite",
+            "Although",
+            "In spite of"
+          ],
+          "answer": 2,
+          "explanation_vi": "The route was longer là mệnh đề có chủ ngữ và động từ, nên dùng Although."
+        },
+        {
+          "id": "q3",
+          "prompt": "We continued despite ___ very tired.",
+          "options": [
+            "to be",
+            "be",
+            "were",
+            "being"
+          ],
+          "answer": 3,
+          "explanation_vi": "Despite có thể đi với V-ing, nên dùng being."
+        },
+        {
+          "id": "q4",
+          "prompt": "Much ___ I admire the design, it does not fit our budget.",
+          "options": [
+            "as",
+            "than",
+            "that",
+            "despite"
+          ],
+          "answer": 0,
+          "explanation_vi": "Cụm nhượng bộ là Much as I admire ...."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the connector meaning “whether or not”: We will hold the fair ___ it rains.",
+          "options": [
+            "now that",
+            "even if",
+            "even though",
+            "because"
+          ],
+          "answer": 1,
+          "explanation_vi": "Even if cho biết việc tổ chức vẫn diễn ra bất kể có mưa hay không."
+        },
+        {
+          "id": "q6",
+          "prompt": "Despite the fact ___ the deadline was short, everyone submitted on time.",
+          "options": [
+            "than",
+            "of",
+            "that",
+            "as"
+          ],
+          "answer": 2,
+          "explanation_vi": "Cấu trúc đầy đủ là despite the fact that + mệnh đề."
+        }
+      ]
+    },
+    {
+      "id": "c1-formal-relatives",
+      "level": "C1",
+      "title": "Mệnh đề quan hệ nâng cao: whom, whose, which",
+      "summary": "Nối thông tin rõ ràng trong thư trang trọng và bài viết học thuật.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts",
+        "toeic"
+      ],
+      "prerequisites": [
+        "b1-relative-clauses"
+      ],
+      "explanation": [
+        {
+          "title": "Giới từ đứng trước từ quan hệ",
+          "body": "Trong văn phong trang trọng, dùng giới từ + whom cho người, giới từ + which cho vật. Khi giới từ đứng cuối, cấu trúc có thể gần lời nói hằng ngày hơn.",
+          "pattern": "to whom · in which · on which",
+          "example": "The researcher with whom I worked has retired.",
+          "translation_vi": "Nhà nghiên cứu tôi từng làm việc cùng đã nghỉ hưu."
+        },
+        {
+          "title": "Thêm thông tin mà không đổi đối tượng",
+          "body": "Mệnh đề không xác định được ngăn bằng dấu phẩy và không dùng that. Which còn có thể nói về cả sự việc trước đó; whose + danh từ chỉ sở hữu, kể cả với vật trong văn phong trang trọng.",
+          "pattern": "..., which ... · ..., whose + noun ...",
+          "example": "The workshop was postponed, which gave us more time to prepare.",
+          "translation_vi": "Buổi hướng dẫn bị hoãn, nhờ vậy chúng tôi có thêm thời gian chuẩn bị."
+        }
+      ],
+      "pitfalls": [
+        "Không đặt giới từ ngay trước that trong mệnh đề quan hệ.",
+        "Không bỏ từ quan hệ trong mệnh đề bổ sung có dấu phẩy như cách có thể làm ở mệnh đề xác định."
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/grammar/british-grammar/relative",
+        "https://dictionary.cambridge.org/grammar/british-grammar/defining-and-non-defining"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "The official to ___ I sent the request replied this morning.",
+          "options": [
+            "whom",
+            "who",
+            "that",
+            "whose"
+          ],
+          "answer": 0,
+          "explanation_vi": "Ngay sau giới từ to trong cách viết trang trọng dùng whom để chỉ người."
+        },
+        {
+          "id": "q2",
+          "prompt": "The report, ___ was published yesterday, includes a new map.",
+          "options": [
+            "that",
+            "which",
+            "what",
+            "whose"
+          ],
+          "answer": 1,
+          "explanation_vi": "Mệnh đề bổ sung có dấu phẩy, chỉ vật và làm chủ ngữ, nên dùng which."
+        },
+        {
+          "id": "q3",
+          "prompt": "The building, ___ roof was replaced last year, is open again.",
+          "options": [
+            "which",
+            "that",
+            "whose",
+            "whom"
+          ],
+          "answer": 2,
+          "explanation_vi": "Whose đứng trước roof để nói mái thuộc về tòa nhà."
+        },
+        {
+          "id": "q4",
+          "prompt": "We visited three workshops, two of ___ were run by volunteers.",
+          "options": [
+            "that",
+            "whose",
+            "what",
+            "which"
+          ],
+          "answer": 3,
+          "explanation_vi": "Two of which nói hai trong ba workshops; sau of dùng which cho vật."
+        },
+        {
+          "id": "q5",
+          "prompt": "The discussion ended early, ___ surprised the organisers.",
+          "options": [
+            "which",
+            "that",
+            "what",
+            "whose"
+          ],
+          "answer": 0,
+          "explanation_vi": "Which thay cho cả sự việc cuộc thảo luận kết thúc sớm."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the formal relative clause with the preposition in front.",
+          "options": [
+            "This is the archive in that the records are kept.",
+            "This is the archive in which the records are kept.",
+            "This is the archive in where the records are kept.",
+            "This is the archive in whose the records are kept."
+          ],
+          "answer": 1,
+          "explanation_vi": "In which diễn tả nơi lưu hồ sơ trong cấu trúc quan hệ trang trọng."
+        }
+      ]
+    },
+    {
+      "id": "c2-cleft-focus",
+      "level": "C2",
+      "title": "Câu chẻ: đặt đúng trọng tâm của lời nói",
+      "summary": "Nhấn mạnh người, thời điểm hoặc điều cần thiết mà vẫn giữ nguyên ý.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "c1-inversion",
+        "b1-relative-clauses"
+      ],
+      "explanation": [
+        {
+          "title": "It is/was làm nổi bật một phần",
+          "body": "Đặt thông tin cần nhấn sau it is/was rồi nối phần còn lại bằng that hoặc who khi phù hợp. Việc chọn phần nổi bật phụ thuộc câu hỏi hoặc điều cần đính chính.",
+          "pattern": "It was + phần nhấn + that/who ...",
+          "example": "It was the delivery date that worried the customer.",
+          "translation_vi": "Điều khiến khách hàng lo là ngày giao hàng."
+        },
+        {
+          "title": "What đưa điều cần nói ra sau",
+          "body": "What + mệnh đề có thể gom điều đã biết; phần sau be là điều được nhấn. Đừng thêm từ khiến người thực hiện hoặc đối tượng của hành động bị đổi.",
+          "pattern": "What ... is/was ...",
+          "example": "What the team needs is a clear decision.",
+          "translation_vi": "Điều nhóm cần là một quyết định rõ ràng."
+        }
+      ],
+      "pitfalls": [
+        "Câu chẻ không mặc nhiên làm câu hay hơn; dùng khi thật sự cần đối chiếu hoặc nhấn mạnh.",
+        "It trong it-cleft vẫn số ít: it was the files that were missing."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/emphasis-cleft-sentences-inversion-auxiliaries",
+        "https://dictionary.cambridge.org/uk/grammar/british-grammar/cleft-"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "“You met An at the café, right?” Choose the reply that corrects the place.",
+          "options": [
+            "No, it was An who met me at the café.",
+            "No, it was yesterday that I met An at the café.",
+            "No, it was me who met An at the café.",
+            "No, it was at the library that I met An."
+          ],
+          "answer": 3,
+          "explanation_vi": "Phần nhấn at the library đính chính địa điểm, đúng điều người hỏi cần sửa."
+        },
+        {
+          "id": "q2",
+          "prompt": "___ the organisers need is a reliable sound system.",
+          "options": [
+            "What",
+            "Which",
+            "Who",
+            "That"
+          ],
+          "answer": 0,
+          "explanation_vi": "What the organisers need là cụm danh từ mang nghĩa điều ban tổ chức cần."
+        },
+        {
+          "id": "q3",
+          "prompt": "It ___ the handwritten notes that were missing from the file.",
+          "options": [
+            "being",
+            "was",
+            "be",
+            "were"
+          ],
+          "answer": 1,
+          "explanation_vi": "It-cleft dùng it was dù thông tin được nhấn là notes số nhiều."
+        },
+        {
+          "id": "q4",
+          "prompt": "It was on Thursday ___ the revised timetable arrived.",
+          "options": [
+            "whose",
+            "what",
+            "that",
+            "who"
+          ],
+          "answer": 2,
+          "explanation_vi": "That nối phần thời gian được nhấn với mệnh đề còn lại."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the sentence that emphasises who solved the problem.",
+          "options": [
+            "It was the problem that Hana solved.",
+            "It was yesterday that Hana solved the problem.",
+            "It was in the office that Hana solved the problem.",
+            "It was Hana who solved the problem."
+          ],
+          "answer": 3,
+          "explanation_vi": "Hana đứng sau it was nên người giải quyết vấn đề là trọng tâm."
+        },
+        {
+          "id": "q6",
+          "prompt": "What surprised me ___ the absence of any written instructions.",
+          "options": [
+            "was",
+            "being",
+            "have",
+            "were"
+          ],
+          "answer": 0,
+          "explanation_vi": "What surprised me là một cụm làm chủ ngữ; ở đây nối với cụm danh từ số ít bằng was."
+        }
+      ]
+    },
+    {
+      "id": "c2-ellipsis",
+      "level": "C2",
+      "title": "Lược bỏ và thay thế: nói gọn mà vẫn rõ",
+      "summary": "Tránh lặp từ khi người nghe đã biết phần thông tin còn thiếu.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b1-present-perfect",
+        "b1-verb-patterns"
+      ],
+      "explanation": [
+        {
+          "title": "Giữ trợ động từ, bỏ phần đã rõ",
+          "body": "Sau trợ động từ hoặc modal, có thể bỏ phần động từ đã xuất hiện. Chọn trợ động từ đúng thì, chủ ngữ và ý khẳng định/phủ định.",
+          "pattern": "has ... → has · can ... → can",
+          "example": "I have checked the figures, but Minh has not.",
+          "translation_vi": "Tôi đã kiểm tra số liệu, còn Minh thì chưa."
+        },
+        {
+          "title": "Dùng từ thay thế phù hợp",
+          "body": "One/ones thường thay danh từ đếm được; so có thể thay cả ý sau think hoặc hope. That of/those of giúp so đúng những đối tượng cùng loại trong văn viết.",
+          "pattern": "a blue one · I think so · those of ...",
+          "example": "The new handles are stronger than the old ones.",
+          "translation_vi": "Tay nắm mới chắc hơn những tay nắm cũ."
+        }
+      ],
+      "pitfalls": [
+        "Chỉ lược bỏ khi phần thiếu có thể hiểu rõ từ ngữ cảnh.",
+        "Không dùng one để thay trực tiếp một lượng nước hoặc thông tin không đếm được."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/ellipsis",
+        "https://dictionary.cambridge.org/grammar/british-grammar/substitution"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Keep the same auxiliary in the short answer: “Has Jo submitted the form?” “Yes, she ___.”",
+          "options": [
+            "is",
+            "did",
+            "has",
+            "does"
+          ],
+          "answer": 2,
+          "explanation_vi": "Câu hỏi dùng has submitted; câu trả lời giữ has và lược submitted the form."
+        },
+        {
+          "id": "q2",
+          "prompt": "Complete the contrast about ability to attend: I cannot attend on Friday, but my colleague ___.",
+          "options": [
+            "has",
+            "is",
+            "does",
+            "can"
+          ],
+          "answer": 3,
+          "explanation_vi": "Can thay phần can attend on Friday, đối chiếu với cannot của người nói."
+        },
+        {
+          "id": "q3",
+          "prompt": "This envelope is too small. Do you have a larger ___?",
+          "options": [
+            "one",
+            "those",
+            "ones",
+            "it"
+          ],
+          "answer": 0,
+          "explanation_vi": "Envelope là danh từ đếm được số ít nên thay bằng one."
+        },
+        {
+          "id": "q4",
+          "prompt": "The metal clips are stronger than the plastic ___.",
+          "options": [
+            "that",
+            "ones",
+            "one",
+            "it"
+          ],
+          "answer": 1,
+          "explanation_vi": "Clips số nhiều; sau plastic dùng ones để tránh lặp clips."
+        },
+        {
+          "id": "q5",
+          "prompt": "“Will the new plan work?” “I think ___.”",
+          "options": [
+            "that of",
+            "such",
+            "so",
+            "one"
+          ],
+          "answer": 2,
+          "explanation_vi": "I think so thay cho I think the new plan will work."
+        },
+        {
+          "id": "q6",
+          "prompt": "The results from the pilot are consistent with ___ the larger study.",
+          "options": [
+            "ones of",
+            "it of",
+            "that of",
+            "those of"
+          ],
+          "answer": 3,
+          "explanation_vi": "Results số nhiều được thay bằng those; those of the larger study nghĩa là các kết quả của nghiên cứu lớn hơn."
+        }
+      ]
+    },
+    {
+      "id": "c2-fronting",
+      "level": "C2",
+      "title": "Đưa ý lên đầu câu: nhấn mạnh và đối chiếu",
+      "summary": "Thay đổi vị trí thông tin mà không tự động đảo mọi câu.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "c1-inversion"
+      ],
+      "explanation": [
+        {
+          "title": "Đưa tân ngữ lên đầu để tạo đối chiếu",
+          "body": "Một tân ngữ có thể đứng đầu để liên kết với điều vừa nói hoặc nhấn tương phản. Phần chủ ngữ + động từ thường giữ nguyên; khác với đảo ngữ sau cụm phủ định.",
+          "pattern": "Object + subject + verb",
+          "example": "The first proposal I supported; the second I rejected.",
+          "translation_vi": "Đề xuất đầu tôi ủng hộ; đề xuất thứ hai tôi bác bỏ."
+        },
+        {
+          "title": "Đảo vị trí trong miêu tả nơi chốn",
+          "body": "Sau một cụm chỉ nơi chốn, văn miêu tả có thể dùng động từ + chủ ngữ danh từ. Với đại từ như she hoặc it, thường giữ chủ ngữ trước động từ.",
+          "pattern": "On the wall hung a map. · Here it is.",
+          "example": "Beyond the orchard stood a small workshop.",
+          "translation_vi": "Phía bên kia vườn cây là một xưởng nhỏ."
+        }
+      ],
+      "pitfalls": [
+        "Đưa tân ngữ lên đầu không có nghĩa phải thêm do/did.",
+        "Trật tự nổi bật hợp với ngữ cảnh nhấn mạnh; dùng quá nhiều có thể khiến đoạn khó đọc."
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/us/grammar/british-grammar/fronting",
+        "https://dictionary.cambridge.org/us/grammar/british-grammar/word-order-and-focus_2"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Choose the fronted version that contrasts two objects without changing who read them.",
+          "options": [
+            "The report I reading; the appendix I skimming.",
+            "The report I read; the appendix I only skimmed.",
+            "The report read me; the appendix skimmed me.",
+            "I was read by the report and skimmed by the appendix."
+          ],
+          "answer": 1,
+          "explanation_vi": "The report và the appendix được đưa lên đầu, còn I vẫn là người thực hiện hành động."
+        },
+        {
+          "id": "q2",
+          "prompt": "Choose the natural sentence with a pronoun after here.",
+          "options": [
+            "Here come she.",
+            "Here comes she.",
+            "Here she comes.",
+            "Here she coming."
+          ],
+          "answer": 2,
+          "explanation_vi": "Với đại từ she, thường giữ she trước comes trong cấu trúc này."
+        },
+        {
+          "id": "q3",
+          "prompt": "On the far wall ___ a large map.",
+          "options": [
+            "were hung",
+            "did hung",
+            "hanging",
+            "hung"
+          ],
+          "answer": 3,
+          "explanation_vi": "Cụm nơi chốn có thể đi với hung + chủ ngữ a large map. Danh từ số ít không đi với were."
+        },
+        {
+          "id": "q4",
+          "prompt": "Does fronting the object always require subject–auxiliary inversion?",
+          "options": [
+            "No; “That detail I remember” keeps normal subject–verb order.",
+            "Yes; every fronted object requires did.",
+            "Yes; the subject must always follow the main verb.",
+            "No; fronting removes the need for a verb."
+          ],
+          "answer": 0,
+          "explanation_vi": "Tân ngữ that detail được đưa lên đầu nhưng I remember giữ trật tự chủ ngữ–động từ."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the sentence that preserves “I can accept the price, but I cannot accept the delay.”",
+          "options": [
+            "The price I cannot accept, and neither can I accept the delay.",
+            "The price I can accept; the delay I cannot.",
+            "The price can accept me; the delay cannot.",
+            "The delay I can accept; the price I cannot."
+          ],
+          "answer": 1,
+          "explanation_vi": "Đáp án giữ đúng giá có thể chấp nhận, thời gian chậm thì không, đồng thời đưa hai tân ngữ lên đầu."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the natural fronted sentence with a plural noun subject.",
+          "options": [
+            "Beside the entrance standing two tall cabinets.",
+            "Beside the entrance stands two tall cabinets.",
+            "Beside the entrance stood two tall cabinets.",
+            "Beside the entrance did stood two tall cabinets."
+          ],
+          "answer": 2,
+          "explanation_vi": "Stood + two tall cabinets là đảo vị trí trong miêu tả quá khứ; các lựa chọn khác sai hòa hợp hoặc thiếu động từ hữu hạn."
+        }
+      ]
+    },
+    {
+      "id": "c2-hedging",
+      "level": "C2",
+      "title": "Diễn đạt thận trọng: may, seem, tend to",
+      "summary": "Giữ mức độ chắc chắn phù hợp với điều bạn thật sự biết.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "prerequisites": [
+        "b2-modal-deduction"
+      ],
+      "explanation": [
+        {
+          "title": "Giảm độ khẳng định mà vẫn nói rõ ý",
+          "body": "May, might, seem, appear giúp diễn tả khả năng hoặc điều quan sát được thay vì khẳng định tuyệt đối. Chọn cách nói theo bằng chứng, không dùng để che đi thông tin quan trọng.",
+          "pattern": "may + verb · seem/appear + to V",
+          "example": "The change appears to have reduced waiting times.",
+          "translation_vi": "Thay đổi này có vẻ đã rút ngắn thời gian chờ."
+        },
+        {
+          "title": "Giới hạn kết luận đúng phạm vi",
+          "body": "Tend to nói một xu hướng, không phải mọi trường hợp. Not necessarily nghĩa là không nhất thiết. Nêu rõ nhóm hoặc hoàn cảnh giúp tránh suy rộng quá mức.",
+          "pattern": "tend to + verb · not necessarily",
+          "example": "A higher price does not necessarily mean better durability.",
+          "translation_vi": "Giá cao hơn không nhất thiết có nghĩa là độ bền tốt hơn."
+        }
+      ],
+      "pitfalls": [
+        "May và must khác mức độ chắc chắn; không thay qua lại chỉ để tránh lặp từ.",
+        "Thận trọng không có nghĩa làm câu mơ hồ: hãy nói rõ điều gì chưa chắc."
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/us/grammar/british-grammar/politeness",
+        "https://dictionary.cambridge.org/grammar/british-grammar/discourse-"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Choose the version that presents a possibility rather than a certainty.",
+          "options": [
+            "The new schedule may reduce congestion.",
+            "The new schedule definitely reduces congestion.",
+            "The new schedule always reduces congestion.",
+            "The new schedule certainly reduces congestion."
+          ],
+          "answer": 0,
+          "explanation_vi": "May giữ ý đây là khả năng; definitely, always và certainly làm khẳng định mạnh hơn."
+        },
+        {
+          "id": "q2",
+          "prompt": "The reduction appears ___ temporary.",
+          "options": [
+            "being",
+            "to be",
+            "been",
+            "be"
+          ],
+          "answer": 1,
+          "explanation_vi": "Appear theo sau bằng to + nguyên mẫu, nên dùng to be."
+        },
+        {
+          "id": "q3",
+          "prompt": "Residents tend ___ the quieter route in the evening.",
+          "options": [
+            "choosing",
+            "choose",
+            "to choose",
+            "chosen"
+          ],
+          "answer": 2,
+          "explanation_vi": "Tend to + nguyên mẫu diễn tả xu hướng thường gặp."
+        },
+        {
+          "id": "q4",
+          "prompt": "What does “The cheapest option is not necessarily the best” mean?",
+          "options": [
+            "The cheapest option is always the best.",
+            "The cheapest option can never be the best.",
+            "Every expensive option is better.",
+            "The cheapest option may or may not be the best."
+          ],
+          "answer": 3,
+          "explanation_vi": "Not necessarily phủ nhận sự chắc chắn, không khẳng định rằng phương án rẻ nhất luôn tệ."
+        },
+        {
+          "id": "q5",
+          "prompt": "A small pilot involved only one office. Choose the conclusion that keeps that limitation visible.",
+          "options": [
+            "The approach may help in similar offices, but broader testing is needed.",
+            "The approach will solve delays in every office.",
+            "The approach has proved that all offices are identical.",
+            "The approach can never fail in any workplace."
+          ],
+          "answer": 0,
+          "explanation_vi": "Đáp án giữ khả năng may và giới hạn ở văn phòng tương tự, không biến mẫu nhỏ thành kết luận cho mọi nơi."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the correctly formed cautious statement.",
+          "options": [
+            "It is possibly that the figures include duplicate entries.",
+            "It is possible that the figures include duplicate entries.",
+            "It possible that the figures include duplicate entries.",
+            "It is possibility that the figures include duplicate entries."
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau is cần tính từ possible trong mẫu It is possible that ...."
+        }
+      ]
+    },
+    {
+      "id": "c2-nominalisation",
+      "level": "C2",
+      "title": "Danh từ hóa: viết trang trọng nhưng vẫn rõ ai làm gì",
+      "summary": "Chuyển một hành động thành cụm danh từ mà không làm đổi ý.",
+      "minutes": 12,
+      "tags": [
+        "general",
+        "ielts",
+        "toeic"
+      ],
+      "prerequisites": [
+        "b2-passive",
+        "c1-reporting-patterns"
+      ],
+      "explanation": [
+        {
+          "title": "Biến hành động thành chủ đề của câu",
+          "body": "Có thể đổi động từ thành danh từ, như decide → decision, expand → expansion. Cụm danh từ giúp gom ý, nhưng cần giữ rõ người làm và đối tượng khi chúng quan trọng.",
+          "pattern": "the committee decided → the committee’s decision",
+          "example": "The committee’s decision to extend opening hours was welcomed.",
+          "translation_vi": "Quyết định kéo dài giờ mở cửa của ủy ban được đón nhận."
+        },
+        {
+          "title": "Đừng để cách viết trang trọng che mất nghĩa",
+          "body": "Danh từ hóa không phải lúc nào cũng tốt hơn động từ trực tiếp. Khi đổi câu, giữ đúng thời gian, mức độ chắc chắn và quan hệ nguyên nhân; việc A xảy ra trước B chưa chứng minh A gây ra B.",
+          "pattern": "introduce → introduction · grow → growth",
+          "example": "Usage increased after the introduction of weekend services.",
+          "translation_vi": "Lượng sử dụng tăng sau khi dịch vụ cuối tuần được đưa vào hoạt động."
+        }
+      ],
+      "pitfalls": [
+        "Không thêm một quan hệ nguyên nhân chỉ vì muốn viết gọn.",
+        "Nếu câu có quá nhiều danh từ trừu tượng, thử đổi lại một phần thành động từ để dễ hiểu hơn."
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/uk/grammar/british-grammar/nouns-forming-nouns-from-other-words",
+        "https://dictionary.cambridge.org/grammar/british-grammar/word-formation_2"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "The board’s ___ of the proposal surprised the applicants.",
+          "options": [
+            "reject",
+            "rejected",
+            "rejecting to",
+            "rejection"
+          ],
+          "answer": 3,
+          "explanation_vi": "Sau sở hữu board’s và trước of cần danh từ rejection."
+        },
+        {
+          "id": "q2",
+          "prompt": "Choose the rewrite that preserves who made the decision: “The residents decided to fund the repairs.”",
+          "options": [
+            "The residents’ decision was to fund the repairs.",
+            "The decision was made by the repairs.",
+            "The residents were funded by a decision.",
+            "The repairs decided to fund the residents."
+          ],
+          "answer": 0,
+          "explanation_vi": "Residents’ decision giữ đúng cư dân là người quyết định và fund the repairs là nội dung quyết định."
+        },
+        {
+          "id": "q3",
+          "prompt": "The gradual ___ of the service created new roles.",
+          "options": [
+            "expanded",
+            "expansion",
+            "expansively",
+            "expand"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sau tính từ gradual cần danh từ expansion."
+        },
+        {
+          "id": "q4",
+          "prompt": "Choose the rewrite that preserves uncertainty in “Demand may increase.”",
+          "options": [
+            "Demand has definitely increased.",
+            "Demand cannot increase.",
+            "An increase in demand is possible.",
+            "An increase in demand is certain."
+          ],
+          "answer": 2,
+          "explanation_vi": "May diễn tả khả năng, nên khi danh từ hóa phải giữ possible, không chuyển thành chắc chắn."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose the clearer version when it matters who checked the records.",
+          "options": [
+            "A checking occurred.",
+            "There was a process.",
+            "Some activity took place.",
+            "The auditors checked the records."
+          ],
+          "answer": 3,
+          "explanation_vi": "Câu trực tiếp nêu rõ auditors là người kiểm tra và records là đối tượng; các câu còn lại bỏ mất thông tin cần thiết."
+        },
+        {
+          "id": "q6",
+          "prompt": "“Use increased after the policy was introduced.” Which rewrite keeps the timing without claiming a proven cause?",
+          "options": [
+            "An increase in use followed the introduction of the policy.",
+            "Use increased before the policy was introduced.",
+            "The policy prevented any increase in use.",
+            "The introduction of the policy certainly caused all growth in use."
+          ],
+          "answer": 0,
+          "explanation_vi": "Followed giữ quan hệ sau–trước. Câu gốc chưa chứng minh chính sách là nguyên nhân của toàn bộ mức tăng."
+        }
+      ]
+    }
+  ]
+}

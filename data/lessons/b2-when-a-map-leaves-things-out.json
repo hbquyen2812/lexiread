@@ -1,0 +1,175 @@
+{
+  "slug": "b2-when-a-map-leaves-things-out",
+  "title": "When a Map Leaves Things Out",
+  "level": "B2",
+  "topic": "Thiết kế & tiếp cận",
+  "summary": "Một bản đồ dễ nhìn chưa chắc giúp mọi người tìm được đường.",
+  "track": "general",
+  "revision": 1,
+  "order": 108,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "A volunteer team was asked to redesign the map of a community arts centre. The existing version showed every storage room and service corridor, making the building appear far more complicated than it felt in person. The designers removed unnecessary details and used a different colour for each floor. At the first review, staff praised its clean appearance and assumed that visitors would find it equally helpful.\n\nHowever, a trial with new visitors exposed problems that the review had missed. The shortest route to the main gallery included a staircase, but this was not obvious on the simplified map. A visitor using a wheelchair had to return to reception to ask for another route. Meanwhile, someone who could not easily distinguish the floor colours confused two meeting rooms. The map was visually quieter, yet some of its most important information had disappeared.\n\nThe team revised the design rather than restoring every deleted detail. They marked step-free routes clearly and added floor numbers alongside colours. They also tested the map with people who had never visited the centre. This time, success was measured by whether visitors reached their destinations without assistance. The experience suggested that simplicity is not merely the absence of detail. It depends on retaining the details that different users need.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Một nhóm tình nguyện được giao thiết kế lại bản đồ trung tâm nghệ thuật cộng đồng. Bản cũ thể hiện mọi kho và hành lang kỹ thuật, khiến tòa nhà trông phức tạp hơn thực tế. Nhóm bỏ chi tiết không cần thiết và dùng màu khác nhau cho từng tầng. Ở buổi đánh giá đầu tiên, nhân viên khen hình thức rõ ràng và cho rằng khách cũng sẽ thấy hữu ích."
+      },
+      {
+        "index": 1,
+        "vi": "Tuy nhiên, thử nghiệm với khách mới bộc lộ những vấn đề buổi đánh giá bỏ sót. Lối ngắn nhất đến phòng trưng bày có cầu thang nhưng bản đồ đơn giản không thể hiện rõ. Một khách dùng xe lăn phải quay lại quầy để hỏi lối khác. Một người khó phân biệt màu các tầng lại nhầm hai phòng họp. Bản đồ ít rối hơn về thị giác nhưng mất một số thông tin quan trọng nhất."
+      },
+      {
+        "index": 2,
+        "vi": "Nhóm sửa thiết kế thay vì khôi phục mọi chi tiết đã xóa. Họ đánh dấu rõ lối đi không có bậc và thêm số tầng bên cạnh màu. Họ cũng thử với người chưa từng đến trung tâm. Lần này, thành công được đo bằng việc khách có đến đúng nơi mà không cần hỗ trợ hay không. Trải nghiệm cho thấy đơn giản không chỉ là ít chi tiết, mà là giữ chi tiết các nhóm người dùng cần."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "unnecessary",
+        "pos": "word / phrase",
+        "meaning_vi": "không cần thiết",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "A volunteer team was asked to redesign the map of a community arts centre. The existing version showed every storage room and service corridor, making the building appear far more complicated than it felt in person. The designers removed unnecessary details and used a different colour for each floor. At the first review, staff praised its clean appearance and assumed that visitors would find it equally helpful.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Thiết kế & tiếp cận"
+        ]
+      },
+      {
+        "word": "assumed",
+        "pos": "word / phrase",
+        "meaning_vi": "cho rằng khi chưa kiểm chứng",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "A volunteer team was asked to redesign the map of a community arts centre. The existing version showed every storage room and service corridor, making the building appear far more complicated than it felt in person. The designers removed unnecessary details and used a different colour for each floor. At the first review, staff praised its clean appearance and assumed that visitors would find it equally helpful.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Thiết kế & tiếp cận"
+        ]
+      },
+      {
+        "word": "exposed",
+        "pos": "word / phrase",
+        "meaning_vi": "bộc lộ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "However, a trial with new visitors exposed problems that the review had missed. The shortest route to the main gallery included a staircase, but this was not obvious on the simplified map. A visitor using a wheelchair had to return to reception to ask for another route. Meanwhile, someone who could not easily distinguish the floor colours confused two meeting rooms. The map was visually quieter, yet some of its most important information had disappeared.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Thiết kế & tiếp cận"
+        ]
+      },
+      {
+        "word": "distinguish",
+        "pos": "word / phrase",
+        "meaning_vi": "phân biệt",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "However, a trial with new visitors exposed problems that the review had missed. The shortest route to the main gallery included a staircase, but this was not obvious on the simplified map. A visitor using a wheelchair had to return to reception to ask for another route. Meanwhile, someone who could not easily distinguish the floor colours confused two meeting rooms. The map was visually quieter, yet some of its most important information had disappeared.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Thiết kế & tiếp cận"
+        ]
+      },
+      {
+        "word": "step-free",
+        "pos": "word / phrase",
+        "meaning_vi": "không có bậc thang",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The team revised the design rather than restoring every deleted detail. They marked step-free routes clearly and added floor numbers alongside colours. They also tested the map with people who had never visited the centre. This time, success was measured by whether visitors reached their destinations without assistance. The experience suggested that simplicity is not merely the absence of detail. It depends on retaining the details that different users need.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Thiết kế & tiếp cận"
+        ]
+      },
+      {
+        "word": "retaining",
+        "pos": "word / phrase",
+        "meaning_vi": "giữ lại",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The team revised the design rather than restoring every deleted detail. They marked step-free routes clearly and added floor numbers alongside colours. They also tested the map with people who had never visited the centre. This time, success was measured by whether visitors reached their destinations without assistance. The experience suggested that simplicity is not merely the absence of detail. It depends on retaining the details that different users need.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B2",
+          "Thiết kế & tiếp cận"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "What did the initial staff review focus on?",
+      "options": [
+        "The cost of rebuilding the centre",
+        "The appearance of the map",
+        "Wheelchair users finding their way"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "staff praised its clean appearance",
+      "explanation_vi": "Nhân viên đánh giá hình thức rõ ràng trước khi kiểm tra người dùng thực tế."
+    },
+    {
+      "id": "q2",
+      "kind": "inference",
+      "prompt": "Which principle is best supported by the redesign?",
+      "options": [
+        "Useful simplicity depends on user needs",
+        "All details should always be removed",
+        "Colour should replace every written label"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "retaining the details that different users need.",
+      "explanation_vi": "Kết luận nhấn mạnh giữ thông tin cần thiết với người dùng, không phải xóa càng nhiều càng tốt."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The revised map used both numbers and colours for floors.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "added floor numbers alongside colours.",
+      "explanation_vi": "Bản sửa kết hợp số tầng và màu: TRUE."
+    }
+  ],
+  "faqs": []
+}

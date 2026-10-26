@@ -20,11 +20,13 @@ class Command(BaseCommand):
         for path in paths:
             try:c=validate_lesson(json.loads(path.read_text(encoding='utf-8')))
             except (ValueError,TypeError,KeyError,AttributeError,InputError) as exc:raise CommandError(f'{path.name}: {exc}') from exc
-            fields={k:c[k] for k in ('title','level','topic','revision','order','published')}
+            fields={k:c[k] for k in ('title','level','track','topic','revision','order','published')}
             fields['content']=c
             lesson,new=CuratedLesson.objects.get_or_create(slug=c['slug'],defaults=fields)
             made+=int(new)
             if not new and options['update']:
+                if c['revision']<=lesson.revision:
+                    continue
                 for k,v in fields.items():setattr(lesson,k,v)
                 lesson.full_clean();lesson.save();changed+=1
         self.stdout.write(self.style.SUCCESS(f'Thêm {made}; cập nhật {changed}; giữ {len(paths)-made-changed} bài chuẩn. Không thay đổi kho từ cá nhân.'))

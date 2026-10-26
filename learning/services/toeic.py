@@ -1,4 +1,4 @@
-"""Validated, original TOEIC-style practice content stored outside the database."""
+"""Pure TOEIC validation/scoring and bundled bootstrap data (not the live repository)."""
 import copy
 import json
 import re
@@ -21,8 +21,8 @@ def validate_toeic_set(raw):
     mode=raw.get('mode')
     if mode not in MODES:raise InputError('Chế độ TOEIC không hợp lệ.')
     parts=raw.get('parts',[])
-    expected={5,6} if mode=='parts-5-6' else {7}
-    if not isinstance(parts,list) or set(parts)!=expected:raise InputError('Phần thi không khớp chế độ TOEIC.')
+    expected=set(parts) if isinstance(parts,list) and all(type(p) is int for p in parts) else set()
+    if not expected or (mode=='parts-5-6' and not expected<={5,6}) or (mode=='part-7' and expected!={7}):raise InputError('Phần thi không khớp chế độ TOEIC.')
     documents=raw.get('documents',[])
     if not isinstance(documents,list) or len(documents)>10:raise InputError('Danh sách văn bản TOEIC không hợp lệ.')
     clean_documents=[];document_ids=set()
@@ -52,7 +52,7 @@ def validate_toeic_set(raw):
         if not isinstance(doc_ids,list) or any(value not in document_ids for value in doc_ids):
             raise InputError('Câu hỏi tham chiếu văn bản không tồn tại.')
         evidence=clean_text(q.get('evidence',''),2000)
-        if evidence and not any(evidence in doc['body'] for doc in clean_documents):
+        if evidence and not any(evidence in doc['body'] and doc['id'] in doc_ids for doc in clean_documents):
             raise InputError('Bằng chứng TOEIC không khớp văn bản.')
         clean_questions.append({'id':qid,'part':part,'prompt':clean_text(q.get('prompt',''),1500,True),
             'options':options,'answer':answer,'explanation_vi':clean_text(q.get('explanation_vi',''),3000,True),
@@ -64,9 +64,12 @@ def validate_toeic_set(raw):
     if not isinstance(words,list) or len(words)>30:raise InputError('Danh sách từ trọng tâm không hợp lệ.')
     vocabulary=[]
     for item in words:
-        entry=validate_entry(item);entry.update(origin='curated',verified=True)
+        entry=validate_entry(item);entry.update(origin='curated',verified=False)
         vocabulary.append(entry)
     return {'slug':slug,'title':clean_text(raw.get('title',''),200,True),'mode':mode,
+        'revision':_integer(raw.get('revision',1),1,10000,'Phiên bản'),
+        'editorial':copy.deepcopy(raw.get('editorial',{})),
+        'provenance':clean_text(raw.get('provenance') or (raw.get('editorial') or {}).get('note') or 'Bài luyện tự biên soạn, không phải đề thi ETS chính thức.',1000),
         'mode_label':clean_text(raw.get('mode_label',''),100,True),'parts':parts,
         'level':clean_text(raw.get('level',''),20,True),
         'duration_minutes':_integer(raw.get('duration_minutes'),1,75,'Thời lượng'),
@@ -88,6 +91,7 @@ def get_toeic_set(slug):
 
 def public_toeic_set(slug):
     practice=get_toeic_set(slug)
+    practice.pop('editorial',None)
     practice['questions']=[{key:copy.deepcopy(q[key]) for key in ('id','part','prompt','options','document_ids')} for q in practice['questions']]
     return practice
 

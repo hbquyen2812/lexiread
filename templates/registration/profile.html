@@ -1,0 +1,8 @@
+{% extends 'registration/account_base.html' %}
+{% block title %}Tài khoản của tôi{% endblock %}
+{% block content %}<h1 data-i18n="account.title">Tài khoản của tôi</h1><p data-i18n="account.copy">Cập nhật thông tin cá nhân. Bài học, từ vựng và lịch ôn của bạn vẫn được giữ nguyên.</p>
+{% for message in messages %}<div class="notice success" role="status">{{ message }}</div>{% endfor %}
+{% if limited %}<div class="notice error" role="alert">Đã có nhiều lần cập nhật. Vui lòng thử lại sau một giờ.</div>{% endif %}
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn primary full" type="submit" data-i18n="account.save">Lưu thông tin</button></form>
+<p class="fineprint" data-i18n="account.emailHint">Hãy dùng email bạn sở hữu để có thể nhận liên kết khôi phục. Email hiện chưa được xác minh quyền sở hữu.</p>
+<div class="button-row"><a class="btn" href="{% url 'password_change' %}" data-i18n="account.changePassword">Đổi mật khẩu</a><a class="btn" href="/#settings" data-i18n="account.back">← Quay lại học</a></div>{% endblock %}

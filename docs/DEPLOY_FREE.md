@@ -53,3 +53,4 @@ Render tự build lại sau mỗi commit. Không dùng `docker compose` trên Re
 ## 6. Sao lưu dữ liệu
 
 Neon Free có snapshot giới hạn nhưng không nên coi là bản sao lưu duy nhất. Định kỳ dùng chức năng xuất JSON trong LexiRead và tải file về máy. Khi dữ liệu quan trọng hơn, dùng `pg_dump` hoặc nâng gói có backup theo lịch.
+> Sau khi deploy bản có đăng ký/quên mật khẩu, cấu hình gửi email qua HTTPS theo [ACCOUNT_SETUP.md](ACCOUNT_SETUP.md). Render Free chặn các cổng SMTP phổ biến; đừng đưa thông tin vận hành này vào trang cài đặt của người học. Nhập thêm nội dung qua [quản trị thư viện](LESSON_AUTHORING.md), không sửa code mỗi lần thêm bài.

@@ -1,0 +1,10 @@
+{% extends 'registration/account_base.html' %}
+{% block title %}Đăng ký{% endblock %}
+{% block content %}<span class="eyebrow">LEXIREAD</span><h1 data-i18n="auth.create">Tạo góc học của bạn</h1><p data-i18n="auth.signupCopy">Chọn tên đăng nhập và mật khẩu. Email chỉ dùng để khôi phục tài khoản khi cần; hãy nhập email bạn sở hữu.</p>
+{% if limited %}<div class="notice error" role="alert">Đã có nhiều lần đăng ký. Vui lòng thử lại sau một giờ.</div>{% endif %}
+<form method="post">{% csrf_token %}{{ form.non_field_errors }}
+<label for="id_username"><span data-i18n="auth.username">Tên đăng nhập</span><input id="id_username" name="username" value="{{ form.username.value|default_if_none:'' }}" autocomplete="username" minlength="3" maxlength="30" required></label>{{ form.username.errors }}<p class="fineprint">3–30 ký tự: chữ không dấu, số, dấu chấm, gạch dưới hoặc gạch ngang.</p>
+<label for="id_email"><span data-i18n="auth.recoveryEmail">Email khôi phục</span><input id="id_email" type="email" name="email" value="{{ form.email.value|default_if_none:'' }}" autocomplete="email" maxlength="254" required></label>{{ form.email.errors }}
+<label for="id_password1"><span data-i18n="auth.password">Mật khẩu</span><input id="id_password1" type="password" name="password1" autocomplete="new-password" required minlength="10"></label>{{ form.password1.errors }}
+<label for="id_password2"><span data-i18n="auth.confirmPassword">Nhập lại mật khẩu</span><input id="id_password2" type="password" name="password2" autocomplete="new-password" required minlength="10"></label>{{ form.password2.errors }}<p class="fineprint" data-i18n="auth.passwordHint">Ít nhất 10 ký tự, không dùng mật khẩu quá phổ biến hoặc giống tên đăng nhập.</p>
+<button class="btn primary full" type="submit" data-i18n="auth.register">Tạo tài khoản miễn phí</button></form>{% endblock %}

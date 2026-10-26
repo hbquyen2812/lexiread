@@ -1,0 +1,143 @@
+{
+  "slug": "a1-the-library-card",
+  "title": "The Library Card",
+  "level": "A1",
+  "topic": "Sách & thư viện",
+  "summary": "Tìm cuốn sách đầu tiên và đọc thông tin trên thẻ thư viện.",
+  "track": "general",
+  "revision": 1,
+  "order": 103,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "Sara visits the town library for the first time. She wants a book about animals. A woman at the desk asks for her name. Sara writes it on a form. The woman gives her a library card and shows her the children's room.\n\nThe room has low shelves and bright windows. Sara finds a book with a bird on the cover. There are large pictures inside. She sits on a green chair and reads two pages. Some words are new, but the pictures help her understand.\n\nSara can take the book home for two weeks. The return date is on a small piece of paper. She puts the paper inside the book. Before she leaves, she asks about the next story morning. It is on Saturday, and she wants to come back.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Sara đến thư viện thị trấn lần đầu tiên. Em muốn một cuốn sách về động vật. Một cô ở quầy hỏi tên em. Sara viết tên lên mẫu đơn. Cô đưa cho em một thẻ thư viện và chỉ phòng sách thiếu nhi."
+      },
+      {
+        "index": 1,
+        "vi": "Căn phòng có những kệ thấp và cửa sổ sáng sủa. Sara tìm thấy cuốn sách có hình chim trên bìa. Bên trong có những bức tranh lớn. Em ngồi trên ghế xanh và đọc hai trang. Một số từ còn mới nhưng tranh giúp em hiểu."
+      },
+      {
+        "index": 2,
+        "vi": "Sara có thể mang sách về trong hai tuần. Ngày trả sách được ghi trên một mảnh giấy nhỏ. Em đặt mảnh giấy vào sách. Trước khi ra về, em hỏi về buổi kể chuyện tiếp theo. Buổi đó diễn ra vào thứ Bảy và em muốn quay lại."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "library",
+        "pos": "word / phrase",
+        "meaning_vi": "thư viện",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Sara visits the town library for the first time. She wants a book about animals. A woman at the desk asks for her name. Sara writes it on a form. The woman gives her a library card and shows her the children's room.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Sách & thư viện"
+        ]
+      },
+      {
+        "word": "shelves",
+        "pos": "word / phrase",
+        "meaning_vi": "các kệ sách",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The room has low shelves and bright windows. Sara finds a book with a bird on the cover. There are large pictures inside. She sits on a green chair and reads two pages. Some words are new, but the pictures help her understand.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Sách & thư viện"
+        ]
+      },
+      {
+        "word": "cover",
+        "pos": "word / phrase",
+        "meaning_vi": "bìa",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The room has low shelves and bright windows. Sara finds a book with a bird on the cover. There are large pictures inside. She sits on a green chair and reads two pages. Some words are new, but the pictures help her understand.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Sách & thư viện"
+        ]
+      },
+      {
+        "word": "return date",
+        "pos": "word / phrase",
+        "meaning_vi": "ngày trả sách",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Sara can take the book home for two weeks. The return date is on a small piece of paper. She puts the paper inside the book. Before she leaves, she asks about the next story morning. It is on Saturday, and she wants to come back.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A1",
+          "Sách & thư viện"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "What kind of book does Sara want?",
+      "options": [
+        "A book about animals",
+        "A book about cooking",
+        "A book about trains"
+      ],
+      "answer": 0,
+      "paragraph_index": 0,
+      "evidence": "She wants a book about animals.",
+      "explanation_vi": "Sara muốn sách về động vật."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "How long can she keep the book?",
+      "options": [
+        "Two days",
+        "One month",
+        "Two weeks"
+      ],
+      "answer": 2,
+      "paragraph_index": 2,
+      "evidence": "Sara can take the book home for two weeks.",
+      "explanation_vi": "Thời hạn mượn là hai tuần."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "Sara understands every word in the book.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "Some words are new, but the pictures help her understand.",
+      "explanation_vi": "Một số từ mới đối với Sara, nên không phải em hiểu mọi từ."
+    }
+  ],
+  "faqs": []
+}

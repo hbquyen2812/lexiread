@@ -1,0 +1,175 @@
+{
+  "slug": "c1-the-measurement-trap",
+  "title": "The Measurement Trap",
+  "level": "C1",
+  "topic": "Dữ liệu & quyết định",
+  "summary": "Khi chỉ số đại diện trở thành mục tiêu, điều gì có thể bị bỏ quên?",
+  "track": "general",
+  "revision": 1,
+  "order": 110,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "A fictional adult-learning centre introduced a dashboard to help tutors identify students who needed support. The dashboard counted completed online exercises, a measure that was easy to collect and compare. Initially, tutors treated the count as one clue among many. A learner completing fewer exercises might be struggling, but might equally be spending longer on a challenging passage. Conversations with students remained essential to interpreting the numbers.\n\nThe meaning of the measure changed when management began rewarding classes with the highest completion totals. Tutors had an incentive to assign shorter exercises, and some learners discovered that repeating familiar tasks raised their scores quickly. None of this required anyone to falsify a record. The data could be accurate while becoming less informative about the educational outcome the centre actually valued: independent understanding of unfamiliar texts.\n\nIn response, the centre added reading discussions and occasional unfamiliar tasks to its reviews. It did not discard the dashboard, which still revealed useful patterns of participation. Instead, managers removed the competition between classes and asked tutors to explain apparent changes before drawing conclusions. This made evaluation slower, but also reduced the pressure to optimise a single visible number. The lesson was not that measurement is inherently misleading. It was that a proxy becomes fragile when people are rewarded for improving it without improving what it is meant to represent.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Một trung tâm giáo dục người lớn giả định giới thiệu bảng số liệu để giúp giáo viên xác định học viên cần hỗ trợ. Bảng đếm bài tập trực tuyến đã hoàn thành, một chỉ số dễ thu thập và so sánh. Ban đầu giáo viên xem nó là một dấu hiệu trong nhiều dấu hiệu. Người làm ít bài có thể đang gặp khó khăn, nhưng cũng có thể dành nhiều thời gian cho đoạn đọc khó. Trò chuyện với học viên vẫn thiết yếu để diễn giải số liệu."
+      },
+      {
+        "index": 1,
+        "vi": "Ý nghĩa của chỉ số thay đổi khi ban quản lý bắt đầu thưởng các lớp có tổng số bài hoàn thành cao nhất. Giáo viên có động lực giao bài ngắn hơn; một số học viên nhận ra làm lại bài quen giúp tăng điểm nhanh. Không ai cần làm giả hồ sơ. Dữ liệu vẫn chính xác nhưng ít phản ánh kết quả giáo dục mà trung tâm thật sự coi trọng: khả năng độc lập hiểu văn bản chưa quen."
+      },
+      {
+        "index": 2,
+        "vi": "Trung tâm đáp lại bằng cách thêm thảo luận đọc hiểu và đôi lúc giao bài lạ vào đánh giá. Họ không bỏ bảng số liệu vì nó vẫn cho thấy xu hướng tham gia hữu ích. Thay vào đó, quản lý bỏ cuộc thi giữa các lớp và yêu cầu giáo viên giải thích thay đổi trước khi kết luận. Việc đánh giá chậm hơn nhưng giảm áp lực tối ưu một con số duy nhất. Bài học không phải đo lường vốn gây hiểu lầm, mà là chỉ số đại diện trở nên mong manh khi người ta được thưởng vì cải thiện nó mà không cải thiện điều nó đại diện."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "interpreting",
+        "pos": "word / phrase",
+        "meaning_vi": "diễn giải",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "A fictional adult-learning centre introduced a dashboard to help tutors identify students who needed support. The dashboard counted completed online exercises, a measure that was easy to collect and compare. Initially, tutors treated the count as one clue among many. A learner completing fewer exercises might be struggling, but might equally be spending longer on a challenging passage. Conversations with students remained essential to interpreting the numbers.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Dữ liệu & quyết định"
+        ]
+      },
+      {
+        "word": "incentive",
+        "pos": "word / phrase",
+        "meaning_vi": "động lực hoặc lợi ích thúc đẩy",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The meaning of the measure changed when management began rewarding classes with the highest completion totals. Tutors had an incentive to assign shorter exercises, and some learners discovered that repeating familiar tasks raised their scores quickly. None of this required anyone to falsify a record. The data could be accurate while becoming less informative about the educational outcome the centre actually valued: independent understanding of unfamiliar texts.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Dữ liệu & quyết định"
+        ]
+      },
+      {
+        "word": "falsify",
+        "pos": "word / phrase",
+        "meaning_vi": "làm giả",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The meaning of the measure changed when management began rewarding classes with the highest completion totals. Tutors had an incentive to assign shorter exercises, and some learners discovered that repeating familiar tasks raised their scores quickly. None of this required anyone to falsify a record. The data could be accurate while becoming less informative about the educational outcome the centre actually valued: independent understanding of unfamiliar texts.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Dữ liệu & quyết định"
+        ]
+      },
+      {
+        "word": "discard",
+        "pos": "word / phrase",
+        "meaning_vi": "loại bỏ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "In response, the centre added reading discussions and occasional unfamiliar tasks to its reviews. It did not discard the dashboard, which still revealed useful patterns of participation. Instead, managers removed the competition between classes and asked tutors to explain apparent changes before drawing conclusions. This made evaluation slower, but also reduced the pressure to optimise a single visible number. The lesson was not that measurement is inherently misleading. It was that a proxy becomes fragile when people are rewarded for improving it without improving what it is meant to represent.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Dữ liệu & quyết định"
+        ]
+      },
+      {
+        "word": "proxy",
+        "pos": "word / phrase",
+        "meaning_vi": "chỉ số đại diện gián tiếp",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "In response, the centre added reading discussions and occasional unfamiliar tasks to its reviews. It did not discard the dashboard, which still revealed useful patterns of participation. Instead, managers removed the competition between classes and asked tutors to explain apparent changes before drawing conclusions. This made evaluation slower, but also reduced the pressure to optimise a single visible number. The lesson was not that measurement is inherently misleading. It was that a proxy becomes fragile when people are rewarded for improving it without improving what it is meant to represent.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Dữ liệu & quyết định"
+        ]
+      },
+      {
+        "word": "fragile",
+        "pos": "word / phrase",
+        "meaning_vi": "dễ mất độ tin cậy trong ngữ cảnh này",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "In response, the centre added reading discussions and occasional unfamiliar tasks to its reviews. It did not discard the dashboard, which still revealed useful patterns of participation. Instead, managers removed the competition between classes and asked tutors to explain apparent changes before drawing conclusions. This made evaluation slower, but also reduced the pressure to optimise a single visible number. The lesson was not that measurement is inherently misleading. It was that a proxy becomes fragile when people are rewarded for improving it without improving what it is meant to represent.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "C1",
+          "Dữ liệu & quyết định"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "inference",
+      "prompt": "Why could accurate exercise counts become less useful?",
+      "options": [
+        "The software stopped recording submissions",
+        "All learners deliberately falsified their results",
+        "Incentives changed what people chose to complete"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "repeating familiar tasks raised their scores quickly.",
+      "explanation_vi": "Lựa chọn bài quen/ngắn làm số đếm tăng mà chưa chắc tăng năng lực đọc mới."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What did managers remove?",
+      "options": [
+        "Every discussion with learners",
+        "Competition between classes",
+        "All online exercises"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "managers removed the competition between classes",
+      "explanation_vi": "Trung tâm bỏ thi đua giữa lớp, không bỏ toàn bộ dữ liệu hay bài tập."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The centre abandoned its dashboard completely.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "It did not discard the dashboard",
+      "explanation_vi": "Trung tâm giữ bảng số liệu và kết hợp thêm cách đánh giá."
+    }
+  ],
+  "faqs": []
+}

@@ -1,0 +1,3357 @@
+{
+  "version": 1,
+  "collections": [
+    {
+      "id": "a1-daily-routines",
+      "level": "A1",
+      "title": "Nhịp sống mỗi ngày",
+      "description": "Từ những việc nhỏ lúc thức dậy đến cuối ngày.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "wake up",
+          "meaning_vi": "thức dậy",
+          "part_of_speech": "phrase",
+          "example": "I wake up at seven.",
+          "example_translation": "Tôi thức dậy lúc bảy giờ.",
+          "usage_pattern": "wake up at + time"
+        },
+        {
+          "word": "breakfast",
+          "meaning_vi": "bữa sáng",
+          "part_of_speech": "noun",
+          "example": "We eat breakfast in the kitchen.",
+          "example_translation": "Chúng tôi ăn sáng trong bếp.",
+          "usage_pattern": "eat / have breakfast"
+        },
+        {
+          "word": "wash",
+          "meaning_vi": "rửa; giặt",
+          "part_of_speech": "verb",
+          "example": "Please wash your hands first.",
+          "example_translation": "Bạn rửa tay trước nhé.",
+          "usage_pattern": "wash + noun"
+        },
+        {
+          "word": "dress",
+          "meaning_vi": "mặc quần áo",
+          "part_of_speech": "verb",
+          "example": "I dress quickly before school.",
+          "example_translation": "Tôi mặc quần áo thật nhanh trước khi đi học.",
+          "usage_pattern": "dress quickly / warmly"
+        },
+        {
+          "word": "leave",
+          "meaning_vi": "rời đi",
+          "part_of_speech": "verb",
+          "example": "We leave home at eight.",
+          "example_translation": "Chúng tôi rời nhà lúc tám giờ.",
+          "usage_pattern": "leave home / work"
+        },
+        {
+          "word": "arrive",
+          "meaning_vi": "đến nơi",
+          "part_of_speech": "verb",
+          "example": "They arrive at school together.",
+          "example_translation": "Họ đến trường cùng nhau.",
+          "usage_pattern": "arrive at + place"
+        },
+        {
+          "word": "early",
+          "meaning_vi": "sớm",
+          "part_of_speech": "adverb",
+          "example": "I get home early on Fridays.",
+          "example_translation": "Thứ Sáu tôi về nhà sớm.",
+          "usage_pattern": "arrive / leave / get home early"
+        },
+        {
+          "word": "late",
+          "meaning_vi": "muộn",
+          "part_of_speech": "adverb",
+          "example": "Please do not arrive late.",
+          "example_translation": "Bạn đừng đến muộn nhé.",
+          "usage_pattern": "arrive / stay up late"
+        },
+        {
+          "word": "morning",
+          "meaning_vi": "buổi sáng",
+          "part_of_speech": "noun",
+          "example": "My sister runs every morning.",
+          "example_translation": "Chị tôi chạy bộ mỗi sáng.",
+          "usage_pattern": "every morning / in the morning"
+        },
+        {
+          "word": "evening",
+          "meaning_vi": "buổi tối",
+          "part_of_speech": "noun",
+          "example": "We read books in the evening.",
+          "example_translation": "Buổi tối chúng tôi đọc sách.",
+          "usage_pattern": "in the evening"
+        },
+        {
+          "word": "tired",
+          "meaning_vi": "mệt",
+          "part_of_speech": "adjective",
+          "example": "I feel tired after work.",
+          "example_translation": "Tôi thấy mệt sau giờ làm.",
+          "usage_pattern": "feel / be tired"
+        },
+        {
+          "word": "ready",
+          "meaning_vi": "sẵn sàng",
+          "part_of_speech": "adjective",
+          "example": "Are you ready for breakfast?",
+          "example_translation": "Bạn sẵn sàng ăn sáng chưa?",
+          "usage_pattern": "ready for + noun"
+        }
+      ]
+    },
+    {
+      "id": "a1-at-home",
+      "level": "A1",
+      "title": "Những góc quen trong nhà",
+      "description": "Gọi tên đồ vật và những việc thường làm ở nhà.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "room",
+          "meaning_vi": "phòng",
+          "part_of_speech": "noun",
+          "example": "My room has a small desk.",
+          "example_translation": "Phòng tôi có một chiếc bàn nhỏ.",
+          "usage_pattern": "a small / large room"
+        },
+        {
+          "word": "kitchen",
+          "meaning_vi": "nhà bếp",
+          "part_of_speech": "noun",
+          "example": "Dad is in the kitchen.",
+          "example_translation": "Bố đang ở trong bếp.",
+          "usage_pattern": "in the kitchen"
+        },
+        {
+          "word": "bed",
+          "meaning_vi": "giường",
+          "part_of_speech": "noun",
+          "example": "The cat sleeps on my bed.",
+          "example_translation": "Con mèo ngủ trên giường tôi.",
+          "usage_pattern": "on the bed / go to bed"
+        },
+        {
+          "word": "chair",
+          "meaning_vi": "ghế",
+          "part_of_speech": "noun",
+          "example": "Please take this chair.",
+          "example_translation": "Bạn ngồi ghế này nhé.",
+          "usage_pattern": "sit on a chair"
+        },
+        {
+          "word": "table",
+          "meaning_vi": "bàn",
+          "part_of_speech": "noun",
+          "example": "Dinner is on the table.",
+          "example_translation": "Bữa tối đã được dọn lên bàn.",
+          "usage_pattern": "on the table"
+        },
+        {
+          "word": "door",
+          "meaning_vi": "cửa ra vào",
+          "part_of_speech": "noun",
+          "example": "The front door is blue.",
+          "example_translation": "Cửa trước có màu xanh dương.",
+          "usage_pattern": "the front / back door"
+        },
+        {
+          "word": "window",
+          "meaning_vi": "cửa sổ",
+          "part_of_speech": "noun",
+          "example": "I sit by the window.",
+          "example_translation": "Tôi ngồi bên cửa sổ.",
+          "usage_pattern": "by the window"
+        },
+        {
+          "word": "key",
+          "meaning_vi": "chìa khóa",
+          "part_of_speech": "noun",
+          "example": "Your key is in my bag.",
+          "example_translation": "Chìa khóa của bạn ở trong túi tôi.",
+          "usage_pattern": "a key to + noun"
+        },
+        {
+          "word": "light",
+          "meaning_vi": "đèn; ánh sáng",
+          "part_of_speech": "noun",
+          "example": "Please turn on the light.",
+          "example_translation": "Bạn bật đèn giúp tôi nhé.",
+          "usage_pattern": "turn on / off the light"
+        },
+        {
+          "word": "clean",
+          "meaning_vi": "lau dọn; làm sạch",
+          "part_of_speech": "verb",
+          "example": "We clean the bathroom on Sundays.",
+          "example_translation": "Chủ nhật chúng tôi dọn phòng tắm.",
+          "usage_pattern": "clean + room / object"
+        },
+        {
+          "word": "open",
+          "meaning_vi": "mở",
+          "part_of_speech": "verb",
+          "example": "Can you open the door?",
+          "example_translation": "Bạn mở cửa giúp tôi được không?",
+          "usage_pattern": "open a door / window"
+        },
+        {
+          "word": "close",
+          "meaning_vi": "đóng",
+          "part_of_speech": "verb",
+          "example": "Please close the window before bed.",
+          "example_translation": "Bạn đóng cửa sổ trước khi đi ngủ nhé.",
+          "usage_pattern": "close a door / window"
+        }
+      ]
+    },
+    {
+      "id": "a1-food-shopping",
+      "level": "A1",
+      "title": "Ăn gì hôm nay?",
+      "description": "Từ vựng đơn giản khi chọn đồ ăn và mua sắm.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "bread",
+          "meaning_vi": "bánh mì",
+          "part_of_speech": "noun",
+          "example": "I buy bread every Saturday.",
+          "example_translation": "Thứ Bảy nào tôi cũng mua bánh mì.",
+          "usage_pattern": "a loaf / slice of bread"
+        },
+        {
+          "word": "rice",
+          "meaning_vi": "gạo; cơm",
+          "part_of_speech": "noun",
+          "example": "We eat rice with fish.",
+          "example_translation": "Chúng tôi ăn cơm với cá.",
+          "usage_pattern": "a bowl of rice"
+        },
+        {
+          "word": "milk",
+          "meaning_vi": "sữa",
+          "part_of_speech": "noun",
+          "example": "She drinks milk with breakfast.",
+          "example_translation": "Cô ấy uống sữa vào bữa sáng.",
+          "usage_pattern": "a glass of milk"
+        },
+        {
+          "word": "water",
+          "meaning_vi": "nước",
+          "part_of_speech": "noun",
+          "example": "Please bring some water.",
+          "example_translation": "Bạn mang ít nước đến nhé.",
+          "usage_pattern": "a bottle / glass of water"
+        },
+        {
+          "word": "fruit",
+          "meaning_vi": "trái cây",
+          "part_of_speech": "noun",
+          "example": "I have fruit after lunch.",
+          "example_translation": "Tôi ăn trái cây sau bữa trưa.",
+          "usage_pattern": "fresh fruit / a piece of fruit"
+        },
+        {
+          "word": "vegetable",
+          "meaning_vi": "rau; củ",
+          "part_of_speech": "noun",
+          "example": "A carrot is my favourite vegetable.",
+          "example_translation": "Cà rốt là loại rau củ tôi thích nhất.",
+          "usage_pattern": "a green vegetable"
+        },
+        {
+          "word": "egg",
+          "meaning_vi": "trứng",
+          "part_of_speech": "noun",
+          "example": "There is one egg in the bowl.",
+          "example_translation": "Trong bát có một quả trứng.",
+          "usage_pattern": "boil / fry an egg"
+        },
+        {
+          "word": "buy",
+          "meaning_vi": "mua",
+          "part_of_speech": "verb",
+          "example": "We buy food at this market.",
+          "example_translation": "Chúng tôi mua đồ ăn ở chợ này.",
+          "usage_pattern": "buy something at + place"
+        },
+        {
+          "word": "pay",
+          "meaning_vi": "trả tiền",
+          "part_of_speech": "verb",
+          "example": "Can I pay by card?",
+          "example_translation": "Tôi thanh toán bằng thẻ được không?",
+          "usage_pattern": "pay by card / in cash"
+        },
+        {
+          "word": "cheap",
+          "meaning_vi": "rẻ",
+          "part_of_speech": "adjective",
+          "example": "These apples are cheap today.",
+          "example_translation": "Hôm nay táo này rẻ.",
+          "usage_pattern": "cheap food / tickets"
+        },
+        {
+          "word": "hungry",
+          "meaning_vi": "đói",
+          "part_of_speech": "adjective",
+          "example": "I am hungry after my walk.",
+          "example_translation": "Đi bộ xong tôi thấy đói.",
+          "usage_pattern": "be / feel hungry"
+        },
+        {
+          "word": "menu",
+          "meaning_vi": "thực đơn",
+          "part_of_speech": "noun",
+          "example": "Can we see the menu?",
+          "example_translation": "Cho chúng tôi xem thực đơn được không?",
+          "usage_pattern": "look at / read the menu"
+        }
+      ]
+    },
+    {
+      "id": "a1-around-town",
+      "level": "A1",
+      "title": "Dạo quanh phố",
+      "description": "Tập nói về nơi chốn, phương tiện và hướng đi.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "street",
+          "meaning_vi": "đường phố",
+          "part_of_speech": "noun",
+          "example": "Our street is quiet at night.",
+          "example_translation": "Phố chúng tôi yên tĩnh vào ban đêm.",
+          "usage_pattern": "a quiet / busy street"
+        },
+        {
+          "word": "park",
+          "meaning_vi": "công viên",
+          "part_of_speech": "noun",
+          "example": "The park is near our house.",
+          "example_translation": "Công viên ở gần nhà chúng tôi.",
+          "usage_pattern": "in the park"
+        },
+        {
+          "word": "shop",
+          "meaning_vi": "cửa hàng",
+          "part_of_speech": "noun",
+          "example": "This shop sells fresh flowers.",
+          "example_translation": "Cửa hàng này bán hoa tươi.",
+          "usage_pattern": "a flower / book shop"
+        },
+        {
+          "word": "school",
+          "meaning_vi": "trường học",
+          "part_of_speech": "noun",
+          "example": "My school has a big garden.",
+          "example_translation": "Trường tôi có một khu vườn rộng.",
+          "usage_pattern": "go to school"
+        },
+        {
+          "word": "station",
+          "meaning_vi": "nhà ga",
+          "part_of_speech": "noun",
+          "example": "Meet me outside the station.",
+          "example_translation": "Gặp tôi bên ngoài nhà ga nhé.",
+          "usage_pattern": "at / outside the station"
+        },
+        {
+          "word": "bus",
+          "meaning_vi": "xe buýt",
+          "part_of_speech": "noun",
+          "example": "I take the bus to work.",
+          "example_translation": "Tôi đi làm bằng xe buýt.",
+          "usage_pattern": "take / catch the bus"
+        },
+        {
+          "word": "train",
+          "meaning_vi": "tàu hỏa",
+          "part_of_speech": "noun",
+          "example": "The train leaves at nine.",
+          "example_translation": "Tàu khởi hành lúc chín giờ.",
+          "usage_pattern": "take / catch a train"
+        },
+        {
+          "word": "ticket",
+          "meaning_vi": "vé",
+          "part_of_speech": "noun",
+          "example": "Keep your ticket in your bag.",
+          "example_translation": "Bạn cất vé trong túi nhé.",
+          "usage_pattern": "buy / book a ticket"
+        },
+        {
+          "word": "walk",
+          "meaning_vi": "đi bộ",
+          "part_of_speech": "verb",
+          "example": "We walk to the library.",
+          "example_translation": "Chúng tôi đi bộ đến thư viện.",
+          "usage_pattern": "walk to + place"
+        },
+        {
+          "word": "turn",
+          "meaning_vi": "rẽ; xoay",
+          "part_of_speech": "verb",
+          "example": "Turn at the next street.",
+          "example_translation": "Rẽ ở đường tiếp theo nhé.",
+          "usage_pattern": "turn left / right"
+        },
+        {
+          "word": "left",
+          "meaning_vi": "sang trái",
+          "part_of_speech": "adverb",
+          "example": "Turn left after the bridge.",
+          "example_translation": "Qua cầu rồi rẽ trái nhé.",
+          "usage_pattern": "turn / look left"
+        },
+        {
+          "word": "right",
+          "meaning_vi": "sang phải",
+          "part_of_speech": "adverb",
+          "example": "Look right before you cross.",
+          "example_translation": "Bạn nhìn sang phải trước khi qua đường nhé.",
+          "usage_pattern": "turn / look right"
+        }
+      ]
+    },
+    {
+      "id": "a1-people-classroom",
+      "level": "A1",
+      "title": "Người quen và lớp học",
+      "description": "Những từ đầu tiên để trò chuyện và học cùng nhau.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "teacher",
+          "meaning_vi": "giáo viên",
+          "part_of_speech": "noun",
+          "example": "Our teacher speaks slowly.",
+          "example_translation": "Giáo viên của chúng tôi nói chậm.",
+          "usage_pattern": "an English / music teacher"
+        },
+        {
+          "word": "student",
+          "meaning_vi": "học sinh; sinh viên",
+          "part_of_speech": "noun",
+          "example": "Every student has a notebook.",
+          "example_translation": "Mỗi học sinh đều có một quyển vở.",
+          "usage_pattern": "a school / university student"
+        },
+        {
+          "word": "friend",
+          "meaning_vi": "bạn bè",
+          "part_of_speech": "noun",
+          "example": "My friend sits next to me.",
+          "example_translation": "Bạn tôi ngồi cạnh tôi.",
+          "usage_pattern": "a close / good friend"
+        },
+        {
+          "word": "family",
+          "meaning_vi": "gia đình",
+          "part_of_speech": "noun",
+          "example": "My family eats dinner together.",
+          "example_translation": "Gia đình tôi ăn tối cùng nhau.",
+          "usage_pattern": "spend time with family"
+        },
+        {
+          "word": "name",
+          "meaning_vi": "tên",
+          "part_of_speech": "noun",
+          "example": "Please write your name here.",
+          "example_translation": "Bạn viết tên vào đây nhé.",
+          "usage_pattern": "first / full name"
+        },
+        {
+          "word": "question",
+          "meaning_vi": "câu hỏi",
+          "part_of_speech": "noun",
+          "example": "I have a question about this word.",
+          "example_translation": "Tôi có câu hỏi về từ này.",
+          "usage_pattern": "ask / answer a question"
+        },
+        {
+          "word": "answer",
+          "meaning_vi": "câu trả lời",
+          "part_of_speech": "noun",
+          "example": "Write your answer in the box.",
+          "example_translation": "Bạn viết câu trả lời vào ô nhé.",
+          "usage_pattern": "the answer to + question"
+        },
+        {
+          "word": "read",
+          "meaning_vi": "đọc",
+          "part_of_speech": "verb",
+          "example": "I read one page every night.",
+          "example_translation": "Mỗi tối tôi đọc một trang.",
+          "usage_pattern": "read a book / page"
+        },
+        {
+          "word": "write",
+          "meaning_vi": "viết",
+          "part_of_speech": "verb",
+          "example": "We write short stories in class.",
+          "example_translation": "Chúng tôi viết truyện ngắn trong giờ học.",
+          "usage_pattern": "write a story / message"
+        },
+        {
+          "word": "listen",
+          "meaning_vi": "nghe",
+          "part_of_speech": "verb",
+          "example": "Please listen to your partner.",
+          "example_translation": "Bạn lắng nghe bạn cùng nhóm nhé.",
+          "usage_pattern": "listen to + person / thing"
+        },
+        {
+          "word": "repeat",
+          "meaning_vi": "nhắc lại; lặp lại",
+          "part_of_speech": "verb",
+          "example": "Can you repeat that word?",
+          "example_translation": "Bạn nhắc lại từ đó được không?",
+          "usage_pattern": "repeat a word / sentence"
+        },
+        {
+          "word": "help",
+          "meaning_vi": "giúp đỡ",
+          "part_of_speech": "verb",
+          "example": "I help my brother with homework.",
+          "example_translation": "Tôi giúp em trai làm bài tập.",
+          "usage_pattern": "help someone with + noun"
+        }
+      ]
+    },
+    {
+      "id": "a2-travel-plans",
+      "level": "A2",
+      "title": "Chuẩn bị một chuyến đi",
+      "description": "Đặt chỗ, sắp hành lý và xử lý những thay đổi trên đường.",
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "book",
+          "meaning_vi": "đặt trước",
+          "part_of_speech": "verb",
+          "example": "We book our tickets online.",
+          "example_translation": "Chúng tôi đặt vé qua mạng.",
+          "usage_pattern": "book a room / ticket"
+        },
+        {
+          "word": "reservation",
+          "meaning_vi": "việc đặt chỗ; chỗ đã đặt",
+          "part_of_speech": "noun",
+          "example": "I have a reservation for two nights.",
+          "example_translation": "Tôi đã đặt phòng cho hai đêm.",
+          "usage_pattern": "make / confirm a reservation"
+        },
+        {
+          "word": "luggage",
+          "meaning_vi": "hành lý",
+          "part_of_speech": "noun",
+          "example": "Please keep your luggage with you.",
+          "example_translation": "Bạn giữ hành lý bên mình nhé.",
+          "usage_pattern": "a piece of luggage; không dùng a luggage"
+        },
+        {
+          "word": "passport",
+          "meaning_vi": "hộ chiếu",
+          "part_of_speech": "noun",
+          "example": "My passport is in this pocket.",
+          "example_translation": "Hộ chiếu của tôi ở trong túi này.",
+          "usage_pattern": "show / renew a passport"
+        },
+        {
+          "word": "platform",
+          "meaning_vi": "sân ga",
+          "part_of_speech": "noun",
+          "example": "Our train leaves from platform six.",
+          "example_translation": "Tàu của chúng ta khởi hành ở sân ga số sáu.",
+          "usage_pattern": "on / from platform + number"
+        },
+        {
+          "word": "return",
+          "meaning_vi": "khứ hồi",
+          "part_of_speech": "adjective",
+          "example": "I'd like a return ticket to Bristol.",
+          "example_translation": "Tôi muốn mua vé khứ hồi đi Bristol.",
+          "usage_pattern": "a return ticket (Anh-Anh)"
+        },
+        {
+          "word": "delay",
+          "meaning_vi": "sự chậm trễ",
+          "part_of_speech": "noun",
+          "example": "There is a short delay today.",
+          "example_translation": "Hôm nay chuyến đi bị chậm một chút.",
+          "usage_pattern": "a delay of + time"
+        },
+        {
+          "word": "journey",
+          "meaning_vi": "chuyến đi; hành trình",
+          "part_of_speech": "noun",
+          "example": "The journey takes about two hours.",
+          "example_translation": "Chuyến đi mất khoảng hai giờ.",
+          "usage_pattern": "a long / short journey"
+        },
+        {
+          "word": "abroad",
+          "meaning_vi": "ở nước ngoài; ra nước ngoài",
+          "part_of_speech": "adverb",
+          "example": "She wants to study abroad.",
+          "example_translation": "Cô ấy muốn đi du học.",
+          "usage_pattern": "study / work / travel abroad"
+        },
+        {
+          "word": "pack",
+          "meaning_vi": "xếp đồ vào hành lý",
+          "part_of_speech": "verb",
+          "example": "I pack my bag the night before.",
+          "example_translation": "Tôi xếp đồ vào túi từ tối hôm trước.",
+          "usage_pattern": "pack a bag / suitcase"
+        },
+        {
+          "word": "miss",
+          "meaning_vi": "lỡ; không kịp bắt",
+          "part_of_speech": "verb",
+          "example": "Leave now or you'll miss the bus.",
+          "example_translation": "Đi ngay đi, nếu không bạn sẽ lỡ xe buýt.",
+          "usage_pattern": "miss a bus / train / flight"
+        },
+        {
+          "word": "check in",
+          "meaning_vi": "làm thủ tục nhận phòng hoặc lên chuyến bay",
+          "part_of_speech": "phrase",
+          "example": "We can check in after three.",
+          "example_translation": "Chúng ta có thể nhận phòng sau ba giờ.",
+          "usage_pattern": "check in at + hotel / airport"
+        }
+      ]
+    },
+    {
+      "id": "a2-healthy-habits",
+      "level": "A2",
+      "title": "Chăm sóc bản thân",
+      "description": "Nói về thói quen khỏe mạnh và những lúc không được khỏe.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "exercise",
+          "meaning_vi": "việc tập thể dục",
+          "part_of_speech": "noun",
+          "example": "Walking is my favourite form of exercise.",
+          "example_translation": "Đi bộ là cách tập thể dục tôi thích nhất.",
+          "usage_pattern": "do exercise / get some exercise"
+        },
+        {
+          "word": "sleep",
+          "meaning_vi": "giấc ngủ; việc ngủ",
+          "part_of_speech": "noun",
+          "example": "I need more sleep this week.",
+          "example_translation": "Tuần này tôi cần ngủ nhiều hơn.",
+          "usage_pattern": "get enough sleep"
+        },
+        {
+          "word": "rest",
+          "meaning_vi": "nghỉ ngơi",
+          "part_of_speech": "verb",
+          "example": "Please rest after your long trip.",
+          "example_translation": "Bạn nghỉ ngơi sau chuyến đi dài nhé.",
+          "usage_pattern": "rest for + time"
+        },
+        {
+          "word": "healthy",
+          "meaning_vi": "khỏe mạnh; tốt cho sức khỏe",
+          "part_of_speech": "adjective",
+          "example": "We cook a healthy lunch together.",
+          "example_translation": "Chúng tôi cùng nấu một bữa trưa tốt cho sức khỏe.",
+          "usage_pattern": "a healthy meal / lifestyle"
+        },
+        {
+          "word": "headache",
+          "meaning_vi": "cơn đau đầu",
+          "part_of_speech": "noun",
+          "example": "I have a headache this morning.",
+          "example_translation": "Sáng nay tôi bị đau đầu.",
+          "usage_pattern": "have a headache"
+        },
+        {
+          "word": "cough",
+          "meaning_vi": "cơn ho; tình trạng ho",
+          "part_of_speech": "noun",
+          "example": "His cough kept him awake.",
+          "example_translation": "Cơn ho khiến anh ấy không ngủ được.",
+          "usage_pattern": "have a cough"
+        },
+        {
+          "word": "appointment",
+          "meaning_vi": "cuộc hẹn đã đặt trước",
+          "part_of_speech": "noun",
+          "example": "My appointment is on Monday morning.",
+          "example_translation": "Lịch hẹn của tôi là sáng thứ Hai.",
+          "usage_pattern": "make / keep an appointment"
+        },
+        {
+          "word": "medicine",
+          "meaning_vi": "thuốc",
+          "part_of_speech": "noun",
+          "example": "Keep this medicine in a cool place.",
+          "example_translation": "Bảo quản thuốc này ở nơi thoáng mát.",
+          "usage_pattern": "take / prescribe medicine"
+        },
+        {
+          "word": "improve",
+          "meaning_vi": "cải thiện; tiến bộ",
+          "part_of_speech": "verb",
+          "example": "I want to improve my sleep habits.",
+          "example_translation": "Tôi muốn cải thiện thói quen ngủ của mình.",
+          "usage_pattern": "improve + skill / situation"
+        },
+        {
+          "word": "regular",
+          "meaning_vi": "đều đặn; thường xuyên",
+          "part_of_speech": "adjective",
+          "example": "Regular breaks help me stay focused.",
+          "example_translation": "Nghỉ giải lao đều đặn giúp tôi tập trung.",
+          "usage_pattern": "regular exercise / breaks"
+        },
+        {
+          "word": "avoid",
+          "meaning_vi": "tránh",
+          "part_of_speech": "verb",
+          "example": "I avoid drinking coffee late at night.",
+          "example_translation": "Tôi tránh uống cà phê vào đêm muộn.",
+          "usage_pattern": "avoid + noun / V-ing"
+        },
+        {
+          "word": "feel better",
+          "meaning_vi": "cảm thấy khỏe hơn; dễ chịu hơn",
+          "part_of_speech": "phrase",
+          "example": "I hope you feel better soon.",
+          "example_translation": "Mong bạn sớm khỏe lại.",
+          "usage_pattern": "feel better after + noun / V-ing"
+        }
+      ]
+    },
+    {
+      "id": "a2-workday",
+      "level": "A2",
+      "title": "Một ngày đi làm",
+      "description": "Làm quen với người, nơi chốn và hoạt động ở chỗ làm.",
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "colleague",
+          "meaning_vi": "đồng nghiệp",
+          "part_of_speech": "noun",
+          "example": "My colleague helps me learn the system.",
+          "example_translation": "Đồng nghiệp giúp tôi làm quen với hệ thống.",
+          "usage_pattern": "a new / former colleague"
+        },
+        {
+          "word": "manager",
+          "meaning_vi": "người quản lý",
+          "part_of_speech": "noun",
+          "example": "Ask the manager about your schedule.",
+          "example_translation": "Bạn hỏi người quản lý về lịch làm nhé.",
+          "usage_pattern": "a store / project manager"
+        },
+        {
+          "word": "customer",
+          "meaning_vi": "khách hàng",
+          "part_of_speech": "noun",
+          "example": "The customer wants a larger bag.",
+          "example_translation": "Khách hàng muốn một chiếc túi lớn hơn.",
+          "usage_pattern": "serve / help a customer"
+        },
+        {
+          "word": "meeting",
+          "meaning_vi": "cuộc họp",
+          "part_of_speech": "noun",
+          "example": "Our meeting starts after lunch.",
+          "example_translation": "Cuộc họp của chúng tôi bắt đầu sau bữa trưa.",
+          "usage_pattern": "have / attend a meeting"
+        },
+        {
+          "word": "task",
+          "meaning_vi": "công việc cần làm",
+          "part_of_speech": "noun",
+          "example": "This task takes about ten minutes.",
+          "example_translation": "Việc này mất khoảng mười phút.",
+          "usage_pattern": "complete / finish a task"
+        },
+        {
+          "word": "office",
+          "meaning_vi": "văn phòng",
+          "part_of_speech": "noun",
+          "example": "The office is above the café.",
+          "example_translation": "Văn phòng ở phía trên quán cà phê.",
+          "usage_pattern": "at / in the office"
+        },
+        {
+          "word": "salary",
+          "meaning_vi": "lương cố định",
+          "part_of_speech": "noun",
+          "example": "Her salary is paid every month.",
+          "example_translation": "Lương của cô ấy được trả hằng tháng.",
+          "usage_pattern": "an annual / monthly salary"
+        },
+        {
+          "word": "break",
+          "meaning_vi": "giờ nghỉ; khoảng nghỉ",
+          "part_of_speech": "noun",
+          "example": "Let's take a short break.",
+          "example_translation": "Chúng ta nghỉ một lát nhé.",
+          "usage_pattern": "take / have a break"
+        },
+        {
+          "word": "uniform",
+          "meaning_vi": "đồng phục",
+          "part_of_speech": "noun",
+          "example": "Our uniform includes a green shirt.",
+          "example_translation": "Đồng phục của chúng tôi có áo sơ mi xanh lá.",
+          "usage_pattern": "wear a uniform"
+        },
+        {
+          "word": "shift",
+          "meaning_vi": "ca làm việc",
+          "part_of_speech": "noun",
+          "example": "My shift ends at six.",
+          "example_translation": "Ca của tôi kết thúc lúc sáu giờ.",
+          "usage_pattern": "work a day / night shift"
+        },
+        {
+          "word": "busy",
+          "meaning_vi": "bận rộn",
+          "part_of_speech": "adjective",
+          "example": "The café is busy on Sundays.",
+          "example_translation": "Quán cà phê rất đông khách vào Chủ nhật.",
+          "usage_pattern": "busy with + noun"
+        },
+        {
+          "word": "finish",
+          "meaning_vi": "hoàn thành; kết thúc",
+          "part_of_speech": "verb",
+          "example": "I finish work at five today.",
+          "example_translation": "Hôm nay tôi tan làm lúc năm giờ.",
+          "usage_pattern": "finish work / finish V-ing"
+        }
+      ]
+    },
+    {
+      "id": "a2-money-shopping",
+      "level": "A2",
+      "title": "Mua sắm vừa túi tiền",
+      "description": "Hỏi giá, thanh toán và nói về việc dùng tiền.",
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "receipt",
+          "meaning_vi": "biên lai; hóa đơn thanh toán",
+          "part_of_speech": "noun",
+          "example": "Keep the receipt for your new shoes.",
+          "example_translation": "Bạn giữ hóa đơn mua đôi giày mới nhé.",
+          "usage_pattern": "keep / ask for a receipt"
+        },
+        {
+          "word": "change",
+          "meaning_vi": "tiền thừa; tiền lẻ",
+          "part_of_speech": "noun",
+          "example": "Here is your change.",
+          "example_translation": "Đây là tiền thừa của bạn.",
+          "usage_pattern": "give someone their change"
+        },
+        {
+          "word": "cost",
+          "meaning_vi": "có giá; tốn",
+          "part_of_speech": "verb",
+          "example": "How much does delivery cost?",
+          "example_translation": "Phí giao hàng là bao nhiêu?",
+          "usage_pattern": "cost + amount"
+        },
+        {
+          "word": "price",
+          "meaning_vi": "giá bán",
+          "part_of_speech": "noun",
+          "example": "The price includes a small bag.",
+          "example_translation": "Giá này đã bao gồm một chiếc túi nhỏ.",
+          "usage_pattern": "the price of + noun"
+        },
+        {
+          "word": "discount",
+          "meaning_vi": "khoản giảm giá",
+          "part_of_speech": "noun",
+          "example": "Students get a discount here.",
+          "example_translation": "Sinh viên được giảm giá ở đây.",
+          "usage_pattern": "get / offer a discount"
+        },
+        {
+          "word": "expensive",
+          "meaning_vi": "đắt",
+          "part_of_speech": "adjective",
+          "example": "That coat is too expensive for me.",
+          "example_translation": "Chiếc áo khoác đó quá đắt so với khả năng của tôi.",
+          "usage_pattern": "too expensive / an expensive item"
+        },
+        {
+          "word": "save",
+          "meaning_vi": "tiết kiệm; để dành",
+          "part_of_speech": "verb",
+          "example": "I save money for a new bike.",
+          "example_translation": "Tôi để dành tiền mua xe đạp mới.",
+          "usage_pattern": "save money for + noun"
+        },
+        {
+          "word": "spend",
+          "meaning_vi": "tiêu tiền; dành thời gian",
+          "part_of_speech": "verb",
+          "example": "We spend less on food this month.",
+          "example_translation": "Tháng này chúng tôi chi ít tiền ăn hơn.",
+          "usage_pattern": "spend money on + noun"
+        },
+        {
+          "word": "borrow",
+          "meaning_vi": "mượn; vay",
+          "part_of_speech": "verb",
+          "example": "Can I borrow your umbrella?",
+          "example_translation": "Tôi mượn ô của bạn được không?",
+          "usage_pattern": "borrow something from someone"
+        },
+        {
+          "word": "lend",
+          "meaning_vi": "cho mượn; cho vay",
+          "part_of_speech": "verb",
+          "example": "I can lend you a pen.",
+          "example_translation": "Tôi có thể cho bạn mượn bút.",
+          "usage_pattern": "lend someone something"
+        },
+        {
+          "word": "exchange",
+          "meaning_vi": "đổi",
+          "part_of_speech": "verb",
+          "example": "Can I exchange this shirt?",
+          "example_translation": "Tôi đổi chiếc áo này được không?",
+          "usage_pattern": "exchange something for something"
+        },
+        {
+          "word": "size",
+          "meaning_vi": "cỡ; kích thước",
+          "part_of_speech": "noun",
+          "example": "Do you have this in my size?",
+          "example_translation": "Bạn có mẫu này với cỡ của tôi không?",
+          "usage_pattern": "the right size / in a size"
+        }
+      ]
+    },
+    {
+      "id": "a2-learning-plans",
+      "level": "A2",
+      "title": "Học từng chút mỗi ngày",
+      "description": "Đặt mục tiêu nhỏ và trò chuyện về việc học.",
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "practice",
+          "meaning_vi": "sự luyện tập; buổi luyện tập",
+          "part_of_speech": "noun",
+          "example": "Ten minutes of practice helps me daily.",
+          "example_translation": "Mười phút luyện tập mỗi ngày giúp ích cho tôi.",
+          "usage_pattern": "with practice / speaking practice"
+        },
+        {
+          "word": "remember",
+          "meaning_vi": "nhớ",
+          "part_of_speech": "verb",
+          "example": "I remember words better with pictures.",
+          "example_translation": "Tôi nhớ từ tốt hơn khi có hình ảnh.",
+          "usage_pattern": "remember + noun / to V"
+        },
+        {
+          "word": "forget",
+          "meaning_vi": "quên",
+          "part_of_speech": "verb",
+          "example": "Don't forget to bring your notebook.",
+          "example_translation": "Bạn đừng quên mang vở nhé.",
+          "usage_pattern": "forget to + verb"
+        },
+        {
+          "word": "explain",
+          "meaning_vi": "giải thích",
+          "part_of_speech": "verb",
+          "example": "Can you explain this sentence to me?",
+          "example_translation": "Bạn giải thích câu này cho tôi được không?",
+          "usage_pattern": "explain something to someone"
+        },
+        {
+          "word": "example",
+          "meaning_vi": "ví dụ",
+          "part_of_speech": "noun",
+          "example": "This example makes the rule clear.",
+          "example_translation": "Ví dụ này giúp quy tắc dễ hiểu hơn.",
+          "usage_pattern": "give / use an example"
+        },
+        {
+          "word": "subject",
+          "meaning_vi": "môn học; chủ đề",
+          "part_of_speech": "noun",
+          "example": "History is my favourite subject.",
+          "example_translation": "Lịch sử là môn học tôi thích nhất.",
+          "usage_pattern": "a school subject"
+        },
+        {
+          "word": "homework",
+          "meaning_vi": "bài tập về nhà",
+          "part_of_speech": "noun",
+          "example": "I do my homework after dinner.",
+          "example_translation": "Tôi làm bài tập về nhà sau bữa tối.",
+          "usage_pattern": "do homework; không dùng a homework"
+        },
+        {
+          "word": "course",
+          "meaning_vi": "khóa học",
+          "part_of_speech": "noun",
+          "example": "This course lasts six weeks.",
+          "example_translation": "Khóa học này kéo dài sáu tuần.",
+          "usage_pattern": "take / attend a course"
+        },
+        {
+          "word": "skill",
+          "meaning_vi": "kỹ năng",
+          "part_of_speech": "noun",
+          "example": "Cooking is a useful skill.",
+          "example_translation": "Nấu ăn là một kỹ năng hữu ích.",
+          "usage_pattern": "learn / develop a skill"
+        },
+        {
+          "word": "progress",
+          "meaning_vi": "sự tiến bộ",
+          "part_of_speech": "noun",
+          "example": "You are making good progress.",
+          "example_translation": "Bạn đang tiến bộ tốt đấy.",
+          "usage_pattern": "make progress; không dùng a progress"
+        },
+        {
+          "word": "prepare",
+          "meaning_vi": "chuẩn bị",
+          "part_of_speech": "verb",
+          "example": "We prepare for the test together.",
+          "example_translation": "Chúng tôi cùng chuẩn bị cho bài kiểm tra.",
+          "usage_pattern": "prepare for + noun"
+        },
+        {
+          "word": "plan",
+          "meaning_vi": "kế hoạch",
+          "part_of_speech": "noun",
+          "example": "My study plan includes time to rest.",
+          "example_translation": "Kế hoạch học của tôi có cả thời gian nghỉ.",
+          "usage_pattern": "make / follow a plan"
+        }
+      ]
+    },
+    {
+      "id": "b1-teamwork",
+      "level": "B1",
+      "title": "Phối hợp trong công việc",
+      "description": "Nhận việc, hẹn thời gian và trao đổi với đồng đội.",
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000",
+        "https://dictionary.cambridge.org/dictionary/english/responsibility?topic=duty-obligation-and-responsibility"
+      ],
+      "words": [
+        {
+          "word": "responsibility",
+          "meaning_vi": "trách nhiệm",
+          "part_of_speech": "noun",
+          "example": "I take responsibility for checking the orders.",
+          "example_translation": "Tôi chịu trách nhiệm kiểm tra các đơn hàng.",
+          "usage_pattern": "take responsibility for + noun / V-ing"
+        },
+        {
+          "word": "deadline",
+          "meaning_vi": "hạn chót",
+          "part_of_speech": "noun",
+          "example": "We can meet the deadline with your help.",
+          "example_translation": "Có bạn hỗ trợ, chúng tôi có thể hoàn thành đúng hạn.",
+          "usage_pattern": "meet / miss / extend a deadline"
+        },
+        {
+          "word": "attend",
+          "meaning_vi": "tham dự",
+          "part_of_speech": "verb",
+          "example": "All new staff attend the safety workshop.",
+          "example_translation": "Tất cả nhân viên mới đều tham dự buổi tập huấn an toàn.",
+          "usage_pattern": "attend a meeting / course; không thêm to"
+        },
+        {
+          "word": "organize",
+          "meaning_vi": "sắp xếp; tổ chức",
+          "part_of_speech": "verb",
+          "example": "Can you organize the files by date?",
+          "example_translation": "Bạn sắp xếp hồ sơ theo ngày được không?",
+          "usage_pattern": "organize files / an event"
+        },
+        {
+          "word": "schedule",
+          "meaning_vi": "lịch trình; lịch làm việc",
+          "part_of_speech": "noun",
+          "example": "The delivery schedule changed this morning.",
+          "example_translation": "Sáng nay lịch giao hàng đã thay đổi.",
+          "usage_pattern": "check / change a schedule"
+        },
+        {
+          "word": "request",
+          "meaning_vi": "yêu cầu; đề nghị",
+          "part_of_speech": "noun",
+          "example": "Please send your request by email.",
+          "example_translation": "Bạn gửi yêu cầu qua email nhé.",
+          "usage_pattern": "make / submit a request"
+        },
+        {
+          "word": "suggest",
+          "meaning_vi": "đề xuất; gợi ý",
+          "part_of_speech": "verb",
+          "example": "I suggest starting with the urgent orders.",
+          "example_translation": "Tôi đề xuất xử lý các đơn hàng gấp trước.",
+          "usage_pattern": "suggest + V-ing / that-clause"
+        },
+        {
+          "word": "agree",
+          "meaning_vi": "đồng ý; thống nhất",
+          "part_of_speech": "verb",
+          "example": "We agree on the main goals.",
+          "example_translation": "Chúng tôi thống nhất về các mục tiêu chính.",
+          "usage_pattern": "agree with someone / on something"
+        },
+        {
+          "word": "available",
+          "meaning_vi": "có sẵn; có thời gian",
+          "part_of_speech": "adjective",
+          "example": "Are you available for a call tomorrow?",
+          "example_translation": "Ngày mai bạn có thời gian trao đổi qua điện thoại không?",
+          "usage_pattern": "available for + noun"
+        },
+        {
+          "word": "support",
+          "meaning_vi": "hỗ trợ",
+          "part_of_speech": "verb",
+          "example": "Our team will support you during training.",
+          "example_translation": "Nhóm chúng tôi sẽ hỗ trợ bạn trong thời gian đào tạo.",
+          "usage_pattern": "support someone / a project"
+        },
+        {
+          "word": "solve",
+          "meaning_vi": "giải quyết",
+          "part_of_speech": "verb",
+          "example": "Let's solve this problem before the meeting.",
+          "example_translation": "Chúng ta giải quyết vấn đề này trước cuộc họp nhé.",
+          "usage_pattern": "solve a problem / puzzle"
+        },
+        {
+          "word": "update",
+          "meaning_vi": "cập nhật",
+          "part_of_speech": "verb",
+          "example": "Please update the shared calendar.",
+          "example_translation": "Bạn cập nhật lịch chung nhé.",
+          "usage_pattern": "update a file / someone on something"
+        }
+      ]
+    },
+    {
+      "id": "b1-greener-living",
+      "level": "B1",
+      "title": "Sống xanh từ việc nhỏ",
+      "description": "Nói về tài nguyên, rác thải và lựa chọn hằng ngày.",
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "recycle",
+          "meaning_vi": "tái chế",
+          "part_of_speech": "verb",
+          "example": "We recycle glass at the local collection point.",
+          "example_translation": "Chúng tôi mang thủy tinh đến điểm thu gom gần nhà để tái chế.",
+          "usage_pattern": "recycle glass / paper / plastic"
+        },
+        {
+          "word": "waste",
+          "meaning_vi": "chất thải; rác thải",
+          "part_of_speech": "noun",
+          "example": "The café measures its food waste weekly.",
+          "example_translation": "Quán cà phê đo lượng thức ăn bỏ đi mỗi tuần.",
+          "usage_pattern": "food / household waste"
+        },
+        {
+          "word": "pollution",
+          "meaning_vi": "sự ô nhiễm",
+          "part_of_speech": "noun",
+          "example": "Air pollution is worse near the main road.",
+          "example_translation": "Ô nhiễm không khí nghiêm trọng hơn gần đường lớn.",
+          "usage_pattern": "air / water / noise pollution"
+        },
+        {
+          "word": "protect",
+          "meaning_vi": "bảo vệ",
+          "part_of_speech": "verb",
+          "example": "These trees protect the soil from heavy rain.",
+          "example_translation": "Những cây này bảo vệ đất trước mưa lớn.",
+          "usage_pattern": "protect something from / against something"
+        },
+        {
+          "word": "energy",
+          "meaning_vi": "năng lượng",
+          "part_of_speech": "noun",
+          "example": "The school uses less energy in summer.",
+          "example_translation": "Trường sử dụng ít năng lượng hơn vào mùa hè.",
+          "usage_pattern": "save / use / generate energy"
+        },
+        {
+          "word": "reduce",
+          "meaning_vi": "giảm",
+          "part_of_speech": "verb",
+          "example": "We reduce packaging by using refill bottles.",
+          "example_translation": "Chúng tôi giảm bao bì bằng cách dùng chai nạp lại.",
+          "usage_pattern": "reduce costs / waste / emissions"
+        },
+        {
+          "word": "reuse",
+          "meaning_vi": "tái sử dụng",
+          "part_of_speech": "verb",
+          "example": "You can reuse this jar for rice.",
+          "example_translation": "Bạn có thể dùng lại chiếc lọ này để đựng gạo.",
+          "usage_pattern": "reuse a container / material"
+        },
+        {
+          "word": "resource",
+          "meaning_vi": "tài nguyên; nguồn lực",
+          "part_of_speech": "noun",
+          "example": "Clean water is a valuable resource.",
+          "example_translation": "Nước sạch là một tài nguyên quý giá.",
+          "usage_pattern": "a natural / valuable resource"
+        },
+        {
+          "word": "environment",
+          "meaning_vi": "môi trường",
+          "part_of_speech": "noun",
+          "example": "The project studies changes in the coastal environment.",
+          "example_translation": "Dự án nghiên cứu những thay đổi của môi trường ven biển.",
+          "usage_pattern": "protect / damage the environment"
+        },
+        {
+          "word": "local",
+          "meaning_vi": "thuộc địa phương; ở gần",
+          "part_of_speech": "adjective",
+          "example": "We buy vegetables from local farms.",
+          "example_translation": "Chúng tôi mua rau từ các trang trại địa phương.",
+          "usage_pattern": "local shops / residents / produce"
+        },
+        {
+          "word": "public transport",
+          "meaning_vi": "phương tiện giao thông công cộng",
+          "part_of_speech": "phrase",
+          "example": "Better public transport could reduce car journeys.",
+          "example_translation": "Giao thông công cộng tốt hơn có thể giảm số chuyến đi bằng ô tô.",
+          "usage_pattern": "use / improve public transport"
+        },
+        {
+          "word": "wildlife",
+          "meaning_vi": "động vật và thực vật hoang dã",
+          "part_of_speech": "noun",
+          "example": "The wetland provides a home for wildlife.",
+          "example_translation": "Vùng đất ngập nước là nơi sinh sống của nhiều loài hoang dã.",
+          "usage_pattern": "protect / observe wildlife"
+        }
+      ]
+    },
+    {
+      "id": "b1-sharing-opinions",
+      "level": "B1",
+      "title": "Nói điều mình nghĩ",
+      "description": "Giải thích lựa chọn và nhìn vấn đề từ hai phía.",
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "opinion",
+          "meaning_vi": "ý kiến; quan điểm",
+          "part_of_speech": "noun",
+          "example": "In my opinion, the smaller venue works better.",
+          "example_translation": "Theo tôi, địa điểm nhỏ hơn phù hợp hơn.",
+          "usage_pattern": "in my opinion / express an opinion"
+        },
+        {
+          "word": "reason",
+          "meaning_vi": "lý do",
+          "part_of_speech": "noun",
+          "example": "What is the main reason for your choice?",
+          "example_translation": "Lý do chính khiến bạn chọn như vậy là gì?",
+          "usage_pattern": "the reason for + noun / V-ing"
+        },
+        {
+          "word": "compare",
+          "meaning_vi": "so sánh",
+          "part_of_speech": "verb",
+          "example": "We compare prices before choosing a supplier.",
+          "example_translation": "Chúng tôi so sánh giá trước khi chọn nhà cung cấp.",
+          "usage_pattern": "compare A with / to B"
+        },
+        {
+          "word": "prefer",
+          "meaning_vi": "thích hơn",
+          "part_of_speech": "verb",
+          "example": "I prefer quiet places to busy cafés.",
+          "example_translation": "Tôi thích nơi yên tĩnh hơn quán cà phê đông đúc.",
+          "usage_pattern": "prefer A to B / prefer to V"
+        },
+        {
+          "word": "advantage",
+          "meaning_vi": "ưu điểm; lợi thế",
+          "part_of_speech": "noun",
+          "example": "One advantage of cycling is the low cost.",
+          "example_translation": "Một ưu điểm của việc đi xe đạp là chi phí thấp.",
+          "usage_pattern": "an advantage of + noun / V-ing"
+        },
+        {
+          "word": "disadvantage",
+          "meaning_vi": "nhược điểm; bất lợi",
+          "part_of_speech": "noun",
+          "example": "The main disadvantage is the long journey.",
+          "example_translation": "Nhược điểm chính là quãng đường đi dài.",
+          "usage_pattern": "a disadvantage of + noun / V-ing"
+        },
+        {
+          "word": "consider",
+          "meaning_vi": "cân nhắc; xem xét",
+          "part_of_speech": "verb",
+          "example": "We should consider renting a larger room.",
+          "example_translation": "Chúng ta nên cân nhắc thuê phòng lớn hơn.",
+          "usage_pattern": "consider + noun / V-ing"
+        },
+        {
+          "word": "decision",
+          "meaning_vi": "quyết định",
+          "part_of_speech": "noun",
+          "example": "We made the decision after hearing everyone.",
+          "example_translation": "Chúng tôi đưa ra quyết định sau khi nghe ý kiến của mọi người.",
+          "usage_pattern": "make / reach a decision"
+        },
+        {
+          "word": "choice",
+          "meaning_vi": "lựa chọn",
+          "part_of_speech": "noun",
+          "example": "Working from home is not always a choice.",
+          "example_translation": "Không phải lúc nào người ta cũng được chọn làm việc ở nhà.",
+          "usage_pattern": "have / make a choice"
+        },
+        {
+          "word": "perhaps",
+          "meaning_vi": "có lẽ",
+          "part_of_speech": "adverb",
+          "example": "Perhaps we should try a different route.",
+          "example_translation": "Có lẽ chúng ta nên thử một tuyến đường khác.",
+          "usage_pattern": "perhaps + clause"
+        },
+        {
+          "word": "although",
+          "meaning_vi": "mặc dù",
+          "part_of_speech": "conjunction",
+          "example": "Although it rained, the event went ahead.",
+          "example_translation": "Mặc dù trời mưa, sự kiện vẫn diễn ra.",
+          "usage_pattern": "although + clause"
+        },
+        {
+          "word": "however",
+          "meaning_vi": "tuy nhiên",
+          "part_of_speech": "adverb",
+          "example": "The room is small; however, it gets plenty of light.",
+          "example_translation": "Phòng nhỏ, tuy nhiên lại có nhiều ánh sáng.",
+          "usage_pattern": "sentence; however, clause"
+        }
+      ]
+    },
+    {
+      "id": "b1-reading-news",
+      "level": "B1",
+      "title": "Đọc tin có suy nghĩ",
+      "description": "Tìm ý chính, kiểm tra chi tiết và nói về nguồn tin.",
+      "tags": [
+        "general",
+        "ielts"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "article",
+          "meaning_vi": "bài viết",
+          "part_of_speech": "noun",
+          "example": "I saved an article about city gardens.",
+          "example_translation": "Tôi lưu một bài viết về vườn trong thành phố.",
+          "usage_pattern": "an article about / on + topic"
+        },
+        {
+          "word": "headline",
+          "meaning_vi": "tiêu đề bài báo",
+          "part_of_speech": "noun",
+          "example": "The headline does not mention the study's limits.",
+          "example_translation": "Tiêu đề bài báo không nhắc đến những hạn chế của nghiên cứu.",
+          "usage_pattern": "read / write a headline"
+        },
+        {
+          "word": "report",
+          "meaning_vi": "báo cáo; bản tin",
+          "part_of_speech": "noun",
+          "example": "The report describes changes in travel habits.",
+          "example_translation": "Báo cáo mô tả những thay đổi trong thói quen đi lại.",
+          "usage_pattern": "a report on + topic"
+        },
+        {
+          "word": "source",
+          "meaning_vi": "nguồn thông tin",
+          "part_of_speech": "noun",
+          "example": "The article names the source of each figure.",
+          "example_translation": "Bài viết nêu rõ nguồn của từng số liệu.",
+          "usage_pattern": "a source of information"
+        },
+        {
+          "word": "fact",
+          "meaning_vi": "sự thật; thông tin đã được xác định",
+          "part_of_speech": "noun",
+          "example": "Check this fact before you share the story.",
+          "example_translation": "Bạn kiểm tra thông tin này trước khi chia sẻ bài viết nhé.",
+          "usage_pattern": "check / establish a fact"
+        },
+        {
+          "word": "evidence",
+          "meaning_vi": "bằng chứng",
+          "part_of_speech": "noun",
+          "example": "We need more evidence to support that claim.",
+          "example_translation": "Chúng ta cần thêm bằng chứng để củng cố nhận định đó.",
+          "usage_pattern": "evidence for / of; không dùng an evidence"
+        },
+        {
+          "word": "detail",
+          "meaning_vi": "chi tiết",
+          "part_of_speech": "noun",
+          "example": "One small detail changes the meaning.",
+          "example_translation": "Một chi tiết nhỏ làm thay đổi ý nghĩa.",
+          "usage_pattern": "an important / small detail"
+        },
+        {
+          "word": "summary",
+          "meaning_vi": "bản tóm tắt",
+          "part_of_speech": "noun",
+          "example": "Your summary captures the three main points.",
+          "example_translation": "Bản tóm tắt của bạn nêu được ba ý chính.",
+          "usage_pattern": "a summary of + noun"
+        },
+        {
+          "word": "describe",
+          "meaning_vi": "mô tả",
+          "part_of_speech": "verb",
+          "example": "The author uses a map to describe the route.",
+          "example_translation": "Tác giả dùng bản đồ để mô tả tuyến đường.",
+          "usage_pattern": "describe something to someone"
+        },
+        {
+          "word": "discover",
+          "meaning_vi": "phát hiện; khám phá",
+          "part_of_speech": "verb",
+          "example": "The team hopes to discover why birds leave early.",
+          "example_translation": "Nhóm nghiên cứu hy vọng tìm ra lý do chim rời đi sớm.",
+          "usage_pattern": "discover something / discover why + clause"
+        },
+        {
+          "word": "research",
+          "meaning_vi": "nghiên cứu; công trình nghiên cứu",
+          "part_of_speech": "noun",
+          "example": "Her research focuses on how children read.",
+          "example_translation": "Nghiên cứu của cô ấy tập trung vào cách trẻ em đọc.",
+          "usage_pattern": "conduct / carry out research"
+        },
+        {
+          "word": "method",
+          "meaning_vi": "phương pháp",
+          "part_of_speech": "noun",
+          "example": "We tested a simpler method of collecting data.",
+          "example_translation": "Chúng tôi thử một phương pháp thu thập dữ liệu đơn giản hơn.",
+          "usage_pattern": "a method of + V-ing"
+        }
+      ]
+    },
+    {
+      "id": "b1-relationships",
+      "level": "B1",
+      "title": "Giữ kết nối với mọi người",
+      "description": "Mời, hứa, xin lỗi và diễn đạt cảm xúc trong giao tiếp.",
+      "tags": [
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "apologize",
+          "meaning_vi": "xin lỗi",
+          "part_of_speech": "verb",
+          "example": "I want to apologize for missing your call.",
+          "example_translation": "Tôi muốn xin lỗi vì đã bỏ lỡ cuộc gọi của bạn.",
+          "usage_pattern": "apologize to someone for + noun / V-ing"
+        },
+        {
+          "word": "invite",
+          "meaning_vi": "mời",
+          "part_of_speech": "verb",
+          "example": "Let's invite our neighbours to dinner.",
+          "example_translation": "Chúng ta mời hàng xóm đến ăn tối nhé.",
+          "usage_pattern": "invite someone to + event / verb"
+        },
+        {
+          "word": "offer",
+          "meaning_vi": "đề nghị giúp; đưa ra",
+          "part_of_speech": "verb",
+          "example": "They offer to drive me home.",
+          "example_translation": "Họ ngỏ ý đưa tôi về nhà.",
+          "usage_pattern": "offer to + verb"
+        },
+        {
+          "word": "refuse",
+          "meaning_vi": "từ chối",
+          "part_of_speech": "verb",
+          "example": "It is fine to refuse an extra task politely.",
+          "example_translation": "Bạn có thể lịch sự từ chối nhận thêm việc.",
+          "usage_pattern": "refuse + noun / to V"
+        },
+        {
+          "word": "promise",
+          "meaning_vi": "hứa",
+          "part_of_speech": "verb",
+          "example": "I promise to send the photos tonight.",
+          "example_translation": "Tôi hứa sẽ gửi ảnh tối nay.",
+          "usage_pattern": "promise to + verb"
+        },
+        {
+          "word": "trust",
+          "meaning_vi": "tin tưởng",
+          "part_of_speech": "verb",
+          "example": "I trust you to keep this private.",
+          "example_translation": "Tôi tin bạn sẽ giữ kín chuyện này.",
+          "usage_pattern": "trust someone to + verb"
+        },
+        {
+          "word": "polite",
+          "meaning_vi": "lịch sự",
+          "part_of_speech": "adjective",
+          "example": "Her reply was polite but clear.",
+          "example_translation": "Câu trả lời của cô ấy lịch sự nhưng rõ ràng.",
+          "usage_pattern": "polite to someone"
+        },
+        {
+          "word": "patient",
+          "meaning_vi": "kiên nhẫn",
+          "part_of_speech": "adjective",
+          "example": "Please be patient with new learners.",
+          "example_translation": "Bạn hãy kiên nhẫn với người mới học nhé.",
+          "usage_pattern": "patient with + person"
+        },
+        {
+          "word": "upset",
+          "meaning_vi": "buồn; khó chịu",
+          "part_of_speech": "adjective",
+          "example": "He was upset about the cancelled visit.",
+          "example_translation": "Anh ấy buồn vì chuyến thăm bị hủy.",
+          "usage_pattern": "upset about / by + noun"
+        },
+        {
+          "word": "proud",
+          "meaning_vi": "tự hào",
+          "part_of_speech": "adjective",
+          "example": "We are proud of your progress.",
+          "example_translation": "Chúng tôi tự hào về sự tiến bộ của bạn.",
+          "usage_pattern": "proud of + noun / V-ing"
+        },
+        {
+          "word": "encourage",
+          "meaning_vi": "động viên; khuyến khích",
+          "part_of_speech": "verb",
+          "example": "My friends encourage me to keep writing.",
+          "example_translation": "Bạn bè động viên tôi tiếp tục viết.",
+          "usage_pattern": "encourage someone to + verb"
+        },
+        {
+          "word": "keep in touch",
+          "meaning_vi": "giữ liên lạc",
+          "part_of_speech": "phrase",
+          "example": "We keep in touch through voice messages.",
+          "example_translation": "Chúng tôi giữ liên lạc bằng tin nhắn thoại.",
+          "usage_pattern": "keep in touch with + person"
+        }
+      ]
+    },
+    {
+      "id": "b2-business-projects",
+      "level": "B2",
+      "title": "Từ ý tưởng đến dự án",
+      "description": "Từ vựng để bàn kế hoạch, chi phí và kết quả kinh doanh.",
+      "tags": [
+        "toeic",
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "proposal",
+          "meaning_vi": "đề xuất; bản đề xuất",
+          "part_of_speech": "noun",
+          "example": "The proposal includes a six-week trial.",
+          "example_translation": "Bản đề xuất có kế hoạch thử nghiệm trong sáu tuần.",
+          "usage_pattern": "submit / approve a proposal"
+        },
+        {
+          "word": "budget",
+          "meaning_vi": "ngân sách",
+          "part_of_speech": "noun",
+          "example": "We kept the renovation within budget.",
+          "example_translation": "Chúng tôi giữ chi phí cải tạo trong mức ngân sách.",
+          "usage_pattern": "within / over budget"
+        },
+        {
+          "word": "negotiate",
+          "meaning_vi": "thương lượng; đàm phán",
+          "part_of_speech": "verb",
+          "example": "We need to negotiate a later delivery date.",
+          "example_translation": "Chúng ta cần thương lượng để dời ngày giao hàng.",
+          "usage_pattern": "negotiate a contract / with someone"
+        },
+        {
+          "word": "contract",
+          "meaning_vi": "hợp đồng",
+          "part_of_speech": "noun",
+          "example": "Read the contract before you sign.",
+          "example_translation": "Bạn đọc hợp đồng trước khi ký nhé.",
+          "usage_pattern": "sign / renew a contract"
+        },
+        {
+          "word": "supplier",
+          "meaning_vi": "nhà cung cấp",
+          "part_of_speech": "noun",
+          "example": "The supplier confirmed that all parts were available.",
+          "example_translation": "Nhà cung cấp xác nhận tất cả linh kiện đều có sẵn.",
+          "usage_pattern": "a reliable / local supplier"
+        },
+        {
+          "word": "invoice",
+          "meaning_vi": "hóa đơn yêu cầu thanh toán",
+          "part_of_speech": "noun",
+          "example": "Please include the order number on the invoice.",
+          "example_translation": "Bạn ghi mã đơn hàng trên hóa đơn nhé.",
+          "usage_pattern": "issue / pay an invoice"
+        },
+        {
+          "word": "launch",
+          "meaning_vi": "ra mắt; triển khai",
+          "part_of_speech": "verb",
+          "example": "The team will launch the new service in May.",
+          "example_translation": "Nhóm sẽ ra mắt dịch vụ mới vào tháng Năm.",
+          "usage_pattern": "launch a product / service"
+        },
+        {
+          "word": "revenue",
+          "meaning_vi": "doanh thu",
+          "part_of_speech": "noun",
+          "example": "Ticket sales provide most of the museum's revenue.",
+          "example_translation": "Tiền bán vé tạo ra phần lớn doanh thu của bảo tàng.",
+          "usage_pattern": "generate / increase revenue"
+        },
+        {
+          "word": "profit",
+          "meaning_vi": "lợi nhuận",
+          "part_of_speech": "noun",
+          "example": "The shop made a small profit last quarter.",
+          "example_translation": "Cửa hàng có lãi một khoản nhỏ trong quý trước.",
+          "usage_pattern": "make / earn a profit"
+        },
+        {
+          "word": "efficient",
+          "meaning_vi": "hiệu quả, ít tốn nguồn lực",
+          "part_of_speech": "adjective",
+          "example": "A shared calendar makes scheduling more efficient.",
+          "example_translation": "Lịch dùng chung giúp việc sắp xếp thời gian hiệu quả hơn.",
+          "usage_pattern": "an efficient system / process"
+        },
+        {
+          "word": "priority",
+          "meaning_vi": "việc ưu tiên; mức độ ưu tiên",
+          "part_of_speech": "noun",
+          "example": "Repairing the roof is our first priority.",
+          "example_translation": "Sửa mái nhà là việc chúng tôi ưu tiên hàng đầu.",
+          "usage_pattern": "give priority to + noun / V-ing"
+        },
+        {
+          "word": "deliver",
+          "meaning_vi": "giao; thực hiện được",
+          "part_of_speech": "verb",
+          "example": "The new process should deliver better results.",
+          "example_translation": "Quy trình mới được kỳ vọng sẽ mang lại kết quả tốt hơn.",
+          "usage_pattern": "deliver goods / results / a service"
+        }
+      ]
+    },
+    {
+      "id": "b2-academic-analysis",
+      "level": "B2",
+      "title": "Đọc và phân tích dữ liệu",
+      "description": "Diễn đạt cách phân tích, tiêu chí và những gì dữ liệu cho thấy.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "analyze",
+          "meaning_vi": "phân tích",
+          "part_of_speech": "verb",
+          "example": "We analyze survey responses by age group.",
+          "example_translation": "Chúng tôi phân tích câu trả lời khảo sát theo nhóm tuổi.",
+          "usage_pattern": "analyze data / results"
+        },
+        {
+          "word": "assess",
+          "meaning_vi": "đánh giá",
+          "part_of_speech": "verb",
+          "example": "The team will assess the impact of the change.",
+          "example_translation": "Nhóm sẽ đánh giá tác động của thay đổi này.",
+          "usage_pattern": "assess the impact / quality of something"
+        },
+        {
+          "word": "approach",
+          "meaning_vi": "cách tiếp cận",
+          "part_of_speech": "noun",
+          "example": "This approach to teaching encourages discussion.",
+          "example_translation": "Cách dạy này khuyến khích người học thảo luận.",
+          "usage_pattern": "an approach to + noun / V-ing"
+        },
+        {
+          "word": "framework",
+          "meaning_vi": "khung định hướng; hệ thống nguyên tắc",
+          "part_of_speech": "noun",
+          "example": "The framework helps us compare different schools.",
+          "example_translation": "Khung đánh giá này giúp chúng tôi so sánh các trường.",
+          "usage_pattern": "a framework for + noun / V-ing"
+        },
+        {
+          "word": "criteria",
+          "meaning_vi": "các tiêu chí",
+          "part_of_speech": "noun",
+          "example": "The selection criteria are clearly stated.",
+          "example_translation": "Các tiêu chí lựa chọn được nêu rõ.",
+          "usage_pattern": "meet the criteria; số ít: criterion"
+        },
+        {
+          "word": "trend",
+          "meaning_vi": "xu hướng",
+          "part_of_speech": "noun",
+          "example": "The chart shows an upward trend in cycling.",
+          "example_translation": "Biểu đồ cho thấy xu hướng gia tăng việc đi xe đạp.",
+          "usage_pattern": "an upward / downward trend"
+        },
+        {
+          "word": "variable",
+          "meaning_vi": "biến số",
+          "part_of_speech": "noun",
+          "example": "We changed only one variable in each trial.",
+          "example_translation": "Mỗi lần thử, chúng tôi chỉ thay đổi một biến số.",
+          "usage_pattern": "an independent / dependent variable"
+        },
+        {
+          "word": "significant",
+          "meaning_vi": "đáng kể; có ý nghĩa",
+          "part_of_speech": "adjective",
+          "example": "The new timetable made a significant difference.",
+          "example_translation": "Thời gian biểu mới tạo ra khác biệt đáng kể.",
+          "usage_pattern": "a significant difference / increase"
+        },
+        {
+          "word": "consistent",
+          "meaning_vi": "nhất quán; phù hợp với nhau",
+          "part_of_speech": "adjective",
+          "example": "The two reports give consistent estimates.",
+          "example_translation": "Hai báo cáo đưa ra các ước tính nhất quán với nhau.",
+          "usage_pattern": "consistent with + noun"
+        },
+        {
+          "word": "contrast",
+          "meaning_vi": "sự khác biệt rõ; sự tương phản",
+          "part_of_speech": "noun",
+          "example": "There is a clear contrast between the two designs.",
+          "example_translation": "Có sự khác biệt rõ ràng giữa hai thiết kế.",
+          "usage_pattern": "a contrast between A and B"
+        },
+        {
+          "word": "indicate",
+          "meaning_vi": "cho thấy; chỉ ra",
+          "part_of_speech": "verb",
+          "example": "These figures indicate a change in demand.",
+          "example_translation": "Những con số này cho thấy nhu cầu đã thay đổi.",
+          "usage_pattern": "indicate something / indicate that + clause"
+        },
+        {
+          "word": "interpret",
+          "meaning_vi": "diễn giải; hiểu ý nghĩa",
+          "part_of_speech": "verb",
+          "example": "Readers may interpret the results differently.",
+          "example_translation": "Người đọc có thể diễn giải kết quả theo những cách khác nhau.",
+          "usage_pattern": "interpret data / findings"
+        }
+      ]
+    },
+    {
+      "id": "b2-media-literacy",
+      "level": "B2",
+      "title": "Đọc tin giữa nhiều tiếng nói",
+      "description": "Đánh giá độ tin cậy, góc nhìn và cách thông tin được trình bày.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "reliable",
+          "meaning_vi": "đáng tin cậy",
+          "part_of_speech": "adjective",
+          "example": "Use a reliable source for the population figures.",
+          "example_translation": "Bạn dùng nguồn đáng tin cậy cho số liệu dân số nhé.",
+          "usage_pattern": "a reliable source / estimate"
+        },
+        {
+          "word": "bias",
+          "meaning_vi": "thiên kiến; sự thiên lệch",
+          "part_of_speech": "noun",
+          "example": "The survey design may introduce bias.",
+          "example_translation": "Thiết kế khảo sát có thể khiến kết quả bị thiên lệch.",
+          "usage_pattern": "bias in / against / towards something"
+        },
+        {
+          "word": "claim",
+          "meaning_vi": "nhận định cần được kiểm chứng",
+          "part_of_speech": "noun",
+          "example": "The article offers no evidence for its central claim.",
+          "example_translation": "Bài viết không đưa ra bằng chứng cho nhận định chính.",
+          "usage_pattern": "support / challenge a claim"
+        },
+        {
+          "word": "perspective",
+          "meaning_vi": "góc nhìn; quan điểm",
+          "part_of_speech": "noun",
+          "example": "The interview presents a resident's perspective.",
+          "example_translation": "Cuộc phỏng vấn trình bày góc nhìn của một cư dân.",
+          "usage_pattern": "a perspective on + topic"
+        },
+        {
+          "word": "coverage",
+          "meaning_vi": "việc đưa tin; nội dung được đưa tin",
+          "part_of_speech": "noun",
+          "example": "Local coverage focused on the new bus routes.",
+          "example_translation": "Tin tức địa phương tập trung vào các tuyến xe buýt mới.",
+          "usage_pattern": "media / news coverage of something"
+        },
+        {
+          "word": "verify",
+          "meaning_vi": "xác minh",
+          "part_of_speech": "verb",
+          "example": "We verify each quotation against the recording.",
+          "example_translation": "Chúng tôi đối chiếu từng câu trích dẫn với bản ghi âm.",
+          "usage_pattern": "verify a fact / identity"
+        },
+        {
+          "word": "misleading",
+          "meaning_vi": "gây hiểu nhầm",
+          "part_of_speech": "adjective",
+          "example": "The cropped photograph gives a misleading impression.",
+          "example_translation": "Bức ảnh bị cắt tạo ra ấn tượng gây hiểu nhầm.",
+          "usage_pattern": "a misleading impression / headline"
+        },
+        {
+          "word": "privacy",
+          "meaning_vi": "sự riêng tư; quyền riêng tư",
+          "part_of_speech": "noun",
+          "example": "The app lets users control their privacy settings.",
+          "example_translation": "Ứng dụng cho phép người dùng điều chỉnh cài đặt quyền riêng tư.",
+          "usage_pattern": "protect / respect someone's privacy"
+        },
+        {
+          "word": "consent",
+          "meaning_vi": "sự đồng ý; sự cho phép",
+          "part_of_speech": "noun",
+          "example": "We obtained consent before publishing the interview.",
+          "example_translation": "Chúng tôi đã xin phép trước khi đăng bài phỏng vấn.",
+          "usage_pattern": "give / obtain / withdraw consent"
+        },
+        {
+          "word": "publish",
+          "meaning_vi": "xuất bản; công bố",
+          "part_of_speech": "verb",
+          "example": "The journal will publish the corrected table.",
+          "example_translation": "Tạp chí sẽ công bố bảng đã được sửa.",
+          "usage_pattern": "publish an article / findings"
+        },
+        {
+          "word": "exposure",
+          "meaning_vi": "sự tiếp xúc; mức độ được biết đến",
+          "part_of_speech": "noun",
+          "example": "Repeated exposure to a message can make it familiar.",
+          "example_translation": "Tiếp xúc nhiều lần với một thông điệp có thể khiến nó trở nên quen thuộc.",
+          "usage_pattern": "exposure to + noun"
+        },
+        {
+          "word": "credible",
+          "meaning_vi": "đáng tin; có cơ sở để tin",
+          "part_of_speech": "adjective",
+          "example": "The witness gave a credible account of events.",
+          "example_translation": "Nhân chứng đưa ra lời kể đáng tin về sự việc.",
+          "usage_pattern": "a credible account / explanation"
+        }
+      ]
+    },
+    {
+      "id": "b2-society-change",
+      "level": "B2",
+      "title": "Cộng đồng và cơ hội",
+      "description": "Nói về những thay đổi ảnh hưởng đến đời sống chung.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "inequality",
+          "meaning_vi": "sự bất bình đẳng",
+          "part_of_speech": "noun",
+          "example": "The study examines income inequality across regions.",
+          "example_translation": "Nghiên cứu xem xét bất bình đẳng thu nhập giữa các vùng.",
+          "usage_pattern": "income / social inequality"
+        },
+        {
+          "word": "affordable",
+          "meaning_vi": "có giá trong khả năng chi trả",
+          "part_of_speech": "adjective",
+          "example": "The town needs more affordable housing.",
+          "example_translation": "Thị trấn cần thêm nhà ở có giá vừa túi tiền.",
+          "usage_pattern": "affordable housing / transport"
+        },
+        {
+          "word": "access",
+          "meaning_vi": "khả năng hoặc quyền tiếp cận",
+          "part_of_speech": "noun",
+          "example": "Students need reliable access to the internet.",
+          "example_translation": "Sinh viên cần được truy cập internet ổn định.",
+          "usage_pattern": "access to + noun"
+        },
+        {
+          "word": "barrier",
+          "meaning_vi": "rào cản; trở ngại",
+          "part_of_speech": "noun",
+          "example": "High fees can be a barrier to further study.",
+          "example_translation": "Học phí cao có thể cản trở việc học lên.",
+          "usage_pattern": "a barrier to + noun / V-ing"
+        },
+        {
+          "word": "community",
+          "meaning_vi": "cộng đồng",
+          "part_of_speech": "noun",
+          "example": "The community helped restore the old library.",
+          "example_translation": "Cộng đồng đã cùng góp sức khôi phục thư viện cũ.",
+          "usage_pattern": "a local / rural community"
+        },
+        {
+          "word": "employment",
+          "meaning_vi": "việc làm; tình trạng có việc làm",
+          "part_of_speech": "noun",
+          "example": "The new centre provides employment for local residents.",
+          "example_translation": "Trung tâm mới tạo việc làm cho cư dân địa phương.",
+          "usage_pattern": "provide / seek employment"
+        },
+        {
+          "word": "opportunity",
+          "meaning_vi": "cơ hội",
+          "part_of_speech": "noun",
+          "example": "The internship offers an opportunity to learn.",
+          "example_translation": "Kỳ thực tập mang đến cơ hội học hỏi.",
+          "usage_pattern": "an opportunity to + verb"
+        },
+        {
+          "word": "investment",
+          "meaning_vi": "khoản đầu tư; sự đầu tư",
+          "part_of_speech": "noun",
+          "example": "Investment in training improved staff confidence.",
+          "example_translation": "Đầu tư vào đào tạo giúp nhân viên tự tin hơn.",
+          "usage_pattern": "investment in + noun / V-ing"
+        },
+        {
+          "word": "consequence",
+          "meaning_vi": "hệ quả; hậu quả",
+          "part_of_speech": "noun",
+          "example": "One consequence of the closure was longer journeys.",
+          "example_translation": "Một hệ quả của việc đóng cửa là người dân phải đi xa hơn.",
+          "usage_pattern": "a consequence of + noun"
+        },
+        {
+          "word": "policy",
+          "meaning_vi": "chính sách; quy định định hướng",
+          "part_of_speech": "noun",
+          "example": "The school reviewed its mobile phone policy.",
+          "example_translation": "Trường đã xem xét lại quy định sử dụng điện thoại.",
+          "usage_pattern": "introduce / review a policy"
+        },
+        {
+          "word": "participation",
+          "meaning_vi": "sự tham gia",
+          "part_of_speech": "noun",
+          "example": "Evening sessions increased participation in the course.",
+          "example_translation": "Các buổi học tối giúp nhiều người tham gia khóa học hơn.",
+          "usage_pattern": "participation in + noun"
+        },
+        {
+          "word": "sustainable",
+          "meaning_vi": "bền vững; có thể duy trì lâu dài",
+          "part_of_speech": "adjective",
+          "example": "The project needs a sustainable source of funding.",
+          "example_translation": "Dự án cần một nguồn tài trợ có thể duy trì lâu dài.",
+          "usage_pattern": "a sustainable approach / source"
+        }
+      ]
+    },
+    {
+      "id": "b2-linking-ideas",
+      "level": "B2",
+      "title": "Nối ý cho rõ và mượt",
+      "description": "Dùng từ nối để so sánh, bổ sung, nêu điều kiện và kết quả.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary",
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000"
+      ],
+      "words": [
+        {
+          "word": "whereas",
+          "meaning_vi": "trong khi; còn",
+          "part_of_speech": "conjunction",
+          "example": "The north is dry, whereas the south is humid.",
+          "example_translation": "Miền bắc khô, còn miền nam ẩm.",
+          "usage_pattern": "clause, whereas + contrasting clause"
+        },
+        {
+          "word": "despite",
+          "meaning_vi": "mặc dù; bất chấp",
+          "part_of_speech": "preposition",
+          "example": "The path stayed open despite the rain.",
+          "example_translation": "Lối đi vẫn mở dù trời mưa.",
+          "usage_pattern": "despite + noun / V-ing"
+        },
+        {
+          "word": "nevertheless",
+          "meaning_vi": "tuy vậy; dù thế",
+          "part_of_speech": "adverb",
+          "example": "The first trial failed; nevertheless, we continued.",
+          "example_translation": "Lần thử đầu tiên thất bại; dù vậy, chúng tôi vẫn tiếp tục.",
+          "usage_pattern": "sentence; nevertheless, clause"
+        },
+        {
+          "word": "therefore",
+          "meaning_vi": "vì vậy; do đó",
+          "part_of_speech": "adverb",
+          "example": "Demand fell; therefore, production was reduced.",
+          "example_translation": "Nhu cầu giảm nên sản lượng cũng được cắt giảm.",
+          "usage_pattern": "sentence; therefore, clause"
+        },
+        {
+          "word": "otherwise",
+          "meaning_vi": "nếu không thì",
+          "part_of_speech": "adverb",
+          "example": "Save a copy; otherwise, you may lose your changes.",
+          "example_translation": "Hãy lưu một bản sao; nếu không, bạn có thể mất các thay đổi.",
+          "usage_pattern": "clause; otherwise, consequence"
+        },
+        {
+          "word": "provided that",
+          "meaning_vi": "miễn là; với điều kiện là",
+          "part_of_speech": "conjunction",
+          "example": "You can join provided that you register first.",
+          "example_translation": "Bạn có thể tham gia với điều kiện đăng ký trước.",
+          "usage_pattern": "provided that + clause"
+        },
+        {
+          "word": "in contrast",
+          "meaning_vi": "ngược lại; trái lại",
+          "part_of_speech": "phrase",
+          "example": "The first room was dark; in contrast, this one is bright.",
+          "example_translation": "Phòng đầu tiên tối; ngược lại, phòng này sáng sủa.",
+          "usage_pattern": "in contrast to / with + noun"
+        },
+        {
+          "word": "in addition",
+          "meaning_vi": "ngoài ra; thêm vào đó",
+          "part_of_speech": "phrase",
+          "example": "The course includes videos; in addition, tutors give feedback.",
+          "example_translation": "Khóa học có video; ngoài ra, giáo viên còn đưa ra nhận xét.",
+          "usage_pattern": "in addition, clause / in addition to + noun"
+        },
+        {
+          "word": "for instance",
+          "meaning_vi": "chẳng hạn; ví dụ",
+          "part_of_speech": "phrase",
+          "example": "Some tasks need no screen; for instance, you can practise aloud.",
+          "example_translation": "Một số bài tập không cần màn hình; chẳng hạn, bạn có thể luyện nói thành tiếng.",
+          "usage_pattern": "for instance, + example"
+        },
+        {
+          "word": "as a result",
+          "meaning_vi": "vì thế; kết quả là",
+          "part_of_speech": "phrase",
+          "example": "The road flooded; as a result, deliveries arrived late.",
+          "example_translation": "Đường bị ngập nên hàng được giao muộn.",
+          "usage_pattern": "as a result, clause / as a result of + noun"
+        },
+        {
+          "word": "to some extent",
+          "meaning_vi": "ở một mức độ nào đó",
+          "part_of_speech": "phrase",
+          "example": "I agree with the proposal to some extent.",
+          "example_translation": "Tôi phần nào đồng ý với đề xuất này.",
+          "usage_pattern": "agree / be true to some extent"
+        },
+        {
+          "word": "on balance",
+          "meaning_vi": "xét tổng thể sau khi cân nhắc",
+          "part_of_speech": "phrase",
+          "example": "On balance, the benefits justify the extra cost.",
+          "example_translation": "Sau khi cân nhắc, những lợi ích nhận được xứng đáng với chi phí tăng thêm.",
+          "usage_pattern": "on balance, + overall judgment"
+        }
+      ]
+    },
+    {
+      "id": "c1-research-quality",
+      "level": "C1",
+      "title": "Đọc nghiên cứu một cách thận trọng",
+      "description": "Phân biệt giả thuyết, bằng chứng và những giới hạn của kết quả.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/confounding-variable?topic=scientific-techniques",
+        "https://dictionary.cambridge.org/dictionary/english/empirical"
+      ],
+      "words": [
+        {
+          "word": "hypothesis",
+          "meaning_vi": "giả thuyết có thể kiểm tra",
+          "part_of_speech": "noun",
+          "example": "The experiment tests the hypothesis that shade slows evaporation.",
+          "example_translation": "Thí nghiệm kiểm tra giả thuyết rằng bóng râm làm chậm sự bay hơi.",
+          "usage_pattern": "test / support / reject a hypothesis"
+        },
+        {
+          "word": "assumption",
+          "meaning_vi": "điều được giả định là đúng",
+          "part_of_speech": "noun",
+          "example": "The model rests on an assumption of stable demand.",
+          "example_translation": "Mô hình dựa trên giả định rằng nhu cầu ổn định.",
+          "usage_pattern": "make / challenge an assumption"
+        },
+        {
+          "word": "correlation",
+          "meaning_vi": "mối tương quan",
+          "part_of_speech": "noun",
+          "example": "We found a correlation between attendance and test scores.",
+          "example_translation": "Chúng tôi nhận thấy mối tương quan giữa mức độ chuyên cần và điểm kiểm tra.",
+          "usage_pattern": "a correlation between A and B"
+        },
+        {
+          "word": "causation",
+          "meaning_vi": "quan hệ nhân quả",
+          "part_of_speech": "noun",
+          "example": "A correlation alone does not establish causation.",
+          "example_translation": "Chỉ có tương quan thì chưa đủ để xác lập quan hệ nhân quả.",
+          "usage_pattern": "establish / demonstrate causation"
+        },
+        {
+          "word": "replicate",
+          "meaning_vi": "lặp lại để kiểm chứng",
+          "part_of_speech": "verb",
+          "example": "Another team will replicate the experiment using the same procedure.",
+          "example_translation": "Một nhóm khác sẽ lặp lại thí nghiệm theo cùng quy trình để kiểm chứng.",
+          "usage_pattern": "replicate a study / experiment"
+        },
+        {
+          "word": "robust",
+          "meaning_vi": "vững chắc, ít bị ảnh hưởng bởi thay đổi",
+          "part_of_speech": "adjective",
+          "example": "The conclusion remains robust under several alternative assumptions.",
+          "example_translation": "Kết luận vẫn vững chắc khi áp dụng một số giả định khác.",
+          "usage_pattern": "robust evidence / findings / methods"
+        },
+        {
+          "word": "tentative",
+          "meaning_vi": "tạm thời, chưa chắc chắn",
+          "part_of_speech": "adjective",
+          "example": "We offer a tentative explanation pending further tests.",
+          "example_translation": "Chúng tôi đưa ra lời giải thích tạm thời trong khi chờ thử nghiệm thêm.",
+          "usage_pattern": "a tentative conclusion / explanation"
+        },
+        {
+          "word": "empirical",
+          "meaning_vi": "dựa trên quan sát hoặc thực nghiệm",
+          "part_of_speech": "adjective",
+          "example": "The paper combines a theoretical model with empirical data.",
+          "example_translation": "Bài nghiên cứu kết hợp mô hình lý thuyết với dữ liệu thực nghiệm.",
+          "usage_pattern": "empirical data / evidence / research"
+        },
+        {
+          "word": "confounding",
+          "meaning_vi": "gây nhiễu khi xác định quan hệ nhân quả",
+          "part_of_speech": "adjective",
+          "example": "Age may be a confounding factor in this comparison.",
+          "example_translation": "Tuổi có thể là yếu tố gây nhiễu trong phép so sánh này.",
+          "usage_pattern": "a confounding factor / variable"
+        },
+        {
+          "word": "validity",
+          "meaning_vi": "tính hợp lệ; mức độ đo đúng điều cần đo",
+          "part_of_speech": "noun",
+          "example": "The researchers questioned the validity of the measure.",
+          "example_translation": "Các nhà nghiên cứu nghi ngờ liệu phép đo có đo đúng điều cần đánh giá hay không.",
+          "usage_pattern": "the validity of a measure / conclusion"
+        },
+        {
+          "word": "sample",
+          "meaning_vi": "mẫu nghiên cứu",
+          "part_of_speech": "noun",
+          "example": "Our sample included residents from all five districts.",
+          "example_translation": "Mẫu nghiên cứu của chúng tôi gồm cư dân từ cả năm quận.",
+          "usage_pattern": "a representative / random sample"
+        },
+        {
+          "word": "limitation",
+          "meaning_vi": "hạn chế",
+          "part_of_speech": "noun",
+          "example": "The small sample is a major limitation of the study.",
+          "example_translation": "Cỡ mẫu nhỏ là một hạn chế lớn của nghiên cứu.",
+          "usage_pattern": "a limitation of + noun"
+        }
+      ]
+    },
+    {
+      "id": "c1-organizations",
+      "level": "C1",
+      "title": "Điều hành một tổ chức",
+      "description": "Phân công, phân bổ nguồn lực và làm rõ trách nhiệm.",
+      "tags": [
+        "toeic",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/oversight"
+      ],
+      "words": [
+        {
+          "word": "accountability",
+          "meaning_vi": "trách nhiệm giải trình",
+          "part_of_speech": "noun",
+          "example": "Clear reporting lines improve accountability for spending.",
+          "example_translation": "Phân định rõ cấp báo cáo giúp tăng trách nhiệm giải trình về chi tiêu.",
+          "usage_pattern": "accountability for + noun"
+        },
+        {
+          "word": "stakeholder",
+          "meaning_vi": "bên liên quan hoặc chịu ảnh hưởng",
+          "part_of_speech": "noun",
+          "example": "Each stakeholder can comment on the draft plan.",
+          "example_translation": "Mỗi bên liên quan đều có thể góp ý cho bản kế hoạch dự thảo.",
+          "usage_pattern": "consult / involve a stakeholder"
+        },
+        {
+          "word": "delegate",
+          "meaning_vi": "giao việc hoặc giao quyền",
+          "part_of_speech": "verb",
+          "example": "Managers should delegate routine tasks to trained staff.",
+          "example_translation": "Người quản lý nên giao các việc thường lệ cho nhân viên đã được đào tạo.",
+          "usage_pattern": "delegate something to someone"
+        },
+        {
+          "word": "coordinate",
+          "meaning_vi": "phối hợp; điều phối",
+          "part_of_speech": "verb",
+          "example": "We coordinate deliveries with the warehouse team.",
+          "example_translation": "Chúng tôi phối hợp việc giao hàng với đội kho.",
+          "usage_pattern": "coordinate something with someone"
+        },
+        {
+          "word": "implement",
+          "meaning_vi": "thực hiện; đưa vào áp dụng",
+          "part_of_speech": "verb",
+          "example": "The school will implement the policy next term.",
+          "example_translation": "Trường sẽ áp dụng chính sách này vào học kỳ tới.",
+          "usage_pattern": "implement a plan / policy"
+        },
+        {
+          "word": "allocate",
+          "meaning_vi": "phân bổ",
+          "part_of_speech": "verb",
+          "example": "We allocate extra time to complex applications.",
+          "example_translation": "Chúng tôi dành thêm thời gian cho những hồ sơ phức tạp.",
+          "usage_pattern": "allocate resources to / for something"
+        },
+        {
+          "word": "feasible",
+          "meaning_vi": "khả thi",
+          "part_of_speech": "adjective",
+          "example": "A smaller pilot would be feasible within our budget.",
+          "example_translation": "Thử nghiệm ở quy mô nhỏ hơn sẽ khả thi với ngân sách của chúng tôi.",
+          "usage_pattern": "a feasible option / plan"
+        },
+        {
+          "word": "contingency",
+          "meaning_vi": "tình huống có thể xảy ra cần chuẩn bị trước",
+          "part_of_speech": "noun",
+          "example": "The budget allows for the contingency of equipment failure.",
+          "example_translation": "Ngân sách đã tính đến khả năng thiết bị bị hỏng.",
+          "usage_pattern": "a contingency plan / contingency for something"
+        },
+        {
+          "word": "compliance",
+          "meaning_vi": "sự tuân thủ",
+          "part_of_speech": "noun",
+          "example": "Regular checks support compliance with safety procedures.",
+          "example_translation": "Kiểm tra thường xuyên giúp bảo đảm việc tuân thủ quy trình an toàn.",
+          "usage_pattern": "compliance with + rule / standard"
+        },
+        {
+          "word": "transparent",
+          "meaning_vi": "minh bạch; rõ ràng để mọi người hiểu",
+          "part_of_speech": "adjective",
+          "example": "The selection process must be transparent to applicants.",
+          "example_translation": "Quy trình tuyển chọn phải minh bạch với người nộp đơn.",
+          "usage_pattern": "a transparent process / decision"
+        },
+        {
+          "word": "oversight",
+          "meaning_vi": "sự giám sát để bảo đảm công việc đúng quy định",
+          "part_of_speech": "noun",
+          "example": "An independent committee provides oversight of the project.",
+          "example_translation": "Một ủy ban độc lập giám sát dự án.",
+          "usage_pattern": "oversight of + activity; nghĩa khác: một sơ suất"
+        },
+        {
+          "word": "incentive",
+          "meaning_vi": "yếu tố khuyến khích; động lực",
+          "part_of_speech": "noun",
+          "example": "Flexible hours can be an incentive to stay.",
+          "example_translation": "Giờ làm linh hoạt có thể là động lực để nhân viên ở lại.",
+          "usage_pattern": "an incentive to + verb"
+        }
+      ]
+    },
+    {
+      "id": "c1-evaluating-arguments",
+      "level": "C1",
+      "title": "Cân nhắc một lập luận",
+      "description": "Nhận ra điểm thuyết phục, điều chưa rõ và điều chưa được chứng minh.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/qualify"
+      ],
+      "words": [
+        {
+          "word": "scrutinize",
+          "meaning_vi": "xem xét kỹ lưỡng",
+          "part_of_speech": "verb",
+          "example": "The reviewers scrutinize every assumption in the model.",
+          "example_translation": "Người phản biện xem xét kỹ từng giả định trong mô hình.",
+          "usage_pattern": "scrutinize evidence / a proposal"
+        },
+        {
+          "word": "substantiate",
+          "meaning_vi": "cung cấp bằng chứng xác thực",
+          "part_of_speech": "verb",
+          "example": "The authors need data to substantiate their claim.",
+          "example_translation": "Các tác giả cần dữ liệu để chứng minh nhận định của mình.",
+          "usage_pattern": "substantiate a claim / allegation"
+        },
+        {
+          "word": "undermine",
+          "meaning_vi": "làm suy yếu; làm giảm độ tin cậy",
+          "part_of_speech": "verb",
+          "example": "Inconsistent figures undermine confidence in the report.",
+          "example_translation": "Số liệu không nhất quán làm giảm niềm tin vào báo cáo.",
+          "usage_pattern": "undermine confidence / an argument"
+        },
+        {
+          "word": "coherent",
+          "meaning_vi": "mạch lạc; nhất quán về logic",
+          "part_of_speech": "adjective",
+          "example": "The essay develops a coherent argument across three sections.",
+          "example_translation": "Bài luận triển khai một lập luận mạch lạc qua ba phần.",
+          "usage_pattern": "a coherent argument / explanation"
+        },
+        {
+          "word": "plausible",
+          "meaning_vi": "có vẻ hợp lý, có thể đúng",
+          "part_of_speech": "adjective",
+          "example": "A change in demand is a plausible explanation.",
+          "example_translation": "Nhu cầu thay đổi là một lời giải thích có vẻ hợp lý.",
+          "usage_pattern": "a plausible explanation / account"
+        },
+        {
+          "word": "ambiguous",
+          "meaning_vi": "mơ hồ; có thể hiểu nhiều cách",
+          "part_of_speech": "adjective",
+          "example": "The instruction is ambiguous about who should reply.",
+          "example_translation": "Hướng dẫn chưa rõ về việc ai phải trả lời.",
+          "usage_pattern": "an ambiguous statement / instruction"
+        },
+        {
+          "word": "arbitrary",
+          "meaning_vi": "tùy tiện, thiếu căn cứ rõ ràng",
+          "part_of_speech": "adjective",
+          "example": "The cutoff seems arbitrary because no reason is given.",
+          "example_translation": "Ngưỡng giới hạn có vẻ được đặt tùy tiện vì không có lý do đi kèm.",
+          "usage_pattern": "an arbitrary limit / decision"
+        },
+        {
+          "word": "nuance",
+          "meaning_vi": "sắc thái; khác biệt tinh tế",
+          "part_of_speech": "noun",
+          "example": "The translation preserves the nuance of her criticism.",
+          "example_translation": "Bản dịch giữ được sắc thái trong lời phê bình của cô ấy.",
+          "usage_pattern": "capture / preserve a nuance"
+        },
+        {
+          "word": "qualify",
+          "meaning_vi": "thêm điều kiện để giới hạn một nhận định",
+          "part_of_speech": "verb",
+          "example": "We should qualify that conclusion by noting the small sample.",
+          "example_translation": "Chúng ta nên giới hạn kết luận đó bằng cách lưu ý rằng cỡ mẫu nhỏ.",
+          "usage_pattern": "qualify a claim / statement with a caveat"
+        },
+        {
+          "word": "implicit",
+          "meaning_vi": "hàm ý; không được nói trực tiếp",
+          "part_of_speech": "adjective",
+          "example": "The agreement carries an implicit promise of confidentiality.",
+          "example_translation": "Thỏa thuận hàm chứa lời hứa giữ bí mật.",
+          "usage_pattern": "implicit in + noun"
+        },
+        {
+          "word": "explicit",
+          "meaning_vi": "rõ ràng; được nói thẳng ra",
+          "part_of_speech": "adjective",
+          "example": "The form requires explicit permission to share the data.",
+          "example_translation": "Biểu mẫu yêu cầu sự cho phép rõ ràng trước khi chia sẻ dữ liệu.",
+          "usage_pattern": "explicit permission / instructions"
+        },
+        {
+          "word": "infer",
+          "meaning_vi": "suy ra từ bằng chứng",
+          "part_of_speech": "verb",
+          "example": "We cannot infer motivation from one brief reply.",
+          "example_translation": "Chúng ta không thể suy ra động cơ từ một câu trả lời ngắn.",
+          "usage_pattern": "infer something from something"
+        }
+      ]
+    },
+    {
+      "id": "c1-environment-policy",
+      "level": "C1",
+      "title": "Môi trường và lựa chọn dài hạn",
+      "description": "Bàn về thích ứng, bảo tồn và những đánh đổi cần cân nhắc.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000",
+        "https://learnenglish.britishcouncil.org/free-resources/vocabulary"
+      ],
+      "words": [
+        {
+          "word": "biodiversity",
+          "meaning_vi": "đa dạng sinh học",
+          "part_of_speech": "noun",
+          "example": "The survey records biodiversity in urban ponds.",
+          "example_translation": "Khảo sát ghi nhận mức độ đa dạng sinh học ở các ao trong đô thị.",
+          "usage_pattern": "protect / measure biodiversity"
+        },
+        {
+          "word": "resilience",
+          "meaning_vi": "khả năng chống chịu và phục hồi",
+          "part_of_speech": "noun",
+          "example": "Tree cover can improve a neighbourhood's resilience to heat.",
+          "example_translation": "Tán cây có thể giúp khu dân cư chống chịu nắng nóng tốt hơn.",
+          "usage_pattern": "resilience to + shock / change"
+        },
+        {
+          "word": "mitigate",
+          "meaning_vi": "giảm mức độ nghiêm trọng hoặc tác hại",
+          "part_of_speech": "verb",
+          "example": "Shaded paths can mitigate the effects of extreme heat.",
+          "example_translation": "Lối đi có bóng râm có thể giảm tác động của nắng nóng cực đoan.",
+          "usage_pattern": "mitigate the effects / impact of something"
+        },
+        {
+          "word": "adaptation",
+          "meaning_vi": "sự thích ứng",
+          "part_of_speech": "noun",
+          "example": "The coastal plan prioritizes adaptation to rising water levels.",
+          "example_translation": "Kế hoạch ven biển ưu tiên thích ứng với mực nước dâng.",
+          "usage_pattern": "adaptation to + change"
+        },
+        {
+          "word": "depletion",
+          "meaning_vi": "sự suy giảm đến mức cạn kiệt",
+          "part_of_speech": "noun",
+          "example": "Repeated pumping has accelerated groundwater depletion.",
+          "example_translation": "Bơm hút liên tục đã đẩy nhanh tình trạng cạn kiệt nước ngầm.",
+          "usage_pattern": "the depletion of + resource"
+        },
+        {
+          "word": "emissions",
+          "meaning_vi": "lượng khí hoặc chất được thải ra",
+          "part_of_speech": "noun",
+          "example": "The factory reports its annual carbon emissions.",
+          "example_translation": "Nhà máy báo cáo lượng phát thải carbon hằng năm.",
+          "usage_pattern": "reduce / measure emissions"
+        },
+        {
+          "word": "conservation",
+          "meaning_vi": "sự bảo tồn; việc gìn giữ tài nguyên",
+          "part_of_speech": "noun",
+          "example": "The reserve combines conservation with public education.",
+          "example_translation": "Khu bảo tồn kết hợp gìn giữ thiên nhiên với giáo dục cộng đồng.",
+          "usage_pattern": "wildlife / water conservation"
+        },
+        {
+          "word": "trade-off",
+          "meaning_vi": "sự đánh đổi giữa các lợi ích",
+          "part_of_speech": "noun",
+          "example": "There is a trade-off between speed and energy use.",
+          "example_translation": "Có sự đánh đổi giữa tốc độ và mức tiêu thụ năng lượng.",
+          "usage_pattern": "a trade-off between A and B"
+        },
+        {
+          "word": "infrastructure",
+          "meaning_vi": "cơ sở hạ tầng",
+          "part_of_speech": "noun",
+          "example": "The district is upgrading its drainage infrastructure.",
+          "example_translation": "Quận đang nâng cấp hạ tầng thoát nước.",
+          "usage_pattern": "transport / digital / water infrastructure"
+        },
+        {
+          "word": "transition",
+          "meaning_vi": "quá trình chuyển đổi",
+          "part_of_speech": "noun",
+          "example": "Workers need support during the transition to new industries.",
+          "example_translation": "Người lao động cần được hỗ trợ khi chuyển sang các ngành mới.",
+          "usage_pattern": "a transition from A to B"
+        },
+        {
+          "word": "renewable",
+          "meaning_vi": "có thể tái tạo",
+          "part_of_speech": "adjective",
+          "example": "The campus now buys electricity from renewable sources.",
+          "example_translation": "Khu học xá hiện mua điện từ các nguồn tái tạo.",
+          "usage_pattern": "renewable energy / resources"
+        },
+        {
+          "word": "precaution",
+          "meaning_vi": "biện pháp phòng ngừa",
+          "part_of_speech": "noun",
+          "example": "The team carried extra water as a precaution.",
+          "example_translation": "Nhóm mang thêm nước để đề phòng.",
+          "usage_pattern": "take a precaution / as a precaution"
+        }
+      ]
+    },
+    {
+      "id": "c1-academic-writing",
+      "level": "C1",
+      "title": "Viết học thuật có chiều sâu",
+      "description": "Kết nối nguồn, đặt ý trong bối cảnh và xây dựng cách giải thích.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://www.oxfordlearnersdictionaries.co.uk/about/wordlists/oxford3000-5000",
+        "https://learningenglishwithoxford.oup.com/2021/02/17/how-to-online-learner-dictionaries/amp/"
+      ],
+      "words": [
+        {
+          "word": "synthesis",
+          "meaning_vi": "sự tổng hợp các ý thành một cách nhìn chung",
+          "part_of_speech": "noun",
+          "example": "The final chapter offers a synthesis of the findings.",
+          "example_translation": "Chương cuối tổng hợp các phát hiện thành một bức tranh chung.",
+          "usage_pattern": "a synthesis of + ideas / findings"
+        },
+        {
+          "word": "conceptual",
+          "meaning_vi": "thuộc về khái niệm hoặc cách hình dung",
+          "part_of_speech": "adjective",
+          "example": "The diagram shows the study's conceptual framework.",
+          "example_translation": "Sơ đồ thể hiện khung khái niệm của nghiên cứu.",
+          "usage_pattern": "a conceptual framework / distinction"
+        },
+        {
+          "word": "paradigm",
+          "meaning_vi": "mô hình tư duy định hướng một lĩnh vực",
+          "part_of_speech": "noun",
+          "example": "The discovery challenged the dominant scientific paradigm.",
+          "example_translation": "Phát hiện này thách thức mô hình tư duy khoa học đang chi phối lĩnh vực.",
+          "usage_pattern": "a dominant paradigm / paradigm shift"
+        },
+        {
+          "word": "discourse",
+          "meaning_vi": "diễn ngôn; cách trao đổi về một chủ đề",
+          "part_of_speech": "noun",
+          "example": "The article examines public discourse about migration.",
+          "example_translation": "Bài viết phân tích cách xã hội bàn luận về di cư.",
+          "usage_pattern": "public / academic discourse"
+        },
+        {
+          "word": "contextualize",
+          "meaning_vi": "đặt vào bối cảnh để hiểu rõ hơn",
+          "part_of_speech": "verb",
+          "example": "We contextualize the letters with a timeline of events.",
+          "example_translation": "Chúng tôi đặt những lá thư vào bối cảnh bằng một dòng thời gian sự kiện.",
+          "usage_pattern": "contextualize evidence / an event"
+        },
+        {
+          "word": "elaborate",
+          "meaning_vi": "giải thích hoặc triển khai thêm",
+          "part_of_speech": "verb",
+          "example": "Could you elaborate on the final recommendation?",
+          "example_translation": "Bạn có thể giải thích thêm về khuyến nghị cuối cùng không?",
+          "usage_pattern": "elaborate on + idea / point"
+        },
+        {
+          "word": "distinguish",
+          "meaning_vi": "phân biệt",
+          "part_of_speech": "verb",
+          "example": "The review must distinguish evidence from speculation.",
+          "example_translation": "Bài tổng quan cần phân biệt bằng chứng với suy đoán.",
+          "usage_pattern": "distinguish A from B / between A and B"
+        },
+        {
+          "word": "integrate",
+          "meaning_vi": "kết hợp thành một tổng thể",
+          "part_of_speech": "verb",
+          "example": "We integrate interview data into the wider analysis.",
+          "example_translation": "Chúng tôi kết hợp dữ liệu phỏng vấn vào phân tích tổng thể.",
+          "usage_pattern": "integrate A into B"
+        },
+        {
+          "word": "underpin",
+          "meaning_vi": "làm nền tảng; củng cố từ cơ sở",
+          "part_of_speech": "verb",
+          "example": "Three principles underpin the proposed framework.",
+          "example_translation": "Ba nguyên tắc làm nền tảng cho khung đề xuất.",
+          "usage_pattern": "underpin a theory / framework"
+        },
+        {
+          "word": "pertinent",
+          "meaning_vi": "liên quan trực tiếp; thích hợp",
+          "part_of_speech": "adjective",
+          "example": "The reviewer raised a pertinent question about sampling.",
+          "example_translation": "Người phản biện nêu một câu hỏi sát vấn đề về cách lấy mẫu.",
+          "usage_pattern": "pertinent to + topic"
+        },
+        {
+          "word": "notwithstanding",
+          "meaning_vi": "bất chấp; mặc dù vẫn có",
+          "part_of_speech": "preposition",
+          "example": "Notwithstanding these limits, the findings deserve attention.",
+          "example_translation": "Dù có những hạn chế này, các phát hiện vẫn đáng được chú ý.",
+          "usage_pattern": "notwithstanding + noun; văn phong trang trọng"
+        },
+        {
+          "word": "thereby",
+          "meaning_vi": "qua đó; nhờ vậy",
+          "part_of_speech": "adverb",
+          "example": "The revision removes jargon, thereby improving accessibility.",
+          "example_translation": "Bản sửa bỏ các thuật ngữ khó hiểu, qua đó giúp nội dung dễ tiếp cận hơn.",
+          "usage_pattern": "clause, thereby + V-ing"
+        }
+      ]
+    },
+    {
+      "id": "c2-argument-logic",
+      "level": "C2",
+      "title": "Lập luận chặt chẽ",
+      "description": "Phân biệt lời khẳng định mạnh, suy đoán và suy luận có căn cứ.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/us/dictionary/english/tenable?topic=suitable-and-acceptable",
+        "https://dictionary.cambridge.org/dictionary/english/specious"
+      ],
+      "words": [
+        {
+          "word": "equivocal",
+          "meaning_vi": "không rõ ràng; có thể hiểu theo nhiều hướng",
+          "part_of_speech": "adjective",
+          "example": "The committee's equivocal response left both options open.",
+          "example_translation": "Câu trả lời không dứt khoát của ủy ban khiến cả hai phương án vẫn còn bỏ ngỏ.",
+          "usage_pattern": "an equivocal response / result"
+        },
+        {
+          "word": "unequivocal",
+          "meaning_vi": "rõ ràng, không thể hiểu nhầm",
+          "part_of_speech": "adjective",
+          "example": "The letter gives unequivocal support to the revised plan.",
+          "example_translation": "Lá thư thể hiện sự ủng hộ dứt khoát đối với kế hoạch đã sửa.",
+          "usage_pattern": "unequivocal support / evidence"
+        },
+        {
+          "word": "fallacy",
+          "meaning_vi": "ngụy biện; sai lầm trong lập luận",
+          "part_of_speech": "noun",
+          "example": "Treating popularity as proof of accuracy is a fallacy.",
+          "example_translation": "Xem mức độ phổ biến là bằng chứng cho tính chính xác là một lỗi lập luận.",
+          "usage_pattern": "a logical fallacy / expose a fallacy"
+        },
+        {
+          "word": "conjecture",
+          "meaning_vi": "sự phỏng đoán khi chưa đủ bằng chứng",
+          "part_of_speech": "noun",
+          "example": "Without the missing records, that explanation remains conjecture.",
+          "example_translation": "Khi chưa có những hồ sơ còn thiếu, lời giải thích ấy vẫn chỉ là phỏng đoán.",
+          "usage_pattern": "pure conjecture / a matter of conjecture"
+        },
+        {
+          "word": "axiom",
+          "meaning_vi": "tiên đề; nguyên lý được chấp nhận làm điểm xuất phát",
+          "part_of_speech": "noun",
+          "example": "The model begins with an axiom about consistent preferences.",
+          "example_translation": "Mô hình bắt đầu từ một tiên đề về tính nhất quán của sở thích.",
+          "usage_pattern": "accept / adopt an axiom"
+        },
+        {
+          "word": "corroborate",
+          "meaning_vi": "củng cố bằng bằng chứng độc lập",
+          "part_of_speech": "verb",
+          "example": "The timestamp helps corroborate the driver's account.",
+          "example_translation": "Dấu thời gian giúp củng cố lời kể của người lái xe.",
+          "usage_pattern": "corroborate an account / finding"
+        },
+        {
+          "word": "refute",
+          "meaning_vi": "bác bỏ bằng lý lẽ hoặc bằng chứng",
+          "part_of_speech": "verb",
+          "example": "A single counterexample can refute this universal claim.",
+          "example_translation": "Một phản ví dụ cũng đủ bác bỏ nhận định khái quát này.",
+          "usage_pattern": "refute a claim / hypothesis"
+        },
+        {
+          "word": "tenable",
+          "meaning_vi": "có thể bảo vệ được về mặt lý lẽ",
+          "part_of_speech": "adjective",
+          "example": "That explanation is no longer tenable after the new measurements.",
+          "example_translation": "Sau những phép đo mới, lời giải thích đó không còn đứng vững.",
+          "usage_pattern": "a tenable position / explanation"
+        },
+        {
+          "word": "specious",
+          "meaning_vi": "có vẻ hợp lý nhưng thực chất sai",
+          "part_of_speech": "adjective",
+          "example": "The advertisement relies on a specious comparison of unequal quantities.",
+          "example_translation": "Quảng cáo dựa vào phép so sánh tưởng hợp lý nhưng sai vì các lượng không tương đương.",
+          "usage_pattern": "a specious argument / comparison"
+        },
+        {
+          "word": "cogent",
+          "meaning_vi": "chặt chẽ và có sức thuyết phục",
+          "part_of_speech": "adjective",
+          "example": "She presents a cogent argument for extending the trial.",
+          "example_translation": "Cô ấy đưa ra lập luận chặt chẽ, thuyết phục để kéo dài thử nghiệm.",
+          "usage_pattern": "a cogent argument / explanation"
+        },
+        {
+          "word": "inductive",
+          "meaning_vi": "mang tính quy nạp, từ trường hợp riêng đến kết luận chung",
+          "part_of_speech": "adjective",
+          "example": "The study uses inductive reasoning to develop a broader explanation.",
+          "example_translation": "Nghiên cứu dùng suy luận quy nạp để xây dựng cách giải thích khái quát hơn.",
+          "usage_pattern": "inductive reasoning / analysis"
+        },
+        {
+          "word": "deductive",
+          "meaning_vi": "mang tính diễn dịch, từ tiền đề đến kết luận logic",
+          "part_of_speech": "adjective",
+          "example": "The proof uses deductive reasoning from two stated premises.",
+          "example_translation": "Chứng minh sử dụng suy luận diễn dịch từ hai tiền đề đã nêu.",
+          "usage_pattern": "deductive reasoning / logic"
+        }
+      ]
+    },
+    {
+      "id": "c2-meaning-style",
+      "level": "C2",
+      "title": "Sắc thái trong cách diễn đạt",
+      "description": "Đọc vượt qua nghĩa đen để nhận ra giọng điệu và dụng ý.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/connotation",
+        "https://dictionaryblog.cambridge.org/2014/07/30/its-not-bad-emphasizing-with-negatives-in-english/?amp=1"
+      ],
+      "words": [
+        {
+          "word": "connotation",
+          "meaning_vi": "nghĩa liên tưởng; sắc thái gợi ra",
+          "part_of_speech": "noun",
+          "example": "In this context, 'thrifty' carries a positive connotation.",
+          "example_translation": "Trong ngữ cảnh này, từ 'thrifty' gợi sắc thái tích cực.",
+          "usage_pattern": "a positive / negative connotation"
+        },
+        {
+          "word": "denotation",
+          "meaning_vi": "nghĩa trực tiếp của từ",
+          "part_of_speech": "noun",
+          "example": "The exercise separates a word's denotation from its emotional associations.",
+          "example_translation": "Bài tập tách nghĩa trực tiếp của từ khỏi những liên tưởng cảm xúc.",
+          "usage_pattern": "the denotation of a word"
+        },
+        {
+          "word": "register",
+          "meaning_vi": "phong cách ngôn ngữ phù hợp hoàn cảnh",
+          "part_of_speech": "noun",
+          "example": "The email shifts from a formal register to a friendly tone.",
+          "example_translation": "Email chuyển từ văn phong trang trọng sang giọng thân thiện.",
+          "usage_pattern": "a formal / informal register"
+        },
+        {
+          "word": "idiomatic",
+          "meaning_vi": "tự nhiên theo cách người bản ngữ thường dùng",
+          "part_of_speech": "adjective",
+          "example": "The revision makes the sentence more idiomatic without changing its meaning.",
+          "example_translation": "Bản sửa giúp câu tự nhiên hơn mà không đổi ý nghĩa.",
+          "usage_pattern": "idiomatic English / an idiomatic expression"
+        },
+        {
+          "word": "eloquent",
+          "meaning_vi": "diễn đạt lưu loát và giàu sức thuyết phục",
+          "part_of_speech": "adjective",
+          "example": "Her eloquent speech made a difficult idea accessible.",
+          "example_translation": "Bài phát biểu giàu sức thuyết phục của cô ấy giúp ý tưởng khó trở nên dễ hiểu.",
+          "usage_pattern": "an eloquent speaker / speech"
+        },
+        {
+          "word": "succinct",
+          "meaning_vi": "ngắn gọn mà đủ ý",
+          "part_of_speech": "adjective",
+          "example": "The abstract gives a succinct account of the method.",
+          "example_translation": "Phần tóm tắt trình bày phương pháp ngắn gọn mà đủ ý.",
+          "usage_pattern": "a succinct account / summary"
+        },
+        {
+          "word": "verbose",
+          "meaning_vi": "dài dòng, dùng quá nhiều lời",
+          "part_of_speech": "adjective",
+          "example": "The editor shortened a verbose paragraph to three sentences.",
+          "example_translation": "Biên tập viên rút đoạn văn dài dòng xuống còn ba câu.",
+          "usage_pattern": "a verbose description / style"
+        },
+        {
+          "word": "allusion",
+          "meaning_vi": "sự ám chỉ gián tiếp đến điều quen thuộc",
+          "part_of_speech": "noun",
+          "example": "The title contains an allusion to a well-known fable.",
+          "example_translation": "Nhan đề có một ám chỉ đến truyện ngụ ngôn quen thuộc.",
+          "usage_pattern": "an allusion to + work / event"
+        },
+        {
+          "word": "irony",
+          "meaning_vi": "sự trớ trêu; cách nói trái ý để tạo sắc thái",
+          "part_of_speech": "noun",
+          "example": "The irony is that the time-saving device needs constant repairs.",
+          "example_translation": "Điều trớ trêu là thiết bị tiết kiệm thời gian lại cần sửa chữa liên tục.",
+          "usage_pattern": "the irony of something / dramatic irony"
+        },
+        {
+          "word": "understatement",
+          "meaning_vi": "cách nói giảm mức độ so với thực tế",
+          "part_of_speech": "noun",
+          "example": "Calling the flooded office 'a little damp' was an understatement.",
+          "example_translation": "Gọi văn phòng bị ngập là 'hơi ẩm' là một cách nói giảm.",
+          "usage_pattern": "a deliberate understatement / an understatement to say"
+        },
+        {
+          "word": "paradox",
+          "meaning_vi": "điều tưởng mâu thuẫn nhưng có thể đúng",
+          "part_of_speech": "noun",
+          "example": "The essay explores the paradox of feeling lonely in a crowd.",
+          "example_translation": "Bài luận tìm hiểu nghịch lý cảm thấy cô đơn giữa đám đông.",
+          "usage_pattern": "an apparent paradox / the paradox of + V-ing"
+        },
+        {
+          "word": "juxtapose",
+          "meaning_vi": "đặt cạnh nhau để làm nổi bật sự khác biệt",
+          "part_of_speech": "verb",
+          "example": "The exhibition will juxtapose old maps with current photographs.",
+          "example_translation": "Triển lãm sẽ đặt bản đồ cũ cạnh ảnh hiện tại để làm nổi bật sự khác biệt.",
+          "usage_pattern": "juxtapose A with B"
+        }
+      ]
+    },
+    {
+      "id": "c2-institutions",
+      "level": "C2",
+      "title": "Quyền hạn và trách nhiệm",
+      "description": "Đọc những thảo luận sâu về thể chế, thẩm quyền và công bằng.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/subsidiarity",
+        "https://dictionary.cambridge.org/dictionary/english/remit?topic=duty-obligation-and-responsibility"
+      ],
+      "words": [
+        {
+          "word": "prerogative",
+          "meaning_vi": "đặc quyền; quyền quyết định riêng",
+          "part_of_speech": "noun",
+          "example": "Choosing the final design remains the client's prerogative.",
+          "example_translation": "Quyền chọn thiết kế cuối cùng vẫn thuộc về khách hàng.",
+          "usage_pattern": "someone's prerogative / exercise a prerogative"
+        },
+        {
+          "word": "discretion",
+          "meaning_vi": "quyền tự cân nhắc và quyết định",
+          "part_of_speech": "noun",
+          "example": "Staff may waive the fee at their discretion.",
+          "example_translation": "Nhân viên có thể tự cân nhắc miễn khoản phí này.",
+          "usage_pattern": "at someone's discretion / exercise discretion"
+        },
+        {
+          "word": "mandate",
+          "meaning_vi": "quyền hoặc nhiệm vụ được chính thức giao",
+          "part_of_speech": "noun",
+          "example": "The panel has a mandate to review all complaints.",
+          "example_translation": "Hội đồng được giao nhiệm vụ xem xét mọi khiếu nại.",
+          "usage_pattern": "a mandate to + verb"
+        },
+        {
+          "word": "remit",
+          "meaning_vi": "phạm vi trách nhiệm hoặc thẩm quyền",
+          "part_of_speech": "noun",
+          "example": "Pricing decisions fall outside the committee's remit.",
+          "example_translation": "Các quyết định về giá nằm ngoài thẩm quyền của ủy ban.",
+          "usage_pattern": "within / outside someone's remit"
+        },
+        {
+          "word": "redress",
+          "meaning_vi": "sự bù đắp hoặc biện pháp khắc phục bất công",
+          "part_of_speech": "noun",
+          "example": "The scheme offers redress to customers charged twice.",
+          "example_translation": "Chương trình đưa ra biện pháp bù đắp cho khách bị thu tiền hai lần.",
+          "usage_pattern": "seek / obtain / offer redress"
+        },
+        {
+          "word": "recourse",
+          "meaning_vi": "biện pháp hoặc nơi có thể tìm đến để được giúp",
+          "part_of_speech": "noun",
+          "example": "Residents have recourse to an independent panel when services fail.",
+          "example_translation": "Cư dân có thể nhờ một hội đồng độc lập giải quyết khi dịch vụ không được cung cấp đúng.",
+          "usage_pattern": "have recourse to + help / authority"
+        },
+        {
+          "word": "impunity",
+          "meaning_vi": "tình trạng làm sai mà không bị trừng phạt",
+          "part_of_speech": "noun",
+          "example": "Rules mean little if breaches continue with impunity.",
+          "example_translation": "Quy định chẳng có mấy ý nghĩa nếu vi phạm vẫn diễn ra mà không bị xử lý.",
+          "usage_pattern": "act / operate with impunity"
+        },
+        {
+          "word": "entrench",
+          "meaning_vi": "làm ăn sâu và khó thay đổi",
+          "part_of_speech": "verb",
+          "example": "Opaque selection rules can entrench existing inequalities.",
+          "example_translation": "Quy tắc tuyển chọn thiếu minh bạch có thể khiến bất bình đẳng hiện có ăn sâu hơn.",
+          "usage_pattern": "entrench inequality / a position"
+        },
+        {
+          "word": "dismantle",
+          "meaning_vi": "tháo bỏ; từng bước xóa bỏ một hệ thống",
+          "part_of_speech": "verb",
+          "example": "The reforms aim to dismantle unnecessary barriers to entry.",
+          "example_translation": "Những cải cách nhằm xóa bỏ các rào cản gia nhập không cần thiết.",
+          "usage_pattern": "dismantle a system / barriers"
+        },
+        {
+          "word": "proportionality",
+          "meaning_vi": "tính tương xứng giữa biện pháp và mục đích hoặc mức độ",
+          "part_of_speech": "noun",
+          "example": "The review questions the proportionality of the penalty.",
+          "example_translation": "Bản đánh giá đặt câu hỏi liệu mức phạt có tương xứng hay không.",
+          "usage_pattern": "the proportionality of a response / penalty"
+        },
+        {
+          "word": "subsidiarity",
+          "meaning_vi": "nguyên tắc giao quyết định cho cấp gần vấn đề nhất có thể",
+          "part_of_speech": "noun",
+          "example": "Under subsidiarity, local teams decide matters they can handle effectively.",
+          "example_translation": "Theo nguyên tắc phân quyền về cấp gần nhất, nhóm địa phương tự quyết những việc họ xử lý hiệu quả được.",
+          "usage_pattern": "the principle of subsidiarity"
+        },
+        {
+          "word": "legitimacy",
+          "meaning_vi": "tính chính đáng; sự công nhận quyền quyết định",
+          "part_of_speech": "noun",
+          "example": "An open election can strengthen the council's legitimacy.",
+          "example_translation": "Bầu cử minh bạch có thể củng cố tính chính đáng của hội đồng.",
+          "usage_pattern": "establish / question legitimacy"
+        }
+      ]
+    },
+    {
+      "id": "c2-complex-systems",
+      "level": "C2",
+      "title": "Hiểu một hệ thống phức tạp",
+      "description": "Diễn đạt quan hệ phụ thuộc, thay đổi tích lũy và hiệu ứng ngoài dự kiến.",
+      "tags": [
+        "ielts",
+        "general"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/contingent-on-upon?q=contingent-on-upon-something",
+        "https://dictionary.cambridge.org/example/english/path-dependence"
+      ],
+      "words": [
+        {
+          "word": "contingent",
+          "meaning_vi": "phụ thuộc vào một điều kiện",
+          "part_of_speech": "adjective",
+          "example": "The second phase is contingent on a successful safety review.",
+          "example_translation": "Giai đoạn hai chỉ được triển khai nếu đợt đánh giá an toàn đạt yêu cầu.",
+          "usage_pattern": "contingent on / upon + noun"
+        },
+        {
+          "word": "inherent",
+          "meaning_vi": "vốn có; gắn liền với bản chất",
+          "part_of_speech": "adjective",
+          "example": "Some uncertainty is inherent in every forecast.",
+          "example_translation": "Mọi dự báo đều vốn có một mức độ không chắc chắn.",
+          "usage_pattern": "inherent in + noun"
+        },
+        {
+          "word": "pervasive",
+          "meaning_vi": "lan rộng và hiện diện khắp nơi",
+          "part_of_speech": "adjective",
+          "example": "The study examines the pervasive influence of advertising.",
+          "example_translation": "Nghiên cứu xem xét ảnh hưởng rộng khắp của quảng cáo.",
+          "usage_pattern": "a pervasive influence / problem"
+        },
+        {
+          "word": "intractable",
+          "meaning_vi": "rất khó giải quyết hoặc kiểm soát",
+          "part_of_speech": "adjective",
+          "example": "A lack of reliable data makes the problem seem intractable.",
+          "example_translation": "Thiếu dữ liệu đáng tin khiến vấn đề có vẻ rất khó giải quyết.",
+          "usage_pattern": "an intractable problem / dispute"
+        },
+        {
+          "word": "incremental",
+          "meaning_vi": "từng bước nhỏ, có tính tích lũy",
+          "part_of_speech": "adjective",
+          "example": "The team favours incremental improvements over a complete redesign.",
+          "example_translation": "Nhóm ưu tiên cải tiến từng bước thay vì thiết kế lại toàn bộ.",
+          "usage_pattern": "incremental change / improvement"
+        },
+        {
+          "word": "nonlinear",
+          "meaning_vi": "phi tuyến, không thay đổi theo tỷ lệ cố định",
+          "part_of_speech": "adjective",
+          "example": "The graph reveals a nonlinear relationship between load and delay.",
+          "example_translation": "Biểu đồ cho thấy quan hệ phi tuyến giữa tải và độ trễ.",
+          "usage_pattern": "a nonlinear relationship / process"
+        },
+        {
+          "word": "interdependence",
+          "meaning_vi": "sự phụ thuộc lẫn nhau",
+          "part_of_speech": "noun",
+          "example": "The shortage exposed the interdependence of local industries.",
+          "example_translation": "Tình trạng thiếu hụt làm lộ rõ sự phụ thuộc lẫn nhau giữa các ngành địa phương.",
+          "usage_pattern": "interdependence between / among + groups"
+        },
+        {
+          "word": "feedback loop",
+          "meaning_vi": "vòng phản hồi, khi kết quả tác động ngược lại quá trình",
+          "part_of_speech": "phrase",
+          "example": "Fewer passengers can create a feedback loop of cuts and further decline.",
+          "example_translation": "Ít hành khách hơn có thể tạo vòng phản hồi: giảm dịch vụ rồi lượng khách lại giảm tiếp.",
+          "usage_pattern": "create / reinforce a feedback loop"
+        },
+        {
+          "word": "threshold",
+          "meaning_vi": "ngưỡng bắt đầu một thay đổi",
+          "part_of_speech": "noun",
+          "example": "Above this threshold, the system rejects new requests.",
+          "example_translation": "Vượt ngưỡng này, hệ thống sẽ từ chối yêu cầu mới.",
+          "usage_pattern": "reach / exceed a threshold"
+        },
+        {
+          "word": "emergent",
+          "meaning_vi": "nảy sinh từ tương tác trong một hệ thống",
+          "part_of_speech": "adjective",
+          "example": "Traffic patterns are an emergent property of many individual decisions.",
+          "example_translation": "Các kiểu giao thông là đặc tính nảy sinh từ nhiều quyết định riêng lẻ.",
+          "usage_pattern": "an emergent property / pattern"
+        },
+        {
+          "word": "cumulative",
+          "meaning_vi": "tích lũy dần qua nhiều lần",
+          "part_of_speech": "adjective",
+          "example": "The cumulative effect of small delays was substantial.",
+          "example_translation": "Tác động cộng dồn của những lần chậm trễ nhỏ là rất đáng kể.",
+          "usage_pattern": "a cumulative effect / impact"
+        },
+        {
+          "word": "path dependence",
+          "meaning_vi": "sự phụ thuộc của lựa chọn hiện tại vào con đường đã đi trước đó",
+          "part_of_speech": "phrase",
+          "example": "Path dependence helps explain why the firm kept its outdated system.",
+          "example_translation": "Sự phụ thuộc vào những lựa chọn trước đây giúp giải thích vì sao công ty giữ hệ thống lỗi thời.",
+          "usage_pattern": "institutional / technological path dependence"
+        }
+      ]
+    },
+    {
+      "id": "c2-careful-judgment",
+      "level": "C2",
+      "title": "Phán đoán thấu đáo",
+      "description": "Nói chính xác về sự công tâm, nguyên tắc và những tình huống khó xử.",
+      "tags": [
+        "ielts",
+        "toeic"
+      ],
+      "source_urls": [
+        "https://dictionary.cambridge.org/us/dictionary/english/disinterested",
+        "https://learningenglishwithoxford.oup.com/2021/02/17/how-to-online-learner-dictionaries/amp/"
+      ],
+      "words": [
+        {
+          "word": "circumspect",
+          "meaning_vi": "thận trọng, cân nhắc kỹ trước khi nói hoặc làm",
+          "part_of_speech": "adjective",
+          "example": "The spokesperson was circumspect about the preliminary findings.",
+          "example_translation": "Người phát ngôn tỏ ra thận trọng khi nói về các phát hiện ban đầu.",
+          "usage_pattern": "circumspect about + topic"
+        },
+        {
+          "word": "discerning",
+          "meaning_vi": "có khả năng phân biệt và đánh giá tinh tế",
+          "part_of_speech": "adjective",
+          "example": "A discerning reader notices the gap between evidence and conclusion.",
+          "example_translation": "Người đọc tinh ý nhận ra khoảng cách giữa bằng chứng và kết luận.",
+          "usage_pattern": "a discerning reader / audience"
+        },
+        {
+          "word": "pragmatic",
+          "meaning_vi": "thực tế, chú trọng điều có thể làm được",
+          "part_of_speech": "adjective",
+          "example": "We took a pragmatic approach to the limited timetable.",
+          "example_translation": "Chúng tôi chọn cách tiếp cận thực tế với quỹ thời gian hạn hẹp.",
+          "usage_pattern": "a pragmatic approach / solution"
+        },
+        {
+          "word": "principled",
+          "meaning_vi": "có nguyên tắc và giữ vững nguyên tắc",
+          "part_of_speech": "adjective",
+          "example": "Her refusal was principled, not a negotiating tactic.",
+          "example_translation": "Cô ấy từ chối vì nguyên tắc, không phải để mặc cả.",
+          "usage_pattern": "a principled stance / objection"
+        },
+        {
+          "word": "expedient",
+          "meaning_vi": "thuận tiện cho mục tiêu trước mắt, có thể bỏ qua nguyên tắc",
+          "part_of_speech": "adjective",
+          "example": "Skipping consultation seemed expedient but damaged trust.",
+          "example_translation": "Bỏ qua việc tham vấn có vẻ tiện trước mắt nhưng đã làm mất lòng tin.",
+          "usage_pattern": "politically / financially expedient"
+        },
+        {
+          "word": "judicious",
+          "meaning_vi": "sáng suốt và có chừng mực",
+          "part_of_speech": "adjective",
+          "example": "Judicious use of examples keeps the explanation clear.",
+          "example_translation": "Dùng ví dụ một cách hợp lý giúp phần giải thích rõ ràng.",
+          "usage_pattern": "judicious use of + noun"
+        },
+        {
+          "word": "impartial",
+          "meaning_vi": "công bằng, không thiên vị bên nào",
+          "part_of_speech": "adjective",
+          "example": "An impartial reviewer will assess both proposals.",
+          "example_translation": "Một người đánh giá không thiên vị sẽ xem xét cả hai đề xuất.",
+          "usage_pattern": "an impartial assessment / reviewer"
+        },
+        {
+          "word": "disinterested",
+          "meaning_vi": "công tâm vì không có lợi ích riêng trong sự việc",
+          "part_of_speech": "adjective",
+          "example": "We sought advice from a disinterested expert with no ties to either bidder.",
+          "example_translation": "Chúng tôi xin ý kiến một chuyên gia công tâm, không liên hệ với bên dự thầu nào.",
+          "usage_pattern": "a disinterested observer / expert; khác uninterested"
+        },
+        {
+          "word": "conscientious",
+          "meaning_vi": "tận tâm và có trách nhiệm",
+          "part_of_speech": "adjective",
+          "example": "A conscientious editor checks names as carefully as numbers.",
+          "example_translation": "Biên tập viên tận tâm kiểm tra tên riêng kỹ như kiểm tra số liệu.",
+          "usage_pattern": "a conscientious worker / approach"
+        },
+        {
+          "word": "complicity",
+          "meaning_vi": "sự đồng lõa; việc cùng góp phần vào hành vi sai trái",
+          "part_of_speech": "noun",
+          "example": "The inquiry examined possible complicity in falsifying the records.",
+          "example_translation": "Cuộc điều tra xem xét khả năng có sự đồng lõa trong việc làm giả hồ sơ.",
+          "usage_pattern": "complicity in + noun / V-ing"
+        },
+        {
+          "word": "due diligence",
+          "meaning_vi": "việc kiểm tra kỹ cần thiết trước khi quyết định",
+          "part_of_speech": "phrase",
+          "example": "The team conducted due diligence before selecting the software vendor.",
+          "example_translation": "Nhóm đã thẩm tra kỹ trước khi chọn nhà cung cấp phần mềm.",
+          "usage_pattern": "conduct / carry out due diligence"
+        },
+        {
+          "word": "conflict of interest",
+          "meaning_vi": "xung đột giữa lợi ích riêng và trách nhiệm chung",
+          "part_of_speech": "phrase",
+          "example": "She declared a conflict of interest and left the selection panel.",
+          "example_translation": "Cô ấy khai báo xung đột lợi ích và rút khỏi hội đồng tuyển chọn.",
+          "usage_pattern": "declare / disclose a conflict of interest"
+        }
+      ]
+    }
+  ]
+}

@@ -4,10 +4,11 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from .core import (validate_entry,fingerprint,occurrence_fingerprint,schedule,InputError,
                    validate_progress,clean_text,MAX_READING_CHARS)
-from ..models import Vocabulary,Reading,ReviewLog,LessonAttempt,ReadingQuestion,VocabularyOccurrence,ToeicAttempt
-VOCAB_FIELDS=('word','pos','meaning_vi','synonyms','paraphrases','example','example_vi','context',
+from ..models import Vocabulary,Reading,ReviewLog,LessonAttempt,ReadingQuestion,VocabularyOccurrence,ToeicAttempt,LearningDay
+from .motivation import record_learning, learning_dates, validate_study_days
+VOCAB_FIELDS=('word','pos','meaning_vi','synonyms','paraphrases','example','example_vi','context','usage_pattern',
               'note','tags','source_label','origin','verified','interval_days','ease','repetitions','lapses')
-BACKUP_VERSION=4
+BACKUP_VERSION=5
 MAX_BACKUP_BYTES=8*1024*1024
 
 def serial_vocab(v):
@@ -71,6 +72,7 @@ def review_entry(user,vocab_id,rating,token,mode='flashcard',correct=None):
     for key,value in values.items(): setattr(v,key,value)
     v.save(update_fields=[*values,'updated_at'])
     ReviewLog.objects.create(owner=user,vocabulary=v,token=token,rating=rating,mode=mode,correct=correct,next_due=v.due_at)
+    record_learning(user)
     return {'duplicate':False,'due_at':v.due_at.isoformat(),'interval_days':v.interval_days}
 
 def export_library(user):
@@ -78,14 +80,22 @@ def export_library(user):
     vocabulary=list(Vocabulary.objects.filter(owner=user).prefetch_related('occurrences'))
     reviews=list(ReviewLog.objects.filter(owner=user))
     toeic_attempts=list(ToeicAttempt.objects.filter(owner=user))
+    from ..models import FoundationAttempt, LearningProfile
+    profile=LearningProfile.objects.filter(owner=user).first()
+    foundation=list(FoundationAttempt.objects.filter(owner=user))
     return {'format':'lexiread-backup','version':BACKUP_VERSION,'exported_at':timezone.now().isoformat(),
-            'counts':{'readings':len(readings),'vocabulary':len(vocabulary),'reviews':len(reviews),'toeic_attempts':len(toeic_attempts)},
+            'learning_profile':{k:getattr(profile,k) for k in ('level','goal','daily_minutes')} if profile else None,
+            'foundation_attempts':[{'kind':a.kind,'unit_id':a.unit_id,'token':str(a.token),'answers':a.answers,
+                'snapshot':a.snapshot,'created_at':a.created_at.isoformat()} for a in foundation],
+            'study_days':[day.isoformat() for day in sorted(learning_dates(user))],
+            'counts':{'readings':len(readings),'vocabulary':len(vocabulary),'reviews':len(reviews),'toeic_attempts':len(toeic_attempts),'foundation_attempts':len(foundation)},
             'readings':[backup_reading(r) for r in readings],
             'vocabulary':[backup_vocab(v) for v in vocabulary],
             'reviews':[{'vocabulary_id':str(r.vocabulary_id),'token':str(r.token),'rating':r.rating,
               'mode':r.mode,'correct':r.correct,'next_due':r.next_due.isoformat(),'created_at':r.created_at.isoformat()}
               for r in reviews],
             'toeic_attempts':[{'set_slug':a.set_slug,'token':str(a.token),'answers':a.answers,
+              'snapshot':a.snapshot,
               'duration_seconds':a.duration_seconds,'created_at':a.created_at.isoformat()} for a in toeic_attempts]}
 
 @transaction.atomic
@@ -94,7 +104,8 @@ def import_library(user,payload):
     if isinstance(payload,list): payload={'vocabulary':payload}
     if not isinstance(payload,dict): raise InputError('Cần một danh sách từ hoặc một backup JSON.')
     is_backup=payload.get('format')=='lexiread-backup'
-    if is_backup and payload.get('version') not in (1,2,3,4): raise InputError('Phiên bản backup chưa được hỗ trợ.')
+    if is_backup and payload.get('version') not in (1,2,3,4,5): raise InputError('Phiên bản backup chưa được hỗ trợ.')
+    study_days=validate_study_days(payload.get('study_days',[])) if is_backup else set()
     entries=payload.get('vocabulary',[]); readings=payload.get('readings',[]) if is_backup else []
     if not isinstance(entries,list) or not isinstance(readings,list):raise InputError('Danh sách bài đọc hoặc từ vựng không hợp lệ.')
     if not is_backup and len(entries)>5000:raise InputError('Mỗi lần nhập danh sách tối đa 5.000 thẻ.')
@@ -122,8 +133,11 @@ def import_library(user,payload):
                 # AI candidates in exported data also have app metadata: remove it.
                 if 'vocabulary' in basic:
                     from .analysis import VOCAB_SCHEMA
-                    basic['vocabulary']=[{k:v[k] for k in VOCAB_SCHEMA['properties']} for v in basic['vocabulary']]
-                analysis=validate_analysis(basic,text)
+                    basic['vocabulary']=[{k:(v.get(k,'') if k=='usage_pattern' else v[k]) for k in VOCAB_SCHEMA['properties']} for v in basic['vocabulary']]
+                snapshot=raw.get('lesson_snapshot') or {}
+                if not isinstance(snapshot,dict): raise InputError('Snapshot bài học không hợp lệ.')
+                english_only=snapshot.get('translation_status')=='not_provided'
+                analysis=validate_analysis(basic,text,require_translations=not english_only)
             r=Reading.objects.create(owner=user,title=title,text=text,source_name=clean_text(raw.get('source_name',''),200),
                 analysis=analysis,import_key=source_id)
             restore_reading_extras(r,raw)
@@ -177,10 +191,14 @@ def import_library(user,payload):
             imported_logs+=int(new)
         toeic_rows=payload.get('toeic_attempts',[]) if payload.get('version')>=4 else []
         if not isinstance(toeic_rows,list) or len(toeic_rows)>10000:raise InputError('Lịch sử TOEIC trong backup không hợp lệ.')
-        from .toeic import get_toeic_set,grade_toeic
+        from .toeic import get_toeic_set,grade_toeic,validate_toeic_set
         for raw in toeic_rows:
             if not isinstance(raw,dict):raise InputError('Lượt TOEIC trong backup không hợp lệ.')
-            practice=get_toeic_set(clean_text(raw.get('set_slug',''),100,True))
+            slug=clean_text(raw.get('set_slug',''),100,True)
+            # Old v4 exports omitted snapshot: recover from immutable bundled originals,
+            # never from the current editor-modified database version.
+            practice=validate_toeic_set(raw['snapshot']) if raw.get('snapshot') else get_toeic_set(slug)
+            if practice['slug']!=slug: raise InputError('Snapshot TOEIC không khớp mã bộ bài.')
             result=grade_toeic(practice,raw.get('answers'))
             try:token=uuid.UUID(raw.get('token',''))
             except (ValueError,TypeError,AttributeError):raise InputError('Mã lượt TOEIC trong backup không hợp lệ.')
@@ -190,13 +208,40 @@ def import_library(user,payload):
             existing=ToeicAttempt.objects.filter(owner=user,token=token).first()
             if existing and existing.set_slug!=practice['slug']:raise InputError('Mã lượt TOEIC xung đột với bộ khác.')
             rec,new=ToeicAttempt.objects.get_or_create(owner=user,token=token,defaults={'set_slug':practice['slug'],
-                'answers':raw['answers'],'result':result,'duration_seconds':duration})
+                'answers':raw['answers'],'result':result,'duration_seconds':duration,'snapshot':practice})
             if new and raw.get('created_at'):
                 created_at=validate_progress({'last_reviewed':raw['created_at']}).get('last_reviewed')
                 ToeicAttempt.objects.filter(pk=rec.pk).update(created_at=created_at)
             imported_toeic+=int(new)
+    foundation_created=0
+    if is_backup and payload.get('version')>=5:
+        from ..models import FoundationAttempt, LearningProfile
+        from .foundation_content import grade, LEVELS
+        from .learning_path import clean_profile
+        rows=payload.get('foundation_attempts',[])
+        if not isinstance(rows,list) or len(rows)>10000:raise InputError('Lịch sử học nền tảng không hợp lệ.')
+        for raw in rows:
+            if not isinstance(raw,dict) or raw.get('kind') not in ('grammar','vocabulary'):raise InputError('Loại bài nền tảng chưa hợp lệ.')
+            snapshot=raw.get('snapshot',{})
+            if (not isinstance(snapshot,dict) or snapshot.get('kind')!=raw['kind'] or
+                snapshot.get('id')!=raw.get('unit_id') or snapshot.get('level') not in LEVELS):
+                raise InputError('Nội dung bài nền tảng không khớp lịch sử.')
+            result=grade(snapshot,raw.get('answers'))
+            token=uuid.UUID(raw.get('token',''))
+            old=FoundationAttempt.objects.filter(owner=user,token=token).first()
+            if old and (old.kind!=raw['kind'] or old.unit_id!=raw['unit_id']):raise InputError('Mã lượt học nền tảng xung đột.')
+            rec,made=FoundationAttempt.objects.get_or_create(owner=user,token=token,defaults={
+                'kind':raw['kind'],'unit_id':clean_text(raw['unit_id'],100,True),'snapshot':snapshot,'answers':raw['answers'],'result':result})
+            if made and raw.get('created_at'):
+                created_at=validate_progress({'last_reviewed':raw['created_at']}).get('last_reviewed')
+                FoundationAttempt.objects.filter(pk=rec.pk).update(created_at=created_at)
+            foundation_created+=int(made)
+        if payload.get('learning_profile') is not None:
+            fields=clean_profile(payload['learning_profile'])
+            LearningProfile.objects.get_or_create(owner=user,defaults=fields)
+    LearningDay.objects.bulk_create([LearningDay(owner=user,date=day) for day in study_days],ignore_conflicts=True)
     return {'created':created,'skipped':len(entries)-created,'readings_created':new_readings,
-            'reviews_created':imported_logs,'toeic_attempts_created':imported_toeic}
+            'reviews_created':imported_logs,'toeic_attempts_created':imported_toeic,'foundation_attempts_created':foundation_created}
 
 
 def backup_vocab(v):
@@ -233,6 +278,9 @@ def restore_reading_extras(r,raw):
         token=uuid.UUID(a.get('token',''))
         rec,made=LessonAttempt.objects.get_or_create(reading=r,token=token,defaults={'answers':a['answers'],'result':result})
         if made:
+            if a.get('created_at'):
+                created_at=validate_progress({'last_reviewed':a['created_at']}).get('last_reviewed')
+                LessonAttempt.objects.filter(pk=rec.pk).update(created_at=created_at)
             r.progress['quiz_best']=max(r.progress.get('quiz_best',0),result['score'])
             r.progress['quiz_total']=result['total'];r.progress['quiz_attempts']=r.progress.get('quiz_attempts',0)+1
     qs=raw.get('qa_history',[])

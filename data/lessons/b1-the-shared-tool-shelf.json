@@ -1,0 +1,175 @@
+{
+  "slug": "b1-the-shared-tool-shelf",
+  "title": "The Shared Tool Shelf",
+  "level": "B1",
+  "topic": "Cộng đồng",
+  "summary": "Một tủ dụng cụ chung cần cả sự tin tưởng lẫn những quy tắc dễ hiểu.",
+  "track": "general",
+  "revision": 1,
+  "order": 106,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "When a shelf fell down in her flat, Amina realised that she owned plenty of books but no drill. Buying a tool for one small job seemed wasteful. She asked in her building's message group, and three neighbours offered to lend her one. Their replies gave her an idea: perhaps the building could have a shared tool shelf in the entrance hall.\n\nThe neighbours liked the idea, but they disagreed about how it should work. One person wanted a deposit for every item. Another thought this would discourage people from borrowing. They eventually chose a simpler system: borrowers wrote their name and return date in a notebook. The shelf held only basic hand tools. Electrical tools remained with their owners, who could explain how to use them safely.\n\nAfter a month, most items had been returned on time. A missing hammer caused some concern until its borrower explained that she had left it with another neighbour. The group added one rule: return a tool before passing it to somebody else. Amina learned that sharing did not mean having no rules. It meant making rules that people could understand and actually follow.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Khi một chiếc kệ trong căn hộ rơi xuống, Amina nhận ra mình có nhiều sách nhưng không có máy khoan. Mua dụng cụ chỉ cho một việc nhỏ có vẻ lãng phí. Cô hỏi trong nhóm nhắn tin của tòa nhà và ba hàng xóm ngỏ ý cho mượn. Những câu trả lời gợi cho cô ý tưởng đặt một tủ dụng cụ chung ở sảnh."
+      },
+      {
+        "index": 1,
+        "vi": "Hàng xóm thích ý tưởng nhưng bất đồng về cách vận hành. Một người muốn thu tiền đặt cọc từng món; người khác nghĩ điều đó sẽ khiến mọi người ngại mượn. Cuối cùng họ chọn cách đơn giản hơn: người mượn ghi tên và ngày trả vào sổ. Tủ chỉ có dụng cụ cầm tay cơ bản. Dụng cụ điện vẫn do chủ giữ để hướng dẫn cách dùng an toàn."
+      },
+      {
+        "index": 2,
+        "vi": "Sau một tháng, phần lớn dụng cụ được trả đúng hạn. Một chiếc búa mất khiến mọi người lo, cho đến khi người mượn giải thích đã đưa nó cho hàng xóm khác. Nhóm thêm một quy tắc: trả dụng cụ trước khi chuyển cho người khác. Amina hiểu rằng chia sẻ không có nghĩa là không có quy tắc, mà là có quy tắc dễ hiểu và có thể thực hiện."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "wasteful",
+        "pos": "word / phrase",
+        "meaning_vi": "lãng phí",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "When a shelf fell down in her flat, Amina realised that she owned plenty of books but no drill. Buying a tool for one small job seemed wasteful. She asked in her building's message group, and three neighbours offered to lend her one. Their replies gave her an idea: perhaps the building could have a shared tool shelf in the entrance hall.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Cộng đồng"
+        ]
+      },
+      {
+        "word": "lend",
+        "pos": "word / phrase",
+        "meaning_vi": "cho mượn",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "When a shelf fell down in her flat, Amina realised that she owned plenty of books but no drill. Buying a tool for one small job seemed wasteful. She asked in her building's message group, and three neighbours offered to lend her one. Their replies gave her an idea: perhaps the building could have a shared tool shelf in the entrance hall.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Cộng đồng"
+        ]
+      },
+      {
+        "word": "deposit",
+        "pos": "word / phrase",
+        "meaning_vi": "tiền đặt cọc",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The neighbours liked the idea, but they disagreed about how it should work. One person wanted a deposit for every item. Another thought this would discourage people from borrowing. They eventually chose a simpler system: borrowers wrote their name and return date in a notebook. The shelf held only basic hand tools. Electrical tools remained with their owners, who could explain how to use them safely.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Cộng đồng"
+        ]
+      },
+      {
+        "word": "discourage",
+        "pos": "word / phrase",
+        "meaning_vi": "khiến ai ngại hoặc không muốn làm",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "The neighbours liked the idea, but they disagreed about how it should work. One person wanted a deposit for every item. Another thought this would discourage people from borrowing. They eventually chose a simpler system: borrowers wrote their name and return date in a notebook. The shelf held only basic hand tools. Electrical tools remained with their owners, who could explain how to use them safely.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Cộng đồng"
+        ]
+      },
+      {
+        "word": "concern",
+        "pos": "word / phrase",
+        "meaning_vi": "sự lo ngại",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "After a month, most items had been returned on time. A missing hammer caused some concern until its borrower explained that she had left it with another neighbour. The group added one rule: return a tool before passing it to somebody else. Amina learned that sharing did not mean having no rules. It meant making rules that people could understand and actually follow.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Cộng đồng"
+        ]
+      },
+      {
+        "word": "follow",
+        "pos": "word / phrase",
+        "meaning_vi": "tuân theo",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "After a month, most items had been returned on time. A missing hammer caused some concern until its borrower explained that she had left it with another neighbour. The group added one rule: return a tool before passing it to somebody else. Amina learned that sharing did not mean having no rules. It meant making rules that people could understand and actually follow.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "B1",
+          "Cộng đồng"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "Why did Amina first contact her neighbours?",
+      "options": [
+        "She needed to borrow a drill",
+        "She wanted to sell her books",
+        "She was moving out"
+      ],
+      "answer": 0,
+      "paragraph_index": 0,
+      "evidence": "she owned plenty of books but no drill.",
+      "explanation_vi": "Cô cần máy khoan để xử lý chiếc kệ."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "Why were electrical tools kept by their owners?",
+      "options": [
+        "The entrance hall was too cold",
+        "Borrowers refused to pay a deposit",
+        "Owners could explain safe use"
+      ],
+      "answer": 2,
+      "paragraph_index": 1,
+      "evidence": "their owners, who could explain how to use them safely.",
+      "explanation_vi": "Chủ dụng cụ có thể hướng dẫn sử dụng an toàn."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "The neighbours decided to collect a deposit for every tool.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 1,
+      "evidence": "They eventually chose a simpler system: borrowers wrote their name and return date in a notebook.",
+      "explanation_vi": "Tiền đặt cọc chỉ là đề xuất. Nhóm chọn hệ thống ghi tên và ngày trả."
+    }
+  ],
+  "faqs": []
+}

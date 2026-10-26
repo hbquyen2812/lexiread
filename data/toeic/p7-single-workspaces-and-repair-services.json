@@ -1,0 +1,347 @@
+{
+  "slug": "p7-single-workspaces-and-repair-services",
+  "title": "Single Documents · Shared Spaces & Services",
+  "mode": "part-7",
+  "mode_label": "Đọc hiểu",
+  "parts": [
+    7
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 20,
+  "description": "Tìm thông tin trong quy định đặt phòng và email về một sự kiện sửa đồ, rồi chọn cách xử lý phù hợp với từng tình huống.",
+  "instructions": "Đọc các tài liệu trong mỗi nhóm và chọn một đáp án, đối chiếu thông tin giữa các tài liệu khi cần.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "workspace-policy",
+      "kind": "Member notice",
+      "heading": "North Quay Workrooms: meeting-room arrangements",
+      "body": "North Quay Workrooms\nMember notice — effective 1 November\n\nOur meeting rooms are intended for small client meetings and collaborative work. Members may book a room for up to three hours per day. Two hours are included in the monthly membership; additional time costs $12 per hour. These included hours apply each day and cannot be transferred to another member.\n\nAll reservations must name a member who will be present throughout the booking. Guests do not need memberships, but they must sign in at reception. If a meeting has not started within fifteen minutes of its booked time and reception has not received notice of a delay, staff may release the room to another member. To keep a delayed reservation, telephone reception before that fifteen-minute limit.\n\nFrom November, the small meeting room will contain a video-conferencing screen. Members who need help connecting a laptop should request a ten-minute orientation when booking; reception cannot guarantee immediate technical support during a meeting. The larger room will continue to have a whiteboard only.\n\nFood is allowed in both rooms, provided members leave the tables clean. Deliveries must be collected from the building entrance. Please report any equipment problem before leaving so that it can be addressed before the next booking."
+    },
+    {
+      "id": "repair-service-email",
+      "kind": "Email",
+      "heading": "A change to the neighborhood repair event",
+      "body": "To: Registered participants\nFrom: Lena Ortiz, Community Workshop Coordinator\nSubject: Your appliance-repair appointment\n\nThank you for registering for Saturday's neighborhood repair event. Demand has exceeded our original capacity, so we have moved the event from Room 2 to the ground-floor workshop. Your appointment time is unchanged. Please enter through the side door beside the bicycle racks; the main entrance will be used for a separate exhibition.\n\nEach appointment lasts thirty minutes and covers one small electrical appliance. Our volunteers will first assess the item and explain whether a safe repair is possible. They cannot guarantee that every item can be fixed. Labor is free, but you will need to approve and pay for any replacement part before it is ordered. We do not accept microwaves or refrigeration equipment.\n\nBring the appliance, its power cable and any instruction booklet you still have. A short description of the fault will help the volunteer use your appointment efficiently. If the appliance is too large to carry safely, contact us before Saturday rather than bringing it without notice.\n\nIf you can no longer attend, please cancel using the link in your confirmation email. We have a waiting list and can offer unused appointments to other residents. Please do not transfer your appointment privately, because the replacement participant's appliance must be checked for suitability first."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 7,
+      "prompt": "What is the main purpose of the North Quay notice?",
+      "options": [
+        "To explain how members should book and use meeting rooms",
+        "To advertise memberships for a new building",
+        "To announce that all meeting rooms are closing",
+        "To request applications for a reception position"
+      ],
+      "answer": 0,
+      "explanation_vi": "Thông báo hướng dẫn hội viên đặt và sử dụng phòng họp, từ phí, khách mời đến việc đến muộn và dùng thiết bị. Không có thông tin đóng phòng hoặc tuyển nhân viên.",
+      "evidence": "Our meeting rooms are intended for small client meetings and collaborative work.",
+      "document_ids": [
+        "workspace-policy"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 7,
+      "prompt": "How much will a member pay for a three-hour meeting-room booking on one day?",
+      "options": [
+        "$36",
+        "$12",
+        "$0",
+        "$24"
+      ],
+      "answer": 1,
+      "explanation_vi": "Hội viên được dùng hai giờ mỗi ngày trong gói đã trả. Đặt ba giờ thì chỉ trả thêm một giờ, tức $12. $24 tính thừa một giờ; $36 bỏ qua hai giờ đã được bao gồm.",
+      "evidence": "Two hours are included in the monthly membership; additional time costs $12 per hour.",
+      "document_ids": [
+        "workspace-policy"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 7,
+      "prompt": "A meeting is scheduled for 10:00, but the member expects to arrive at 10:20. What should the member do to keep the reservation?",
+      "options": [
+        "Wait until 10:20 and then request the same room",
+        "Pay for an additional hour before midnight",
+        "Telephone reception before 10:15",
+        "Ask a guest to change the membership name"
+      ],
+      "answer": 2,
+      "explanation_vi": "Nếu muộn quá 15 phút mà không báo, phòng có thể được dành cho người khác. Người đặt phòng cần gọi trước 10:15 để giữ chỗ; thông báo không yêu cầu trả thêm một giờ.",
+      "evidence": "To keep a delayed reservation, telephone reception before that fifteen-minute limit.",
+      "document_ids": [
+        "workspace-policy"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 7,
+      "prompt": "Why should a member request an orientation when booking the small room?",
+      "options": [
+        "All guests must pass a computer test before entering.",
+        "The screen may be used only by reception staff.",
+        "The larger room has no tables.",
+        "Technical assistance may not be immediately available during the meeting."
+      ],
+      "answer": 3,
+      "explanation_vi": "Lễ tân không chắc có thể hỗ trợ kỹ thuật ngay trong buổi họp, nên hội viên cần xin hướng dẫn khi đặt phòng. Không có bài kiểm tra hoặc quy định chỉ lễ tân được dùng màn hình.",
+      "evidence": "reception cannot guarantee immediate technical support during a meeting.",
+      "document_ids": [
+        "workspace-policy"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 7,
+      "prompt": "In the notice, the word \"release\" is closest in meaning to which phrase?",
+      "options": [
+        "Make available for someone else to use",
+        "Repair before the meeting begins",
+        "Increase the hourly price of",
+        "Move to a different floor"
+      ],
+      "answer": 0,
+      "explanation_vi": "Release the room to another member nghĩa là bỏ giữ phòng và cho hội viên khác dùng, không phải sửa phòng hoặc thay giá.",
+      "evidence": "staff may release the room to another member.",
+      "document_ids": [
+        "workspace-policy"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 7,
+      "prompt": "Why was the repair event moved to the ground-floor workshop?",
+      "options": [
+        "The workshop began accepting large commercial appliances.",
+        "More people registered than the original space could accommodate.",
+        "The volunteers changed all appointment times.",
+        "The main entrance was permanently closed."
+      ],
+      "answer": 1,
+      "explanation_vi": "Số người đăng ký vượt sức chứa ban đầu nên sự kiện được chuyển sang phòng rộng hơn. Giờ hẹn vẫn giữ nguyên và sự kiện vẫn chỉ nhận đồ điện nhỏ.",
+      "evidence": "Demand has exceeded our original capacity, so we have moved the event from Room 2 to the ground-floor workshop.",
+      "document_ids": [
+        "repair-service-email"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 7,
+      "prompt": "Which expense might a participant need to pay?",
+      "options": [
+        "A fee for using the side entrance",
+        "A charge for every unsuccessful assessment",
+        "The cost of an approved replacement part",
+        "An hourly fee for volunteer labor"
+      ],
+      "answer": 2,
+      "explanation_vi": "Công sửa miễn phí, nhưng phụ tùng thay cần được người tham dự đồng ý và thanh toán trước khi đặt. Không có phí đánh giá hay phí vào cửa.",
+      "evidence": "Labor is free, but you will need to approve and pay for any replacement part before it is ordered.",
+      "document_ids": [
+        "repair-service-email"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 7,
+      "prompt": "Which item would be excluded under the stated rules?",
+      "options": [
+        "A small desk lamp with its cable",
+        "A portable fan with a damaged switch",
+        "A compact electric hand mixer",
+        "A microwave oven"
+      ],
+      "answer": 3,
+      "explanation_vi": "Email nói rõ không nhận lò vi sóng hoặc thiết bị làm lạnh. Các đồ điện nhỏ còn lại không nằm trong nhóm bị loại theo quy định.",
+      "evidence": "We do not accept microwaves or refrigeration equipment.",
+      "document_ids": [
+        "repair-service-email"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 7,
+      "prompt": "What are participants encouraged to prepare about their appliance?",
+      "options": [
+        "A short explanation of what is wrong with it",
+        "Proof that it was purchased during the current year",
+        "A written guarantee that it can be repaired",
+        "A photograph of every internal component"
+      ],
+      "answer": 0,
+      "explanation_vi": "Một mô tả ngắn về lỗi giúp tình nguyện viên tận dụng tốt thời gian hẹn. Không có yêu cầu về hóa đơn mua trong năm, cam kết sửa được hoặc ảnh của mọi linh kiện.",
+      "evidence": "A short description of the fault will help the volunteer use your appointment efficiently.",
+      "document_ids": [
+        "repair-service-email"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 7,
+      "prompt": "Why are participants asked not to give their appointment directly to another person?",
+      "options": [
+        "Private transfers would change the opening time of the event.",
+        "The new person's appliance needs to be assessed for suitability first.",
+        "The waiting list contains only professional technicians.",
+        "Replacement participants must pay for two appointments."
+      ],
+      "answer": 1,
+      "explanation_vi": "Trước khi đổi người, ban tổ chức cần biết đồ của người mới có phù hợp phạm vi sửa hay không. Các đáp án khác thêm điều kiện không được nêu.",
+      "evidence": "the replacement participant's appliance must be checked for suitability first.",
+      "document_ids": [
+        "repair-service-email"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "collaborative",
+      "pos": "adjective",
+      "meaning_vi": "có tính hợp tác, cùng thực hiện",
+      "usage_pattern": "collaborative work/project",
+      "example": "The room is designed for collaborative work.",
+      "example_vi": "Phòng được thiết kế để mọi người cùng làm việc.",
+      "synonyms": [
+        "joint"
+      ],
+      "paraphrases": [
+        "involving people working together"
+      ],
+      "context": "The room is designed for collaborative work.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Shared Spaces & Services",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "throughout",
+      "pos": "preposition",
+      "meaning_vi": "trong suốt toàn bộ khoảng thời gian",
+      "usage_pattern": "throughout a meeting/booking",
+      "example": "A member must remain present throughout the booking.",
+      "example_vi": "Một hội viên phải có mặt trong suốt thời gian đặt phòng.",
+      "synonyms": [
+        "during all of"
+      ],
+      "paraphrases": [
+        "for the whole duration of"
+      ],
+      "context": "A member must remain present throughout the booking.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Shared Spaces & Services",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "orientation",
+      "pos": "noun",
+      "meaning_vi": "buổi hướng dẫn làm quen",
+      "usage_pattern": "request/attend an orientation",
+      "example": "New users can request a short equipment orientation.",
+      "example_vi": "Người dùng mới có thể yêu cầu một buổi hướng dẫn ngắn về thiết bị.",
+      "synonyms": [
+        "introduction"
+      ],
+      "paraphrases": [
+        "an explanation that helps someone use a place or system"
+      ],
+      "context": "New users can request a short equipment orientation.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Shared Spaces & Services",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "assess",
+      "pos": "verb",
+      "meaning_vi": "đánh giá tình trạng hoặc khả năng",
+      "usage_pattern": "assess an item for safety; assess whether",
+      "example": "A volunteer will assess whether a safe repair is possible.",
+      "example_vi": "Tình nguyện viên sẽ đánh giá xem có thể sửa an toàn hay không.",
+      "synonyms": [
+        "evaluate"
+      ],
+      "paraphrases": [
+        "examine something to decide its condition or suitability"
+      ],
+      "context": "A volunteer will assess whether a safe repair is possible.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Shared Spaces & Services",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "exceed",
+      "pos": "verb",
+      "meaning_vi": "vượt quá",
+      "usage_pattern": "exceed capacity/a limit/expectations",
+      "example": "Registration exceeded the room's original capacity.",
+      "example_vi": "Số đăng ký vượt sức chứa ban đầu của phòng.",
+      "synonyms": [
+        "surpass"
+      ],
+      "paraphrases": [
+        "be greater than a stated amount"
+      ],
+      "context": "Registration exceeded the room's original capacity.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Shared Spaces & Services",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "suitability",
+      "pos": "noun",
+      "meaning_vi": "mức độ phù hợp",
+      "usage_pattern": "check something for suitability",
+      "example": "The coordinator checks each appliance for suitability.",
+      "example_vi": "Điều phối viên kiểm tra xem từng thiết bị có phù hợp với chương trình không.",
+      "synonyms": [
+        "appropriateness"
+      ],
+      "paraphrases": [
+        "how well something meets the requirements"
+      ],
+      "context": "The coordinator checks each appliance for suitability.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Single Documents · Shared Spaces & Services",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "a2-learning-to-swim",
+  "title": "Learning to Swim Again",
+  "level": "A2",
+  "topic": "Thể thao",
+  "summary": "Một người lớn học bơi theo từng bước nhỏ thay vì so sánh với người khác.",
+  "track": "general",
+  "revision": 1,
+  "order": 105,
+  "published": true,
+  "author": "LexiRead",
+  "provenance": "Bài luyện gốc do LexiRead biên soạn. Nhân vật và dự án trong bài là giả định. Không phải đề thi chính thức.",
+  "level_note": "Mức đọc do người biên soạn ước lượng; không phải chứng nhận CEFR hoặc band IELTS.",
+  "text": "When David joined a swimming class, he felt nervous. He could stand in the shallow end of the pool, but he did not like putting his face in the water. Most people in his group were beginners too. Their teacher, Eva, said that the first lesson was about feeling comfortable, not swimming quickly.\n\nEva showed them how to breathe out into the water. David practised while holding the side of the pool. At first, he stopped after a few seconds. Eva asked him to rest and try again when he was ready. By the end of the lesson, he could keep his face in the water for longer without feeling afraid.\n\nAt home, David wanted to watch videos of fast swimmers. Then he remembered Eva's advice: compare your progress with your own first day. He booked another lesson. He still could not swim across the pool, but he had learned something useful. For him, coming back was already a success.",
+  "analysis": {
+    "translations": [
+      {
+        "index": 0,
+        "vi": "Khi tham gia lớp bơi, David cảm thấy lo. Anh có thể đứng ở đầu nông của bể nhưng không thích úp mặt xuống nước. Phần lớn người trong nhóm cũng mới bắt đầu. Giáo viên Eva nói bài học đầu tiên nhằm tạo cảm giác thoải mái, chứ không phải bơi nhanh."
+      },
+      {
+        "index": 1,
+        "vi": "Eva hướng dẫn họ thở ra trong nước. David tập trong khi bám thành bể. Ban đầu anh dừng sau vài giây. Eva bảo anh nghỉ và thử lại khi sẵn sàng. Cuối buổi, anh có thể úp mặt trong nước lâu hơn mà không thấy sợ."
+      },
+      {
+        "index": 2,
+        "vi": "Về nhà, David muốn xem video những người bơi nhanh. Rồi anh nhớ lời Eva: hãy so tiến bộ với ngày đầu của chính mình. Anh đặt buổi học tiếp theo. Anh vẫn chưa bơi hết bể nhưng đã học được điều hữu ích. Với anh, quay lại học đã là một thành công."
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "shallow",
+        "pos": "word / phrase",
+        "meaning_vi": "nông",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "When David joined a swimming class, he felt nervous. He could stand in the shallow end of the pool, but he did not like putting his face in the water. Most people in his group were beginners too. Their teacher, Eva, said that the first lesson was about feeling comfortable, not swimming quickly.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Thể thao"
+        ]
+      },
+      {
+        "word": "beginners",
+        "pos": "word / phrase",
+        "meaning_vi": "người mới bắt đầu",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "When David joined a swimming class, he felt nervous. He could stand in the shallow end of the pool, but he did not like putting his face in the water. Most people in his group were beginners too. Their teacher, Eva, said that the first lesson was about feeling comfortable, not swimming quickly.",
+        "paragraph_index": 0,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Thể thao"
+        ]
+      },
+      {
+        "word": "breathe out",
+        "pos": "word / phrase",
+        "meaning_vi": "thở ra",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Eva showed them how to breathe out into the water. David practised while holding the side of the pool. At first, he stopped after a few seconds. Eva asked him to rest and try again when he was ready. By the end of the lesson, he could keep his face in the water for longer without feeling afraid.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Thể thao"
+        ]
+      },
+      {
+        "word": "afraid",
+        "pos": "word / phrase",
+        "meaning_vi": "sợ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "Eva showed them how to breathe out into the water. David practised while holding the side of the pool. At first, he stopped after a few seconds. Eva asked him to rest and try again when he was ready. By the end of the lesson, he could keep his face in the water for longer without feeling afraid.",
+        "paragraph_index": 1,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Thể thao"
+        ]
+      },
+      {
+        "word": "progress",
+        "pos": "word / phrase",
+        "meaning_vi": "sự tiến bộ",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "At home, David wanted to watch videos of fast swimmers. Then he remembered Eva's advice: compare your progress with your own first day. He booked another lesson. He still could not swim across the pool, but he had learned something useful. For him, coming back was already a success.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Thể thao"
+        ]
+      },
+      {
+        "word": "success",
+        "pos": "word / phrase",
+        "meaning_vi": "thành công",
+        "synonyms": [],
+        "paraphrases": [],
+        "context": "At home, David wanted to watch videos of fast swimmers. Then he remembered Eva's advice: compare your progress with your own first day. He booked another lesson. He still could not swim across the pool, but he had learned something useful. For him, coming back was already a success.",
+        "paragraph_index": 2,
+        "example": "",
+        "example_vi": "",
+        "note": "",
+        "tags": [
+          "A2",
+          "Thể thao"
+        ]
+      }
+    ],
+    "grammar": []
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "detail",
+      "prompt": "What was the aim of the first lesson?",
+      "options": [
+        "Crossing the whole pool",
+        "Feeling comfortable in water",
+        "Swimming as fast as possible"
+      ],
+      "answer": 1,
+      "paragraph_index": 0,
+      "evidence": "the first lesson was about feeling comfortable, not swimming quickly.",
+      "explanation_vi": "Buổi đầu tập trung vào cảm giác thoải mái trong nước."
+    },
+    {
+      "id": "q2",
+      "kind": "detail",
+      "prompt": "What did Eva tell David to compare?",
+      "options": [
+        "His progress with his first day",
+        "His speed with expert swimmers",
+        "The prices of different pools"
+      ],
+      "answer": 0,
+      "paragraph_index": 2,
+      "evidence": "compare your progress with your own first day.",
+      "explanation_vi": "Điểm so sánh là chính bản thân David trong ngày đầu."
+    },
+    {
+      "id": "q3",
+      "kind": "tfng",
+      "prompt": "David could swim across the pool after his first lesson.",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+      ],
+      "answer": 1,
+      "paragraph_index": 2,
+      "evidence": "He still could not swim across the pool",
+      "explanation_vi": "Anh vẫn chưa bơi hết bể: FALSE."
+    }
+  ],
+  "faqs": []
+}

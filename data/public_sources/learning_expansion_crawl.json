@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-26T06:27:38.626145+00:00",
+  "mode": "metadata_only",
+  "sources": [
+    {
+      "id": "british-council-reading-lessons",
+      "url": "https://takeielts.britishcouncil.org/teach-ielts/teaching-resources/lesson-plans-reading",
+      "links": [],
+      "status": "robots_denied_or_unavailable"
+    },
+    {
+      "id": "iibc-toeic-samples",
+      "url": "https://www.iibc-global.org/toeic/test/lr/about/format.html",
+      "links": [
+        {
+          "title": "Part5",
+          "url": "https://www.iibc-global.org/toeic/test/lr/about/format/sample05.html?hsLang=ja",
+          "heading": "サンプル問題について"
+        },
+        {
+          "title": "Part6",
+          "url": "https://www.iibc-global.org/toeic/test/lr/about/format/sample06.html?hsLang=ja",
+          "heading": "サンプル問題について"
+        },
+        {
+          "title": "Part7-1",
+          "url": "https://www.iibc-global.org/toeic/test/lr/about/format/sample07_01.html?hsLang=ja",
+          "heading": "サンプル問題について"
+        },
+        {
+          "title": "Part7-2",
+          "url": "https://www.iibc-global.org/toeic/test/lr/about/format/sample07_02.html?hsLang=ja",
+          "heading": "サンプル問題について"
+        },
+        {
+          "title": "Part7-3",
+          "url": "https://www.iibc-global.org/toeic/test/lr/about/format/sample07_03.html?hsLang=ja",
+          "heading": "サンプル問題について"
+        },
+        {
+          "title": "Part7-4",
+          "url": "https://www.iibc-global.org/toeic/test/lr/about/format/sample07_04.html?hsLang=ja",
+          "heading": "サンプル問題について"
+        }
+      ],
+      "status": "ok",
+      "http_status": 200,
+      "final_url": "https://www.iibc-global.org/toeic/test/lr/about/format.html",
+      "sha256": "d8791ca8eb08d905660591be6baa2533fbb5a539722f08e735a4dfaa75156a43",
+      "bytes_read": 610182
+    }
+  ]
+}

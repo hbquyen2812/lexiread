@@ -1,0 +1,391 @@
+{
+  "slug": "p7-triple-event-catering-and-accommodation",
+  "title": "Three-Document Decisions · Catering & Accommodation",
+  "mode": "part-7",
+  "mode_label": "Đọc hiểu",
+  "parts": [
+    7
+  ],
+  "revision": 2,
+  "level": "B1–B2 · ước lượng",
+  "duration_minutes": 27,
+  "description": "Theo dõi ba tài liệu cùng lúc để chốt suất ăn và điều chỉnh đặt phòng; chú ý thông tin nào đã thay đổi.",
+  "instructions": "Đọc các tài liệu trong mỗi nhóm và chọn một đáp án, đối chiếu thông tin giữa các tài liệu khi cần.",
+  "provenance": "Bài luyện do LexiRead tự biên soạn, không phải đề ETS chính thức và không dùng để quy đổi điểm thi.",
+  "editorial": {
+    "created": "2026-10-26",
+    "content_origin": "original_lexiread_practice",
+    "format_reference": "https://www.iibc-global.org/english/toeic/test/lr/about/format.html",
+    "review": "Kiểm tra cấu trúc, đáp án, tính nhất quán nội bộ và bằng chứng; chưa hiệu chuẩn tâm trắc hoặc thẩm định độc lập."
+  },
+  "documents": [
+    {
+      "id": "event-brief",
+      "kind": "Event brief",
+      "heading": "Aster Consulting: team planning lunch",
+      "body": "Planning lunch — 24 June\nInitial attendance estimate: 28 people.\nLunch should be delivered at 12:15 p.m. to the meeting area on Level 2. The building's main entrance is reserved for an exhibition from noon to 1 p.m.; all catering deliveries must therefore use the rear service entrance.\n\nThe meal must include vegetarian choices and gluten-free meals. Guests will not have time to leave the building for lunch. The organizer, Leah Moore, will send final numbers and dietary requirements to the caterer. Reusable serving trays may be stored overnight in the Level 2 kitchen for collection the following morning."
+    },
+    {
+      "id": "catering-quote",
+      "kind": "Menu and quotation",
+      "heading": "Green Table Catering: office lunch options",
+      "body": "All prices include applicable taxes.\nMenu A: sandwich boxes, $16 per person. Vegetarian options available; gluten-free bread is not available.\nMenu B: warm grain bowls, $19 per person. Vegetarian and gluten-free versions available at no extra charge.\nMenu C: hot buffet, $24 per person; minimum order 40 people.\n\nDelivery costs $25, waived when the food subtotal reaches $600. A refundable $40 deposit applies to reusable serving trays and does not count toward the free-delivery threshold. The deposit is refunded after all trays are collected undamaged.\n\nPlease confirm final headcount and dietary requirements at least two working days before delivery. Labelled meals can be packed separately on request. Tray collection is available the next morning between 9 a.m. and 11 a.m."
+    },
+    {
+      "id": "catering-confirmation",
+      "kind": "Email",
+      "heading": "Final order for the 24 June lunch",
+      "body": "To: Green Table Catering\nFrom: Leah Moore\nSent: 20 June\n\nPlease confirm Menu B for 32 people on 24 June. This replaces our initial estimate. Eight guests need vegetarian bowls and three different guests need gluten-free bowls; the remaining guests will have the standard option. Please label and pack the dietary meals separately.\n\nUse reusable serving trays. We agree to the deposit and will keep the trays in the kitchen for collection at 9:30 a.m. the following morning. The delivery time remains 12:15 p.m. Please remind your driver to use the rear service entrance, as specified in our event brief.\n\nSend an invoice showing the food charge, any delivery fee and the refundable tray deposit separately."
+    },
+    {
+      "id": "hotel-rates",
+      "kind": "Rate sheet",
+      "heading": "Marsh Lane Hotel: business travel rates",
+      "body": "Flexible Business Rate: $120 per room per night, including breakfast for one person. No charge for changing or canceling a room up to 6 p.m. two days before the scheduled arrival date. Later cancellation of a room incurs a charge equal to that room's first night. A room can be shortened without penalty before the same deadline.\n\nSaver Rate: $98 per room per night, breakfast not included. Breakfast may be purchased for $15 per person per day. Saver bookings are prepaid and cannot be changed or refunded.\n\nAll rates include taxes. Check-in begins at 3 p.m. Guests arriving earlier may leave luggage with reception without charge."
+    },
+    {
+      "id": "hotel-booking",
+      "kind": "Booking request",
+      "heading": "Rooms for three consultants",
+      "body": "To: Marsh Lane Hotel\nFrom: Aster Consulting Travel Desk\nSent: 1 July\n\nPlease reserve three single rooms under the Flexible Business Rate. The guests are Priya Rao, Omar Diaz and Eva Chen. All three are scheduled to arrive on 10 July and depart on 12 July, for two nights each. Please invoice our company for the room charges. We selected the flexible option because the client may change individual meeting dates.\n\nPriya expects to arrive at noon on 10 July and understands that her room may not yet be ready. Please confirm that she can leave her suitcase at reception."
+    },
+    {
+      "id": "hotel-amendment",
+      "kind": "Email confirmation",
+      "heading": "Amendment accepted: Omar Diaz",
+      "body": "To: Aster Consulting Travel Desk\nFrom: Marsh Lane Hotel Reservations\nSent: 8 July, 5:00 p.m.\n\nWe received your amendment request today at 4:30 p.m. Omar Diaz will now arrive on 11 July and depart on 12 July. His room has been reduced to one night without a change fee. Priya Rao's and Eva Chen's reservations remain as originally booked.\n\nWe will send a revised company invoice reflecting the reduced number of room nights. Breakfast remains included for each night actually booked. Priya is welcome to leave her luggage at reception before check-in, but we cannot guarantee access to her room before 3 p.m."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q01",
+      "part": 7,
+      "prompt": "How many standard bowls should the caterer prepare for the final order?",
+      "options": [
+        "21",
+        "17",
+        "24",
+        "28"
+      ],
+      "answer": 0,
+      "explanation_vi": "Số khách cuối cùng là 32. Có tám người ăn chay và ba người khác cần suất không gluten, nên số suất tiêu chuẩn là 32 − 8 − 3 = 21. Đáp án 17 dùng nhầm ước tính cũ 28 người; 24 chỉ trừ nhóm ăn chay. Cụm “different guests” cho biết hai nhóm không trùng nhau.",
+      "evidence": "Eight guests need vegetarian bowls and three different guests need gluten-free bowls; the remaining guests will have the standard option.",
+      "document_ids": [
+        "event-brief",
+        "catering-quote",
+        "catering-confirmation"
+      ]
+    },
+    {
+      "id": "q02",
+      "part": 7,
+      "prompt": "Why is Menu B suitable while Menu A is not?",
+      "options": [
+        "Menu A can be delivered only after 1 p.m.",
+        "Menu B can provide the required gluten-free meals.",
+        "Menu B is the least expensive option on the rate sheet.",
+        "Menu A is available only for groups of at least forty."
+      ],
+      "answer": 1,
+      "explanation_vi": "Bản yêu cầu sự kiện có suất không gluten. Báo giá nói thực đơn A không có bánh mì không gluten, còn thực đơn B đáp ứng được. A rẻ hơn B; điều kiện tối thiểu 40 người thuộc thực đơn C, không phải A.",
+      "evidence": "Menu B: warm grain bowls, $19 per person. Vegetarian and gluten-free versions available at no extra charge.",
+      "document_ids": [
+        "event-brief",
+        "catering-quote",
+        "catering-confirmation"
+      ]
+    },
+    {
+      "id": "q03",
+      "part": 7,
+      "prompt": "What amount should the caterer initially invoice, including the refundable deposit?",
+      "options": [
+        "$633",
+        "$673",
+        "$648",
+        "$608"
+      ],
+      "answer": 2,
+      "explanation_vi": "Tiền thức ăn là 32 × $19 = $608, đạt ngưỡng $600 nên được miễn phí giao $25. Cộng khoản đặt cọc khay $40, hóa đơn ban đầu là $648. $608 bỏ sót đặt cọc; $673 cộng cả phí giao không còn áp dụng.",
+      "evidence": "Delivery costs $25, waived when the food subtotal reaches $600.",
+      "document_ids": [
+        "event-brief",
+        "catering-quote",
+        "catering-confirmation"
+      ]
+    },
+    {
+      "id": "q04",
+      "part": 7,
+      "prompt": "Which delivery instruction remains important after the headcount changes?",
+      "options": [
+        "Use the main entrance because the group is larger.",
+        "Move lunch to a nearby restaurant.",
+        "Delay delivery until all exhibitions have ended.",
+        "Use the rear service entrance at the arranged delivery time."
+      ],
+      "answer": 3,
+      "explanation_vi": "Thay đổi số khách không làm đổi giờ giao 12:15 hoặc lối vào. Cửa chính phục vụ triển lãm từ 12:00 đến 13:00 nên bên giao vẫn phải dùng cửa dịch vụ phía sau. Không có yêu cầu đổi địa điểm hoặc dời giờ ăn.",
+      "evidence": "The delivery time remains 12:15 p.m. Please remind your driver to use the rear service entrance, as specified in our event brief.",
+      "document_ids": [
+        "event-brief",
+        "catering-quote",
+        "catering-confirmation"
+      ]
+    },
+    {
+      "id": "q05",
+      "part": 7,
+      "prompt": "When can the $40 tray deposit be refunded under the agreed arrangements?",
+      "options": [
+        "After the undamaged trays are collected the following morning",
+        "Immediately when the final headcount is sent",
+        "When the initial estimate of 28 guests is restored",
+        "Only after a second catering order is placed"
+      ],
+      "answer": 0,
+      "explanation_vi": "Báo giá quy định hoàn đặt cọc sau khi thu đủ khay không hư hỏng. Email chọn thu lúc 9:30 sáng hôm sau, nằm trong khung 9:00–11:00 mà bên cung cấp cho phép. Không cần đặt thêm một đơn mới.",
+      "evidence": "The deposit is refunded after all trays are collected undamaged.",
+      "document_ids": [
+        "event-brief",
+        "catering-quote",
+        "catering-confirmation"
+      ]
+    },
+    {
+      "id": "q06",
+      "part": 7,
+      "prompt": "Why did Aster Consulting choose the Flexible Business Rate?",
+      "options": [
+        "It guaranteed access to every room before noon.",
+        "Individual travel dates might need to be changed.",
+        "It was cheaper per night than the Saver Rate.",
+        "The guests wanted breakfast to be excluded."
+      ],
+      "answer": 1,
+      "explanation_vi": "Email đặt phòng nói lịch họp của từng người có thể thay đổi, nên công ty chọn mức giá linh hoạt. Mức Flexible đắt hơn Saver, đã gồm bữa sáng và không bảo đảm nhận phòng sớm.",
+      "evidence": "We selected the flexible option because the client may change individual meeting dates.",
+      "document_ids": [
+        "hotel-rates",
+        "hotel-booking",
+        "hotel-amendment"
+      ]
+    },
+    {
+      "id": "q07",
+      "part": 7,
+      "prompt": "What should the revised total room charge be?",
+      "options": [
+        "$720",
+        "$615",
+        "$600",
+        "$490"
+      ],
+      "answer": 2,
+      "explanation_vi": "Priya và Eva giữ hai đêm mỗi người; Omar giảm còn một đêm. Tổng là năm đêm phòng, nhân giá Flexible $120 thành $600. $490 dùng nhầm giá Saver; $720 là sáu đêm ban đầu. Không cộng tiền ăn sáng vì giá đã bao gồm.",
+      "evidence": "Omar Diaz will now arrive on 11 July and depart on 12 July. His room has been reduced to one night without a change fee.",
+      "document_ids": [
+        "hotel-rates",
+        "hotel-booking",
+        "hotel-amendment"
+      ]
+    },
+    {
+      "id": "q08",
+      "part": 7,
+      "prompt": "Why did Omar's amendment qualify for a change without penalty?",
+      "options": [
+        "All hotel bookings can be changed after check-in.",
+        "Omar switched to the nonrefundable Saver Rate.",
+        "The company canceled every room at the same time.",
+        "The hotel received it before 6 p.m. on 8 July, two days before the original arrival."
+      ],
+      "answer": 3,
+      "explanation_vi": "Ngày đến ban đầu là 10/7, nên hạn thay đổi miễn phí là 18:00 ngày 8/7. Khách sạn nhận yêu cầu lúc 16:30 ngày 8/7, trước hạn. Phải dùng ngày đến ban đầu để xét điều kiện, không tự kéo dài hạn theo ngày đến mới.",
+      "evidence": "We received your amendment request today at 4:30 p.m.",
+      "document_ids": [
+        "hotel-rates",
+        "hotel-booking",
+        "hotel-amendment"
+      ]
+    },
+    {
+      "id": "q09",
+      "part": 7,
+      "prompt": "What may Priya do when she arrives at noon?",
+      "options": [
+        "Leave her suitcase at reception while waiting for check-in",
+        "Demand immediate access to a room under the published rate",
+        "Collect a refund for all three consultants",
+        "Transfer Omar's breakfast to an unregistered visitor"
+      ],
+      "answer": 0,
+      "explanation_vi": "Bảng giá và thư xác nhận đều cho phép gửi hành lý trước giờ nhận phòng 15:00. Khách sạn không hứa có phòng lúc trưa. Không có quyền hoàn tiền toàn nhóm hoặc chuyển suất ăn cho khách không đăng ký.",
+      "evidence": "Priya is welcome to leave her luggage at reception before check-in, but we cannot guarantee access to her room before 3 p.m.",
+      "document_ids": [
+        "hotel-rates",
+        "hotel-booking",
+        "hotel-amendment"
+      ]
+    },
+    {
+      "id": "q10",
+      "part": 7,
+      "prompt": "Which document will the hotel send next?",
+      "options": [
+        "A timetable for the consultants' client meetings",
+        "An invoice reflecting five room nights",
+        "A new application for a visitor-access grant",
+        "A penalty notice for three canceled rooms"
+      ],
+      "answer": 1,
+      "explanation_vi": "Đặt phòng ban đầu có sáu đêm phòng; thay đổi của Omar giảm một đêm, còn năm. Khách sạn nói sẽ gửi hóa đơn sửa đổi thể hiện số đêm giảm. Không có thông báo phạt hoặc lịch họp do khách sạn lập.",
+      "evidence": "We will send a revised company invoice reflecting the reduced number of room nights.",
+      "document_ids": [
+        "hotel-rates",
+        "hotel-booking",
+        "hotel-amendment"
+      ]
+    }
+  ],
+  "focus_vocabulary": [
+    {
+      "word": "headcount",
+      "pos": "noun",
+      "meaning_vi": "số lượng người tham dự",
+      "usage_pattern": "confirm/finalize the headcount",
+      "example": "Please confirm the final headcount before ordering lunch.",
+      "example_vi": "Vui lòng chốt số người tham dự trước khi đặt bữa trưa.",
+      "synonyms": [
+        "number of attendees"
+      ],
+      "paraphrases": [
+        "the total number of people involved"
+      ],
+      "context": "Please confirm the final headcount before ordering lunch.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Three-Document Decisions · Catering & Accommodation",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "dietary requirement",
+      "pos": "noun phrase",
+      "meaning_vi": "yêu cầu đặc biệt về chế độ ăn",
+      "usage_pattern": "state/meet dietary requirements",
+      "example": "The caterer can meet several dietary requirements.",
+      "example_vi": "Đơn vị phục vụ ăn uống có thể đáp ứng nhiều yêu cầu về chế độ ăn.",
+      "synonyms": [
+        "food requirement"
+      ],
+      "paraphrases": [
+        "a need for particular food choices or restrictions"
+      ],
+      "context": "The caterer can meet several dietary requirements.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Three-Document Decisions · Catering & Accommodation",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "refundable",
+      "pos": "adjective",
+      "meaning_vi": "có thể được hoàn lại",
+      "usage_pattern": "a refundable deposit/payment",
+      "example": "The tray deposit is refundable after collection.",
+      "example_vi": "Tiền đặt cọc khay được hoàn lại sau khi thu khay.",
+      "synonyms": [
+        "repayable"
+      ],
+      "paraphrases": [
+        "able to be paid back under stated conditions"
+      ],
+      "context": "The tray deposit is refundable after collection.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Three-Document Decisions · Catering & Accommodation",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "amendment",
+      "pos": "noun",
+      "meaning_vi": "thay đổi đối với nội dung đã thống nhất",
+      "usage_pattern": "request/accept an amendment to a booking",
+      "example": "The hotel accepted the amendment before the deadline.",
+      "example_vi": "Khách sạn chấp nhận thay đổi đặt phòng trước hạn.",
+      "synonyms": [
+        "change"
+      ],
+      "paraphrases": [
+        "a formal change to an existing arrangement"
+      ],
+      "context": "The hotel accepted the amendment before the deadline.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Three-Document Decisions · Catering & Accommodation",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "incur",
+      "pos": "verb",
+      "meaning_vi": "phải chịu chi phí hoặc nghĩa vụ",
+      "usage_pattern": "incur a charge/penalty/cost",
+      "example": "Late cancellation may incur a one-night charge.",
+      "example_vi": "Hủy muộn có thể phải chịu phí một đêm.",
+      "synonyms": [
+        "become liable for"
+      ],
+      "paraphrases": [
+        "cause a charge or obligation to apply"
+      ],
+      "context": "Late cancellation may incur a one-night charge.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Three-Document Decisions · Catering & Accommodation",
+      "origin": "curated",
+      "verified": false
+    },
+    {
+      "word": "reflect",
+      "pos": "verb",
+      "meaning_vi": "phản ánh, thể hiện đúng",
+      "usage_pattern": "an invoice reflects a change",
+      "example": "The revised invoice reflects the reduced stay.",
+      "example_vi": "Hóa đơn sửa đổi thể hiện thời gian lưu trú đã giảm.",
+      "synonyms": [
+        "show"
+      ],
+      "paraphrases": [
+        "accurately represent the current situation"
+      ],
+      "context": "The revised invoice reflects the reduced stay.",
+      "note": "",
+      "tags": [
+        "TOEIC",
+        "Part 7"
+      ],
+      "source_label": "Three-Document Decisions · Catering & Accommodation",
+      "origin": "curated",
+      "verified": false
+    }
+  ]
+}

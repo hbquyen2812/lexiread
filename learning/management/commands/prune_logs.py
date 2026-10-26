@@ -3,7 +3,7 @@ from datetime import timedelta
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 
-from learning.models import AICall, DailyVisit, ExerciseAttempt, LoginFailure
+from learning.models import AICall, DailyVisit, ExerciseAttempt, LoginFailure, AuthRateLimit
 
 
 class Command(BaseCommand):
@@ -13,6 +13,7 @@ class Command(BaseCommand):
         now = timezone.now()
         today = timezone.localdate()
         LoginFailure.objects.filter(created_at__lt=now - timedelta(days=1)).delete()
+        AuthRateLimit.objects.filter(last_at__lt=now - timedelta(days=2)).delete()
         ExerciseAttempt.objects.filter(created_at__lt=now - timedelta(days=7)).delete()
         AICall.objects.filter(created_at__lt=now - timedelta(days=90)).delete()
         DailyVisit.objects.filter(date__lt=today - timedelta(days=400)).delete()
