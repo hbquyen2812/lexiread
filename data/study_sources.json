@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "checked_at": "2026-10-26",
+  "items": [
+    {
+      "id": "bc-grammar-a1-a2",
+      "title": "A1–A2 Grammar",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2",
+      "levels": ["A1", "A2"],
+      "kind": "grammar",
+      "description_vi": "Bắt đầu với ngữ pháp nền tảng. Mỗi bài có phần làm thử, giải thích và bài kiểm tra lại để bạn thấy mình đã hiểu đến đâu."
+    },
+    {
+      "id": "bc-grammar-b1-b2",
+      "title": "B1–B2 Grammar",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2",
+      "levels": ["B1", "B2"],
+      "kind": "grammar",
+      "description_vi": "Củng cố câu điều kiện, động từ khuyết thiếu, câu bị động và các cấu trúc thường gặp. Chọn chủ điểm bạn còn hay nhầm rồi luyện từng bài ngắn."
+    },
+    {
+      "id": "bc-grammar-c1",
+      "title": "C1 Grammar",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1",
+      "levels": ["C1"],
+      "kind": "grammar",
+      "description_vi": "Tìm hiểu cách nhấn mạnh, lược bỏ từ và diễn đạt ý phức tạp. Phù hợp khi bạn đã vững ngữ pháp cơ bản và muốn dùng câu linh hoạt hơn."
+    },
+    {
+      "id": "bc-present-simple",
+      "title": "Present Simple",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple",
+      "levels": ["A1", "A2"],
+      "kind": "grammar",
+      "description_vi": "Luyện thì hiện tại đơn qua những việc quen thuộc hằng ngày. Chú ý cách chia động từ, đặt câu hỏi và tạo câu phủ định."
+    },
+    {
+      "id": "bc-articles",
+      "title": "Articles: A, An, The",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the",
+      "levels": ["A1", "A2"],
+      "kind": "grammar",
+      "description_vi": "Phân biệt a, an và the qua ví dụ và bài tập. Hữu ích nếu bạn thường bỏ sót mạo từ hoặc chưa rõ khi nào cần nói đến một đối tượng cụ thể."
+    },
+    {
+      "id": "bc-countable-nouns",
+      "title": "Countable and Uncountable Nouns",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/nouns-countable-uncountable",
+      "levels": ["A1", "A2"],
+      "kind": "grammar",
+      "description_vi": "Ôn danh từ đếm được và không đếm được, rồi luyện cách dùng some, any, much và many trong câu."
+    },
+    {
+      "id": "bc-comparatives",
+      "title": "Comparative Adjectives",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/comparative-adjectives",
+      "levels": ["A1", "A2"],
+      "kind": "grammar",
+      "description_vi": "Tập so sánh hai người hoặc sự vật, từ các dạng thêm -er đến more và những tính từ bất quy tắc."
+    },
+    {
+      "id": "bc-conditionals-0-1-2",
+      "title": "Zero, First and Second Conditionals",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second",
+      "levels": ["B1", "B2"],
+      "kind": "grammar",
+      "description_vi": "Phân biệt điều kiện thường đúng, khả năng có thật và tình huống giả định. Làm bài tập để chọn thì phù hợp với điều bạn muốn nói."
+    },
+    {
+      "id": "bc-conditionals-third-mixed",
+      "title": "Third and Mixed Conditionals",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-third-mixed",
+      "levels": ["B1", "B2"],
+      "kind": "grammar",
+      "description_vi": "Luyện cách nói về quá khứ không thể thay đổi và mối liên hệ giữa một giả định trong quá khứ với kết quả ở hiện tại."
+    },
+    {
+      "id": "bc-contrast",
+      "title": "Although, Despite and Other Contrasts",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/contrasting-ideas-although-despite-others",
+      "levels": ["B1", "B2"],
+      "kind": "grammar",
+      "description_vi": "Nối hai ý trái ngược bằng although, despite và các cách diễn đạt tương tự. Chú ý thành phần theo sau mỗi từ để tránh dùng sai cấu trúc."
+    },
+    {
+      "id": "bc-negative-inversion",
+      "title": "Inversion after Negative Adverbials",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/inversion-after-negative-adverbials",
+      "levels": ["C1"],
+      "kind": "grammar",
+      "description_vi": "Học cách đảo ngữ sau never, rarely, not only và các cụm mang ý phủ định. Bài tập giúp bạn đặt trợ động từ đúng vị trí khi muốn nhấn mạnh."
+    },
+    {
+      "id": "bc-participle-clauses",
+      "title": "Participle Clauses",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/participle-clauses",
+      "levels": ["C1"],
+      "kind": "grammar",
+      "description_vi": "Tìm hiểu mệnh đề phân từ để diễn đạt gọn hơn. Hãy chú ý chủ thể của hành động và quan hệ thời gian giữa các ý."
+    },
+    {
+      "id": "bc-emphasis",
+      "title": "Cleft Sentences, Inversion and Auxiliaries",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/emphasis-cleft-sentences-inversion-auxiliaries",
+      "levels": ["C1"],
+      "kind": "grammar",
+      "description_vi": "Khám phá ba cách làm nổi bật thông tin trong câu: câu chẻ, đảo ngữ và trợ động từ nhấn mạnh. Luyện chọn cách phù hợp với từng ý."
+    },
+    {
+      "id": "cambridge-grammar-today",
+      "title": "English Grammar Today",
+      "provider": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/",
+      "levels": ["B1", "B2", "C1", "C2"],
+      "kind": "grammar",
+      "description_vi": "Tra cứu một điểm ngữ pháp khi bạn gặp câu khó hoặc phân vân giữa hai cách dùng. Đọc phần giải thích cùng ví dụ để hiểu cả cấu trúc lẫn ngữ cảnh."
+    },
+    {
+      "id": "bbc-simple-inversion",
+      "title": "English in a Minute: Simple Inversion (PDF)",
+      "provider": "BBC Learning English",
+      "url": "https://downloads.bbc.co.uk/learningenglish/eiam/unit-1/191025_simple_inversion.pdf",
+      "levels": ["B2", "C1"],
+      "kind": "grammar",
+      "description_vi": "Bản đọc ngắn giải thích cách đảo chủ ngữ và trợ động từ để nhấn mạnh. Dùng để ôn nhanh sau khi đã học cấu trúc đảo ngữ."
+    },
+    {
+      "id": "voa-everyday-grammar",
+      "title": "Everyday Grammar",
+      "provider": "VOA Learning English",
+      "url": "https://learningenglish.voanews.com/p/9392.html",
+      "levels": ["B1", "B2", "C1"],
+      "kind": "grammar",
+      "description_vi": "Học ngữ pháp qua cách tiếng Anh được dùng trong giao tiếp và đời sống. Danh mục theo chủ điểm giúp bạn tìm đúng điều đang muốn ôn."
+    },
+    {
+      "id": "bc-vocabulary-a1-a2",
+      "title": "A1–A2 Vocabulary",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2",
+      "levels": ["A1", "A2"],
+      "kind": "vocabulary",
+      "description_vi": "Học từ quen thuộc theo chủ đề như đồ ăn, quần áo và sinh hoạt hằng ngày. Các hoạt động giúp bạn luyện nghĩa, cách viết và phát âm."
+    },
+    {
+      "id": "bc-vocabulary-b1-b2",
+      "title": "B1–B2 Vocabulary",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2",
+      "levels": ["B1", "B2"],
+      "kind": "vocabulary",
+      "description_vi": "Mở rộng vốn từ theo những tình huống cụ thể, từ đi lại đến đồ dùng và hoạt động thường ngày. Mỗi chủ đề có bài luyện tương tác."
+    },
+    {
+      "id": "bc-daily-routine",
+      "title": "Daily Routine Vocabulary",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/a1-a2/daily-routine-vocabulary-a1-beginner-english-vocabulary-lesson",
+      "levels": ["A1"],
+      "kind": "vocabulary",
+      "description_vi": "Luyện các cụm từ để kể về một ngày của bạn: thức dậy, chuẩn bị đi học hoặc đi làm, ăn uống và nghỉ ngơi."
+    },
+    {
+      "id": "bc-air-travel",
+      "title": "Air Travel Vocabulary",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2/air-travel",
+      "levels": ["B1", "B2"],
+      "kind": "vocabulary",
+      "description_vi": "Luyện từ vựng khi đi máy bay và làm thủ tục ở sân bay. Chủ đề này cũng hữu ích khi đọc thông báo hoặc lịch trình trong bài TOEIC."
+    },
+    {
+      "id": "bc-around-town",
+      "title": "Around Town Vocabulary",
+      "provider": "British Council",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/vocabulary/b1-b2/around-town",
+      "levels": ["B1", "B2"],
+      "kind": "vocabulary",
+      "description_vi": "Nhận biết từ chỉ những thứ thường thấy trên đường phố và trong thành phố. Phân biệt các từ dễ nhầm khi mô tả địa điểm hoặc chỉ đường."
+    },
+    {
+      "id": "oxford-core-wordlists",
+      "title": "Oxford 3000 and 5000",
+      "provider": "Oxford University Press",
+      "url": "https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000",
+      "levels": ["A1", "A2", "B1", "B2", "C1"],
+      "kind": "vocabulary",
+      "description_vi": "Chọn từ cốt lõi theo trình độ rồi mở mục từ để xem nghĩa và cách dùng. Oxford 3000 trải từ A1 đến B2; phần bổ sung của Oxford 5000 dành cho B2–C1."
+    },
+    {
+      "id": "oxford-5000-pdf",
+      "title": "Oxford 5000: Additional B2–C1 Words (PDF)",
+      "provider": "Oxford University Press",
+      "url": "https://www.oxfordlearnersdictionaries.com/external/pdf/wordlists/oxford-3000-5000/The_Oxford_5000.pdf",
+      "levels": ["B2", "C1"],
+      "kind": "vocabulary",
+      "description_vi": "Danh sách 2.000 từ B2–C1 bổ sung cho Oxford 3000, kèm từ loại và mức CEFR. Dùng để đánh dấu từ cần học, rồi tra ví dụ trước khi tự đặt câu."
+    },
+    {
+      "id": "oxford-phrase-list",
+      "title": "Oxford Phrase List",
+      "provider": "Oxford University Press",
+      "url": "https://www.oxfordlearnersdictionaries.com/wordlists/oxford-phrase-list",
+      "levels": ["A1", "A2", "B1", "B2", "C1"],
+      "kind": "vocabulary",
+      "description_vi": "Học những cụm từ thường đi cùng nhau thay vì chỉ nhớ từng từ riêng lẻ. Nhãn trình độ giúp bạn chọn cụm phù hợp để đưa vào câu của mình."
+    },
+    {
+      "id": "cambridge-precise-words",
+      "title": "Precise Words",
+      "provider": "Cambridge English",
+      "url": "https://www.cambridgeenglish.org/learning-english/activities-for-learners/c2v001-precise-words",
+      "levels": ["C1", "C2"],
+      "kind": "vocabulary",
+      "description_vi": "Bài ngắn dành cho người học nâng cao: chọn từ diễn đạt chính xác ý của câu. Hãy thử giải thích vì sao những từ gần nghĩa còn lại không phù hợp."
+    },
+    {
+      "id": "cambridge-statements-opinions",
+      "title": "Statements and Opinions",
+      "provider": "Cambridge English",
+      "url": "https://www.cambridgeenglish.org/learning-english/activities-for-learners/c1v002-statements-and-opinions",
+      "levels": ["C1", "C2"],
+      "kind": "vocabulary",
+      "description_vi": "Luyện giới từ trong các cách diễn đạt dùng để giới hạn hoặc làm rõ một nhận định. Hữu ích khi bạn muốn nêu ý kiến chính xác, tránh khẳng định quá rộng."
+    },
+    {
+      "id": "cambridge-formal-words",
+      "title": "Definitions of Formal Words",
+      "provider": "Cambridge English",
+      "url": "https://www.cambridgeenglish.org/learning-english/activities-for-learners/c2v072-definitions-of-formal-words",
+      "levels": ["C1", "C2"],
+      "kind": "vocabulary",
+      "description_vi": "Luyện các dạng khác nhau của từ trong văn phong trang trọng. Khi làm bài, hãy xem câu đang cần danh từ, động từ hay một dạng từ khác."
+    },
+    {
+      "id": "cambridge-idiomatic-language",
+      "title": "Idiomatic Language",
+      "provider": "Cambridge English",
+      "url": "https://www.cambridgeenglish.org/learning-english/activities-for-learners/c1v001-idiomatic-language",
+      "levels": ["C1", "C2"],
+      "kind": "vocabulary",
+      "description_vi": "Chọn thành ngữ phù hợp với ngữ cảnh trong một bài luyện ngắn. Đọc cả câu để hiểu ý người nói, tránh đoán nghĩa chỉ từ từng từ riêng lẻ."
+    },
+    {
+      "id": "bbc-lexical-sets",
+      "title": "6 Minute Vocabulary: Lexical Sets (PDF)",
+      "provider": "BBC Learning English",
+      "url": "https://downloads.bbc.co.uk/learningenglish/lowerintermediate/unit7/141110_6minvocab_lexical_sets.pdf",
+      "levels": ["A2", "B1"],
+      "kind": "vocabulary",
+      "description_vi": "Tìm hiểu cách nhóm từ theo chủ đề hoặc từ loại để dễ nhớ hơn. Bản đọc có ví dụ và phần kiểm tra ngắn để bạn áp dụng cách học này."
+    },
+    {
+      "id": "voa-lets-learn-english-1",
+      "title": "Let's Learn English — Level 1",
+      "provider": "VOA Learning English",
+      "url": "https://learningenglish.voanews.com/p/5644.html",
+      "levels": ["A1", "A2"],
+      "kind": "vocabulary",
+      "description_vi": "Khóa học cho người mới bắt đầu, dùng các tình huống đời thường để luyện từ vựng, nói và viết. Bạn có thể học lần lượt từng bài cùng video và phiếu luyện tập."
+    },
+    {
+      "id": "cambridge-english-dictionary",
+      "title": "Cambridge English Dictionary",
+      "provider": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/dictionary/english/",
+      "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "kind": "dictionary",
+      "description_vi": "Tra nghĩa tiếng Anh, phát âm và ví dụ khi gặp từ mới. Hãy chọn nghĩa khớp với câu đang đọc thay vì chỉ lấy nghĩa đầu tiên."
+    },
+    {
+      "id": "cambridge-english-vietnamese",
+      "title": "Cambridge English–Vietnamese Dictionary",
+      "provider": "Cambridge Dictionary",
+      "url": "https://dictionary.cambridge.org/dictionary/english-vietnamese/",
+      "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "kind": "dictionary",
+      "description_vi": "Tra nghĩa tiếng Việt để hiểu nhanh một từ mới. Sau đó đối chiếu ví dụ và ngữ cảnh để chọn cách diễn đạt tự nhiên cho câu của bạn."
+    },
+    {
+      "id": "oxford-learner-dictionary",
+      "title": "Oxford Advanced Learner's Dictionary",
+      "provider": "Oxford University Press",
+      "url": "https://www.oxfordlearnersdictionaries.com/definition/english/",
+      "levels": ["B1", "B2", "C1", "C2"],
+      "kind": "dictionary",
+      "description_vi": "Tra nghĩa, cách phát âm Anh–Anh và Anh–Mỹ, ví dụ và ghi chú cách dùng. Các mục từ A–Z được đọc miễn phí; một số công cụ mở rộng thuộc gói trả phí."
+    },
+    {
+      "id": "ielts-academic-samples",
+      "title": "IELTS Academic Sample Test Questions",
+      "provider": "IELTS",
+      "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "levels": ["B1", "B2", "C1", "C2"],
+      "kind": "ielts",
+      "description_vi": "Làm quen với các dạng câu hỏi Academic qua tài liệu mẫu chính thức. Chọn kỹ năng cần luyện và đọc kỹ hướng dẫn trước khi làm."
+    },
+    {
+      "id": "ielts-general-samples",
+      "title": "IELTS General Training Sample Test Questions",
+      "provider": "IELTS",
+      "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/general-training-test",
+      "levels": ["B1", "B2", "C1", "C2"],
+      "kind": "ielts",
+      "description_vi": "Nguồn mẫu chính thức cho IELTS General Training. Dùng để làm quen với văn bản đời sống, công việc và các dạng câu hỏi của bài thi."
+    },
+    {
+      "id": "bc-ielts-academic-reading",
+      "title": "IELTS Academic Reading Practice",
+      "provider": "British Council",
+      "url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic/reading",
+      "levels": ["B2", "C1", "C2"],
+      "kind": "ielts",
+      "description_vi": "Luyện Reading Academic với bài thực hành của British Council. Sau khi đối chiếu đáp án, quay lại tìm câu trong bài giúp xác nhận từng lựa chọn."
+    },
+    {
+      "id": "bc-ielts-general-reading",
+      "title": "IELTS General Training Reading Practice",
+      "provider": "British Council",
+      "url": "https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/general-training/reading",
+      "levels": ["B1", "B2", "C1"],
+      "kind": "ielts",
+      "description_vi": "Luyện đọc General Training với bài thực hành chính thức của British Council. Chú ý mục đích của văn bản, người đọc và thông tin cụ thể cần tìm."
+    },
+    {
+      "id": "ets-toeic-preparation",
+      "title": "TOEIC Preparation Materials",
+      "provider": "ETS",
+      "url": "https://www.ets.org/toeic/test-takers/prepare.html",
+      "levels": ["A1", "A2", "B1", "B2", "C1"],
+      "kind": "toeic",
+      "description_vi": "Trang ETS tập hợp tài liệu chuẩn bị cho các bài TOEIC và TOEIC Bridge. Chọn đúng bài thi; trang có cả tài liệu mẫu miễn phí lẫn sản phẩm trả phí."
+    },
+    {
+      "id": "ets-toeic-lr-sample",
+      "title": "TOEIC Listening and Reading Sample Test (PDF)",
+      "provider": "ETS",
+      "url": "https://www.ets.org/pdfs/toeic/toeic-listening-reading-sample-test.pdf",
+      "levels": ["B1", "B2", "C1"],
+      "kind": "toeic",
+      "description_vi": "Đề mẫu ETS để làm quen với định dạng Listening và Reading. Với mục tiêu đọc, tập trung vào Part 5, 6, 7 và kiểm tra lại đáp án sau khi làm."
+    },
+    {
+      "id": "ets-toeic-bridge-sample",
+      "title": "TOEIC Bridge Listening and Reading Sample Test (PDF)",
+      "provider": "ETS",
+      "url": "https://www.ets.org/pdfs/toeic/toeic-bridge-sample-test-listening-reading.pdf",
+      "levels": ["A1", "A2", "B1"],
+      "kind": "toeic",
+      "description_vi": "Đề mẫu TOEIC Bridge cho người đang xây nền tảng tiếng Anh. Bridge có định dạng riêng; tài liệu này không thay cho đề mẫu TOEIC Listening and Reading."
+    }
+  ]
+}

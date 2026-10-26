@@ -118,7 +118,7 @@ function renderReader(){
   const tabs=[['text','Bài đọc'],...(v.length?[['words',`Từ gợi ý (${v.length})`]]:[]),...(g.length?[['grammar','Cách dùng trong bài']]:[]),...(curated?[['quiz','Hiểu bài']]:[]),...(hasHelp?[['help','Giải thích thêm']]:[])];
   if(!tabs.some(([key])=>key===state.readingTab))state.readingTab='text';
   $('#main').innerHTML=`<a href="${curated?(r.lesson?.track==='ielts'?'#ielts':'#catalog'):'#readings'}" class="link-btn">← ${curated?(r.lesson?.track==='ielts'?'Luyện IELTS Reading':'Thư viện luyện đọc'):'Bài đọc của tôi'}</a><div style="height:17px"></div>`+
-   heading(r.title,`${curated?(r.lesson?.level+' (ước lượng) · '+r.lesson?.topic+' · '):''}${r.word_count} từ · ${r.paragraphs.length} đoạn`,
+   heading(r.title,`${curated?(r.lesson?.level+' · '+r.lesson?.topic+' · '):''}${r.word_count} từ · ${r.paragraphs.length} đoạn`,
    `<button class="btn small" data-action="toggle-reading-favorite" data-id="${esc(r.id)}" data-favorite="${r.favorite?'true':'false'}" aria-pressed="${r.favorite?'true':'false'}">${r.favorite?'★ Đã yêu thích':'☆ Yêu thích'}</button>${!curated?'<button class="btn small" data-action="edit-reading">Sửa bài</button><button class="btn small danger" data-action="delete-reading">Xóa</button>':''}<button class="btn small secondary" data-action="study-reading">Ôn từ đã lưu từ bài này ↗</button>`)+
    `${curated?`<details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(r.lesson?.provenance||'Bài luyện do LexiRead biên soạn.')} ${esc(r.lesson?.level_note||'')}</p><small>Bản bạn đang học: ${r.lesson?.revision||1}.</small></details>`:''}
    <div class="toolbar">${!curated?`<details class="lesson-about"><summary>Thêm bản dịch và gợi ý</summary><div class="button-row">${state.boot?.ai_enabled?`<button class="btn primary" data-action="analyse-reading">✦ ${r.has_analysis?'Tạo lại gợi ý':'Dịch và gợi ý từ'}</button>`:''}<button class="btn" data-action="reading-prompt">Nhập gợi ý từ công cụ khác</button></div></details>`:''}${hasTranslations?`<label class="check-label"><input type="checkbox" id="translation-toggle" ${state.translation?'checked':''}> Hiện bản dịch</label>`:'<span class="fineprint">Chưa có bản dịch</span>'}<label class="font-control">Cỡ chữ<select id="reading-font">${[17,19,22].map(n=>`<option value="${n}" ${(state.readerFont||19)===n?'selected':''}>${n}</option>`).join('')}</select></label></div>
@@ -145,11 +145,11 @@ async function vocabPage(epoch){
   if(!state.vocab.length&&data.total&&f.page>1){state.filters.page=Math.max(1,Math.ceil(data.total/data.limit));return vocabPage(epoch);}
   state.readingSources=[...new Map((sources.items||[]).map(r=>[r.id,r])).values()].sort((a,b)=>a.title.localeCompare(b.title,'vi'));
   $('#main').innerHTML=heading('Kho từ của tôi',`${data.total} thẻ theo bộ lọc hiện tại. Từ, nghĩa, ngữ cảnh và lịch ôn — trong cùng một nơi.`,
-     '<a class="btn" href="#word-import">Tạo / nhập bộ từ</a><button class="btn primary" data-action="new-word">+ Thêm từ</button>')+
+     '<a class="btn primary" href="#word-import">Nhập bộ từ cá nhân →</a><button class="btn secondary" data-action="new-word">+ Thêm một từ</button>')+
      (f.tag?`<div class="button-row deck-library-actions"><button class="btn small" data-action="study-deck">Ôn bộ này</button><button class="btn small" data-action="export-deck">Tải bộ từ</button></div>`:'')+
      `<div class="toolbar"><input type="search" id="vocab-search" class="search" placeholder="Tìm từ, nghĩa hoặc ghi chú…" value="${esc(f.q)}" aria-label="Tìm từ"><select id="vocab-tag" aria-label="Bộ từ">${tagOptions(f.tag)}</select><select id="vocab-reading" aria-label="Bài nguồn">${readingSourceOptions(f.reading)}</select><select id="vocab-scope" aria-label="Trạng thái">${scopeOptions(f.scope)}</select><select id="vocab-sort" aria-label="Sắp xếp từ">${[['newest','Mới thêm'],['oldest','Cũ nhất'],['word','Theo từ A–Z'],['due','Lịch ôn gần nhất']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="filter-vocab">Lọc</button></div>`+
      (data.items.length?`<div class="table-wrap"><table><thead><tr><th>TỪ / CỤM TỪ</th><th>NGHĨA ĐANG HỌC</th><th>BỘ TỪ & TIẾN ĐỘ</th><th></th></tr></thead><tbody>${data.items.map(v=>`<tr><td><div class="word">${esc(v.word)}</div><span class="muted">${esc(v.pos||'Từ / cụm từ')}${v.verified?' · Đã duyệt':''}</span></td><td class="meaning-cell">${esc(v.meaning_vi)}${lexicalRelations(v)}<details class="source-context"><summary>Cấu trúc & ví dụ</summary>${lexicalDetails({...v,synonyms:[],paraphrases:[]})}</details></td><td><div class="tags">${chips(v.tags)}</div><span class="muted">${v.due?'Đến hạn ôn':'Ôn tiếp '+formatDate(v.due_at)}${v.lapses?' · '+v.lapses+' lần quên':''}</span>${v.reading_id?`<div><a class="link-btn" href="#reading/${esc(v.reading_id)}">${esc(v.source_label||'Mở bài nguồn')} →</a></div>`:''}</td><td><button class="btn small" data-action="edit-word" data-id="${esc(v.id)}">Sửa</button></td></tr>`).join('')}</tbody></table></div><div class="pagination"><span>Trang ${data.page} / ${Math.max(1,Math.ceil(data.total/data.limit))}</span><div class="button-row"><button class="btn small" data-action="vocab-prev" ${f.page<=1?'disabled':''}>← Trước</button><button class="btn small" data-action="vocab-next" ${f.page*data.limit>=data.total?'disabled':''}>Sau →</button></div></div>`:
-       empty('Không có thẻ phù hợp','Thử đổi bộ lọc hoặc thêm những từ đầu tiên.'));
+       empty('Chưa có từ ở đây','Nhập một bộ theo chủ đề để có sẵn từ, ví dụ và lịch ôn.', '<a class="btn primary" href="#word-import">Nhập bộ từ đầu tiên →</a>'));
 }
 function openModal(title,content,footer='',drawer=false){
   const m=$('#modal');if(m.open)m.close();m.className=drawer?'drawer':'';
@@ -345,7 +345,7 @@ async function toeicSetPage(slug,epoch){
   if(state.toeicSession?.slug!==slug||state.toeicSession?.revision!==practice.revision)state.toeicSession={slug,revision:practice.revision,answers:{},token:uid(),startedAt:Date.now(),result:null};
   renderToeicSet();
 }
-const analyticsPageLabels={home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
+const analyticsPageLabels={learn:'Lộ trình & nền tảng',grammar:'Ngữ pháp',collection:'Bộ từ theo trình độ',home:'Tổng quan',catalog:'Thư viện',ielts:'IELTS',resources:'Đề mẫu chính thức',guides:'Cẩm nang cách làm',lesson:'Bài thư viện',toeic:'TOEIC',
   'toeic-set':'Bộ TOEIC',readings:'Bài cá nhân',reading:'Đang đọc',vocabulary:'Kho từ','word-import':'Tạo bộ từ',study:'Ôn từ',settings:'Cài đặt',analytics:'Thống kê',login:'Đăng nhập'};
 async function analyticsPage(epoch){
   const data=await api('/analytics/?days='+state.analyticsDays);if(epoch!==state.routeEpoch)return;
@@ -380,12 +380,14 @@ async function route(){
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
-  const nav=page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page;
+  const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
-  $('#page-label').textContent=({home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
+  $('#page-label').textContent=({learn:'Lộ trình & nền tảng',grammar:'Ngữ pháp',collection:'Từ theo trình độ',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
-    if(page==='reading'&&id)await readerPage(id,epoch);
+    if(page==='learn'){await window.LexiAcademy.page($('#main'),id||'plan',epoch);}
+    else if((page==='grammar'||page==='collection')&&id){await window.LexiAcademy.detail($('#main'),page==='grammar'?'grammar':'vocabulary',id,epoch);}
+    else if(page==='reading'&&id)await readerPage(id,epoch);
     else if(page==='catalog')await catalogPage(epoch);
     else if(page==='ielts')await ieltsPage(epoch,id||'');
     else if(page==='lesson'&&id)await lessonRoute(id,epoch);

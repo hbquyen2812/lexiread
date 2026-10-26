@@ -6,9 +6,9 @@
   <meta name="description" content="LexiRead — đọc, hiểu và giữ lại từ vựng cá nhân.">
   <title>LexiRead · Không gian học của bạn</title>
   <link rel="stylesheet" href="{% static 'app.css' %}">
-  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.6">
-  <script src="{% static 'i18n.js' %}?v=20261026.6" defer></script><script src="{% static 'library.js' %}" defer></script>
-<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.6"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.9"></head>
+  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.12">
+  <script src="{% static 'i18n.js' %}?v=20261026.12" defer></script><script src="{% static 'library.js' %}?v=20261026.12" defer></script>
+<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.12"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.9"><link rel="stylesheet" href="{% static 'academy.css' %}?v=20261026.12"></head>
 <body>
   <a class="skip-link" href="#main" data-action="skip-content" data-i18n="skip">Đến nội dung chính</a>
   <aside class="sidebar">
@@ -17,6 +17,7 @@
     <button type="button" class="mobile-menu-toggle" data-action="toggle-navigation" aria-expanded="false" aria-controls="study-navigation" data-i18n="nav.menu">☰ Menu</button>
     <nav id="study-navigation" aria-label="Điều hướng chính">
       <a href="#home" data-nav="home"><span class="nav-icon">◫</span> Tổng quan</a>
+      <a href="#learn/plan" data-nav="learn"><span class="nav-icon">◉</span> Lộ trình & nền tảng</a>
       <a href="#catalog" data-nav="catalog"><span class="nav-icon">▤</span> Thư viện luyện đọc</a>
       <a href="#ielts" data-nav="ielts"><span class="nav-icon">↗</span> Luyện IELTS Reading</a>
       <a href="#toeic" data-nav="toeic"><span class="nav-icon">◎</span> Luyện TOEIC Reading</a>
@@ -41,11 +42,12 @@
   {{ official_resources|json_script:"official-resources-data" }}
   {{ strategy_guides|json_script:"strategy-guides-data" }}
   {{ learning_channels|json_script:"learning-channels-data" }}
-  <script src="{% static 'learning_channels.js' %}?v=20261026.6" defer></script>
-  <script src="{% static 'learning_hub.js' %}?v=20261026.6" defer></script>
+  <script src="{% static 'learning_channels.js' %}?v=20261026.12" defer></script>
+  <script src="{% static 'learning_hub.js' %}?v=20261026.12" defer></script>
   <script src="{% static 'resources.js' %}" defer></script>
-  <script src="{% static 'reading_platform.js' %}?v=20261026.6" defer></script>
-  <script src="{% static 'practice_tools.js' %}?v=20261026.6" defer></script>
-  <script src="{% static 'personal_decks.js' %}?v=20261026.6" defer></script>
-  <script src="{% static 'app.js' %}?v=20261026.6" defer></script>
+  <script src="{% static 'reading_platform.js' %}?v=20261026.12" defer></script>
+  <script src="{% static 'practice_tools.js' %}?v=20261026.12" defer></script>
+  <script src="{% static 'personal_decks.js' %}?v=20261026.12" defer></script>
+  <script src="{% static 'academy.js' %}?v=20261026.12" defer></script>
+  <script src="{% static 'app.js' %}?v=20261026.12" defer></script>
 </body></html>

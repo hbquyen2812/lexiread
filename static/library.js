@@ -13,7 +13,7 @@
     return level;
   }
   function levelPicker(selected='',track='general'){
-    return `<section class="level-picker"><div class="level-picker-heading"><h2 data-i18n="level.choose">Chọn trình độ đọc</h2><p data-i18n="level.note">Mức độ ước lượng. Chọn mức vừa sức, đổi bất cứ lúc nào.</p></div><div class="level-options" role="group" aria-label="Chọn trình độ đọc">${[['','Tất cả'],...levels].map(([code,label])=>`<button type="button" class="level-option" data-action="library-level" data-track="${track}" data-level="${code}" aria-pressed="${selected===code}"><strong>${code||'ALL'}</strong><span data-i18n="level.label.${code||'all'}">${label}</span></button>`).join('')}</div></section>`;
+    return `<section class="level-picker"><div class="level-picker-heading"><div><h2 data-i18n="level.choose">Chọn trình độ đọc</h2><p data-i18n="level.note">Chọn mức bạn thấy vừa sức. Bạn có thể đổi bất cứ lúc nào.</p></div><button type="button" class="level-all" data-action="library-level" data-track="${track}" data-level="" aria-pressed="${selected===''}" data-i18n="level.label.all">Tất cả trình độ</button></div><div class="level-options" role="group" aria-label="Chọn trình độ đọc">${levels.map(([code,label])=>`<button type="button" class="level-option" data-action="library-level" data-track="${track}" data-level="${code}" aria-pressed="${selected===code}"><strong>${code}</strong><span data-i18n="level.label.${code}">${label}</span></button>`).join('')}</div></section>`;
   }
   function cover(row){
     const key=Object.hasOwn(artwork,row.cover_key)?row.cover_key:'reading';

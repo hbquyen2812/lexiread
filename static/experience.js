@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const t=(key,vars)=>window.LexiI18n.t(key,vars),cards=[...document.querySelectorAll('#public-library .lesson-card')],search=document.querySelector('#public-search');
   let level=window.LexiLibrary?.savedLevel('general')||'',track='general',limit=6;
-  const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLocaleLowerCase();
+  const normalize=s=>s.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').toLocaleLowerCase();
   function filter(){
     if(!search)return;
     const query=normalize(search.value.trim()),matched=cards.filter(c=>(!level||c.dataset.level===level)&&c.dataset.track===track&&normalize(c.dataset.search).includes(query));

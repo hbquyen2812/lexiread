@@ -9,7 +9,7 @@ from django.utils import timezone
 from ..models import DailyVisit
 from .core import InputError
 
-PAGES={'home','catalog','ielts','guides','resources','lesson','toeic','toeic-set','readings','reading','vocabulary','word-import','study','settings','analytics','login'}
+PAGES={'home','catalog','ielts','guides','resources','lesson','toeic','toeic-set','readings','reading','vocabulary','word-import','study','settings','analytics','login','learn','grammar','collection'}
 
 def record_visit(request,page):
     if page not in PAGES:raise InputError('Trang thống kê không hợp lệ.')

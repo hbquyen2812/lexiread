@@ -238,6 +238,40 @@ class LearningDay(models.Model):
         constraints = [models.UniqueConstraint(fields=['owner', 'date'], name='unique_learning_day')]
 
 
+class LearningProfile(models.Model):
+    owner = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    level = models.CharField(max_length=2, default='A1')
+    goal = models.CharField(max_length=12, default='general')
+    daily_minutes = models.PositiveSmallIntegerField(default=15)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.CheckConstraint(condition=models.Q(level__in=['A1','A2','B1','B2','C1','C2']), name='valid_learning_level'),
+            models.CheckConstraint(condition=models.Q(goal__in=['general','ielts','toeic']), name='valid_learning_goal'),
+            models.CheckConstraint(condition=models.Q(daily_minutes__in=[15,30,45,60]), name='valid_learning_minutes'),
+        ]
+
+
+class FoundationAttempt(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    kind = models.CharField(max_length=12)
+    unit_id = models.SlugField(max_length=100)
+    token = models.UUIDField(default=uuid.uuid4)
+    answers = models.JSONField(default=dict)
+    result = models.JSONField(default=dict)
+    snapshot = models.JSONField(default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at', '-id']
+        constraints = [
+            models.UniqueConstraint(fields=['owner','token'], name='unique_foundation_attempt'),
+            models.CheckConstraint(condition=models.Q(kind__in=['grammar','vocabulary']), name='valid_foundation_kind'),
+        ]
+        indexes = [models.Index(fields=['owner','kind','unit_id'], name='foundation_owner_unit')]
+
+
 class DailyVisit(models.Model):
     """Privacy-preserving daily traffic row; stores a salted session hash, never an IP."""
     date = models.DateField(default=timezone.localdate)

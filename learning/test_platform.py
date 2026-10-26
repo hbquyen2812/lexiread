@@ -129,7 +129,7 @@ class ReadingPlatformTests(TestCase):
     def test_backup_roundtrip_includes_attempts_and_help(self):
         rid=self.open()['id'];self.submit(rid);self.post(f'/api/readings/{rid}/questions/',self.qa_payload())
         self.post(f'/api/readings/{rid}/progress/',{'paragraph':2,'completed':True})
-        payload=export_library(self.alice);self.assertEqual(payload['version'],4)
+        payload=export_library(self.alice);self.assertEqual(payload['version'],5)
         import_library(self.bob,payload);clone=Reading.objects.get(owner=self.bob,catalog_slug='a-quiet-start')
         self.assertNotEqual(str(clone.id),rid);self.assertEqual(clone.progress['quiz_best'],4)
         self.assertEqual(clone.progress['paragraph'],2);self.assertEqual(clone.questions.count(),1);self.assertEqual(clone.lesson_attempts.count(),1)

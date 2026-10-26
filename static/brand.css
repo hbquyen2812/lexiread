@@ -43,6 +43,24 @@ h1, h2, h3 { letter-spacing: -.015em; }
 .public-section .section-title h2 { font-size: 30px; }
 .public-section .section-title p { max-width: 680px; font-size: 14px; }
 .level-picker { background: #f0f4e9; border-color: #dce4d2; }
+.home-features { display:grid; grid-template-columns:1.25fr 1fr; gap:20px; margin:28px 0; }
+.deck-feature { padding:30px; border:1px solid #e5dac0; border-radius:22px; background:#f6efdc; position:relative; }
+.deck-feature h2 { font-size:clamp(27px,3vw,35px); line-height:1.3; margin:12px 0; color:#304e3c; }
+.deck-feature p { max-width:54ch; color:#63705b; line-height:1.8; margin-bottom:22px; }
+.deck-feature-note { display:block; margin-top:18px; font-size:12px; color:#63705b; }
+.home-features .foundation-shortcut { display:flex; flex-direction:column; align-items:flex-start; justify-content:space-between; gap:24px; padding:30px; margin:0; border:1px solid #dae3d3; border-radius:22px; background:#f0f4e9; }
+.home-features .foundation-shortcut h2 { font-size:27px; margin:12px 0; }
+.home-features .foundation-shortcut p { line-height:1.8; color:#63705b; margin:0; }
+@media(max-width:700px) { .home-features { grid-template-columns:minmax(0,1fr); } .deck-feature,.home-features .foundation-shortcut { padding:22px; } .deck-feature .button-row { align-items:stretch; } }
+.level-picker-heading { display:flex; align-items:center; gap:14px; }
+.level-picker-heading p { margin-top:6px; max-width:55ch; }
+.level-options { grid-template-columns:repeat(7,minmax(0,1fr)); }
+.level-all { padding:9px 15px; border:1px solid #b9cbb4; border-radius:999px; background:#fffdf7; color:#356a58; font:inherit; font-size:13px; font-weight:600; cursor:pointer; }
+.level-all[aria-pressed="true"] { background:#356a58; border-color:#356a58; color:white; }
+.level-all:focus-visible { outline:3px solid #ba7e29; outline-offset:3px; }
+@media(max-width:1100px) { .level-options { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+@media(min-width:1101px) { .catalog-filters:has(#catalog-kind) { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:600px) { .level-picker-heading { align-items:flex-start; } .level-all { min-height:44px; } }
 .level-option { border-color: #dce4d4; box-shadow: 0 2px 0 #e1e6d7; }
 .level-option:hover { background: #fffdf7; border-color: #719779; }
 .level-option[aria-pressed="true"] { background: #356a58; border-color: #356a58; color: #fff; box-shadow: 0 3px 0 #244e4129; }

@@ -286,6 +286,7 @@
       let payload=data.data;
       if(data instanceof FormData){const f=data.get('file');if(!f||f.size>8*1024*1024)throw new Error('Chọn file JSON không quá 8 MB.');if(!f.name.toLowerCase().endsWith('.json'))throw new Error('Bản HTML xem thử nhập JSON; dùng bản Django để nhập CSV.');payload=parseJSON(await f.text());}
       const isBackup=payload?.format==='lexiread-backup';
+      if(isBackup&&payload.version>=5)throw new Error('Backup có tiến độ học nền tảng. Hãy khôi phục trên bản web có tài khoản để giữ đầy đủ dữ liệu.');
       const studyDays=isBackup?(payload.study_days||[]):[];
       if(!Array.isArray(studyDays)||studyDays.length>36600||studyDays.some(d=>typeof d!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(d)||!Number.isFinite(Date.parse(d))||new Date(d).toISOString().slice(0,10)!==d||d<'2000-01-01'||d>localDay(now())))throw new Error('Ngày học trong backup không hợp lệ.');
       if(isBackup&&![1,2,3,4].includes(payload.version))throw new Error('Phiên bản backup chưa được hỗ trợ.');
