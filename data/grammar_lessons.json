@@ -2,11 +2,152 @@
   "version": 1,
   "lessons": [
     {
+      "id": "a1-sentence-basics",
+      "level": "A1",
+      "title": "Câu tiếng Anh bắt đầu từ đâu?",
+      "summary": "Nhận biết chủ ngữ, động từ và cách ghép một câu đơn.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [],
+      "explanation": [
+        {
+          "title": "Tìm người hoặc vật được nói đến",
+          "body": "Chủ ngữ cho biết câu đang nói về ai hoặc điều gì. Chủ ngữ có thể là tên riêng như Lan, một danh từ như my brother hoặc đại từ như I, you, she.",
+          "pattern": "Chủ ngữ: I · Lan · my brother",
+          "example": "Lan reads.",
+          "translation_vi": "Lan đọc sách."
+        },
+        {
+          "title": "Thêm động từ để thành câu",
+          "body": "Động từ thường cho biết hành động như read, eat, work. Khi giới thiệu hoặc mô tả, ta có thể dùng be: am, is, are. Một câu khẳng định thông thường cần chủ ngữ và động từ.",
+          "pattern": "Người hoặc vật + hành động / be + thông tin mô tả",
+          "example": "My brother is happy.",
+          "translation_vi": "Anh trai tôi vui."
+        },
+        {
+          "title": "Nói rõ hành động hướng đến ai hoặc cái gì",
+          "body": "Một số động từ đi với tân ngữ: người hoặc vật nhận tác động. Trong câu I read a book, I là người đọc, read là hành động, a book là thứ được đọc. Không phải câu nào cũng cần tân ngữ: Birds fly đã đủ ý.",
+          "pattern": "Chủ ngữ + động từ + tân ngữ",
+          "example": "I read a book.",
+          "translation_vi": "Tôi đọc một cuốn sách."
+        }
+      ],
+      "pitfalls": [
+        "Trong câu mô tả, cần có be: I am tired, không viết I tired.",
+        "Không đặt tân ngữ trước động từ theo thói quen dịch từng từ."
+      ],
+      "source_urls": [
+        "https://africa.teachingenglish.org.uk/classroom/grammar/word-order"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Trong câu “Lan likes music”, câu đang nói về ai?",
+          "options": [
+            "Lan",
+            "likes",
+            "music",
+            "likes music"
+          ],
+          "answer": 0,
+          "explanation_vi": "Lan là chủ ngữ: người được nói đến trong câu.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q2",
+          "prompt": "Trong câu “We drink water”, từ nào chỉ hành động?",
+          "options": [
+            "We",
+            "water",
+            "drink",
+            "We drink"
+          ],
+          "answer": 2,
+          "explanation_vi": "Drink là động từ, chỉ hành động uống.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q3",
+          "prompt": "Chọn câu đầy đủ.",
+          "options": [
+            "My sister happy.",
+            "My sister is happy.",
+            "Is happy my sister.",
+            "My happy sister."
+          ],
+          "answer": 1,
+          "explanation_vi": "Câu mô tả cần động từ is giữa chủ ngữ my sister và tính từ happy.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q4",
+          "prompt": "Sắp xếp các từ thành câu: “I / like / apples”.",
+          "options": [
+            "Like I apples.",
+            "Apples like I.",
+            "I apples like.",
+            "I like apples."
+          ],
+          "answer": 3,
+          "explanation_vi": "Thứ tự là I (chủ ngữ) + like (động từ) + apples (tân ngữ).",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q5",
+          "prompt": "Trong câu “They watch a film”, họ xem gì?",
+          "options": [
+            "They",
+            "watch",
+            "a film",
+            "They watch"
+          ],
+          "answer": 2,
+          "explanation_vi": "A film là tân ngữ: thứ họ xem.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q6",
+          "prompt": "Câu nào có đủ chủ ngữ và động từ?",
+          "options": [
+            "The green bag.",
+            "Birds fly.",
+            "A small house.",
+            "Very nice."
+          ],
+          "answer": 1,
+          "explanation_vi": "Birds là chủ ngữ, fly là động từ. Câu này không cần tân ngữ.",
+          "prompt_lang": "vi"
+        }
+      ],
+      "teaching": {
+        "objective": "Ghép được một câu đơn và chỉ ra chủ ngữ, động từ trong câu.",
+        "context": "Bạn muốn nói rằng mình thích âm nhạc. Hãy xác định ai thích và thích điều gì.",
+        "example": "I like music.",
+        "translation_vi": "Tôi thích âm nhạc.",
+        "steps": [
+          "Ai thích? → I là chủ ngữ.",
+          "Làm gì? → like là động từ.",
+          "Thích gì? → music đứng sau like."
+        ],
+        "quick_check": {
+          "prompt": "Sắp xếp: “We / English / study”.",
+          "answer": "We study English.",
+          "explanation_vi": "We là người học, study là hành động, English là thứ được học."
+        },
+        "takeaways": [
+          "Câu khẳng định thường bắt đầu bằng chủ ngữ rồi đến động từ.",
+          "Câu mô tả như She is happy cần có be."
+        ]
+      }
+    },
+    {
       "id": "a1-be",
       "level": "A1",
       "title": "Am, is, are: giới thiệu và mô tả",
       "summary": "Nói bạn là ai, ở đâu và đang cảm thấy thế nào.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general"
       ],
@@ -25,6 +166,13 @@
           "pattern": "Be + chủ ngữ ...? · chủ ngữ + be + not",
           "example": "Are your notebooks in this bag?",
           "translation_vi": "Sổ của bạn có trong túi này không?"
+        },
+        {
+          "title": "Trả lời ngắn trong hội thoại",
+          "body": "Khi trả lời câu hỏi có be, nhắc lại be với chủ ngữ phù hợp: Yes, I am hoặc No, she isn’t. Không rút gọn am/is/are ở cuối câu trả lời khẳng định.",
+          "pattern": "Are you ready? → Yes, I am.",
+          "example": "Is he your brother? No, he isn’t.",
+          "translation_vi": "Anh ấy có phải anh trai bạn không? Không, không phải."
         }
       ],
       "pitfalls": [
@@ -85,7 +233,7 @@
         },
         {
           "id": "q5",
-          "prompt": "Choose the correct short answer: “Are you the new volunteers?”",
+          "prompt": "Chọn câu trả lời ngắn đúng: “Are you the new volunteers?”",
           "options": [
             "Yes, we are.",
             "Yes, we is.",
@@ -93,11 +241,12 @@
             "Yes, we be."
           ],
           "answer": 0,
-          "explanation_vi": "Nhóm người trả lời bằng we, nên câu trả lời ngắn là Yes, we are."
+          "explanation_vi": "Nhóm người trả lời bằng we, nên câu trả lời ngắn là Yes, we are.",
+          "prompt_lang": "vi"
         },
         {
           "id": "q6",
-          "prompt": "Choose the correct negative sentence.",
+          "prompt": "Chọn câu phủ định đúng.",
           "options": [
             "The cupboard not empty.",
             "The cupboard is not empty.",
@@ -105,237 +254,37 @@
             "The cupboard are not empty."
           ],
           "answer": 1,
-          "explanation_vi": "Cupboard số ít cần is; phủ định bằng is not trước tính từ empty."
-        }
-      ]
-    },
-    {
-      "id": "a1-present-simple",
-      "level": "A1",
-      "title": "Hiện tại đơn: thói quen mỗi ngày",
-      "summary": "Kể những việc thường làm và đặt câu hỏi về lịch sinh hoạt.",
-      "minutes": 8,
-      "tags": [
-        "general",
-        "toeic"
-      ],
-      "prerequisites": [
-        "a1-be"
-      ],
-      "explanation": [
-        {
-          "title": "Thêm s với he, she, it",
-          "body": "Dùng hiện tại đơn cho thói quen và điều thường đúng. Với chủ ngữ số ít như she hoặc the shop, động từ thường thêm s hoặc es.",
-          "pattern": "She works · they work",
-          "example": "The café closes at six every weekday.",
-          "translation_vi": "Quán cà phê đóng cửa lúc sáu giờ vào các ngày trong tuần."
-        },
-        {
-          "title": "Sau do hoặc does, dùng động từ nguyên mẫu",
-          "body": "Dùng do/does để hỏi và do not/does not để phủ định. Does đã thể hiện ngôi thứ ba nên động từ sau nó không thêm s.",
-          "pattern": "Does she work? · She does not work.",
-          "example": "Does Minh cycle to the office?",
-          "translation_vi": "Minh có đạp xe đến văn phòng không?"
+          "explanation_vi": "Cupboard số ít cần is; phủ định bằng is not trước tính từ empty.",
+          "prompt_lang": "vi"
         }
       ],
-      "pitfalls": [
-        "Không viết does she works: sau does dùng work.",
-        "Đừng dùng am/is/are trước một động từ thường ở hiện tại đơn."
-      ],
-      "source_urls": [
-        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
-      ],
-      "questions": [
-        {
-          "id": "q1",
-          "prompt": "Every morning, Lan ___ the shop at seven.",
-          "options": [
-            "open",
-            "opening",
-            "is open",
-            "opens"
-          ],
-          "answer": 3,
-          "explanation_vi": "Lan là chủ ngữ số ít; thói quen mỗi sáng dùng opens."
+      "teaching": {
+        "objective": "Giới thiệu và mô tả bằng am, is, are.",
+        "context": "Bạn muốn giới thiệu một người bạn mới với cả lớp.",
+        "example": "She is a student.",
+        "translation_vi": "Cô ấy là học sinh.",
+        "steps": [
+          "She là chủ ngữ, chỉ một người.",
+          "She đi với is.",
+          "A student cho biết người đó là ai."
+        ],
+        "quick_check": {
+          "prompt": "Điền am, is hoặc are: “My friends ___ at home.”",
+          "answer": "My friends are at home.",
+          "explanation_vi": "My friends chỉ nhiều người nên dùng are."
         },
-        {
-          "id": "q2",
-          "prompt": "We usually ___ lunch in the courtyard.",
-          "options": [
-            "eat",
-            "eating",
-            "are eat",
-            "eats"
-          ],
-          "answer": 0,
-          "explanation_vi": "We dùng động từ nguyên mẫu eat ở hiện tại đơn."
-        },
-        {
-          "id": "q3",
-          "prompt": "___ this bus stop near the museum every day?",
-          "options": [
-            "Is",
-            "Does",
-            "Are",
-            "Do"
-          ],
-          "answer": 1,
-          "explanation_vi": "Bus số ít, câu hỏi với động từ stop cần Does."
-        },
-        {
-          "id": "q4",
-          "prompt": "Bao does not ___ coffee in the evening.",
-          "options": [
-            "drinking",
-            "drank",
-            "drink",
-            "drinks"
-          ],
-          "answer": 2,
-          "explanation_vi": "Sau does not dùng nguyên mẫu drink."
-        },
-        {
-          "id": "q5",
-          "prompt": "How often ___ your neighbours use the shared garden?",
-          "options": [
-            "does",
-            "is",
-            "are",
-            "do"
-          ],
-          "answer": 3,
-          "explanation_vi": "Neighbours số nhiều nên câu hỏi dùng do."
-        },
-        {
-          "id": "q6",
-          "prompt": "My cousin ___ English on Tuesday evenings.",
-          "options": [
-            "studies",
-            "studying",
-            "are studying",
-            "study"
-          ],
-          "answer": 0,
-          "explanation_vi": "Cousin số ít; study đổi y thành ies: studies."
-        }
-      ]
-    },
-    {
-      "id": "a1-articles",
-      "level": "A1",
-      "title": "A, an, the: nhắc đến một người hay vật",
-      "summary": "Chọn mạo từ theo âm đầu và theo điều người nghe đã biết.",
-      "minutes": 8,
-      "tags": [
-        "general"
-      ],
-      "prerequisites": [
-        "a1-be"
-      ],
-      "explanation": [
-        {
-          "title": "A hay an phụ thuộc âm đầu",
-          "body": "Dùng a/an trước danh từ đếm được số ít khi giới thiệu một người hoặc vật chưa xác định. Nghe âm đầu của từ theo sau: âm nguyên âm dùng an.",
-          "pattern": "a + âm phụ âm · an + âm nguyên âm",
-          "example": "We found an empty basket beside a bench.",
-          "translation_vi": "Chúng tôi thấy một chiếc giỏ trống cạnh một ghế dài."
-        },
-        {
-          "title": "Dùng the khi đã biết đang nói đến cái nào",
-          "body": "Khi đã nhắc một vật và tiếp tục nói về chính vật đó, dùng the. Danh từ số nhiều hoặc không đếm được nói chung thường không cần mạo từ.",
-          "pattern": "a book → the book · books nói chung",
-          "example": "I bought a map. The map shows every walking trail.",
-          "translation_vi": "Tôi mua một tấm bản đồ. Tấm bản đồ chỉ tất cả các đường đi bộ."
-        }
-      ],
-      "pitfalls": [
-        "Chọn a/an theo âm, không chỉ theo chữ: hour bắt đầu bằng âm nguyên âm.",
-        "Không thêm a/an trước danh từ số nhiều."
-      ],
-      "source_urls": [
-        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the"
-      ],
-      "questions": [
-        {
-          "id": "q1",
-          "prompt": "Choose a or an: We need ___ extra chair.",
-          "options": [
-            "some",
-            "many",
-            "an",
-            "a"
-          ],
-          "answer": 2,
-          "explanation_vi": "Extra bắt đầu bằng âm nguyên âm; chair là danh từ đếm được số ít."
-        },
-        {
-          "id": "q2",
-          "prompt": "Choose a or an: Mai is ___ university student.",
-          "options": [
-            "some",
-            "many",
-            "an",
-            "a"
-          ],
-          "answer": 3,
-          "explanation_vi": "University bắt đầu bằng âm /j/ như trong you, nên dùng a."
-        },
-        {
-          "id": "q3",
-          "prompt": "Choose a or an: Please wait for ___ hour.",
-          "options": [
-            "an",
-            "any",
-            "a",
-            "many"
-          ],
-          "answer": 0,
-          "explanation_vi": "Hour có h câm và bắt đầu bằng âm nguyên âm, nên dùng an."
-        },
-        {
-          "id": "q4",
-          "prompt": "I borrowed a red notebook. I mean that same notebook: ___ notebook is now on my desk.",
-          "options": [
-            "Some",
-            "The",
-            "A",
-            "An"
-          ],
-          "answer": 1,
-          "explanation_vi": "Đây là chính cuốn sổ đã được nhắc, nên dùng The."
-        },
-        {
-          "id": "q5",
-          "prompt": "Choose a or an: My uncle is ___ baker.",
-          "options": [
-            "many",
-            "some",
-            "a",
-            "an"
-          ],
-          "answer": 2,
-          "explanation_vi": "Baker bắt đầu bằng âm phụ âm; nghề nghiệp số ít dùng a baker."
-        },
-        {
-          "id": "q6",
-          "prompt": "Choose the sentence that talks about cats in general.",
-          "options": [
-            "An cats need clean water.",
-            "Cats needs clean water.",
-            "A cats need clean water.",
-            "Cats need clean water."
-          ],
-          "answer": 3,
-          "explanation_vi": "Cats là số nhiều nói chung, không cần mạo từ và đi với need."
-        }
-      ]
+        "takeaways": [
+          "I am; he/she/it is; you/we/they are.",
+          "Phủ định: thêm not. Câu hỏi: đưa am/is/are lên trước chủ ngữ."
+        ]
+      }
     },
     {
       "id": "a1-pronouns",
       "level": "A1",
       "title": "I, me, my, mine: chọn đúng vai trò",
       "summary": "Phân biệt người làm việc, người nhận việc và đồ thuộc về ai.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general"
       ],
@@ -356,6 +305,13 @@
           "pattern": "my bag · the bag is mine",
           "example": "These are our seats. Those are yours.",
           "translation_vi": "Đây là chỗ của chúng tôi. Những chỗ kia là của bạn."
+        },
+        {
+          "title": "Thay tên riêng để tránh lặp",
+          "body": "Dùng he cho một người nam, she cho một người nữ, it cho một vật và they cho nhiều người hoặc vật. You có thể chỉ một người hoặc nhiều người. Chọn đại từ theo đối tượng đang nói đến.",
+          "pattern": "Lan → she · Lan and Minh → they",
+          "example": "Lan is my friend. She lives near my house.",
+          "translation_vi": "Lan là bạn tôi. Cô ấy sống gần nhà tôi."
         }
       ],
       "pitfalls": [
@@ -438,14 +394,309 @@
           "answer": 2,
           "explanation_vi": "Its đứng trước basket để chỉ giỏ của chiếc xe. It’s không dùng để chỉ sở hữu."
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "Chọn I/me và phân biệt my/mine trong câu đơn giản.",
+        "context": "Bạn muốn nói ai đó giúp mình và chỉ chiếc túi của mình.",
+        "example": "She helps me. This is my bag.",
+        "translation_vi": "Cô ấy giúp tôi. Đây là túi của tôi.",
+        "steps": [
+          "She là người giúp, đứng làm chủ ngữ.",
+          "Me là người được giúp, đứng sau helps.",
+          "My đi trước danh từ bag; nếu bỏ bag thì dùng mine."
+        ],
+        "quick_check": {
+          "prompt": "Điền my hoặc mine: “This book is ___.”",
+          "answer": "This book is mine.",
+          "explanation_vi": "Sau chỗ trống không có danh từ; mine thay cho my book."
+        },
+        "takeaways": [
+          "Chủ ngữ: I, she, we; tân ngữ: me, her, us.",
+          "My + danh từ; mine đứng riêng."
+        ]
+      }
+    },
+    {
+      "id": "a1-articles",
+      "level": "A1",
+      "title": "A, an, the: nhắc đến một người hay vật",
+      "summary": "Chọn mạo từ theo âm đầu và theo điều người nghe đã biết.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-be"
+      ],
+      "explanation": [
+        {
+          "title": "A hay an phụ thuộc âm đầu",
+          "body": "Dùng a/an trước danh từ đếm được số ít khi giới thiệu một người hoặc vật chưa xác định. Nghe âm đầu của từ theo sau: âm nguyên âm dùng an.",
+          "pattern": "a + âm phụ âm · an + âm nguyên âm",
+          "example": "We found an empty basket beside a bench.",
+          "translation_vi": "Chúng tôi thấy một chiếc giỏ trống cạnh một ghế dài."
+        },
+        {
+          "title": "Dùng the khi đã biết đang nói đến cái nào",
+          "body": "Khi đã nhắc một vật và tiếp tục nói về chính vật đó, dùng the. Danh từ số nhiều hoặc không đếm được nói chung thường không cần mạo từ.",
+          "pattern": "a book → the book · books nói chung",
+          "example": "I bought a map. The map shows every walking trail.",
+          "translation_vi": "Tôi mua một tấm bản đồ. Tấm bản đồ chỉ tất cả các đường đi bộ."
+        },
+        {
+          "title": "Khi nói chung, có thể không cần mạo từ",
+          "body": "Danh từ số nhiều và danh từ không đếm được dùng để nói chung thường không có a/an/the. Khi chỉ một nhóm hoặc lượng cụ thể mà hai bên đã biết, có thể dùng the.",
+          "pattern": "Books are useful. · Water is important.",
+          "example": "I like cats.",
+          "translation_vi": "Tôi thích mèo."
+        }
+      ],
+      "pitfalls": [
+        "Chọn a/an theo âm, không chỉ theo chữ: hour bắt đầu bằng âm nguyên âm.",
+        "Không thêm a/an trước danh từ số nhiều."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Choose a or an: We need ___ extra chair.",
+          "options": [
+            "some",
+            "many",
+            "an",
+            "a"
+          ],
+          "answer": 2,
+          "explanation_vi": "Extra bắt đầu bằng âm nguyên âm; chair là danh từ đếm được số ít."
+        },
+        {
+          "id": "q2",
+          "prompt": "Choose a or an: Mai is ___ university student.",
+          "options": [
+            "some",
+            "many",
+            "an",
+            "a"
+          ],
+          "answer": 3,
+          "explanation_vi": "University bắt đầu bằng âm /j/ như trong you, nên dùng a."
+        },
+        {
+          "id": "q3",
+          "prompt": "Choose a or an: Please wait for ___ hour.",
+          "options": [
+            "an",
+            "any",
+            "a",
+            "many"
+          ],
+          "answer": 0,
+          "explanation_vi": "Hour có h câm và bắt đầu bằng âm nguyên âm, nên dùng an."
+        },
+        {
+          "id": "q4",
+          "prompt": "I borrowed a red notebook. I mean that same notebook: ___ notebook is now on my desk.",
+          "options": [
+            "Some",
+            "The",
+            "A",
+            "An"
+          ],
+          "answer": 1,
+          "explanation_vi": "Đây là chính cuốn sổ đã được nhắc, nên dùng The."
+        },
+        {
+          "id": "q5",
+          "prompt": "Choose a or an: My uncle is ___ baker.",
+          "options": [
+            "many",
+            "some",
+            "a",
+            "an"
+          ],
+          "answer": 2,
+          "explanation_vi": "Baker bắt đầu bằng âm phụ âm; nghề nghiệp số ít dùng a baker."
+        },
+        {
+          "id": "q6",
+          "prompt": "Choose the sentence that talks about cats in general.",
+          "options": [
+            "An cats need clean water.",
+            "Cats needs clean water.",
+            "A cats need clean water.",
+            "Cats need clean water."
+          ],
+          "answer": 3,
+          "explanation_vi": "Cats là số nhiều nói chung, không cần mạo từ và đi với need."
+        }
+      ],
+      "teaching": {
+        "objective": "Chọn a, an hoặc the khi nói về một người hay vật.",
+        "context": "Bạn kể mình vừa mua một cuốn sách, rồi nói tiếp về chính cuốn đó.",
+        "example": "I bought a book. The book is interesting.",
+        "translation_vi": "Tôi mua một cuốn sách. Cuốn sách ấy rất thú vị.",
+        "steps": [
+          "Lần đầu nhắc một cuốn sách chưa xác định: a book.",
+          "Lần sau nói đúng cuốn vừa nhắc: the book.",
+          "Book bắt đầu bằng âm phụ âm nên dùng a, không dùng an."
+        ],
+        "quick_check": {
+          "prompt": "Điền a hoặc an: “She has ___ umbrella.”",
+          "answer": "She has an umbrella.",
+          "explanation_vi": "Umbrella bắt đầu bằng âm nguyên âm nên dùng an."
+        },
+        "takeaways": [
+          "A/an dùng với danh từ đếm được số ít; chọn theo âm đầu.",
+          "The dùng khi người nói và người nghe xác định được đang nói đến cái nào."
+        ]
+      }
+    },
+    {
+      "id": "a1-plural-nouns",
+      "level": "A1",
+      "title": "Một hay nhiều: danh từ số ít và số nhiều",
+      "summary": "Dùng a book, two books và một số dạng số nhiều thường gặp.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-articles"
+      ],
+      "explanation": [
+        {
+          "title": "Thêm s khi có từ hai trở lên",
+          "body": "Danh từ đếm được chỉ những thứ có thể đếm từng cái, từng người. Khi có nhiều hơn một, phần lớn danh từ thêm s. Danh từ số ít thường cần a/an hoặc từ xác định như my, this.",
+          "pattern": "one book → two books",
+          "example": "There are four cups on the table.",
+          "translation_vi": "Có bốn chiếc cốc trên bàn."
+        },
+        {
+          "title": "Khi nào thêm es hoặc đổi y thành ies?",
+          "body": "Danh từ tận cùng bằng s, sh, ch, x thường thêm es. Nếu tận cùng bằng phụ âm + y, đổi y thành ies. Nếu trước y là nguyên âm, chỉ thêm s.",
+          "pattern": "box → boxes · baby → babies · toy → toys",
+          "example": "The babies are asleep.",
+          "translation_vi": "Các em bé đang ngủ."
+        },
+        {
+          "title": "Có những từ đổi dạng riêng",
+          "body": "Một số danh từ không thêm s theo cách thông thường: child → children, person → people, man → men, woman → women. Hãy học mỗi từ cùng dạng số nhiều của nó.",
+          "pattern": "one child → three children",
+          "example": "Two children are in the garden.",
+          "translation_vi": "Hai đứa trẻ đang ở trong vườn."
+        }
+      ],
+      "pitfalls": [
+        "Không dùng a/an trước danh từ số nhiều: two books, không phải a books.",
+        "Không thêm s vào children hoặc people trong cách dùng thông thường."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/count-nouns"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "I have two ___.",
+          "options": [
+            "book",
+            "books",
+            "bookes",
+            "a book"
+          ],
+          "answer": 1,
+          "explanation_vi": "Two chỉ số nhiều nên book thêm s thành books."
+        },
+        {
+          "id": "q2",
+          "prompt": "There are three ___ on the shelf.",
+          "options": [
+            "box",
+            "boxs",
+            "boxes",
+            "a box"
+          ],
+          "answer": 2,
+          "explanation_vi": "Box tận cùng bằng x nên thêm es: boxes."
+        },
+        {
+          "id": "q3",
+          "prompt": "One baby, two ___.",
+          "options": [
+            "babies",
+            "babys",
+            "babyes",
+            "baby"
+          ],
+          "answer": 0,
+          "explanation_vi": "Baby có phụ âm b trước y: đổi y thành ies."
+        },
+        {
+          "id": "q4",
+          "prompt": "One toy, four ___.",
+          "options": [
+            "toies",
+            "toys",
+            "toyes",
+            "toy"
+          ],
+          "answer": 1,
+          "explanation_vi": "Toy có nguyên âm o trước y nên chỉ thêm s."
+        },
+        {
+          "id": "q5",
+          "prompt": "Five ___ are playing in the park.",
+          "options": [
+            "child",
+            "childs",
+            "childes",
+            "children"
+          ],
+          "answer": 3,
+          "explanation_vi": "Dạng số nhiều của child là children."
+        },
+        {
+          "id": "q6",
+          "prompt": "Chọn cụm từ đúng.",
+          "options": [
+            "a books",
+            "three book",
+            "three books",
+            "an books"
+          ],
+          "answer": 2,
+          "explanation_vi": "Three cần danh từ số nhiều books; không dùng a/an ở đây.",
+          "prompt_lang": "vi"
+        }
+      ],
+      "teaching": {
+        "objective": "Đổi danh từ đếm được từ số ít sang số nhiều.",
+        "context": "Bạn đang đếm hộp trong tủ và muốn nói có ba hộp.",
+        "example": "There are three boxes.",
+        "translation_vi": "Có ba chiếc hộp.",
+        "steps": [
+          "Three cho biết có nhiều hơn một.",
+          "Từ box kết thúc bằng x nên thêm es.",
+          "Chọn there are vì boxes là số nhiều."
+        ],
+        "quick_check": {
+          "prompt": "Điền dạng số nhiều: “There are two ___ (child).”",
+          "answer": "There are two children.",
+          "explanation_vi": "Child có dạng số nhiều riêng là children."
+        },
+        "takeaways": [
+          "Phần lớn danh từ thêm s; box, watch thường thêm es.",
+          "Học riêng child → children, person → people."
+        ]
+      }
     },
     {
       "id": "a1-there-is",
       "level": "A1",
       "title": "There is, there are: có gì ở đây?",
       "summary": "Mô tả đồ vật và tiện ích trong một nơi chốn.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general"
       ],
@@ -467,6 +718,13 @@
           "pattern": "Is there ...? · There aren’t any ...",
           "example": "Is there any water in the bottle?",
           "translation_vi": "Trong chai còn nước không?"
+        },
+        {
+          "title": "Nói không có gì ở một nơi",
+          "body": "Thêm not sau is/are, hoặc dùng isn’t/aren’t. Với danh từ số nhiều, mẫu thường dùng là there aren’t any + danh từ số nhiều.",
+          "pattern": "There isn’t a ... · There aren’t any ...",
+          "example": "There aren’t any chairs in the room.",
+          "translation_vi": "Trong phòng không có chiếc ghế nào."
         }
       ],
       "pitfalls": [
@@ -549,14 +807,311 @@
           "answer": 1,
           "explanation_vi": "Cafés số nhiều và câu hỏi đưa are lên trước there."
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "Nói một nơi có gì và đặt câu hỏi với there is/are.",
+        "context": "Bạn muốn mô tả những chiếc ghế trong phòng.",
+        "example": "There are two chairs in the room.",
+        "translation_vi": "Có hai chiếc ghế trong phòng.",
+        "steps": [
+          "Muốn nói có một vật ở đâu, dùng there is/are.",
+          "Two chairs là số nhiều nên chọn are.",
+          "Thêm in the room để nói vị trí."
+        ],
+        "quick_check": {
+          "prompt": "Điền is hoặc are: “There ___ a book on the desk.”",
+          "answer": "There is a book on the desk.",
+          "explanation_vi": "A book là một cuốn sách nên dùng is."
+        },
+        "takeaways": [
+          "There is + một vật hoặc danh từ không đếm được.",
+          "There are + danh từ số nhiều; hỏi bằng Is there…? hoặc Are there…?"
+        ]
+      }
+    },
+    {
+      "id": "a1-present-simple",
+      "level": "A1",
+      "title": "Hiện tại đơn: thói quen mỗi ngày",
+      "summary": "Kể những việc thường làm và đặt câu hỏi về lịch sinh hoạt.",
+      "minutes": 10,
+      "tags": [
+        "general",
+        "toeic"
+      ],
+      "prerequisites": [
+        "a1-be"
+      ],
+      "explanation": [
+        {
+          "title": "Thêm s với he, she, it",
+          "body": "Dùng hiện tại đơn cho thói quen và điều thường đúng. Với chủ ngữ số ít như she hoặc the shop, động từ thường thêm s hoặc es.",
+          "pattern": "She works · they work",
+          "example": "The café closes at six every weekday.",
+          "translation_vi": "Quán cà phê đóng cửa lúc sáu giờ vào các ngày trong tuần."
+        },
+        {
+          "title": "Sau do hoặc does, dùng động từ nguyên mẫu",
+          "body": "Dùng do/does để hỏi và do not/does not để phủ định. Does đã thể hiện ngôi thứ ba nên động từ sau nó không thêm s.",
+          "pattern": "Does she work? · She does not work.",
+          "example": "Does Minh cycle to the office?",
+          "translation_vi": "Minh có đạp xe đến văn phòng không?"
+        },
+        {
+          "title": "Nhận ra thói quen qua thời gian",
+          "body": "Every day, on Mondays, usually và often thường xuất hiện khi kể thói quen. Với động từ tận cùng bằng phụ âm + y, đổi y thành ies khi đi với he/she/it; các động từ như go thêm es.",
+          "pattern": "study → studies · go → goes",
+          "example": "She studies English every evening.",
+          "translation_vi": "Cô ấy học tiếng Anh mỗi tối."
+        }
+      ],
+      "pitfalls": [
+        "Không viết does she works: sau does dùng work.",
+        "Đừng dùng am/is/are trước một động từ thường ở hiện tại đơn."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Every morning, Lan ___ the shop at seven.",
+          "options": [
+            "open",
+            "opening",
+            "is open",
+            "opens"
+          ],
+          "answer": 3,
+          "explanation_vi": "Lan là chủ ngữ số ít; thói quen mỗi sáng dùng opens."
+        },
+        {
+          "id": "q2",
+          "prompt": "We usually ___ lunch in the courtyard.",
+          "options": [
+            "eat",
+            "eating",
+            "are eat",
+            "eats"
+          ],
+          "answer": 0,
+          "explanation_vi": "We dùng động từ nguyên mẫu eat ở hiện tại đơn."
+        },
+        {
+          "id": "q3",
+          "prompt": "___ this bus stop near the museum every day?",
+          "options": [
+            "Is",
+            "Does",
+            "Are",
+            "Do"
+          ],
+          "answer": 1,
+          "explanation_vi": "Bus số ít, câu hỏi với động từ stop cần Does."
+        },
+        {
+          "id": "q4",
+          "prompt": "Bao does not ___ coffee in the evening.",
+          "options": [
+            "drinking",
+            "drank",
+            "drink",
+            "drinks"
+          ],
+          "answer": 2,
+          "explanation_vi": "Sau does not dùng nguyên mẫu drink."
+        },
+        {
+          "id": "q5",
+          "prompt": "How often ___ your neighbours use the shared garden?",
+          "options": [
+            "does",
+            "is",
+            "are",
+            "do"
+          ],
+          "answer": 3,
+          "explanation_vi": "Neighbours số nhiều nên câu hỏi dùng do."
+        },
+        {
+          "id": "q6",
+          "prompt": "My cousin ___ English on Tuesday evenings.",
+          "options": [
+            "studies",
+            "studying",
+            "are studying",
+            "study"
+          ],
+          "answer": 0,
+          "explanation_vi": "Cousin số ít; study đổi y thành ies: studies."
+        }
+      ],
+      "teaching": {
+        "objective": "Nói về thói quen và hỏi những việc thường làm.",
+        "context": "Bạn muốn kể việc Lan làm vào mỗi sáng.",
+        "example": "Lan walks to school every day.",
+        "translation_vi": "Lan đi bộ đến trường mỗi ngày.",
+        "steps": [
+          "Every day cho biết đây là thói quen.",
+          "Lan là chủ ngữ số ít, tương đương she.",
+          "Walk thêm s thành walks."
+        ],
+        "quick_check": {
+          "prompt": "Sửa câu: “Does she likes tea?”",
+          "answer": "Does she like tea?",
+          "explanation_vi": "Does đã thể hiện ngôi thứ ba số ít; sau does dùng like nguyên mẫu."
+        },
+        "takeaways": [
+          "Thói quen: dùng hiện tại đơn. He/she/it thường đi với động từ thêm s/es.",
+          "Sau do/does/don’t/doesn’t, dùng động từ nguyên mẫu."
+        ]
+      }
+    },
+    {
+      "id": "a1-can",
+      "level": "A1",
+      "title": "Can và can’t: nói về khả năng",
+      "summary": "Nói mình làm được gì và hỏi người khác có thể làm gì.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-present-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Dùng can cho việc làm được",
+          "body": "Can diễn tả khả năng làm một việc. Sau can dùng động từ nguyên mẫu, tức dạng không có to và không thêm s. Can giữ nguyên với mọi chủ ngữ.",
+          "pattern": "I / she / they + can + động từ nguyên mẫu",
+          "example": "My sister can swim.",
+          "translation_vi": "Chị gái tôi biết bơi."
+        },
+        {
+          "title": "Can’t nghĩa là không thể hoặc chưa biết làm",
+          "body": "Can’t là dạng rút gọn của cannot. Đặt can’t trước động từ nguyên mẫu để nói không làm được một việc.",
+          "pattern": "Chủ ngữ + can’t + động từ nguyên mẫu",
+          "example": "I can’t drive.",
+          "translation_vi": "Tôi chưa biết lái xe."
+        },
+        {
+          "title": "Đưa can lên đầu để hỏi",
+          "body": "Câu hỏi bắt đầu bằng can rồi đến chủ ngữ và động từ. Trả lời ngắn bằng Yes, ... can hoặc No, ... can’t. Không thêm do hoặc does.",
+          "pattern": "Can + chủ ngữ + động từ ...?",
+          "example": "Can you cook? Yes, I can.",
+          "translation_vi": "Bạn có biết nấu ăn không? Có, tôi biết."
+        }
+      ],
+      "pitfalls": [
+        "Không thêm to hoặc s sau can: She can sing.",
+        "Không dùng do/does trong câu hỏi bắt đầu bằng can."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/can-could"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Mai can ___ English.",
+          "options": [
+            "speaks",
+            "to speak",
+            "speaking",
+            "speak"
+          ],
+          "answer": 3,
+          "explanation_vi": "Sau can dùng động từ nguyên mẫu speak."
+        },
+        {
+          "id": "q2",
+          "prompt": "Chọn câu đúng.",
+          "options": [
+            "He cans swim.",
+            "He can swim.",
+            "He can swims.",
+            "He can to swim."
+          ],
+          "answer": 1,
+          "explanation_vi": "Can không đổi theo chủ ngữ và đi với swim nguyên mẫu.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q3",
+          "prompt": "___ you ride a bike?",
+          "options": [
+            "Do can",
+            "Does",
+            "Can",
+            "Are can"
+          ],
+          "answer": 2,
+          "explanation_vi": "Đưa can lên trước you để đặt câu hỏi."
+        },
+        {
+          "id": "q4",
+          "prompt": "“Can Lan cook?” “Yes, she ___.”",
+          "options": [
+            "can",
+            "does",
+            "is",
+            "cans"
+          ],
+          "answer": 0,
+          "explanation_vi": "Câu hỏi với can có câu trả lời ngắn Yes, she can."
+        },
+        {
+          "id": "q5",
+          "prompt": "I do not know how to drive. I ___ drive.",
+          "options": [
+            "can",
+            "cans",
+            "am can",
+            "can’t"
+          ],
+          "answer": 3,
+          "explanation_vi": "Không biết lái xe thì dùng can’t drive."
+        },
+        {
+          "id": "q6",
+          "prompt": "Chọn câu hỏi đúng.",
+          "options": [
+            "Do you can dance?",
+            "Can you to dance?",
+            "Can you dance?",
+            "You can dance how?"
+          ],
+          "answer": 2,
+          "explanation_vi": "Cấu trúc là Can + you + dance? Không thêm do hoặc to.",
+          "prompt_lang": "vi"
+        }
+      ],
+      "teaching": {
+        "objective": "Nói về khả năng và đặt câu hỏi với can.",
+        "context": "Bạn muốn hỏi bạn mới có biết chơi đàn guitar không.",
+        "example": "Can you play the guitar?",
+        "translation_vi": "Bạn có biết chơi đàn guitar không?",
+        "steps": [
+          "Dùng can để hỏi về khả năng.",
+          "Đưa can lên trước you.",
+          "Giữ play ở dạng nguyên mẫu, không thêm to."
+        ],
+        "quick_check": {
+          "prompt": "Sửa câu: “She can speaks French.”",
+          "answer": "She can speak French.",
+          "explanation_vi": "Sau can, động từ giữ nguyên dạng speak dù chủ ngữ là she."
+        },
+        "takeaways": [
+          "Can + động từ nguyên mẫu; không thêm to hoặc s.",
+          "Hỏi bằng Can you…?; phủ định bằng can’t."
+        ]
+      }
     },
     {
       "id": "a2-past-simple",
       "level": "A2",
       "title": "Quá khứ đơn: kể việc đã xảy ra",
       "summary": "Nói về việc đã kết thúc và dùng did đúng trong câu hỏi, phủ định.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general",
         "toeic"
@@ -578,6 +1133,13 @@
           "pattern": "Did they go? · They didn’t go.",
           "example": "Did you find the missing receipt?",
           "translation_vi": "Bạn đã tìm thấy hóa đơn bị thất lạc chưa?"
+        },
+        {
+          "title": "Be ở quá khứ: was và were",
+          "body": "Dùng was với I/he/she/it; dùng were với you/we/they. Phủ định bằng wasn’t/weren’t. Câu hỏi đưa was/were lên đầu, không thêm did.",
+          "pattern": "I was · they were · Were you ...?",
+          "example": "Were you at home yesterday?",
+          "translation_vi": "Hôm qua bạn có ở nhà không?"
         }
       ],
       "pitfalls": [
@@ -650,7 +1212,7 @@
         },
         {
           "id": "q6",
-          "prompt": "Choose the correct question.",
+          "prompt": "Chọn câu hỏi đúng.",
           "options": [
             "Where did you put the spare key?",
             "Where you did put the spare key?",
@@ -658,16 +1220,37 @@
             "Where did you putted the spare key?"
           ],
           "answer": 0,
-          "explanation_vi": "Câu hỏi có did theo thứ tự where + did + chủ ngữ + nguyên mẫu put."
+          "explanation_vi": "Câu hỏi có did theo thứ tự where + did + chủ ngữ + nguyên mẫu put.",
+          "prompt_lang": "vi"
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "Kể một việc đã kết thúc và dùng did/didn’t đúng cách.",
+        "context": "Bạn muốn kể mình gặp một người bạn vào hôm qua.",
+        "example": "I met a friend yesterday.",
+        "translation_vi": "Hôm qua tôi gặp một người bạn.",
+        "steps": [
+          "Yesterday chỉ thời điểm đã qua.",
+          "Meet là động từ bất quy tắc, quá khứ là met.",
+          "Trong câu khẳng định này không cần thêm did."
+        ],
+        "quick_check": {
+          "prompt": "Sửa câu: “We didn’t went out.”",
+          "answer": "We didn’t go out.",
+          "explanation_vi": "Sau didn’t dùng nguyên mẫu go, không dùng went."
+        },
+        "takeaways": [
+          "Khẳng định: thêm ed hoặc dùng dạng quá khứ riêng.",
+          "Sau did/didn’t dùng nguyên mẫu; be có dạng was/were."
+        ]
+      }
     },
     {
       "id": "a2-present-continuous",
       "level": "A2",
       "title": "Hiện tại tiếp diễn: việc đang diễn ra",
       "summary": "Dùng be + V-ing để mô tả điều đang xảy ra hoặc tạm thời.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general"
       ],
@@ -689,6 +1272,13 @@
           "pattern": "usually works · is working now",
           "example": "I usually walk, but I am taking the bus today.",
           "translation_vi": "Tôi thường đi bộ, nhưng hôm nay tôi đang đi xe buýt."
+        },
+        {
+          "title": "Phủ định và đặt câu hỏi",
+          "body": "Thêm not sau be để phủ định. Khi hỏi, đưa am/is/are lên trước chủ ngữ, giữ V-ing ở phía sau. Không thêm do hoặc does.",
+          "pattern": "She isn’t working. · Is she working?",
+          "example": "Are they waiting for the bus?",
+          "translation_vi": "Họ đang đợi xe buýt phải không?"
         }
       ],
       "pitfalls": [
@@ -771,14 +1361,315 @@
           "answer": 3,
           "explanation_vi": "Know chỉ trạng thái biết trong ngữ cảnh này nên dùng hiện tại đơn I know."
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "Mô tả việc đang diễn ra bằng am/is/are + V-ing.",
+        "context": "Bạn nhìn thấy một người bạn đang đọc sách.",
+        "example": "She is reading a book now.",
+        "translation_vi": "Cô ấy đang đọc sách.",
+        "steps": [
+          "Now cho biết việc đang diễn ra.",
+          "She đi với is.",
+          "Read thêm ing thành reading, đặt sau is."
+        ],
+        "quick_check": {
+          "prompt": "Điền dạng đúng của cook: “They are ___ dinner now.”",
+          "answer": "They are cooking dinner now.",
+          "explanation_vi": "Đã có are nên cần cooking để tạo are + V-ing."
+        },
+        "takeaways": [
+          "Hiện tại tiếp diễn cần cả be và V-ing.",
+          "Thói quen thường dùng hiện tại đơn; việc đang diễn ra thường dùng hiện tại tiếp diễn."
+        ]
+      }
+    },
+    {
+      "id": "a2-frequency",
+      "level": "A2",
+      "title": "Always, usually, sometimes: nói việc thường làm",
+      "summary": "Chọn từ chỉ tần suất và đặt đúng vị trí trong câu.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-present-simple"
+      ],
+      "explanation": [
+        {
+          "title": "Chọn từ theo mức độ thường xuyên",
+          "body": "Always là luôn luôn; usually là thường; sometimes là thỉnh thoảng; hardly ever là hầu như không; never là không bao giờ. Dùng các từ này để nói một việc xảy ra thường xuyên đến đâu.",
+          "pattern": "always → usually → sometimes → hardly ever → never",
+          "example": "I sometimes walk to school.",
+          "translation_vi": "Thỉnh thoảng tôi đi bộ đến trường."
+        },
+        {
+          "title": "Đặt trước động từ thường, sau be",
+          "body": "Vị trí thông dụng là trước động từ thường như read, work, eat. Với am/is/are, trạng từ đứng sau be. Sometimes cũng có thể đứng đầu hoặc cuối câu.",
+          "pattern": "usually reads · is usually tired",
+          "example": "Lan usually reads before bed.",
+          "translation_vi": "Lan thường đọc sách trước khi ngủ."
+        },
+        {
+          "title": "Hỏi tần suất bằng how often",
+          "body": "How often hỏi một việc xảy ra thường xuyên đến đâu. Có thể trả lời bằng trạng từ hoặc cụm như every day, once a week, twice a month. Never đã có nghĩa phủ định nên không thêm don’t trong câu như I never smoke.",
+          "pattern": "How often do you ...? · twice a week",
+          "example": "How often do you swim? Twice a week.",
+          "translation_vi": "Bạn đi bơi thường xuyên không? Hai lần một tuần."
+        }
+      ],
+      "pitfalls": [
+        "Với be, dùng She is often busy, không dùng She often is busy trong mẫu cơ bản này.",
+        "Never đã mang nghĩa không bao giờ: dùng I never smoke."
+      ],
+      "source_urls": [
+        "https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/adverbs-frequency"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Chọn cách sắp xếp thông dụng.",
+          "options": [
+            "She usually drinks tea.",
+            "She drinks usually tea.",
+            "Usually drinks she tea.",
+            "She drinks tea usually always."
+          ],
+          "answer": 0,
+          "explanation_vi": "Usually đứng trước động từ thường drinks.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q2",
+          "prompt": "Chọn vị trí thông dụng của trạng từ trong câu có be.",
+          "options": [
+            "He always late is.",
+            "He is always late.",
+            "Always is late he.",
+            "He late is always."
+          ],
+          "answer": 1,
+          "explanation_vi": "Always thường đứng sau is trong câu với be.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q3",
+          "prompt": "Từ nào có nghĩa là “không bao giờ”?",
+          "options": [
+            "usually",
+            "always",
+            "sometimes",
+            "never"
+          ],
+          "answer": 3,
+          "explanation_vi": "Never có nghĩa là không bao giờ.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q4",
+          "prompt": "“___ do you exercise?” “Three times a week.”",
+          "options": [
+            "How many",
+            "How much",
+            "How often",
+            "How old"
+          ],
+          "answer": 2,
+          "explanation_vi": "How often hỏi về tần suất; three times a week là ba lần mỗi tuần."
+        },
+        {
+          "id": "q5",
+          "prompt": "Chọn câu đúng.",
+          "options": [
+            "I never eat meat.",
+            "I don’t never eat meat.",
+            "I never eating meat.",
+            "I am never eat meat."
+          ],
+          "answer": 0,
+          "explanation_vi": "Never đã mang nghĩa phủ định và đứng trước eat; không cần don’t.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q6",
+          "prompt": "“Twice a month” có nghĩa là ___.",
+          "options": [
+            "mỗi hai tháng",
+            "hai lần một tháng",
+            "hai tháng một lần",
+            "hai lần mỗi ngày"
+          ],
+          "answer": 1,
+          "explanation_vi": "Twice là hai lần, a month là mỗi tháng.",
+          "prompt_lang": "vi"
+        }
+      ],
+      "teaching": {
+        "objective": "Nói tần suất và đặt trạng từ đúng vị trí thông dụng.",
+        "context": "Bạn muốn nói mình thường bận vào thứ Hai.",
+        "example": "I am usually busy on Mondays.",
+        "translation_vi": "Tôi thường bận vào các ngày thứ Hai.",
+        "steps": [
+          "Câu mô tả dùng be: I am busy.",
+          "Usually có nghĩa là thường.",
+          "Với be, đặt usually sau am: I am usually busy."
+        ],
+        "quick_check": {
+          "prompt": "Điền usually vào câu: “They read after dinner.”",
+          "answer": "They usually read after dinner.",
+          "explanation_vi": "Read là động từ thường nên usually đứng trước read."
+        },
+        "takeaways": [
+          "Trước động từ thường: usually read; sau be: are usually busy.",
+          "How often hỏi tần suất; never đã có nghĩa phủ định."
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions",
+      "level": "A2",
+      "title": "In, on, at: nói về thời gian và nơi chốn",
+      "summary": "Chọn giới từ cho giờ, ngày, tháng và các vị trí quen thuộc.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-there-is"
+      ],
+      "explanation": [
+        {
+          "title": "Nói một việc diễn ra lúc nào",
+          "body": "Dùng at với giờ cụ thể; on với ngày trong tuần hoặc ngày cụ thể; in với tháng, năm và các buổi trong ngày. Riêng ban đêm thường nói at night.",
+          "pattern": "at 8 o’clock · on Monday · in July · in the morning",
+          "example": "Our class starts at nine on Tuesday.",
+          "translation_vi": "Lớp học bắt đầu lúc chín giờ vào thứ Ba."
+        },
+        {
+          "title": "Nói một vật ở đâu",
+          "body": "Dùng in khi ở bên trong một không gian; on khi ở trên bề mặt; at khi nói một điểm hoặc địa điểm hoạt động. Cách chọn còn phụ thuộc ý muốn diễn đạt.",
+          "pattern": "in a bag · on a desk · at the bus stop",
+          "example": "My keys are in my bag.",
+          "translation_vi": "Chìa khóa của tôi ở trong túi."
+        },
+        {
+          "title": "Học cả cụm quen dùng",
+          "body": "Nên học giới từ cùng cụm từ: at home, at work, at school. Không đặt in/on/at trước next, last, this, every khi nói thời gian như next Monday hoặc every morning.",
+          "pattern": "at home · next Monday · every morning",
+          "example": "We meet every Friday.",
+          "translation_vi": "Chúng tôi gặp nhau vào thứ Sáu hằng tuần."
+        }
+      ],
+      "pitfalls": [
+        "Dùng on Monday nhưng không thêm on trước next Monday.",
+        "At night là một cụm cần nhớ; không đổi thành in night."
+      ],
+      "source_urls": [
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on",
+        "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/prepositions-place"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "The lesson starts ___ 7:30.",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "to"
+          ],
+          "answer": 2,
+          "explanation_vi": "Giờ cụ thể 7:30 đi với at."
+        },
+        {
+          "id": "q2",
+          "prompt": "My birthday is ___ May.",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "to"
+          ],
+          "answer": 0,
+          "explanation_vi": "Tháng May đi với in."
+        },
+        {
+          "id": "q3",
+          "prompt": "We have English ___ Wednesday.",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "to"
+          ],
+          "answer": 1,
+          "explanation_vi": "Ngày trong tuần Wednesday đi với on."
+        },
+        {
+          "id": "q4",
+          "prompt": "The phone is ___ the box, under the lid.",
+          "options": [
+            "at",
+            "to",
+            "on",
+            "in"
+          ],
+          "answer": 3,
+          "explanation_vi": "Điện thoại nằm bên trong hộp nên dùng in."
+        },
+        {
+          "id": "q5",
+          "prompt": "The book is lying ___ the table.",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "to"
+          ],
+          "answer": 1,
+          "explanation_vi": "Sách nằm trên bề mặt bàn nên dùng on."
+        },
+        {
+          "id": "q6",
+          "prompt": "Chọn câu đúng.",
+          "options": [
+            "We meet on next Monday.",
+            "We meet at next Monday.",
+            "We meet next Monday.",
+            "We meet in next Monday."
+          ],
+          "answer": 2,
+          "explanation_vi": "Không dùng giới từ trước next Monday.",
+          "prompt_lang": "vi"
+        }
+      ],
+      "teaching": {
+        "objective": "Chọn in, on hoặc at trong những câu nói về giờ, ngày và nơi chốn.",
+        "context": "Bạn muốn báo giờ học cho một người bạn.",
+        "example": "The class is at ten on Friday.",
+        "translation_vi": "Lớp học diễn ra lúc mười giờ vào thứ Sáu.",
+        "steps": [
+          "Ten là giờ cụ thể nên dùng at ten.",
+          "Friday là ngày trong tuần nên dùng on Friday.",
+          "Có thể đặt hai cụm thời gian cạnh nhau: at ten on Friday."
+        ],
+        "quick_check": {
+          "prompt": "Điền hai chỗ trống: “I study ___ the morning and sleep ___ night.”",
+          "answer": "I study in the morning and sleep at night.",
+          "explanation_vi": "In the morning và at night là hai cụm thường dùng."
+        },
+        "takeaways": [
+          "Giờ: at; ngày: on; tháng và năm: in.",
+          "Học cả cụm như at home, at night; không thêm giới từ trước next Monday."
+        ]
+      }
     },
     {
       "id": "a2-quantity",
       "level": "A2",
       "title": "How much, how many: đếm và nói số lượng",
       "summary": "Phân biệt danh từ đếm được với những thứ thường không đếm trực tiếp.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general",
         "toeic"
@@ -801,6 +1692,13 @@
           "pattern": "some water · any chairs · a piece of advice",
           "example": "Could I have some water, please?",
           "translation_vi": "Cho tôi xin một ít nước được không?"
+        },
+        {
+          "title": "A lot of dùng được với cả hai loại danh từ",
+          "body": "A lot of có nghĩa là nhiều, dùng với danh từ đếm được số nhiều hoặc không đếm được. Danh từ sau cụm này quyết định dùng động từ số ít hay số nhiều.",
+          "pattern": "a lot of books · a lot of water",
+          "example": "There is a lot of water in the bottle.",
+          "translation_vi": "Trong chai có nhiều nước."
         }
       ],
       "pitfalls": [
@@ -883,14 +1781,34 @@
           "answer": 2,
           "explanation_vi": "Chairs là số nhiều: there are và a lot of đều phù hợp."
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "Phân biệt much/many và nói số lượng bằng some/any.",
+        "context": "Bạn cần hỏi có bao nhiêu chai nước cho buổi học.",
+        "example": "How many bottles of water do we need?",
+        "translation_vi": "Chúng ta cần bao nhiêu chai nước?",
+        "steps": [
+          "Water thường không đếm trực tiếp theo từng đơn vị.",
+          "Bottles là những chai đếm được và đang ở số nhiều.",
+          "Hỏi số chai nên dùng how many bottles, không dùng how much bottles."
+        ],
+        "quick_check": {
+          "prompt": "Điền much hoặc many: “How ___ information do you need?”",
+          "answer": "How much information do you need?",
+          "explanation_vi": "Information là danh từ không đếm được nên dùng much."
+        },
+        "takeaways": [
+          "Many + danh từ đếm được số nhiều; much + danh từ không đếm được.",
+          "Muốn đếm nước hoặc thông tin, dùng đơn vị phù hợp như bottles hoặc pieces."
+        ]
+      }
     },
     {
       "id": "a2-comparisons",
       "level": "A2",
       "title": "So sánh: hơn, nhất và bằng nhau",
       "summary": "So sánh giá, khoảng cách và đặc điểm bằng cấu trúc rõ ràng.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general",
         "toeic"
@@ -912,6 +1830,13 @@
           "pattern": "the smallest · the most useful · as tall as",
           "example": "The blue shelf is as wide as the white one.",
           "translation_vi": "Kệ màu xanh rộng bằng kệ màu trắng."
+        },
+        {
+          "title": "Nhớ một vài dạng đổi riêng",
+          "body": "Good đổi thành better và best. Bad đổi thành worse và worst. Một số tính từ ngắn thay đổi cách viết: big → bigger, happy → happier.",
+          "pattern": "good → better → best · big → bigger",
+          "example": "This result is better than the last one.",
+          "translation_vi": "Kết quả này tốt hơn lần trước."
         }
       ],
       "pitfalls": [
@@ -995,14 +1920,34 @@
           "answer": 1,
           "explanation_vi": "Informative là tính từ dài, nên dùng more informative trước than."
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "So sánh hai đối tượng và nói cái nào nổi bật nhất trong một nhóm.",
+        "context": "Bạn so sánh hai chiếc túi có kích thước khác nhau.",
+        "example": "This bag is smaller than that one.",
+        "translation_vi": "Chiếc túi này nhỏ hơn chiếc kia.",
+        "steps": [
+          "Có hai chiếc túi cần so sánh.",
+          "Small là tính từ ngắn, thêm er thành smaller.",
+          "Than đứng trước đối tượng thứ hai: that one."
+        ],
+        "quick_check": {
+          "prompt": "Sửa câu: “This phone is more cheaper.”",
+          "answer": "This phone is cheaper.",
+          "explanation_vi": "Cheaper đã là dạng so sánh hơn, không thêm more."
+        },
+        "takeaways": [
+          "So sánh hơn: -er hoặc more + tính từ; có thể thêm than.",
+          "So sánh nhất: the + -est/most; ngang bằng: as + tính từ + as."
+        ]
+      }
     },
     {
       "id": "a2-future",
       "level": "A2",
       "title": "Nói về dự định và lời hứa",
       "summary": "Luyện will, be going to và hiện tại tiếp diễn với ý nghĩa tương lai.",
-      "minutes": 8,
+      "minutes": 10,
       "tags": [
         "general",
         "toeic"
@@ -1024,6 +1969,13 @@
           "pattern": "am/is/are + V-ing + thời gian tương lai",
           "example": "We are meeting the librarian at ten tomorrow.",
           "translation_vi": "Chúng tôi sẽ gặp thủ thư lúc mười giờ ngày mai."
+        },
+        {
+          "title": "Phủ định và đặt câu hỏi",
+          "body": "Will không thay đổi theo chủ ngữ; phủ định là will not hoặc won’t. Với going to, đặt not sau be hoặc đưa be lên đầu câu hỏi.",
+          "pattern": "I won’t go. · Are you going to study?",
+          "example": "She isn’t going to travel this week.",
+          "translation_vi": "Cô ấy không định đi du lịch tuần này."
         }
       ],
       "pitfalls": [
@@ -1106,7 +2058,170 @@
           "answer": 0,
           "explanation_vi": "Am visiting cùng next Monday diễn tả lịch hẹn sắp tới; các câu khác nói quá khứ hoặc thói quen."
         }
-      ]
+      ],
+      "teaching": {
+        "objective": "Phân biệt dự định, quyết định lúc nói và việc đã sắp xếp.",
+        "context": "Bạn đã hẹn gặp một người bạn vào sáng mai.",
+        "example": "I am meeting Lan tomorrow morning.",
+        "translation_vi": "Tôi sẽ gặp Lan vào sáng mai.",
+        "steps": [
+          "Đây là một cuộc hẹn đã sắp xếp.",
+          "Có thể dùng hiện tại tiếp diễn: am meeting.",
+          "Tomorrow morning cho biết đang nói về tương lai."
+        ],
+        "quick_check": {
+          "prompt": "Sửa câu: “I will to call you.”",
+          "answer": "I will call you.",
+          "explanation_vi": "Sau will dùng động từ nguyên mẫu call, không thêm to."
+        },
+        "takeaways": [
+          "Will thường dùng cho quyết định lúc nói hoặc lời hứa.",
+          "Going to nói dự định; hiện tại tiếp diễn có thể nói việc đã sắp xếp."
+        ]
+      }
+    },
+    {
+      "id": "a2-conjunctions",
+      "level": "A2",
+      "title": "And, but, because, so: nối các ý đơn giản",
+      "summary": "Nối hai ý để bổ sung, nêu sự khác biệt, lý do hoặc kết quả.",
+      "minutes": 10,
+      "tags": [
+        "general"
+      ],
+      "prerequisites": [
+        "a1-present-simple"
+      ],
+      "explanation": [
+        {
+          "title": "And để thêm ý, but để nói ý trái nhau",
+          "body": "And nối những thông tin bổ sung cho nhau. But nối hai ý có sự khác biệt hoặc trái với điều người nghe có thể nghĩ.",
+          "pattern": "ý 1 + and / but + ý 2",
+          "example": "The room is small, but it is comfortable.",
+          "translation_vi": "Phòng nhỏ nhưng thoải mái."
+        },
+        {
+          "title": "Because nêu lý do, so nêu kết quả",
+          "body": "Sau because là lý do giải thích cho ý trước. Sau so là kết quả của điều đã nêu. Cùng một tình huống có thể viết theo hai cách nhưng thứ tự thông tin thay đổi.",
+          "pattern": "kết quả + because + lý do · lý do + so + kết quả",
+          "example": "It was raining, so we stayed inside.",
+          "translation_vi": "Trời mưa nên chúng tôi ở trong nhà."
+        },
+        {
+          "title": "Or dùng khi đưa ra lựa chọn",
+          "body": "Or nối những lựa chọn như tea or coffee. Khi viết because ở đầu câu, dùng dấu phẩy sau phần nêu lý do; không thêm so vào mệnh đề chính trong cấu trúc cơ bản này.",
+          "pattern": "tea or coffee · Because it rained, we stayed home.",
+          "example": "Would you like tea or coffee?",
+          "translation_vi": "Bạn muốn uống trà hay cà phê?"
+        }
+      ],
+      "pitfalls": [
+        "Không ghép because và so theo kiểu Because it rained, so…; chọn một trong hai cách nối.",
+        "Muốn nối ý chính xác, hãy xác định phần sau là lý do hay kết quả."
+      ],
+      "source_urls": [
+        "https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/conjunctions-or-so-because-although"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Nối thêm một hoạt động: “I read ___ write every day.”",
+          "options": [
+            "but",
+            "because",
+            "so",
+            "and"
+          ],
+          "answer": 3,
+          "explanation_vi": "And bổ sung hoạt động thứ hai: tôi đọc và viết mỗi ngày.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q2",
+          "prompt": "Nối hai ý trái nhau: “The bag is old, ___ it is still useful.”",
+          "options": [
+            "because",
+            "but",
+            "so",
+            "or"
+          ],
+          "answer": 1,
+          "explanation_vi": "But thể hiện sự trái ngược: túi cũ nhưng vẫn hữu ích.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q3",
+          "prompt": "Nêu lý do: “I stayed home ___ I was ill.”",
+          "options": [
+            "so",
+            "or",
+            "because",
+            "but"
+          ],
+          "answer": 2,
+          "explanation_vi": "I was ill là lý do nên dùng because.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q4",
+          "prompt": "Nêu kết quả: “I was hungry, ___ I made a sandwich.”",
+          "options": [
+            "so",
+            "because",
+            "but",
+            "or"
+          ],
+          "answer": 0,
+          "explanation_vi": "Làm bánh là kết quả của việc đói nên dùng so.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q5",
+          "prompt": "Đưa ra lựa chọn: “Would you like rice ___ noodles?”",
+          "options": [
+            "because",
+            "so",
+            "but",
+            "or"
+          ],
+          "answer": 3,
+          "explanation_vi": "Or đưa ra hai lựa chọn: cơm hay mì.",
+          "prompt_lang": "vi"
+        },
+        {
+          "id": "q6",
+          "prompt": "Chọn câu đúng.",
+          "options": [
+            "Because I was tired, so I rested.",
+            "Because I was tired, I rested.",
+            "I was tired because so I rested.",
+            "Because tired, rested I."
+          ],
+          "answer": 1,
+          "explanation_vi": "Because đã mở phần lý do nên không thêm so trước I rested.",
+          "prompt_lang": "vi"
+        }
+      ],
+      "teaching": {
+        "objective": "Nối hai ý và phân biệt phần nêu lý do với phần nêu kết quả.",
+        "context": "Bạn muốn giải thích vì sao mình mang theo ô.",
+        "example": "I took an umbrella because it was raining.",
+        "translation_vi": "Tôi mang theo ô vì trời đang mưa.",
+        "steps": [
+          "Hành động cần giải thích là I took an umbrella.",
+          "Lý do là it was raining.",
+          "Đặt because trước lý do; không thêm so trong cùng cấu trúc này."
+        ],
+        "quick_check": {
+          "prompt": "Nối bằng so: “I was tired. I went to bed early.”",
+          "answer": "I was tired, so I went to bed early.",
+          "explanation_vi": "Đi ngủ sớm là kết quả, đặt sau so."
+        },
+        "takeaways": [
+          "And thêm ý; but nêu ý trái nhau; or đưa ra lựa chọn.",
+          "Because đi trước lý do; so đi trước kết quả."
+        ]
+      }
     },
     {
       "id": "b1-present-perfect",

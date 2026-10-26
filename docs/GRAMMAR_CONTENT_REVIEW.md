@@ -4,9 +4,10 @@ Reviewed: 2026-10-26. Scope: `data/grammar_lessons.json` only; UI and scoring ar
 
 ## Inventory
 
-- Version 1; 30 lessons, five each at A1, A2, B1, B2, C1 and C2.
-- Six original four-option questions per lesson: 180 questions total.
-- Two explanation cards and two pitfalls per lesson: 60 of each.
+- Version 1; 36 lessons: eight each at A1 and A2, five each at B1, B2, C1 and C2.
+- Six original four-option questions per lesson: 216 questions total.
+- Three explanation sections for each of the 16 beginner lessons, two for each advanced lesson: 88 sections and 72 pitfalls.
+- Each beginner lesson includes a learning objective, a worked example with three reasoning steps, one ungraded self-check with a revealable answer, and two takeaways.
 - Each explanation has an English example and a natural Vietnamese translation.
 - Every question has a single keyed answer and Vietnamese reasoning.
 - Prerequisites refer only to lessons that appear earlier; no cycles or missing references.
@@ -55,7 +56,7 @@ Additional references are retained in each lesson's `source_urls`, including com
 
 ## Ambiguity and language review
 
-All 180 questions were reviewed with their complete option set. The review specifically checked that:
+The original 180 questions retain their answer keys. The 36 added questions were reviewed with their complete option sets; beginner instruction prompts are now in Vietnamese where appropriate. The review specifically checked that:
 
 - Who and that, or may and might, are not presented as competing answers where both fit.
 - Will, going to and the present continuous are not treated as mutually exclusive in all future contexts.
@@ -76,7 +77,7 @@ The questions mix sentence completion, selecting a correctly formed sentence, in
 
 An in-memory Python validation pass completed successfully:
 
-- Exact inventory: 30 lessons / 180 questions / 60 explanation cards / 60 pitfalls.
+- Exact inventory: 36 lessons / 216 questions / 88 explanation cards / 72 pitfalls.
 - Five lessons per level; valid stable IDs and earlier prerequisite IDs.
 - Six unique question IDs per lesson; four nonempty, case-insensitively distinct options.
 - Integer answer indices between 0 and 3.
@@ -86,3 +87,36 @@ An in-memory Python validation pass completed successfully:
 - Answer positions distributed across all four options: A 46, B 45, C 44, D 45.
 
 This review does not replace future learner feedback or an external teacher audit. Changes to a question should preserve its ID when its learning objective stays the same, and recheck every distractor as well as the keyed answer.
+
+
+## Guided beginner course
+
+The default grammar catalogue displays the 16 A1–A2 lessons in teaching order. Learners can filter by level or search without Vietnamese accents; each query word can occur anywhere in the lesson title or summary. Advanced lessons remain available through the level filter.
+
+Each lesson has separate **Bài học** and **Bài tập** panels. Switching panels preserves selected answers. The learner reads explanations, sees a structure and translated example, follows a worked example, tries an ungraded check, then submits six questions for server grading. Answer keys for graded questions stay private until submission; the worked-example answer is intentionally available in a disclosure. Previous/next links use lesson IDs and never change the learner’s selected level automatically.
+
+The sources page now links directly to the on-site lessons. All authored explanations and exercises ship in `data/grammar_lessons.json`; attempts remain in the user’s database. Reading, grading and recommending lessons do not call AI.
+
+Added topics and primary references:
+
+| Lesson | Level | Source |
+| --- | --- | --- |
+| Câu tiếng Anh bắt đầu từ đâu? | A1 | [British Council](https://africa.teachingenglish.org.uk/classroom/grammar/word-order) |
+| Một hay nhiều: danh từ số ít và số nhiều | A1 | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/count-nouns) |
+| Can và can’t: nói về khả năng | A1 | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/can-could) |
+| Always, usually, sometimes: nói việc thường làm | A2 | [British Council](https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/adverbs-frequency) |
+| In, on, at: nói về thời gian và nơi chốn | A2 | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/prepositions-of-time-at-in-on) |
+| And, but, because, so: nối các ý đơn giản | A2 | [British Council](https://learnenglishteens.britishcouncil.org/grammar/a1-a2-grammar/conjunctions-or-so-because-although) |
+
+The word-order page timed out in the web reader; its official indexed description was used to check the subject–verb–object sequence. Other new rules were cross-checked against the linked British Council pages. The examples, Vietnamese teaching text and exercises are original, not copied publisher exercises.
+
+## Runtime verification
+
+- 142 Django tests passed on isolated PostgreSQL QA; the 12 foundation tests were rerun successfully after adding Vietnamese prompt language metadata.
+- Nine JavaScript suites passed, including the new grammar catalogue/teaching renderer checks; four pure content tests cover the full 216-question grading set and incomplete teaching data.
+- HTTP smoke passed for the full website and new grammar assets.
+- Browser checks: sources → on-site course → first lesson → practice; answers retained while switching panels; 5/6 with a wrong-answer-only view; 6/6 on the be lesson; retry clears choices; next-lesson navigation works; accent-insensitive search and C1 filtering work.
+- Mobile viewport 390 × 844: document and content widths both 375 px with the scrollbar, no horizontal overflow in lesson or practice. Browser error log was empty.
+- Screenshots: `docs/qa/grammar-course-desktop.jpg`, `grammar-worked-example-desktop.jpg`, `grammar-practice-result-desktop.jpg`, `grammar-lesson-mobile.jpg`, `grammar-practice-mobile.jpg`.
+
+QA only; no production deployment or automatic PR merge.

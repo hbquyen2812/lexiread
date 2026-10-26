@@ -4,6 +4,8 @@
 
 **Cập nhật 26/10/2026:** [học từ theo 15 chủ đề và từ điển lưu trong database](docs/LOCAL_VOCABULARY.md), gồm 127.311 mục từ, 27.581 mục có IPA và 197 bản thu tải sẵn. Có lật thẻ, luyện câu hỏi, lưu từng từ để ôn và tra ngay khi bôi đen; các luồng này không gọi AI. Quy mô nội dung và kiểm thử mới nhất nằm trong [README](README.md); các con số ở phần giới thiệu bản v2 bên dưới mô tả phiên bản ban đầu.
 
+**Học ngữ pháp:** 36 bài và 216 câu bài tập; 16 bài A1–A2 có giải thích bằng tiếng Việt, ví dụ từng bước, câu tự luyện và phần ghi nhớ. Mở `/#learn/grammar` để học ngay trên website. Nội dung có sẵn, không gọi AI.
+
 Bộ mã nguồn dành cho Huỳnh Bảo Quyên. Dự án riêng, không sửa hoặc kết nối cơ sở dữ liệu SmartEnglish hiện có.
 
 ## Bản 2: đọc hiểu, TOEIC và ôn từ trong một luồng

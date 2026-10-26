@@ -43,7 +43,7 @@ def main():
         assert client.get('/account/').status_code==200
         for kind in ('grammar','vocabulary'):
             units=client.get('/api/learn/overview/',params={'kind':kind}).json()['items']
-            assert len(units)==30
+            assert len(units)==(36 if kind=='grammar' else 30)
             assert {row['level'] for row in units}=={'A1','A2','B1','B2','C1','C2'}
             detail=client.get(f'/api/learn/{kind}/{units[0]["id"]}/').json()
             assert all('answer' not in question for question in detail['questions'])
@@ -94,14 +94,14 @@ def main():
         assert client.get('/api/backup/').status_code==200
         assert client.get('/static/app.js').status_code==200
         for asset in ('resources.js','resources.css','brand.css','favicon.svg','learning_hub.js',
-                      'learning_hub.css','practice_tools.js','personal_decks.js','academy.js','academy.css','examples/lexiread-vocabulary.json','fonts.css','fonts/noto-serif-500.woff2'):
+                      'learning_hub.css','practice_tools.js','personal_decks.js','academy.js','academy.css','grammar_course.js','grammar_course.css','examples/lexiread-vocabulary.json','fonts.css','fonts/noto-serif-500.woff2'):
             assert client.get('/static/' + asset).status_code == 200, asset
         artwork = client.get('/static/illustrations/lexi-reading-garden.webp')
         assert artwork.status_code == 200 and artwork.content[:4] == b'RIFF'
         assert client.post('/logout/',headers=csrf).status_code==302
         assert client.get('/api/bootstrap/').status_code==401
     print('PASS QA HTTP: login/logout, profile/password pages, 54 general + 25 IELTS + 32 TOEIC, guides, question-type filter, English-only label, private answers, word patterns, backup, official resource JSON, self-hosted fonts and brand assets.')
-    print('PASS QA HTTP: 30 grammar lessons, 30 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
+    print('PASS QA HTTP: 36 grammar lessons, 30 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
 
 
 if __name__=='__main__': main()

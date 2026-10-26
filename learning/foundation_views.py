@@ -37,9 +37,15 @@ def overview(request):
 def unit_detail(request, kind, unit_id):
     unit=find_unit(kind,unit_id); snapshot=quiz_snapshot(unit,kind)
     result=copy.deepcopy(unit);result.pop('questions',None)
-    result['questions']=[{k:q[k] for k in ('id','prompt','options')} for q in snapshot['questions']]
+    result['questions']=[{k:q[k] for k in ('id','prompt','options','prompt_lang') if k in q} for q in snapshot['questions']]
     result['version']=revision(snapshot)
     result['progress']=progress_for(request.user).get(kind+'/'+unit_id)
+    if kind == 'grammar':
+        course = units('grammar')
+        index = next(i for i, row in enumerate(course) if row['id'] == unit_id)
+        def nav_item(i):
+            return {k: course[i][k] for k in ('id', 'title', 'level')} if 0 <= i < len(course) else None
+        result['navigation'] = {'previous': nav_item(index - 1), 'next': nav_item(index + 1)}
     if kind=='vocabulary':
         owned=set(Vocabulary.objects.filter(owner=request.user).values_list('fingerprint',flat=True))
         for w in result['words']:w['saved']=fingerprint(w['word'],w['meaning_vi']) in owned
