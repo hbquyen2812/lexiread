@@ -1,0 +1,9 @@
+<section class="community-summary" aria-label="Hoạt động học tập" lang="vi" data-no-i18n>
+  <header><h2>{% if community.is_demo %}Hoạt động bản thử nghiệm{% else %}Cùng nhau học mỗi ngày{% endif %}</h2><span>30 ngày gần đây</span></header>
+  <dl class="community-metrics">
+    <div><dt>Tài khoản đã học</dt><dd>{{ community.active_learners }}</dd></div>
+    <div><dt>Bài luyện đã làm</dt><dd>{{ community.practice_attempts }}</dd></div>
+    <div><dt>Lượt ôn từ</dt><dd>{{ community.word_reviews }}</dd></div>
+  </dl>
+  <details><summary>Cách tính số liệu</summary><p>Mỗi tài khoản có hoạt động học được tính một lần trong 30 ngày. Bài luyện là các lần nộp bài đọc, TOEIC, ngữ pháp và từ vựng; mỗi lần ôn một thẻ là một lượt ôn. Không tính tài khoản quản trị và tài khoản kiểm thử nội bộ. Số liệu tổng hợp từ hoạt động còn lưu trên hệ thống, không công khai danh tính.</p>{% if community.is_demo %}<p>Đây là dữ liệu của bản thử nghiệm, không phải số người dùng chính thức.</p>{% endif %}</details>
+</section>

@@ -16,6 +16,7 @@ urlpatterns=[
  path('api/readings/<uuid:pk>/questions/',v.reading_questions),
  path('',v.index,name='home'),path('health/',v.health),path('api/bootstrap/',v.bootstrap),
  path('api/activity/visit/',v.activity_visit),path('api/analytics/',v.analytics),
+ path('api/community/',v.community),
  path('api/readings/',v.readings),path('api/readings/<uuid:pk>/',v.reading_detail),
  path('api/readings/<uuid:pk>/analyse/',v.analyse_reading),path('api/vocabulary/',v.vocabulary),
  path('api/vocabulary/sources/',v.vocabulary_sources),

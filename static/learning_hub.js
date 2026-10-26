@@ -32,6 +32,7 @@
   }
   function guidePage(root,id='') {
     if(id==='youtube'){window.LexiChannels.page(root);return;}
+    if(id==='methods'){window.LexiMethods.page(root);return;}
     root.classList.add('learning-hub');root.dataset.guideRoot='';
     const guide=guideItems().find(g=>g.id===id);
     if(!id || ['ielts','toeic'].includes(id)){if(id)guideFilter.exam=id;guideList(root);return;}

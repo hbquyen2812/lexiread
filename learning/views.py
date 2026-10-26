@@ -86,6 +86,7 @@ def index(request):
     from .services.public_resources import public_resources
     from .services.strategy_guides import strategy_guides
     from .services.learning_channels import learning_channels
+    from .services.community import community_summary
     record_visit(request,'home')
     resources=public_resources()
     if request.user.is_authenticated:return render(request,'app.html',{'official_resources':resources,'strategy_guides':strategy_guides(),'learning_channels':learning_channels()})
@@ -102,6 +103,7 @@ def index(request):
     practices=[{key:practice[key] for key in ('slug','title','mode_label','parts','level','duration_minutes','description','question_count')}
         for practice in toeic_sets()]
     return render(request,'landing.html',{'lessons':lessons,'practices':practices,'official_resources':resources,
+        'community':community_summary(),
         'topic_count':len({lesson['topic'] for lesson in lessons}),
         'general_count':sum(x['track']=='general' for x in lessons),
         'ielts_count':sum(x['track']=='ielts' for x in lessons)})
@@ -112,6 +114,15 @@ def health(request):
         with connection.cursor() as c:c.execute('SELECT 1')
         return JsonResponse({'status':'ok'})
     except Exception:return JsonResponse({'status':'database-unavailable'},status=503)
+
+def community(request):
+    if request.method not in {'GET','HEAD'}:
+        from django.http import HttpResponseNotAllowed
+        return HttpResponseNotAllowed(['GET','HEAD'])
+    from .services.community import community_summary
+    response=JsonResponse(community_summary())
+    response['Cache-Control']='public, max-age=60'
+    return response
 
 def guides(request):
     from .services.strategy_guides import strategy_guides

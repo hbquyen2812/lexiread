@@ -131,6 +131,7 @@
   async function api(path,{method='GET',data=null}={}){
     await new Promise(r=>setTimeout(r,40));
     const u=new URL(path,'http://preview'),p=u.pathname,q=u.searchParams;
+    if(p==='/community/')return null; // Offline files have no system-wide usage data.
     if(p==='/bootstrap/'){
       const day=localDay;const today=day(new Date()),overdueBefore=Date.now()-86400000;
       const quiz=db.reviews.filter(r=>r.correct!==null),dates=[];

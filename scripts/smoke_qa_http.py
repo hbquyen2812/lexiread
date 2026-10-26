@@ -20,9 +20,19 @@ def main():
         'data/public_sources/catalog.json').read_text(encoding='utf-8'))['resources']
     with httpx.Client(base_url='http://127.0.0.1:8766',timeout=20,trust_env=False) as client:
         assert client.get('/health/').json()=={'status':'ok'}
+        community=client.get('/api/community/')
+        assert community.status_code==200 and community.json()['is_demo'] is True
+        assert set(community.json())=={'days','start_date','end_date','as_of','is_demo','active_learners','practice_attempts','word_reviews'}
+        for key in ('active_learners','practice_attempts','word_reviews'):
+            assert type(community.json()[key]) is int and community.json()[key]>=0
+        landing=client.get('/')
+        assert 'Hoạt động bản thử nghiệm' in landing.text and '/guides/#guides/methods' in landing.text
+        for asset in ('learning_methods.js','learning_methods.css'):
+            assert client.get('/static/'+asset).status_code==200
         assert resource_data(client.get('/')) == expected_resources
         guides=client.get('/guides/')
         assert guides.status_code==200 and 'strategy-guides-data' in guides.text
+        assert 'learning_methods.js' in guides.text and 'learning_methods.css' in guides.text
         assert 'ielts-tfng' in guides.text and 'toeic-part7-multiple' in guides.text
         assert client.get('/api/bootstrap/').status_code==401
         assert client.get('/login/').status_code==200

@@ -1,0 +1,18 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+let isPublic=false,change;
+const scope={window:{LexiChannels:{tabs:()=>'<nav>tabs</nav>'}},document:{querySelector:()=>isPublic?{}:null,addEventListener:(event,handler)=>{if(event==='change')change=handler;}}};
+vm.runInNewContext(fs.readFileSync('static/learning_methods.js','utf8'),scope);
+const ui=scope.window.LexiMethods,root={classList:{add(){}},innerHTML:''};
+assert.equal(ui.community(null),'');
+assert.equal(ui.community({active_learners:'<script>',practice_attempts:1,word_reviews:1}),'');
+assert.equal(ui.community({active_learners:-1,practice_attempts:1,word_reviews:1}),'');
+assert.match(ui.community({active_learners:0,practice_attempts:0,word_reviews:0,is_demo:true}),/Hoạt động bản thử nghiệm/);
+assert.doesNotMatch(ui.community({active_learners:2,practice_attempts:5,word_reviews:7,is_demo:false}),/Hoạt động bản thử nghiệm/);
+ui.page(root);assert.match(root.innerHTML,/href="#study"/);assert.equal((root.innerHTML.match(/<details>/g)||[]).length,3);
+assert.doesNotMatch(root.innerHTML,/<details open|<iframe/);
+isPublic=true;ui.page(root);assert.match(root.innerHTML,/href="\/login\/\?next=%2F%23study"/);
+assert.match(root.innerHTML,/rel="noopener noreferrer"/);
+assert.match(ui.teaser(true),/href="\/guides\/#guides\/methods"/);
+const hint={textContent:''};change({target:{matches:()=>true,value:'C1–C2',closest:()=>({querySelector:()=>hint})}});
+assert.match(hint.textContent,/lập luận/);
+console.log('PASS real/empty/demo statistics, invalid counts, public/auth method links and level guidance');

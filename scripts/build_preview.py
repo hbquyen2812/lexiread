@@ -18,12 +18,13 @@ html=(root/'templates/app.html').read_text(encoding='utf-8').replace('{% load st
 html=re.sub(r"({% static '[^']+' %})\?v=[^\"]+",r'\1',html)
 html=html.replace("{% include 'language_switcher.html' %}",(root/'templates/language_switcher.html').read_text(encoding='utf-8'))
 html=html.replace('{{ strategy_guides|json_script:"strategy-guides-data" }}','<script id="strategy-guides-data" type="application/json">'+json.dumps(strategy_guides(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
-for script in ('learning_hub','practice_tools','personal_decks','learning_channels','academy'):
+for script in ('learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods'):
     html=html.replace('<script src="{% static \''+script+'.js\' %}" defer></script>','<script>'+(root/f'static/{script}.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'learning_hub.css\' %}">','<style>'+(root/'static/learning_hub.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'learning_channels.css\' %}">','<style>'+(root/'static/learning_channels.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('{{ learning_channels|json_script:"learning-channels-data" }}','<script id="learning-channels-data" type="application/json">'+json.dumps(learning_channels(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
 html=html.replace("<link rel=\"stylesheet\" href=\"{% static 'academy.css' %}\">",'<style>'+(root/'static/academy.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace("<link rel=\"stylesheet\" href=\"{% static 'learning_methods.css' %}\">",'<style>'+(root/'static/learning_methods.css').read_text(encoding='utf-8')+'</style>')
 fonts=(root/'static/fonts.css').read_text(encoding='utf-8')
 for font in (root/'static/fonts').glob('*.woff2'):
     fonts=fonts.replace('/static/fonts/'+font.name,'data:font/woff2;base64,'+base64.b64encode(font.read_bytes()).decode())

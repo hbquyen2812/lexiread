@@ -16,7 +16,7 @@
   const allowed=new Set(['www.youtube.com','learningenglish.voanews.com','www.easyenglish.video','rachelsenglish.com','www.oxfordonlineenglish.com','www.ieltsadvantage.com','ed.ted.com','www.ted.com']);
   function safeURL(value){try{const u=new URL(value);return u.protocol==='https:'&&allowed.has(u.hostname)&&!u.username&&!u.password&&(!u.port||u.port==='443')?u.href:'';}catch{return '';}}
   function link(url,label,name,cls='link-btn'){const safe=safeURL(url);return safe?`<a class="${cls}" href="${esc(safe)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label+' · '+name)}">${esc(label)} ↗</a>`:'';}
-  function tabs(active){return `<nav class="hub-sections" aria-label="Chọn nội dung cẩm nang"><a href="#guides" ${active==='guides'?'aria-current="page"':''}>Cách làm bài</a><a href="#guides/youtube" ${active==='youtube'?'aria-current="page"':''}><span aria-hidden="true">▷</span> Học qua YouTube</a></nav>`;}
+  function tabs(active){return `<nav class="hub-sections" aria-label="Chọn nội dung cẩm nang"><a href="#guides" ${active==='guides'?'aria-current="page"':''}>Cách làm bài</a><a href="#guides/methods" ${active==='methods'?'aria-current="page"':''}>Cách học hiệu quả</a><a href="#guides/youtube" ${active==='youtube'?'aria-current="page"':''}><span aria-hidden="true">▷</span> Học qua YouTube</a></nav>`;}
   const filter=(items,s)=>items.filter(c=>(!s.level||c.levels.includes(s.level))&&(!s.skill||c.skills.includes(s.skill))&&(!norm(s.q)||norm([c.name,c.description_vi,c.start_vi,c.task_vi,c.accent_vi,...c.skills.map(x=>skills[x])].join(' ')).includes(norm(s.q))));
   function card(c){
     const tone=['sky','peach','sage','lavender'].includes(c.tone)?c.tone:'sage';

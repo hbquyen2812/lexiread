@@ -112,5 +112,6 @@ AI_PROVIDER = os.getenv('AI_PROVIDER','none')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY','')
 OPENAI_MODEL = os.getenv('OPENAI_MODEL','gpt-4.1-mini')
 AI_DAILY_LIMIT = max(1, min(int(os.getenv('AI_DAILY_LIMIT','30')), 200))
+PUBLIC_STATS_EXCLUDED_USERNAMES = tuple(name.strip() for name in os.getenv('PUBLIC_STATS_EXCLUDED_USERNAMES','qa-reader,qa-editor').split(',') if name.strip())
 LOGGING = {'version':1,'disable_existing_loggers':False,'handlers':{'console':{'class':'logging.StreamHandler'}},
            'root':{'handlers':['console'],'level':'WARNING'}}
