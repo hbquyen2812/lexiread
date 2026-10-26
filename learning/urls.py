@@ -1,7 +1,9 @@
 from django.urls import path
 from . import views as v
 from . import foundation_views as f
+from . import dictionary_views as dictionary
 urlpatterns=[
+ path('api/dictionary/',dictionary.lookup),
  path('api/learn/overview/',f.overview),path('api/learn/plan/',f.plan),
  path('api/learn/dictionary/',f.dictionary),path('api/learn/sources/',f.sources),
  path('api/learn/vocabulary/<slug:unit_id>/save/',f.save_collection),

@@ -127,7 +127,7 @@ function renderReader(){
   const box=$('#reader-content');
   if(state.readingTab==='text'){
     const tr=new Map((a.translations||[]).map(t=>[t.index,t.vi]));
-    box.innerHTML='<p class="fineprint">Bôi đen từ hoặc cụm từ bạn muốn lưu.</p>'+
+    box.innerHTML='<p class="fineprint">Bôi đen từ để tra nghĩa, nghe phát âm hoặc lưu lại.</p>'+
       (showTranslation?'<div class="reader-labels"><b>ENGLISH · VĂN BẢN GỐC</b><span>TIẾNG VIỆT · BẢN DỊCH THAM KHẢO</span></div>':'')+
       r.paragraphs.map((p,i)=>`<section class="parallel-row ${showTranslation?'':'single'}" data-paragraph="${i}"><div><div class="paragraph-tools"><span class="paragraph-index">ĐOẠN ${String(i+1).padStart(2,'0')}</span><button class="link-btn" data-action="bookmark-paragraph" data-index="${i}">${r.progress?.paragraph===i?'◆':'◇'} Đọc đến đây</button>${state.boot?.ai_enabled?`<button class="link-btn" data-action="ask-paragraph" data-index="${i}">Hỏi đoạn này</button>`:''}</div><p class="reader-en" data-index="${i}">${highlight(p,[...v.map(w=>w.word),...(state.readerWords||[]).map(w=>w.word)])}</p></div>${showTranslation?`<div><span class="paragraph-index">BẢN DỊCH ${String(i+1).padStart(2,'0')}</span><p class="reader-vi">${esc(tr.get(i)||'Chưa dịch đoạn này.')}</p></div>`:''}</section>`).join('');
   }else if(state.readingTab==='words'){
@@ -156,7 +156,7 @@ function openModal(title,content,footer='',drawer=false){
   $('#modal-content').innerHTML=`<header class="modal-header"><h2 id="modal-title">${esc(title)}</h2><button class="icon-btn" data-action="close-modal" aria-label="Đóng cửa sổ">×</button></header><div class="modal-body">${content}</div>${footer?`<footer class="modal-footer">${footer}</footer>`:''}`;
   m.showModal();
 }
-function closeModal(){ $('#modal').close(); }
+function closeModal(){ window.LexiDictionary?.stopAudio(); $('#modal').close(); }
 function readingModal(edit=false){
   state.editReading=edit;
   const r=edit?state.reading:{};
@@ -220,6 +220,7 @@ function captureSelection(){
   if(!p||p!==p2)return;
   const word=sel.toString().trim();
   if(!word||word.length>4000)return;
+  $('[data-action=selected-dictionary]').hidden=!window.LexiDictionary.canLookup(word);
   $('[data-action=selected-word]').disabled=word.length>160||word.split(/\s+/).length>16;
   const para=state.reading.paragraphs[Number(p.dataset.index)];
   let context=para;
@@ -445,6 +446,7 @@ async function act(button){
     await busy(button,async()=>{const items=selected.map(i=>({...state.reading.analysis.vocabulary[i],tags:[...new Set([...(state.reading.analysis.vocabulary[i].tags||[]),state.reading.title])],verified:false,origin:state.reading.catalog_slug?'curated':'ai'}));const r=await api('/vocabulary/',{method:'POST',data:{items,reading_id:state.reading.id}});await refreshBoot();toast(`Đã thêm ${r.created} thẻ; ${r.skipped} mục đã có được giữ nguyên.`);});break;
   }
   case 'new-word':editor(blankEntry());break;
+  case 'selected-dictionary':if(state.selection)await window.LexiDictionary.open(state.selection);break;
   case 'selected-word':if(state.selection){const candidate=(state.reading.analysis?.vocabulary||[]).find(w=>w.word.toLowerCase()===state.selection.word.toLowerCase());editor({...blankEntry(),...(candidate||{}),...state.selection});}break;
   case 'clear-selection':clearSelection();break;
   case 'edit-word':editor(state.vocab.find(v=>v.id===button.dataset.id),button.dataset.id);break;
@@ -504,6 +506,8 @@ document.addEventListener('submit',e=>{
   if(['word-form','reading-form'].includes(e.target.id))e.preventDefault();
 });
 document.addEventListener('mouseup',()=>setTimeout(captureSelection,10));
+let selectionDelay;
+document.addEventListener('selectionchange',()=>{clearTimeout(selectionDelay);selectionDelay=setTimeout(captureSelection,180);});
 document.addEventListener('touchend',()=>setTimeout(captureSelection,40),{passive:true});
 document.addEventListener('keyup',e=>{if(e.key==='Shift'||e.key.startsWith('Arrow'))captureSelection();});
 document.addEventListener('keydown',e=>{

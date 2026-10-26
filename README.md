@@ -1,6 +1,8 @@
 # LexiRead Reading Studio v2
 
-Latest addition: [public activity statistics and learning methods](docs/COMMUNITY_AND_METHODS_REVIEW.md). The homepage shows real 30-day learning aggregates, excludes internal test accounts and keeps detailed study advice inside the guide.
+Latest addition: [selection dictionary and pronunciation](docs/DICTIONARY_LOOKUP.md). Select a word in a reading to see available Vietnamese glosses, English definitions, IPA and licensed recordings, then save with its context. Oxford/Cambridge are reference links; the integrated public source is Free Dictionary API/Wiktionary with original Commons audio. No AI call or API key is required.
+
+[Public activity statistics and learning methods](docs/COMMUNITY_AND_METHODS_REVIEW.md): the homepage shows real 30-day learning aggregates, excludes internal test accounts and keeps detailed study advice inside the guide.
 
 Previous local review: [foundation learning, personal decks and verified QA](docs/FOUNDATION_LEARNING_REVIEW.md). The interface includes a custom lightweight illustration, prominent personal vocabulary import, an account-based learning path, 33 official IELTS/TOEIC resource links and a catalogue of 40 learning-source links. External materials remain on their publishers' websites; these are not counts of full tests copied into the app.
 
