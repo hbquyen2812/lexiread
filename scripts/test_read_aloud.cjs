@@ -16,7 +16,7 @@ function setup({voices=[english,british,remote,french],supported=true,saved=null
   let timerId=0,cancels=0;
   const spoken=[],synth={getVoices:()=>voices,speak:u=>spoken.push(u),cancel(){cancels++;},
     addEventListener:(name,fn)=>voiceListeners.add(fn),removeEventListener:(name,fn)=>voiceListeners.delete(fn)};
-  const win={LexiI18n:{language:'vi'},addEventListener:(name,fn)=>windowListeners[name]=fn};
+  const win={LexiI18n:{language:'vi'},addEventListener:(name,fn)=>(windowListeners[name]??=[]).push(fn)};
   if(supported){win.speechSynthesis=synth;win.SpeechSynthesisUtterance=class{constructor(text){this.text=text;}};}
   const scope={window:win,document,MutationObserver:dom.MutationObserver,
     setTimeout:(fn,delay)=>{const id=++timerId;timers.set(id,{fn,delay});return id;},clearTimeout:id=>timers.delete(id),
@@ -30,7 +30,7 @@ function setup({voices=[english,british,remote,french],supported=true,saved=null
   return {dom,document,win,scope,$,host,items,mount,click,change,spoken,storage,timers,
     get cancels(){return cancels;},setVoices(value){voices=value;voiceListeners.forEach(fn=>fn());},
     fireTimer(delay){const entry=[...timers].find(([,t])=>t.delay===delay);assert.ok(entry);timers.delete(entry[0]);entry[1].fn();},
-    event:name=>windowListeners[name](),voiceListeners};
+    event:name=>windowListeners[name].forEach(fn=>fn()),voiceListeners};
 }
 
 async function main(){
@@ -122,4 +122,5 @@ async function main(){
   toeic.win.LexiReadAloud.clear();
   console.log('PASS TOEIC integration: documents only, no answers or duplicates, no audio toolbar without passages');
 }
-main().catch(error=>{console.error(error);process.exitCode=1;});
+if(require.main===module)main().catch(error=>{console.error(error);process.exitCode=1;});
+module.exports={setup};

@@ -22,6 +22,13 @@
   function save(player) {
     try { localStorage.setItem('lexiread.readAloud', JSON.stringify({rate:player.rate, voice:player.voice})); } catch {}
   }
+  function getVoice() {
+    const settings=preferences();let voices=[];
+    try { voices=supported?synth.getVoices().filter(v=>v.localService===true&&/^en(?:[-_]|$)/i.test(v.lang)):[]; } catch {}
+    return {...settings,voice:voices.find(v=>voiceKey(v)===settings.voice)||voices.find(v=>v.default)||voices[0]};
+  }
+  function interrupt() { if(active)stop(active); }
+  function claimAudio() { window.LexiPronunciation?.stop();document.querySelectorAll('audio').forEach(audio=>audio.pause()); }
   // Short utterances avoid engine limits on long passages. Keep the paragraph association.
   function chunks(text) {
     let rest = String(text || '').replace(/\s+/g, ' ').trim();
@@ -166,7 +173,7 @@
       if (player.status === 'playing') {
         // Cancel + resume from the last word boundary also works where native pause ends an utterance.
         cancel(player); player.status = 'paused'; update(player);
-      } else if (player.voices.length) { save(player); speak(player); }
+      } else if (player.voices.length) { claimAudio();save(player); speak(player); }
     });
     player.stop.addEventListener('click', () => stop(player));
     const change = () => {
@@ -188,5 +195,5 @@
   }
   window.addEventListener('pagehide', clear);
   window.addEventListener('hashchange', clear);
-  window.LexiReadAloud = {mount, clear};
+  window.LexiReadAloud = {mount, clear, interrupt, getVoice, chunks};
 })();

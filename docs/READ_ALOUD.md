@@ -1,4 +1,35 @@
-# Nghe bài đọc
+# Nghe bài đọc, từ vựng và câu ví dụ
+
+## Nghe từ và câu ví dụ
+
+Bấm nút loa bên cạnh từ hoặc câu tiếng Anh để nghe; bấm lại để dừng. Nút có tên truy cập đầy đủ và sử dụng được bằng bàn phím. Các vị trí đã hỗ trợ:
+
+- Kết quả tìm từ và hộp tra từ điển, gồm từ đang tra và câu ví dụ Anh–Anh/Anh–Việt.
+- Kho từ cá nhân, ví dụ của thẻ, từ gợi ý trong bài đọc và mục từ vựng TOEIC.
+- Bộ từ theo chủ đề, cả danh sách và chế độ học bằng thẻ.
+- Flashcard ôn tập: **Nghe từ** ở mặt trước; thêm **Nghe câu** khi lật thẻ có ví dụ. Nút nằm ngoài vùng lật thẻ, không thay đổi đáp án hay lịch ôn.
+- Câu ví dụ trong bài ngữ pháp, hướng dẫn thì và so sánh thì. Không thêm nút nghe cho đáp án đang ẩn hoặc bài kiểm tra chưa nộp.
+
+Trong hộp từ điển, nút loa ưu tiên bản thu đang có trong database và dùng chung trình phát hiển thị. Khi chưa có bản thu hoặc phát lỗi, dùng giọng English cài trên thiết bị. Các vị trí khác dùng giọng thiết bị, không tra thêm từ hoặc tải audio hàng loạt. Giọng và tốc độ dùng chung lựa chọn ở thanh nghe bài đọc.
+
+Chỉ một nguồn âm thanh phát tại một thời điểm. Nghe từ sẽ dừng bài đọc, và ngược lại, đồng thời giữ nguyên thanh điều khiển để có thể nghe tiếp khi muốn. Chuyển thẻ, ẩn phần đang học, đóng hộp từ điển hoặc chuyển trang sẽ dừng phần phát tương ứng. Nhãn nghe đổi theo bốn ngôn ngữ giao diện; từ, nghĩa cá nhân và ví dụ gốc được giữ nguyên.
+
+Không phát sinh phí AI, không gửi từ/câu riêng tư sang dịch vụ TTS. Giọng thiết bị phụ thuộc hệ điều hành và trình duyệt; nếu thiếu giọng, thông báo hướng dẫn hiện cạnh nút. Các bản thu có sẵn vẫn nghe được khi trình duyệt không hỗ trợ speech synthesis.
+
+### Kiểm chứng phần từ vựng — 27/10/2026
+
+- 15 file kiểm thử Node đạt; `npm run test:audio` chạy cả bài đọc và phát âm. Có kiểm thử DOM/engine cho nguồn audio an toàn, không tự phát, ưu tiên bản thu, dùng chung native player, lỗi/timeout chuyển sang giọng local một lần, callback cũ sau khi dừng, giọng tải chậm, phối hợp các nguồn âm thanh, đóng/ẩn/thay nội dung và đổi ngôn ngữ.
+- Kiểm thử renderer thật xác nhận câu tiếng Anh được chọn đúng, không thêm nút vào đáp án ẩn, không lồng nút vào flashcard và không lật thẻ khi bấm loa.
+- Browser QA xác nhận sự kiện phát trên ví dụ ngữ pháp; bản thu `routine` từ database (native player thực sự ở trạng thái phát); giọng thiết bị cho `epistemology` không có bản thu; từ/câu trong bộ theo chủ đề và flashcard cá nhân. Đổi vi → en → vi giữ từ và nghĩa gốc. Không nộp bài hay ghi điểm ôn tập trong quá trình này.
+- Màn hình 1265 × 712 và 390 × 844: kiểm tra vị trí nút, vùng bấm và không tràn ngang. Console không có lỗi/cảnh báo. HTTP smoke và build preview đạt. Các kiểm tra playback xác nhận sự kiện của trình duyệt, không đánh giá chất lượng loa hoặc bảo đảm mọi hệ điều hành.
+
+![Từ điển có nút nghe từ và ví dụ](qa/pronunciation-dictionary-desktop.png)
+
+![Nghe từ và câu trên thẻ cá nhân](qa/pronunciation-flashcard-desktop.png)
+
+![Thẻ theo chủ đề trên điện thoại](qa/pronunciation-topic-mobile.png)
+
+## Nghe toàn bài
 
 Trong tab **Bài đọc**, chọn **Nghe bài đọc** để nghe phần tiếng Anh. Thanh nghe cũng xuất hiện trên các bài TOEIC có văn bản (Part 6–7 và bộ hỗn hợp). Part 5 không có văn bản riêng sẽ không hiện nút nghe.
 

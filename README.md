@@ -1,6 +1,6 @@
 # LexiRead Reading Studio v2
 
-[Optional passage audio](docs/READ_ALOUD.md): read-aloud controls for library/IELTS/private readings and TOEIC documents, with pause/resume, speed, English voice selection and paragraph highlighting. Uses installed device voices without AI calls or backend audio storage.
+[Optional English audio](docs/READ_ALOUD.md): listen to library/IELTS/private readings, TOEIC documents, dictionary words/examples, personal vocabulary, topic cards and grammar examples. Passage controls include pause/resume, speed, English voice selection and highlighting. Word controls prefer existing dictionary recordings and fall back to installed device voices, without AI calls or new backend audio storage.
 
 Latest addition: [topic vocabulary and a database-backed dictionary](docs/LOCAL_VOCABULARY.md). Explore 15 topics / 30 collections, learn with flip cards, practise and save individual words for review. The bundled OEWN release loads 127,311 normalized headwords, including 27,581 with IPA; the supplementary pack includes 197 licensed recordings. Definitions and recording bytes are served from the database without AI or runtime dictionary-provider calls. Oxford/Cambridge remain reference links.
 

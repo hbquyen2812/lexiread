@@ -1,0 +1,14 @@
+.pronunciation{display:inline-flex;align-items:center;gap:7px;vertical-align:middle;max-width:100%;flex-wrap:wrap}
+.pronunciation-button{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:38px;height:38px;border:1px solid #d8e3d2;border-radius:50%;background:#f2f6ed;color:#34614c;cursor:pointer;padding:8px;vertical-align:middle}
+.pronunciation-button.with-label{width:auto;gap:7px;border-radius:22px;padding:8px 13px;font:600 13px/1.4 var(--font-ui,sans-serif)}
+.pronunciation-button:hover{background:#e2ecd9}.pronunciation-button:focus-visible{outline:3px solid #407754;outline-offset:3px}.pronunciation-button.is-playing{background:#34634f;border-color:#34634f;color:#fff}.pronunciation-button.is-loading{border-style:dashed}
+.pronunciation-status:not(.has-error){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pronunciation-status.has-error{display:block;width:100%;color:#92452e;font:400 13px/1.6 var(--font-ui,sans-serif);overflow-wrap:anywhere}
+.pronunciation-heading{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.pronunciation-heading>h2,.pronunciation-heading>h3,.pronunciation-heading>.word{margin-right:0;min-width:0;overflow-wrap:anywhere}.pronunciation-heading>.pronunciation{flex-shrink:0}
+.pronunciation-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0}.pronunciation-controls>span{display:inline-flex;gap:6px;align-items:center;font-size:14px}
+.lexical-example .pronunciation,.grammar-explanation blockquote .pronunciation,.grammar-walkthrough blockquote .pronunciation,.tense-example .pronunciation,.tense-comparison blockquote .pronunciation,.dictionary-local blockquote .pronunciation,.dictionary-senses blockquote .pronunciation{margin-top:6px}
+.grammar-explanation blockquote>p[lang=en],.tense-example>p[lang=en],.tense-comparison blockquote>p[lang=en],.lexical-example>p[lang=en]{display:inline}
+.grammar-explanation blockquote>.pronunciation,.grammar-walkthrough blockquote>.pronunciation,.tense-example>.pronunciation,.tense-comparison blockquote>.pronunciation,.lexical-example>.pronunciation{margin:0 0 0 8px}
+.collection-grid .word-select+.pronunciation{margin:0 0 8px}.topic-flashcard .pronunciation{margin-bottom:10px}
+.local-dictionary-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}.local-dictionary-item .local-dictionary-row{min-width:0;width:100%}.local-dictionary-item>.pronunciation{max-width:250px}
+@media(max-width:600px){.pronunciation-button{width:42px;height:42px}.pronunciation-heading{gap:8px}.pronunciation-controls{flex-wrap:wrap}}

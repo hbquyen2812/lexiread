@@ -351,6 +351,7 @@ const motivationRows=[
 ['streak.read','Đọc một bài →','Read a story →','Lire un texte →','读一篇文章 →'],
 ];
 rows.push(...motivationRows);legacy.push(...motivationRows.map(row=>row.slice(1)));
+legacy.push(['Bản HTML chỉ tra các từ đã có trong bài. Mở bản web để tra thêm nghĩa.','The HTML preview only looks up words in the current reading. Open the web app for more definitions.','L’aperçu HTML ne recherche que les mots du texte actuel. Ouvrez le site pour consulter davantage de définitions.','HTML 预览仅查询当前文章中的词语。请打开网站查看其他释义。']);
 const dictionaries=Object.fromEntries(languages.map((l,i)=>[l,Object.fromEntries(rows.map(r=>[r[0],r[i+1]]))]));
 const normalize=value=>value.replace(/\s+/g,' ').trim();
 // Authored, local catalogs. No translation service is called in the browser.

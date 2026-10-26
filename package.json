@@ -2,7 +2,7 @@
   "name": "lexiread-maintenance",
   "private": true,
   "scripts": {
-    "test:audio": "node scripts/test_read_aloud.cjs",
+    "test:audio": "node scripts/test_read_aloud.cjs && node scripts/test_pronunciation.cjs",
     "test:i18n": "node scripts/test_i18n.cjs",
     "locales:extract": "node scripts/extract_locale_sources.cjs"
   },

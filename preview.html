@@ -50,6 +50,20 @@
 .is-reading-aloud{background:#e8f1df!important;outline:2px solid #9bb98a;outline-offset:6px;border-radius:4px}
 .read-aloud button:focus-visible,.read-aloud summary:focus-visible,.read-aloud select:focus-visible{outline:3px solid #326a56;outline-offset:3px}
 @media(max-width:600px){.read-aloud{padding:12px}.read-aloud-controls{gap:8px}.read-aloud-settings{flex-basis:100%;margin-left:0}.read-aloud-fields{display:grid;grid-template-columns:minmax(0,1fr) 96px}.read-aloud-fields select{max-width:100%}.read-aloud-settings summary{padding:7px 0;min-height:36px}}
+</style><style>.pronunciation{display:inline-flex;align-items:center;gap:7px;vertical-align:middle;max-width:100%;flex-wrap:wrap}
+.pronunciation-button{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:38px;height:38px;border:1px solid #d8e3d2;border-radius:50%;background:#f2f6ed;color:#34614c;cursor:pointer;padding:8px;vertical-align:middle}
+.pronunciation-button.with-label{width:auto;gap:7px;border-radius:22px;padding:8px 13px;font:600 13px/1.4 var(--font-ui,sans-serif)}
+.pronunciation-button:hover{background:#e2ecd9}.pronunciation-button:focus-visible{outline:3px solid #407754;outline-offset:3px}.pronunciation-button.is-playing{background:#34634f;border-color:#34634f;color:#fff}.pronunciation-button.is-loading{border-style:dashed}
+.pronunciation-status:not(.has-error){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pronunciation-status.has-error{display:block;width:100%;color:#92452e;font:400 13px/1.6 var(--font-ui,sans-serif);overflow-wrap:anywhere}
+.pronunciation-heading{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.pronunciation-heading>h2,.pronunciation-heading>h3,.pronunciation-heading>.word{margin-right:0;min-width:0;overflow-wrap:anywhere}.pronunciation-heading>.pronunciation{flex-shrink:0}
+.pronunciation-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0}.pronunciation-controls>span{display:inline-flex;gap:6px;align-items:center;font-size:14px}
+.lexical-example .pronunciation,.grammar-explanation blockquote .pronunciation,.grammar-walkthrough blockquote .pronunciation,.tense-example .pronunciation,.tense-comparison blockquote .pronunciation,.dictionary-local blockquote .pronunciation,.dictionary-senses blockquote .pronunciation{margin-top:6px}
+.grammar-explanation blockquote>p[lang=en],.tense-example>p[lang=en],.tense-comparison blockquote>p[lang=en],.lexical-example>p[lang=en]{display:inline}
+.grammar-explanation blockquote>.pronunciation,.grammar-walkthrough blockquote>.pronunciation,.tense-example>.pronunciation,.tense-comparison blockquote>.pronunciation,.lexical-example>.pronunciation{margin:0 0 0 8px}
+.collection-grid .word-select+.pronunciation{margin:0 0 8px}.topic-flashcard .pronunciation{margin-bottom:10px}
+.local-dictionary-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}.local-dictionary-item .local-dictionary-row{min-width:0;width:100%}.local-dictionary-item>.pronunciation{max-width:250px}
+@media(max-width:600px){.pronunciation-button{width:42px;height:42px}.pronunciation-heading{gap:8px}.pronunciation-controls{flex-wrap:wrap}}
 </style>
   <style>/* Shared visual system. System fonts cover Vietnamese and CJK without remote requests. */
 :root{--bg:#faf9f4;--ink:#293b32;--muted:#647266;--green:#356a58;--green-dark:#254e41;--light-green:#eaf3e6;--line:#e3e6dc;--radius:18px;--shadow:0 12px 30px #2e432b09;--gold:#d9ad70}
@@ -629,6 +643,7 @@ const motivationRows=[
 ['streak.read','Đọc một bài →','Read a story →','Lire un texte →','读一篇文章 →'],
 ];
 rows.push(...motivationRows);legacy.push(...motivationRows.map(row=>row.slice(1)));
+legacy.push(['Bản HTML chỉ tra các từ đã có trong bài. Mở bản web để tra thêm nghĩa.','The HTML preview only looks up words in the current reading. Open the web app for more definitions.','L’aperçu HTML ne recherche que les mots du texte actuel. Ouvrez le site pour consulter davantage de définitions.','HTML 预览仅查询当前文章中的词语。请打开网站查看其他释义。']);
 const dictionaries=Object.fromEntries(languages.map((l,i)=>[l,Object.fromEntries(rows.map(r=>[r[0],r[i+1]]))]));
 const normalize=value=>value.replace(/\s+/g,' ').trim();
 // Authored, local catalogs. No translation service is called in the browser.
@@ -1125,6 +1140,13 @@ window.addEventListener('storage',e=>{if(e.key==='lexiread.language'&&languages.
   function save(player) {
     try { localStorage.setItem('lexiread.readAloud', JSON.stringify({rate:player.rate, voice:player.voice})); } catch {}
   }
+  function getVoice() {
+    const settings=preferences();let voices=[];
+    try { voices=supported?synth.getVoices().filter(v=>v.localService===true&&/^en(?:[-_]|$)/i.test(v.lang)):[]; } catch {}
+    return {...settings,voice:voices.find(v=>voiceKey(v)===settings.voice)||voices.find(v=>v.default)||voices[0]};
+  }
+  function interrupt() { if(active)stop(active); }
+  function claimAudio() { window.LexiPronunciation?.stop();document.querySelectorAll('audio').forEach(audio=>audio.pause()); }
   // Short utterances avoid engine limits on long passages. Keep the paragraph association.
   function chunks(text) {
     let rest = String(text || '').replace(/\s+/g, ' ').trim();
@@ -1269,7 +1291,7 @@ window.addEventListener('storage',e=>{if(e.key==='lexiread.language'&&languages.
       if (player.status === 'playing') {
         // Cancel + resume from the last word boundary also works where native pause ends an utterance.
         cancel(player); player.status = 'paused'; update(player);
-      } else if (player.voices.length) { save(player); speak(player); }
+      } else if (player.voices.length) { claimAudio();save(player); speak(player); }
     });
     player.stop.addEventListener('click', () => stop(player));
     const change = () => {
@@ -1291,7 +1313,138 @@ window.addEventListener('storage',e=>{if(e.key==='lexiread.language'&&languages.
   }
   window.addEventListener('pagehide', clear);
   window.addEventListener('hashchange', clear);
-  window.LexiReadAloud = {mount, clear};
+  window.LexiReadAloud = {mount, clear, interrupt, getVoice, chunks};
+})();
+</script><script>/* Small, opt-in audio controls for explicitly selected English words/examples. */
+(() => {
+  'use strict';
+  const strings = {
+    vi:{word:'Nghe từ',sentence:'Nghe câu',stop:'Dừng đọc',loading:'Đang chuẩn bị âm thanh…',playing:'Đang đọc',failed:'Chưa phát được âm thanh. Bấm loa để thử lại.',unavailable:'Thiết bị chưa có giọng tiếng Anh. Thêm giọng English trong cài đặt giọng nói rồi mở lại trang.',unsupported:'Trình duyệt này chưa hỗ trợ giọng đọc. Bạn vẫn có thể nghe các bản thu có sẵn.'},
+    en:{word:'Listen to the word',sentence:'Listen to the sentence',stop:'Stop reading',loading:'Preparing audio…',playing:'Reading aloud',failed:'Audio could not play. Press the speaker to try again.',unavailable:'No English voice is installed. Add an English voice in your device’s speech settings, then reopen this page.',unsupported:'This browser does not support speech synthesis. Available recordings can still be played.'},
+    fr:{word:'Écouter le mot',sentence:'Écouter la phrase',stop:'Arrêter la lecture',loading:'Préparation de l’audio…',playing:'Lecture en cours',failed:'Lecture impossible. Appuyez sur le haut-parleur pour réessayer.',unavailable:'Aucune voix anglaise installée. Ajoutez-en une dans les paramètres vocaux de votre appareil, puis rouvrez cette page.',unsupported:'Ce navigateur ne prend pas en charge la synthèse vocale. Les enregistrements restent disponibles.'},
+    zh:{word:'听单词',sentence:'听例句',stop:'停止朗读',loading:'正在准备音频…',playing:'正在朗读',failed:'无法播放音频，请点击喇叭重试。',unavailable:'设备尚未安装英语语音。请在设备的语音设置中添加英语语音，然后重新打开此页面。',unsupported:'此浏览器不支持语音合成，仍可播放已有录音。'}
+  };
+  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const labels=()=>strings[window.LexiI18n?.language]||strings.vi;
+  const safeRecording=value=>/^\/api\/dictionary\/audio\/[a-f0-9]{64}\/$/.test(value||'')?value:'';
+  const speaker='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 4 6 8H3v8h3l5 4V4Zm4 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg>';
+  let current=null;
+  function button(text,kind='word',recording='',caption=false) {
+    text=String(text||'').replace(/\s+/g,' ').trim();
+    if(!text||text.length>4000)return '';
+    kind=kind==='sentence'?'sentence':'word';
+    const label=labels()[kind]+': '+text.slice(0,100);
+    return `<span class="pronunciation" data-no-i18n><button type="button" class="pronunciation-button${caption?' with-label':''}" data-pronounce="${esc(text)}" data-pronounce-kind="${kind}"${safeRecording(recording)?` data-pronounce-src="${esc(recording)}"`:''} aria-label="${esc(label)}" title="${esc(label)}" aria-pressed="false">${speaker}${caption?`<span data-pronounce-caption>${esc(labels()[kind])}</span>`:''}</button><span class="pronunciation-status" role="status" aria-live="polite"></span></span>`;
+  }
+  function updateButton(button) {
+    const active=current?.button===button;
+    const label=(active?labels().stop:labels()[button.dataset.pronounceKind]||labels().word)+': '+button.dataset.pronounce.slice(0,100);
+    button.setAttribute('title',label);
+    button.setAttribute('aria-label',label);
+    button.setAttribute('aria-pressed',String(active));
+    button.classList.toggle('is-playing',active);
+    button.classList.toggle('is-loading',active&&current.status==='loading');
+    const caption=button.querySelector('[data-pronounce-caption]');
+    if(caption)caption.textContent=active?labels().stop:labels()[button.dataset.pronounceKind];
+  }
+  function status(player,key) {
+    player.status=key;
+    player.note.dataset.message=key;
+    player.note.textContent=labels()[key]||'';
+    player.note.classList.toggle('has-error',['failed','unavailable','unsupported'].includes(key));
+    updateButton(player.button);
+  }
+  function stop() {
+    if(!current)return;
+    const player=current;current=null;
+    clearTimeout(player.timer);
+    player.observer?.disconnect();
+    window.speechSynthesis?.removeEventListener?.('voiceschanged',player.voicesChanged);
+    if(player.audio){player.audio.onended=player.audio.onerror=player.audio.onplaying=player.audio.onpause=null;player.audio.pause();}
+    if(player.utterance){player.utterance=null;try{window.speechSynthesis.cancel();}catch{}}
+    player.note.textContent='';delete player.note.dataset.message;player.note.classList.remove('has-error');
+    updateButton(player.button);
+  }
+  const visible=player=>{
+    if(!player.button.isConnected)return false;
+    for(let node=player.button.parentElement;node;node=node.parentElement){
+      if(node.hidden||(node.tagName==='DIALOG'&&!node.open)||(node.tagName==='DETAILS'&&!node.hasAttribute('open')))return false;
+    }
+    return true;
+  };
+  function fail(player,key='failed') { if(current!==player)return;stop();status(player,key); }
+  function pauseRecordings(except=null) { document.querySelectorAll('audio').forEach(audio=>{if(audio!==except)audio.pause();}); }
+  function speak(player) {
+    if(current!==player)return;
+    if(!visible(player)){stop();return;}
+    const settings=window.LexiReadAloud.getVoice();
+    if(!settings.voice){fail(player,'unavailable');return;}
+    if(!player.queue.length){stop();return;}
+    const utterance=new window.SpeechSynthesisUtterance(player.queue.shift());
+    player.utterance=utterance;
+    utterance.voice=settings.voice;utterance.lang=settings.voice.lang;utterance.rate=settings.rate;
+    const valid=()=>current===player&&player.utterance===utterance;
+    status(player,'loading');
+    clearTimeout(player.timer);player.timer=setTimeout(()=>{if(valid())fail(player);},12000);
+    utterance.onstart=()=>{if(!valid())return;status(player,'playing');clearTimeout(player.timer);player.timer=setTimeout(()=>{if(valid())fail(player);},90000);};
+    utterance.onend=()=>{if(!valid())return;clearTimeout(player.timer);player.utterance=null;speak(player);};
+    utterance.onerror=()=>{if(valid())fail(player);};
+    try{window.speechSynthesis.speak(utterance);}catch{fail(player);}
+  }
+  function useDeviceVoice(player) {
+    if(current!==player)return;
+    clearTimeout(player.timer);
+    if(!window.speechSynthesis||!window.SpeechSynthesisUtterance||!window.LexiReadAloud){fail(player,'unsupported');return;}
+    if(window.LexiReadAloud.getVoice().voice){speak(player);return;}
+    status(player,'loading');
+    player.voicesChanged=()=>{
+      if(current!==player||!window.LexiReadAloud.getVoice().voice)return;
+      window.speechSynthesis.removeEventListener('voiceschanged',player.voicesChanged);
+      clearTimeout(player.timer);speak(player);
+    };
+    window.speechSynthesis.addEventListener('voiceschanged',player.voicesChanged);
+    player.timer=setTimeout(()=>fail(player,'unavailable'),2500);
+  }
+  function play(button) {
+    if(current?.button===button){stop();return;}
+    stop();window.LexiReadAloud?.interrupt();pauseRecordings();
+    const text=button.dataset.pronounce;
+    if(!text||text.length>4000)return;
+    const player={button,note:button.parentElement.querySelector('[role="status"]'),queue:window.LexiReadAloud?.chunks(text)||[text]};
+    current=player;
+    if(!visible(player)){stop();return;}
+    player.observer=new MutationObserver(()=>{if(current===player&&!visible(player))stop();});
+    player.observer.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','open']});
+    const src=safeRecording(button.dataset.pronounceSrc);
+    if(!src||!window.Audio){useDeviceVoice(player);return;}
+    status(player,'loading');
+    const existing=[...(button.closest('.dictionary-panel')?.querySelectorAll('audio')||[])].find(audio=>audio.getAttribute('src')===src);
+    const audio=existing||new window.Audio(src);player.audio=audio;audio.preload='none';
+    try{audio.currentTime=0;}catch{}
+    audio.playbackRate=window.LexiReadAloud?.getVoice().rate||1;
+    // One failed recording may fall back once; stale media callbacks cannot restart speech.
+    const fallback=()=>{if(current!==player||player.audio!==audio)return;audio.onended=audio.onerror=audio.onplaying=audio.onpause=null;audio.pause();player.audio=null;useDeviceVoice(player);};
+    audio.onplaying=()=>{if(current!==player||player.audio!==audio)return;clearTimeout(player.timer);status(player,'playing');player.timer=setTimeout(fallback,30000);};
+    audio.onended=()=>{if(current===player&&player.audio===audio)stop();};
+    audio.onpause=()=>{if(current===player&&player.audio===audio)stop();};
+    audio.onerror=fallback;
+    player.timer=setTimeout(fallback,6000);
+    try{audio.play()?.catch(fallback);}catch{fallback();}
+  }
+  document.addEventListener('click',event=>{
+    const button=event.target.closest('[data-pronounce]');
+    if(!button)return;
+    event.preventDefault();event.stopPropagation();play(button);
+  });
+  document.addEventListener('play',event=>{if(event.target.tagName==='AUDIO'){if(current?.audio!==event.target)stop();window.LexiReadAloud?.interrupt();pauseRecordings(event.target);}},true);
+  document.addEventListener('close',event=>{if(current&&current.button.closest('dialog')===event.target)stop();},true);
+  document.addEventListener('lexiread:language',()=>{
+    document.querySelectorAll('[data-pronounce]').forEach(updateButton);
+    document.querySelectorAll('.pronunciation-status[data-message]').forEach(note=>{note.textContent=labels()[note.dataset.message]||'';});
+  });
+  window.addEventListener('pagehide',stop);
+  window.addEventListener('hashchange',()=>{stop();pauseRecordings();});
+  window.LexiPronunciation={button,stop,stopWithin:root=>{if(current&&root?.contains(current.button))stop();}};
 })();
 </script>
   <script>'use strict';
@@ -1471,7 +1624,7 @@ function renderToeicPractice(){
   }else body=documents(practice.documents)+`<div class="toeic-questions">${practice.questions.map(question).join('')}</div>`;
   $('#main').innerHTML=`<a class="link-btn" href="#toeic">← Thư viện TOEIC Reading</a><div style="height:17px"></div>`+heading(practice.title,`${practice.mode_label} · ${String(practice.level||'').split('·')[0].trim()} · ${practice.question_count} câu · mục tiêu ${practice.duration_minutes} phút`)+`<p class="practice-instructions">${esc(practice.instructions)}</p><details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(practice.provenance||'Bài luyện do LexiRead biên soạn, không phải đề ETS.')}</p></details>`+
     (result?`<div class="reading-score toeic-score" role="status"><strong>${result.score} / ${result.total}</strong><div>${result.percentage}% chính xác<p>${Object.entries(result.by_part).map(([part,row])=>`Part ${part}: ${row.score}/${row.total}`).join(' · ')}. Đã lưu kết quả.</p></div><button class="btn secondary" data-action="reset-toeic">Làm lại</button></div><div class="practice-filter-results"><label><input type="checkbox" data-practice-wrong> Chỉ xem câu sai</label><a class="btn small" href="#guides/toeic">Ôn cách làm từng dạng →</a></div>`:`<section class="practice-progress" data-practice-progress><div class="practice-progress-top"><strong data-practice-count></strong><span>Đã làm <b class="practice-clock" data-practice-clock>00:00</b> / ${practice.duration_minutes} phút gợi ý</span><div class="button-row"><button type="button" class="btn small" data-practice-pause>Tạm dừng đồng hồ</button><button type="button" class="btn small secondary" data-practice-unanswered>Câu chưa trả lời →</button></div></div><p>Không tự nộp khi hết giờ. Chuyển trang vẫn giữ đáp án; tải lại trang sẽ làm lại.</p><details><summary>Chọn câu hỏi</summary><div class="question-map">${practice.questions.map((q,i)=>`<button type="button" data-practice-jump="${esc(q.id)}">${i+1}</button>`).join('')}</div></details></section>`)+body+`<div class="button-row toeic-submit">${result?'<button class="btn primary" data-action="reset-toeic">Làm lại bộ này</button><a class="btn" href="#toeic">Chọn bài khác</a>':'<button class="btn primary" data-action="submit-toeic">Nộp và xem giải thích</button>'}</div>`+
-    (practice.focus_vocabulary.length?`<details class="panel source-context"><summary>Từ vựng trong bài</summary><div class="glossary-grid">${practice.focus_vocabulary.map(w=>`<article class="candidate-body"><h3 lang="en">${esc(w.word)} <small>${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}</article>`).join('')}</div><button class="btn secondary" data-action="save-toeic-words">Lưu ${practice.focus_vocabulary.length} từ vào kho để ôn</button></details>`:'');
+    (practice.focus_vocabulary.length?`<details class="panel source-context"><summary>Từ vựng trong bài</summary><div class="glossary-grid">${practice.focus_vocabulary.map(w=>`<article class="candidate-body"><div class="pronunciation-heading"><h3 lang="en">${esc(w.word)} <small>${esc(w.pos)}</small></h3>${window.LexiPronunciation?.button(w.word)||''}</div><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}</article>`).join('')}</div><button class="btn secondary" data-action="save-toeic-words">Lưu ${practice.focus_vocabulary.length} từ vào kho để ôn</button></details>`:'');
   const documentNodes=[...document.querySelectorAll('.toeic-document')];
   if(documentNodes.length){
     const audioHost=document.createElement('div');
@@ -1607,7 +1760,7 @@ ${JSON.stringify(sample(name),null,2)}`;
     const search=async()=>{
       const ticket=++generation,requested=query,requestedPage=page;target.innerHTML='<p role="status">Đang tìm từ…</p>';
       try{const d=await api('/dictionary/search/?q='+encodeURIComponent(requested)+'&page='+requestedPage);if(!active()||ticket!==generation)return;
-        target.innerHTML=`<p role="status">${d.total?`${d.total.toLocaleString('vi-VN')} mục từ · Trang ${d.page}`:'Chưa tìm thấy từ này. Thử dạng nguyên mẫu hoặc kiểm tra lại chính tả.'}</p><div class="local-dictionary-list">${d.items.map(r=>`<button class="local-dictionary-row" type="button" data-dictionary-word="${esc(r.word)}"><strong lang="en" data-no-i18n>${esc(r.word)}</strong><span lang="en" data-no-i18n>${esc(r.definition)}</span><span aria-hidden="true">↗</span></button>`).join('')}</div><div class="button-row">${page>1?'<button class="btn secondary" type="button" data-previous>← Trang trước</button>':''}${d.has_next?'<button class="btn secondary" type="button" data-next>Trang tiếp →</button>':''}</div>`;
+        target.innerHTML=`<p role="status">${d.total?`${d.total.toLocaleString('vi-VN')} mục từ · Trang ${d.page}`:'Chưa tìm thấy từ này. Thử dạng nguyên mẫu hoặc kiểm tra lại chính tả.'}</p><div class="local-dictionary-list">${d.items.map(r=>`<div class="local-dictionary-item"><button class="local-dictionary-row" type="button" data-dictionary-word="${esc(r.word)}"><strong lang="en" data-no-i18n>${esc(r.word)}</strong><span lang="en" data-no-i18n>${esc(r.definition)}</span><span aria-hidden="true">↗</span></button>${window.LexiPronunciation?.button(r.word)||''}</div>`).join('')}</div><div class="button-row">${page>1?'<button class="btn secondary" type="button" data-previous>← Trang trước</button>':''}${d.has_next?'<button class="btn secondary" type="button" data-next>Trang tiếp →</button>':''}</div>`;
         target.querySelector('[data-previous]')?.addEventListener('click',()=>{page--;search();});target.querySelector('[data-next]')?.addEventListener('click',()=>{page++;search();});
       }catch(error){if(active()&&ticket===generation)target.textContent=error.message;}
     };
@@ -1618,7 +1771,7 @@ ${JSON.stringify(sample(name),null,2)}`;
     const button=document.createElement('button');button.type='button';button.className='btn secondary';button.textContent='Học bằng thẻ';actions.prepend(button);
     const panel=document.createElement('section');panel.className='topic-flashcards';panel.hidden=true;actions.after(panel);
     let index=0,revealed=false;
-    const draw=()=>{const word=data.words[index];panel.innerHTML=`<div class="topic-flashcard"><p class="eyebrow">THẺ ${index+1} / ${data.words.length}</p><h2 lang="en" data-no-i18n>${esc(word.word)}</h2><span class="chip" lang="en" data-no-i18n>${esc(word.part_of_speech)}</span><p lang="en" data-no-i18n>${esc(word.example)}</p>${revealed?`<div class="topic-reveal"><strong>${esc(word.meaning_vi)}</strong><p>${esc(word.example_translation)}</p><p lang="en" data-no-i18n>${esc(word.usage_pattern)}</p></div>`:'<p class="muted">Thử nhớ nghĩa của từ trong câu trước khi xem đáp án.</p>'}<button class="btn primary" type="button" data-flip aria-pressed="${revealed}">${revealed?'Ẩn nghĩa':'Xem nghĩa'}</button><button class="btn secondary" type="button" data-card-save ${word.saved?'disabled':''}>${word.saved?'Đã lưu vào kho':'+ Lưu từ này'}</button><button class="link-btn" type="button" data-dictionary-word="${esc(word.word)}">Phiên âm & cách dùng ↗</button></div><div class="topic-card-nav"><button class="btn secondary" type="button" data-card-prev ${index===0?'disabled':''}>← Thẻ trước</button><button class="btn secondary" type="button" data-card-next ${index===data.words.length-1?'disabled':''}>Thẻ tiếp →</button></div><p class="fineprint" role="status">${index===data.words.length-1?'Bạn đã xem hết bộ thẻ. Hãy thử làm bài tập hoặc ôn lại những từ chưa nhớ.':''}</p>`;panel.querySelector('[data-flip]').onclick=()=>{revealed=!revealed;draw();panel.querySelector('[data-flip]').focus();};panel.querySelector('[data-card-save]').onclick=async ev=>{const b=ev.currentTarget;b.disabled=true;const selected=index;try{await api(`/learn/vocabulary/${encodeURIComponent(data.id)}/save/`,{method:'POST',data:{indices:[selected]}});data.words[selected].saved=true;const checkbox=area.querySelectorAll('.word-select input')[selected];checkbox.checked=false;checkbox.closest('label').querySelector('small').textContent='Đã có trong kho';area.querySelector('[data-study-collection]').disabled=false;if(panel.isConnected&&index===selected)draw();await refreshBoot();toast('Đã lưu từ vào bộ từ cá nhân.');}catch(error){toast(error.message,true);b.disabled=false;}};panel.querySelector('[data-card-prev]').onclick=()=>{index--;revealed=false;draw();};panel.querySelector('[data-card-next]').onclick=()=>{index++;revealed=false;draw();};};
+    const draw=()=>{const word=data.words[index];panel.innerHTML=`<div class="topic-flashcard"><p class="eyebrow">THẺ ${index+1} / ${data.words.length}</p><h2 lang="en" data-no-i18n>${esc(word.word)}</h2>${window.LexiPronunciation?.button(word.word)||''}<span class="chip" lang="en" data-no-i18n>${esc(word.part_of_speech)}</span><p lang="en" data-no-i18n>${esc(word.example)}</p>${window.LexiPronunciation?.button(word.example,'sentence')||''}${revealed?`<div class="topic-reveal"><strong>${esc(word.meaning_vi)}</strong><p>${esc(word.example_translation)}</p><p lang="en" data-no-i18n>${esc(word.usage_pattern)}</p></div>`:'<p class="muted">Thử nhớ nghĩa của từ trong câu trước khi xem đáp án.</p>'}<button class="btn primary" type="button" data-flip aria-pressed="${revealed}">${revealed?'Ẩn nghĩa':'Xem nghĩa'}</button><button class="btn secondary" type="button" data-card-save ${word.saved?'disabled':''}>${word.saved?'Đã lưu vào kho':'+ Lưu từ này'}</button><button class="link-btn" type="button" data-dictionary-word="${esc(word.word)}">Phiên âm & cách dùng ↗</button></div><div class="topic-card-nav"><button class="btn secondary" type="button" data-card-prev ${index===0?'disabled':''}>← Thẻ trước</button><button class="btn secondary" type="button" data-card-next ${index===data.words.length-1?'disabled':''}>Thẻ tiếp →</button></div><p class="fineprint" role="status">${index===data.words.length-1?'Bạn đã xem hết bộ thẻ. Hãy thử làm bài tập hoặc ôn lại những từ chưa nhớ.':''}</p>`;panel.querySelector('[data-flip]').onclick=()=>{revealed=!revealed;draw();panel.querySelector('[data-flip]').focus();};panel.querySelector('[data-card-save]').onclick=async ev=>{const b=ev.currentTarget;b.disabled=true;const selected=index;try{await api(`/learn/vocabulary/${encodeURIComponent(data.id)}/save/`,{method:'POST',data:{indices:[selected]}});data.words[selected].saved=true;const checkbox=area.querySelectorAll('.word-select input')[selected];checkbox.checked=false;checkbox.closest('label').querySelector('small').textContent='Đã có trong kho';area.querySelector('[data-study-collection]').disabled=false;if(panel.isConnected&&index===selected)draw();await refreshBoot();toast('Đã lưu từ vào bộ từ cá nhân.');}catch(error){toast(error.message,true);b.disabled=false;}};panel.querySelector('[data-card-prev]').onclick=()=>{index--;revealed=false;draw();};panel.querySelector('[data-card-next]').onclick=()=>{index++;revealed=false;draw();};};
     button.onclick=()=>{panel.hidden=!panel.hidden;button.textContent=panel.hidden?'Học bằng thẻ':'Đóng thẻ';area.querySelector('.collection-grid').hidden=!panel.hidden;area.querySelector('[data-save-words]').hidden=!panel.hidden;area.querySelector('[data-quiz]').hidden=true;const practice=area.querySelector('[data-collection-practice]');practice.setAttribute('aria-pressed','false');practice.textContent=`Luyện ${data.questions.length} câu`;if(!panel.hidden){draw();panel.scrollIntoView({behavior:'smooth',block:'start'});}};
     const practice=area.querySelector('[data-collection-practice]'),previous=practice.onclick;practice.onclick=ev=>{panel.hidden=true;area.querySelector('[data-save-words]').hidden=false;button.textContent='Học bằng thẻ';previous(ev);};
     area.querySelectorAll('.collection-grid article').forEach((card,i)=>{const b=document.createElement('button');b.className='link-btn';b.type='button';b.dataset.dictionaryWord=data.words[i].word;b.textContent='Tra nghĩa & phát âm →';card.append(b);});
@@ -1634,10 +1787,10 @@ ${JSON.stringify(sample(name),null,2)}`;
   const labels={affirmative:'Khẳng định',negative:'Phủ định',question:'Câu hỏi'};
   const toolsHTML=()=>`<nav class="grammar-tools" aria-label="Tra cứu ngữ pháp"><a href="#learn/verbs"><span aria-hidden="true">Aa</span><div><strong>Động từ bất quy tắc</strong><small>Tra V1 · V2 · V3 và tự ôn</small></div><b aria-hidden="true">↗</b></a><a href="#learn/tenses"><span aria-hidden="true">↔</span><div><strong>Phân biệt các thì</strong><small>Cách dùng, cấu trúc và ví dụ</small></div><b aria-hidden="true">↗</b></a></nav>`;
   function tenseHTML(t){
-    return `<article class="tense-guide"><header><span class="eyebrow">DÙNG ĐÚNG THEO NGỮ CẢNH</span><h2>${esc(t.title)}</h2></header><section><h3>Khi nào dùng?</h3><ul class="tense-uses">${t.uses.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><blockquote class="tense-example"><p lang="en" data-no-i18n>${esc(t.example)}</p><p>${esc(t.translation_vi)}</p></blockquote></section><section><h3>Cách đặt câu</h3><p class="grammar-key">S = chủ ngữ · V = động từ nguyên mẫu · V2 = quá khứ · V3 = quá khứ phân từ</p><dl class="tense-forms">${Object.entries(t.forms).map(([key,value])=>`<div><dt>${labels[key]}</dt><dd data-no-i18n>${esc(value)}</dd></div>`).join('')}</dl><p class="tense-note">${esc(t.note)}</p>${t.id==='future-simple'?`<div class="tense-alternatives"><p><strong>Ý định / dự đoán có căn cứ:</strong> S + am/is/are going to + V.<br><span lang="en" data-no-i18n>Look at those clouds. It is going to rain.</span> — Nhìn mây kìa, trời sắp mưa rồi.</p><p><strong>Lịch hẹn đã thu xếp:</strong> S + am/is/are + V-ing.<br><span lang="en" data-no-i18n>I am meeting Lan at six.</span> — Tôi có hẹn gặp Lan lúc sáu giờ.</p></div>`:''}${/V[23]/.test(Object.values(t.forms).join(' '))?'<a class="link-btn" href="#learn/verbs">Tra dạng V2 và V3 →</a>':''}</section><section><h3>Dấu hiệu thường gặp</h3><dl class="tense-signals">${t.signals.map(s=>`<div><dt lang="en" data-no-i18n>${esc(s.word)}</dt><dd>${esc(s.meaning)}</dd></div>`).join('')}</dl><p class="grammar-key">Xem cả ý nghĩa và mốc thời gian của câu. Một từ như <span lang="en" data-no-i18n>for, since, when</span> có thể xuất hiện với nhiều thì.</p></section></article>`;
+    return `<article class="tense-guide"><header><span class="eyebrow">DÙNG ĐÚNG THEO NGỮ CẢNH</span><h2>${esc(t.title)}</h2></header><section><h3>Khi nào dùng?</h3><ul class="tense-uses">${t.uses.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><blockquote class="tense-example"><p lang="en" data-no-i18n>${esc(t.example)}</p>${window.LexiPronunciation?.button(t.example,'sentence')||''}<p>${esc(t.translation_vi)}</p></blockquote></section><section><h3>Cách đặt câu</h3><p class="grammar-key">S = chủ ngữ · V = động từ nguyên mẫu · V2 = quá khứ · V3 = quá khứ phân từ</p><dl class="tense-forms">${Object.entries(t.forms).map(([key,value])=>`<div><dt>${labels[key]}</dt><dd data-no-i18n>${esc(value)}</dd></div>`).join('')}</dl><p class="tense-note">${esc(t.note)}</p>${t.id==='future-simple'?`<div class="tense-alternatives"><p><strong>Ý định / dự đoán có căn cứ:</strong> S + am/is/are going to + V.<br><span lang="en" data-no-i18n>Look at those clouds. It is going to rain.</span> — Nhìn mây kìa, trời sắp mưa rồi.</p><p><strong>Lịch hẹn đã thu xếp:</strong> S + am/is/are + V-ing.<br><span lang="en" data-no-i18n>I am meeting Lan at six.</span> — Tôi có hẹn gặp Lan lúc sáu giờ.</p></div>`:''}${/V[23]/.test(Object.values(t.forms).join(' '))?'<a class="link-btn" href="#learn/verbs">Tra dạng V2 và V3 →</a>':''}</section><section><h3>Dấu hiệu thường gặp</h3><dl class="tense-signals">${t.signals.map(s=>`<div><dt lang="en" data-no-i18n>${esc(s.word)}</dt><dd>${esc(s.meaning)}</dd></div>`).join('')}</dl><p class="grammar-key">Xem cả ý nghĩa và mốc thời gian của câu. Một từ như <span lang="en" data-no-i18n>for, since, when</span> có thể xuất hiện với nhiều thì.</p></section></article>`;
   }
   function comparisonHTML(c){
-    return `<section class="tense-comparison"><h2>${esc(c.title)}</h2><div class="tense-pair">${c.sides.map(s=>`<article><h3>${esc(s.title)}</h3><p>${esc(s.use)}</p><blockquote><p lang="en" data-no-i18n>${esc(s.example)}</p><p>${esc(s.translation_vi)}</p></blockquote></article>`).join('')}</div><p class="tense-decision"><strong>Cách chọn:</strong> ${esc(c.tip)}</p></section>`;
+    return `<section class="tense-comparison"><h2>${esc(c.title)}</h2><div class="tense-pair">${c.sides.map(s=>`<article><h3>${esc(s.title)}</h3><p>${esc(s.use)}</p><blockquote><p lang="en" data-no-i18n>${esc(s.example)}</p>${window.LexiPronunciation?.button(s.example,'sentence')||''}<p>${esc(s.translation_vi)}</p></blockquote></article>`).join('')}</div><p class="tense-decision"><strong>Cách chọn:</strong> ${esc(c.tip)}</p></section>`;
   }
   function guideHTML(guide){return guide.tenses.map(tenseHTML).join('')+guide.comparisons.map(comparisonHTML).join('');}
   function group(row){
@@ -1721,7 +1874,7 @@ ${JSON.stringify(sample(name),null,2)}`;
   }
   function lessonHTML(data,references,quiz){
     const t=data.teaching;
-    return `<div class="grammar-mode" role="group" aria-label="Chọn phần bài học"><button type="button" class="btn" data-grammar-mode="lesson" aria-pressed="true" aria-controls="grammar-lesson-panel">1. Bài học</button><button type="button" class="btn" data-grammar-mode="practice" aria-pressed="false" aria-controls="grammar-practice-panel">2. Bài tập (${data.questions.length} câu)</button></div><section id="grammar-lesson-panel" data-grammar-panel="lesson" tabindex="-1">${t?`<p class="grammar-objective"><strong>Sau bài này, bạn có thể:</strong> ${esc(t.objective)}</p>`:''}${data.tense_guide?window.LexiGrammarReference.guideHTML(data.tense_guide):`<div class="grammar-sections">${data.explanation.map((s,i)=>`<article class="grammar-explanation"><span class="eyebrow">PHẦN ${i+1}</span><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p>${s.pattern?`<div class="grammar-formula"><small>Cấu trúc cần nhớ</small><p>${esc(s.pattern)}</p></div>`:''}<blockquote><p lang="en" data-no-i18n>${esc(s.example)}</p><p>${esc(s.translation_vi)}</p></blockquote></article>`).join('')}</div>`}${t?`<section class="grammar-walkthrough"><span class="eyebrow">CÙNG PHÂN TÍCH MỘT VÍ DỤ</span><h2>Áp dụng vào câu như thế nào?</h2><p>${esc(t.context)}</p><blockquote><strong lang="en" data-no-i18n>${esc(t.example)}</strong><p>${esc(t.translation_vi)}</p></blockquote><ol>${t.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol><div class="grammar-quick-check"><h3>Thử tự làm</h3><p>${esc(t.quick_check.prompt)}</p><details><summary>Xem đáp án và cách làm</summary><p lang="en" data-no-i18n><strong>${esc(t.quick_check.answer)}</strong></p><p>${esc(t.quick_check.explanation_vi)}</p></details></div></section><section class="grammar-recap"><h2>Nhớ hai ý chính</h2><ul>${t.takeaways.map(s=>`<li>${esc(s)}</li>`).join('')}</ul></section>`:''}<details class="academy-guide"><summary>Những lỗi thường gặp</summary><ul>${(data.pitfalls||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ul></details><div class="grammar-practice-callout"><div><h2>Thử áp dụng ngay</h2><p>${data.questions.length} câu bài tập, có đáp án và lời giải sau khi nộp.</p></div><button class="btn primary" type="button" data-start-grammar-practice>Làm bài tập →</button></div><div class="grammar-read-control"><button type="button" class="btn secondary" data-grammar-read="${esc(data.id)}" aria-pressed="${!!data.is_read}">${data.is_read?'✓ Đã đọc · Bỏ đánh dấu':'Đánh dấu đã đọc'}</button><span role="status" data-grammar-read-note></span></div>${references}</section><section id="grammar-practice-panel" data-grammar-panel="practice" tabindex="-1" hidden><p class="grammar-practice-help">Chọn một đáp án cho mỗi câu. Bạn có thể quay lại phần Bài học mà vẫn giữ các lựa chọn.</p><div data-quiz>${quiz}</div></section>${navigationHTML(data)}`;
+    return `<div class="grammar-mode" role="group" aria-label="Chọn phần bài học"><button type="button" class="btn" data-grammar-mode="lesson" aria-pressed="true" aria-controls="grammar-lesson-panel">1. Bài học</button><button type="button" class="btn" data-grammar-mode="practice" aria-pressed="false" aria-controls="grammar-practice-panel">2. Bài tập (${data.questions.length} câu)</button></div><section id="grammar-lesson-panel" data-grammar-panel="lesson" tabindex="-1">${t?`<p class="grammar-objective"><strong>Sau bài này, bạn có thể:</strong> ${esc(t.objective)}</p>`:''}${data.tense_guide?window.LexiGrammarReference.guideHTML(data.tense_guide):`<div class="grammar-sections">${data.explanation.map((s,i)=>`<article class="grammar-explanation"><span class="eyebrow">PHẦN ${i+1}</span><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p>${s.pattern?`<div class="grammar-formula"><small>Cấu trúc cần nhớ</small><p>${esc(s.pattern)}</p></div>`:''}<blockquote><p lang="en" data-no-i18n>${esc(s.example)}</p>${window.LexiPronunciation?.button(s.example,'sentence')||''}<p>${esc(s.translation_vi)}</p></blockquote></article>`).join('')}</div>`}${t?`<section class="grammar-walkthrough"><span class="eyebrow">CÙNG PHÂN TÍCH MỘT VÍ DỤ</span><h2>Áp dụng vào câu như thế nào?</h2><p>${esc(t.context)}</p><blockquote><strong lang="en" data-no-i18n>${esc(t.example)}</strong>${window.LexiPronunciation?.button(t.example,'sentence')||''}<p>${esc(t.translation_vi)}</p></blockquote><ol>${t.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol><div class="grammar-quick-check"><h3>Thử tự làm</h3><p>${esc(t.quick_check.prompt)}</p><details><summary>Xem đáp án và cách làm</summary><p lang="en" data-no-i18n><strong>${esc(t.quick_check.answer)}</strong></p><p>${esc(t.quick_check.explanation_vi)}</p></details></div></section><section class="grammar-recap"><h2>Nhớ hai ý chính</h2><ul>${t.takeaways.map(s=>`<li>${esc(s)}</li>`).join('')}</ul></section>`:''}<details class="academy-guide"><summary>Những lỗi thường gặp</summary><ul>${(data.pitfalls||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ul></details><div class="grammar-practice-callout"><div><h2>Thử áp dụng ngay</h2><p>${data.questions.length} câu bài tập, có đáp án và lời giải sau khi nộp.</p></div><button class="btn primary" type="button" data-start-grammar-practice>Làm bài tập →</button></div><div class="grammar-read-control"><button type="button" class="btn secondary" data-grammar-read="${esc(data.id)}" aria-pressed="${!!data.is_read}">${data.is_read?'✓ Đã đọc · Bỏ đánh dấu':'Đánh dấu đã đọc'}</button><span role="status" data-grammar-read-note></span></div>${references}</section><section id="grammar-practice-panel" data-grammar-panel="practice" tabindex="-1" hidden><p class="grammar-practice-help">Chọn một đáp án cho mỗi câu. Bạn có thể quay lại phần Bài học mà vẫn giữ các lựa chọn.</p><div data-quiz>${quiz}</div></section>${navigationHTML(data)}`;
   }
   function attachLesson(area){
     const readButton=area.querySelector('[data-grammar-read]');
@@ -1794,7 +1947,7 @@ ${JSON.stringify(sample(name),null,2)}`;
     const data=await api(`/learn/${kind}/${encodeURIComponent(id)}/`);if(!active())return;
     const back=`<a class="link-btn" href="#learn/${kind}">← ${names[kind]}</a>`;
     const references=`<details class="academy-guide"><summary>Nguồn tham khảo</summary><p>Nội dung và bài tập do LexiRead biên soạn; các tài liệu dưới đây dùng để đối chiếu cách dùng.</p><div class="button-row">${data.source_urls.map((u,i)=>link(u,`Tài liệu ${i+1}`)).join('')}</div></details>`;
-    area.innerHTML=`${back}<header class="academy-heading"><span class="level-pill">${data.level}</span><h1>${e(data.title)}</h1><p>${e(data.summary||data.description)}</p></header>`+(kind==='grammar'?window.LexiGrammar.lessonHTML(data,references,quizHTML(data.questions)):`<div class="collection-actions"><p>Chọn từ cần học rồi nhấn Lưu từ đã chọn.</p><button type="button" class="btn primary" data-save-words>Lưu từ đã chọn</button><button type="button" class="btn secondary" data-study-collection ${data.words.some(w=>w.saved)?'':'disabled'}>Ôn bộ từ này →</button><button type="button" class="link-btn" data-collection-practice aria-pressed="false">Luyện ${data.questions.length} câu</button><p role="status" data-save-status></p></div><div class="academy-grid collection-grid">${data.words.map((w,i)=>`<article class="academy-card"><label class="word-select"><input type="checkbox" value="${i}" ${w.saved?'':'checked'}><span lang="en" data-no-i18n>${e(w.word)}</span><small>${w.saved?'Đã có trong kho':e(w.part_of_speech)}</small></label><p><strong>${e(w.meaning_vi)}</strong></p><p lang="en" data-no-i18n>${e(w.example)}</p><p class="muted">${e(w.example_translation)}</p><p class="word-pattern" data-no-i18n>${e(w.usage_pattern)}</p></article>`).join('')}</div>`)+(kind==='grammar'?'':references+`<div data-quiz>${quizHTML(data.questions)}</div>`);
+    area.innerHTML=`${back}<header class="academy-heading"><span class="level-pill">${data.level}</span><h1>${e(data.title)}</h1><p>${e(data.summary||data.description)}</p></header>`+(kind==='grammar'?window.LexiGrammar.lessonHTML(data,references,quizHTML(data.questions)):`<div class="collection-actions"><p>Chọn từ cần học rồi nhấn Lưu từ đã chọn.</p><button type="button" class="btn primary" data-save-words>Lưu từ đã chọn</button><button type="button" class="btn secondary" data-study-collection ${data.words.some(w=>w.saved)?'':'disabled'}>Ôn bộ từ này →</button><button type="button" class="link-btn" data-collection-practice aria-pressed="false">Luyện ${data.questions.length} câu</button><p role="status" data-save-status></p></div><div class="academy-grid collection-grid">${data.words.map((w,i)=>`<article class="academy-card"><label class="word-select"><input type="checkbox" value="${i}" ${w.saved?'':'checked'}><span lang="en" data-no-i18n>${e(w.word)}</span><small>${w.saved?'Đã có trong kho':e(w.part_of_speech)}</small></label>${window.LexiPronunciation?.button(w.word)||''}<p><strong>${e(w.meaning_vi)}</strong></p><p lang="en" data-no-i18n>${e(w.example)}</p>${window.LexiPronunciation?.button(w.example,'sentence')||''}<p class="muted">${e(w.example_translation)}</p><p class="word-pattern" data-no-i18n>${e(w.usage_pattern)}</p></article>`).join('')}</div>`)+(kind==='grammar'?'':references+`<div data-quiz>${quizHTML(data.questions)}</div>`);
     if(kind==='vocabulary'){
       area.querySelector('[data-quiz]').hidden=true;
       area.querySelector('[data-study-collection]').onclick=()=>{state.study=null;state.studySettings={...state.studySettings,tag:data.title,reading:'',scope:'all'};location.hash='study';};
@@ -1830,18 +1983,18 @@ ${JSON.stringify(sample(name),null,2)}`;
     }catch{return '';}
   }
   const link=(url,label)=>safeURL(url)?`<a href="${esc(safeURL(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`:'';
-  const definitions=items=>`<ol class="dictionary-senses" lang="en" data-no-i18n>${items.map(d=>`<li><p>${esc(d.definition)}</p>${d.example?`<blockquote>${esc(d.example)}</blockquote>`:''}</li>`).join('')}</ol>`;
+  const definitions=items=>`<ol class="dictionary-senses" lang="en" data-no-i18n>${items.map(d=>`<li><p>${esc(d.definition)}</p>${d.example?`<blockquote>${esc(d.example)}</blockquote>${window.LexiPronunciation?.button(d.example,'sentence')||''}`:''}</li>`).join('')}</ol>`;
   let run=0,current=null;
   function render(data){
     const remote=data.dictionary||{},entries=remote.entries||[],local=data.local_entries||[];
     const pronunciations=entries.flatMap(e=>e.phonetics||[]).filter((p,i,all)=>all.findIndex(x=>x.ipa===p.ipa&&x.audio===p.audio)===i);
     const sounds=pronunciations.filter(p=>safeURL(p.audio,true)).sort((a,b)=>['UK','US','AU',''].indexOf(a.accent)-['UK','US','AU',''].indexOf(b.accent)).slice(0,2);
     const ipa=[...new Set(pronunciations.map(p=>p.ipa).filter(Boolean))];
-    const phonetics=sounds.length?(ipa.length&&!sounds.some(p=>p.ipa)?`<p class="dictionary-ipa" lang="en" data-no-i18n>${ipa.map(esc).join(' · ')}</p>`:'')+sounds.map(p=>`<div class="dictionary-sound"><div><span class="chip">${esc(p.accent||'Audio')}</span> <span class="dictionary-ipa" lang="en" data-no-i18n>${esc(p.ipa)}</span></div><audio controls preload="none" src="${esc(safeURL(p.audio,true))}" aria-label="Nghe phát âm ${esc(p.accent||data.word)}"></audio></div>`).join(''):`${ipa.length?`<p class="dictionary-ipa" lang="en" data-no-i18n>${ipa.map(esc).join(' · ')}</p>`:''}<p class="fineprint">Chưa có bản thu phát âm cho từ này.</p>`;
-    const messages={not_ready:'Kho từ điển chưa có dữ liệu. Bạn vẫn có thể tra bằng các liên kết bên dưới.',not_found:'Chưa tìm thấy mục từ phù hợp. Thử dạng nguyên mẫu hoặc mở từ điển bên dưới.',unavailable:'Nguồn từ điển đang không phản hồi. Bạn vẫn có thể xem nghĩa trong kho học hoặc mở nguồn bên dưới.',rate_limited:'Bạn vừa tra nhiều từ liên tiếp. Chờ một phút rồi thử lại nhé.',offline:'Bản HTML chỉ tra các từ đã có trong bài. Mở bản web để tra thêm nghĩa và nghe phát âm.'};
-    return `<article class="dictionary-panel"><header><span class="eyebrow">TRA TỪ NHANH</span><h3 lang="en">${esc(data.word)}</h3>${remote.base_words?.length?`<p class="fineprint"><span>Dạng gốc:</span> <span lang="en" data-no-i18n>${remote.base_words.map(esc).join(', ')}</span></p>`:''}${phonetics}</header>${pronunciations.length?'<details class="dictionary-ipa-help"><summary>Đọc phiên âm thế nào?</summary><p>Dấu <b>ˈ</b> đứng trước âm tiết được nhấn chính; <b>ˌ</b> chỉ trọng âm phụ. Nghe bản thu, rồi thử nói lại cả từ.</p>'+link('https://dictionary.cambridge.org/help/phonetics.html','Bảng âm IPA của Cambridge')+'</details>':''}${local.map((w,i)=>`<section class="dictionary-local"><span class="eyebrow">${esc(w.label)}</span><p><span class="chip" lang="en">${esc(w.pos)}</span> <strong data-no-i18n>${esc(w.meaning_vi)}</strong></p>${w.example?`<blockquote lang="en">${esc(w.example)}</blockquote>`:''}${w.example_vi?`<p class="fineprint" data-no-i18n>${esc(w.example_vi)}</p>`:''}${w.usage_pattern?`<p class="word-pattern" lang="en">${esc(w.usage_pattern)}</p>`:''}<button class="link-btn" type="button" data-dictionary-save="${i}">+ Lưu nghĩa này</button></section>`).join('')}${entries.length?'<h4 class="dictionary-section-title">Giải nghĩa Anh–Anh</h4><p class="fineprint">Đối chiếu các nghĩa với câu bạn đang đọc.</p>':`<p class="dictionary-message" role="status">${esc(messages[remote.status]||messages.unavailable)}</p>`}${entries.map(entry=>`<section class="dictionary-entry">${entry.meanings.map(m=>`<div class="dictionary-meaning"><h4 lang="en">${esc(m.pos)}</h4>${definitions(m.definitions.slice(0,3))}${m.definitions.length>3?`<details><summary>Xem ${m.definitions.length-3} nghĩa khác</summary>${definitions(m.definitions.slice(3))}</details>`:''}</div>`).join('')}<p class="dictionary-credit">${entry.sources.map(url=>link(url,entry.source_label||'Wiktionary')).join(' · ')} · ${link(entry.license.url,entry.license.name)}</p></section>`).join('')}<div class="dictionary-links"><span>Đối chiếu thêm</span>${(data.links||[]).map(l=>link(l.url,l.title)).join('')}</div>${entries.length?`<details class="dictionary-attribution"><summary>Nguồn dữ liệu và bản thu</summary><p>${remote.storage==='database'?'Mục từ và bản thu có sẵn trong kho LexiRead. Open English WordNet được phát triển từ Princeton WordNet.':'Mục từ từ Free Dictionary API / Wiktionary.'} Bố cục được rút gọn; liên kết nguồn có mục từ đầy đủ.</p>${sounds.map(p=>`<p>${esc(p.accent||data.word)}: ${link(p.source,'Bản thu gốc')} · ${p.license?link(p.license.url,p.license.name):''}</p>`).join('')}</details>`:''}</article>`;
+    const phonetics=sounds.length?(ipa.length&&!sounds.some(p=>p.ipa)?`<p class="dictionary-ipa" lang="en" data-no-i18n>${ipa.map(esc).join(' · ')}</p>`:'')+sounds.map(p=>`<div class="dictionary-sound"><div><span class="chip">${esc(p.accent||'Audio')}</span> <span class="dictionary-ipa" lang="en" data-no-i18n>${esc(p.ipa)}</span></div><audio controls preload="none" src="${esc(safeURL(p.audio,true))}" aria-label="Nghe phát âm ${esc(p.accent||data.word)}"></audio></div>`).join(''):`${ipa.length?`<p class="dictionary-ipa" lang="en" data-no-i18n>${ipa.map(esc).join(' · ')}</p>`:''}`;
+    const messages={not_ready:'Kho từ điển chưa có dữ liệu. Bạn vẫn có thể tra bằng các liên kết bên dưới.',not_found:'Chưa tìm thấy mục từ phù hợp. Thử dạng nguyên mẫu hoặc mở từ điển bên dưới.',unavailable:'Nguồn từ điển đang không phản hồi. Bạn vẫn có thể xem nghĩa trong kho học hoặc mở nguồn bên dưới.',rate_limited:'Bạn vừa tra nhiều từ liên tiếp. Chờ một phút rồi thử lại nhé.',offline:'Bản HTML chỉ tra các từ đã có trong bài. Mở bản web để tra thêm nghĩa.'};
+    return `<article class="dictionary-panel"><header><span class="eyebrow">TRA TỪ NHANH</span><div class="pronunciation-heading"><h3 lang="en">${esc(data.word)}</h3>${window.LexiPronunciation?.button(data.word,'word',sounds[0]?.audio)||''}</div>${remote.base_words?.length?`<p class="fineprint"><span>Dạng gốc:</span> <span lang="en" data-no-i18n>${remote.base_words.map(esc).join(', ')}</span></p>`:''}${phonetics}</header>${pronunciations.length?'<details class="dictionary-ipa-help"><summary>Đọc phiên âm thế nào?</summary><p>Dấu <b>ˈ</b> đứng trước âm tiết được nhấn chính; <b>ˌ</b> chỉ trọng âm phụ. Nghe bản thu, rồi thử nói lại cả từ.</p>'+link('https://dictionary.cambridge.org/help/phonetics.html','Bảng âm IPA của Cambridge')+'</details>':''}${local.map((w,i)=>`<section class="dictionary-local"><span class="eyebrow">${esc(w.label)}</span><p><span class="chip" lang="en">${esc(w.pos)}</span> <strong data-no-i18n>${esc(w.meaning_vi)}</strong></p>${w.example?`<blockquote lang="en">${esc(w.example)}</blockquote>${window.LexiPronunciation?.button(w.example,'sentence')||''}`:''}${w.example_vi?`<p class="fineprint" data-no-i18n>${esc(w.example_vi)}</p>`:''}${w.usage_pattern?`<p class="word-pattern" lang="en">${esc(w.usage_pattern)}</p>`:''}<button class="link-btn" type="button" data-dictionary-save="${i}">+ Lưu nghĩa này</button></section>`).join('')}${entries.length?'<h4 class="dictionary-section-title">Giải nghĩa Anh–Anh</h4><p class="fineprint">Đối chiếu các nghĩa với câu bạn đang đọc.</p>':`<p class="dictionary-message" role="status">${esc(messages[remote.status]||messages.unavailable)}</p>`}${entries.map(entry=>`<section class="dictionary-entry">${entry.meanings.map(m=>`<div class="dictionary-meaning"><h4 lang="en">${esc(m.pos)}</h4>${definitions(m.definitions.slice(0,3))}${m.definitions.length>3?`<details><summary>Xem ${m.definitions.length-3} nghĩa khác</summary>${definitions(m.definitions.slice(3))}</details>`:''}</div>`).join('')}<p class="dictionary-credit">${entry.sources.map(url=>link(url,entry.source_label||'Wiktionary')).join(' · ')} · ${link(entry.license.url,entry.license.name)}</p></section>`).join('')}<div class="dictionary-links"><span>Đối chiếu thêm</span>${(data.links||[]).map(l=>link(l.url,l.title)).join('')}</div>${entries.length?`<details class="dictionary-attribution"><summary>Nguồn dữ liệu và bản thu</summary><p>${remote.storage==='database'?'Mục từ và bản thu có sẵn trong kho LexiRead. Open English WordNet được phát triển từ Princeton WordNet.':'Mục từ từ Free Dictionary API / Wiktionary.'} Bố cục được rút gọn; liên kết nguồn có mục từ đầy đủ.</p>${sounds.map(p=>`<p>${esc(p.accent||data.word)}: ${link(p.source,'Bản thu gốc')} · ${p.license?link(p.license.url,p.license.name):''}</p>`).join('')}</details>`:''}</article>`;
   }
-  function stopAudio(){document.querySelectorAll('#modal audio').forEach(a=>a.pause());}
+  function stopAudio(){window.LexiPronunciation?.stopWithin(document.getElementById('modal'));document.querySelectorAll('#modal audio').forEach(a=>a.pause());}
   async function open(selection){
     const word=normalize(selection.word);if(!canLookup(word)){toast('Chọn một từ hoặc cụm từ tiếng Anh ngắn để tra.',true);return;}
     stopAudio();const id=++run;current={selection:{...selection,word},data:null,pending:true};
@@ -2353,9 +2506,9 @@ function renderReader(){
     window.LexiReadAloud?.mount(box.querySelector('[data-reading-audio]'),r.paragraphs.map((text,i)=>({text,node:box.querySelector(`.reader-en[data-index="${i}"]`)})));
   }else if(state.readingTab==='words'){
     box.innerHTML=v.length?`<div class="section-title"><div><h2>Chọn những từ bạn cần học</h2><p>Chưa lưu tự động. Bạn có thể sửa lại từng thẻ sau khi lưu.</p></div><button class="btn primary" data-action="save-candidates">Lưu mục đã chọn</button></div><label class="check-label" style="margin-bottom:15px"><input id="select-all-candidates" type="checkbox"> Chọn tất cả</label>`+
-      v.map((w,i)=>`<article class="candidate"><input class="candidate-check" type="checkbox" value="${i}" aria-label="Chọn ${esc(w.word)}"><div class="candidate-body"><h3>${esc(w.word)} <small class="muted">${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}${r.catalog_slug?'':'<span class="chip warm">Gợi ý AI · cần bạn kiểm tra</span>'}</div></article>`).join(''):empty('Chưa có từ gợi ý','Phân tích bài đọc để chọn từ; hoặc bôi đen từ trong phần tiếng Anh.');
+      v.map((w,i)=>`<article class="candidate"><input class="candidate-check" type="checkbox" value="${i}" aria-label="Chọn ${esc(w.word)}"><div class="candidate-body"><div class="pronunciation-heading"><h3 lang="en" data-no-i18n>${esc(w.word)} <small class="muted">${esc(w.pos)}</small></h3>${window.LexiPronunciation?.button(w.word)||''}</div><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}${r.catalog_slug?'':'<span class="chip warm">Gợi ý AI · cần bạn kiểm tra</span>'}</div></article>`).join(''):empty('Chưa có từ gợi ý','Phân tích bài đọc để chọn từ; hoặc bôi đen từ trong phần tiếng Anh.');
   }else if(state.readingTab==='grammar'){
-    box.innerHTML=g.length?g.map(x=>`<article class="panel grammar-card"><h3 class="pattern">${esc(x.pattern)}</h3><blockquote class="quote">${esc(x.evidence)}</blockquote><p>${esc(x.explanation_vi)}</p><div class="notice"><b>Ví dụ luyện tập:</b> ${esc(x.example)}<br>${esc(x.example_vi)}</div></article>`).join(''):empty('Chưa có cấu trúc gợi ý','Dùng phân tích bài đọc hoặc nhập kết quả JSON theo mẫu.');
+    box.innerHTML=g.length?g.map(x=>`<article class="panel grammar-card"><h3 class="pattern">${esc(x.pattern)}</h3><blockquote class="quote" lang="en">${esc(x.evidence)}</blockquote>${window.LexiPronunciation?.button(x.evidence,'sentence')||''}<p>${esc(x.explanation_vi)}</p><div class="notice"><b>Ví dụ luyện tập:</b> <span lang="en" data-no-i18n>${esc(x.example)}</span> ${window.LexiPronunciation?.button(x.example,'sentence')||''}<br>${esc(x.example_vi)}</div></article>`).join(''):empty('Chưa có cấu trúc gợi ý','Dùng phân tích bài đọc hoặc nhập kết quả JSON theo mẫu.');
   }else{readingExtraTab(box,r);}
   if(a.warnings?.length)box.insertAdjacentHTML('beforeend',`<div class="notice">${a.warnings.map(esc).join('<br>')}</div>`);
 }
@@ -2369,7 +2522,7 @@ async function vocabPage(epoch){
      '<a class="btn primary" href="#word-import">Nhập bộ từ cá nhân →</a><button class="btn secondary" data-action="new-word">+ Thêm một từ</button>')+
      (f.tag?`<div class="button-row deck-library-actions"><button class="btn small" data-action="study-deck">Ôn bộ này</button><button class="btn small" data-action="export-deck">Tải bộ từ</button></div>`:'')+
      `<div class="toolbar"><input type="search" id="vocab-search" class="search" placeholder="Tìm từ, nghĩa hoặc ghi chú…" value="${esc(f.q)}" aria-label="Tìm từ"><select id="vocab-tag" aria-label="Bộ từ">${tagOptions(f.tag)}</select><select id="vocab-reading" aria-label="Bài nguồn">${readingSourceOptions(f.reading)}</select><select id="vocab-scope" aria-label="Trạng thái">${scopeOptions(f.scope)}</select><select id="vocab-sort" aria-label="Sắp xếp từ">${[['newest','Mới thêm'],['oldest','Cũ nhất'],['word','Theo từ A–Z'],['due','Lịch ôn gần nhất']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="filter-vocab">Lọc</button></div>`+
-     (data.items.length?`<div class="table-wrap"><table><thead><tr><th>TỪ / CỤM TỪ</th><th>NGHĨA ĐANG HỌC</th><th>BỘ TỪ & TIẾN ĐỘ</th><th></th></tr></thead><tbody>${data.items.map(v=>`<tr><td><div class="word" lang="en" data-no-i18n>${esc(v.word)}</div><span class="muted">${esc(v.pos||'Từ / cụm từ')}${v.verified?' · Đã duyệt':''}</span></td><td class="meaning-cell"><span data-no-i18n>${esc(v.meaning_vi)}</span>${lexicalRelations(v)}<details class="source-context"><summary>Cấu trúc & ví dụ</summary>${lexicalDetails({...v,synonyms:[],paraphrases:[]})}</details></td><td><div class="tags">${chips(v.tags)}</div><span class="muted">${v.due?'Đến hạn ôn':'Ôn tiếp '+formatDate(v.due_at)}${v.lapses?' · '+v.lapses+' lần quên':''}</span>${v.reading_id?`<div><a class="link-btn" href="#reading/${esc(v.reading_id)}">${esc(v.source_label||'Mở bài nguồn')} →</a></div>`:''}</td><td><button class="btn small" data-action="edit-word" data-id="${esc(v.id)}">Sửa</button></td></tr>`).join('')}</tbody></table></div><div class="pagination"><span>Trang ${data.page} / ${Math.max(1,Math.ceil(data.total/data.limit))}</span><div class="button-row"><button class="btn small" data-action="vocab-prev" ${f.page<=1?'disabled':''}>← Trước</button><button class="btn small" data-action="vocab-next" ${f.page*data.limit>=data.total?'disabled':''}>Sau →</button></div></div>`:
+     (data.items.length?`<div class="table-wrap"><table><thead><tr><th>TỪ / CỤM TỪ</th><th>NGHĨA ĐANG HỌC</th><th>BỘ TỪ & TIẾN ĐỘ</th><th></th></tr></thead><tbody>${data.items.map(v=>`<tr><td><div class="pronunciation-heading"><div class="word" lang="en" data-no-i18n>${esc(v.word)}</div>${window.LexiPronunciation?.button(v.word)||''}</div><span class="muted">${esc(v.pos||'Từ / cụm từ')}${v.verified?' · Đã duyệt':''}</span></td><td class="meaning-cell"><span data-no-i18n>${esc(v.meaning_vi)}</span>${lexicalRelations(v)}<details class="source-context"><summary>Cấu trúc & ví dụ</summary>${lexicalDetails({...v,synonyms:[],paraphrases:[]})}</details></td><td><div class="tags">${chips(v.tags)}</div><span class="muted">${v.due?'Đến hạn ôn':'Ôn tiếp '+formatDate(v.due_at)}${v.lapses?' · '+v.lapses+' lần quên':''}</span>${v.reading_id?`<div><a class="link-btn" href="#reading/${esc(v.reading_id)}">${esc(v.source_label||'Mở bài nguồn')} →</a></div>`:''}</td><td><button class="btn small" data-action="edit-word" data-id="${esc(v.id)}">Sửa</button></td></tr>`).join('')}</tbody></table></div><div class="pagination"><span>Trang ${data.page} / ${Math.max(1,Math.ceil(data.total/data.limit))}</span><div class="button-row"><button class="btn small" data-action="vocab-prev" ${f.page<=1?'disabled':''}>← Trước</button><button class="btn small" data-action="vocab-next" ${f.page*data.limit>=data.total?'disabled':''}>Sau →</button></div></div>`:
        empty('Chưa có từ ở đây','Nhập một bộ theo chủ đề để có sẵn từ, ví dụ và lịch ôn.', '<a class="btn primary" href="#word-import">Nhập bộ từ đầu tiên →</a>'));
 }
 function openModal(title,content,footer='',drawer=false){
@@ -2403,10 +2556,10 @@ function lexicalRelations(w){
   return (asList(w.synonyms).length?`<div class="syn-line"><b>Từ gần nghĩa (synonyms):</b> <span lang="en">${esc(asList(w.synonyms).join(' · '))}</span></div>`:'')+
     (asList(w.paraphrases).length?`<div class="syn-line"><b>Diễn giải nghĩa (paraphrase):</b> <span lang="en">${esc(asList(w.paraphrases).join(' · '))}</span></div>`:'');
 }
-function lexicalDetails(w){
+function lexicalDetails(w,withAudio=true){
   const example=String(w.example||'').trim();
   const shortExample=example.length<=240&&example.split(/\s+/).length<=35&&!example.includes('\n')?example:'';
-  return `<div class="lexical-detail"><p><span class="lexical-label">CẤU TRÚC / CỤM TỪ THƯỜNG DÙNG</span>${w.usage_pattern?`<span lang="en">${esc(w.usage_pattern)}</span>`:'<span class="muted">Chưa có cấu trúc dùng từ.</span>'}</p><div class="lexical-example"><span class="lexical-label">VÍ DỤ CƠ BẢN</span>${shortExample?`<p lang="en">${esc(shortExample)}</p>${w.example_vi?`<p class="muted" data-no-i18n>${esc(w.example_vi)}</p>`:''}`:'<p class="muted">Chưa có ví dụ ngắn. Bạn có thể bổ sung trong Sửa thẻ.</p>'}</div>${lexicalRelations(w)}</div>`;
+  return `<div class="lexical-detail"><p><span class="lexical-label">CẤU TRÚC / CỤM TỪ THƯỜNG DÙNG</span>${w.usage_pattern?`<span lang="en">${esc(w.usage_pattern)}</span>`:'<span class="muted">Chưa có cấu trúc dùng từ.</span>'}</p><div class="lexical-example"><span class="lexical-label">VÍ DỤ CƠ BẢN</span>${shortExample?`<p lang="en">${esc(shortExample)}</p>${withAudio?(window.LexiPronunciation?.button(shortExample,'sentence')||''):''}${w.example_vi?`<p class="muted" data-no-i18n>${esc(w.example_vi)}</p>`:''}`:'<p class="muted">Chưa có ví dụ ngắn. Bạn có thể bổ sung trong Sửa thẻ.</p>'}</div>${lexicalRelations(w)}</div>`;
 }
 function lexicalContext(w){
   return w.context||w.note?`<details class="source-context"><summary>Xem ngữ cảnh gốc & lưu ý</summary>${w.context?`<blockquote class="quote" lang="en">${esc(w.context)}</blockquote>`:''}${w.note?`<p class="fineprint" data-no-i18n>${esc(w.note)}</p>`:''}<p class="fineprint">Từ gần nghĩa và diễn giải không phải lúc nào cũng thay thế trực tiếp được.</p></details>`:'';
@@ -2490,6 +2643,7 @@ function renderStudy(){
   renderStage();
 }
 function renderStage(){
+  window.LexiPronunciation?.stop();
   const s=state.study,stage=$('#study-stage');if(!stage)return;
   if(!s){stage.innerHTML=empty('Một lượt ôn nhỏ, một bước tiến','Flashcard để nhớ nghĩa. ABCD và gõ từ để tự kiểm tra. Bạn không cần đặt câu dài.');return;}
   if(s.finished){
@@ -2499,7 +2653,7 @@ function renderStage(){
   let content=`<div class="study-top"><span>${esc(modes[s.mode])}${s.mode==='flashcard'&&s.retryCount?` · ${s.retryCount} lượt học lại`:''}</span><span>${s.done} / ${count}</span></div><div class="progress-track"><div class="progress-fill" style="width:${Math.min(100,s.done/count*100)}%"></div></div>${s.lastReview?`<div class="notice success">Đã lưu “${esc(s.lastReview.word)}”. Ôn tiếp ${esc(formatNextDue(s.lastReview.due_at))}.</div>`:''}`;
   if(s.mode==='flashcard'){
     const v=s.cards[s.idx];if(!v){s.finished=true;renderStage();return;}
-    content+=`<div class="flashcard" role="button" tabindex="0" data-action="flip-card" aria-label="Lật thẻ"><span class="eyebrow">${s.flipped?'MEANING · ĐÁP ÁN':'THỬ NHỚ NGHĨA TRƯỚC KHI LẬT'}${v._retry?' · LƯỢT GẶP LẠI':''}</span><div class="word" lang="en" data-no-i18n>${esc(v.word)}</div><span class="muted">${esc(v.pos)}</span>${s.flipped?`<div class="meaning">${esc(v.meaning_vi)}</div>${lexicalDetails(v)}`:`<p class="prompt">Nhấn vào thẻ hoặc phím Space để xem nghĩa.</p><div class="tags">${chips(v.tags)}</div>`}</div>${s.flipped?lexicalContext(v):''}${s.flipped?`<div class="ratings">${[['again','Quên','1 · gặp lại sau 3 thẻ'],['hard','Khó','2 · cần gặp lại'],['good','Nhớ','3 · tiếp tục'],['easy','Dễ','4 · giãn cách hơn']].map(([r,l,h])=>`<button class="rating" data-action="rate-card" data-rating="${r}" ${s.busy?'disabled':''}>${l}<small>${h}</small></button>`).join('')}</div>`:''}`;
+    content+=`<div class="flashcard" role="button" tabindex="0" data-action="flip-card" aria-label="Lật thẻ"><span class="eyebrow">${s.flipped?'MEANING · ĐÁP ÁN':'THỬ NHỚ NGHĨA TRƯỚC KHI LẬT'}${v._retry?' · LƯỢT GẶP LẠI':''}</span><div class="word" lang="en" data-no-i18n>${esc(v.word)}</div><span class="muted">${esc(v.pos)}</span>${s.flipped?`<div class="meaning">${esc(v.meaning_vi)}</div>${lexicalDetails(v,false)}`:`<p class="prompt">Nhấn vào thẻ hoặc phím Space để xem nghĩa.</p><div class="tags">${chips(v.tags)}</div>`}</div><div class="pronunciation-controls">${window.LexiPronunciation?.button(v.word,'word','',true)||''}${s.flipped?(window.LexiPronunciation?.button(v.example,'sentence','',true)||''):''}</div>${s.flipped?lexicalContext(v):''}${s.flipped?`<div class="ratings">${[['again','Quên','1 · gặp lại sau 3 thẻ'],['hard','Khó','2 · cần gặp lại'],['good','Nhớ','3 · tiếp tục'],['easy','Dễ','4 · giãn cách hơn']].map(([r,l,h])=>`<button class="rating" data-action="rate-card" data-rating="${r}" ${s.busy?'disabled':''}>${l}<small>${h}</small></button>`).join('')}</div>`:''}`;
   }else if(s.question){
     const q=s.question,result=s.result;
     content+=`<div class="question-card"><span class="eyebrow">${esc(q.caption)}</span><div class="question-prompt">${esc(q.prompt)}</div>${q.pos?`<p class="fineprint">Từ loại: ${esc(q.pos)}</p>`:''}${q.context?`<blockquote class="quote">${esc(q.context)}</blockquote>`:''}${q.mode==='typing'?`<form id="typing-form"><label>Gõ đúng từ/cụm từ đã lưu<input id="typing-answer" autocomplete="off" spellcheck="false" ${result?'disabled':''} value="${esc(result?.submitted_answer||'')}"></label>${!result?'<button class="btn primary" type="submit">Kiểm tra</button>':''}</form>`:`<div class="options">${q.options.map((x,i)=>`<button class="option ${result?(x===result.answer?'correct':x===result.submitted_answer?'wrong':''):''}" data-action="answer-quiz" data-index="${i}" ${result||s.busy?'disabled':''}><span class="letter">${String.fromCharCode(65+i)}</span><span>${esc(x)}</span></button>`).join('')}</div>`}${result?`<div class="feedback ${result.correct?'':'wrong'}"><strong>${result.correct?'✓ Chính xác.':'Chưa đúng theo nghĩa của thẻ này.'}</strong>Đáp án: <b>${esc(result.answer)}</b><div style="margin-top:7px">${esc(result.note)}</div></div><div class="button-row" style="justify-content:end;margin-top:18px"><button class="btn primary" data-action="next-quiz">Câu tiếp theo →</button></div>`:''}</div><p class="fineprint" style="margin-top:14px">Bài luyện tạo từ dữ liệu đã lưu, không phải đề IELTS chính thức. Nếu thấy hai đáp án đều hợp lý, hãy sửa nghĩa/synonym của thẻ trong kho từ.</p>`;
@@ -2600,6 +2754,7 @@ function download(name,data,type='application/json'){
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 async function route(){
+  window.LexiPronunciation?.stop();
   window.LexiReadAloud?.clear();
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
