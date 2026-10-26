@@ -19,7 +19,7 @@ def lookup_word(value):
     if not isinstance(value, str):
         raise InputError('Chọn một từ hoặc cụm từ tiếng Anh ngắn để tra.')
     value = ' '.join(value.replace('’', "'").strip(' \t\r\n\".,;:!?“”()[]{}').split()).lower()
-    if len(value) > 64 or len(value.split()) > 5 or not re.fullmatch(r"[a-z]+(?:[ '\-][a-z]+)*", value):
+    if len(value) > 160 or len(value.split()) > 12 or not re.fullmatch(r"[^\W_][\w '\-().,]*", value, re.UNICODE) or '_' in value:
         raise InputError('Chọn một từ hoặc cụm từ tiếng Anh ngắn để tra.')
     return value
 

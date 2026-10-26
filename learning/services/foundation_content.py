@@ -91,6 +91,14 @@ def _units(kind):
 
 def units(kind):
     if kind not in ('grammar','vocabulary'):raise InputError('Loại bài không được hỗ trợ.')
+    if kind == 'vocabulary':
+        from django.apps import apps
+        if apps.ready:
+            from learning.models import VocabularyCollection
+            saved = list(VocabularyCollection.objects.all())
+            if saved:
+                return [{**row.content, 'id': row.slug, 'title': row.title, 'topic': row.topic, 'level': row.level}
+                        for row in saved]
     return copy.deepcopy(_units(kind))
 
 
@@ -130,7 +138,7 @@ def grade(snapshot, answers):
 
 
 def summary(unit, kind):
-    return {k:unit[k] for k in ('id','title','level','tags') if k in unit} | {
+    return {k:unit[k] for k in ('id','title','level','tags','topic') if k in unit} | {
         'description':unit.get('summary',unit.get('description','')),
         'minutes':unit.get('minutes',8), 'question_count':len(questions_for(unit,kind)),
         'word_count':len(unit.get('words',[]))}

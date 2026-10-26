@@ -1,6 +1,6 @@
 # LexiRead Reading Studio v2
 
-Latest addition: [selection dictionary and pronunciation](docs/DICTIONARY_LOOKUP.md). Select a word in a reading to see available Vietnamese glosses, English definitions, IPA and licensed recordings, then save with its context. Oxford/Cambridge are reference links; the integrated public source is Free Dictionary API/Wiktionary with original Commons audio. No AI call or API key is required.
+Latest addition: [topic vocabulary and a database-backed dictionary](docs/LOCAL_VOCABULARY.md). Explore 15 topics / 30 collections, learn with flip cards, practise and save individual words for review. The bundled OEWN release loads 127,311 normalized headwords, including 27,581 with IPA; the supplementary pack includes 197 licensed recordings. Definitions and recording bytes are served from the database without AI or runtime dictionary-provider calls. Oxford/Cambridge remain reference links.
 
 [Public activity statistics and learning methods](docs/COMMUNITY_AND_METHODS_REVIEW.md): the homepage shows real 30-day learning aggregates, excludes internal test accounts and keeps detailed study advice inside the guide.
 

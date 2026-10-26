@@ -1,0 +1,9 @@
+{
+  "source": "Open English WordNet",
+  "version": "2025",
+  "url": "https://en-word.net/static/english-wordnet-2025-json.zip",
+  "sha256": "7d749f6e2c39e6970e4997839dcf6e42fd281f3c2fae0171d2192bae8cfa4b51",
+  "license": "CC BY 4.0; underlying Princeton WordNet license",
+  "attribution": "Open English WordNet Team; based on Princeton University WordNet",
+  "downloaded_at": "2026-10-26"
+}

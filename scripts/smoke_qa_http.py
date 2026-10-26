@@ -49,6 +49,19 @@ def main():
             assert all('answer' not in question for question in detail['questions'])
         assert len(client.get('/api/learn/sources/').json()['items'])==40
         assert client.get('/api/learn/dictionary/',params={'q':'wake up'}).json()['total']>=1
+        dictionary=client.get('/api/dictionary/search/').json()
+        assert dictionary['available']==127311 and dictionary['ipa_count']==27581
+        lookup=client.get('/api/dictionary/',params={'word':'book'}).json()
+        assert lookup['dictionary']['storage']=='database' and lookup['dictionary']['status']=='ok'
+        assert lookup['local_entries']
+        assert client.get('/api/dictionary/search/',params={'q':'ran'}).json()['total']>=1
+        for entry in lookup['dictionary']['entries']:
+            for p in entry['phonetics']:
+                if p['audio']:
+                    assert p['audio'].startswith('/api/dictionary/audio/')
+                    recording=client.get(p['audio'])
+                    assert recording.status_code==200 and len(recording.content)>100
+                    assert recording.headers['content-type'] in ('audio/ogg','application/ogg','audio/mpeg','audio/wav')
         plan=client.get('/api/learn/plan/').json()
         assert sum(t['minutes'] for t in plan['tasks'])<=plan['profile']['daily_minutes']
         assert client.get('/account/password/').status_code==200

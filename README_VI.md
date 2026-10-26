@@ -2,7 +2,7 @@
 
 **Đọc bài → hiểu nghĩa trong ngữ cảnh → chọn từ → lưu một lần → ôn nhiều cách.**
 
-**Cập nhật 26/10/2026:** bôi đen từ trong bài → **Tra từ & phát âm** để xem nghĩa, IPA và nghe bản thu; lưu kèm ngữ cảnh vào kho cá nhân. Xem [hướng dẫn và nguồn từ điển](docs/DICTIONARY_LOOKUP.md). Quy mô nội dung và kiểm thử mới nhất nằm trong [README](README.md); các con số ở phần giới thiệu bản v2 bên dưới mô tả phiên bản ban đầu.
+**Cập nhật 26/10/2026:** [học từ theo 15 chủ đề và từ điển lưu trong database](docs/LOCAL_VOCABULARY.md), gồm 127.311 mục từ, 27.581 mục có IPA và 197 bản thu tải sẵn. Có lật thẻ, luyện câu hỏi, lưu từng từ để ôn và tra ngay khi bôi đen; các luồng này không gọi AI. Quy mô nội dung và kiểm thử mới nhất nằm trong [README](README.md); các con số ở phần giới thiệu bản v2 bên dưới mô tả phiên bản ban đầu.
 
 Bộ mã nguồn dành cho Huỳnh Bảo Quyên. Dự án riêng, không sửa hoặc kết nối cơ sở dữ liệu SmartEnglish hiện có.
 

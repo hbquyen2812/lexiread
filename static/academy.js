@@ -2,7 +2,7 @@
 /* Learning content and deterministic recommendations. No model or third-party calls. */
 (()=>{
   const levels=['A1','A2','B1','B2','C1','C2'];
-  const names={plan:'Lộ trình',grammar:'Ngữ pháp',vocabulary:'Từ theo trình độ',dictionary:'Tra từ',sources:'Nguồn học'};
+  const names={plan:'Lộ trình',grammar:'Ngữ pháp',vocabulary:'Từ theo chủ đề',dictionary:'Từ điển',sources:'Nguồn học'};
   const filters={grammar:null,vocabulary:null,sources:''};
   let generation=0;
   const e=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -23,6 +23,8 @@
     if(!Object.hasOwn(names,section))section='plan';
     root.innerHTML=shell(section); const area=root.querySelector('[data-academy-root]');
     if(window.LEXIREAD_PREVIEW){area.innerHTML='<div class="notice"><h1>Góc học nền tảng</h1><p>Ngữ pháp, bộ từ và lộ trình cá nhân có trên bản web có tài khoản. Bản HTML ngoại tuyến vẫn hỗ trợ thư viện và ôn từ đã lưu.</p><a class="btn primary" href="http://127.0.0.1:8766/#learn/plan">Mở bản web đang chạy →</a></div>';return;}
+    if(section==='vocabulary'){await window.LexiTopics.topics(area,active);return;}
+    if(section==='dictionary'){await window.LexiTopics.dictionary(area,active);return;}
     if(section==='plan'){
       let data=await api('/learn/plan/');if(!active())return;
       const render=()=>{
@@ -45,18 +47,6 @@
         area.querySelector('[data-cards]').innerHTML=rows.length?rows.map(r=>`<article class="academy-card"><div class="tags"><span class="level-pill">${r.level}</span>${r.progress?`<span class="chip">Lần gần nhất: ${r.progress.score}/${r.progress.total}</span>`:''}</div><h2>${e(r.title)}</h2><p>${e(r.description)}</p><div class="academy-card-bottom"><small>${section==='grammar'?r.question_count+' câu hỏi · '+r.minutes+' phút':r.word_count+' từ · Có bài luyện'}</small><a class="btn secondary small" href="${go(r.id,section)}">${r.progress?'Học tiếp':'Khám phá'} →</a></div></article>`).join(''):'<div class="empty-state">Chưa có chủ đề phù hợp. Thử từ khóa hoặc trình độ khác nhé.</div>';
       };
       area.querySelector('[data-level]').onchange=draw;area.querySelector('[data-search]').oninput=draw;draw();return;
-    }
-    if(section==='dictionary'){
-      area.innerHTML='<header class="academy-heading"><span class="eyebrow">HIỂU TỪ TRONG CÂU</span><h1>Tra một từ, hiểu cách dùng.</h1><p>Tìm bằng tiếng Anh hoặc nghĩa tiếng Việt. Tra thêm nghĩa, phiên âm và nghe phát âm ngay tại đây.</p></header><form class="academy-search"><label class="sr-only" for="dictionary-query">Từ hoặc nghĩa cần tìm</label><input id="dictionary-query" name="q" type="search" minlength="2" maxlength="80" required placeholder="Ví dụ: travel, thói quen, quyết định…"><button class="btn primary">Tra từ</button></form><div data-dictionary><p class="notice">Kho tra nhanh gồm các từ trong bộ học của LexiRead. Nhập từ để tìm ví dụ và cách dùng.</p></div>';
-      let searchRun=0;
-      area.querySelector('form').onsubmit=async ev=>{
-        ev.preventDefault();const run=++searchRun,b=ev.currentTarget.querySelector('button');b.disabled=true;
-        const target=area.querySelector('[data-dictionary]');target.innerHTML='<p role="status">Đang tìm từ…</p>';
-        try{const d=await api('/learn/dictionary/?q='+encodeURIComponent(area.querySelector('input[name="q"]').value.trim()));if(!active()||run!==searchRun)return;
-          const query=area.querySelector('input[name="q"]').value.trim();
-          target.innerHTML=`${window.LexiDictionary?.canLookup(query)?`<div class="dictionary-search-action"><button class="btn secondary" type="button" data-dictionary-word="${e(query)}">Tra nghĩa & phát âm →</button></div>`:''}<div class="dictionary-providers"><span>Tra chuyên sâu:</span>${d.links.map(l=>link(l.url,l.title)).join('')}</div><p role="status">${d.total?`${d.total} nghĩa trong kho học${d.total>40?' · hiển thị 40 kết quả đầu':''}`:'Chưa có từ này trong kho học. Chọn tra nghĩa & phát âm hoặc mở nguồn để xem thêm.'}</p><div class="academy-grid">${d.items.map(w=>`<article class="academy-card dictionary-entry"><div class="tags"><span class="chip">${e([...new Set(w.levels)].join(' · '))}</span><span>${e(w.part_of_speech)}</span></div><h2 data-no-i18n lang="en">${e(w.word)}</h2><p><strong>${e(w.meaning_vi)}</strong></p><p lang="en" data-no-i18n>${e(w.example)}</p><p class="muted">${e(w.example_translation)}</p><p class="word-pattern" data-no-i18n>${e(w.usage_pattern)}</p><button class="link-btn" type="button" data-dictionary-word="${e(w.word)}">Nghe & tra thêm →</button><a class="link-btn" href="#collection/${e(w.collection_id)}">Học & lưu từ trong bộ ${e(w.collection)} →</a></article>`).join('')}</div>`;
-        }catch(err){if(active())target.textContent=err.message;}finally{b.disabled=false;}
-      };return;
     }
     const data=await api('/learn/sources/');if(!active())return;
     const kinds={grammar:'Ngữ pháp',vocabulary:'Từ vựng',dictionary:'Từ điển',ielts:'IELTS',toeic:'TOEIC'};
@@ -82,6 +72,7 @@
       if(!indices.length){status.textContent='Bạn chọn ít nhất một từ nhé.';return;}b.disabled=true;
       try{const result=await api(`/learn/vocabulary/${encodeURIComponent(id)}/save/`,{method:'POST',data:{indices}});if(!active())return;area.querySelector('[data-study-collection]').disabled=false;status.textContent=`Đã lưu ${result.created} từ mới${result.existing?`; ${result.existing} từ đã có trong kho`:''}.`;area.querySelectorAll('.word-select input:checked').forEach(x=>{x.checked=false;x.closest('label').querySelector('small').textContent='Đã có trong kho';});await refreshBoot();}catch(err){if(active())status.textContent=err.message;}finally{b.disabled=false;}
     };
+    if(kind==='vocabulary')window.LexiTopics.attachCards(area,data);
     const quiz=area.querySelector('[data-quiz]');let token=uid();
     const bind=()=>{quiz.querySelector('form').onsubmit=async ev=>{
       ev.preventDefault();const form=ev.currentTarget,b=form.querySelector('button[type="submit"]');b.disabled=true;

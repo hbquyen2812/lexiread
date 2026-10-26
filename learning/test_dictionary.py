@@ -34,16 +34,16 @@ class DictionaryTests(TestCase):
             self.assertEqual(self.client.get('/api/dictionary/', {'word':'routine'}).status_code, 401)
             self.client.force_login(self.bob)
             self.assertEqual(self.client.get('/api/dictionary/', {'word':'routine','reading_id':self.reading.pk}).status_code, 404)
-            for word in ('', 'http://localhost', 'hello@example.com', 'word\x00', 'a'*65, 'one two three four five six'):
+            for word in ('', 'http://localhost', 'hello@example.com', 'word\x00', 'a'*161, 'one two three four five six seven eight nine ten eleven twelve thirteen'):
                 self.assertEqual(self.client.get('/api/dictionary/', {'word':word}).status_code, 400)
             self.assertEqual(self.client.get('/api/dictionary/', {'word':'routine','reading_id':'invalid'}).status_code, 400)
             fetch.assert_not_called()
 
     def test_context_meaning_and_provider_are_separate_and_no_context_is_sent(self):
         self.client.force_login(self.alice)
-        with patch('learning.dictionary_views.remote_lookup', return_value={'status':'ok','entries':service.sanitize_entries(ENTRY)}) as remote:
+        with patch('learning.dictionary_views.lookup_local', return_value={'status':'ok','entries':service.sanitize_entries(ENTRY)}) as remote:
             response = self.client.get('/api/dictionary/', {'word':'Routine,','reading_id':self.reading.pk})
-            remote.assert_called_once_with('routine',self.alice.pk)
+            remote.assert_called_once_with('routine')
         data=response.json()
         self.assertEqual(data['local_entries'][0]['meaning_vi'],'thói quen trong bài')
         self.assertEqual(data['local_entries'][0]['label'],'Trong bài đang đọc')
@@ -51,23 +51,22 @@ class DictionaryTests(TestCase):
         self.assertEqual(response['Cache-Control'],'private, no-store')
         self.assertEqual(data['links'][0]['title'],'Cambridge Dictionary')
 
-    def test_personal_meanings_never_enter_shared_provider_cache(self):
+    def test_personal_meanings_stay_private_without_network(self):
         Vocabulary.objects.create(owner=self.alice,word='routine',meaning_vi='private Alice',fingerprint='alice')
         Vocabulary.objects.create(owner=self.bob,word='routine',meaning_vi='private Bob',fingerprint='bob')
-        with patch.object(service,'fetch_remote',return_value={'status':'ok','entries':service.sanitize_entries(ENTRY)}) as fetch:
+        with patch.object(service,'fetch_remote',side_effect=AssertionError('No runtime network')):
             self.client.force_login(self.alice);first=self.client.get('/api/dictionary/',{'word':'routine'}).json()
             self.client.force_login(self.bob);second=self.client.get('/api/dictionary/',{'word':'routine'}).json()
-            self.assertEqual(fetch.call_count,1)
         self.assertIn('private Alice',json.dumps(first))
         self.assertNotIn('private Alice',json.dumps(second))
         self.assertNotIn('private Bob',json.dumps(first))
 
-    def test_course_gloss_available_when_provider_unavailable(self):
+    def test_course_gloss_available_without_dictionary_seed(self):
         word=units('vocabulary')[0]['words'][0]
         self.client.force_login(self.alice)
-        with patch.object(service,'fetch_remote',side_effect=httpx.ReadTimeout('timeout')):
+        with patch.object(service,'fetch_remote',side_effect=AssertionError('No runtime network')):
             data=self.client.get('/api/dictionary/',{'word':word['word']}).json()
-        self.assertEqual(data['dictionary']['status'],'unavailable')
+        self.assertEqual(data['dictionary']['status'],'not_ready')
         self.assertTrue(any(x['meaning_vi']==word['meaning_vi'] for x in data['local_entries']))
 
     def test_sanitizer_rejects_unsafe_audio_and_partial_ipa(self):

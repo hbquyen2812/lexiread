@@ -38,9 +38,38 @@ class VocabularyOccurrenceAdmin(admin.ModelAdmin):
 
 from .models import CuratedLesson, LessonAttempt, ReadingQuestion, ToeicAttempt, DailyVisit
 from .models import ToeicPractice
+from .models import DictionaryEntry, DictionaryRelease, VocabularyCollection
 from .editorial.admin import LessonContentAdmin, ToeicContentAdmin
 admin.site.register(CuratedLesson,LessonContentAdmin)
 admin.site.register(ToeicPractice,ToeicContentAdmin)
+
+
+@admin.register(DictionaryEntry)
+class DictionaryEntryAdmin(admin.ModelAdmin):
+    list_display = ('display_word', 'release')
+    search_fields = ('=word', '^word')
+    readonly_fields = ('word', 'display_word', 'definition', 'content', 'release')
+    show_full_result_count = False
+    def has_add_permission(self, request): return False
+    def has_delete_permission(self, request, obj=None): return False
+
+
+@admin.register(DictionaryRelease)
+class DictionaryReleaseAdmin(admin.ModelAdmin):
+    list_display = ('key', 'entry_count', 'ipa_count', 'imported_at')
+    readonly_fields = ('key', 'checksum', 'entry_count', 'ipa_count', 'imported_at')
+    def has_add_permission(self, request): return False
+    def has_delete_permission(self, request, obj=None): return False
+
+
+@admin.register(VocabularyCollection)
+class VocabularyCollectionAdmin(admin.ModelAdmin):
+    list_display = ('title', 'topic', 'level')
+    list_filter = ('topic', 'level')
+    search_fields = ('title', 'topic')
+    readonly_fields = ('slug', 'title', 'topic', 'level', 'order', 'content')
+    def has_add_permission(self, request): return False
+    def has_delete_permission(self, request, obj=None): return False
 
 @admin.register(LessonAttempt)
 class LessonAttemptAdmin(admin.ModelAdmin):

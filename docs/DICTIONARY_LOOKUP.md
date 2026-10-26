@@ -1,5 +1,7 @@
 # Tra nghĩa và phát âm trong LexiRead
 
+**Đã được nâng cấp:** xem [từ điển lưu trong database và bộ từ theo chủ đề](LOCAL_VOCABULARY.md). Phiên bản hiện tại phục vụ nghĩa/IPA/audio tải sẵn từ database, không gọi nguồn ngoài trong request tra từ. Phần dưới giữ lại báo cáo của phiên bản tra trực tuyến trước đó.
+
 ## Cách dùng
 
 Trong bài đọc, bôi đen một từ hoặc cụm từ tiếng Anh ngắn rồi chọn **Tra từ & phát âm**. Cửa sổ hiển thị nghĩa tiếng Việt có sẵn trong bài hoặc kho cá nhân, từ loại, phiên âm IPA, bản thu khi nguồn có cung cấp và các nghĩa Anh–Anh. Mục **Đọc phiên âm thế nào?** giải thích dấu trọng âm và liên kết bảng âm Cambridge.
