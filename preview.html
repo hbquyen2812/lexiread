@@ -36,6 +36,21 @@
 .analytics-panel{margin-bottom:20px}.traffic-chart{height:205px;display:flex;align-items:end;gap:4px;overflow-x:auto;padding-top:20px}.traffic-day{height:185px;min-width:18px;flex:1;display:flex;flex-direction:column;justify-content:end;text-align:center;color:var(--muted);font-size:9px}.traffic-day>div{background:linear-gradient(#7fa68a,var(--green));border-radius:4px 4px 0 0;min-height:3px}.traffic-day span{font-size:9px;height:17px}.traffic-day small{font-size:8px;height:18px;padding-top:4px;white-space:nowrap}.traffic-day b{font-size:9px;color:var(--green);font-weight:500}.analytics-bottom p{color:var(--muted);font-size:13px}.analytics-list>div{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);padding:11px 0;font-size:13px}.analytics-list>div:first-child{border-top:0}.analytics-list strong{color:var(--green)}
 @media(max-width:650px){.traffic-day{min-width:15px}.analytics-bottom{grid-template-columns:1fr}}
 </style>
+  <style>.read-aloud{margin:18px 0 24px;padding:14px 16px;border:1px solid var(--line,#dfe5da);border-radius:16px;background:#f1f5ed;color:var(--ink,#253f35)}
+.read-aloud-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.read-aloud .btn{min-height:42px;font-size:14px;padding:9px 14px;white-space:normal}
+.read-aloud [data-audio-play]{min-width:150px;text-align:center}
+.read-aloud-settings{margin-left:auto;min-width:0;max-width:100%}
+.read-aloud-settings summary{cursor:pointer;font-size:14px;padding:10px 0;color:inherit;min-height:42px}
+.read-aloud-fields{display:flex;gap:12px;flex-wrap:wrap;padding:6px 0}
+.read-aloud-fields label{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:13px;max-width:100%}
+.read-aloud-fields select{min-height:42px;max-width:300px;width:100%;font:inherit;background:white;padding:8px 28px 8px 10px;border:1px solid var(--line,#dfe5da);border-radius:9px}
+.read-aloud-status{font-size:13px;line-height:1.6;margin:8px 0 0;color:var(--muted,#65746d)}
+.read-aloud-status:empty{display:none}
+.is-reading-aloud{background:#e8f1df!important;outline:2px solid #9bb98a;outline-offset:6px;border-radius:4px}
+.read-aloud button:focus-visible,.read-aloud summary:focus-visible,.read-aloud select:focus-visible{outline:3px solid #326a56;outline-offset:3px}
+@media(max-width:600px){.read-aloud{padding:12px}.read-aloud-controls{gap:8px}.read-aloud-settings{flex-basis:100%;margin-left:0}.read-aloud-fields{display:grid;grid-template-columns:minmax(0,1fr) 96px}.read-aloud-fields select{max-width:100%}.read-aloud-settings summary{padding:7px 0;min-height:36px}}
+</style>
   <style>/* Shared visual system. System fonts cover Vietnamese and CJK without remote requests. */
 :root{--bg:#faf9f4;--ink:#293b32;--muted:#647266;--green:#356a58;--green-dark:#254e41;--light-green:#eaf3e6;--line:#e3e6dc;--radius:18px;--shadow:0 12px 30px #2e432b09;--gold:#d9ad70}
 html{scroll-behavior:smooth;scroll-padding-top:100px}body{font-family:"Segoe UI",Arial,"Microsoft YaHei",sans-serif;font-size:15px;color:var(--ink);background:var(--bg)}h1,h2,h3{font-family:inherit;letter-spacing:-.025em}h1{font-weight:750;line-height:1.16}button,a,input,select{touch-action:manipulation}a,button{transition:background .18s,color .18s,box-shadow .18s}.btn{border-radius:11px;min-height:44px;font-weight:650}.btn.primary{box-shadow:0 3px 0 #183c3012}.btn.primary:hover{box-shadow:0 5px 16px #356a5822}.btn:active{transform:translateY(1px)}.btn:disabled{transform:none}input,select,textarea{min-height:44px}input[type=checkbox],input[type=radio]{min-height:0}.eyebrow{font-size:11px;letter-spacing:1.6px;font-weight:750}.brand{font-size:24px;letter-spacing:-.9px}.brand small{letter-spacing:1.1px}.brand-mark{border-radius:12px;font-family:Georgia,serif}.skip-link{position:fixed;left:16px;top:-80px;z-index:200;background:white;padding:12px 18px;border:2px solid var(--green)}.skip-link:focus{top:10px}.language-control{display:inline-flex;align-items:center;gap:7px;position:relative;margin:0;font-size:13px;font-weight:600}.language-control select{width:auto;max-width:145px;min-height:38px;padding:7px 25px 7px 9px;background:transparent;border:1px solid var(--line);font-size:13px}.language-globe{font-size:19px;color:var(--muted)}.header-actions{display:flex;align-items:center;gap:15px}.public-page{background:#fcfcfa}.public-header{height:85px;padding:14px max(24px,calc((100vw - 1200px)/2));background:#fcfcfaf5;border-color:#e8eae4;gap:20px}.public-header nav{gap:24px}.public-header nav a{font-size:13px;font-weight:600;color:#697368;white-space:nowrap}.public-header nav a:hover{color:var(--green);background:none}.public-main{max-width:1248px;padding:0 24px 56px}.welcome-hero{display:grid;grid-template-columns:1.08fr 1fr;gap:60px;align-items:center;padding:65px 0 56px}.welcome-hero h1{font-size:clamp(38px,4.5vw,62px);line-height:1.16;letter-spacing:-2px;margin:22px 0}.welcome-hero h1 span{display:block}.welcome-hero h1 .hero-accent{color:var(--green)}.intro-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #dce8dd;border-radius:30px;background:#f2f6ee;color:var(--green);font-size:12px;font-weight:600}.intro-chip:before{content:"";width:6px;height:6px;border-radius:50%;background:#75a57c}.hero-copy{max-width:470px;color:var(--muted);font-size:16px;line-height:1.85}.welcome-hero .button-row{margin-top:26px;gap:14px}.welcome-hero .btn{min-height:48px;padding:12px 22px}.hero-caption{margin-top:20px;font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}.hero-caption .tick{color:var(--green);font-size:16px}.reading-scene{position:relative;border-radius:32px;background:#edf1e7;padding:36px 35px 30px;min-height:350px;isolation:isolate}.reading-scene:before{content:"";position:absolute;width:180px;height:180px;border:1px solid #d4dfca;border-radius:50%;right:-12px;top:20px;z-index:-1}.scene-label{display:flex;align-items:center;justify-content:space-between;color:#6d7d66;font-size:10px;font-weight:700;letter-spacing:1px;margin-bottom:20px}.sample-paper{position:relative;background:white;border:1px solid #e3e7dd;border-radius:15px;box-shadow:0 16px 26px #4251370b;padding:26px;transform:rotate(-2deg)}.sample-paper h2{font-size:24px;font-weight:700;margin:12px 0}.sample-paper p{font:16px/1.9 Georgia,serif;color:#5c6570;margin-bottom:15px}.sample-paper mark{background:#fbebad;padding:3px 4px;border-radius:4px;color:#4f503b}.sample-paper .mini-line{height:5px;background:#edf0ec;width:85%;border-radius:4px;margin:10px 0}.sample-paper .mini-line:last-child{width:62%}.word-sample{position:relative;margin:16px -15px -3px 40px;background:#fff;border:1px solid #dde6db;padding:15px 18px;border-radius:12px;box-shadow:0 12px 28px #3545360d;display:flex;align-items:center;justify-content:space-between;gap:15px}.word-sample b{font-size:17px}.word-sample small{display:block;color:var(--muted);font-size:12px;margin-top:2px}.word-sample button{font-size:12px;white-space:nowrap}.scene-caption{font-size:10px;color:#71836b;margin:12px 0 0;text-align:center}.trust-strip{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:18px}.trust-strip>div{display:flex;align-items:center;gap:12px;justify-content:center}.trust-strip strong{font-size:25px;color:var(--green);letter-spacing:-1px}.trust-strip span{font-size:12px;color:var(--muted);max-width:130px}.public-section{padding:52px 0 0}.public-section .section-title{align-items:end;margin-bottom:22px}.public-section h2{font-size:30px;margin-bottom:8px}.public-section .section-title p{max-width:660px;line-height:1.8}.level-path{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px}.level-step{position:relative;text-align:left;padding:19px 18px;background:#fff;border:1px solid var(--line);border-radius:14px;color:var(--ink);min-width:0}.level-step:hover,.level-step[aria-pressed=true]{border-color:var(--green);background:#f0f6ef;box-shadow:0 4px 12px #28523c08}.level-step strong{font-size:24px;font-weight:750}.level-step span{display:block;font-weight:650;font-size:13px;margin-top:4px}.level-step small{display:block;color:var(--muted);font-size:11px;margin-top:5px}.level-step:after{content:"↗";position:absolute;right:15px;top:19px;color:#9cae97}.library-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}.filter-chips{display:flex;gap:7px;flex-wrap:wrap}.filter-chip{border:1px solid var(--line);border-radius:25px;background:white;color:var(--muted);padding:8px 16px;min-height:40px;font-size:12px;font-weight:600}.filter-chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white}.library-search{width:min(100%,290px);margin:0}.library-search input{background:white}.result-count{font-size:12px;color:var(--muted);margin-bottom:15px}.lesson-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.lesson-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px;display:flex;flex-direction:column;min-width:0;transition:transform .2s,box-shadow .2s}.lesson-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #24334a0c}.lesson-card[hidden]{display:none}.lesson-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px}.level-pill{display:inline-flex;align-items:center;gap:6px;background:#eaf2e9;color:#416c46;border-radius:6px;padding:4px 8px;font-weight:700;font-size:12px}.level-pill small{font-weight:400;font-size:9px}.level-pill.a1{background:#e8f4ed;color:#327457}.level-pill.b1{background:#eaf0fb;color:#4b6e9a}.level-pill.b2{background:#f1ebf9;color:#806098}.level-pill.c1{background:#f9eae4;color:#ad6845}.lesson-cover{height:112px;border-radius:12px;background:#eef2e8;display:flex;align-items:center;justify-content:space-between;padding:20px;margin:17px 0;position:relative;overflow:hidden}.lesson-cover span{font-size:47px;font-weight:800;letter-spacing:-3px;color:#759369;opacity:.6}.lesson-cover div{max-width:140px;text-align:right;font-size:12px;font-weight:600;color:#59724f;z-index:1}.lesson-cover:after{content:"";width:92px;height:92px;border:14px solid #ffffff55;border-radius:50%;position:absolute;right:45px;top:-25px}.lesson-card[data-level=B1] .lesson-cover{background:#edf2fa}.lesson-card[data-level=B1] .lesson-cover span,.lesson-card[data-level=B1] .lesson-cover div{color:#6584a4}.lesson-card[data-level=B2] .lesson-cover{background:#f1edf6}.lesson-card[data-level=B2] .lesson-cover span,.lesson-card[data-level=B2] .lesson-cover div{color:#9276aa}.lesson-card[data-level=C1] .lesson-cover{background:#faeee7}.lesson-card[data-level=C1] .lesson-cover span,.lesson-card[data-level=C1] .lesson-cover div{color:#b38a62}.lesson-card h3{font-size:19px;line-height:1.4;margin:0 0 9px;letter-spacing:-.4px}.lesson-summary{font-size:13px;line-height:1.8;color:var(--muted);flex:1}.lesson-meta{font-size:11px;color:#849080;margin:9px 0 16px}.card-footer{margin-top:auto;border-top:1px solid #eef0ec;padding-top:14px;display:flex;gap:9px;align-items:center;justify-content:space-between}.card-footer .fineprint{font-size:10px}.show-more-row{display:flex;justify-content:center;margin-top:25px}.practice-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.practice-path{border:1px solid #e0e5df;border-radius:20px;padding:29px;background:#eef3ed;position:relative;overflow:hidden}.practice-path.ielts{background:#f1eef8;border-color:#e6e0f0}.practice-path .path-symbol{float:right;font-size:49px;opacity:.3;line-height:1}.practice-path h3{font-size:26px;margin:13px 0 10px}.practice-path p{font-size:14px;line-height:1.8;color:var(--muted);max-width:430px}.practice-path .button-row{margin-top:22px}.practice-path .chip{background:#fff9;font-weight:600}.ielts .btn.primary{background:#766295;border-color:#766295}.public-feature-grid{grid-template-columns:repeat(3,1fr);gap:22px}.feature-card{padding:24px 0;border-top:1px solid var(--line)}.feature-card .feature-icon{border-radius:50%;width:40px;height:40px;font-size:17px}.feature-card h3{font-size:17px}.feature-card p{font-size:13px;line-height:1.8;color:var(--muted)}.public-cta{background:#243e35;color:white;border:0;padding:35px;border-radius:20px}.public-cta .eyebrow{color:#b8d4bc}.public-cta h2{font-size:27px}.public-cta p{color:#c5d3cb;font-size:14px;max-width:600px}.public-cta .btn{background:#e7eecf;color:#294736;white-space:nowrap;border:0}.public-footer{display:flex;justify-content:space-between;gap:18px;max-width:1200px;padding:24px 0 30px}.public-footer a{font-size:12px}.login-page{display:block;min-height:100vh;padding:0;background:#fcfcfa}.login-header{padding:23px 38px;display:flex;align-items:center;justify-content:space-between}.auth-layout{display:grid;grid-template-columns:1fr 1fr;max-width:1150px;margin:25px auto 50px;min-height:600px;gap:45px;padding:0 24px}.auth-story{background:#eaf0e5;border-radius:26px;padding:45px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}.auth-story h1{font-size:40px;line-height:1.25;margin:15px 0 22px;letter-spacing:-1.2px}.auth-story>p{color:#667a63;line-height:1.9}.auth-story .reading-scene{background:transparent;padding:25px 0 10px;min-height:0}.auth-story .sample-paper{max-width:350px;transform:rotate(-3deg);margin:auto}.auth-story .sample-paper p{font-size:15px}.login-card{width:auto;max-width:450px;align-self:center;box-shadow:none;border:0;background:transparent;border-radius:0;padding:25px 20px;margin:auto}.login-card h2{font-size:32px;margin-bottom:12px;line-height:1.3}.login-card .login-intro{font-size:14px;color:var(--muted);line-height:1.8}.login-card form{margin-top:28px}.login-card label{font-size:13px;font-weight:600;margin-bottom:20px}.login-card input{height:49px;margin-top:8px;font-size:15px;border-color:#dfe4dc}.login-card .btn.full{height:49px}.password-wrap{position:relative}.password-wrap input{padding-right:65px}.password-toggle{position:absolute;right:9px;top:7px;bottom:7px;border:0;background:none;color:var(--green);font-size:12px;font-weight:650;padding:4px 8px}.login-support{border-top:1px solid var(--line);padding-top:20px;margin-top:24px!important;font-size:13px;line-height:1.8}.login-support strong{display:block;color:var(--ink);font-weight:600}.login-back{display:inline-flex;margin-top:23px;font-size:13px}.login-error{font-size:13px;border:1px solid #efccc7}.sidebar{background:#fff;border-color:var(--line);padding-top:25px}.sidebar nav a{padding:11px 12px;border-radius:10px;font-size:13px;gap:10px}.sidebar .nav-label{margin-top:33px}.sidebar-note{background:#f3f6ee;border:0}.topbar{background:#ffffffd9;height:76px}.top-actions .language-control select{max-width:115px}.topbar .status-pill{display:none}.topbar .logout{display:block}.workspace main{max-width:1320px}.page-heading h1{font-weight:750;font-size:32px}.reading-hero{background:#edf3ea;border:0}.reading-hero h1{font-size:40px}.stats{gap:13px}.stat{box-shadow:0 2px 4px #24334a02}.stat-value{font-size:30px;font-weight:700}.reading-hero+.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.catalog-filters{gap:9px}.reader-en{font-family:Georgia,"Times New Roman",serif;line-height:1.95}.reader-vi{color:#5c6a60}.reader-tabs{gap:23px}.reader-tabs button{min-height:45px}.reading-question{min-width:0}.ielts-banner{background:#f1edf7;border:1px solid #e5ddec;border-radius:18px;padding:26px;margin-bottom:24px}.ielts-banner h2{margin:9px 0;font-size:27px}.ielts-banner p{color:var(--muted);font-size:14px;max-width:760px;line-height:1.8}.ielts-skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.ielts-skills span{background:white;padding:6px 11px;border-radius:7px;font-size:12px;color:#725e88}.language-note{font-size:11px;color:var(--muted);margin-top:9px}.lesson-card[data-track=ielts] .lesson-cover{background:#eee9f5}.no-results{grid-column:1/-1}.public-page [hidden]{display:none!important}
@@ -1086,6 +1101,199 @@ window.addEventListener('storage',e=>{if(e.key==='lexiread.language'&&languages.
   window.LexiResources={mount};
 })();
 </script>
+  <script>/* Optional English passage audio. Only on-device voices; no text leaves the site. */
+(() => {
+  'use strict';
+  const copy = {
+    vi: {listen:'Nghe bài đọc',pause:'Tạm dừng',resume:'Tiếp tục',stop:'Dừng',settings:'Giọng & tốc độ',voice:'Giọng đọc',speed:'Tốc độ',loading:'Đang tải giọng đọc…',unavailable:'Thiết bị chưa có giọng đọc tiếng Anh. Hãy thêm giọng English trong cài đặt giọng nói của thiết bị, rồi mở lại trang.',unsupported:'Trình duyệt này chưa hỗ trợ đọc thành tiếng.',failed:'Chưa phát được âm thanh. Bạn hãy bấm nghe để thử lại.',done:'Đã nghe hết bài',part:'Đoạn',ready:'Sẵn sàng',starting:'Đang bắt đầu…'},
+    en: {listen:'Listen to the passage',pause:'Pause',resume:'Resume',stop:'Stop',settings:'Voice & speed',voice:'Voice',speed:'Speed',loading:'Loading voices…',unavailable:'No English voice is installed. Add an English voice in your device’s speech settings, then reopen this page.',unsupported:'This browser does not support read-aloud.',failed:'Audio could not start. Press Listen to try again.',done:'Finished listening',part:'Section',ready:'Ready',starting:'Starting…'},
+    fr: {listen:'Écouter le texte',pause:'Pause',resume:'Reprendre',stop:'Arrêter',settings:'Voix et vitesse',voice:'Voix',speed:'Vitesse',loading:'Chargement des voix…',unavailable:'Aucune voix anglaise n’est installée. Ajoutez-en une dans les paramètres vocaux de votre appareil, puis rouvrez cette page.',unsupported:'Ce navigateur ne prend pas en charge la lecture à voix haute.',failed:'La lecture n’a pas démarré. Appuyez sur Écouter pour réessayer.',done:'Lecture terminée',part:'Passage',ready:'Prêt',starting:'Démarrage…'},
+    zh: {listen:'朗读文章',pause:'暂停',resume:'继续',stop:'停止',settings:'声音与语速',voice:'声音',speed:'语速',loading:'正在加载声音…',unavailable:'设备尚未安装英语语音。请在设备的语音设置中添加英语语音，然后重新打开此页面。',unsupported:'此浏览器不支持朗读。',failed:'无法播放音频，请点击朗读重试。',done:'朗读完毕',part:'段落',ready:'准备就绪',starting:'正在启动…'}
+  };
+  const synth = window.speechSynthesis;
+  const supported = !!(synth && window.SpeechSynthesisUtterance);
+  const rates = [0.75, 1, 1.25, 1.5];
+  let active = null;
+  const labels = () => copy[window.LexiI18n?.language] || copy.vi;
+  const voiceKey = voice => `${voice.voiceURI}|${voice.lang}`;
+  function preferences() {
+    try {
+      const value = JSON.parse(localStorage.getItem('lexiread.readAloud') || '{}');
+      return {rate:rates.includes(value?.rate) ? value.rate : 1, voice:typeof value?.voice === 'string' ? value.voice : ''};
+    } catch { return {rate:1, voice:''}; }
+  }
+  function save(player) {
+    try { localStorage.setItem('lexiread.readAloud', JSON.stringify({rate:player.rate, voice:player.voice})); } catch {}
+  }
+  // Short utterances avoid engine limits on long passages. Keep the paragraph association.
+  function chunks(text) {
+    let rest = String(text || '').replace(/\s+/g, ' ').trim();
+    const result = [];
+    while (rest.length > 220) {
+      const head = rest.slice(0, 220);
+      const sentence = [...head.matchAll(/[.!?]["')]*\s/g)].pop();
+      let end = sentence && sentence.index > 60 ? sentence.index + sentence[0].length : head.lastIndexOf(' ');
+      if (end < 1) end = /[\uD800-\uDBFF]/.test(head.at(-1)) ? 219 : 220;
+      result.push(rest.slice(0, end).trim());
+      rest = rest.slice(end).trim();
+    }
+    if (rest) result.push(rest);
+    return result;
+  }
+  function clearHighlight(player) {
+    player.items.forEach(item => item.node?.classList.remove('is-reading-aloud'));
+  }
+  function cancel(player) {
+    ++player.generation;
+    clearTimeout(player.speechTimer);
+    if (player.utterance) {
+      player.utterance = null;
+      try { synth.cancel(); } catch {}
+    }
+  }
+  function stop(player, status = 'idle') {
+    cancel(player);
+    player.status = status;
+    player.index = 0;
+    player.offset = 0;
+    player.started = false;
+    clearHighlight(player);
+    update(player);
+  }
+  function update(player) {
+    if (active !== player || !player.host.isConnected) return;
+    const t = labels(), busy = player.status === 'playing', paused = player.status === 'paused';
+    player.host.dataset.state = player.status;
+    player.play.textContent = (busy ? 'Ⅱ ' : '▶ ') + (busy ? t.pause : paused ? t.resume : t.listen);
+    player.play.disabled = !supported || !player.voices.length;
+    player.stop.disabled = !busy && !paused;
+    player.stop.textContent = t.stop;
+    player.summary.textContent = t.settings;
+    player.voiceLabel.textContent = t.voice;
+    player.rateLabel.textContent = t.speed;
+    player.voiceSelect.disabled = !player.voices.length;
+    player.rateSelect.disabled = !supported;
+    const part = player.queue[player.index]?.part || 0;
+    player.statusNode.textContent = !supported ? t.unsupported : !player.voices.length ? (player.loaded ? t.unavailable : t.loading) :
+      player.status === 'error' ? t.failed : player.status === 'done' ? t.done :
+      busy || paused ? `${!player.started && busy ? t.starting : paused ? t.pause : t.part} ${part + 1} / ${player.items.length}` : '';
+    player.host.classList.toggle('read-aloud-unavailable', !player.voices.length);
+  }
+  function refreshVoices(player) {
+    if (active !== player) return;
+    let voices = [];
+    try { voices = supported ? synth.getVoices() : []; } catch {}
+    player.voices = voices.filter(v => v.localService === true && /^en(?:[-_]|$)/i.test(v.lang));
+    if (voices.length) player.loaded = true;
+    const selected = player.voices.find(v => voiceKey(v) === player.voice) || player.voices.find(v => v.default) || player.voices[0];
+    if (selected) player.voice = voiceKey(selected);
+    player.voiceSelect.replaceChildren();
+    for (const voice of player.voices) {
+      const option = document.createElement('option');
+      option.value = voiceKey(voice);
+      option.textContent = `${voice.name} · ${voice.lang}`;
+      option.selected = option.value === player.voice;
+      player.voiceSelect.append(option);
+    }
+    if (!player.voices.length && (player.status === 'playing' || player.status === 'paused')) stop(player);
+    update(player);
+  }
+  function speak(player) {
+    if (active !== player || !player.host.isConnected) { clear(); return; }
+    const voice = player.voices.find(v => voiceKey(v) === player.voice);
+    if (!voice) { stop(player, 'error'); return; }
+    if (player.index >= player.queue.length) { stop(player, 'done'); return; }
+    const chunk = player.queue[player.index], base = player.offset;
+    const utterance = new window.SpeechSynthesisUtterance(chunk.text.slice(base));
+    const generation = ++player.generation;
+    const valid = () => active === player && generation === player.generation && player.host.isConnected;
+    player.utterance = utterance; // Keep a reference until end/error, including on mobile.
+    player.status = 'playing';
+    player.started = false;
+    utterance.voice = voice;
+    utterance.lang = voice.lang;
+    utterance.rate = player.rate;
+    const fail = () => { if (valid()) stop(player, 'error'); };
+    utterance.onstart = () => {
+      if (!valid()) return;
+      player.started = true;
+      clearTimeout(player.speechTimer);
+      player.speechTimer = setTimeout(fail, 90000);
+      clearHighlight(player);
+      player.items[chunk.part].node?.classList.add('is-reading-aloud');
+      update(player);
+    };
+    utterance.onboundary = event => {
+      if (valid() && Number.isInteger(event.charIndex) && event.charIndex >= 0 && event.charIndex < utterance.text.length) player.offset = base + event.charIndex;
+    };
+    utterance.onend = () => {
+      if (!valid()) return;
+      clearTimeout(player.speechTimer);
+      player.utterance = null;
+      player.index++;
+      player.offset = 0;
+      speak(player);
+    };
+    utterance.onerror = fail;
+    player.speechTimer = setTimeout(fail, 12000);
+    update(player);
+    try { synth.speak(utterance); } catch { fail(); }
+  }
+  function clear() {
+    if (!active) return;
+    const player = active;
+    stop(player);
+    active = null;
+    clearTimeout(player.voiceTimer);
+    player.observer?.disconnect();
+    synth?.removeEventListener?.('voiceschanged', player.refresh);
+    document.removeEventListener('lexiread:language', player.translate);
+    player.host.replaceChildren();
+  }
+  function mount(host, source) {
+    clear();
+    if (!host) return;
+    const items = source.filter(item => String(item.text || '').trim());
+    if (!items.length) { host.hidden = true; return; }
+    host.hidden = false;
+    host.classList.add('read-aloud');
+    // This component owns its four UI languages. The passage itself stays English.
+    host.setAttribute('data-no-i18n', '');
+    host.innerHTML = `<div class="read-aloud-controls"><button type="button" class="btn secondary" data-audio-play></button><button type="button" class="btn" data-audio-stop></button><details class="read-aloud-settings"><summary></summary><div class="read-aloud-fields"><label><span data-audio-voice-label></span><select data-audio-voice></select></label><label><span data-audio-rate-label></span><select data-audio-rate>${rates.map(rate=>`<option value="${rate}">${rate}×</option>`).join('')}</select></label></div></details></div><p class="read-aloud-status" role="status" aria-live="polite"></p>`;
+    const find = selector => host.querySelector(selector);
+    const player = {host, items, queue:items.flatMap((item, part)=>chunks(item.text).map(text=>({text, part}))), ...preferences(), voices:[], status:'idle', index:0, offset:0, generation:0, loaded:false,
+      play:find('[data-audio-play]'), stop:find('[data-audio-stop]'), summary:find('summary'), voiceLabel:find('[data-audio-voice-label]'), rateLabel:find('[data-audio-rate-label]'), voiceSelect:find('[data-audio-voice]'), rateSelect:find('[data-audio-rate]'), statusNode:find('[role="status"]')};
+    active = player;
+    player.rateSelect.value = String(player.rate);
+    player.play.addEventListener('click', () => {
+      if (player.status === 'playing') {
+        // Cancel + resume from the last word boundary also works where native pause ends an utterance.
+        cancel(player); player.status = 'paused'; update(player);
+      } else if (player.voices.length) { save(player); speak(player); }
+    });
+    player.stop.addEventListener('click', () => stop(player));
+    const change = () => {
+      player.rate = Number(player.rateSelect.value);
+      player.voice = player.voiceSelect.value;
+      save(player);
+      if (player.status === 'playing') { cancel(player); speak(player); }
+    };
+    player.voiceSelect.addEventListener('change', change);
+    player.rateSelect.addEventListener('change', change);
+    player.refresh = () => refreshVoices(player);
+    player.translate = () => update(player);
+    synth?.addEventListener?.('voiceschanged', player.refresh);
+    document.addEventListener('lexiread:language', player.translate);
+    player.voiceTimer = setTimeout(() => { player.loaded = true; refreshVoices(player); }, 2500);
+    player.observer = new MutationObserver(() => { if (!host.isConnected && active === player) clear(); });
+    player.observer.observe(document.body, {childList:true, subtree:true});
+    refreshVoices(player);
+  }
+  window.addEventListener('pagehide', clear);
+  window.addEventListener('hashchange', clear);
+  window.LexiReadAloud = {mount, clear};
+})();
+</script>
   <script>'use strict';
 /* Shared UI for the curated library and private reader. Loaded before app.js.
    It never calls a model directly or embeds an API key. All content is escaped. */
@@ -1248,6 +1456,7 @@ function updatePracticeProgress(){
   const toggle=document.querySelector('[data-practice-pause]');if(toggle)toggle.textContent=practiceClockRunning(session)?'Tạm dừng đồng hồ':'Tiếp tục đồng hồ';
 }
 function renderToeicPractice(){
+  window.LexiReadAloud?.clear();
   const practice=state.toeicSet,session=state.toeicSession,result=session.result;
   if(!Object.hasOwn(session,'clockStartedAt'))session.clockStartedAt=Date.now();
   if(result)pausePracticeClock();
@@ -1263,6 +1472,13 @@ function renderToeicPractice(){
   $('#main').innerHTML=`<a class="link-btn" href="#toeic">← Thư viện TOEIC Reading</a><div style="height:17px"></div>`+heading(practice.title,`${practice.mode_label} · ${String(practice.level||'').split('·')[0].trim()} · ${practice.question_count} câu · mục tiêu ${practice.duration_minutes} phút`)+`<p class="practice-instructions">${esc(practice.instructions)}</p><details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(practice.provenance||'Bài luyện do LexiRead biên soạn, không phải đề ETS.')}</p></details>`+
     (result?`<div class="reading-score toeic-score" role="status"><strong>${result.score} / ${result.total}</strong><div>${result.percentage}% chính xác<p>${Object.entries(result.by_part).map(([part,row])=>`Part ${part}: ${row.score}/${row.total}`).join(' · ')}. Đã lưu kết quả.</p></div><button class="btn secondary" data-action="reset-toeic">Làm lại</button></div><div class="practice-filter-results"><label><input type="checkbox" data-practice-wrong> Chỉ xem câu sai</label><a class="btn small" href="#guides/toeic">Ôn cách làm từng dạng →</a></div>`:`<section class="practice-progress" data-practice-progress><div class="practice-progress-top"><strong data-practice-count></strong><span>Đã làm <b class="practice-clock" data-practice-clock>00:00</b> / ${practice.duration_minutes} phút gợi ý</span><div class="button-row"><button type="button" class="btn small" data-practice-pause>Tạm dừng đồng hồ</button><button type="button" class="btn small secondary" data-practice-unanswered>Câu chưa trả lời →</button></div></div><p>Không tự nộp khi hết giờ. Chuyển trang vẫn giữ đáp án; tải lại trang sẽ làm lại.</p><details><summary>Chọn câu hỏi</summary><div class="question-map">${practice.questions.map((q,i)=>`<button type="button" data-practice-jump="${esc(q.id)}">${i+1}</button>`).join('')}</div></details></section>`)+body+`<div class="button-row toeic-submit">${result?'<button class="btn primary" data-action="reset-toeic">Làm lại bộ này</button><a class="btn" href="#toeic">Chọn bài khác</a>':'<button class="btn primary" data-action="submit-toeic">Nộp và xem giải thích</button>'}</div>`+
     (practice.focus_vocabulary.length?`<details class="panel source-context"><summary>Từ vựng trong bài</summary><div class="glossary-grid">${practice.focus_vocabulary.map(w=>`<article class="candidate-body"><h3 lang="en">${esc(w.word)} <small>${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}</article>`).join('')}</div><button class="btn secondary" data-action="save-toeic-words">Lưu ${practice.focus_vocabulary.length} từ vào kho để ôn</button></details>`:'');
+  const documentNodes=[...document.querySelectorAll('.toeic-document')];
+  if(documentNodes.length){
+    const audioHost=document.createElement('div');
+    documentNodes[0].closest('.toeic-cluster,.toeic-documents').before(audioHost);
+    const seen=new Set();
+    window.LexiReadAloud?.mount(audioHost,documentNodes.filter(node=>{if(seen.has(node.id))return false;seen.add(node.id);return true;}).map(node=>({node,text:[node.querySelector('h2')?.textContent,node.querySelector('div')?.textContent].filter(Boolean).join('. ')})));
+  }
   clearInterval(practiceClockInterval);if(!result)practiceClockInterval=setInterval(updatePracticeProgress,1000);updatePracticeProgress();
 }
 function jumpPracticeQuestion(id){const field=document.getElementById('practice-question-'+id);if(field){field.scrollIntoView({behavior:'instant',block:'start'});field.focus({preventScroll:true});}}
@@ -2115,6 +2331,7 @@ async function readerPage(id,epoch){
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===(r.catalog_slug?'catalog':'readings')));renderReader();
 }
 function renderReader(){
+  window.LexiReadAloud?.clear();
   const r=state.reading,a=r.analysis||{},v=a.vocabulary||[],g=a.grammar||[],curated=!!r.catalog_slug;
   const hasTranslations=!!a.translations?.length, showTranslation=state.translation&&hasTranslations;
   const hasHelp=!!(state.boot?.ai_enabled||r.lesson?.faqs?.length||state.qaHistory?.length||state.readingTab==='help');
@@ -2130,9 +2347,10 @@ function renderReader(){
   const box=$('#reader-content');
   if(state.readingTab==='text'){
     const tr=new Map((a.translations||[]).map(t=>[t.index,t.vi]));
-    box.innerHTML='<p class="fineprint">Bôi đen từ để tra nghĩa, nghe phát âm hoặc lưu lại.</p>'+
+    box.innerHTML='<div data-reading-audio></div><p class="fineprint">Bôi đen từ để tra nghĩa, nghe phát âm hoặc lưu lại.</p>'+
       (showTranslation?'<div class="reader-labels"><b>ENGLISH · VĂN BẢN GỐC</b><span>TIẾNG VIỆT · BẢN DỊCH THAM KHẢO</span></div>':'')+
       r.paragraphs.map((p,i)=>`<section class="parallel-row ${showTranslation?'':'single'}" data-paragraph="${i}"><div><div class="paragraph-tools"><span class="paragraph-index">ĐOẠN ${String(i+1).padStart(2,'0')}</span><button class="link-btn" data-action="bookmark-paragraph" data-index="${i}">${r.progress?.paragraph===i?'◆':'◇'} Đọc đến đây</button>${state.boot?.ai_enabled?`<button class="link-btn" data-action="ask-paragraph" data-index="${i}">Hỏi đoạn này</button>`:''}</div><p class="reader-en" data-index="${i}">${highlight(p,[...v.map(w=>w.word),...(state.readerWords||[]).map(w=>w.word)])}</p></div>${showTranslation?`<div><span class="paragraph-index">BẢN DỊCH ${String(i+1).padStart(2,'0')}</span><p class="reader-vi">${esc(tr.get(i)||'Chưa dịch đoạn này.')}</p></div>`:''}</section>`).join('');
+    window.LexiReadAloud?.mount(box.querySelector('[data-reading-audio]'),r.paragraphs.map((text,i)=>({text,node:box.querySelector(`.reader-en[data-index="${i}"]`)})));
   }else if(state.readingTab==='words'){
     box.innerHTML=v.length?`<div class="section-title"><div><h2>Chọn những từ bạn cần học</h2><p>Chưa lưu tự động. Bạn có thể sửa lại từng thẻ sau khi lưu.</p></div><button class="btn primary" data-action="save-candidates">Lưu mục đã chọn</button></div><label class="check-label" style="margin-bottom:15px"><input id="select-all-candidates" type="checkbox"> Chọn tất cả</label>`+
       v.map((w,i)=>`<article class="candidate"><input class="candidate-check" type="checkbox" value="${i}" aria-label="Chọn ${esc(w.word)}"><div class="candidate-body"><h3>${esc(w.word)} <small class="muted">${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}${r.catalog_slug?'':'<span class="chip warm">Gợi ý AI · cần bạn kiểm tra</span>'}</div></article>`).join(''):empty('Chưa có từ gợi ý','Phân tích bài đọc để chọn từ; hoặc bôi đen từ trong phần tiếng Anh.');
@@ -2382,6 +2600,7 @@ function download(name,data,type='application/json'){
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 async function route(){
+  window.LexiReadAloud?.clear();
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');

@@ -22,6 +22,7 @@ function updatePracticeProgress(){
   const toggle=document.querySelector('[data-practice-pause]');if(toggle)toggle.textContent=practiceClockRunning(session)?'Tạm dừng đồng hồ':'Tiếp tục đồng hồ';
 }
 function renderToeicPractice(){
+  window.LexiReadAloud?.clear();
   const practice=state.toeicSet,session=state.toeicSession,result=session.result;
   if(!Object.hasOwn(session,'clockStartedAt'))session.clockStartedAt=Date.now();
   if(result)pausePracticeClock();
@@ -37,6 +38,13 @@ function renderToeicPractice(){
   $('#main').innerHTML=`<a class="link-btn" href="#toeic">← Thư viện TOEIC Reading</a><div style="height:17px"></div>`+heading(practice.title,`${practice.mode_label} · ${String(practice.level||'').split('·')[0].trim()} · ${practice.question_count} câu · mục tiêu ${practice.duration_minutes} phút`)+`<p class="practice-instructions">${esc(practice.instructions)}</p><details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(practice.provenance||'Bài luyện do LexiRead biên soạn, không phải đề ETS.')}</p></details>`+
     (result?`<div class="reading-score toeic-score" role="status"><strong>${result.score} / ${result.total}</strong><div>${result.percentage}% chính xác<p>${Object.entries(result.by_part).map(([part,row])=>`Part ${part}: ${row.score}/${row.total}`).join(' · ')}. Đã lưu kết quả.</p></div><button class="btn secondary" data-action="reset-toeic">Làm lại</button></div><div class="practice-filter-results"><label><input type="checkbox" data-practice-wrong> Chỉ xem câu sai</label><a class="btn small" href="#guides/toeic">Ôn cách làm từng dạng →</a></div>`:`<section class="practice-progress" data-practice-progress><div class="practice-progress-top"><strong data-practice-count></strong><span>Đã làm <b class="practice-clock" data-practice-clock>00:00</b> / ${practice.duration_minutes} phút gợi ý</span><div class="button-row"><button type="button" class="btn small" data-practice-pause>Tạm dừng đồng hồ</button><button type="button" class="btn small secondary" data-practice-unanswered>Câu chưa trả lời →</button></div></div><p>Không tự nộp khi hết giờ. Chuyển trang vẫn giữ đáp án; tải lại trang sẽ làm lại.</p><details><summary>Chọn câu hỏi</summary><div class="question-map">${practice.questions.map((q,i)=>`<button type="button" data-practice-jump="${esc(q.id)}">${i+1}</button>`).join('')}</div></details></section>`)+body+`<div class="button-row toeic-submit">${result?'<button class="btn primary" data-action="reset-toeic">Làm lại bộ này</button><a class="btn" href="#toeic">Chọn bài khác</a>':'<button class="btn primary" data-action="submit-toeic">Nộp và xem giải thích</button>'}</div>`+
     (practice.focus_vocabulary.length?`<details class="panel source-context"><summary>Từ vựng trong bài</summary><div class="glossary-grid">${practice.focus_vocabulary.map(w=>`<article class="candidate-body"><h3 lang="en">${esc(w.word)} <small>${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}</article>`).join('')}</div><button class="btn secondary" data-action="save-toeic-words">Lưu ${practice.focus_vocabulary.length} từ vào kho để ôn</button></details>`:'');
+  const documentNodes=[...document.querySelectorAll('.toeic-document')];
+  if(documentNodes.length){
+    const audioHost=document.createElement('div');
+    documentNodes[0].closest('.toeic-cluster,.toeic-documents').before(audioHost);
+    const seen=new Set();
+    window.LexiReadAloud?.mount(audioHost,documentNodes.filter(node=>{if(seen.has(node.id))return false;seen.add(node.id);return true;}).map(node=>({node,text:[node.querySelector('h2')?.textContent,node.querySelector('div')?.textContent].filter(Boolean).join('. ')})));
+  }
   clearInterval(practiceClockInterval);if(!result)practiceClockInterval=setInterval(updatePracticeProgress,1000);updatePracticeProgress();
 }
 function jumpPracticeQuestion(id){const field=document.getElementById('practice-question-'+id);if(field){field.scrollIntoView({behavior:'instant',block:'start'});field.focus({preventScroll:true});}}

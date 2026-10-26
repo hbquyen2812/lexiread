@@ -112,6 +112,7 @@ async function readerPage(id,epoch){
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===(r.catalog_slug?'catalog':'readings')));renderReader();
 }
 function renderReader(){
+  window.LexiReadAloud?.clear();
   const r=state.reading,a=r.analysis||{},v=a.vocabulary||[],g=a.grammar||[],curated=!!r.catalog_slug;
   const hasTranslations=!!a.translations?.length, showTranslation=state.translation&&hasTranslations;
   const hasHelp=!!(state.boot?.ai_enabled||r.lesson?.faqs?.length||state.qaHistory?.length||state.readingTab==='help');
@@ -127,9 +128,10 @@ function renderReader(){
   const box=$('#reader-content');
   if(state.readingTab==='text'){
     const tr=new Map((a.translations||[]).map(t=>[t.index,t.vi]));
-    box.innerHTML='<p class="fineprint">Bôi đen từ để tra nghĩa, nghe phát âm hoặc lưu lại.</p>'+
+    box.innerHTML='<div data-reading-audio></div><p class="fineprint">Bôi đen từ để tra nghĩa, nghe phát âm hoặc lưu lại.</p>'+
       (showTranslation?'<div class="reader-labels"><b>ENGLISH · VĂN BẢN GỐC</b><span>TIẾNG VIỆT · BẢN DỊCH THAM KHẢO</span></div>':'')+
       r.paragraphs.map((p,i)=>`<section class="parallel-row ${showTranslation?'':'single'}" data-paragraph="${i}"><div><div class="paragraph-tools"><span class="paragraph-index">ĐOẠN ${String(i+1).padStart(2,'0')}</span><button class="link-btn" data-action="bookmark-paragraph" data-index="${i}">${r.progress?.paragraph===i?'◆':'◇'} Đọc đến đây</button>${state.boot?.ai_enabled?`<button class="link-btn" data-action="ask-paragraph" data-index="${i}">Hỏi đoạn này</button>`:''}</div><p class="reader-en" data-index="${i}">${highlight(p,[...v.map(w=>w.word),...(state.readerWords||[]).map(w=>w.word)])}</p></div>${showTranslation?`<div><span class="paragraph-index">BẢN DỊCH ${String(i+1).padStart(2,'0')}</span><p class="reader-vi">${esc(tr.get(i)||'Chưa dịch đoạn này.')}</p></div>`:''}</section>`).join('');
+    window.LexiReadAloud?.mount(box.querySelector('[data-reading-audio]'),r.paragraphs.map((text,i)=>({text,node:box.querySelector(`.reader-en[data-index="${i}"]`)})));
   }else if(state.readingTab==='words'){
     box.innerHTML=v.length?`<div class="section-title"><div><h2>Chọn những từ bạn cần học</h2><p>Chưa lưu tự động. Bạn có thể sửa lại từng thẻ sau khi lưu.</p></div><button class="btn primary" data-action="save-candidates">Lưu mục đã chọn</button></div><label class="check-label" style="margin-bottom:15px"><input id="select-all-candidates" type="checkbox"> Chọn tất cả</label>`+
       v.map((w,i)=>`<article class="candidate"><input class="candidate-check" type="checkbox" value="${i}" aria-label="Chọn ${esc(w.word)}"><div class="candidate-body"><h3>${esc(w.word)} <small class="muted">${esc(w.pos)}</small></h3><p>${esc(w.meaning_vi)}</p>${lexicalDetails(w)}${lexicalContext(w)}${r.catalog_slug?'':'<span class="chip warm">Gợi ý AI · cần bạn kiểm tra</span>'}</div></article>`).join(''):empty('Chưa có từ gợi ý','Phân tích bài đọc để chọn từ; hoặc bôi đen từ trong phần tiếng Anh.');
@@ -379,6 +381,7 @@ function download(name,data,type='application/json'){
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 async function route(){
+  window.LexiReadAloud?.clear();
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
