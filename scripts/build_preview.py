@@ -44,6 +44,7 @@ artwork={key:'data:image/svg+xml;base64,'+base64.b64encode((root/f'static/illust
 library=library.replace("const artwork=Object.fromEntries(['reading','nature','school','work','travel','city','food','technology'].map(key=>[key,'/static/illustrations/'+key+'.svg']));",'const artwork='+json.dumps(artwork)+';')
 html=html.replace('<script src="{% static \'library.js\' %}" defer></script>','<script>'+library+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'experience.css\' %}">','<style>'+(root/'static/experience.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace('<script src="{% static \'i18n_catalog.js\' %}" defer></script>','<script>'+(root/'static/i18n_catalog.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<script src="{% static \'i18n.js\' %}" defer></script>','<script>'+(root/'static/i18n.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'app.css\' %}">','<style>'+(root/'static/app.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<script src="{% static \'app.js\' %}" defer></script>', '<script>const PREVIEW_SEED='+json.dumps(seed,ensure_ascii=False).replace('<','\\u003c')+';</script>\n<script>'+(root/'scripts/preview_adapter.js').read_text(encoding='utf-8')+'</script>\n<script>'+(root/'static/app.js').read_text(encoding='utf-8')+'</script>')

@@ -19,3 +19,4 @@ backups/
 data/private/
 lexiread-backup*.json
 .DS_Store
+node_modules/

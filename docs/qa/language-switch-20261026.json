@@ -1,0 +1,116 @@
+{
+  "routes": [
+    {
+      "overflow": false,
+      "route": "#home",
+      "title": "Read a little.Grow every day.",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#learn/plan",
+      "title": "What would you like to learn today?",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#learn/grammar",
+      "title": "Learn grammar step by step",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#learn/verbs",
+      "title": "Irregular verbs",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#learn/tenses",
+      "title": "English tenses",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#catalog",
+      "title": "Reading library",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#toeic",
+      "title": "More confident,through each exercise.",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#guides",
+      "title": "Learn how to do each type of exercise.",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#guides/ielts-tfng",
+      "title": "True / False / Not Given: false or not stated?",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#guides/youtube",
+      "title": "Listen a bit.Learn more interesting things.",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#learn/vocabulary",
+      "title": "Vocabulary by topic",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#learn/dictionary",
+      "title": "Look up English words",
+      "untranslated": []
+    },
+    {
+      "overflow": false,
+      "route": "#word-import",
+      "title": "Create your word set",
+      "untranslated": []
+    }
+  ],
+  "roundTrips": [
+    {
+      "language": "en",
+      "englishUnchanged": true,
+      "answerRetained": true
+    },
+    {
+      "language": "fr",
+      "englishUnchanged": true,
+      "answerRetained": true
+    },
+    {
+      "language": "zh-Hans",
+      "englishUnchanged": true,
+      "answerRetained": true
+    },
+    {
+      "language": "vi",
+      "englishUnchanged": true,
+      "answerRetained": true
+    }
+  ],
+  "desktopWidth": 1265,
+  "mobileWidth": 390,
+  "mobileOverflow": false,
+  "catalog_entries": 6520,
+  "frontend_suites_passed": 13,
+  "http_smoke": "passed",
+  "dictionary_modal": {
+    "labels_translated": true,
+    "english_definitions_unchanged": true
+  },
+  "browser_console_errors": [],
+  "checks_note": "Visible copy audit uses Vietnamese-specific accented characters; it is a coverage signal, not a linguistic review of every translation. Critical UI and the A1 sentence lesson have editorial overrides."
+}
