@@ -6,7 +6,7 @@
   <meta name="description" content="LexiRead — đọc, hiểu và giữ lại từ vựng cá nhân.">
   <title>LexiRead · Không gian học của bạn</title>
   <link rel="stylesheet" href="{% static 'app.css' %}?v=20261026.20">
-  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.23">
+  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.25">
   <script src="{% static 'i18n.js' %}?v=20261026.18" defer></script>{{ topic_labels|json_script:"topic-labels-data" }}<script src="{% static 'library.js' %}?v=20261026.18" defer></script>
 <link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}?v=20261026.23"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.23"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'academy.css' %}?v=20261026.20">
   <link rel="stylesheet" href="{% static 'grammar_course.css' %}?v=20261026.23"><link rel="stylesheet" href="{% static 'learning_methods.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'dictionary.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'topic_vocabulary.css' %}?v=20261026.18"></head>
@@ -32,7 +32,17 @@
     <div class="sidebar-bottom"><span class="db-dot"></span><a href="/account/" id="storage-label">Tài khoản của tôi</a></div>
   </aside>
   <div class="workspace">
-    <header class="topbar"><span class="breadcrumb"><b id="page-label">Tổng quan</b></span><div class="top-actions">{% include 'language_switcher.html' %}<span id="ai-status" class="status-pill">Đang kết nối…</span><span class="avatar" id="avatar" data-no-i18n>Q</span><form method="post" action="/logout/" class="logout">{% csrf_token %}<button class="link-btn" type="submit">Đăng xuất</button></form></div></header>
+    <header class="topbar">
+      <span class="breadcrumb"><b id="page-label">Tổng quan</b></span>
+      <div class="top-actions">
+        {% include 'language_switcher.html' %}
+        <span id="ai-status" class="status-pill">Đang kết nối…</span>
+        <div class="account-actions">
+          <a class="account-avatar" href="/account/" aria-label="Tài khoản của tôi" title="Tài khoản của tôi"><span id="avatar" data-no-i18n>Q</span></a>
+          <form method="post" action="/logout/" class="logout">{% csrf_token %}<button class="account-signout" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4m6-13 5 5-5 5M8 12h12"/></svg><span class="logout-label">Đăng xuất</span></button></form>
+        </div>
+      </div>
+    </header>
     <main id="main" tabindex="-1"><div class="empty-state">Đang mở kho học tập…</div></main>
     <footer class="page-footer"><span>LexiRead · Từ của bạn. Ngữ cảnh của bạn. Nhịp học của bạn.</span></footer>
   </div>

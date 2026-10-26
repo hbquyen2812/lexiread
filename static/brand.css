@@ -176,3 +176,23 @@ h1, h2, h3 { letter-spacing: -.015em; }
 }
 
 .practice-card .btn,.lesson-card .btn,.grammar-course-card .btn {font-size:14px;}
+
+/* A single, aligned row of header controls; keep native language selection. */
+.workspace .topbar .top-actions { gap:12px; flex-wrap:nowrap; }
+.topbar .language-control { flex:none; margin:0; }
+.topbar .language-control .language-globe { position:absolute; inset-inline-start:13px; top:50%; transform:translateY(-50%); display:flex; align-items:center; color:#69805e; pointer-events:none; }
+.topbar .top-actions .language-control select { box-sizing:border-box; width:170px; min-width:170px; max-width:170px; height:44px; min-height:44px; margin:0; padding:8px 30px 8px 40px; border:1px solid #dfe5d8; border-radius:12px; background-color:#fffefa; color:#355039; font-size:16px; font-weight:500; line-height:1.4; cursor:pointer; }
+.account-actions { display:flex; align-items:center; gap:8px; flex:none; }
+.account-avatar { box-sizing:border-box; display:grid; place-items:center; width:44px; height:44px; flex:none; border:1px solid #dbe5d1; border-radius:12px; background:#edf3e5; color:#436339; text-decoration:none; font-size:16px; font-weight:600; line-height:1; }
+.account-signout { display:inline-flex; align-items:center; justify-content:center; gap:8px; height:44px; padding:0 13px; border:1px solid #dfe5d8; border-radius:12px; background:#fffefa; color:#5b6a54; font-size:14px; font-weight:500; line-height:1.4; white-space:nowrap; cursor:pointer; }
+.account-signout svg { flex:none; }
+.account-avatar:hover,.account-signout:hover,.topbar .language-control select:hover { background:#f0f5e9; border-color:#a6bb99; color:#31542a; }
+.account-avatar:focus-visible,.account-signout:focus-visible,.topbar .language-control select:focus-visible { outline:2px solid #527747; outline-offset:3px; }
+@media(max-width:600px) {
+  .workspace .topbar { padding:10px 16px; }
+  .workspace .topbar .top-actions { width:100%; }
+  .topbar .language-control { margin-right:auto; }
+  .topbar .top-actions .language-control select { width:164px; min-width:164px; max-width:164px; }
+  .account-signout { width:44px; padding:0; }
+  .account-signout .logout-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+}

@@ -49,5 +49,19 @@
     "new_runtime_ai_calls": false,
     "new_runtime_external_font_calls": false
   },
-  "git_note": "Unrelated pre-existing deletions under lexiread_data_v1 are excluded from this change."
+  "git_note": "Unrelated pre-existing deletions under lexiread_data_v1 are excluded from this change.",
+  "header_controls": {
+    "checks": [
+      "Language select displays full Vietnamese and French labels",
+      "Language, account and sign-out controls are 44px high",
+      "320px viewport has no horizontal overflow; mobile sign-out retains accessible text",
+      "Avatar opens /account/ successfully; language restored to Vietnamese",
+      "Frontend/i18n regression and QA HTTP smoke passed"
+    ],
+    "screenshots": [
+      "account-toolbar-desktop.jpg",
+      "account-toolbar-mobile.jpg",
+      "account-toolbar-detail.png"
+    ]
+  }
 }
