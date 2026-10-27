@@ -13,3 +13,6 @@ backups
 data/private
 preview.html
 lexiread_data_v1
+
+node_modules
+lexiread_reading_vocab_v3_20261026.zip

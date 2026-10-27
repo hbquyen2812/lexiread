@@ -3,6 +3,7 @@ from . import views as v
 from . import foundation_views as f
 from . import dictionary_views as dictionary
 urlpatterns=[
+ path('api/practice-groups/',f.practice_groups),
  path('api/dictionary/',dictionary.lookup),
  path('api/dictionary/search/',dictionary.search),
  path('api/dictionary/audio/<str:digest>/',dictionary.audio),

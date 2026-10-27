@@ -47,7 +47,7 @@ class VocabularyCollection(models.Model):
     slug = models.SlugField(max_length=100, primary_key=True)
     title = models.CharField(max_length=200)
     topic = models.CharField(max_length=100, db_index=True)
-    level = models.CharField(max_length=2, db_index=True)
+    level = models.CharField(max_length=6, db_index=True)
     order = models.PositiveIntegerField(default=0)
     content = models.JSONField(default=dict)
 

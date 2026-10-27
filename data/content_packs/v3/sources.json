@@ -380,5 +380,15 @@
     "checked_on": "2026-10-26",
     "third_party_content_included": false,
     "sample_resources": []
+  },
+  {
+    "id": "ielts_gt_format",
+    "title": "IELTS General Training Reading format",
+    "publisher": "IELTS",
+    "url": "https://ielts.org/take-a-test/test-types/ielts-general-training-test/ielts-general-training-format-reading",
+    "verification": "page_opened",
+    "notes_vi": "Đối chiếu cấu trúc40câu/60phút,3phần,2150–2375từ; không sao chép văn bản đề.",
+    "rights_status": "reference_metadata_only",
+    "accessed_on": "2026-10-26"
   }
 ]

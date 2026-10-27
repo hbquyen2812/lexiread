@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.http import JsonResponse, Http404
 from .views import api, body
-from .models import LearningProfile, FoundationAttempt, Vocabulary, GrammarReadProgress
+from .models import LearningProfile, FoundationAttempt, Vocabulary, GrammarReadProgress, CuratedLesson, ToeicPractice
 from .services.core import InputError, fingerprint
 from .services.storage import save_entry
 from .services.motivation import record_learning
@@ -20,6 +20,20 @@ from .services.grammar_reference import reference, lesson_guide
 @api('GET')
 def grammar_reference(request):
     return JsonResponse(reference())
+
+
+@api('GET')
+def practice_groups(request):
+    groups=json.loads((ROOT.parent/'static/practice_index.json').read_text(encoding='utf-8'))
+    available={**{'#lesson/'+slug:title for slug,title in CuratedLesson.objects.filter(published=True).values_list('slug','title')},
+               **{'#toeic-set/'+slug:title for slug,title in ToeicPractice.objects.filter(published=True).values_list('slug','title')}}
+    # An editor may unpublish a lesson. Never offer an incomplete set or a broken start link.
+    result=[]
+    for group in groups:
+        if not all(section['href'] in available for section in group['sections']):continue
+        group['sections']=[{**s,'title':available[s['href']]} for s in group['sections']]
+        result.append(group)
+    return JsonResponse({'items':result})
 
 
 def find_unit(kind, unit_id):

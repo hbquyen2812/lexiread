@@ -40,6 +40,7 @@ html=html.replace('<link rel="stylesheet" href="{% static \'resources.css\' %}">
 html=html.replace('<link rel="icon" href="{% static \'favicon.svg\' %}" type="image/svg+xml">','<link rel="icon" href="data:image/svg+xml;base64,'+base64.b64encode((root/'static/favicon.svg').read_bytes()).decode()+'" type="image/svg+xml">')
 html=html.replace('<link rel="stylesheet" href="{% static \'responsive.css\' %}">','<style>'+(root/'static/responsive.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'motivation.css\' %}">','<style>'+(root/'static/motivation.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace('<link rel="stylesheet" href="{% static \'workspace.css\' %}">','<style>'+(root/'static/workspace.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'brand.css\' %}">','<style>'+(root/'static/brand.css').read_text(encoding='utf-8')+'</style>')
 library=(root/'static/library.js').read_text(encoding='utf-8')
 artwork={key:'data:image/svg+xml;base64,'+base64.b64encode((root/f'static/illustrations/{key}.svg').read_bytes()).decode() for key in ART_TOPICS}

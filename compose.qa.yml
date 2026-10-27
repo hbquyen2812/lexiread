@@ -1,5 +1,5 @@
 # Standalone QA only: no .env, no production volume, no exposed database port.
-# PostgreSQL data is temporary and disappears when this QA container is removed.
+# QA data stays in a dedicated volume across Docker restarts.
 services:
   qa-db:
     image: postgres:16-alpine
@@ -7,8 +7,8 @@ services:
       POSTGRES_DB: lexiread_qa
       POSTGRES_USER: lexiread_qa
       POSTGRES_PASSWORD: lexiread-qa-local-only
-    tmpfs:
-      - /var/lib/postgresql/data
+    volumes:
+      - qa_pgdata:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U lexiread_qa -d lexiread_qa"]
       interval: 2s
@@ -25,9 +25,11 @@ services:
     ports:
       - "127.0.0.1:8766:8000"
     volumes:
-      - ./lexiread_data_v1:/app/lexiread_data_v1:ro
       - ./static:/app/static:ro
       - ./templates:/app/templates:ro
     depends_on:
       qa-db:
         condition: service_healthy
+
+volumes:
+  qa_pgdata:

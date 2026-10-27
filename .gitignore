@@ -20,3 +20,6 @@ data/private/
 lexiread-backup*.json
 .DS_Store
 node_modules/
+
+# Original incoming archive is local; the validated compact release is tracked.
+lexiread_reading_vocab_v3_20261026.zip

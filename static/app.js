@@ -339,7 +339,7 @@ function toeicModeCard(mode,items){
 }
 async function toeicPage(epoch,part=''){
   const data=await api('/toeic/');if(epoch!==state.routeEpoch)return;
-  $('#main').innerHTML=`<section class="toeic-hero"><div><span class="toeic-kicker">TOEIC READING</span><h1>Tự tin hơn,<br>qua từng bài luyện.</h1><p>Từ câu ngắn đến email và thông báo. Chọn một Part, luyện vừa sức và hiểu vì sao đáp án đúng.</p><a class="link-btn" href="#guides/toeic">Xem cách làm từng Part →</a></div><img src="/static/illustrations/toeic-desk.svg" width="640" height="420" alt="Bạn thỏ đang học cùng laptop, thư và chậu cây bên cửa sổ" decoding="async"></section>
+  $('#main').innerHTML=`<section class="toeic-hero"><div><span class="toeic-kicker">TOEIC READING</span><h1>Tự tin hơn,<br>qua từng bài luyện.</h1><p>Từ câu ngắn đến email và thông báo. Chọn một Part, luyện vừa sức và hiểu vì sao đáp án đúng.</p><div class="button-row"><a class="link-btn" href="#guides/toeic">Xem cách làm từng Part →</a><a class="btn secondary" href="#practice-tests">Khám phá bộ luyện Reading →</a></div></div><img src="/static/illustrations/toeic-desk.svg" width="640" height="420" alt="Bạn thỏ đang học cùng laptop, thư và chậu cây bên cửa sổ" decoding="async"></section>
     <nav class="toeic-parts" aria-label="Chọn Part TOEIC">${[[5,'Ngữ pháp & từ vựng','Chọn từ đúng cho câu.','school'],[6,'Hoàn thành văn bản','Nối ý, hiểu cả đoạn.','work'],[7,'Đọc hiểu văn bản','Tìm thông tin và suy luận.','reading']].map(([p,t,d,art])=>`<a href="#toeic/${p}" ${String(p)===part?'aria-current="page"':''}><img src="${window.LexiLibrary.artwork[art]}" width="640" height="360" alt="" loading="lazy"><div><span>Part ${p}</span><strong>${t}</strong><p>${d}</p></div></a>`).join('')}</nav><div data-toeic-library></div><details class="toeic-about"><summary>Về các bài luyện TOEIC</summary><p>Bài luyện kỹ năng do LexiRead biên soạn, không phải đề ETS chính thức và không quy đổi điểm TOEIC.</p><a class="link-btn" href="#resources/toeic">Xem tài liệu chính thức từ ETS ↗</a></details>`;
   window.LexiHub.toeicCatalog($('[data-toeic-library]'),data.items,part);
 }
@@ -387,7 +387,7 @@ async function route(){
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
-  const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page;
+  const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page==='practice-tests'?'catalog':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
   $('#page-label').textContent=({learn:({plan:'Lộ trình học',grammar:'Học ngữ pháp',verbs:'Động từ bất quy tắc',tenses:'Các thì trong tiếng Anh',vocabulary:'Từ vựng theo chủ đề',dictionary:'Từ điển',sources:'Tài liệu tham khảo'})[id]||'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
@@ -396,6 +396,7 @@ async function route(){
     else if((page==='grammar'||page==='collection')&&id){await window.LexiAcademy.detail($('#main'),page==='grammar'?'grammar':'vocabulary',id,epoch);}
     else if(page==='reading'&&id)await readerPage(id,epoch);
     else if(page==='catalog')await catalogPage(epoch);
+    else if(page==='practice-tests')await practiceGroupsPage(epoch);
     else if(page==='ielts')await ieltsPage(epoch,id||'');
     else if(page==='lesson'&&id)await lessonRoute(id,epoch);
     else if(page==='toeic')await toeicPage(epoch,id||'');
@@ -408,7 +409,7 @@ async function route(){
     else if(page==='toeic-set'&&id)await toeicSetPage(id,epoch);
     else if(page==='readings')await readingsPage(epoch);
     else if(page==='vocabulary')await vocabPage(epoch);
-    else if(page==='word-import'){window.LexiDecks.page($('#main'));$('#page-label').textContent='Tạo bộ từ của bạn';}
+    else if(page==='word-import'){window.LexiDecks.page($('#main'));$('#page-label').textContent='Nhập bộ từ cá nhân';}
     else if(page==='study')renderStudy();
     else if(page==='analytics')await analyticsPage(epoch);
     else if(page==='settings')settingsPage();

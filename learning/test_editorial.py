@@ -245,9 +245,9 @@ class EditorialTests(TestCase):
         self.assertTrue(result['has_more'])
 
     def test_full_supplied_dataset_converts_without_dropping_questions_or_vocab(self):
-        path=settings.BASE_DIR/'lexiread_data_v1/data/lessons.json'
-        if not path.exists(): self.skipTest('Optional incoming dataset not installed')
-        source=json.loads(path.read_text(encoding='utf-8'))
+        from learning.services.content_release import load_release
+        source,manifest=load_release()
+        source={**source,'lessons':[l for l in source['lessons'] if l['id'] in manifest['legacy_ids']]}
         converted=[]
         for kind,count in [('lesson',42),('toeic',18)]:
             rows=read_package(self.upload(source),kind,{})

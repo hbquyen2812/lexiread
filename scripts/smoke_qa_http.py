@@ -43,8 +43,8 @@ def main():
         assert client.get('/account/').status_code==200
         for kind in ('grammar','vocabulary'):
             units=client.get('/api/learn/overview/',params={'kind':kind}).json()['items']
-            assert len(units)==(36 if kind=='grammar' else 30)
-            assert {row['level'] for row in units}=={'A1','A2','B1','B2','C1','C2'}
+            assert len(units)==(36 if kind=='grammar' else 516)
+            assert {row['level'] for row in units}==({'A1','A2','B1','B2','C1','C2'} | ({'pre-A1'} if kind=='vocabulary' else set()))
             detail=client.get(f'/api/learn/{kind}/{units[0]["id"]}/').json()
             assert all('answer' not in question for question in detail['questions'])
         assert len(client.get('/api/learn/sources/').json()['items'])==40
@@ -75,7 +75,7 @@ def main():
         general=client.get('/api/catalog/?track=general').json()
         ielts=client.get('/api/catalog/?track=ielts').json()
         toeic=client.get('/api/toeic/').json()
-        assert (general['total'],ielts['total'],len(toeic['items']))==(54,25,32)
+        assert (general['total'],ielts['total'],len(toeic['items']))==(354,97,86)
         filtered=client.get('/api/catalog/?track=ielts&kind=gap_fill&limit=5').json()
         assert filtered['total']>=10 and len(filtered['items'])==5
         assert all('gap_fill' in row['question_types'] for row in filtered['items'])
@@ -106,8 +106,8 @@ def main():
         assert artwork.status_code == 200 and artwork.content[:4] == b'RIFF'
         assert client.post('/logout/',headers=csrf).status_code==302
         assert client.get('/api/bootstrap/').status_code==401
-    print('PASS QA HTTP: login/logout, profile/password pages, 54 general + 25 IELTS + 32 TOEIC, guides, question-type filter, English-only label, private answers, word patterns, backup, official resource JSON, self-hosted fonts and brand assets.')
-    print('PASS QA HTTP: 36 grammar lessons, 30 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
+    print('PASS QA HTTP: login/logout, profile/password pages, 354 general + 97 IELTS + 86 TOEIC, guides, question-type filter, English-only label, private answers, word patterns, backup, official resource JSON, self-hosted fonts and brand assets.')
+    print('PASS QA HTTP: 36 grammar lessons, 516 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
 
 
 if __name__=='__main__': main()
