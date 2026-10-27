@@ -217,7 +217,9 @@ function testReaderVisibility() {
   // Execute the production renderer and its text helper, without booting the SPA.
   vm.runInContext(app.slice(app.indexOf('function escapeRegex('), app.indexOf('async function readerPage(')), scope);
   vm.runInContext(app.slice(app.indexOf('function renderReader('), app.indexOf('async function vocabPage(')), scope);
-  const main = new RootStub(), content = new RootStub(), extraTabs = [];
+  const dom = require('./dom_test_env.cjs').environment();
+  scope.window.LexiDOM = dom.window.LexiDOM;
+  const main = dom.window.document.createElement('div'), content = dom.window.document.createElement('div'), extraTabs = [];
   env.elements.set('#main', main); env.elements.set('#reader-content', content);
   scope.readingExtraTab = (_box, reading) => extraTabs.push([scope.state.readingTab, reading.id]);
   const fixture = () => ({id: 'reader-1', title: 'A short reading', catalog_slug: 'short-reading', word_count: 12,

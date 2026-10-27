@@ -1,12 +1,13 @@
 /* Exercise the real reading renderer/action with combined filters and pagination. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const dom=require('./dom_test_env.cjs').environment();
 const fields=new Map(Object.entries({
-  '#main':{innerHTML:''}, '#catalog-search':{value:'  garden  '},
+  '#main':dom.window.document.querySelector('main'), '#catalog-search':{value:'  garden  '},
   '#catalog-topic':{value:'nature'}, '#catalog-favorite':{value:'yes'},
   '#catalog-kind':{value:'tfng'}, '#main .progress-tabs [aria-pressed=true]':{focus(){}}
 }));
 const requests=[];
-const scope={window:{LexiLibrary:{cover:()=>'',levelPicker:()=>'',topicLabel:x=>x,savedLevel:()=>'',saveLevel:x=>x}},
+const scope={window:{LexiDOM:dom.window.LexiDOM,LexiLibrary:{cover:()=>'',levelPicker:()=>'',topicLabel:x=>x,savedLevel:()=>'',saveLevel:x=>x}},
   document:{addEventListener(){}},URLSearchParams,
   state:{routeEpoch:0,libraryTrack:'ielts',ieltsFilters:{level:'B1',status:'started',page:3}},
   $:selector=>fields.get(selector),esc:s=>String(s??'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])),
