@@ -42,11 +42,9 @@ function walkJSON(value,file){
 const files=['grammar_lessons.json','grammar_reference.json','strategy_guides.json','study_sources.json','learning_channels.json','vocabulary_collections.json'];
 for(const file of files)walkJSON(JSON.parse(fs.readFileSync(path.join(root,'data',file),'utf8')),'data/'+file);
 for(const dir of ['lessons','toeic'])for(const file of fs.readdirSync(path.join(root,'data',dir)).filter(n=>n.endsWith('.json')))walkJSON(JSON.parse(fs.readFileSync(path.join(root,'data',dir,file),'utf8')),`data/${dir}/${file}`);
-// The imported public pack also supplies live exercise descriptions and feedback.
-// Read the tracked copy when that optional export is absent; never restore or edit it.
-const pack='lexiread_data_v1/data/lessons.json';
-const packText=fs.existsSync(path.join(root,pack))?fs.readFileSync(path.join(root,pack),'utf8'):
-  require('node:child_process').execFileSync('git',['show','HEAD:'+pack],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});
+// The versioned runtime pack replaces the optional v1 export.
+const pack='data/content_packs/v3/lessons.json.gz';
+const packText=require('node:zlib').gunzipSync(fs.readFileSync(path.join(root,pack))).toString('utf8');
 walkJSON(JSON.parse(packText),pack);
 const output=process.argv[2]||path.join(root,'data/private/localization-build/sources.json');
 fs.mkdirSync(path.dirname(output),{recursive:true});

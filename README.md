@@ -21,3 +21,5 @@ Staff can import documents/JSON, preview, save drafts, edit, publish and export 
 Django/PostgreSQL source + standalone `preview.html`. No secret keys included. The server edition has a public feature/lesson catalog, while learning actions require email login and stay isolated per account. Offline HTML cannot call AI; manual prompt/JSON import is supported. Review includes a daily goal, streak, learning buckets and a weak-word group. The server edition includes first-party traffic analytics for administrators without storing IP addresses or loading third-party trackers.
 
 Current verification and limitations: [foundation learning review](docs/FOUNDATION_LEARNING_REVIEW.md). Earlier reports describe their respective revisions. These local changes have not been deployed to Render.
+
+V3 content is bundled offline: 486 reading units, 3,240 reading questions and 3,572 vocabulary contexts, with additive database seeding. See [the v3 import notes](docs/CONTENT_V3.md).

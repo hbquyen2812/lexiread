@@ -1,22 +1,19 @@
 /* DOM + speech-engine contract tests; no network, browser or paid service. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-const {parseHTML}=require('linkedom');
+const {JSDOM}=require('jsdom');
+const {installSafeDOM}=require('./dom_test_env.cjs');
 const source=fs.readFileSync('static/read_aloud.js','utf8');
 const english={voiceURI:'local-us',name:'English US',lang:'en-US',localService:true,default:true};
 const british={voiceURI:'local-uk',name:'English UK',lang:'en-GB',localService:true};
 const remote={voiceURI:'remote',name:'Cloud',lang:'en-US',localService:false};
 const french={voiceURI:'fr',name:'French',lang:'fr-FR',localService:true};
 function setup({voices=[english,british,remote,french],supported=true,saved=null,blockedStorage=false}={}) {
-  const {window:dom}=parseHTML('<html><body><main><div id="audio"></div><p id="one" lang="en">A morning walk helps me think.</p><p id="two" lang="en">I like to walk beside the river.</p><p class="reader-vi">Tôi thích đi bộ.</p></main></body></html>');
-  // linkedom exposes select.value as read-only; emulate the browser setter.
-  Object.defineProperty(dom.HTMLSelectElement.prototype,'value',{configurable:true,
-    get(){return [...this.options].find(o=>o.selected)?.value || this.options[0]?.value || '';},
-    set(value){for(const option of this.options)option.removeAttribute('selected');const selected=[...this.options].find(o=>o.value===String(value));if(selected)selected.setAttribute('selected','');}});
+  const {window:dom}=new JSDOM('<html><body><main><div id="audio"></div><p id="one" lang="en">A morning walk helps me think.</p><p id="two" lang="en">I like to walk beside the river.</p><p class="reader-vi">Tôi thích đi bộ.</p></main></body></html>');
   const {document}=dom,timers=new Map(),storage=new Map(saved?[['lexiread.readAloud',saved]]:[]),windowListeners={},voiceListeners=new Set();
   let timerId=0,cancels=0;
   const spoken=[],synth={getVoices:()=>voices,speak:u=>spoken.push(u),cancel(){cancels++;},
     addEventListener:(name,fn)=>voiceListeners.add(fn),removeEventListener:(name,fn)=>voiceListeners.delete(fn)};
-  const win={LexiI18n:{language:'vi'},addEventListener:(name,fn)=>(windowListeners[name]??=[]).push(fn)};
+  const win={LexiDOM:installSafeDOM(dom),LexiI18n:{language:'vi'},addEventListener:(name,fn)=>(windowListeners[name]??=[]).push(fn)};
   if(supported){win.speechSynthesis=synth;win.SpeechSynthesisUtterance=class{constructor(text){this.text=text;}};}
   const scope={window:win,document,MutationObserver:dom.MutationObserver,
     setTimeout:(fn,delay)=>{const id=++timerId;timers.set(id,{fn,delay});return id;},clearTimeout:id=>timers.delete(id),

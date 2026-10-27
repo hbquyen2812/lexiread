@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-27",
+  "branch": "codex/v3-library-interface",
+  "data": {
+    "release_units": 486,
+    "reading_questions": 3240,
+    "vocabulary_contexts_and_questions": 3572,
+    "legacy_ids_retained": 60,
+    "legacy_passages_unchanged": 60,
+    "full_test_groups": 12,
+    "short_practice_groups": 90,
+    "external_resource_links": 146,
+    "qa_totals": {
+      "general": 354,
+      "ielts": 97,
+      "toeic": 86,
+      "vocabulary_collections": 516
+    }
+  },
+  "tests": {
+    "postgresql_django": {
+      "passed": 151,
+      "skipped": 0
+    },
+    "subsequent_related_postgresql": {
+      "passed": 17,
+      "skipped": 0
+    },
+    "node_suites_passed": 15,
+    "python_unittest": {
+      "passed": 112,
+      "skipped": 1,
+      "reason": "optional reportlab missing on Windows"
+    },
+    "http_smoke": "passed before and after QA database restart",
+    "build_preview": "passed",
+    "diff_check": "passed"
+  },
+  "browser": {
+    "viewport_widths": [
+      1265,
+      390,
+      320
+    ],
+    "checks": [
+      "Dashboard and language control have no horizontal overflow",
+      "File upload, preview, deselect one word and save one word to QA account succeeded",
+      "516 vocabulary decks paginate to 12 cards; pre-A1 filter returns 4 decks",
+      "21 broad category filters replace 491 individual topic labels",
+      "TOEIC full Part 7 shows 54 questions in 13 groups with 21 documents",
+      "Vocabulary quiz stays hidden until requested and does not expose answers",
+      "vi to en to vi switches importer headings; 320px French dashboard fits",
+      "No captured console warnings or errors"
+    ],
+    "screenshots": [
+      "v3-dashboard-desktop.png",
+      "v3-dashboard-mobile.png",
+      "v3-import-desktop.png",
+      "v3-import-mobile.png"
+    ]
+  },
+  "qa_database": {
+    "before": "Former tmpfs database was empty: 0 public tables after Docker shutdown",
+    "after": "Dedicated qa_pgdata volume; counts and accounts survived restart; repeated v3 seed added zero rows",
+    "production_touched": false
+  },
+  "limits": [
+    "Original AI-authored practice, not independently teacher-reviewed or official exam papers",
+    "Full tests are browsed and practised section by section",
+    "V3 explanations are in Vietnamese; existing locale catalog does not cover every new explanation"
+  ]
+}

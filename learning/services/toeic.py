@@ -24,7 +24,7 @@ def validate_toeic_set(raw):
     expected=set(parts) if isinstance(parts,list) and all(type(p) is int for p in parts) else set()
     if not expected or (mode=='parts-5-6' and not expected<={5,6}) or (mode=='part-7' and expected!={7}):raise InputError('Phần thi không khớp chế độ TOEIC.')
     documents=raw.get('documents',[])
-    if not isinstance(documents,list) or len(documents)>10:raise InputError('Danh sách văn bản TOEIC không hợp lệ.')
+    if not isinstance(documents,list) or len(documents)>40:raise InputError('Danh sách văn bản TOEIC không hợp lệ.')
     clean_documents=[];document_ids=set()
     for doc in documents:
         if not isinstance(doc,dict):raise InputError('Văn bản TOEIC không hợp lệ.')

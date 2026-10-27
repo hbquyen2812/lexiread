@@ -128,6 +128,8 @@ def get_unit(kind, unit_id):
 
 def questions_for(unit, kind):
     if kind=='grammar':return copy.deepcopy(unit['questions'])
+    if unit.get('questions'):
+        return copy.deepcopy(validate_questions(unit['questions']))
     words=unit['words']; questions=[]
     for i,w in enumerate(words):
         distractors=[words[(i+j)%len(words)]['meaning_vi'] for j in (1,2,3)]
@@ -158,7 +160,11 @@ def grade(snapshot, answers):
 
 
 def summary(unit, kind):
+    categories={'everyday_english':'Everyday English','focused_practice':'Reading Skills',
+                'ielts_academic':'IELTS Academic','ielts_general':'IELTS General Training','toeic':'TOEIC',
+                'school_primary':'School English','school_lower_secondary':'School English','school_upper_secondary':'School English'}
     return {k:unit[k] for k in ('id','title','level','tags','topic') if k in unit} | {
+        'category':categories.get(unit.get('track'),unit.get('topic','')),
         'description':unit.get('summary',unit.get('description','')),
         'minutes':unit.get('minutes',8), 'question_count':len(questions_for(unit,kind)),
         'word_count':len(unit.get('words',[]))}
@@ -167,5 +173,6 @@ def summary(unit, kind):
 def word_entry(word, unit):
     return {'word':word['word'],'meaning_vi':word['meaning_vi'],'pos':word['part_of_speech'],
             'example':word['example'],'example_vi':word['example_translation'],'usage_pattern':word['usage_pattern'],
+            'context':word.get('context',''),
             'source_label':'LexiRead · '+unit['title'],'tags':[unit['title'],unit['level']],
             'origin':'curated','verified':False}

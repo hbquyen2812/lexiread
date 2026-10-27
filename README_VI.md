@@ -10,7 +10,6 @@ Bộ mã nguồn dành cho Huỳnh Bảo Quyên. Dự án riêng, không sửa h
 
 ## Bản 2: đọc hiểu, TOEIC và ôn từ trong một luồng
 
-**Thư viện đi kèm** có 27 bài: 24 tổng quát A1–C1 và 3 bài luyện kỹ năng IELTS, mức độ ước lượng. **TOEIC** có hai hướng Part 5–6 và Part 7, ban đầu 2 bộ/24 câu/16 mục từ. Nội dung chung ở PostgreSQL, thêm qua `/admin/` không sửa code. Bộ `lexiread_data_v1` nhập được 42 bài đọc nháp + 18 bộ TOEIC nháp, chưa tự xuất bản. **Bài đọc của tôi** vẫn riêng từng người.
 
 Giao diện chính chọn Việt (mặc định), Anh, Pháp, Trung giản thể. Giữ nguyên bài tiếng Anh và giải nghĩa Việt; một số nhãn cũ vẫn tiếng Việt. Xem [quy trình nội dung](docs/LESSON_AUTHORING.md) và [kiểm thử cập nhật](docs/EDITORIAL_UPDATE_QA.md).
 
@@ -370,3 +369,7 @@ Base Compose chỉ bind localhost. Overlay production đã có Caddy/HTTPS, cook
 
 **Nguồn tài liệu chính thức:** `docs/SOURCES.md`. **Lưu ý từ vựng:** `docs/VOCAB_NOTES.md`. **Kết quả kiểm thử thực tế:** `docs/TEST_REPORT.md`.
 > Tài khoản mới: đăng ký bằng username, sửa hồ sơ, đổi mật khẩu và khôi phục qua email — xem [hướng dẫn cấu hình mail](docs/ACCOUNT_SETUP.md). Không bắt OTP; SMS chưa bật. Tính năng gửi mail thật cần cấu hình sender và API key trên máy chủ.
+
+## Nội dung v3
+
+Bản triển khai tự nạp 486 bài/phần Reading và 486 bộ từ theo ngữ cảnh bằng `seed_content_v3`. Gói được lưu gọn trong `data/content_packs/v3`; không cần ZIP hay thư mục v1. Nhập lại chỉ thêm mục chưa có, giữ nội dung đã biên tập và tiến độ cá nhân. Xem `docs/CONTENT_V3.md`.

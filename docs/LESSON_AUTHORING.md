@@ -16,14 +16,14 @@ Không xóa bài seed chỉ để ẩn: lần khởi động sau có thể thêm
 
 ## Định dạng
 
-- **JSON:** một bài, danh sách 1–100 bài, gói xuất từ admin hoặc `lexiread_data_v1/data/lessons.json`.
+- **JSON:** một bài, danh sách 1–100 bài, gói xuất từ admin hoặc gói JSON cùng cấu trúc.
 - **TXT/MD UTF-8, DOCX, PDF có lớp chữ:** tạo bài đọc nháp. Điền slug, tên, trình độ, chủ đề trong form. Không tự sinh bản dịch/đáp án. PDF tối đa 30 trang; chưa có OCR.
 - Tối đa 8 MB/file; bài đọc tối đa 60.000 ký tự. Không nhận ZIP, SQL hoặc URL fetch.
 - **Xuất:** chọn tối đa 100 bài → action Xuất JSON. File chứa đáp án và metadata quản trị; không đưa vào `static/`.
 
 Gói xuất có `format: "lexiread-content"`, `version: 1`, `kind: "lesson"` hoặc `"toeic"`, và `items` là danh sách bài. Xuất một bài hiện có để lấy mẫu; xem thêm `data/lessons/a-quiet-start.json`, `data/toeic/`.
 
-## Bộ lexiread_data_v1
+## Gói bài học nguyên bản
 
 Không chạy SQL của gói: schema đó tách rời, website không tự đọc được. Adapter `learning/editorial/dataset.py` ánh xạ vào models hiện tại.
 
@@ -77,11 +77,13 @@ Backup học tập v4 vẫn tương thích bản cũ; lượt TOEIC mới kèm s
 
 ```powershell
 # Chỉ kiểm tra; không ghi database
-python manage.py import_content lexiread_data_v1/data/lessons.json --kind lesson
-python manage.py import_content lexiread_data_v1/data/lessons.json --kind toeic
+python manage.py import_content path/to/lessons.json --kind lesson
+python manage.py import_content path/to/lessons.json --kind toeic
 
 # Lưu nháp trên database đã xác nhận là đích cần nhập
-python manage.py import_content lexiread_data_v1/data/lessons.json --kind lesson --apply --editor YOUR_ADMIN_USERNAME
+python manage.py import_content path/to/lessons.json --kind lesson --apply --editor YOUR_ADMIN_USERNAME
 ```
 
 Không cần terminal Render để thêm bài: upload qua `/admin/` là luồng chính. `seed_lessons` / `seed_toeic` chỉ bootstrap bài đi kèm, mặc định không ghi đè. `seed_lessons --update` chỉ nhận revision cao hơn. Các script `author_lessons.py` / `author_expansion.py` tái tạo seed, không chạy lại sau khi tự sửa file mà chưa backup. `preview.html` chỉ đóng gói seed công khai, không đồng bộ admin/bài nháp.
+
+Gói v3 đi kèm dùng `python manage.py seed_content_v3 --check` để kiểm tra và `python manage.py seed_content_v3` để nạp. Xem `CONTENT_V3.md`; không cần thư mục v1.

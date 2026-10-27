@@ -19,7 +19,7 @@ html=re.sub(r"({% static '[^']+' %})\?v=[^\"]+",r'\1',html)
 html=html.replace("{% include 'language_switcher.html' %}",(root/'templates/language_switcher.html').read_text(encoding='utf-8'))
 html=html.replace('{{ strategy_guides|json_script:"strategy-guides-data" }}','<script id="strategy-guides-data" type="application/json">'+json.dumps(strategy_guides(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
 html=html.replace('{{ topic_labels|json_script:"topic-labels-data" }}','<script id="topic-labels-data" type="application/json">'+json.dumps(topic_labels(),ensure_ascii=False).replace('<','\\u003c')+'</script>')
-for script in ('pronunciation','read_aloud','learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods','dictionary','topic_vocabulary'):
+for script in ('vendor/purify.min','safe_dom','pronunciation','read_aloud','learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods','dictionary','topic_vocabulary'):
     html=html.replace('<script src="{% static \''+script+'.js\' %}" defer></script>','<script>'+(root/f'static/{script}.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'read_aloud.css\' %}">','<style>'+(root/'static/read_aloud.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'learning_hub.css\' %}">','<style>'+(root/'static/learning_hub.css').read_text(encoding='utf-8')+'</style>')
@@ -40,6 +40,7 @@ html=html.replace('<link rel="stylesheet" href="{% static \'resources.css\' %}">
 html=html.replace('<link rel="icon" href="{% static \'favicon.svg\' %}" type="image/svg+xml">','<link rel="icon" href="data:image/svg+xml;base64,'+base64.b64encode((root/'static/favicon.svg').read_bytes()).decode()+'" type="image/svg+xml">')
 html=html.replace('<link rel="stylesheet" href="{% static \'responsive.css\' %}">','<style>'+(root/'static/responsive.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'motivation.css\' %}">','<style>'+(root/'static/motivation.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace('<link rel="stylesheet" href="{% static \'workspace.css\' %}">','<style>'+(root/'static/workspace.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'brand.css\' %}">','<style>'+(root/'static/brand.css').read_text(encoding='utf-8')+'</style>')
 library=(root/'static/library.js').read_text(encoding='utf-8')
 artwork={key:'data:image/svg+xml;base64,'+base64.b64encode((root/f'static/illustrations/{key}.svg').read_bytes()).decode() for key in ART_TOPICS}

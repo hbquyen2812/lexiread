@@ -12,7 +12,7 @@ learning/
     admin.py                  nhập → xem trước → xác nhận, xuất JSON
     forms.py                  biên tập, kiểm tra phiên bản sửa
     services.py               quyền, atomic import, audit
-    dataset.py                adapter lexiread_data_v1
+    dataset.py                adapter gói bài đọc v1/v3
   services/
     catalog.py, toeic.py       validation/scoring thuần
     toeic_repository.py       TOEIC runtime từ database
@@ -25,7 +25,7 @@ config/test_settings.py      test SQLite tách biệt, không đọc .env
 
 Cấu trúc Django này phù hợp quy mô hiện tại. JSONB cho một bài có phiên bản không phải thiết kế sai; người dùng, bài học, từ và lượt học vẫn relational. Đã tách biên tập khỏi views và tách TOEIC repository khỏi validator. `views.py` / `static/app.js` còn nhiều trách nhiệm, nên tách theo tính năng khi tiếp tục mở rộng; chưa cần microservices hay database thứ hai.
 
-`lexiread_data_v1/` là bộ nguồn người dùng đưa vào, giữ nguyên, không phải schema runtime. Các CSV/SQL/JSONL lặp lại không đi vào Docker image; upload JSON gốc qua admin. Không xóa dữ liệu riêng hoặc backup để làm thư mục trông gọn.
+`data/content_packs/v3/` là gói runtime có checksum, được nhập bổ sung qua `seed_content_v3`. Nó thay thế thư mục nguồn v1; giữ slug của 60 bài cũ. ZIP gốc được giữ cục bộ, các CSV/SQL/JSONL lặp lại không đi vào Docker image. Không thay đổi dữ liệu riêng hay backup. Xem `CONTENT_V3.md`.
 
 Import kiểm tra 8 MB/100 bài, staff+model permissions, CSRF, owner, hết hạn, khóa hàng và phiên bản kỳ vọng. Ghi batch trong transaction, audit bằng LogEntry. Draft chưa đủ dịch/câu hỏi bị chặn khi publish. `track` có index; API lọc trạng thái/yêu thích trước phân trang.
 
