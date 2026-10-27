@@ -396,6 +396,224 @@ legacy.push(
 ['Cách làm bài →','Test tips →','Conseils pour le test →','答题方法 →'],
 ['Tìm đề theo tên…','Search tests by title…','Rechercher un test par titre…','按名称查找练习…'],
 ['Khác','Other','Autres','其他']);
+legacy.push(...[
+  [
+    "Lọc từ trong bài đọc, tạo bộ riêng và ôn lại mỗi ngày.",
+    "Extract words from a reading, build a personal deck and review daily.",
+    "Relevez les mots d’un texte, créez votre liste et révisez chaque jour.",
+    "从阅读中筛选词汇，创建个人词汇集并每天复习。"
+  ],
+  [
+    "Tạo prompt cho AI",
+    "Create an AI prompt",
+    "Créer un prompt pour l’IA",
+    "生成 AI 提示词"
+  ],
+  [
+    "Ví dụ: Từ mới trong bài The Future of Work",
+    "Example: Words from The Future of Work",
+    "Exemple : Mots de The Future of Work",
+    "例如：The Future of Work 中的生词"
+  ],
+  [
+    "Nguồn từ vựng",
+    "Vocabulary source",
+    "Source du vocabulaire",
+    "词汇来源"
+  ],
+  [
+    "Từ bài đọc",
+    "From a reading",
+    "À partir d’un texte",
+    "从阅读中筛选"
+  ],
+  [
+    "Theo chủ đề",
+    "By topic",
+    "Par thème",
+    "按主题生成"
+  ],
+  [
+    "Bài đọc tiếng Anh",
+    "English reading passage",
+    "Texte en anglais",
+    "英语阅读文章"
+  ],
+  [
+    "Dán bài đọc bạn muốn lọc từ vào đây…",
+    "Paste the reading you want to extract words from…",
+    "Collez le texte dont vous souhaitez relever les mots…",
+    "在此粘贴要筛选词汇的文章…"
+  ],
+  [
+    "AI sẽ chọn từ trong bài và giữ lại câu gốc để bạn ôn theo ngữ cảnh.",
+    "The AI will select words from the reading and keep the original sentences for context.",
+    "L’IA sélectionnera les mots du texte et conservera les phrases originales pour le contexte.",
+    "AI 会筛选文章中的词汇，并保留原句供你结合语境复习。"
+  ],
+  [
+    "Mức từ vựng tối thiểu",
+    "Minimum vocabulary level",
+    "Niveau minimum du vocabulaire",
+    "词汇最低级别"
+  ],
+  [
+    "Số từ tối đa",
+    "Maximum number of words",
+    "Nombre maximum de mots",
+    "词汇数量上限"
+  ],
+  [
+    "Ví dụ: chọn B1 trở lên để học cả từ B1, B2, C1 và C2. Nếu bài có ít từ phù hợp, bộ từ sẽ ngắn hơn.",
+    "For example, B1 and above includes B1, B2, C1 and C2. A reading with fewer suitable words will produce a shorter deck.",
+    "Par exemple, B1 et plus inclut B1, B2, C1 et C2. Si le texte contient moins de mots adaptés, la liste sera plus courte.",
+    "例如，B1 及以上包含 B1、B2、C1 和 C2。文章中符合条件的词较少时，词汇集也会更短。"
+  ],
+  [
+    "LexiRead chỉ tạo prompt. Bạn tự dán vào AI mình đang dùng để lấy kết quả.",
+    "LexiRead creates the prompt. Paste it into your AI tool to get the result.",
+    "LexiRead crée le prompt. Collez-le dans votre outil IA pour obtenir le résultat.",
+    "LexiRead 只生成提示词。请将其粘贴到你使用的 AI 工具中获取结果。"
+  ],
+  [
+    "Nhập kết quả từ AI",
+    "Import the AI result",
+    "Importer le résultat de l’IA",
+    "导入 AI 结果"
+  ],
+  [
+    "Dán prompt vừa sao chép vào AI bạn đang dùng và gửi.",
+    "Paste the copied prompt into your AI tool and send it.",
+    "Collez le prompt dans votre outil IA et envoyez-le.",
+    "将复制的提示词粘贴到你使用的 AI 工具中并发送。"
+  ],
+  [
+    "Tải file JSON AI trả về, hoặc sao chép toàn bộ khối JSON.",
+    "Download the JSON file from the AI, or copy the entire JSON block.",
+    "Téléchargez le fichier JSON fourni par l’IA ou copiez tout le bloc JSON.",
+    "下载 AI 返回的 JSON 文件，或复制完整的 JSON 内容。"
+  ],
+  [
+    "Chọn file hoặc dán JSON bên dưới, rồi bấm Xem trước bộ từ.",
+    "Choose the file or paste the JSON below, then preview the deck.",
+    "Choisissez le fichier ou collez le JSON ci-dessous, puis affichez l’aperçu.",
+    "在下方选择文件或粘贴 JSON，然后预览词汇集。"
+  ],
+  [
+    "Đã có file bộ từ? Bạn có thể bắt đầu ngay ở bước này.",
+    "Already have a vocabulary file? You can start at this step.",
+    "Vous avez déjà un fichier de vocabulaire ? Commencez à cette étape.",
+    "已有词汇文件？可以直接从这一步开始。"
+  ],
+  [
+    "3. Xem lại và lưu bộ từ",
+    "3. Review and save your deck",
+    "3. Vérifier et enregistrer la liste",
+    "3. 检查并保存词汇集"
+  ],
+  [
+    "Sau khi xem trước, bỏ chọn từ bạn không muốn học rồi bấm Lưu bộ từ vào kho của tôi. Chọn Ôn bộ từ này để bắt đầu.",
+    "In the preview, deselect unwanted words and save the deck to your library. Choose Review this deck to begin.",
+    "Dans l’aperçu, décochez les mots inutiles et enregistrez la liste dans votre bibliothèque. Lancez ensuite la révision de cette liste.",
+    "预览时取消勾选不想学习的词，再将词汇集保存到词库。选择复习此词汇集即可开始。"
+  ],
+  [
+    "Khám phá bộ từ có sẵn →",
+    "Explore existing decks →",
+    "Explorer les listes disponibles →",
+    "浏览现有词汇集 →"
+  ],
+  [
+    "Bạn đặt tên bộ từ trước nhé, tối đa 100 ký tự.",
+    "Enter a deck name of up to 100 characters.",
+    "Saisissez un nom de liste de 100 caractères maximum.",
+    "请先输入词汇集名称，最多 100 个字符。"
+  ],
+  [
+    "Bạn chọn lại mức từ vựng và số từ nhé.",
+    "Please select the vocabulary level and word count again.",
+    "Sélectionnez à nouveau le niveau et le nombre de mots.",
+    "请重新选择词汇级别和数量。"
+  ],
+  [
+    "Bạn chọn lấy từ từ bài đọc hoặc theo chủ đề nhé.",
+    "Choose a reading or a topic as the source.",
+    "Choisissez un texte ou un thème comme source.",
+    "请选择从文章中筛选或按主题生成。"
+  ],
+  [
+    "Bạn dán bài đọc tiếng Anh vào bước 1 trước nhé.",
+    "Paste the English reading into step 1 first.",
+    "Collez d’abord le texte anglais à l’étape 1.",
+    "请先在第 1 步粘贴英语文章。"
+  ],
+  [
+    "Bài đọc quá dài. Bạn chia thành các phần dưới 20.000 ký tự nhé.",
+    "The reading is too long. Split it into sections under 20,000 characters.",
+    "Le texte est trop long. Divisez-le en parties de moins de 20 000 caractères.",
+    "文章过长，请分成每段少于 20,000 个字符的部分。"
+  ],
+  [
+    "Bạn điền chủ đề trước nhé, tối đa 200 ký tự.",
+    "Enter a topic of up to 200 characters.",
+    "Saisissez un thème de 200 caractères maximum.",
+    "请先填写主题，最多 200 个字符。"
+  ],
+  [
+    "Đã sao chép prompt kèm nội dung bạn chọn. Dán vào AI, rồi mang kết quả về bước 2 nhé.",
+    "Prompt and source copied. Paste them into your AI tool, then bring the result to step 2.",
+    "Prompt et contenu copiés. Collez-les dans votre outil IA, puis importez le résultat à l’étape 2.",
+    "已复制提示词及所选内容。粘贴到 AI 工具中，再回到第 2 步导入结果。"
+  ],
+  [
+    "File chưa đúng mẫu bộ từ LexiRead. Bạn tải mẫu ở bước 2 để đối chiếu nhé.",
+    "The file does not match the LexiRead format. Download the sample in step 2 to compare.",
+    "Le fichier ne suit pas le format LexiRead. Téléchargez le modèle à l’étape 2 pour comparer.",
+    "文件不符合 LexiRead 格式，请下载第 2 步的示例进行对照。"
+  ],
+  [
+    "Chưa đọc được file. Hãy dùng đúng khối JSON hoặc file mẫu ở bước 2.",
+    "Could not read the file. Use the complete JSON block or the sample from step 2.",
+    "Impossible de lire le fichier. Utilisez le bloc JSON complet ou le modèle de l’étape 2.",
+    "无法读取文件，请使用完整的 JSON 或第 2 步的示例文件。"
+  ],
+  [
+    "A1 trở lên",
+    "A1 and above",
+    "A1 et plus",
+    "A1 及以上"
+  ],
+  [
+    "A2 trở lên",
+    "A2 and above",
+    "A2 et plus",
+    "A2 及以上"
+  ],
+  [
+    "B1 trở lên",
+    "B1 and above",
+    "B1 et plus",
+    "B1 及以上"
+  ],
+  [
+    "B2 trở lên",
+    "B2 and above",
+    "B2 et plus",
+    "B2 及以上"
+  ],
+  [
+    "C1 trở lên",
+    "C1 and above",
+    "C1 et plus",
+    "C1 及以上"
+  ],
+  [
+    "C2 trở lên",
+    "C2 and above",
+    "C2 et plus",
+    "C2 及以上"
+  ]
+]);
 const dictionaries=Object.fromEntries(languages.map((l,i)=>[l,Object.fromEntries(rows.map(r=>[r[0],r[i+1]]))]));
 const normalize=value=>value.replace(/\s+/g,' ').trim();
 // Authored, local catalogs. No translation service is called in the browser.
