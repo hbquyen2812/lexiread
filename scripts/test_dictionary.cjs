@@ -16,7 +16,7 @@ assert.equal(ui.safeURL('/api/dictionary/audio/../settings/',true),'');
 const data={word:'<img src=x>',local_entries:[{word:'test',meaning_vi:'<script>bad</script>',label:'Trong bài đang đọc'}],dictionary:{status:'ok',entries:[{phonetics:[{ipa:'/test/',audio:'javascript:alert(1)'}],meanings:[{pos:'noun',definitions:[{definition:'<img src=x>',example:'<script>bad</script>'}]}],sources:['javascript:alert(1)'],license:{name:'CC BY-SA',url:'https://creativecommons.org/licenses/by-sa/4.0'}}]},links:[{title:'Bad','url':'javascript:alert(1)'}]};
 const html=ui.render(data);
 assert.doesNotMatch(html,/<img|<script|href="javascript:|src="javascript:/);
-assert.match(html,/&lt;img/);assert.match(html,/Giải nghĩa Anh–Anh/);assert.match(html,/Chưa có bản thu/);
+assert.match(html,/&lt;img/);assert.match(html,/Giải nghĩa Anh–Anh/);assert.doesNotMatch(html,/Chưa có bản thu/);
 for(const [status,message] of Object.entries({not_ready:'Kho từ điển chưa có dữ liệu',not_found:'Chưa tìm thấy mục từ phù hợp',unavailable:'Nguồn từ điển đang không phản hồi',rate_limited:'Bạn vừa tra nhiều từ liên tiếp',offline:'Bản HTML chỉ tra các từ đã có trong bài'}))assert.ok(ui.render({word:'test',dictionary:{status,entries:[]}}).includes(message));
 data.dictionary.entries[0].phonetics=[{ipa:'/test/',accent:'US',audio:'https://api.dictionaryapi.dev/media/pronunciations/en/test-us.mp3',source:'https://commons.wikimedia.org/wiki/Example',license:{name:'BY-SA',url:'https://creativecommons.org/licenses/by-sa/4.0'}}];
 const audio=ui.render(data);assert.match(audio,/<audio controls preload="none"/);assert.doesNotMatch(audio,/autoplay/);assert.match(audio,/Bản thu gốc/);

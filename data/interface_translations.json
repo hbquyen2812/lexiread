@@ -1,0 +1,1082 @@
+{
+  "Lộ trình": [
+    "Study plan",
+    "Parcours",
+    "学习计划"
+  ],
+  "Học ngữ pháp": [
+    "Learn grammar",
+    "Apprendre la grammaire",
+    "学习语法"
+  ],
+  "Ngữ pháp": [
+    "Grammar",
+    "Grammaire",
+    "语法"
+  ],
+  "Từ vựng": [
+    "Vocabulary",
+    "Vocabulaire",
+    "词汇"
+  ],
+  "Từ vựng theo chủ đề": [
+    "Vocabulary by topic",
+    "Vocabulaire par thème",
+    "主题词汇"
+  ],
+  "Từ điển": [
+    "Dictionary",
+    "Dictionnaire",
+    "词典"
+  ],
+  "Tài liệu tham khảo": [
+    "References",
+    "Références",
+    "参考资料"
+  ],
+  "Các mục học tập": [
+    "Learning sections",
+    "Rubriques d’apprentissage",
+    "学习板块"
+  ],
+  "Đang tải bài học…": [
+    "Loading lesson…",
+    "Chargement de la leçon…",
+    "正在加载课程…"
+  ],
+  "Luyện tập": [
+    "Practice",
+    "Exercices",
+    "练习"
+  ],
+  "Kiểm tra bài làm": [
+    "Check answers",
+    "Vérifier les réponses",
+    "检查答案"
+  ],
+  "Câu {0}": [
+    "Question {0}",
+    "Question {0}",
+    "第 {0} 题"
+  ],
+  "Câu {0}:": [
+    "Question {0}:",
+    "Question {0} :",
+    "第 {0} 题："
+  ],
+  "Câu {1}": [
+    "Question {1}",
+    "Question {1}",
+    "第 {1} 题"
+  ],
+  "Câu {2}": [
+    "Question {2}",
+    "Question {2}",
+    "第 {2} 题"
+  ],
+  "Câu {0}: {1}": [
+    "Question {0}: {1}",
+    "Question {0} : {1}",
+    "第 {0} 题：{1}"
+  ],
+  "{0} câu · Có lời giải sau khi nộp bài": [
+    "{0} questions · Explanations after submission",
+    "{0} questions · Explications après validation",
+    "{0} 道题 · 提交后查看解析"
+  ],
+  "Kết quả đã được lưu để gợi ý bài học tiếp theo.": [
+    "Your results are saved to help choose your next lesson.",
+    "Vos résultats sont enregistrés pour vous proposer la prochaine leçon.",
+    "成绩已保存，用于推荐下一课。"
+  ],
+  "Chỉ xem câu chưa đúng": [
+    "Show incorrect answers only",
+    "Afficher uniquement les erreurs",
+    "只看错题"
+  ],
+  "Bạn đã trả lời đúng tất cả các câu.": [
+    "You answered every question correctly.",
+    "Vous avez répondu correctement à toutes les questions.",
+    "你答对了所有题目。"
+  ],
+  "Làm lại bài": [
+    "Try again",
+    "Recommencer",
+    "重新练习"
+  ],
+  "Về lộ trình học →": [
+    "Back to study plan →",
+    "Retour au parcours →",
+    "返回学习计划 →"
+  ],
+  "Bạn đã làm tốt bài này.": [
+    "Well done on this lesson.",
+    "Vous avez bien réussi cette leçon.",
+    "这节课你完成得很好。"
+  ],
+  "Xem lời giải để hiểu rõ những câu chưa đúng.": [
+    "Read the explanations to understand your mistakes.",
+    "Lisez les explications pour comprendre vos erreurs.",
+    "查看解析，弄清做错的题。"
+  ],
+  "Đáp án:": [
+    "Answer:",
+    "Réponse :",
+    "答案："
+  ],
+  "Bạn chọn:": [
+    "Your answer:",
+    "Votre réponse :",
+    "你的答案："
+  ],
+  "✓ Đúng": [
+    "✓ Correct",
+    "✓ Correct",
+    "✓ 正确"
+  ],
+  "Cần xem lại": [
+    "Review this answer",
+    "À revoir",
+    "需要复习"
+  ],
+  "MỖI NGÀY MỘT BƯỚC": [
+    "ONE STEP EVERY DAY",
+    "UN PAS CHAQUE JOUR",
+    "每天进步一点"
+  ],
+  "Hôm nay bạn muốn học gì?": [
+    "What would you like to learn today?",
+    "Que souhaitez-vous apprendre aujourd’hui ?",
+    "今天想学什么？"
+  ],
+  "Trình độ hiện tại": [
+    "Current level",
+    "Niveau actuel",
+    "当前水平"
+  ],
+  "Mục tiêu học": [
+    "Learning goal",
+    "Objectif d’apprentissage",
+    "学习目标"
+  ],
+  "Thời gian học mỗi ngày": [
+    "Daily study time",
+    "Temps d’étude quotidien",
+    "每日学习时间"
+  ],
+  "Bài học hôm nay": [
+    "Today’s lessons",
+    "Les leçons du jour",
+    "今日课程"
+  ],
+  "Cập nhật lộ trình": [
+    "Update plan",
+    "Actualiser le parcours",
+    "更新学习计划"
+  ],
+  "Bắt đầu lộ trình": [
+    "Start your plan",
+    "Commencer le parcours",
+    "开始学习计划"
+  ],
+  "Đã cập nhật lộ trình.": [
+    "Your plan is updated.",
+    "Votre parcours a été actualisé.",
+    "学习计划已更新。"
+  ],
+  "BƯỚC {0}": [
+    "STEP {0}",
+    "ÉTAPE {0}",
+    "第 {0} 步"
+  ],
+  "HỌC THÊM TỪ NGUỒN TIN CẬY": [
+    "EXPLORE TRUSTED RESOURCES",
+    "DÉCOUVRIR DES RESSOURCES FIABLES",
+    "探索可靠的学习资料"
+  ],
+  "Tài liệu học thêm": [
+    "More learning resources",
+    "Pour aller plus loin",
+    "更多学习资料"
+  ],
+  "Học ngữ pháp ngay trên LexiRead": [
+    "Learn grammar on LexiRead",
+    "Apprendre la grammaire sur LexiRead",
+    "在 LexiRead 学习语法"
+  ],
+  "Vào bài học ngữ pháp →": [
+    "Explore grammar lessons →",
+    "Voir les leçons de grammaire →",
+    "查看语法课程 →"
+  ],
+  "Lưu từ đã chọn": [
+    "Save selected words",
+    "Enregistrer les mots sélectionnés",
+    "保存所选单词"
+  ],
+  "Ôn bộ từ này →": [
+    "Review this collection →",
+    "Réviser cette collection →",
+    "复习这组词汇 →"
+  ],
+  "Đã có trong kho": [
+    "Already saved",
+    "Déjà enregistré",
+    "已保存"
+  ],
+  "Xem lại bộ từ": [
+    "Review collection",
+    "Revoir la collection",
+    "查看词汇集"
+  ],
+  "Đã lưu {0} từ mới{1}.": [
+    "Saved {0} new words{1}.",
+    "{0} nouveaux mots enregistrés{1}.",
+    "已保存 {0} 个新单词{1}。"
+  ],
+  "; {0} từ đã có trong kho": [
+    "; {0} words already saved",
+    " ; {0} mots déjà enregistrés",
+    "；{0} 个单词已在词库中"
+  ],
+  "Luyện {0} câu": [
+    "Practise {0} questions",
+    "Faire {0} exercices",
+    "练习 {0} 道题"
+  ],
+  "Luyện {1} câu": [
+    "Practise {1} questions",
+    "Faire {1} exercices",
+    "练习 {1} 道题"
+  ],
+  "Chưa đọc": [
+    "Unread",
+    "Non lu",
+    "未读"
+  ],
+  "Đã đọc": [
+    "Read",
+    "Lu",
+    "已读"
+  ],
+  "✓ Đã đọc": [
+    "✓ Read",
+    "✓ Lu",
+    "✓ 已读"
+  ],
+  "Đang đọc": [
+    "In progress",
+    "En cours",
+    "阅读中"
+  ],
+  "Chưa làm": [
+    "Not started",
+    "À faire",
+    "未做"
+  ],
+  "✓ Đã làm": [
+    "✓ Completed",
+    "✓ Terminé",
+    "✓ 已完成"
+  ],
+  "Tất cả": [
+    "All",
+    "Tout",
+    "全部"
+  ],
+  "Ôn bài này": [
+    "Review lesson",
+    "Réviser cette leçon",
+    "复习本课"
+  ],
+  "Học bài này": [
+    "Start lesson",
+    "Étudier cette leçon",
+    "学习本课"
+  ],
+  "Luyện lại": [
+    "Practise again",
+    "S’entraîner à nouveau",
+    "再次练习"
+  ],
+  "Bắt đầu": [
+    "Start",
+    "Commencer",
+    "开始"
+  ],
+  "Bắt đầu →": [
+    "Start →",
+    "Commencer →",
+    "开始 →"
+  ],
+  "Bắt đầu học →": [
+    "Start learning →",
+    "Commencer à apprendre →",
+    "开始学习 →"
+  ],
+  "Tài khoản của tôi": [
+    "My account",
+    "Mon compte",
+    "我的账户"
+  ],
+  "Ngôn ngữ giao diện": [
+    "Interface language",
+    "Langue de l’interface",
+    "界面语言"
+  ],
+  "Đăng xuất": [
+    "Sign out",
+    "Se déconnecter",
+    "退出登录"
+  ],
+  "Bắt đầu với câu đơn": [
+    "Start with simple sentences",
+    "Commencer par des phrases simples",
+    "从简单句开始"
+  ],
+  "Nói về những việc quen thuộc": [
+    "Talk about everyday life",
+    "Parler du quotidien",
+    "谈论日常生活"
+  ],
+  "Diễn đạt rõ ý hơn": [
+    "Express ideas clearly",
+    "Exprimer ses idées clairement",
+    "清楚地表达想法"
+  ],
+  "Dùng cấu trúc linh hoạt": [
+    "Use structures flexibly",
+    "Varier les structures",
+    "灵活运用句式"
+  ],
+  "Ngữ pháp nâng cao": [
+    "Advanced grammar",
+    "Grammaire avancée",
+    "高级语法"
+  ],
+  "Sắc thái và văn phong": [
+    "Nuance and style",
+    "Nuances et style",
+    "语气与文体"
+  ],
+  "Học ngữ pháp từng bước": [
+    "Learn grammar step by step",
+    "Apprendre la grammaire pas à pas",
+    "逐步学习语法"
+  ],
+  "Giải thích bằng tiếng Việt, cấu trúc rõ ràng và ví dụ gần gũi. Học xong, làm bài tập để kiểm tra và xem lời giải.": [
+    "Clear explanations, useful structures and everyday examples. Practise after each lesson and learn from the answers.",
+    "Des explications claires, des structures utiles et des exemples du quotidien. Après chaque leçon, entraînez-vous et consultez les corrigés.",
+    "清晰的讲解、实用的句式和贴近日常的例句。学完后做练习，再查看答案解析。"
+  ],
+  "DÀNH CHO NGƯỜI MỚI BẮT ĐẦU": [
+    "FOR BEGINNERS",
+    "POUR DÉBUTER",
+    "适合初学者"
+  ],
+  "Từ câu đầu tiên đến đoạn văn ngắn": [
+    "From your first sentence to a short paragraph",
+    "De la première phrase au petit paragraphe",
+    "从第一句话到短文"
+  ],
+  "Bắt đầu từ bài 1 →": [
+    "Start with lesson 1 →",
+    "Commencer par la leçon 1 →",
+    "从第 1 课开始 →"
+  ],
+  "Tiến độ ngữ pháp": [
+    "Grammar progress",
+    "Progression en grammaire",
+    "语法学习进度"
+  ],
+  "Chọn trình độ": [
+    "Choose a level",
+    "Choisir un niveau",
+    "选择水平"
+  ],
+  "Cơ bản · A1–A2": [
+    "Beginner · A1–A2",
+    "Débutant · A1–A2",
+    "基础 · A1–A2"
+  ],
+  "Tìm bài học": [
+    "Find a lesson",
+    "Rechercher une leçon",
+    "查找课程"
+  ],
+  "Ví dụ: câu đơn, hiện tại, giới từ…": [
+    "Try: sentences, present, prepositions…",
+    "Ex. : phrases, présent, prépositions…",
+    "例如：句子、现在时、介词…"
+  ],
+  "{0} bài học": [
+    "{0} lessons",
+    "{0} leçons",
+    "{0} 节课"
+  ],
+  "{0} bài học · {1} câu bài tập": [
+    "{0} lessons · {1} practice questions",
+    "{0} leçons · {1} questions",
+    "{0} 节课 · {1} 道练习题"
+  ],
+  "{5} câu bài tập · {6} phút": [
+    "{5} practice questions · {6} min",
+    "{5} questions · {6} min",
+    "{5} 道练习题 · {6} 分钟"
+  ],
+  "BÀI {1}": [
+    "LESSON {1}",
+    "LEÇON {1}",
+    "第 {1} 课"
+  ],
+  "PHẦN {0}": [
+    "PART {0}",
+    "PARTIE {0}",
+    "第 {0} 部分"
+  ],
+  "Bài ngữ pháp tiếp theo": [
+    "More grammar lessons",
+    "Autres leçons de grammaire",
+    "更多语法课程"
+  ],
+  "← Bài trước": [
+    "← Previous lesson",
+    "← Leçon précédente",
+    "← 上一课"
+  ],
+  "Bài tiếp theo →": [
+    "Next lesson →",
+    "Leçon suivante →",
+    "下一课 →"
+  ],
+  "Chọn phần bài học": [
+    "Choose a lesson section",
+    "Choisir une partie de la leçon",
+    "选择课程部分"
+  ],
+  "1. Bài học": [
+    "1. Lesson",
+    "1. Leçon",
+    "1. 课程"
+  ],
+  "2. Bài tập ({0} câu)": [
+    "2. Practice ({0} questions)",
+    "2. Exercices ({0} questions)",
+    "2. 练习（{0} 题）"
+  ],
+  "Sau bài này, bạn có thể:": [
+    "After this lesson, you can:",
+    "Après cette leçon, vous pourrez :",
+    "学完本课，你将能够："
+  ],
+  "Cấu trúc cần nhớ": [
+    "Key structure",
+    "Structure à retenir",
+    "重点句式"
+  ],
+  "CÙNG PHÂN TÍCH MỘT VÍ DỤ": [
+    "LET’S LOOK AT AN EXAMPLE",
+    "ANALYSONS UN EXEMPLE",
+    "一起分析例句"
+  ],
+  "Áp dụng vào câu như thế nào?": [
+    "How does it work in a sentence?",
+    "Comment l’utiliser dans une phrase ?",
+    "如何运用到句子中？"
+  ],
+  "Thử tự làm": [
+    "Try it yourself",
+    "À vous de jouer",
+    "自己试一试"
+  ],
+  "Xem đáp án và cách làm": [
+    "See the answer and explanation",
+    "Voir la réponse et l’explication",
+    "查看答案与解析"
+  ],
+  "Nhớ hai ý chính": [
+    "Two things to remember",
+    "Deux points à retenir",
+    "记住两个要点"
+  ],
+  "Những lỗi thường gặp": [
+    "Common mistakes",
+    "Erreurs fréquentes",
+    "常见错误"
+  ],
+  "Thử áp dụng ngay": [
+    "Put it into practice",
+    "Passer à la pratique",
+    "马上练一练"
+  ],
+  "{7} câu bài tập, có đáp án và lời giải sau khi nộp.": [
+    "{7} practice questions, with answers and explanations after submission.",
+    "{7} questions, avec les réponses et les explications après validation.",
+    "{7} 道练习题，提交后可查看答案和解析。"
+  ],
+  "Làm bài tập →": [
+    "Start practice →",
+    "Faire les exercices →",
+    "开始练习 →"
+  ],
+  "Đánh dấu đã đọc": [
+    "Mark as read",
+    "Marquer comme lu",
+    "标记为已读"
+  ],
+  "✓ Đã đọc · Bỏ đánh dấu": [
+    "✓ Read · Mark as unread",
+    "✓ Lu · Marquer comme non lu",
+    "✓ 已读 · 标记为未读"
+  ],
+  "Đã lưu vào tài khoản của bạn.": [
+    "Saved to your account.",
+    "Enregistré dans votre compte.",
+    "已保存到你的账户。"
+  ],
+  "Đã chuyển về chưa đọc.": [
+    "Marked as unread.",
+    "Marqué comme non lu.",
+    "已标记为未读。"
+  ],
+  "Chưa lưu được. Bạn thử lại nhé.": [
+    "Could not save. Please try again.",
+    "Enregistrement impossible. Réessayez.",
+    "暂时无法保存，请重试。"
+  ],
+  "Chọn một đáp án cho mỗi câu. Bạn có thể quay lại phần Bài học mà vẫn giữ các lựa chọn.": [
+    "Choose one answer per question. You can return to the lesson without losing your choices.",
+    "Choisissez une réponse par question. Vous pouvez revenir à la leçon sans perdre vos choix.",
+    "每题选择一个答案。返回课程时，已选答案会保留。"
+  ],
+  "Tra cứu ngữ pháp": [
+    "Grammar reference",
+    "Référence de grammaire",
+    "语法速查"
+  ],
+  "Động từ bất quy tắc": [
+    "Irregular verbs",
+    "Verbes irréguliers",
+    "不规则动词"
+  ],
+  "Tra V1 · V2 · V3 và tự ôn": [
+    "Look up V1 · V2 · V3 and test yourself",
+    "Consulter V1 · V2 · V3 et s’entraîner",
+    "查询 V1 · V2 · V3 并自测"
+  ],
+  "Phân biệt các thì": [
+    "Compare tenses",
+    "Comparer les temps",
+    "辨析时态"
+  ],
+  "Cách dùng, cấu trúc và ví dụ": [
+    "Usage, structures and examples",
+    "Emploi, structures et exemples",
+    "用法、句式和例句"
+  ],
+  "Khẳng định": [
+    "Affirmative",
+    "Affirmatif",
+    "肯定句"
+  ],
+  "Phủ định": [
+    "Negative",
+    "Négatif",
+    "否定句"
+  ],
+  "Câu hỏi": [
+    "Question",
+    "Interrogatif",
+    "疑问句"
+  ],
+  "DÙNG ĐÚNG THEO NGỮ CẢNH": [
+    "USE THE RIGHT TENSE IN CONTEXT",
+    "CHOISIR LE TEMPS SELON LE CONTEXTE",
+    "根据语境选择时态"
+  ],
+  "Khi nào dùng?": [
+    "When do we use it?",
+    "Quand l’utiliser ?",
+    "什么时候用？"
+  ],
+  "Cách đặt câu": [
+    "Sentence structure",
+    "Structure de la phrase",
+    "如何造句"
+  ],
+  "Dấu hiệu thường gặp": [
+    "Common time expressions",
+    "Indicateurs de temps fréquents",
+    "常见时间标志词"
+  ],
+  "Cách chọn:": [
+    "How to choose:",
+    "Comment choisir :",
+    "如何选择："
+  ],
+  "V1 · Nguyên mẫu": [
+    "V1 · Base form",
+    "V1 · Base verbale",
+    "V1 · 原形"
+  ],
+  "V2 · Quá khứ": [
+    "V2 · Past simple",
+    "V2 · Prétérit",
+    "V2 · 过去式"
+  ],
+  "V3 · Phân từ": [
+    "V3 · Past participle",
+    "V3 · Participe passé",
+    "V3 · 过去分词"
+  ],
+  "Nghĩa": [
+    "Meaning",
+    "Sens",
+    "含义"
+  ],
+  "Lưu ý": [
+    "Note",
+    "À noter",
+    "注意"
+  ],
+  "← Học ngữ pháp": [
+    "← Learn grammar",
+    "← Apprendre la grammaire",
+    "← 学习语法"
+  ],
+  "Ẩn V2, V3 để tự ôn": [
+    "Hide V2, V3 to test yourself",
+    "Masquer V2, V3 pour s’entraîner",
+    "隐藏 V2、V3 进行自测"
+  ],
+  "Hiện V2, V3": [
+    "Show V2, V3",
+    "Afficher V2, V3",
+    "显示 V2、V3"
+  ],
+  "Tìm động từ": [
+    "Find a verb",
+    "Rechercher un verbe",
+    "查找动词"
+  ],
+  "Các thì trong tiếng Anh": [
+    "English tenses",
+    "Les temps en anglais",
+    "英语时态"
+  ],
+  "Bạn muốn xem thì nào?": [
+    "Which tense would you like to explore?",
+    "Quel temps souhaitez-vous consulter ?",
+    "想查看哪个时态？"
+  ],
+  "Phân biệt các thì dễ nhầm": [
+    "Compare commonly confused tenses",
+    "Distinguer les temps souvent confondus",
+    "辨析容易混淆的时态"
+  ],
+  "Chọn cặp cần so sánh": [
+    "Choose two tenses to compare",
+    "Choisir deux temps à comparer",
+    "选择要比较的时态"
+  ],
+  "Học bài này và làm bài tập →": [
+    "Study this lesson and practise →",
+    "Étudier cette leçon et s’entraîner →",
+    "学习本课并练习 →"
+  ],
+  "Câu tiếng Anh bắt đầu từ đâu?": [
+    "How do English sentences work?",
+    "Comment construire une phrase en anglais ?",
+    "英语句子是怎样构成的？"
+  ],
+  "Nhận biết chủ ngữ, động từ và cách ghép một câu đơn.": [
+    "Identify the subject and verb, then build a simple sentence.",
+    "Repérez le sujet et le verbe, puis construisez une phrase simple.",
+    "认识主语和动词，学习组成简单句。"
+  ],
+  "Tìm người hoặc vật được nói đến": [
+    "Find who or what the sentence is about",
+    "Repérer de qui ou de quoi on parle",
+    "找出句子谈论的人或事物"
+  ],
+  "Chủ ngữ cho biết câu đang nói về ai hoặc điều gì. Chủ ngữ có thể là tên riêng như Lan, một danh từ như my brother hoặc đại từ như I, you, she.": [
+    "The subject tells us who or what the sentence is about. It can be a name like Lan, a noun phrase like my brother, or a pronoun like I, you, she.",
+    "Le sujet indique de qui ou de quoi on parle. Il peut s’agir d’un nom propre comme Lan, d’un groupe nominal comme my brother ou d’un pronom comme I, you, she.",
+    "主语说明句子在谈论谁或什么。它可以是 Lan 这样的名字、my brother 这样的名词短语，或 I, you, she 这样的代词。"
+  ],
+  "Chủ ngữ: I · Lan · my brother": [
+    "Subject: I · Lan · my brother",
+    "Sujet : I · Lan · my brother",
+    "主语：I · Lan · my brother"
+  ],
+  "Lan đọc sách.": [
+    "Lan reads.",
+    "Lan lit.",
+    "Lan 读书。"
+  ],
+  "Thêm động từ để thành câu": [
+    "Add a verb to complete the sentence",
+    "Ajouter un verbe pour former une phrase",
+    "加上动词，构成句子"
+  ],
+  "Động từ thường cho biết hành động như read, eat, work. Khi giới thiệu hoặc mô tả, ta có thể dùng be: am, is, are. Một câu khẳng định thông thường cần chủ ngữ và động từ.": [
+    "Verbs often describe actions, such as read, eat, work. To introduce or describe someone or something, use be: am, is, are. A typical affirmative sentence needs a subject and a verb.",
+    "Les verbes décrivent souvent une action, comme read, eat, work. Pour présenter ou décrire, on peut utiliser be : am, is, are. Une phrase affirmative ordinaire a besoin d’un sujet et d’un verbe.",
+    "动词通常表示动作，如 read, eat, work。介绍或描述时，可以用 be：am, is, are。一般的肯定句需要主语和动词。"
+  ],
+  "Người hoặc vật + hành động / be + thông tin mô tả": [
+    "Person or thing + action / be + description",
+    "Personne ou chose + action / be + description",
+    "人或事物 + 动作 / be + 描述信息"
+  ],
+  "Anh trai tôi vui.": [
+    "My brother is happy.",
+    "Mon frère est heureux.",
+    "我哥哥很开心。"
+  ],
+  "Nói rõ hành động hướng đến ai hoặc cái gì": [
+    "Say who or what receives the action",
+    "Préciser sur qui ou quoi porte l’action",
+    "说明动作作用于谁或什么"
+  ],
+  "Một số động từ đi với tân ngữ: người hoặc vật nhận tác động. Trong câu I read a book, I là người đọc, read là hành động, a book là thứ được đọc. Không phải câu nào cũng cần tân ngữ: Birds fly đã đủ ý.": [
+    "Some verbs take an object: the person or thing affected by the action. In I read a book, I is the reader, read is the action, and a book is what is read. Not every sentence needs an object: Birds fly is already complete.",
+    "Certains verbes ont un complément d’objet : la personne ou la chose concernée par l’action. Dans I read a book, I désigne la personne qui lit, read l’action et a book ce qui est lu. Toutes les phrases n’en ont pas besoin : Birds fly est déjà une phrase complète.",
+    "有些动词后面需要宾语，即动作涉及的人或事物。在 I read a book 中，I 是读书的人，read 是动作，a book 是所读的东西。并非所有句子都需要宾语：Birds fly 已经表达了完整的意思。"
+  ],
+  "Chủ ngữ + động từ + tân ngữ": [
+    "Subject + verb + object",
+    "Sujet + verbe + complément d’objet",
+    "主语 + 动词 + 宾语"
+  ],
+  "Tôi đọc một cuốn sách.": [
+    "I read a book.",
+    "Je lis un livre.",
+    "我读一本书。"
+  ],
+  "Trong câu mô tả, cần có be: I am tired, không viết I tired.": [
+    "Descriptions need be: write I am tired, not I tired.",
+    "Pour décrire un état, il faut be : écrivez I am tired, et non I tired.",
+    "描述状态时需要 be：应写 I am tired，不写 I tired。"
+  ],
+  "Không đặt tân ngữ trước động từ theo thói quen dịch từng từ.": [
+    "Keep the object after the verb; avoid translating word for word.",
+    "Placez le complément d’objet après le verbe ; évitez de traduire mot à mot.",
+    "宾语应放在动词后面，不要按逐词翻译的习惯改变词序。"
+  ],
+  "Trong câu “Lan likes music”, câu đang nói về ai?": [
+    "Who is the sentence “Lan likes music” about?",
+    "De qui parle la phrase “Lan likes music” ?",
+    "“Lan likes music” 这句话在说谁？"
+  ],
+  "Lan là chủ ngữ: người được nói đến trong câu.": [
+    "Lan is the subject: the person the sentence is about.",
+    "Lan est le sujet : la personne dont on parle.",
+    "Lan 是主语，即句子谈论的人。"
+  ],
+  "Trong câu “We drink water”, từ nào chỉ hành động?": [
+    "Which word describes the action in “We drink water”?",
+    "Quel mot exprime l’action dans “We drink water” ?",
+    "“We drink water” 中哪个词表示动作？"
+  ],
+  "Drink là động từ, chỉ hành động uống.": [
+    "Drink is the verb; it describes the action of drinking.",
+    "Drink est le verbe : il exprime l’action de boire.",
+    "Drink 是动词，表示喝的动作。"
+  ],
+  "Chọn câu đầy đủ.": [
+    "Choose the complete sentence.",
+    "Choisissez la phrase complète.",
+    "选择完整的句子。"
+  ],
+  "Câu mô tả cần động từ is giữa chủ ngữ my sister và tính từ happy.": [
+    "The description needs is between the subject my sister and the adjective happy.",
+    "Il faut is entre le sujet my sister et l’adjectif happy.",
+    "描述句中，主语 my sister 和形容词 happy 之间需要动词 is。"
+  ],
+  "Sắp xếp các từ thành câu: “I / like / apples”.": [
+    "Put the words in order: “I / like / apples”.",
+    "Remettez les mots dans l’ordre : “I / like / apples”.",
+    "将这些词排列成句：“I / like / apples”。"
+  ],
+  "Thứ tự là I (chủ ngữ) + like (động từ) + apples (tân ngữ).": [
+    "The order is I (subject) + like (verb) + apples (object).",
+    "L’ordre est I (sujet) + like (verbe) + apples (complément d’objet).",
+    "词序是 I（主语）+ like（动词）+ apples（宾语）。"
+  ],
+  "Trong câu “They watch a film”, họ xem gì?": [
+    "What do they watch in “They watch a film”?",
+    "Que regardent-ils dans “They watch a film” ?",
+    "“They watch a film” 中，他们看什么？"
+  ],
+  "A film là tân ngữ: thứ họ xem.": [
+    "A film is the object: what they watch.",
+    "A film est le complément d’objet : ce qu’ils regardent.",
+    "A film 是宾语，即他们看的东西。"
+  ],
+  "Câu nào có đủ chủ ngữ và động từ?": [
+    "Which sentence has both a subject and a verb?",
+    "Quelle phrase contient un sujet et un verbe ?",
+    "哪个句子既有主语又有动词？"
+  ],
+  "Birds là chủ ngữ, fly là động từ. Câu này không cần tân ngữ.": [
+    "Birds is the subject and fly is the verb. This sentence does not need an object.",
+    "Birds est le sujet et fly le verbe. Cette phrase n’a pas besoin de complément d’objet.",
+    "Birds 是主语，fly 是动词。这个句子不需要宾语。"
+  ],
+  "Ghép được một câu đơn và chỉ ra chủ ngữ, động từ trong câu.": [
+    "Build a simple sentence and identify its subject and verb.",
+    "Construire une phrase simple et repérer son sujet et son verbe.",
+    "组成简单句，并指出句中的主语和动词。"
+  ],
+  "Bạn muốn nói rằng mình thích âm nhạc. Hãy xác định ai thích và thích điều gì.": [
+    "You want to say you like music. First identify who likes something, then what they like.",
+    "Vous voulez dire que vous aimez la musique. Repérez d’abord qui aime, puis ce que cette personne aime.",
+    "你想表达自己喜欢音乐。先确定谁喜欢，再确定喜欢什么。"
+  ],
+  "Tôi thích âm nhạc.": [
+    "I like music.",
+    "J’aime la musique.",
+    "我喜欢音乐。"
+  ],
+  "Ai thích? → I là chủ ngữ.": [
+    "Who likes it? → I is the subject.",
+    "Qui aime ? → I est le sujet.",
+    "谁喜欢？→ I 是主语。"
+  ],
+  "Làm gì? → like là động từ.": [
+    "What is the action? → like is the verb.",
+    "Quelle est l’action ? → like est le verbe.",
+    "做什么？→ like 是动词。"
+  ],
+  "Thích gì? → music đứng sau like.": [
+    "Likes what? → music comes after like.",
+    "Aimer quoi ? → music vient après like.",
+    "喜欢什么？→ music 放在 like 后面。"
+  ],
+  "Sắp xếp: “We / English / study”.": [
+    "Put in order: “We / English / study”.",
+    "Remettez dans l’ordre : “We / English / study”.",
+    "排列成句：“We / English / study”。"
+  ],
+  "We là người học, study là hành động, English là thứ được học.": [
+    "We identifies the learners, study is the action, and English is what they learn.",
+    "We désigne les personnes qui apprennent, study l’action et English ce qu’elles apprennent.",
+    "We 表示学习的人，study 是动作，English 是学习的内容。"
+  ],
+  "Câu khẳng định thường bắt đầu bằng chủ ngữ rồi đến động từ.": [
+    "An affirmative sentence usually starts with the subject, followed by the verb.",
+    "Une phrase affirmative commence généralement par le sujet, suivi du verbe.",
+    "肯定句通常先写主语，再写动词。"
+  ],
+  "Câu mô tả như She is happy cần có be.": [
+    "A description such as She is happy needs be.",
+    "Une description comme She is happy a besoin de be.",
+    "She is happy 这样的描述句需要 be。"
+  ],
+  "cửa sổ": [
+    "window",
+    "fenêtre",
+    "窗户"
+  ],
+  "chìa khóa": [
+    "key",
+    "clé",
+    "钥匙"
+  ],
+  "thực đơn": [
+    "menu",
+    "menu",
+    "菜单"
+  ],
+  "phương pháp": [
+    "method",
+    "méthode",
+    "方法"
+  ],
+  "Can’t have hoặc couldn’t have + phân từ dùng khi người nói cho rằng việc đó không thể đã xảy ra. Mustn’t thường nói sự cấm đoán, không thay cho phủ định của suy đoán must.": [
+    "Use can’t have or couldn’t have + past participle when you believe something was impossible in the past. Mustn’t usually expresses prohibition; it is not the negative of must used for deduction.",
+    "On utilise can’t have ou couldn’t have + participe passé pour dire qu’un événement passé était impossible. Mustn’t exprime généralement une interdiction ; ce n’est pas la négation de must utilisé pour une déduction.",
+    "当说话者认为某事过去不可能发生时，用 can’t have 或 couldn’t have + 过去分词。Mustn’t 通常表示禁止，不能用作推测意义的 must 的否定形式。"
+  ],
+  "Đã lưu “{0}”. Ôn tiếp {1}.": [
+    "Saved “{0}”. Next review: {1}.",
+    "« {0} » enregistré. Prochaine révision : {1}.",
+    "已保存“{0}”。下次复习：{1}。"
+  ],
+  "Lộ trình học": [
+    "Study plan",
+    "Parcours d’apprentissage",
+    "学习计划"
+  ],
+  "Cẩm nang học tập": [
+    "Study guides",
+    "Guides d’apprentissage",
+    "学习指南"
+  ],
+  "Điều hướng chính": [
+    "Main navigation",
+    "Navigation principale",
+    "主导航"
+  ],
+  "Nguồn tham khảo": [
+    "References",
+    "Références",
+    "参考资料"
+  ],
+  "Am, is, are: giới thiệu và mô tả": [
+    "Am, is, are: introductions and descriptions",
+    "Am, is, are : présenter et décrire",
+    "Am, is, are：介绍与描述"
+  ],
+  "Can và can’t: nói về khả năng": [
+    "Can and can’t: talking about ability",
+    "Can et can’t : parler de ses capacités",
+    "Can 和 can’t：谈论能力"
+  ],
+  "Dùng can cho việc làm được": [
+    "Use can to talk about ability",
+    "Utiliser can pour parler d’une capacité",
+    "用 can 表示能够做的事"
+  ],
+  "Đưa can lên đầu để hỏi": [
+    "Start a question with can",
+    "Placer can en début de question",
+    "把 can 放在句首提问"
+  ],
+  "My friends chỉ nhiều người nên dùng are.": [
+    "My friends refers to more than one person, so use are.",
+    "My friends désigne plusieurs personnes : on utilise donc are.",
+    "My friends 指多个人，因此用 are。"
+  ],
+  "Its chỉ sở hữu; it’s là dạng rút gọn của it is hoặc it has.": [
+    "Its shows possession; it’s is short for it is or it has.",
+    "Its exprime la possession ; it’s est la contraction de it is ou it has.",
+    "Its 表示所属关系；it’s 是 it is 或 it has 的缩写。"
+  ],
+  "True / False / Not Given: sai hay chưa được nói tới?": [
+    "True / False / Not Given: false or not stated?",
+    "True / False / Not Given : faux ou non précisé ?",
+    "True / False / Not Given：与原文矛盾，还是没有提到？"
+  ],
+  "Dạng gốc:": [
+    "Base form:",
+    "Forme de base :",
+    "原形："
+  ],
+  "Đang tra": [
+    "Looking up",
+    "Recherche de",
+    "正在查询"
+  ],
+  "Chưa đúng": [
+    "Incorrect",
+    "Incorrect",
+    "不正确"
+  ],
+  "{0} hướng dẫn": [
+    "{0} guides",
+    "{0} guides",
+    "{0} 篇指南"
+  ],
+  "{0} kênh phù hợp": [
+    "{0} matching channels",
+    "{0} chaînes correspondantes",
+    "{0} 个符合条件的频道"
+  ],
+  "{0} bộ từ phù hợp": [
+    "{0} matching collections",
+    "{0} collections correspondantes",
+    "{0} 组符合条件的词汇"
+  ],
+  "{0} bộ luyện · {1} câu hỏi": [
+    "{0} practice sets · {1} questions",
+    "{0} séries · {1} questions",
+    "{0} 套练习 · {1} 道题"
+  ],
+  "{0} câu hỏi": [
+    "{0} questions",
+    "{0} questions",
+    "{0} 道题"
+  ],
+  "{0} phút": [
+    "{0} min",
+    "{0} min",
+    "{0} 分钟"
+  ],
+  "bắt buộc theo lịch": [
+    "required by the schedule",
+    "requis par le calendrier",
+    "按日程要求必须进行的"
+  ],
+  "được cho phép": [
+    "permitted",
+    "autorisé",
+    "获准的"
+  ],
+  "được ưu tiên lựa chọn hơn": [
+    "preferred",
+    "préféré",
+    "优先选择的"
+  ],
+  "phiên bản": [
+    "version",
+    "version",
+    "版本"
+  ],
+  "đã tuyển chọn": [
+    "selected",
+    "sélectionné",
+    "已精选的"
+  ],
+  "TRA TỪ NHANH": [
+    "QUICK LOOKUP",
+    "RECHERCHE RAPIDE",
+    "快速查词"
+  ],
+  "Giải nghĩa Anh–Anh": [
+    "English definitions",
+    "Définitions en anglais",
+    "英英释义"
+  ],
+  "Nghĩa & phát âm": [
+    "Meaning & pronunciation",
+    "Signification et prononciation",
+    "释义与发音"
+  ],
+  "Đối chiếu thêm": [
+    "Explore other dictionaries",
+    "Consulter d’autres dictionnaires",
+    "查看其他词典"
+  ],
+  "Đọc phiên âm thế nào?": [
+    "How to read the pronunciation",
+    "Comment lire la transcription phonétique ?",
+    "如何读音标？"
+  ],
+  "{0} mục từ": [
+    "{0} entries",
+    "{0} entrées",
+    "{0} 个词条"
+  ],
+  "{0} mục từ · Trang {1}": [
+    "{0} entries · Page {1}",
+    "{0} entrées · Page {1}",
+    "{0} 个词条 · 第 {1} 页"
+  ],
+  "Nguồn dữ liệu và bản thu": [
+    "Data and audio sources",
+    "Sources des données et des enregistrements",
+    "数据与音频来源"
+  ],
+  "+ Lưu nghĩa này": [
+    "+ Save this meaning",
+    "+ Enregistrer ce sens",
+    "+ 保存此释义"
+  ],
+  "+ Lưu từ": [
+    "+ Save word",
+    "+ Enregistrer le mot",
+    "+ 保存单词"
+  ]
+}

@@ -6,15 +6,15 @@
   <meta name="description" content="LexiRead — đọc, hiểu và giữ lại từ vựng cá nhân.">
   <title>LexiRead · Không gian học của bạn</title>
   <link rel="stylesheet" href="{% static 'app.css' %}?v=20261026.20">
-  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.18">
-  <script src="{% static 'i18n.js' %}?v=20261026.18" defer></script>{{ topic_labels|json_script:"topic-labels-data" }}<script src="{% static 'library.js' %}?v=20261026.18" defer></script>
-<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'academy.css' %}?v=20261026.20">
-  <link rel="stylesheet" href="{% static 'grammar_course.css' %}?v=20261026.20"><link rel="stylesheet" href="{% static 'learning_methods.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'dictionary.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'topic_vocabulary.css' %}?v=20261026.18"></head>
+  <link rel="stylesheet" href="{% static 'read_aloud.css' %}?v=20261026.29"><link rel="stylesheet" href="{% static 'pronunciation.css' %}?v=20261027.1">
+  <link rel="stylesheet" href="{% static 'experience.css' %}"><link rel="stylesheet" href="{% static 'motivation.css' %}"><link rel="stylesheet" href="{% static 'responsive.css' %}"><link rel="stylesheet" href="{% static 'brand.css' %}?v=20261026.25">
+  <script src="{% static 'i18n_catalog.js' %}?v=20261026.28" defer></script><script src="{% static 'i18n.js' %}?v=20261027.1" defer></script>{{ topic_labels|json_script:"topic-labels-data" }}<script src="{% static 'library.js' %}?v=20261026.18" defer></script>
+<link rel="icon" href="{% static 'favicon.svg' %}" type="image/svg+xml"><link rel="stylesheet" href="{% static 'resources.css' %}"><link rel="stylesheet" href="{% static 'fonts.css' %}?v=20261026.23"><link rel="stylesheet" href="{% static 'learning_hub.css' %}?v=20261026.23"><link rel="stylesheet" href="{% static 'learning_channels.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'academy.css' %}?v=20261026.20">
+  <link rel="stylesheet" href="{% static 'grammar_course.css' %}?v=20261026.23"><link rel="stylesheet" href="{% static 'learning_methods.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'dictionary.css' %}?v=20261026.18"><link rel="stylesheet" href="{% static 'topic_vocabulary.css' %}?v=20261026.18"></head>
 <body>
   <a class="skip-link" href="#main" data-action="skip-content" data-i18n="skip">Đến nội dung chính</a>
   <aside class="sidebar">
-    <a class="brand" href="#home"><span class="brand-mark">L<span>↗</span></span><span>LexiRead<small>READ. NOTICE. REMEMBER.</small></span></a>
-    <div class="nav-label">KHÔNG GIAN HỌC</div>
+    <a class="brand" href="#home"><span class="brand-mark">L<span>↗</span></span><span>LexiRead</span></a>
     <button type="button" class="mobile-menu-toggle" data-action="toggle-navigation" aria-expanded="false" aria-controls="study-navigation" data-i18n="nav.menu">☰ Menu</button>
     <nav id="study-navigation" aria-label="Điều hướng chính">
       <a href="#home" data-nav="home"><span class="nav-icon">◫</span> Tổng quan</a>
@@ -33,7 +33,17 @@
     <div class="sidebar-bottom"><span class="db-dot"></span><a href="/account/" id="storage-label">Tài khoản của tôi</a></div>
   </aside>
   <div class="workspace">
-    <header class="topbar"><span class="breadcrumb">MY LEARNING SPACE <span>/</span> <b id="page-label">Tổng quan</b></span><div class="top-actions">{% include 'language_switcher.html' %}<span id="ai-status" class="status-pill">Đang kết nối…</span><span class="avatar" id="avatar" data-no-i18n>Q</span><form method="post" action="/logout/" class="logout">{% csrf_token %}<button class="link-btn" type="submit">Đăng xuất</button></form></div></header>
+    <header class="topbar">
+      <span class="breadcrumb"><b id="page-label">Tổng quan</b></span>
+      <div class="top-actions">
+        {% include 'language_switcher.html' %}
+        <span id="ai-status" class="status-pill">Đang kết nối…</span>
+        <div class="account-actions">
+          <a class="account-avatar" href="/account/" aria-label="Tài khoản của tôi" title="Tài khoản của tôi"><span id="avatar" data-no-i18n>Q</span></a>
+          <form method="post" action="/logout/" class="logout">{% csrf_token %}<button class="account-signout" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4m6-13 5 5-5 5M8 12h12"/></svg><span class="logout-label">Đăng xuất</span></button></form>
+        </div>
+      </div>
+    </header>
     <main id="main" tabindex="-1"><div class="empty-state">Đang mở kho học tập…</div></main>
     <footer class="page-footer"><span>LexiRead · Từ của bạn. Ngữ cảnh của bạn. Nhịp học của bạn.</span></footer>
   </div>
@@ -43,15 +53,16 @@
   {{ official_resources|json_script:"official-resources-data" }}
   {{ strategy_guides|json_script:"strategy-guides-data" }}
   {{ learning_channels|json_script:"learning-channels-data" }}
-  <script src="{% static 'learning_channels.js' %}?v=20261026.18" defer></script>
-  <script src="{% static 'learning_methods.js' %}?v=20261026.18" defer></script><script src="{% static 'learning_hub.js' %}?v=20261026.20" defer></script>
+  <script src="{% static 'learning_channels.js' %}?v=20261026.28" defer></script>
+  <script src="{% static 'learning_methods.js' %}?v=20261026.28" defer></script><script src="{% static 'learning_hub.js' %}?v=20261026.28" defer></script>
   <script src="{% static 'resources.js' %}" defer></script>
-  <script src="{% static 'reading_platform.js' %}?v=20261026.20" defer></script>
-  <script src="{% static 'practice_tools.js' %}?v=20261026.20" defer></script>
-  <script src="{% static 'personal_decks.js' %}?v=20261026.18" defer></script>
-  <script src="{% static 'topic_vocabulary.js' %}?v=20261026.18" defer></script>
-  <script src="{% static 'grammar_reference.js' %}?v=20261026.20" defer></script>
-  <script src="{% static 'grammar_course.js' %}?v=20261026.20" defer></script>
-  <script src="{% static 'academy.js' %}?v=20261026.20" defer></script>
-  <script src="{% static 'dictionary.js' %}?v=20261026.21" defer></script><script src="{% static 'app.js' %}?v=20261026.21" defer></script>
+  <script src="{% static 'read_aloud.js' %}?v=20261027.1" defer></script><script src="{% static 'pronunciation.js' %}?v=20261027.1" defer></script>
+  <script src="{% static 'reading_platform.js' %}?v=20261026.28" defer></script>
+  <script src="{% static 'practice_tools.js' %}?v=20261027.1" defer></script>
+  <script src="{% static 'personal_decks.js' %}?v=20261026.28" defer></script>
+  <script src="{% static 'topic_vocabulary.js' %}?v=20261027.1" defer></script>
+  <script src="{% static 'grammar_reference.js' %}?v=20261027.1" defer></script>
+  <script src="{% static 'grammar_course.js' %}?v=20261027.1" defer></script>
+  <script src="{% static 'academy.js' %}?v=20261027.1" defer></script>
+  <script src="{% static 'dictionary.js' %}?v=20261027.1" defer></script><script src="{% static 'app.js' %}?v=20261027.1" defer></script>
 </body></html>

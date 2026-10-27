@@ -53,7 +53,7 @@ async function run(){
   // Exercise the real HTML render helpers without a browser. No claim of visual QA.
   const app=read('static/app.js');
   const escape=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  const lexicalScope={esc:escape,asList:value=>Array.isArray(value)?value:[]};
+  const lexicalScope={window:{},esc:escape,asList:value=>Array.isArray(value)?value:[]};
   vm.runInNewContext(app.slice(app.indexOf('function lexicalRelations'),app.indexOf('function blankEntry')),lexicalScope);
   const word={word:'depend',usage_pattern:'depend on + noun',example:'We depend on clean water.',context:'SOURCE PARAGRAPH '.repeat(100),synonyms:['rely'],paraphrases:['need something']};
   const html=lexicalScope.lexicalDetails(word);
@@ -63,7 +63,7 @@ async function run(){
   assert.doesNotMatch(lexicalScope.lexicalDetails({...word,example:word.context}),/SOURCE PARAGRAPH/);
   assert.doesNotMatch(lexicalScope.lexicalDetails({...word,example:'<img src=x onerror=alert(1)>',usage_pattern:'<script>x</script>'}),/<img|<script>/);
   const cardBody=app.slice(app.indexOf('content+=`<div class="flashcard"'),app.indexOf('}else if(s.question)'));
-  assert.match(cardBody,/lexicalDetails\(v\)/);assert.match(cardBody,/<\/div>\$\{s.flipped\?lexicalContext\(v\)/);
+  assert.match(cardBody,/lexicalDetails\(v,false\)/);assert.match(cardBody,/<\/div>\$\{s.flipped\?lexicalContext\(v\)/);
   assert.doesNotMatch(cardBody,/esc\(v\.context\)/);
   const settingsHTML=app.slice(app.indexOf('function settingsPage'),app.indexOf('function download'));
   for(const forbidden of ['.env','OPENAI_API_KEY','docker compose','PostgreSQL','pg_dump','gpt-4.1'])assert.equal(settingsHTML.includes(forbidden),false);

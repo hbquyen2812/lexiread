@@ -9,6 +9,7 @@ urlpatterns=[
  path('api/learn/overview/',f.overview),path('api/learn/plan/',f.plan),
  path('api/learn/dictionary/',f.dictionary),path('api/learn/sources/',f.sources),
  path('api/learn/grammar-reference/',f.grammar_reference),
+ path('api/learn/grammar/<slug:unit_id>/read/',f.grammar_read),
  path('api/learn/vocabulary/<slug:unit_id>/save/',f.save_collection),
  path('api/learn/<slug:kind>/<slug:unit_id>/submit/',f.submit),
  path('api/learn/<slug:kind>/<slug:unit_id>/',f.unit_detail),

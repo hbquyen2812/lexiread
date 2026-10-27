@@ -351,14 +351,30 @@ const motivationRows=[
 ['streak.read','Đọc một bài →','Read a story →','Lire un texte →','读一篇文章 →'],
 ];
 rows.push(...motivationRows);legacy.push(...motivationRows.map(row=>row.slice(1)));
+legacy.push(['Bản HTML chỉ tra các từ đã có trong bài. Mở bản web để tra thêm nghĩa.','The HTML preview only looks up words in the current reading. Open the web app for more definitions.','L’aperçu HTML ne recherche que les mots du texte actuel. Ouvrez le site pour consulter davantage de définitions.','HTML 预览仅查询当前文章中的词语。请打开网站查看其他释义。']);
 const dictionaries=Object.fromEntries(languages.map((l,i)=>[l,Object.fromEntries(rows.map(r=>[r[0],r[i+1]]))]));
-const sourceMap=new Map(legacy.map(r=>[r[0],r]));
+const normalize=value=>value.replace(/\s+/g,' ').trim();
+// Authored, local catalogs. No translation service is called in the browser.
+const sourceMap=new Map((window.LEXI_INTERFACE_LOCALES||[]).map(r=>[normalize(r[0]),r]));
+legacy.forEach(r=>sourceMap.set(normalize(r[0]),r));
+const patterns=[...sourceMap.values()].filter(r=>/\{\d+\}/.test(r[0])).map(row=>{
+  const keys=[];
+  const pattern=normalize(row[0]).split(/(\{\d+\})/).map(part=>{
+    if(/^\{\d+\}$/.test(part)){keys.push(part);return '([\\s\\S]{1,200})';}
+    return part.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  }).join('');
+  return {row,keys,re:new RegExp('^'+pattern+'$')};
+}).sort((a,b)=>b.row[0].length-a.row[0].length);
 let current='vi';try{const saved=localStorage.getItem('lexiread.language');if(languages.includes(saved))current=saved;}catch{}
 const originals=new WeakMap(),attributeSources=new WeakMap();
-const protectedSelector='script,style,code,pre,textarea,[data-no-i18n],[lang="en"]:not(html),.reader-en,.reader-vi,.quote,.lesson-summary,.candidate-body,.question-prompt,.toeic-passage,.toeic-document,.toeic-set-list strong,.qa-answer,td,.flashcard .word,.flashcard .meaning,.reading-question legend>span:last-child,.reading-option>span:last-child';
+const protectedSelector='script,style,code,pre,textarea,[data-language],[contenteditable]:not([contenteditable="false"]),[data-no-i18n],[lang="en"]:not(html),.reader-en,.reader-vi,.quote,.candidate-body,.question-prompt,.toeic-passage,.toeic-document,.toeic-set-list strong,.qa-answer,.flashcard .word,.flashcard .meaning,.reading-option>span:last-child';
+const attributeProtectedSelector=protectedSelector.replace(',textarea','');
 function t(key,vars={}){return (dictionaries[current][key]||dictionaries.vi[key]||key).replace(/\{(\w+)\}/g,(m,k)=>Object.hasOwn(vars,k)?String(vars[k]):m);}
 function translate(source){
-  if(current==='vi')return source;const trimmed=source.trim(),entry=sourceMap.get(trimmed);if(entry)return source.replace(trimmed,entry[languages.indexOf(current)]);
+  if(current==='vi')return source;const trimmed=normalize(source),entry=sourceMap.get(trimmed);if(entry)return source.replace(source.trim(),entry[languages.indexOf(current)]);
+  const decorated=trimmed.match(/^([←→↗✓★☆◐◉◇✦↺◎◫▤↥⚙·•]\s*)?(.+?)(\s*[←→↗])?$/);
+  if(decorated&&(decorated[1]||decorated[3])){const core=sourceMap.get(decorated[2]);if(core)return source.replace(source.trim(),(decorated[1]||'')+core[languages.indexOf(current)]+(decorated[3]||''));}
+  for(const {row,keys,re} of patterns){const match=trimmed.match(re);if(match){const vars=Object.fromEntries(keys.map((key,i)=>[key,match[i+1]]));return source.replace(source.trim(),row[languages.indexOf(current)].replace(/\{\d+\}/g,key=>vars[key]??key));}}
   const count=trimmed.match(/^(\d+) bài phù hợp$/);if(count)return t('library.count',{count:count[1]});
   return source;
 }
@@ -366,21 +382,21 @@ let observer,scheduled=false;
 function apply(){
   observer?.disconnect();document.documentElement.lang=current==='zh'?'zh-Hans':current;
   document.querySelectorAll('[data-language]').forEach(s=>{s.value=current;s.setAttribute('aria-label',({vi:'Ngôn ngữ giao diện',en:'Interface language',fr:'Langue de l’interface',zh:'界面语言'})[current]);});
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const value=t(el.dataset.i18n);if(el.textContent!==value)el.textContent=value;});
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>el.setAttribute('placeholder',t(el.dataset.i18nPlaceholder)));
-  document.querySelectorAll('[data-i18n-alt]').forEach(el=>el.setAttribute('alt',t(el.dataset.i18nAlt)));
+  document.querySelectorAll('[data-i18n]').forEach(el=>{if(el.closest(protectedSelector)||el.children.length)return;const value=t(el.getAttribute('data-i18n'));if(el.textContent!==value)el.textContent=value;});
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{if(!el.closest(attributeProtectedSelector))el.setAttribute('placeholder',t(el.getAttribute('data-i18n-placeholder')));});
+  document.querySelectorAll('[data-i18n-alt]').forEach(el=>{if(!el.closest(attributeProtectedSelector))el.setAttribute('alt',t(el.getAttribute('data-i18n-alt')));});
   // Only known interface strings are replaced; originals allow a lossless switch back.
-  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);
   while(walker.nextNode()){
-    const node=walker.currentNode,parent=node.parentElement;if(!parent||parent.closest(protectedSelector)||parent.closest('[data-i18n]'))continue;
+    const node=walker.currentNode,parent=node.parentElement;if(!parent||parent.closest(protectedSelector)||(parent.matches('[data-i18n]')&&!parent.children.length))continue;
     let record=originals.get(node);if(!record||node.nodeValue!==record.last)record={source:node.nodeValue,last:node.nodeValue};
     const next=translate(record.source);if(next!==node.nodeValue){if(parent.tagName==='OPTION'&&!parent.hasAttribute('value'))parent.value=record.source;node.nodeValue=next;}record.last=next;originals.set(node,record);
   }
-  document.querySelectorAll('[placeholder],[aria-label]').forEach(el=>{if(el.closest(protectedSelector)||el.matches('[data-language],[data-i18n-placeholder]'))return;let sources=attributeSources.get(el)||{};for(const attr of ['placeholder','aria-label']){if(!el.hasAttribute(attr))continue;const value=el.getAttribute(attr);let old=sources[attr];if(!old||old.last!==value)old={source:value};const next=translate(old.source);if(next!==value)el.setAttribute(attr,next);sources[attr]={source:old.source,last:next};}attributeSources.set(el,sources);});
-  observer?.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['data-i18n']});
+  document.querySelectorAll('[placeholder],[aria-label],[title],[alt]').forEach(el=>{if(el.closest(attributeProtectedSelector)||el.matches('[data-language]'))return;let sources=attributeSources.get(el)||{};for(const attr of ['placeholder','aria-label','title','alt']){if(!el.hasAttribute(attr)||el.hasAttribute('data-i18n-'+attr))continue;const value=el.getAttribute(attr);let old=sources[attr];if(!old||old.last!==value)old={source:value};const next=translate(old.source);if(next!==value)el.setAttribute(attr,next);sources[attr]={source:old.source,last:next};}attributeSources.set(el,sources);});
+  observer?.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['data-i18n','placeholder','aria-label','title','alt']});
 }
 function setLanguage(lang){if(!languages.includes(lang))return;current=lang;try{localStorage.setItem('lexiread.language',lang);}catch{}apply();document.dispatchEvent(new CustomEvent('lexiread:language',{detail:lang}));}
-window.LexiI18n={t,apply,setLanguage,get language(){return current;},languages};
+window.LexiI18n={t,translate,apply,setLanguage,get language(){return current;},languages};
 document.addEventListener('DOMContentLoaded',()=>{observer=new MutationObserver(()=>{if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;apply();});});apply();document.addEventListener('change',e=>{if(e.target.matches('[data-language]'))setLanguage(e.target.value);});});
 window.addEventListener('storage',e=>{if(e.key==='lexiread.language'&&languages.includes(e.newValue)){current=e.newValue;apply();document.dispatchEvent(new CustomEvent('lexiread:language',{detail:current}));}});
 })();

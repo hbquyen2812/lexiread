@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+<!-- Original LexiRead vector artwork: a small study companion at a sunny desk. -->
+<rect width="640" height="420" rx="36" fill="#edf2e5"/>
+<path d="M56 291C-4 213 76 59 213 49c148-12 144 77 241 57s148 83 111 163-137 90-270 74S99 347 56 291" fill="#e0e9d3"/>
+<rect x="388" y="53" width="156" height="153" rx="70" fill="#fff9e9"/>
+<circle cx="471" cy="101" r="27" fill="#f0ce8c"/><path d="M388 141h156m-78-88v153" stroke="#c6d3b6" stroke-width="7"/>
+<path d="M61 312h520" stroke="#9eae91" stroke-width="10" stroke-linecap="round"/>
+<path d="M101 319v50m446-50v50" stroke="#bc9c7e" stroke-width="12" stroke-linecap="round"/>
+<ellipse cx="316" cy="329" rx="218" ry="12" fill="#c8d5ba"/>
+<path d="M174 223c-28-31-22-74-6-78 21-5 39 57 39 57s-4-85 22-83 29 58 17 96" fill="#fff8e8" stroke="#53745d" stroke-width="3"/>
+<path d="M183 176l12 29m32-62 2 57" stroke="#edbcaa" stroke-width="7" stroke-linecap="round"/>
+<path d="M151 259c0-38 19-57 54-57 40 0 59 20 59 58v48H151z" fill="#fff8e8" stroke="#53745d" stroke-width="3"/>
+<circle cx="190" cy="243" r="3" fill="#35563f"/><circle cx="221" cy="243" r="3" fill="#35563f"/>
+<path d="m202 253 4 3 4-3m-4 3v4" stroke="#35563f" stroke-width="2.5" stroke-linecap="round"/>
+<ellipse cx="178" cy="254" rx="8" ry="5" fill="#efc2ad"/><ellipse cx="235" cy="254" rx="8" ry="5" fill="#efc2ad"/>
+<path d="M160 284c33-19 63-20 94-3v29h-94z" fill="#a8bfa1"/>
+<rect x="250" y="201" width="181" height="105" rx="10" fill="#52745d"/>
+<rect x="259" y="210" width="163" height="84" rx="5" fill="#f8f9ed"/>
+<rect x="272" y="221" width="54" height="61" rx="5" fill="#dbe7cd"/>
+<path d="m284 250 9 9 20-24" stroke="#7c9b66" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M339 230h66m-66 16h53m-53 16h60m-60 16h39" stroke="#c3d0b7" stroke-width="5" stroke-linecap="round"/>
+<path d="M240 306h202l12 8H228z" fill="#8fa58c"/>
+<path d="M496 265c-4-44 2-65 9-83m-8 49c-35-1-38-31-38-31 26 0 36 14 38 31m5-18c3-31 29-38 29-38 3 24-9 37-29 38" fill="#8ba679" stroke="#6f8c60" stroke-width="3" stroke-linecap="round"/>
+<path d="M475 262h48l-7 46h-34z" fill="#d6a784"/><path d="M480 272h39" stroke="#edc4a3" stroke-width="5"/>
+<rect x="91" y="286" width="57" height="21" rx="8" fill="#e1b99a"/><path d="M105 284v-12m14 12v-20m13 20v-10" stroke="#baccb0" stroke-width="3" stroke-linecap="round"/>
+<g transform="rotate(-12 284 131)"><rect x="251" y="103" width="76" height="54" rx="8" fill="#fffaf0" stroke="#d5bd94" stroke-width="2"/><path d="m257 111 32 23 31-23" stroke="#d5bd94" stroke-width="3" stroke-linejoin="round"/></g>
+<path d="m123 108 4 11 11 4-11 4-4 11-4-11-11-4 11-4zM361 73l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#e5bd7e"/>
+</svg>

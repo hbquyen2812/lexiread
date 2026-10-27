@@ -19,6 +19,27 @@ def fetch(url):
         return response.read()
 
 
+def vendor_ui_font():
+    """Keep Vietnamese UI fonts local, with the upstream redistribution license."""
+    DEST.mkdir(parents=True, exist_ok=True)
+    TEMP.mkdir(parents=True, exist_ok=True)
+    base = 'https://raw.githubusercontent.com/google/fonts/main/ofl/bevietnampro/'
+    faces = []
+    for weight, name in [(400, 'Regular'), (500, 'Medium'), (600, 'SemiBold'), (700, 'Bold')]:
+        source = TEMP / f'BeVietnamPro-{name}.ttf'
+        source.write_bytes(fetch(base + source.name))
+        font = TTFont(source)
+        font.flavor = 'woff2'
+        output = DEST / f'be-vietnam-pro-{weight}.woff2'
+        font.save(output)
+        faces.append(f"@font-face{{font-family:'Be Vietnam Pro';font-style:normal;font-weight:{weight};font-display:swap;src:url('/static/fonts/{output.name}') format('woff2')}}")
+        print(output.name, output.stat().st_size)
+    (DEST / 'bevietnampro-OFL.txt').write_text(fetch(base + 'OFL.txt').decode('utf-8'), encoding='utf-8')
+    path = ROOT / 'static/fonts.css'
+    current = [line for line in path.read_text(encoding='utf-8').splitlines() if "font-family:'Be Vietnam Pro'" not in line]
+    path.write_text('\n'.join(current + faces) + '\n', encoding='utf-8')
+
+
 def main():
     DEST.mkdir(parents=True, exist_ok=True)
     TEMP.mkdir(parents=True, exist_ok=True)
@@ -47,6 +68,7 @@ def main():
         license_text=fetch('https://raw.githubusercontent.com/google/fonts/main/ofl/' + family + '/OFL.txt').decode('utf-8')
         (DEST / (family + '-OFL.txt')).write_text('\n'.join(line.rstrip() for line in license_text.splitlines())+'\n',encoding='utf-8')
     (ROOT / 'static/fonts.css').write_text('\n'.join(faces)+'\n', encoding='utf-8')
+    vendor_ui_font()
 
 
 if __name__ == '__main__':

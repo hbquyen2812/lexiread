@@ -11,7 +11,7 @@ const quiz=ui.quizHTML([question]);
 assert.doesNotMatch(quiz,/<img|<script>/);
 assert.match(quiz,/required/);
 assert.equal((quiz.match(/type="radio"/g)||[]).length,4);
-assert.match(quiz,/<legend class="sr-only">Câu 1:/);
+assert.match(quiz,/<legend class="sr-only"><span>Câu 1: <\/span><span lang="en" data-no-i18n>/);
 assert.match(quiz,/<\/legend><div class="academy-question-heading"/);
 const result=ui.resultHTML({score:0,total:1,percent:0,results:[{...question,answer:1,submitted:0,correct:false,explanation_vi:'Because <script>x</script>'}]});
 assert.doesNotMatch(result,/<img|<script>/);

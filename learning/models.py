@@ -305,6 +305,16 @@ class LearningProfile(models.Model):
         ]
 
 
+class GrammarReadProgress(models.Model):
+    """An explicit reading bookmark, separate from assessed quiz mastery."""
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    unit_id = models.SlugField(max_length=100)
+    read_at = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=['owner', 'unit_id'], name='unique_grammar_read')]
+
+
 class FoundationAttempt(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     kind = models.CharField(max_length=12)
