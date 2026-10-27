@@ -23,3 +23,10 @@
 .topic-heading+.academy-filters>label{min-width:0}
 
 .guide-cover{display:flex;align-items:center;justify-content:center;background:#f0f3e7}.guide-cover img.object-art{width:112px;height:112px;object-fit:contain;border-radius:22px}.guide-card:nth-child(3n+2) .guide-cover{background:#f9efe2}.guide-card:nth-child(3n) .guide-cover{background:#eaf0ee}
+
+/* Keep the TOEIC catalogue within reach; topic cards share short, stable groups. */
+.toeic-hero.toeic-compact{grid-template-columns:minmax(0,1fr) 180px;padding:24px 28px;gap:24px;margin-bottom:24px;border-radius:20px}
+.toeic-compact h1{font-size:32px;margin:0 0 10px;letter-spacing:-.02em}.toeic-compact p{font-size:15px;max-width:none;margin:0 0 10px}.toeic-compact>img{width:180px;height:118px;object-fit:contain}
+.toeic-compact+[data-toeic-library] .practice-art img{height:140px;aspect-ratio:auto}.toeic-compact+[data-toeic-library] .practice-card h3{font-size:19px}.toeic-compact+[data-toeic-library] .practice-card p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.topic-course h2,.topic-course>p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.topic-course .tags{min-height:28px}
+@media(max-width:600px){.toeic-hero.toeic-compact{grid-template-columns:minmax(0,1fr) 76px;padding:20px 18px;gap:10px}.toeic-compact h1{font-size:26px}.toeic-compact>img{width:76px;height:76px}.toeic-compact p{font-size:14px;line-height:1.6}.toeic-compact .link-btn{font-size:14px}}

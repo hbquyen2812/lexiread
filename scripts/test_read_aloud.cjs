@@ -110,14 +110,16 @@ async function main(){
   const practice={title:'Practice',parts:[7],documents:[{id:'d1',heading:'Office notice',body:'Please arrive at nine.',kind:'Notice'},{id:'d2',heading:'Reply',body:'Thank you for the update.',kind:'Email'}],questions:[question('q1','d1'),question('q2','d2'),question('q3','d1')],focus_vocabulary:[]};
   Object.assign(toeic.scope,{$:s=>toeic.document.querySelector(s),esc:s=>String(s||''),heading:()=>'',setInterval:()=>0,clearInterval:()=>{},state:{toeicSet:practice,toeicSession:{answers:{}}}});
   vm.runInNewContext(fs.readFileSync('static/practice_tools.js','utf8'),toeic.scope);
-  toeic.scope.renderToeicPractice();toeic.click('[data-audio-play]');
-  assert.equal(toeic.spoken[0].text,'Office notice. Please arrive at nine.');
-  toeic.spoken[0].onend();assert.equal(toeic.spoken[1].text,'Reply. Thank you for the update.');
-  toeic.spoken[1].onend();assert.equal(toeic.spoken.length,2,'questions and answers are not read');
-  assert.equal(toeic.$('.read-aloud').dataset.state,'done');
+  toeic.scope.renderToeicPractice();
+  assert.equal(toeic.$('.read-aloud'),null,'TOEIC test mode has no read-aloud toolbar');
+  assert.equal(toeic.spoken.length,0,'opening a test never starts audio');
+  assert.ok(toeic.document.body.textContent.includes('Please arrive at nine.'),'reading passages needed by the questions remain');
+  assert.equal(toeic.document.querySelectorAll('.reading-question').length,3);
+  assert.ok(toeic.$('[data-action="submit-toeic"]'));
+  assert.ok(toeic.$('[data-practice-clock]'));
   practice.documents=[];practice.parts=[5];toeic.scope.renderToeicPractice();assert.equal(toeic.$('.read-aloud'),null);
   toeic.win.LexiReadAloud.clear();
-  console.log('PASS TOEIC integration: documents only, no answers or duplicates, no audio toolbar without passages');
+  console.log('PASS TOEIC test-only UI: no passage audio; documents, questions, timer and submission remain');
 }
 if(require.main===module)main().catch(error=>{console.error(error);process.exitCode=1;});
 module.exports={setup};
