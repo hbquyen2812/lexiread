@@ -196,6 +196,20 @@ class AccountTests(TestCase):
 
 @override_settings(AUTH_DAILY_LIMIT=2)
 class AuthConcurrencyTests(TransactionTestCase):
+    def test_zero_cooldown_allows_a_request_that_started_before_the_lock_holder(self):
+        from datetime import timedelta
+        from unittest.mock import patch
+        from django.utils import timezone
+        started=timezone.now()
+        with transaction.atomic():
+            self.assertTrue(consume('waiting-request','first-ip'))
+        # A second request can start earlier but acquire the global lock later.
+        with patch('learning.accounts.limits.timezone.now', return_value=started-timedelta(seconds=1)):
+            with transaction.atomic():
+                self.assertTrue(consume('waiting-request','second-ip'))
+        with transaction.atomic():
+            self.assertFalse(consume('waiting-request','third-ip'))
+
     def test_parallel_requests_cannot_overspend_global_budget(self):
         if connection.vendor!='postgresql':
             self.skipTest('Requires real PostgreSQL row locks.')

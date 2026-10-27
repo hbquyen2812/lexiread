@@ -19,7 +19,7 @@ html=re.sub(r"({% static '[^']+' %})\?v=[^\"]+",r'\1',html)
 html=html.replace("{% include 'language_switcher.html' %}",(root/'templates/language_switcher.html').read_text(encoding='utf-8'))
 html=html.replace('{{ strategy_guides|json_script:"strategy-guides-data" }}','<script id="strategy-guides-data" type="application/json">'+json.dumps(strategy_guides(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
 html=html.replace('{{ topic_labels|json_script:"topic-labels-data" }}','<script id="topic-labels-data" type="application/json">'+json.dumps(topic_labels(),ensure_ascii=False).replace('<','\\u003c')+'</script>')
-for script in ('vendor/purify.min','safe_dom','pronunciation','read_aloud','learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods','dictionary','topic_vocabulary'):
+for script in ('vendor/purify.min','safe_dom','visuals','pronunciation','read_aloud','learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods','dictionary','topic_vocabulary'):
     html=html.replace('<script src="{% static \''+script+'.js\' %}" defer></script>','<script>'+(root/f'static/{script}.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'read_aloud.css\' %}">','<style>'+(root/'static/read_aloud.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'learning_hub.css\' %}">','<style>'+(root/'static/learning_hub.css').read_text(encoding='utf-8')+'</style>')
@@ -30,6 +30,7 @@ html=html.replace("<link rel=\"stylesheet\" href=\"{% static 'learning_methods.c
 html=html.replace("<link rel=\"stylesheet\" href=\"{% static 'dictionary.css' %}\">",'<style>'+(root/'static/dictionary.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace("<link rel=\"stylesheet\" href=\"{% static 'topic_vocabulary.css' %}\">",'<style>'+(root/'static/topic_vocabulary.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace("<link rel=\"stylesheet\" href=\"{% static 'pronunciation.css' %}\">",'<style>'+(root/'static/pronunciation.css').read_text(encoding='utf-8')+'</style>')
+html=html.replace('<link rel="stylesheet" href="{% static \'learning_visuals.css\' %}">','<style>'+(root/'static/learning_visuals.css').read_text(encoding='utf-8')+'</style>')
 fonts=(root/'static/fonts.css').read_text(encoding='utf-8')
 for font in (root/'static/fonts').glob('*.woff2'):
     fonts=fonts.replace('/static/fonts/'+font.name,'data:font/woff2;base64,'+base64.b64encode(font.read_bytes()).decode())
@@ -65,3 +66,10 @@ html=html.replace('<script src="{% static \'grammar_reference.js\' %}" defer></s
 html=html.replace('<script src="{% static \'grammar_course.js\' %}" defer></script>','<script>'+(root/'static/grammar_course.js').read_text(encoding='utf-8')+'</script>')
 (root/'preview.html').write_text(html,encoding='utf-8')
 print('Preview bytes:',len(html.encode()))
+
+# Embed the complete allowlisted art map for the standalone offline preview.
+preview=root/'preview.html'
+embedded=preview.read_text(encoding='utf-8')
+art_assets={'/static/'+asset.relative_to(root/'static').as_posix():'data:image/svg+xml;base64,'+base64.b64encode(asset.read_bytes()).decode() for asset in (root/'static/illustrations').rglob('*.svg')}
+embedded=embedded.replace("<script>'use strict';\n/* Local, reusable art:",'<script>window.LEXI_ART_ASSETS='+json.dumps(art_assets)+';</script>\n<script>\'use strict\';\n/* Local, reusable art:')
+preview.write_text(embedded,encoding='utf-8')

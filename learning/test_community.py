@@ -81,7 +81,8 @@ class CommunitySummaryTests(TestCase):
         self.events(self.user)
         response=self.client.get('/')
         self.assertContains(response,'Hoạt động bản thử nghiệm')
-        self.assertContains(response,'không phải số người dùng chính thức')
+        self.assertContains(response,'30 ngày gần đây')
+        self.assertNotContains(response,'Cách tính số liệu')
         self.assertEqual(response.context['community'],self.client.get('/api/community/').json())
         self.assertContains(response,'/guides/#guides/methods')
 

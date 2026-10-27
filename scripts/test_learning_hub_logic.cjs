@@ -15,6 +15,7 @@ class NodeStub {
     this.classes = new Set();
     this.classList = {add: value => this.classes.add(value), toggle: (value, on) => on ? this.classes.add(value) : this.classes.delete(value)};
   }
+  replaceChildren(fragment) { const container=fragment.ownerDocument.createElement('div');container.append(fragment);this.innerHTML=container.innerHTML; }
   matches(selector) { return selector.split(',').some(part => this.hasAttribute(part.trim().slice(1, -1))); }
   closest(selector) {
     if (selector === '#main') return this.inMain ? this : null;
@@ -46,7 +47,7 @@ function environment(items = guides) {
   };
   const scope = {
     document, localStorage: {getItem: key => { if (env.failRead) throw Error('denied'); return storage.get(key) ?? null; }, setItem: (key, value) => { if (env.failWrite) throw Error('quota'); storage.set(key, value); }},
-    window: {addEventListener() {}, scrollTo() {}}, location: {hash: ''},
+    window: {LexiDOM:require('./dom_test_env.cjs').environment().window.LexiDOM,addEventListener() {}, scrollTo() {}}, location: {hash: ''},
     Date: class extends Date {static now() {return env.now;}},
     FormData: class {constructor(form) {this.form = form;} get(name) {return this.form.values?.[name] ?? null;}},
     setInterval: fn => {const id = intervals.size + 1; intervals.set(id, fn); return id;},

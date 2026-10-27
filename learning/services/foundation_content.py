@@ -11,6 +11,7 @@ from .core import InputError
 
 ROOT = Path(__file__).resolve().parents[2] / 'data'
 LEVELS = ('A1', 'A2', 'B1', 'B2', 'C1', 'C2')
+CONTENT_LEVELS = ('pre-A1', *LEVELS)
 GOALS = ('general', 'ielts', 'toeic')
 
 
@@ -123,7 +124,59 @@ def units(kind):
 
 
 def get_unit(kind, unit_id):
+    if kind not in ('grammar', 'vocabulary'):
+        raise InputError('Loại bài không được hỗ trợ.')
+    if kind == 'vocabulary':
+        from django.apps import apps
+        if apps.ready:
+            from learning.models import VocabularyCollection
+            row = VocabularyCollection.objects.filter(pk=unit_id).first()
+            if row is not None:
+                return {**row.content, 'id':row.slug, 'title':row.title, 'topic':row.topic, 'level':row.level}
+            if VocabularyCollection.objects.exists():
+                return None
     return next((row for row in units(kind) if row['id']==unit_id),None)
+
+
+def unit_summaries(kind):
+    """Project only catalogue metadata; never load every word/answer to list cards."""
+    if kind == 'vocabulary':
+        from django.apps import apps
+        if apps.ready:
+            from django.core.cache import cache
+            from django.db import connection
+            from django.db.models import F, Func, IntegerField
+            from learning.models import VocabularyCollection
+            cache_key = 'lexiread:public-vocabulary-summaries:v1'
+            # Public metadata only. Never cache a learner's progress or uncommitted edits.
+            use_cache = not connection.in_atomic_block
+            cached = cache.get(cache_key) if use_cache else None
+            if cached is not None:
+                return cached
+            class ArrayLength(Func):
+                function = 'jsonb_array_length'
+                output_field = IntegerField()
+
+                def as_sqlite(self, compiler, connection, **extra_context):
+                    return self.as_sql(compiler, connection, function='json_array_length', **extra_context)
+
+            rows = list(VocabularyCollection.objects.annotate(
+                word_count=ArrayLength(F('content__words')),
+                question_count=ArrayLength(F('content__questions')),
+            ).values('slug','title','topic','level','word_count','question_count',
+                     'content__tags','content__track','content__description','content__summary','content__minutes'))
+            if rows:
+                result = [{
+                    'id':r['slug'], 'title':r['title'], 'topic':r['topic'], 'level':r['level'],
+                    'tags':r['content__tags'] or [], 'category':category(r['content__track'], r['topic']),
+                    'description':r['content__summary'] or r['content__description'] or '',
+                    'minutes':r['content__minutes'] or 8, 'word_count':r['word_count'] or 0,
+                    'question_count':r['question_count'] or r['word_count'] or 0,
+                } for r in rows]
+                if use_cache:
+                    cache.set(cache_key, result, timeout=60)
+                return result
+    return [summary(row, kind) for row in units(kind)]
 
 
 def questions_for(unit, kind):
@@ -159,12 +212,16 @@ def grade(snapshot, answers):
     return {'score':score,'total':len(qs),'percent':round(score/len(qs)*100),'results':results}
 
 
-def summary(unit, kind):
+def category(track, topic):
     categories={'everyday_english':'Everyday English','focused_practice':'Reading Skills',
                 'ielts_academic':'IELTS Academic','ielts_general':'IELTS General Training','toeic':'TOEIC',
                 'school_primary':'School English','school_lower_secondary':'School English','school_upper_secondary':'School English'}
+    return categories.get(track, topic)
+
+
+def summary(unit, kind):
     return {k:unit[k] for k in ('id','title','level','tags','topic') if k in unit} | {
-        'category':categories.get(unit.get('track'),unit.get('topic','')),
+        'category':category(unit.get('track'),unit.get('topic','')),
         'description':unit.get('summary',unit.get('description','')),
         'minutes':unit.get('minutes',8), 'question_count':len(questions_for(unit,kind)),
         'word_count':len(unit.get('words',[]))}
