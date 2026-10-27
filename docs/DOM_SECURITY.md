@@ -1,8 +1,8 @@
 # Rendering untrusted content
 
 The UI treats imported vocabulary, API responses and editorial metadata as text.
-Escape individual values before composing a template. The five modules covered by
-PR #4 then pass the complete template through `LexiDOM.fragment` and insert the
+Escape individual values before composing a template. The six updated modules
+pass the complete template through `LexiDOM.fragment` and insert the
 returned nodes with `replaceChildren`, `replaceWith` or `append`.
 
 `static/safe_dom.js` uses the locally hosted DOMPurify 3.4.17 build. It removes
@@ -12,7 +12,7 @@ Missing or unsupported sanitization fails closed. Do not add an identity fallbac
 reparse the fragment as HTML, or suppress the scanner findings.
 
 The 22 Sourcery findings identify 11 locations reported by two overlapping rules.
-The patch replaces all 42 dynamic HTML writes in those five modules, including
+The patch replaces all 48 dynamic HTML writes in those six modules, including
 adjacent paths not reported in the original diff. Constant HTML-only assignments
 remain. Other modules retain their existing escaping; this is not a claim that the
 whole application has received an independent security audit.
@@ -35,10 +35,15 @@ vendored sanitizer with jsdom, verify the vendor bytes against the locked packag
 exercise the 11 reported render paths with hostile input, and reject new raw HTML
 writes in these modules. Audio integration tests also use this real sanitizer.
 
-Validated on 2026-10-27: all 16 Node suites, the HTTP QA smoke suite, and a Chromium
+Validated on 2026-10-27: all 17 Node suites, the HTTP QA smoke suite, and a Chromium
 import preview containing image event handlers, script tags and SVG handlers.
 The payload remained literal text with zero executable nodes in the preview;
 it was not saved to an account. See `qa/security-import-20261027.png`.
+
+The remote Sourcery check on commit `1ca3230` concluded `skipped`, not `success`,
+because PR #4 exceeded its 150,000-character review limit.
+Local coverage is not a substitute for a completed independent scan; check the
+latest PR head before merging. No scanner rule has been suppressed.
 
 References: [DOMPurify](https://github.com/cure53/DOMPurify),
 [insecure-innerhtml rule](https://github.com/semgrep/semgrep-rules/blob/develop/javascript/browser/security/insecure-innerhtml.yaml),

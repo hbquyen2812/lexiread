@@ -30,7 +30,7 @@ def consume(action, ip_key, email=''):
         row = AuthRateLimit.objects.select_for_update().get(pk=key)
         if now - row.started_at >= window:
             row.started_at, row.count = now, 0
-        if row.count >= maximum or (row.count and (now - row.last_at).total_seconds() < cooldown):
+        if row.count >= maximum or (cooldown > 0 and row.count and (now - row.last_at).total_seconds() < cooldown):
             return False
         rows.append(row)
     for row in rows:

@@ -31,11 +31,13 @@ def serial_reading(r,full=True):
         data.update(text=r.text,paragraphs=paragraphs(r.text),analysis=r.analysis,lesson=public_lesson(r.lesson_snapshot))
     return data
 
+@transaction.atomic
 def save_entry(user,data,reading=None):
     fields=validate_entry(data)
     fp=fingerprint(fields['word'],fields['meaning_vi'])
     # Duplicate import never overwrites a reviewed sense or resets the review schedule.
-    v,created=Vocabulary.objects.get_or_create(owner=user,fingerprint=fp,defaults={**fields,'reading':reading})
+    # All import paths lock the same sense before merging tags, including single-word saves.
+    v,created=Vocabulary.objects.select_for_update().get_or_create(owner=user,fingerprint=fp,defaults={**fields,'reading':reading})
     if not created:
         changed=[]
         new_tags=list(dict.fromkeys(v.tags+fields['tags']))[:20]
@@ -216,7 +218,7 @@ def import_library(user,payload):
     foundation_created=0
     if is_backup and payload.get('version')>=5:
         from ..models import FoundationAttempt, LearningProfile
-        from .foundation_content import grade, LEVELS
+        from .foundation_content import grade, CONTENT_LEVELS
         from .learning_path import clean_profile
         rows=payload.get('foundation_attempts',[])
         if not isinstance(rows,list) or len(rows)>10000:raise InputError('Lịch sử học nền tảng không hợp lệ.')
@@ -224,7 +226,7 @@ def import_library(user,payload):
             if not isinstance(raw,dict) or raw.get('kind') not in ('grammar','vocabulary'):raise InputError('Loại bài nền tảng chưa hợp lệ.')
             snapshot=raw.get('snapshot',{})
             if (not isinstance(snapshot,dict) or snapshot.get('kind')!=raw['kind'] or
-                snapshot.get('id')!=raw.get('unit_id') or snapshot.get('level') not in LEVELS):
+                snapshot.get('id')!=raw.get('unit_id') or snapshot.get('level') not in CONTENT_LEVELS):
                 raise InputError('Nội dung bài nền tảng không khớp lịch sử.')
             result=grade(snapshot,raw.get('answers'))
             token=uuid.UUID(raw.get('token',''))

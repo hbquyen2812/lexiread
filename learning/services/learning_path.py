@@ -3,7 +3,7 @@ from datetime import timedelta
 from django.utils import timezone
 from ..models import LearningProfile, FoundationAttempt, Vocabulary, Reading, CuratedLesson, ToeicPractice, ToeicAttempt, LessonAttempt
 from .core import InputError
-from .foundation_content import LEVELS, GOALS, units
+from .foundation_content import LEVELS, GOALS, units, unit_summaries
 
 START = {
  'A1': {'title':'Làm quen với tiếng Anh hằng ngày', 'intro':'Bắt đầu với câu ngắn và từ vựng quen thuộc. Mỗi buổi học một ít rồi ôn lại.',
@@ -68,7 +68,7 @@ def plan_for(user):
             tasks.append(dict(kind=kind,title=title,href=href,minutes=minutes,reason=reason));used+=minutes
     due=Vocabulary.objects.filter(owner=user,due_at__lte=now).count()
     if due:add('review',f'Ôn từ vựng ({due} từ)','#study',5,'Dành 5 phút ôn từ cũ trước khi học thêm từ mới.')
-    grammar=units('grammar'); vocab=units('vocabulary'); candidates=[]
+    grammar=units('grammar'); vocab=unit_summaries('vocabulary'); candidates=[]
     for order,row in enumerate(grammar):
         p=progress.get('grammar/'+row['id']); distance=index-LEVELS.index(row['level'])
         if distance<0 or (distance>0 and not p):continue

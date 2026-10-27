@@ -45,7 +45,7 @@ function setup() {
 async function run() {
   // Detect new raw sinks without suppressing the upstream security rules.
   let safeWrites=0;
-  for (const name of modules) {
+  for (const name of [...modules,'learning_hub']) {
     const ast=acorn.parse(read(`static/${name}.js`),{ecmaVersion:'latest'});
     function walk(node) {
       if(!node||typeof node!=='object')return;
@@ -63,7 +63,7 @@ async function run() {
     }
     walk(ast);
   }
-  assert.equal(safeWrites,42);
+  assert.equal(safeWrites,48);
   assert.equal(read('static/vendor/purify.min.js'),read('node_modules/dompurify/dist/purify.min.js'),'vendored sanitizer matches locked package');
   const template=read('templates/app.html');
   assert.ok(template.indexOf("'vendor/purify.min.js'")<template.indexOf("'safe_dom.js'"));
@@ -86,7 +86,7 @@ async function run() {
   assert.throws(()=>unsupported.window.LexiDOM.fragment(attack),/Không thể/);
   delete unsupported.window.DOMPurify;
   assert.throws(()=>unsupported.window.LexiDOM.fragment(attack),/Không thể/);
-  console.log('PASS pinned sanitizer, all 42 safe DOM writes, XSS vectors, safe attributes and fail-closed behavior');
+  console.log('PASS pinned sanitizer, all 48 safe DOM writes, XSS vectors, safe attributes and fail-closed behavior');
 
   const lesson={slug:'test',title:attack,summary:attack,level:'A1',topic:'Travel',word_count:attack,question_count:3};
   scope.api=async url=>url==='/community/'?{}:{items:[lesson],topics:[attack],total:1};

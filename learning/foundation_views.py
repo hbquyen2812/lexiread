@@ -11,7 +11,7 @@ from .models import LearningProfile, FoundationAttempt, Vocabulary, GrammarReadP
 from .services.core import InputError, fingerprint
 from .services.storage import save_entry
 from .services.motivation import record_learning
-from .services.foundation_content import (ROOT, LEVELS, units, get_unit, summary, quiz_snapshot,
+from .services.foundation_content import (ROOT, CONTENT_LEVELS, units, unit_summaries, get_unit, summary, quiz_snapshot,
     revision, grade, fold, word_entry)
 from .services.learning_path import clean_profile, profile_for, progress_for, plan_for
 from .services.grammar_reference import reference, lesson_guide
@@ -45,12 +45,12 @@ def find_unit(kind, unit_id):
 @api('GET')
 def overview(request):
     kind=request.GET.get('kind','grammar')
-    rows=units(kind); level=request.GET.get('level',''); q=fold(request.GET.get('q','')[:100])
-    if level and level not in LEVELS:raise InputError('Trình độ chưa hợp lệ.')
+    rows=unit_summaries(kind); level=request.GET.get('level',''); q=fold(request.GET.get('q','')[:100])
+    if level and level not in CONTENT_LEVELS:raise InputError('Trình độ chưa hợp lệ.')
     rows=[r for r in rows if (not level or r['level']==level) and (not q or q in fold(r['title']+' '+r.get('summary',r.get('description',''))))]
     progress=progress_for(request.user)
     read_ids=set(GrammarReadProgress.objects.filter(owner=request.user).values_list('unit_id',flat=True)) if kind=='grammar' else set()
-    return JsonResponse({'items':[summary(r,kind)|{'progress':progress.get(kind+'/'+r['id']), 'is_read':r['id'] in read_ids} for r in rows],
+    return JsonResponse({'items':[r|{'progress':progress.get(kind+'/'+r['id']), 'is_read':r['id'] in read_ids} for r in rows],
                          'profile':profile_for(request.user),'kind':kind})
 
 
@@ -136,7 +136,7 @@ def plan(request):
 @api('GET')
 def dictionary(request):
     q=request.GET.get('q','')[:80].strip(); key=fold(q); level=request.GET.get('level','')
-    if level and level not in LEVELS:raise InputError('Trình độ chưa hợp lệ.')
+    if level and level not in CONTENT_LEVELS:raise InputError('Trình độ chưa hợp lệ.')
     if len(key)<2:return JsonResponse({'items':[],'total':0,'links':[]})
     matches={}
     for unit in units('vocabulary'):

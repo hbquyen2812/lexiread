@@ -29,7 +29,7 @@
   function community(data) {
     if (!data || !['active_learners','practice_attempts','word_reviews'].every(key=>Number.isSafeInteger(data[key])&&data[key]>=0)) return '';
     const metrics=[['active_learners','Tài khoản đã học'],['practice_attempts','Bài luyện đã làm'],['word_reviews','Lượt ôn từ']];
-    return `<section class="community-summary" aria-label="Hoạt động học tập"><header><h2>${data.is_demo?'Hoạt động bản thử nghiệm':'Cùng nhau học mỗi ngày'}</h2><span>30 ngày gần đây</span></header><dl class="community-metrics">${metrics.map(([key,label])=>`<div><dt>${label}</dt><dd>${data[key].toLocaleString('vi-VN')}</dd></div>`).join('')}</dl><details><summary>Cách tính số liệu</summary><p>Mỗi tài khoản có hoạt động học được tính một lần trong 30 ngày. Bài luyện là các lần nộp bài đọc, TOEIC, ngữ pháp và từ vựng; mỗi lần ôn một thẻ là một lượt ôn. Không tính tài khoản quản trị và tài khoản kiểm thử nội bộ. Số liệu tổng hợp từ hoạt động còn lưu trên hệ thống, không công khai danh tính.</p>${data.is_demo?'<p>Đây là dữ liệu của bản thử nghiệm, không phải số người dùng chính thức.</p>':''}</details></section>`;
+    return `<section class="community-summary" aria-label="Hoạt động học tập"><header><h2>${data.is_demo?'Hoạt động bản thử nghiệm':'Cùng nhau học mỗi ngày'}</h2><span>30 ngày gần đây</span></header><dl class="community-metrics">${metrics.map(([key,label])=>`<div><dt>${label}</dt><dd>${data[key].toLocaleString('vi-VN')}</dd></div>`).join('')}</dl></section>`;
   }
   function page(root) {
     const isPublic=!!document.querySelector('[data-guide-public]');

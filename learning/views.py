@@ -571,7 +571,12 @@ def catalog(request):
     page=max(1,int(request.GET.get('page',1)))
     limit=max(1,min(300,int(request.GET.get('limit',300))))
     total=qs.count()
-    selected=list(qs[(page-1)*limit:page*limit])
+    if request.GET.get('featured') == '1':
+        # The home page needs one starter at each level, not 300 full content rows.
+        selected=[row for level in ('A1','A2','B1')
+                  if (row := qs.filter(level=level).first()) is not None]
+    else:
+        selected=list(qs[(page-1)*limit:page*limit])
     progress={r.catalog_slug:r for r in personal.filter(catalog_slug__in=[lesson.slug for lesson in selected])}
     items=[]
     for lesson in selected:
