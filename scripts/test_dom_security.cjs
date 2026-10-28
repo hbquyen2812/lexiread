@@ -65,6 +65,7 @@ async function run() {
   }
   assert.equal(safeWrites,48);
   assert.equal(read('static/vendor/purify.min.js'),read('node_modules/dompurify/dist/purify.min.js'),'vendored sanitizer matches locked package');
+  assert.equal(read('static/vendor/purify.min.js.map'),read('node_modules/dompurify/dist/purify.min.js.map'),'vendored source map matches the same locked package');
   const template=read('templates/app.html');
   assert.ok(template.indexOf("'vendor/purify.min.js'")<template.indexOf("'safe_dom.js'"));
   for(const name of modules)assert.ok(template.indexOf("'safe_dom.js'")<template.indexOf(`'${name}.js'`));
