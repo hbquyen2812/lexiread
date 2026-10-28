@@ -60,6 +60,16 @@ const rows=[
 ];
 // Existing screens use Vietnamese source labels. Exact matches avoid changing learning content.
 const legacy=[
+['Đã lưu','Saved','Enregistré','已保存'],
+['Ôn tiếp','Next review:','Prochaine révision :','下次复习：'],
+['khoảng {0} phút nữa','in about {0} minutes','dans environ {0} minutes','约 {0} 分钟后'],
+['khoảng {0} giờ nữa','in about {0} hours','dans environ {0} heures','约 {0} 小时后'],
+['Flashcard bài này','Flashcards for this reading','Cartes de cette lecture','本文词卡'],
+['Flashcard bài đọc','Reading flashcards','Cartes de lecture','阅读词卡'],
+['Về bài đọc','Back to reading','Retour à la lecture','返回文章'],
+['Xem bộ từ','View this deck','Voir ces cartes','查看词卡组'],
+['Bài này chưa có thẻ. Mở bài đọc rồi chọn “Flashcard bài này”.','No cards yet. Open the reading and choose “Flashcards for this reading”.','Pas encore de cartes. Ouvrez la lecture et choisissez « Cartes de cette lecture ».','暂无词卡。打开文章，选择“本文词卡”。'],
+['Chưa tìm thấy từ có nghĩa sẵn trong bài này. Bạn có thể bôi đen từ để tra và lưu.','No matching words with saved meanings yet. Select a word in the reading to look it up and save it.','Aucun mot avec un sens enregistré pour cette lecture. Sélectionnez un mot pour le consulter et le sauvegarder.','暂未找到已有释义的匹配词。可选中文章中的词语查询并保存。'],
 ["Chọn bộ từ, học qua ví dụ và lưu vào kho riêng.","Choose a collection, learn through examples and save your words.","Choisissez une collection, apprenez avec des exemples et gardez vos mots.","选择词集，通过例句学习并保存单词。"],
 ["Làm quen với động từ be, đại từ và câu đơn.","Get familiar with the verb be, pronouns and simple sentences.","Familiarisez-vous avec le verbe être, les pronoms et les phrases simples.","熟悉动词 be、代词和简单句子。"],
 ["Chọn một bộ từ về sinh hoạt hằng ngày.","Choose a set of words about daily activities.","Choisissez un ensemble de mots sur les activités quotidiennes.","选择一组有关日常活动的单词。"],

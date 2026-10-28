@@ -2,6 +2,7 @@ from django.urls import path
 from . import views as v
 from . import foundation_views as f
 from . import dictionary_views as dictionary
+from .reading_deck_views import reading_deck
 urlpatterns=[
  path('api/practice-groups/',f.practice_groups),
  path('api/dictionary/',dictionary.lookup),
@@ -20,6 +21,7 @@ urlpatterns=[
  path('api/toeic/',v.toeic_catalog),path('api/toeic/<slug:slug>/',v.toeic_detail),
  path('api/toeic/<slug:slug>/submit/',v.toeic_submit),
  path('api/readings/<uuid:pk>/progress/',v.reading_progress),
+ path('api/readings/<uuid:pk>/vocabulary-deck/',reading_deck),
  path('api/readings/<uuid:pk>/quiz/',v.reading_quiz),
  path('api/readings/<uuid:pk>/questions/',v.reading_questions),
  path('',v.index,name='home'),path('health/',v.health),path('api/bootstrap/',v.bootstrap),

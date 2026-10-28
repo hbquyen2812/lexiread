@@ -31,7 +31,10 @@ class LeanCatalogueTests(TestCase):
         with self.assertNumQueries(1) as captured:
             rows=unit_summaries('vocabulary')
         self.assertEqual(rows,expected)
-        self.assertNotIn('"learning_vocabularycollection"."content",',captured.captured_queries[0]['sql'])
+        # JSON functions may reference content as an argument on SQLite. Only a full
+        # content column in the SELECT list would bring the large document into Python.
+        self.assertNotRegex(captured.captured_queries[0]['sql'],
+            r'(?:SELECT\s+|,\s*)"learning_vocabularycollection"\."content"(?:\s+AS\s+"content")?\s*(?:,|FROM)')
         self.assertTrue(all('words' not in r and 'questions' not in r for r in rows))
         self.assertIsNone(get_unit('vocabulary','missing-unit'))
 

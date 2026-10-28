@@ -63,7 +63,7 @@ async function run(){
   assert.doesNotMatch(lexicalScope.lexicalDetails({...word,example:word.context}),/SOURCE PARAGRAPH/);
   assert.doesNotMatch(lexicalScope.lexicalDetails({...word,example:'<img src=x onerror=alert(1)>',usage_pattern:'<script>x</script>'}),/<img|<script>/);
   const cardBody=app.slice(app.indexOf('content+=`<div class="flashcard"'),app.indexOf('}else if(s.question)'));
-  assert.match(cardBody,/lexicalDetails\(v,false\)/);assert.match(cardBody,/<\/div>\$\{s.flipped\?lexicalContext\(v\)/);
+  assert.match(cardBody,/lexicalDetails\(v,false\)/);assert.match(cardBody,/<\/div>\$\{s.flipped&&!s.readingId\?lexicalContext\(v\)/);
   assert.doesNotMatch(cardBody,/esc\(v\.context\)/);
   const settingsHTML=app.slice(app.indexOf('function settingsPage'),app.indexOf('function download'));
   for(const forbidden of ['.env','OPENAI_API_KEY','docker compose','PostgreSQL','pg_dump','gpt-4.1'])assert.equal(settingsHTML.includes(forbidden),false);

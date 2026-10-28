@@ -126,7 +126,7 @@ async function platformAct(button){
     case 'jump-bookmark':jumpToParagraph(state.reading.progress?.paragraph||0);return true;
     case 'jump-paragraph':jumpToParagraph(Number(button.dataset.index));return true;
     case 'complete-reading':await busy(button,async()=>{const r=await api('/readings/'+state.reading.id+'/progress/',{method:'POST',data:{completed:!state.reading.progress?.completed}});state.reading.progress=r.progress;await refreshBoot();renderReader();});return true;
-    case 'study-reading':state.study=null;state.readingSources=[...new Map([...(state.readingSources||[]),{id:state.reading.id,title:state.reading.title}].map(r=>[r.id,r])).values()];state.studySettings={...state.studySettings,tag:'',reading:state.reading.id,scope:'all',mode:'flashcard'};location.hash='study';return true;
+    case 'study-reading':await window.LexiReadingDecks.create(button);return true;
     case 'ask-paragraph':state.qaSelected=state.reading.paragraphs[Number(button.dataset.index)];state.qaDraft='Giải thích ý nghĩa và cấu trúc đáng chú ý của đoạn đã chọn.';state.readingTab='help';renderReader();return true;
     case 'selected-question':if(state.selection){state.qaSelected=state.selection.word;state.qaDraft='Giải thích ý nghĩa và cấu trúc của phần đã chọn trong ngữ cảnh này.';state.readingTab='help';clearSelection();window.getSelection()?.removeAllRanges();renderReader();}return true;
     case 'clear-qa-selection':state.qaSelected='';renderReader();return true;
