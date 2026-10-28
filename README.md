@@ -1,4 +1,4 @@
-# LexiRead Reading Studio v2
+# Lexivela Reading Studio v2
 
 [Optional English audio](docs/READ_ALOUD.md): listen to library/IELTS/private readings, TOEIC documents, dictionary words/examples, personal vocabulary, topic cards and grammar examples. Passage controls include pause/resume, speed, English voice selection and highlighting. Word controls prefer existing dictionary recordings and fall back to installed device voices, without AI calls or new backend audio storage.
 
@@ -23,3 +23,7 @@ Django/PostgreSQL source + standalone `preview.html`. No secret keys included. T
 Current verification and limitations: [foundation learning review](docs/FOUNDATION_LEARNING_REVIEW.md). Earlier reports describe their respective revisions. These local changes have not been deployed to Render.
 
 V3 content is bundled offline: 486 reading units, 3,240 reading questions and 3,572 vocabulary contexts, with additive database seeding. See [the v3 import notes](docs/CONTENT_V3.md).
+
+### Tên hiển thị và dữ liệu cũ
+
+Thương hiệu giao diện là **Lexivela**. Repository, tên database, các khóa lưu cục bộ và định dạng `lexiread-vocabulary` vẫn giữ nguyên để tương thích với dữ liệu và file đã có. Không cần tạo lại database hoặc tài khoản khi cập nhật giao diện.

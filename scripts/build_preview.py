@@ -19,7 +19,7 @@ html=re.sub(r"({% static '[^']+' %})\?v=[^\"]+",r'\1',html)
 html=html.replace("{% include 'language_switcher.html' %}",(root/'templates/language_switcher.html').read_text(encoding='utf-8'))
 html=html.replace('{{ strategy_guides|json_script:"strategy-guides-data" }}','<script id="strategy-guides-data" type="application/json">'+json.dumps(strategy_guides(),ensure_ascii=False).replace('&','\\u0026').replace('<','\\u003c').replace('>','\\u003e')+'</script>')
 html=html.replace('{{ topic_labels|json_script:"topic-labels-data" }}','<script id="topic-labels-data" type="application/json">'+json.dumps(topic_labels(),ensure_ascii=False).replace('<','\\u003c')+'</script>')
-for script in ('vendor/purify.min','safe_dom','visuals','pronunciation','read_aloud','learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods','dictionary','topic_vocabulary'):
+for script in ('navigation','word_ipa','vendor/purify.min','safe_dom','visuals','pronunciation','read_aloud','learning_hub','practice_tools','personal_decks','learning_channels','academy','learning_methods','dictionary','topic_vocabulary'):
     html=html.replace('<script src="{% static \''+script+'.js\' %}" defer></script>','<script>'+(root/f'static/{script}.js').read_text(encoding='utf-8')+'</script>')
 html=html.replace('<link rel="stylesheet" href="{% static \'read_aloud.css\' %}">','<style>'+(root/'static/read_aloud.css').read_text(encoding='utf-8')+'</style>')
 html=html.replace('<link rel="stylesheet" href="{% static \'learning_hub.css\' %}">','<style>'+(root/'static/learning_hub.css').read_text(encoding='utf-8')+'</style>')

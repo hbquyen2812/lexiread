@@ -1,5 +1,5 @@
 'use strict';
-/* LexiRead: framework-free UI. All untrusted text is escaped before HTML rendering.
+/* Lexivela: framework-free UI. All untrusted text is escaped before HTML rendering.
    The optional offline preview adapter is never loaded by the Django application. */
 const $ = (s, root=document) => root.querySelector(s);
 const $$ = (s, root=document) => [...root.querySelectorAll(s)];
@@ -52,7 +52,7 @@ function readingSourceOptions(selected=''){
     .map(r=>`<option value="${esc(r.id)}" ${selected===r.id?'selected':''}>${esc(r.title)}</option>`).join('');
 }
 function chips(tags){return (tags||[]).slice(0,4).map(t=>`<span class="chip" data-no-i18n>${esc(t)}</span>`).join('');}
-function empty(title,desc,button=''){return `<div class="empty-state"><h2>${esc(title)}</h2><p>${esc(desc)}</p>${button}</div>`;}
+function empty(title,desc,button=''){return `<div class="empty-state">${window.LexiVisuals?.object('book')||''}<h2>${esc(title)}</h2><p>${esc(desc)}</p>${button}</div>`;}
 function formatDate(s){return new Date(s).toLocaleDateString(window.LexiI18n?.language==='zh'?'zh-CN':window.LexiI18n?.language||'vi',{day:'2-digit',month:'2-digit',year:'numeric'});}
 function count(value){const n=Number(value);return Number.isFinite(n)&&n>0?Math.floor(n):0;}
 function formatNextDue(value){
@@ -121,7 +121,7 @@ function renderReader(){
   $('#main').replaceChildren(window.LexiDOM.fragment(`<a href="${curated?(r.lesson?.track==='ielts'?'#ielts':'#catalog'):'#readings'}" class="link-btn">← ${curated?(r.lesson?.track==='ielts'?'Luyện IELTS Reading':'Thư viện luyện đọc'):'Bài đọc của tôi'}</a><div style="height:17px"></div>`+
    heading(r.title,`${curated?(r.lesson?.level+' · '+window.LexiLibrary.topicLabel(r.lesson?.topic)+' · '):''}${r.word_count} từ · ${r.paragraphs.length} đoạn`,
    `<button class="btn small" data-action="toggle-reading-favorite" data-id="${esc(r.id)}" data-favorite="${r.favorite?'true':'false'}" aria-pressed="${r.favorite?'true':'false'}">${r.favorite?'★ Đã yêu thích':'☆ Yêu thích'}</button>${!curated?'<button class="btn small" data-action="edit-reading">Sửa bài</button><button class="btn small danger" data-action="delete-reading">Xóa</button>':''}<button class="btn small secondary" data-action="study-reading">Ôn từ đã lưu từ bài này ↗</button>`)+
-   `${curated?`<details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(r.lesson?.provenance||'Bài luyện do LexiRead biên soạn.')} ${esc(r.lesson?.level_note||'')}</p><small>Bản bạn đang học: ${r.lesson?.revision||1}.</small></details>`:''}
+   `${curated?`<details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(r.lesson?.provenance||'Bài luyện do Lexivela biên soạn.')} ${esc(r.lesson?.level_note||'')}</p><small>Bản bạn đang học: ${r.lesson?.revision||1}.</small></details>`:''}
    <div class="toolbar">${!curated?`<details class="lesson-about"><summary>Thêm bản dịch và gợi ý</summary><div class="button-row">${state.boot?.ai_enabled?`<button class="btn primary" data-action="analyse-reading">✦ ${r.has_analysis?'Tạo lại gợi ý':'Dịch và gợi ý từ'}</button>`:''}<button class="btn" data-action="reading-prompt">Nhập gợi ý từ công cụ khác</button></div></details>`:''}${hasTranslations?`<label class="check-label"><input type="checkbox" id="translation-toggle" ${state.translation?'checked':''}> Hiện bản dịch</label>`:'<span class="fineprint">Chưa có bản dịch</span>'}<label class="font-control">Cỡ chữ<select id="reading-font">${[17,19,22].map(n=>`<option value="${n}" ${(state.readerFont||19)===n?'selected':''}>${n}</option>`).join('')}</select></label></div>
    <div class="reading-progress-bar"><button class="link-btn" data-action="jump-bookmark">Dấu trang: đoạn ${(r.progress?.paragraph||0)+1} ↗</button><span>${r.progress?.quiz_total?`Hiểu bài: tốt nhất ${r.progress.quiz_best}/${r.progress.quiz_total}`:''}</span><button class="btn small ${r.progress?.completed?'secondary':''}" data-action="complete-reading">${r.progress?.completed?'✓ Đã đọc · bỏ đánh dấu':'Đánh dấu đã đọc'}</button></div>
    <div class="reader-tabs">${tabs.map(([k,l])=>`<button data-action="reader-tab" data-tab="${k}" class="${state.readingTab===k?'active':''}">${l}</button>`).join('')}</div><div id="reader-content" style="--reading-font-size:${state.readerFont||19}px"></div>`));
@@ -146,8 +146,8 @@ async function vocabPage(epoch){
   if(epoch!==state.routeEpoch)return;state.vocab=data.items;state.vocabTotal=data.total;
   if(!state.vocab.length&&data.total&&f.page>1){state.filters.page=Math.max(1,Math.ceil(data.total/data.limit));return vocabPage(epoch);}
   state.readingSources=[...new Map((sources.items||[]).map(r=>[r.id,r])).values()].sort((a,b)=>a.title.localeCompare(b.title,'vi'));
-  $('#main').replaceChildren(window.LexiDOM.fragment(heading('Kho từ của tôi',`${data.total} thẻ theo bộ lọc hiện tại. Từ, nghĩa, ngữ cảnh và lịch ôn — trong cùng một nơi.`,
-     '<a class="btn primary" href="#word-import">Nhập bộ từ cá nhân →</a><button class="btn secondary" data-action="new-word">+ Thêm một từ</button>')+
+  $('#main').replaceChildren(window.LexiDOM.fragment(heading('Kho từ của tôi',`${data.total} từ`,
+     '<a class="btn primary" href="#word-import">Nhập bộ từ cá nhân</a><button class="btn secondary" data-action="new-word">+ Thêm một từ</button>')+
      (f.tag?`<div class="button-row deck-library-actions"><button class="btn small" data-action="study-deck">Ôn bộ này</button><button class="btn small" data-action="export-deck">Tải bộ từ</button></div>`:'')+
      `<div class="toolbar"><input type="search" id="vocab-search" class="search" placeholder="Tìm từ, nghĩa hoặc ghi chú…" value="${esc(f.q)}" aria-label="Tìm từ"><select id="vocab-tag" aria-label="Bộ từ">${tagOptions(f.tag)}</select><select id="vocab-reading" aria-label="Bài nguồn">${readingSourceOptions(f.reading)}</select><select id="vocab-scope" aria-label="Trạng thái">${scopeOptions(f.scope)}</select><select id="vocab-sort" aria-label="Sắp xếp từ">${[['newest','Mới thêm'],['oldest','Cũ nhất'],['word','Theo từ A–Z'],['due','Lịch ôn gần nhất']].map(([v,l])=>`<option value="${v}" ${f.sort===v?'selected':''}>${l}</option>`).join('')}</select><button class="btn secondary" data-action="filter-vocab">Lọc</button></div>`+
      (data.items.length?`<div class="table-wrap"><table><thead><tr><th>TỪ / CỤM TỪ</th><th>NGHĨA ĐANG HỌC</th><th>BỘ TỪ & TIẾN ĐỘ</th><th></th></tr></thead><tbody>${data.items.map(v=>`<tr><td><div class="vocab-word-heading">${window.LexiVisuals?.word(v.word,'small')||''}<div><div class="pronunciation-heading"><div class="word" lang="en" data-no-i18n>${esc(v.word)}</div>${window.LexiPronunciation?.button(v.word)||''}</div><span class="muted">${esc(v.pos||'Từ / cụm từ')}${v.verified?' · Đã duyệt':''}</span></div></div></td><td class="meaning-cell"><span data-no-i18n>${esc(v.meaning_vi)}</span>${lexicalRelations(v)}<details class="source-context"><summary>Cấu trúc & ví dụ</summary>${lexicalDetails({...v,synonyms:[],paraphrases:[]})}</details></td><td><div class="tags">${chips(v.tags)}</div><span class="muted">${v.due?'Đến hạn ôn':'Ôn tiếp '+formatDate(v.due_at)}${v.lapses?' · '+v.lapses+' lần quên':''}</span>${v.reading_id?`<div><a class="link-btn" href="#reading/${esc(v.reading_id)}">${esc(v.source_label||'Mở bài nguồn')} →</a></div>`:''}</td><td><button class="btn small" data-action="edit-word" data-id="${esc(v.id)}">Sửa</button></td></tr>`).join('')}</tbody></table></div><div class="pagination"><span>Trang ${data.page} / ${Math.max(1,Math.ceil(data.total/data.limit))}</span><div class="button-row"><button class="btn small" data-action="vocab-prev" ${f.page<=1?'disabled':''}>← Trước</button><button class="btn small" data-action="vocab-next" ${f.page*data.limit>=data.total?'disabled':''}>Sau →</button></div></div>`:
@@ -264,7 +264,7 @@ function previewBulk(items){
 }
 function renderStudy(){
   const p=state.studySettings,s=state.boot.stats;
-  $('#main').replaceChildren(window.LexiDOM.fragment(heading('Luyện nhớ, không học vẹt.','Chọn cách ôn phù hợp. Mỗi lượt trả lời được lưu vào lịch ôn của từng nghĩa.')+
+  $('#main').replaceChildren(window.LexiDOM.fragment(heading('Luyện nhớ từ','Ôn từ đến hạn hoặc chọn bộ bạn muốn học.')+
     dailyReviewCallout(s,false)+
     `<section class="stats">${[[count(s.overdue ?? s.due),'Đã quá hạn','Ưu tiên ôn trước'],[count(s.new),'Từ mới','Chưa bắt đầu lịch ôn'],[count(s.learning),'Đang học','Đang tạo trí nhớ dài hạn'],[count(s.mastered),'Đã ghi nhớ tốt','Vẫn sẽ quay lại đúng lịch'],[count(s.weak),'Từ khó','Quên từ 3 lần · nên sửa ngữ cảnh']].map(([n,l,h])=>`<div class="stat"><div class="stat-top">${l}</div><div class="stat-value">${n}</div><div class="stat-note">${h}</div></div>`).join('')}</section>`+
     `<div class="study-controls"><label>Dạng luyện<select id="study-mode">${Object.entries(modes).map(([k,v])=>`<option value="${k}" ${p.mode===k?'selected':''}>${v}</option>`).join('')}</select></label><label>Bộ từ<select id="study-tag">${tagOptions(p.tag)}</select></label><label>Bài nguồn<select id="study-reading">${readingSourceOptions(p.reading)}</select></label><label>Phạm vi<select id="study-scope">${scopeOptions(p.scope)}</select></label><label>Số thẻ ban đầu<select id="study-limit">${[10,20,30,50].map(n=>`<option ${String(n)===String(p.limit)?'selected':''}>${n}</option>`).join('')}</select></label><button class="btn primary" data-action="start-study">Bắt đầu →</button></div><div class="study-stage" id="study-stage"></div>`));
@@ -339,7 +339,7 @@ function toeicModeCard(mode,items){
 }
 async function toeicPage(epoch,part=''){
   const data=await api('/toeic/');if(epoch!==state.routeEpoch)return;
-  $('#main').replaceChildren(window.LexiDOM.fragment(`<header class="toeic-hero toeic-compact"><div><h1>Luyện đề TOEIC</h1><p>Chọn đề, làm bài và xem lời giải.</p><a class="link-btn" href="#guides/toeic">Cách làm bài →</a></div><img src="/static/illustrations/toeic-desk.svg" width="640" height="420" alt="" decoding="async"></header><div data-toeic-library></div><details class="toeic-about"><summary>Về các bài luyện TOEIC</summary><p>Bài luyện kỹ năng do LexiRead biên soạn, không phải đề ETS chính thức và không quy đổi điểm TOEIC.</p><a class="link-btn" href="#resources/toeic">Xem tài liệu chính thức từ ETS ↗</a></details>`));
+  $('#main').replaceChildren(window.LexiDOM.fragment(`<header class="toeic-hero toeic-compact"><div><h1>Luyện đề TOEIC</h1><p>Chọn đề, làm bài và xem lời giải.</p><a class="link-btn" href="#guides/toeic">Cách làm bài →</a></div><img src="/static/illustrations/toeic-desk.svg" width="640" height="420" alt="" decoding="async"></header><div data-toeic-library></div><details class="toeic-about"><summary>Về các bài luyện TOEIC</summary><p>Bài luyện kỹ năng do Lexivela biên soạn, không phải đề ETS chính thức và không quy đổi điểm TOEIC.</p><a class="link-btn" href="#resources/toeic">Xem tài liệu chính thức từ ETS ↗</a></details>`));
   window.LexiHub.toeicCatalog($('[data-toeic-library]'),data.items,part);
 }
 function renderToeicSet(){renderToeicPractice();}
@@ -384,7 +384,7 @@ async function route(){
   window.LexiPronunciation?.stop();
   window.LexiReadAloud?.clear();
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
-  $('.sidebar')?.classList.remove('menu-open');$('.mobile-menu-toggle')?.setAttribute('aria-expanded','false');
+  window.LexiNavigation?.closeMobile();
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
   const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page==='practice-tests'?'catalog':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));

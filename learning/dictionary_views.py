@@ -3,9 +3,9 @@ import uuid
 
 from .models import Reading, Vocabulary, DictionaryAudio, DictionaryRelease
 from .services.dictionary import lookup_word, dictionary_links
-from .services.offline_dictionary import lookup_local, search_local
+from .services.offline_dictionary import lookup_local, search_local, pronunciation_batch
 from .services.foundation_content import units, word_entry
-from .views import api
+from .views import api, body
 
 
 @api('GET')
@@ -33,7 +33,7 @@ def lookup(request):
     for unit in units('vocabulary'):
         for entry in unit['words']:
             if entry['word'].casefold() == word:
-                add(word_entry(entry, unit), 'Kho học LexiRead')
+                add(word_entry(entry, unit), 'Kho học Lexivela')
     response = JsonResponse({'word': word, 'local_entries': local, 'dictionary': lookup_local(word),
                              'links': dictionary_links(word)})
     response['Cache-Control'] = 'private, no-store'
@@ -62,4 +62,17 @@ def audio(request, digest):
     response['Content-Length'] = len(sound.data)
     response['Cache-Control'] = 'private, max-age=86400, immutable'
     response['X-Content-Type-Options'] = 'nosniff'
+    return response
+
+
+@api('POST')
+def pronunciations(request):
+    if len(request.body) > 24000:
+        return JsonResponse({'error': 'Danh sách từ quá dài.'}, status=400)
+    words = body(request).get('words')
+    if (not isinstance(words, list) or len(words) > 100 or
+            any(not isinstance(word, str) or not word.strip() or len(word) > 160 for word in words)):
+        return JsonResponse({'error': 'Danh sách từ không hợp lệ.'}, status=400)
+    response = JsonResponse({'items': pronunciation_batch(words), 'source': 'Open English WordNet 2025'})
+    response['Cache-Control'] = 'private, no-store'
     return response

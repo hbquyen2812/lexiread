@@ -9,7 +9,7 @@ FIELDS=('word','pos','meaning_vi','usage_pattern','example','example_vi','synony
 
 def validate_deck(payload):
     if not isinstance(payload,dict) or payload.get('format')!=FORMAT:
-        raise InputError('File chưa đúng mẫu bộ từ LexiRead. Bạn có thể tải mẫu ở bước 1.')
+        raise InputError('File chưa đúng mẫu bộ từ Lexivela. Bạn có thể tải mẫu ở bước 1.')
     if type(payload.get('version')) is not int or payload['version']!=1:
         raise InputError('Phiên bản file này chưa được hỗ trợ. Hãy dùng mẫu phiên bản 1.')
     meta=payload.get('deck')

@@ -40,7 +40,12 @@
     const key=[['clock',/time/],['people',/features|ynng/],['book',/heading/],['folder',/information/],
       ['cards',/choice/],['calendar',/table/],['pencil',/completion|sentence|short/],
       ['letter',/toeic/]].find(([,pattern])=>pattern.test(String(id)))?.[0]||'compass';
-    return `<div class="visual-cover guide-cover">${object(key)}</div>`;
+    const sceneKey=key==='clock'?'spacing':key==='letter'?'import':key==='pencil'?'feedback':key==='cards'?'recall':'guide';
+    return scene(sceneKey);
   }
-  window.LexiVisuals=Object.freeze({object,word,cover,theme,guide});
+  function scene(key) {
+    const chosen=['guide','recall','spacing','feedback','video','grammar','words','import'].includes(key)?key:'guide';
+    return `<div class="learning-scene"><img src="${asset('/static/illustrations/scenes/'+chosen+'.svg')}" alt="" width="560" height="240" loading="lazy" decoding="async"></div>`;
+  }
+  window.LexiVisuals=Object.freeze({object,word,cover,theme,guide,scene});
 })();

@@ -152,4 +152,4 @@ class DictionaryTests(TestCase):
             service.resolve_recordings(original)
         self.assertEqual(len(seen), 1)
         self.assertEqual(seen[0].url.params['pageids'], '1|2')
-        self.assertIn('LexiRead', seen[0].headers['User-Agent'])
+        self.assertIn('Lexivela', seen[0].headers['User-Agent'])

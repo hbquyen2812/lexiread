@@ -6,6 +6,7 @@ urlpatterns=[
  path('api/practice-groups/',f.practice_groups),
  path('api/dictionary/',dictionary.lookup),
  path('api/dictionary/search/',dictionary.search),
+ path('api/dictionary/pronunciations/',dictionary.pronunciations),
  path('api/dictionary/audio/<str:digest>/',dictionary.audio),
  path('api/learn/overview/',f.overview),path('api/learn/plan/',f.plan),
  path('api/learn/dictionary/',f.dictionary),path('api/learn/sources/',f.sources),

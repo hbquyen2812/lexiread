@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240" width="560" height="240">
+<rect width="560" height="240" rx="24" fill="#e9f1ec"/>
+<circle cx="280" cy="116" r="101" fill="#fffdf4" opacity=".8"/>
+<path d="M50 191q65 24 110-4m231 0q65 24 110-4" fill="none" stroke="#ccdacc" stroke-width="3" stroke-linecap="round"/>
+<g fill="#dbb570"><circle cx="173" cy="56" r="5"/><circle cx="410" cy="44" r="5"/><path d="m365 188 4-10 4 10 10 4-10 4-4 10-4-10-10-4Z"/></g>
+<g stroke="#456557" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(22 74) scale(0.9)"><circle cx="80" cy="81" r="43" fill="#fffdf4"/><path d="M80 52v30l20 12" stroke-width="6"/><path d="M80 43v4m38 34h-4M80 119v-4M42 81h4"/></g><g transform="translate(180 10) scale(1.35)"><rect x="38" y="42" width="84" height="80" rx="12" fill="#fffdf4"/><path d="M38 63h84"/><path d="M56 34v18m48-18v18" stroke-width="7"/><path d="m61 91 13 12 27-30" stroke="#689372" stroke-width="7"/></g><g transform="translate(397 71) scale(0.9)"><path d="m53 95 8 38h39l9-38Z" fill="#d8996f"/><path d="M80 95V47"/><path d="M80 80Q33 83 41 48q33 1 39 32M80 61q0-36 36-31 4 28-36 31" fill="#94ae83"/></g></g>
+</svg>
