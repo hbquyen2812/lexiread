@@ -118,7 +118,7 @@ function renderReader(){
   const hasHelp=!!(state.boot?.ai_enabled||r.lesson?.faqs?.length||state.qaHistory?.length||state.readingTab==='help');
   const tabs=[['text','Bài đọc'],...(v.length?[['words',`Từ gợi ý (${v.length})`]]:[]),...(g.length?[['grammar','Cách dùng trong bài']]:[]),...(curated?[['quiz','Hiểu bài']]:[]),...(hasHelp?[['help','Giải thích thêm']]:[])];
   if(!tabs.some(([key])=>key===state.readingTab))state.readingTab='text';
-  $('#main').replaceChildren(window.LexiDOM.fragment(`<a href="${curated?(r.lesson?.track==='ielts'?'#ielts':'#catalog'):'#readings'}" class="link-btn">← ${curated?(r.lesson?.track==='ielts'?'Luyện IELTS Reading':'Thư viện luyện đọc'):'Bài đọc của tôi'}</a><div style="height:17px"></div>`+
+  $('#main').replaceChildren(window.LexiDOM.fragment(`<a href="${curated?(r.lesson?.track==='ielts'?'#ielts':'#catalog'):'#readings'}" class="link-btn">← ${curated?(r.lesson?.track==='ielts'?'IELTS Reading':'Thư viện luyện đọc'):'Bài đọc của tôi'}</a><div style="height:17px"></div>`+
    heading(r.title,`${curated?(r.lesson?.level+' · '+window.LexiLibrary.topicLabel(r.lesson?.topic)+' · '):''}${r.word_count} từ · ${r.paragraphs.length} đoạn`,
    `<button class="btn small" data-action="toggle-reading-favorite" data-id="${esc(r.id)}" data-favorite="${r.favorite?'true':'false'}" aria-pressed="${r.favorite?'true':'false'}">${r.favorite?'★ Đã yêu thích':'☆ Yêu thích'}</button>${!curated?'<button class="btn small" data-action="edit-reading">Sửa bài</button><button class="btn small danger" data-action="delete-reading">Xóa</button>':''}<button class="btn small secondary" data-action="study-reading">Ôn từ đã lưu từ bài này ↗</button>`)+
    `${curated?`<details class="lesson-about"><summary>Về bài luyện này</summary><p>${esc(r.lesson?.provenance||'Bài luyện do Lexivela biên soạn.')} ${esc(r.lesson?.level_note||'')}</p><small>Bản bạn đang học: ${r.lesson?.revision||1}.</small></details>`:''}
@@ -339,7 +339,7 @@ function toeicModeCard(mode,items){
 }
 async function toeicPage(epoch,part=''){
   const data=await api('/toeic/');if(epoch!==state.routeEpoch)return;
-  $('#main').replaceChildren(window.LexiDOM.fragment(`<header class="toeic-hero toeic-compact"><div><h1>Luyện đề TOEIC</h1><p>Chọn đề, làm bài và xem lời giải.</p><a class="link-btn" href="#guides/toeic">Cách làm bài →</a></div><img src="/static/illustrations/toeic-desk.svg" width="640" height="420" alt="" decoding="async"></header><div data-toeic-library></div><details class="toeic-about"><summary>Về các bài luyện TOEIC</summary><p>Bài luyện kỹ năng do Lexivela biên soạn, không phải đề ETS chính thức và không quy đổi điểm TOEIC.</p><a class="link-btn" href="#resources/toeic">Xem tài liệu chính thức từ ETS ↗</a></details>`));
+  $('#main').replaceChildren(window.LexiDOM.fragment(`<header class="toeic-hero toeic-compact"><div><h1>TOEIC Reading</h1><a class="link-btn" href="#guides/toeic">Cách làm bài →</a></div><img src="/static/illustrations/toeic-desk.svg" width="640" height="420" alt="" decoding="async"></header><div data-toeic-library></div><details class="toeic-about"><summary>Thông tin bài</summary><p>Bài luyện kỹ năng do Lexivela biên soạn, không phải đề ETS chính thức và không quy đổi điểm TOEIC.</p><a class="link-btn" href="#resources/toeic">Xem tài liệu chính thức từ ETS ↗</a></details>`));
   window.LexiHub.toeicCatalog($('[data-toeic-library]'),data.items,part);
 }
 function renderToeicSet(){renderToeicPractice();}
@@ -388,7 +388,7 @@ async function route(){
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
   const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page==='practice-tests'?'catalog':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
-  $('#page-label').textContent=({learn:({plan:'Lộ trình học',grammar:'Học ngữ pháp',verbs:'Động từ bất quy tắc',tenses:'Các thì trong tiếng Anh',vocabulary:'Từ vựng theo chủ đề',dictionary:'Từ điển',sources:'Tài liệu tham khảo'})[id]||'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'Luyện IELTS Reading',lesson:'Đang mở bài',toeic:'Luyện TOEIC Reading','toeic-set':'Bộ luyện TOEIC',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
+  $('#page-label').textContent=({learn:({plan:'Lộ trình học',grammar:'Học ngữ pháp',verbs:'Động từ bất quy tắc',tenses:'Các thì trong tiếng Anh',vocabulary:'Từ vựng theo chủ đề',dictionary:'Từ điển',sources:'Tài liệu tham khảo'})[id]||'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'IELTS Reading',lesson:'Đang mở bài',toeic:'TOEIC Reading','toeic-set':'TOEIC Reading',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
     if(page==='learn'){await window.LexiAcademy.page($('#main'),id||'plan',epoch);}
