@@ -2,7 +2,7 @@
 /* Learning content and deterministic recommendations. No model or third-party calls. */
 (()=>{
   const levels=['A1','A2','B1','B2','C1','C2'];
-  const names={plan:'Lộ trình',grammar:'Học ngữ pháp',vocabulary:'Từ vựng theo chủ đề',dictionary:'Từ điển',sources:'Tài liệu tham khảo'};
+  const names={plan:'Lộ trình',grammar:'Học ngữ pháp',vocabulary:'Từ vựng theo chủ đề',patterns:'Collocations & Word families',dictionary:'Từ điển',sources:'Tài liệu tham khảo'};
   let generation=0;
   const e=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safe=value=>{try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password?u.href:'';}catch{return '';}};
@@ -22,6 +22,7 @@
     root.replaceChildren(window.LexiDOM.fragment(shell(['verbs','tenses'].includes(section)?'grammar':section))); const area=root.querySelector('[data-academy-root]');
     if(window.LEXIREAD_PREVIEW){area.innerHTML='<div class="notice"><h1>Góc học nền tảng</h1><p>Ngữ pháp, bộ từ và lộ trình cá nhân có trên bản web có tài khoản. Bản HTML ngoại tuyến vẫn hỗ trợ thư viện và ôn từ đã lưu.</p><a class="btn primary" href="http://127.0.0.1:8766/#learn/plan">Mở bản web đang chạy →</a></div>';return;}
     if(section==='vocabulary'){await window.LexiTopics.topics(area,active);return;}
+    if(section==='patterns'){await window.LexiPatterns.page(area,active);return;}
     if(section==='grammar'){await window.LexiGrammar.catalogue(area,active);return;}
     if(['verbs','tenses'].includes(section)){await window.LexiGrammarReference.page(area,section,active);return;}
     if(section==='dictionary'){await window.LexiTopics.dictionary(area,active);return;}
@@ -47,6 +48,10 @@
     root.replaceChildren(window.LexiDOM.fragment(shell(kind)));const area=root.querySelector('[data-academy-root]');
     if(window.LEXIREAD_PREVIEW){area.textContent='Mở bản web có tài khoản để học và lưu tiến độ phần này.';return;}
     const data=await api(`/learn/${kind}/${encodeURIComponent(id)}/`);if(!active())return;
+    if(data.track==='lexical_patterns'){
+      root.querySelectorAll('.academy-tabs a').forEach(a=>{if(a.getAttribute('href')==='#learn/patterns')a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+      window.LexiPatterns.lesson(area,data,active);return;
+    }
     const back=`<a class="link-btn" href="#learn/${kind}">← ${names[kind]}</a>`;
     const references=`<details class="academy-guide"><summary>Nguồn tham khảo</summary><p>Nội dung và bài tập do Lexivela biên soạn; các tài liệu dưới đây dùng để đối chiếu cách dùng.</p><div class="button-row">${data.source_urls.map((u,i)=>link(u,`Tài liệu ${i+1}`)).join('')}</div></details>`;
     area.replaceChildren(window.LexiDOM.fragment(`${back}<header class="academy-heading illustrated-heading">${window.LexiVisuals?.scene(kind==='grammar'?'grammar':'words')||''}<span class="level-pill">${e(data.level)}</span><h1>${e(data.title)}</h1><p>${e(data.summary||data.description)}</p></header>`+(kind==='grammar'?window.LexiGrammar.lessonHTML(data,references,quizHTML(data.questions)):`<div class="collection-actions"><p>Chọn từ cần học rồi nhấn Lưu từ đã chọn.</p><button type="button" class="btn primary" data-save-words>Lưu từ đã chọn</button><button type="button" class="btn secondary" data-study-collection ${data.words.some(w=>w.saved)?'':'disabled'}>Ôn bộ từ này →</button><button type="button" class="link-btn" data-collection-practice aria-pressed="false">Luyện ${data.questions.length} câu</button><p role="status" data-save-status></p></div><div class="academy-grid collection-grid">${data.words.map((w,i)=>`<article class="academy-card collection-word">${window.LexiVisuals?.word(w.word)||''}<label class="word-select"><input type="checkbox" value="${i}" ${w.saved?'':'checked'}><span lang="en" data-no-i18n>${e(w.word)}</span><small>${w.saved?'Đã có trong kho':e(w.part_of_speech)}</small></label>${window.LexiPronunciation?.button(w.word)||''}<p><strong>${e(w.meaning_vi)}</strong></p><p lang="en" data-no-i18n>${e(w.example)}</p>${window.LexiPronunciation?.button(w.example,'sentence')||''}${w.example_translation?`<p class="muted">${e(w.example_translation)}</p>`:''}<p class="word-pattern" data-no-i18n>${e(w.usage_pattern)}</p></article>`).join('')}</div>`)+(kind==='grammar'?'':references+`<div data-quiz>${quizHTML(data.questions)}</div>`)));

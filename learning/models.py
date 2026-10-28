@@ -351,6 +351,22 @@ class DailyVisit(models.Model):
             models.Index(fields=['owner','date'],name='visit_owner_date'),
         ]
 
+class LexicalReference(models.Model):
+    """Public source relations, distinct from editorial lessons and personal words."""
+    key = models.CharField(max_length=64, primary_key=True)
+    kind = models.CharField(max_length=16)
+    headword = models.CharField(max_length=160)
+    related = models.CharField(max_length=160)
+    relation = models.CharField(max_length=40)
+    source = models.CharField(max_length=40)
+    rank = models.FloatField(default=0)
+    detail = models.JSONField(default=dict)
+
+    class Meta:
+        indexes = [models.Index(fields=['kind', 'headword'], name='lexical_kind_head'),
+                   models.Index(fields=['kind', 'related'], name='lexical_kind_related')]
+
+
 class ReadingQuestion(models.Model):
     reading = models.ForeignKey(Reading, on_delete=models.CASCADE, related_name='questions')
     question = models.TextField()

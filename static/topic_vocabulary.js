@@ -9,7 +9,7 @@
   const topicGroup=row=>topicGroups.find(([,names])=>names.includes(row.category||row.topic))?.[0]||'other';
   const topicLabel=key=>key==='other'?'Khác':key;
   const preferences={topic:'',level:'',q:''};
-  function filterRows(rows,p){return rows.filter(r=>(!p.level||r.level===p.level)&&(!p.topic||topicGroup(r)===p.topic)&&(!p.q||fold([r.topic,r.category,r.title,r.description,topicLabel(topicGroup(r))].join(' ')).includes(fold(p.q))));}
+  function filterRows(rows,p){return rows.filter(r=>!['Collocations','Word families'].includes(r.topic)&&(!p.level||r.level===p.level)&&(!p.topic||topicGroup(r)===p.topic)&&(!p.q||fold([r.topic,r.category,r.title,r.description,topicLabel(topicGroup(r))].join(' ')).includes(fold(p.q))));}
   function card(r){return `<article class="academy-card topic-course">${window.LexiVisuals?.cover(r.topic+' '+r.title)||''}<div class="tags"><span class="level-pill">${esc(r.level)}</span><span ${topicGroup(r)==='other'?'':'lang="en" data-no-i18n'}>${esc(topicLabel(topicGroup(r)))}</span></div><h2>${esc(r.title)}</h2><p>${esc(r.description)}</p><div class="topic-course-meta"><span>${esc(r.word_count)} từ</span><span>${r.progress?`Đúng ${esc(r.progress.score)}/${esc(r.progress.total)} câu ở lần gần nhất`:'Flashcard và bài tập'}</span></div><a class="btn secondary" href="#collection/${encodeURIComponent(r.id)}">${r.progress?'Học tiếp':'Mở bộ từ'} →</a></article>`;}
   async function topics(area,active){
     const d=await api('/learn/overview/?kind=vocabulary');if(!active())return;

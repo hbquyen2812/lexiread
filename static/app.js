@@ -386,9 +386,9 @@ async function route(){
   const epoch=++state.routeEpoch;clearSelection();pausePracticeClock();
   window.LexiNavigation?.closeMobile();
   const hash=(location.hash||'#home').slice(1),[page,id]=hash.split('/');
-  const nav=['learn','grammar','collection'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page==='practice-tests'?'catalog':page;
+  const nav=['learn','grammar','collection','pattern-cards'].includes(page)?'learn':page==='lesson'?'catalog':page==='reading'?'readings':page==='toeic-set'?'toeic':page==='word-import'?'vocabulary':page==='practice-tests'?'catalog':page;
   $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===nav));
-  $('#page-label').textContent=({learn:({plan:'Lộ trình học',grammar:'Học ngữ pháp',verbs:'Động từ bất quy tắc',tenses:'Các thì trong tiếng Anh',vocabulary:'Từ vựng theo chủ đề',dictionary:'Từ điển',sources:'Tài liệu tham khảo'})[id]||'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'IELTS Reading',lesson:'Đang mở bài',toeic:'TOEIC Reading','toeic-set':'TOEIC Reading',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
+  $('#page-label').textContent=({learn:({plan:'Lộ trình học',grammar:'Học ngữ pháp',verbs:'Động từ bất quy tắc',tenses:'Các thì trong tiếng Anh',vocabulary:'Từ vựng theo chủ đề',patterns:'Collocations & Word families',dictionary:'Từ điển',sources:'Tài liệu tham khảo'})[id]||'Lộ trình học',grammar:'Ngữ pháp',collection:'Từ vựng theo chủ đề',home:'Tổng quan',catalog:'Thư viện luyện đọc',ielts:'IELTS Reading',lesson:'Đang mở bài',toeic:'TOEIC Reading','toeic-set':'TOEIC Reading',readings:'Bài đọc của tôi',reading:'Đang đọc',vocabulary:'Kho từ của tôi',study:'Luyện nhớ từ',analytics:'Thống kê truy cập',settings:'Cài đặt & dữ liệu'})[page]||'Tổng quan';
   try{
     if(!state.boot)await refreshBoot();
     if(page==='learn'){await window.LexiAcademy.page($('#main'),id||'plan',epoch);}
@@ -410,6 +410,7 @@ async function route(){
     else if(page==='vocabulary')await vocabPage(epoch);
     else if(page==='word-import'){window.LexiDecks.page($('#main'));$('#page-label').textContent='Nhập bộ từ cá nhân';}
     else if(page==='study'&&id)await window.LexiReadingDecks.page($('#main'),id,epoch);
+    else if(page==='pattern-cards'&&id){await window.LexiPatterns.cards($('#main'),id,epoch);if(epoch===state.routeEpoch)$('#page-label').textContent='Collocations & Word families';}
     else if(page==='study')renderStudy();
     else if(page==='analytics')await analyticsPage(epoch);
     else if(page==='settings')settingsPage();
@@ -481,7 +482,7 @@ async function act(button){
     const items=$$('.bulk-check:checked').map(c=>{const i=Number(c.value);return {...state.bulk[i],word:$('#bulk-word-'+i).value.trim(),meaning_vi:$('#bulk-meaning-'+i).value.trim()};});if(!items.length)throw new Error('Chưa chọn mục nào.');
     await busy(button,async()=>{const r=await api('/vocabulary/',{method:'POST',data:{items}});closeModal();await refreshBoot();if(location.hash==='#vocabulary')await route();else location.hash='vocabulary';toast(`Đã thêm ${r.created} thẻ; bỏ qua ${r.skipped} mục trùng.`);});break;
   }
-  case 'start-study':if(window.LexiReadingDecks?.active())await window.LexiReadingDecks.restart(button);else await startStudy(button);break;
+  case 'start-study':if(window.LexiReadingDecks?.active())await window.LexiReadingDecks.restart(button);else if(window.LexiPatterns?.activeCards())await window.LexiPatterns.restart(button);else await startStudy(button);break;
   case 'flip-card':if(state.study?.mode==='flashcard'&&!state.study.busy){state.study.flipped=!state.study.flipped;renderStage();}break;
   case 'rate-card':await rateCard(button.dataset.rating);break;
   case 'answer-quiz':await answerQuiz(state.study.question.options[Number(button.dataset.index)]);break;

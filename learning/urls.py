@@ -3,7 +3,11 @@ from . import views as v
 from . import foundation_views as f
 from . import dictionary_views as dictionary
 from .reading_deck_views import reading_deck
+from . import lexical_views as lexical
 urlpatterns=[
+ path('api/lexical/lessons/',lexical.catalogue),
+ path('api/lexical/lessons/<slug:unit_id>/cards/',lexical.cards),
+ path('api/lexical/reference/',lexical.reference),
  path('api/practice-groups/',f.practice_groups),
  path('api/dictionary/',dictionary.lookup),
  path('api/dictionary/search/',dictionary.search),

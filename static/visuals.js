@@ -47,5 +47,9 @@
     const chosen=['guide','recall','spacing','feedback','video','grammar','words','import'].includes(key)?key:'guide';
     return `<div class="learning-scene"><img src="${asset('/static/illustrations/scenes/'+chosen+'.svg')}" alt="" width="560" height="240" loading="lazy" decoding="async"></div>`;
   }
-  window.LexiVisuals=Object.freeze({object,word,cover,theme,guide,scene});
+  function pattern(key) {
+    const chosen=['verb-noun','adjective-noun','adverb-adjective','verb-preposition','adjective-preposition','noun-preposition','verb-adverb','noun-noun','word-family'].includes(key)?key:'word-family';
+    return `<img class="pattern-art" src="${asset('/static/illustrations/patterns/'+chosen+'.svg')}" alt="" width="560" height="240" loading="lazy" decoding="async">`;
+  }
+  window.LexiVisuals=Object.freeze({object,word,cover,theme,guide,scene,pattern});
 })();

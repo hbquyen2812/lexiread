@@ -8,3 +8,7 @@ Caddyfile text eol=lf
 *.jpg binary
 *.jpeg binary
 *.pdf binary
+
+# Preserve upstream licensing files byte-for-byte for source checksum verification.
+data/lexical/ewt/README.md -text -whitespace
+data/lexical/ewt/LICENSE.txt -text -whitespace

@@ -1,0 +1,187 @@
+{
+  "files": [
+    {
+      "id": 26706641,
+      "name": "ColloCaidLexicalDataSample05March2021.zip",
+      "size": 72313,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/26706641",
+      "supplied_md5": "3dc6bec047eb9d8c34cd699a8b3e948e",
+      "computed_md5": "3dc6bec047eb9d8c34cd699a8b3e948e",
+      "mimetype": "application/zip"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 5000513,
+      "full_name": "Ana Frankenberg-Garcia",
+      "first_name": "Ana",
+      "last_name": "Frankenberg-Garcia",
+      "is_active": true,
+      "url_name": "Ana_Frankenberg-Garcia",
+      "orcid_id": ""
+    },
+    {
+      "id": 9443233,
+      "full_name": "Geraint Paul Rees",
+      "first_name": "Geraint Paul",
+      "last_name": "Rees",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": "0000-0002-9204-8073"
+    },
+    {
+      "id": 9443235,
+      "full_name": "Robert Lew",
+      "first_name": "Robert",
+      "last_name": "Lew",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": "0000-0002-6772-210X"
+    }
+  ],
+  "custom_fields": [],
+  "figshare_url": "https://figshare.com/articles/dataset/ColloCaid_Sample_Data/13028207",
+  "download_disabled": false,
+  "description": "<p></p><p>COLLOCAID SAMPLE\nDATA</p><p>The ColloCaid Sample\nData comprises approximately 2% of the ColloCaid lexical database. The sample\ncovers 692 strong academic English collocations (LogDice >5.0) for 16 core\nacademic lemmas used as collocation bases (or nodes): 5 nouns, 5 verbs, and 6\nadjectives. The selection aims to give an overview of the range of data\nincluded in the full dataset. This includes collocations with bases classified\nwith more than one part-of-speech tag (e.g. DEBATE, INDIVIDUAL), polysemous\ncollocation bases giving rise to distinct collocation patterns (e.g. CODE), as\nwell as collocation bases that evoke a very large and a very small number of\ncollocations. The strongest eight lexical collocations listed for each base are\nenriched with three different curated example sentences adapted from corpora of\nexpert academic English writing.</p><p> </p><p>COLLOCAID LEXICAL\nDATA 1.1</p><p>The full ColloCaid\nlexical dataset consists of:</p><p>• 572 core academic\nEnglish lemmas (311\nnouns, 184 verbs and 77 adjectives)</p><p>• 32,645 academic\ncollocations with the above lemmas</p><p>• 29,028 example\nsentences of collocations in context</p><p> </p><p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFurther information at http://www.collocaid.uk/<br></p><br><p></p>",
+  "funding": "AHRC AH/P003508/1",
+  "funding_list": [
+    {
+      "id": 19167095,
+      "title": "AHRC AH/P003508/1",
+      "grant_code": "",
+      "funder_name": null,
+      "is_user_defined": 1
+    }
+  ],
+  "version": 2,
+  "status": "public",
+  "size": 72313,
+  "created_date": "2021-03-05T14:33:22Z",
+  "modified_date": "2023-05-30T21:52:03Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "tags": [
+    "lexical dataset",
+    "collocations",
+    "Academic English",
+    "Applied Linguistics and Educational Linguistics",
+    "Computational Linguistics",
+    "Lexicography",
+    "Linguistics"
+  ],
+  "keywords": [
+    "lexical dataset",
+    "collocations",
+    "Academic English",
+    "Applied Linguistics and Educational Linguistics",
+    "Computational Linguistics",
+    "Lexicography",
+    "Linguistics"
+  ],
+  "categories": [
+    {
+      "id": 29392,
+      "title": "Applied linguistics and educational linguistics",
+      "parent_id": 29389,
+      "path": "/29239/29389/29392",
+      "source_id": "470401",
+      "taxonomy_id": 100
+    },
+    {
+      "id": 29398,
+      "title": "Computational linguistics",
+      "parent_id": 29389,
+      "path": "/29239/29389/29398",
+      "source_id": "470403",
+      "taxonomy_id": 100
+    },
+    {
+      "id": 29413,
+      "title": "Lexicography and semantics",
+      "parent_id": 29389,
+      "path": "/29239/29389/29413",
+      "source_id": "470408",
+      "taxonomy_id": 100
+    },
+    {
+      "id": 29425,
+      "title": "Linguistics not elsewhere classified",
+      "parent_id": 29389,
+      "path": "/29239/29389/29425",
+      "source_id": "470499",
+      "taxonomy_id": 100
+    }
+  ],
+  "references": [
+    "http://www.collocaid.uk/",
+    "https://www.cambridge.org/core/journals/recall/article/developing-a-writing-assistant-to-help-eap-writers-with-collocations-in-real-time/91D2F3FBBA7E6DF7E46523F20E6ECCE7",
+    "https://research-publishing.net/manuscript?10.14705%2Frpnet.2019.38.1000"
+  ],
+  "has_linked_file": false,
+  "citation": "Frankenberg-Garcia, Ana; Rees, Geraint Paul; Lew, Robert (2020). ColloCaid Sample Data. figshare. Dataset. https://doi.org/10.6084/m9.figshare.13028207.v2",
+  "related_materials": [
+    {
+      "id": 5065832,
+      "identifier": "http://www.collocaid.uk/",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "http://www.collocaid.uk/"
+    },
+    {
+      "id": 5065835,
+      "identifier": "https://www.cambridge.org/core/journals/recall/article/developing-a-writing-assistant-to-help-eap-writers-with-collocations-in-real-time/91D2F3FBBA7E6DF7E46523F20E6ECCE7",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "https://www.cambridge.org/core/journals/recall/article/developing-a-writing-assistant-to-help-eap-writers-with-collocations-in-real-time/91D2F3FBBA7E6DF7E46523F20E6ECCE7"
+    },
+    {
+      "id": 5065838,
+      "identifier": "https://research-publishing.net/manuscript?10.14705/rpnet.2019.38.1000",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "https://research-publishing.net/manuscript?10.14705/rpnet.2019.38.1000"
+    }
+  ],
+  "is_embargoed": false,
+  "embargo_date": null,
+  "embargo_type": "file",
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 13028207,
+  "title": "ColloCaid Sample Data",
+  "doi": "10.6084/m9.figshare.13028207.v2",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/13028207",
+  "published_date": "2021-03-05T14:33:22Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": null,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/13028207",
+  "url_public_api": "https://api.figshare.com/v2/articles/13028207",
+  "url_private_html": "https://figshare.com/account/articles/13028207",
+  "url_public_html": "https://figshare.com/articles/dataset/ColloCaid_Sample_Data/13028207",
+  "timeline": {
+    "posted": "2021-03-05T14:33:22",
+    "firstOnline": "2020-10-02"
+  },
+  "resource_title": null,
+  "resource_doi": null
+}

@@ -43,6 +43,9 @@ async function main(){
     ['zh','学习语法','第 6 题','英语句子是怎样构成的？']
   ]){
     i18n.setLanguage(lang);await tick();
+    assert.equal(i18n.translate('Tìm từ hoặc cụm'),({en:'Find a word or phrase',fr:'Chercher un mot ou une expression',zh:'查找单词或短语'})[lang]);
+    assert.equal(i18n.translate('Kiểu bài học'),({en:'Lesson type',fr:'Type de leçon',zh:'课程类型'})[lang]);
+    assert.notEqual(i18n.translate('Lưu bộ & ôn thẻ →'),'Lưu bộ & ôn thẻ →');
     assert.equal(document.documentElement.lang,lang==='zh'?'zh-Hans':lang);
     assert.equal(document.querySelector('#label').textContent,label);
     assert.equal(document.querySelector('#meaning').textContent,label);

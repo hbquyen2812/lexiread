@@ -1,0 +1,145 @@
+# relation|phrase|meaning_vi|example|translation_vi|answer|three distractors
+verb-noun|make progress|tiến bộ|You can make progress by reading a little every day.|Bạn có thể tiến bộ bằng cách đọc một chút mỗi ngày.|make|do,take,pay
+verb-noun|take a break|nghỉ giải lao|Let's take a break after this exercise.|Làm xong bài này mình nghỉ giải lao nhé.|take|do,pay,make
+verb-noun|pay attention|chú ý|Please pay attention to the final sentence.|Hãy chú ý câu cuối cùng.|pay|make,do,catch
+verb-noun|do homework|làm bài tập về nhà|I usually do homework at the kitchen table.|Tôi thường làm bài tập về nhà ở bàn bếp.|do|make,take,pay
+verb-noun|make a mistake|mắc lỗi|It is normal to make a mistake when you learn something new.|Mắc lỗi khi học điều mới là chuyện bình thường.|make|do,pay,catch
+verb-noun|catch the bus|bắt xe buýt|We need to hurry to catch the bus.|Chúng ta cần nhanh lên để kịp bắt xe buýt.|catch|do,make,pay
+verb-noun|meet the deadline|hoàn thành đúng hạn|Our team worked together to meet the deadline.|Nhóm chúng tôi cùng cố gắng để hoàn thành đúng hạn.|meet|do,catch,pay
+verb-noun|raise funds|gây quỹ|The school will raise funds for a new library.|Trường sẽ gây quỹ để xây thư viện mới.|raise|do,make,meet
+verb-noun|draw a conclusion|rút ra kết luận|Read all the evidence before you draw a conclusion.|Hãy đọc hết các bằng chứng trước khi rút ra kết luận.|draw|do,pay,catch
+verb-noun|conduct research|tiến hành nghiên cứu|The students will conduct research on urban transport.|Các sinh viên sẽ nghiên cứu về giao thông đô thị.|conduct|make,pay,catch
+verb-noun|reach an agreement|đạt được thỏa thuận|Both sides hope to reach an agreement this week.|Hai bên hy vọng sẽ đạt được thỏa thuận trong tuần này.|reach|do,catch,pay
+verb-noun|gain experience|tích lũy kinh nghiệm|Volunteering can help you gain experience.|Làm tình nguyện có thể giúp bạn tích lũy kinh nghiệm.|gain|do,make,pay
+adjective-noun|heavy rain|mưa lớn|The match was cancelled because of heavy rain.|Trận đấu bị hủy vì mưa lớn.|heavy|strong,tall,deep
+adjective-noun|fresh air|không khí trong lành|Open the window and let in some fresh air.|Mở cửa sổ cho không khí trong lành vào nhé.|fresh|new,young,raw
+adjective-noun|close friend|bạn thân|Mai is a close friend from university.|Mai là một người bạn thân từ thời đại học.|close|shut,closed,closing
+adjective-noun|deep sleep|giấc ngủ say|The baby was in a deep sleep when we arrived.|Em bé đang ngủ say khi chúng tôi đến.|deep|tall,high,wide
+adjective-noun|high speed|tốc độ cao|The train travels at high speed between the two cities.|Tàu chạy với tốc độ cao giữa hai thành phố.|high|tall,long,deep
+adjective-noun|strong coffee|cà phê đậm|He ordered strong coffee to help him stay awake.|Anh ấy gọi cà phê đậm để tỉnh táo hơn.|strong|powerful,heavy,tough
+adjective-noun|strong evidence|bằng chứng thuyết phục|The report provides strong evidence for the new theory.|Báo cáo đưa ra bằng chứng thuyết phục cho lý thuyết mới.|strong|powerful,tall,heavy
+adjective-noun|fierce competition|sự cạnh tranh gay gắt|Small shops face fierce competition from online retailers.|Các cửa hàng nhỏ đối mặt với sự cạnh tranh gay gắt từ nhà bán lẻ trực tuyến.|fierce|fiercely,fierceness,ferociously
+adjective-noun|considerable progress|tiến bộ đáng kể|The team has made considerable progress this month.|Nhóm đã tiến bộ đáng kể trong tháng này.|considerable|considerably,consider,consideration
+adjective-noun|growing demand|nhu cầu ngày càng tăng|There is growing demand for affordable housing.|Nhu cầu nhà ở vừa túi tiền đang ngày càng tăng.|growing|grow,growth,grown
+adjective-noun|pressing issue|vấn đề cấp bách|Water scarcity is a pressing issue in this region.|Thiếu nước là một vấn đề cấp bách ở khu vực này.|pressing|pressed,press,pressingly
+adjective-noun|adverse effects|những tác động bất lợi|The study examines the adverse effects of air pollution.|Nghiên cứu xem xét những tác động bất lợi của ô nhiễm không khí.|adverse|averse,adversely,adversity
+adverb-adjective|deeply sorry|rất lấy làm tiếc|I am deeply sorry for the confusion.|Tôi rất lấy làm tiếc vì sự nhầm lẫn này.|deeply|deep,depth,deepen
+adverb-adjective|fully aware|hoàn toàn nhận thức được|We are fully aware of the risks.|Chúng tôi hoàn toàn nhận thức được những rủi ro.|fully|full,fill,fullness
+adverb-adjective|completely different|hoàn toàn khác|The two stories have completely different endings.|Hai câu chuyện có kết thúc hoàn toàn khác nhau.|completely|complete,completion,completing
+adverb-adjective|perfectly normal|hoàn toàn bình thường|Feeling nervous before a test is perfectly normal.|Cảm thấy hồi hộp trước bài kiểm tra là hoàn toàn bình thường.|perfectly|perfect,perfection,perfecting
+adverb-adjective|highly unlikely|rất khó xảy ra|A snowstorm here in July is highly unlikely.|Bão tuyết ở đây vào tháng Bảy rất khó xảy ra.|highly|high,height,heighten
+adverb-adjective|widely available|được bán hoặc cung cấp rộng rãi|These books are widely available in local shops.|Những cuốn sách này có bán rộng rãi ở các cửa hàng địa phương.|widely|wide,width,widen
+adverb-adjective|increasingly important|ngày càng quan trọng|Digital literacy is increasingly important at work.|Kỹ năng sử dụng công nghệ số ngày càng quan trọng trong công việc.|increasingly|increase,increased,increases
+adverb-adjective|closely related|có liên hệ chặt chẽ|Sleep quality and concentration are closely related.|Chất lượng giấc ngủ và khả năng tập trung có liên hệ chặt chẽ.|closely|close,closeness,closing
+adverb-adjective|highly effective|rất hiệu quả|Regular feedback can be highly effective.|Phản hồi thường xuyên có thể mang lại hiệu quả cao.|highly|high,height,heighten
+adverb-adjective|seriously injured|bị thương nặng|Two cyclists were seriously injured in the accident.|Hai người đi xe đạp bị thương nặng trong vụ tai nạn.|seriously|serious,seriousness,series
+adverb-adjective|bitterly disappointed|vô cùng thất vọng|The players were bitterly disappointed by the result.|Các cầu thủ vô cùng thất vọng về kết quả.|bitterly|bitter,bitterness,bitterest
+adverb-adjective|painfully obvious|rõ ràng đến mức khó chịu|The lack of preparation was painfully obvious.|Việc thiếu chuẩn bị lộ rõ đến mức khó chịu.|painfully|painful,pain,pains
+verb-preposition|depend on|phụ thuộc vào|Young children depend on adults for care.|Trẻ nhỏ phụ thuộc vào người lớn để được chăm sóc.|on|at,of,with
+verb-preposition|belong to|thuộc về|These notebooks belong to Linh.|Những cuốn vở này thuộc về Linh.|to|at,for,with
+verb-preposition|listen to|lắng nghe|Please listen to the instructions before you start.|Hãy nghe hướng dẫn trước khi bắt đầu.|to|at,for,on
+verb-preposition|wait for|chờ đợi|We will wait for you outside the library.|Chúng tôi sẽ chờ bạn bên ngoài thư viện.|for|to,of,with
+verb-preposition|agree with|đồng ý với|I agree with your suggestion about the schedule.|Tôi đồng ý với đề xuất của bạn về lịch trình.|with|at,for,of
+verb-preposition|look at|nhìn vào|Please look at the diagram on page ten.|Hãy nhìn sơ đồ ở trang mười.|at|to,of,with
+verb-preposition|contribute to|góp phần vào|Daily reading can contribute to better vocabulary.|Đọc hằng ngày có thể giúp vốn từ tốt hơn.|to|at,for,of
+verb-preposition|cope with|đương đầu với|Small teams sometimes struggle to cope with sudden changes.|Các nhóm nhỏ đôi khi khó ứng phó với những thay đổi đột ngột.|with|to,of,at
+verb-preposition|benefit from|hưởng lợi từ|New employees benefit from regular feedback.|Nhân viên mới được hưởng lợi từ việc nhận phản hồi thường xuyên.|from|at,of,with
+verb-preposition|consist of|bao gồm|The kits consist of a notebook and three pens.|Các bộ dụng cụ gồm một cuốn sổ và ba cây bút.|of|from,to,for
+verb-preposition|insist on|nhất quyết yêu cầu|The organisers insist on checking every ticket.|Ban tổ chức nhất quyết yêu cầu kiểm tra từng vé.|on|to,for,of
+verb-preposition|account for|chiếm tỷ lệ|Online orders account for half of our sales.|Đơn hàng trực tuyến chiếm một nửa doanh số của chúng tôi.|for|to,of,at
+adjective-preposition|interested in|quan tâm đến|She is interested in local history.|Cô ấy quan tâm đến lịch sử địa phương.|in|on,at,for
+adjective-preposition|good at|giỏi về|Minh is good at solving puzzles.|Minh giỏi giải câu đố.|at|on,to,of
+adjective-preposition|afraid of|sợ|The little boy is afraid of spiders.|Cậu bé sợ nhện.|of|at,with,on
+adjective-preposition|ready for|sẵn sàng cho|We are ready for the next lesson.|Chúng tôi đã sẵn sàng cho bài học tiếp theo.|for|at,of,with
+adjective-preposition|proud of|tự hào về|Her parents are proud of her progress.|Bố mẹ cô ấy tự hào về sự tiến bộ của cô.|of|at,to,for
+adjective-preposition|different from|khác với|This edition is different from the original.|Ấn bản này khác với bản gốc.|from|of,with,for
+adjective-preposition|responsible for|chịu trách nhiệm về|The manager is responsible for staff training.|Người quản lý chịu trách nhiệm đào tạo nhân viên.|for|of,to,at
+adjective-preposition|aware of|nhận thức được|Residents are aware of the water shortage.|Người dân nhận thức được tình trạng thiếu nước.|of|at,with,on
+adjective-preposition|capable of|có khả năng|The team is capable of handling larger projects.|Nhóm có khả năng đảm nhận những dự án lớn hơn.|of|to,for,at
+adjective-preposition|committed to|cam kết với|Our company is committed to reducing waste.|Công ty chúng tôi cam kết giảm lượng rác thải.|to|for,of,at
+adjective-preposition|familiar with|quen thuộc với|Are you familiar with this software?|Bạn có quen dùng phần mềm này không?|with|of,for,at
+adjective-preposition|suitable for|phù hợp với|This course is suitable for independent learners.|Khóa học này phù hợp với người tự học.|for|at,of,with
+noun-preposition|reason for|lý do của|What was the reason for the delay?|Lý do chậm trễ là gì?|for|of,to,with
+noun-preposition|answer to|câu trả lời cho|I finally found the answer to the question.|Cuối cùng tôi đã tìm ra câu trả lời cho câu hỏi đó.|to|of,at,with
+noun-preposition|invitation to|lời mời tham dự|She received an invitation to the workshop.|Cô ấy nhận được lời mời tham dự buổi hội thảo.|to|at,of,with
+noun-preposition|interest in|sự quan tâm đến|His interest in science began at school.|Sự quan tâm của anh ấy dành cho khoa học bắt đầu từ thời đi học.|in|on,at,of
+noun-preposition|need for|nhu cầu về|There is a need for more evening classes.|Có nhu cầu mở thêm các lớp buổi tối.|for|of,to,with
+noun-preposition|increase in|sự gia tăng về|The city reported an increase in bicycle use.|Thành phố ghi nhận việc sử dụng xe đạp gia tăng.|in|of,to,with
+noun-preposition|access to|quyền hoặc khả năng tiếp cận|All students have access to the digital library.|Tất cả sinh viên đều có thể sử dụng thư viện số.|to|for,at,of
+noun-preposition|impact on|tác động lên|The new timetable has an impact on commuters.|Lịch trình mới có tác động đến người đi làm.|on|to,of,at
+noun-preposition|solution to|giải pháp cho|We need a practical solution to the problem.|Chúng ta cần một giải pháp thiết thực cho vấn đề này.|to|of,at,with
+noun-preposition|demand for|nhu cầu đối với|Demand for electric buses is rising.|Nhu cầu đối với xe buýt điện đang tăng.|for|of,to,with
+noun-preposition|approach to|cách tiếp cận|The teacher uses a practical approach to learning.|Giáo viên sử dụng cách tiếp cận việc học thiên về thực hành.|to|for,of,at
+noun-preposition|awareness of|sự nhận thức về|The campaign raises awareness of food waste.|Chiến dịch nâng cao nhận thức về tình trạng lãng phí thực phẩm.|of|at,to,with
+verb-noun|keep a promise|giữ lời hứa|It matters to keep a promise, even a small one.|Giữ lời hứa là điều quan trọng, dù đó chỉ là lời hứa nhỏ.|keep|do,pay,catch
+verb-noun|take responsibility|nhận trách nhiệm|Leaders should take responsibility for their decisions.|Người lãnh đạo nên nhận trách nhiệm về các quyết định của mình.|take|do,make,catch
+verb-noun|break a habit|bỏ một thói quen|It takes patience to break a habit.|Cần kiên nhẫn để bỏ một thói quen.|break|do,pay,catch
+verb-noun|make an effort|cố gắng|Please make an effort to arrive on time.|Hãy cố gắng đến đúng giờ.|make|do,pay,catch
+verb-noun|save time|tiết kiệm thời gian|A clear checklist can save time.|Một danh sách công việc rõ ràng có thể tiết kiệm thời gian.|save|do,make,perform
+verb-noun|pose a threat|gây ra mối đe dọa|Invasive plants can pose a threat to native species.|Thực vật xâm lấn có thể đe dọa các loài bản địa.|pose|do,pay,catch
+adjective-noun|balanced diet|chế độ ăn cân bằng|A balanced diet includes a variety of foods.|Một chế độ ăn cân bằng gồm nhiều loại thực phẩm.|balanced|balancing,balance,balances
+adjective-noun|busy schedule|lịch trình bận rộn|She makes time to read despite her busy schedule.|Cô ấy vẫn dành thời gian đọc dù lịch trình bận rộn.|busy|busily,business,busyness
+adjective-noun|lasting impression|ấn tượng lâu dài|The welcoming staff made a lasting impression on us.|Nhân viên niềm nở để lại ấn tượng lâu dài với chúng tôi.|lasting|last,lastly,lasted
+adjective-noun|mutual respect|sự tôn trọng lẫn nhau|Good teamwork depends on mutual respect.|Làm việc nhóm hiệu quả cần sự tôn trọng lẫn nhau.|mutual|mutually,mutuality,mutualism
+adjective-noun|valuable insight|hiểu biết có giá trị|The interview offered valuable insight into local traditions.|Cuộc phỏng vấn mang lại hiểu biết có giá trị về truyền thống địa phương.|valuable|valuably,value,valuation
+adjective-noun|scarce resources|nguồn lực khan hiếm|The project must make good use of scarce resources.|Dự án phải tận dụng tốt những nguồn lực khan hiếm.|scarce|scarcely,scarcity,scarceness
+adverb-adjective|strictly confidential|hoàn toàn bảo mật|The interview notes are strictly confidential.|Ghi chú phỏng vấn được giữ hoàn toàn bảo mật.|strictly|strict,strictness,stricter
+adverb-adjective|broadly similar|nhìn chung tương tự|The two designs are broadly similar.|Nhìn chung hai thiết kế tương tự nhau.|broadly|broad,breadth,broaden
+adverb-adjective|readily available|dễ dàng tìm được|Fresh vegetables are readily available here.|Ở đây dễ dàng tìm được rau tươi.|readily|ready,readiness,readier
+adverb-adjective|entirely dependent|hoàn toàn phụ thuộc|The island is entirely dependent on imported fuel.|Hòn đảo hoàn toàn phụ thuộc vào nhiên liệu nhập khẩu.|entirely|entire,entirety,eternal
+adverb-adjective|potentially harmful|có thể gây hại|Discarded batteries contain potentially harmful chemicals.|Pin bị vứt bỏ chứa các hóa chất có thể gây hại.|potentially|potential,potency,potentials
+adverb-adjective|remarkably consistent|nhất quán một cách đáng chú ý|The results were remarkably consistent across the three trials.|Kết quả của ba lần thử nhất quán một cách đáng chú ý.|remarkably|remarkable,remark,remarks
+verb-preposition|apply for|nộp đơn xin|You can apply for the scholarship online.|Bạn có thể nộp đơn xin học bổng trực tuyến.|for|of,at,with
+verb-preposition|participate in|tham gia vào|All students can participate in the discussion.|Tất cả học sinh đều có thể tham gia thảo luận.|in|on,to,of
+verb-preposition|refer to|đề cập đến|The phrase may refer to several different processes.|Cụm từ này có thể đề cập đến vài quá trình khác nhau.|to|at,of,with
+verb-preposition|result in|dẫn đến|Better insulation can result in lower energy bills.|Cách nhiệt tốt hơn có thể giúp giảm hóa đơn năng lượng.|in|at,of,with
+verb-preposition|recover from|hồi phục sau|The town needs time to recover from the flood.|Thị trấn cần thời gian để hồi phục sau trận lũ.|from|at,of,with
+verb-preposition|specialise in|chuyên về|These engineers specialise in renewable energy.|Các kỹ sư này chuyên về năng lượng tái tạo.|in|on,at,of
+adjective-preposition|satisfied with|hài lòng với|The guests were satisfied with the service.|Khách hài lòng với dịch vụ.|with|of,at,to
+adjective-preposition|similar to|tương tự với|Her method is similar to mine.|Phương pháp của cô ấy tương tự phương pháp của tôi.|to|with,of,for
+adjective-preposition|concerned about|lo lắng về|Residents are concerned about air quality.|Người dân lo lắng về chất lượng không khí.|about|at,of,to
+adjective-preposition|essential for|cần thiết cho|Clean water is essential for good health.|Nước sạch cần thiết cho sức khỏe tốt.|for|of,at,with
+adjective-preposition|opposed to|phản đối|Most residents are opposed to closing the park.|Phần lớn người dân phản đối việc đóng cửa công viên.|to|for,of,at
+adjective-preposition|consistent with|phù hợp, nhất quán với|The findings are consistent with earlier research.|Các phát hiện nhất quán với nghiên cứu trước đó.|with|to,of,at
+noun-preposition|lack of|sự thiếu hụt|A lack of sleep can affect concentration.|Thiếu ngủ có thể ảnh hưởng đến khả năng tập trung.|of|for,to,with
+noun-preposition|advantage of|ưu điểm của|One advantage of cycling is its low cost.|Một ưu điểm của việc đi xe đạp là chi phí thấp.|of|at,to,with
+noun-preposition|relationship between|mối quan hệ giữa|The graph shows the relationship between price and demand.|Biểu đồ cho thấy mối quan hệ giữa giá và nhu cầu.|between|of,to,at
+noun-preposition|emphasis on|sự nhấn mạnh vào|The course places emphasis on reading in context.|Khóa học chú trọng việc đọc trong ngữ cảnh.|on|to,of,at
+noun-preposition|evidence of|bằng chứng về|The survey found evidence of changing habits.|Khảo sát tìm thấy bằng chứng về việc thói quen đang thay đổi.|of|at,with,on
+noun-preposition|objection to|sự phản đối đối với|Nobody raised an objection to the revised plan.|Không ai phản đối kế hoạch đã sửa đổi.|to|of,at,with
+verb-adverb|work hard|làm việc chăm chỉ|They work hard to keep the community garden open.|Họ làm việc chăm chỉ để duy trì khu vườn cộng đồng.|hard|hardly,hardness,harden
+verb-adverb|sleep well|ngủ ngon|A quiet room helps you sleep well.|Phòng yên tĩnh giúp bạn ngủ ngon.|well|good,goodness,wellness
+verb-adverb|speak clearly|nói rõ ràng|Please speak clearly when you give directions.|Hãy nói rõ ràng khi chỉ đường.|clearly|clear,clarity,clearness
+verb-adverb|listen carefully|lắng nghe kỹ|We should listen carefully before responding.|Chúng ta nên nghe kỹ trước khi trả lời.|carefully|careful,care,carefulness
+verb-adverb|wait patiently|kiên nhẫn chờ đợi|Children learn to wait patiently for their turn.|Trẻ học cách kiên nhẫn chờ đến lượt.|patiently|patient,patience,patients
+verb-adverb|smile politely|mỉm cười lịch sự|The receptionist will smile politely and greet each guest.|Lễ tân sẽ mỉm cười lịch sự và chào từng khách.|politely|polite,politeness,politer
+verb-adverb|apologise sincerely|xin lỗi chân thành|You should apologise sincerely for the mistake.|Bạn nên chân thành xin lỗi về lỗi đó.|sincerely|sincere,sincerity,sincerest
+verb-adverb|explain briefly|giải thích ngắn gọn|Could you explain briefly how the system works?|Bạn có thể giải thích ngắn gọn cách hệ thống hoạt động không?|briefly|brief,brevity,briefing
+verb-adverb|plan ahead|lên kế hoạch trước|It helps to plan ahead before a busy week.|Lên kế hoạch trước một tuần bận rộn sẽ giúp ích.|ahead|head,heading,headed
+verb-adverb|travel widely|đi nhiều nơi|The job gives her a chance to travel widely.|Công việc cho cô ấy cơ hội đi nhiều nơi.|widely|wide,width,widen
+verb-adverb|think critically|suy nghĩ có phản biện|Students learn to think critically about what they read.|Học sinh học cách suy nghĩ phản biện về những gì mình đọc.|critically|critical,criticism,critic
+verb-adverb|respond promptly|phản hồi nhanh chóng|Our support team aims to respond promptly.|Nhóm hỗ trợ của chúng tôi cố gắng phản hồi nhanh chóng.|promptly|prompt,promptness,prompting
+verb-adverb|rise sharply|tăng mạnh|Demand can rise sharply during the holiday season.|Nhu cầu có thể tăng mạnh trong mùa lễ.|sharply|sharp,sharpness,sharpen
+verb-adverb|vary considerably|khác nhau đáng kể|Prices vary considerably between regions.|Giá cả giữa các khu vực khác nhau đáng kể.|considerably|considerable,consider,consideration
+verb-adverb|differ significantly|khác biệt đáng kể|The two samples differ significantly in size.|Hai mẫu khác nhau đáng kể về kích thước.|significantly|significant,significance,signify
+verb-adverb|rely heavily|phụ thuộc nhiều|Small businesses rely heavily on local customers.|Các doanh nghiệp nhỏ phụ thuộc nhiều vào khách địa phương.|heavily|heavy,heaviness,heavier
+verb-adverb|argue convincingly|lập luận thuyết phục|The author can argue convincingly because she uses clear evidence.|Tác giả có thể lập luận thuyết phục vì đưa ra bằng chứng rõ ràng.|convincingly|convincing,convince,convinced
+verb-adverb|expand rapidly|mở rộng nhanh chóng|Online services can expand rapidly when demand increases.|Dịch vụ trực tuyến có thể mở rộng nhanh khi nhu cầu tăng.|rapidly|rapid,rapidity,rapids
+noun-noun|bus stop|trạm xe buýt|The bus stop is just outside the library.|Trạm xe buýt nằm ngay ngoài thư viện.|bus|car,rail,plane
+noun-noun|train station|ga tàu|We will meet at the train station.|Chúng ta sẽ gặp nhau ở ga tàu.|train|flight,road,boat
+noun-noun|coffee shop|quán cà phê|There is a small coffee shop near my office.|Có một quán cà phê nhỏ gần văn phòng tôi.|coffee|office,traffic,energy
+noun-noun|school bus|xe buýt đưa đón học sinh|The school bus arrives at seven.|Xe buýt đưa đón học sinh đến lúc bảy giờ.|school|office,traffic,language
+noun-noun|traffic lights|đèn giao thông|Turn left at the traffic lights.|Rẽ trái ở chỗ đèn giao thông.|traffic|travel,journey,transport
+noun-noun|book club|câu lạc bộ sách|Our book club meets twice a month.|Câu lạc bộ sách của chúng tôi gặp nhau hai lần mỗi tháng.|book|page,paper,pen
+noun-noun|credit card|thẻ tín dụng|You can pay with a credit card.|Bạn có thể thanh toán bằng thẻ tín dụng.|credit|cash,debt,price
+noun-noun|job interview|buổi phỏng vấn xin việc|Her job interview is tomorrow morning.|Buổi phỏng vấn xin việc của cô ấy diễn ra sáng mai.|job|work,office,salary
+noun-noun|customer service|dịch vụ khách hàng|Good customer service encourages people to return.|Dịch vụ khách hàng tốt khiến mọi người muốn quay lại.|customer|customary,customise,customised
+noun-noun|language barrier|rào cản ngôn ngữ|Pictures can help people overcome a language barrier.|Hình ảnh có thể giúp mọi người vượt qua rào cản ngôn ngữ.|language|speech,talk,voice
+noun-noun|climate change|biến đổi khí hậu|The class is discussing climate change.|Lớp đang thảo luận về biến đổi khí hậu.|climate|climatically,climates,climatology
+noun-noun|research project|dự án nghiên cứu|Our research project focuses on reading habits.|Dự án nghiên cứu của chúng tôi tập trung vào thói quen đọc.|research|researches,researcher,researching
+noun-noun|data analysis|phân tích dữ liệu|Data analysis helped us identify the main trend.|Phân tích dữ liệu giúp chúng tôi nhận ra xu hướng chính.|Data|Date,Dated,Dating
+noun-noun|market research|nghiên cứu thị trường|The company uses market research to understand its customers.|Công ty sử dụng nghiên cứu thị trường để hiểu khách hàng.|market|markets,marketed,marketable
+noun-noun|information technology|công nghệ thông tin|She studies information technology at university.|Cô ấy học công nghệ thông tin ở đại học.|information|inform,informative,informatively
+noun-noun|risk assessment|đánh giá rủi ro|The team completed a risk assessment before the trip.|Nhóm đã hoàn thành đánh giá rủi ro trước chuyến đi.|risk|risky,riskily,risked
+noun-noun|energy consumption|mức tiêu thụ năng lượng|Better lighting can reduce energy consumption.|Hệ thống chiếu sáng tốt hơn có thể giảm mức tiêu thụ năng lượng.|energy|energetic,energetically,energise
+noun-noun|population growth|tăng trưởng dân số|The report links population growth to housing demand.|Báo cáo chỉ ra mối liên hệ giữa tăng trưởng dân số và nhu cầu nhà ở.|population|populate,populated,populating

@@ -43,7 +43,10 @@ def main():
         assert client.get('/account/').status_code==200
         for kind in ('grammar','vocabulary'):
             units=client.get('/api/learn/overview/',params={'kind':kind}).json()['items']
-            assert len(units)==(36 if kind=='grammar' else 516)
+            lexical=json.loads((Path(__file__).resolve().parents[1]/'data/lexical/lessons.json').read_text(encoding='utf8'))['collections']
+            assert len(units)==(36 if kind=='grammar' else 516+len(lexical))
+            if kind=='vocabulary':
+                assert {u['id'] for u in lexical} <= {u['id'] for u in units}
             assert {row['level'] for row in units}==({'A1','A2','B1','B2','C1','C2'} | ({'pre-A1'} if kind=='vocabulary' else set()))
             detail=client.get(f'/api/learn/{kind}/{units[0]["id"]}/').json()
             assert all('answer' not in question for question in detail['questions'])
@@ -95,19 +98,29 @@ def main():
         assert word['usage_pattern'] and word['example'] and word['paraphrases']
         saved=client.post('/api/vocabulary/',headers=csrf,json={'items':[word],'reading_id':lesson['id']})
         assert saved.status_code in (200,201)
-        words=client.get('/api/vocabulary/').json()['items']
-        assert any(w['word']==word['word'] and w['usage_pattern']==word['usage_pattern'] for w in words)
+        saved_word=saved.json()['items'][0]
+        matches=client.get('/api/vocabulary/',params={'q':word['word'],'reading':lesson['id'],'limit':500}).json()['items']
+        persisted=next(w for w in matches if w['id']==saved_word['id'])
+        assert persisted['word']==word['word']
+        assert persisted['usage_pattern']==saved_word['usage_pattern']
+        if saved.json()['created']:
+            assert persisted['usage_pattern']==word['usage_pattern']
+        # An existing card can have an edited pattern and need not be on page one.
+        lexical_catalog=client.get('/api/lexical/lessons/').json()['items']
+        assert len(lexical_catalog)==len(lexical)
+        corpus=client.get('/api/lexical/reference/',params={'q':'service','kind':'corpus'}).json()['items']
+        assert corpus and all(r['source']=='ewt-2.18' for r in corpus)
         assert client.get('/api/backup/').status_code==200
         assert client.get('/static/app.js').status_code==200
         for asset in ('resources.js','resources.css','brand.css','favicon.svg','learning_hub.js',
-                      'learning_hub.css','practice_tools.js','personal_decks.js','academy.js','academy.css','grammar_course.js','grammar_course.css','examples/lexiread-vocabulary.json','fonts.css','fonts/noto-serif-500.woff2'):
+                      'lexical_patterns.js','lexical_patterns.css','illustrations/patterns/noun-noun.svg','learning_hub.css','practice_tools.js','personal_decks.js','academy.js','academy.css','grammar_course.js','grammar_course.css','examples/lexiread-vocabulary.json','fonts.css','fonts/noto-serif-500.woff2'):
             assert client.get('/static/' + asset).status_code == 200, asset
         artwork = client.get('/static/illustrations/lexi-reading-garden.webp')
         assert artwork.status_code == 200 and artwork.content[:4] == b'RIFF'
         assert client.post('/logout/',headers=csrf).status_code==302
         assert client.get('/api/bootstrap/').status_code==401
     print('PASS QA HTTP: login/logout, profile/password pages, 354 general + 97 IELTS + 86 TOEIC, guides, question-type filter, English-only label, private answers, word patterns, backup, official resource JSON, self-hosted fonts and brand assets.')
-    print('PASS QA HTTP: 36 grammar lessons, 516 vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
+    print(f'PASS QA HTTP: 36 grammar lessons, {516+len(lexical)} vocabulary collections, A1–C2 coverage, answer privacy, 40 source links, dictionary lookup and plan time budget.')
 
 
 if __name__=='__main__': main()
