@@ -1,8 +1,16 @@
 # Tạo bộ từ riêng để ôn trên LexiRead
 
-Vào **Kho từ của tôi → Tạo / nhập bộ từ**. Điền tên bộ, chủ đề, trình độ và số từ; bấm **Sao chép prompt cho AI** rồi dán vào công cụ AI bạn đang dùng. Prompt yêu cầu nghĩa tiếng Việt dễ hiểu, cấu trúc thường gặp và ví dụ có bản dịch. Bước này không gọi API AI của website.
+Vào **Kho từ của tôi → Nhập bộ từ cá nhân**. Trang có ba bước: tạo prompt, nhập kết quả và xem lại để lưu. Nếu đã có file bộ từ, bạn có thể bắt đầu ngay ở bước 2.
 
-Tải file JSON do AI tạo, chọn file ở bước 2 và bấm **Xem trước bộ từ**. Nếu AI chỉ trả đoạn mã, bạn có thể dán thẳng đoạn JSON vào ô trên trang. Đọc lại nghĩa và ví dụ, bỏ chọn những mục không muốn học, rồi bấm **Lưu bộ từ vào kho của tôi**. Sau đó chọn **Ôn bộ từ này** để bắt đầu.
+1. **Tạo prompt từ bài đọc:** đặt tên bộ, giữ nguồn **Từ bài đọc** và dán bài tiếng Anh vào ô. Chọn **Mức từ vựng tối thiểu** và **Số từ tối đa**, rồi bấm **Sao chép prompt cho AI**. Bài đọc tối đa 20.000 ký tự; với bài dài hơn, chia thành nhiều phần. Chọn **Theo chủ đề** nếu muốn tạo bộ từ mà chưa có bài đọc.
+2. **Lấy và nhập kết quả:** dán prompt vào AI bạn đang dùng và gửi. Tải file JSON AI trả về, hoặc sao chép toàn bộ khối JSON. Quay lại LexiRead, chọn file ở bước 2 hoặc mở **Dán nội dung JSON**, rồi bấm **Xem trước bộ từ**.
+3. **Xem lại và lưu:** đọc nghĩa, ví dụ và bỏ chọn những từ không muốn học. Bấm **Lưu bộ từ vào kho của tôi**, rồi chọn **Ôn bộ từ này** để bắt đầu.
+
+**B1 trở lên** gồm B1, B2, C1 và C2; đây là ngưỡng từ vựng muốn học, không giới hạn bộ từ ở riêng B1. Tương tự, B2 trở lên gồm B2, C1 và C2. Số từ là mức tối đa: nếu bài chỉ có 12 từ phù hợp thì không cần tạo đủ 20. Nếu không có từ phù hợp, prompt yêu cầu AI báo lại để bạn hạ ngưỡng hoặc đổi bài, thay vì xuất một bộ rỗng.
+
+Khi chọn bài đọc, prompt yêu cầu chỉ lấy từ/cụm từ trong bài, giữ đúng nghĩa theo ngữ cảnh và chép một hoặc hai câu gốc vào `context`. Nghĩa Việt và ví dụ mới cần tự nhiên, dễ hiểu. Khi chọn chủ đề, phần bài đọc đã ẩn không được đưa vào prompt.
+
+LexiRead chỉ tạo và sao chép prompt trong trình duyệt, không tự gửi bài đọc hay gọi API AI. Bạn chủ động gửi prompt cho công cụ mình chọn. Nếu trình duyệt không cho sao chép, ô prompt sẽ mở để bạn sao chép thủ công. Khi sửa bài, mức hoặc số từ, bấm sao chép lại để có prompt mới. Mức của từng từ do AI phân loại khi làm theo prompt; chức năng nhập không tự chứng thực cấp độ hoặc kiểm tra lại nghĩa thay cho người học.
 
 Bạn cũng có thể tự điền file mẫu ở `static/examples/lexiread-vocabulary.json`. Cấu trúc tối thiểu:
 

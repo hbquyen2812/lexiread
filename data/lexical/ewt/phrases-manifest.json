@@ -1,0 +1,13 @@
+{
+  "rows": 1887,
+  "examples": 3774,
+  "relations": {
+    "adjective-noun": 654,
+    "adverb-adjective": 34,
+    "noun-noun": 397,
+    "verb-adverb": 157,
+    "verb-noun": 645
+  },
+  "sha256": "13ae43a94bf2719cc98fec175d05ec46bcbe38f1cfefc4c7de127c5bd88b7b6c",
+  "license": "CC BY-SA 4.0"
+}

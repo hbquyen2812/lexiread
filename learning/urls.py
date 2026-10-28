@@ -2,10 +2,16 @@ from django.urls import path
 from . import views as v
 from . import foundation_views as f
 from . import dictionary_views as dictionary
+from .reading_deck_views import reading_deck
+from . import lexical_views as lexical
 urlpatterns=[
+ path('api/lexical/lessons/',lexical.catalogue),
+ path('api/lexical/lessons/<slug:unit_id>/cards/',lexical.cards),
+ path('api/lexical/reference/',lexical.reference),
  path('api/practice-groups/',f.practice_groups),
  path('api/dictionary/',dictionary.lookup),
  path('api/dictionary/search/',dictionary.search),
+ path('api/dictionary/pronunciations/',dictionary.pronunciations),
  path('api/dictionary/audio/<str:digest>/',dictionary.audio),
  path('api/learn/overview/',f.overview),path('api/learn/plan/',f.plan),
  path('api/learn/dictionary/',f.dictionary),path('api/learn/sources/',f.sources),
@@ -19,6 +25,7 @@ urlpatterns=[
  path('api/toeic/',v.toeic_catalog),path('api/toeic/<slug:slug>/',v.toeic_detail),
  path('api/toeic/<slug:slug>/submit/',v.toeic_submit),
  path('api/readings/<uuid:pk>/progress/',v.reading_progress),
+ path('api/readings/<uuid:pk>/vocabulary-deck/',reading_deck),
  path('api/readings/<uuid:pk>/quiz/',v.reading_quiz),
  path('api/readings/<uuid:pk>/questions/',v.reading_questions),
  path('',v.index,name='home'),path('health/',v.health),path('api/bootstrap/',v.bootstrap),

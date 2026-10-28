@@ -56,7 +56,7 @@
     const credits=section==='verbs'
       ? [['https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/irregular-verbs','British Council'],['https://dictionary.cambridge.org/grammar/british-grammar/table-of-irregular-verbs','Cambridge Grammar']]
       : [['https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-simple-continuous','Present perfect'],['https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-continuous-future-perfect','Future forms']];
-    area.insertAdjacentHTML('beforeend',`<p class="grammar-reference-credit">Nội dung do LexiRead biên soạn. Đối chiếu: ${credits.map(([url,title])=>`<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>`).join(' · ')}.</p>`);
+    area.insertAdjacentHTML('beforeend',`<p class="grammar-reference-credit">Nội dung do Lexivela biên soạn. Đối chiếu: ${credits.map(([url,title])=>`<a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>`).join(' · ')}.</p>`);
   }
   window.LexiGrammarReference={page,toolsHTML,tenseHTML,comparisonHTML,guideHTML,filterVerbs,verbsHTML};
 })();

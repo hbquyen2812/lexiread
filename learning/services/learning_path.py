@@ -125,4 +125,4 @@ def plan_for(user):
     advance=len(done)>=3 and all(p['mastery']>=80 for p in done) and index<5
     return {'profile':profile,'guidance':START[level],'tasks':tasks,'planned_minutes':used or 8,'progress':progress,
         'next_level':LEVELS[index+1] if advance else None,
-        'method':'Lộ trình dựa trên trình độ, mục tiêu, thời gian học và kết quả gần đây của bạn. LexiRead ưu tiên từ cần ôn và bài cần luyện lại, sau đó gợi ý bài mới. Bạn có thể đổi trình độ và thời gian học bất cứ lúc nào.'}
+        'method':'Lộ trình dựa trên trình độ, mục tiêu, thời gian học và kết quả gần đây của bạn. Lexivela ưu tiên từ cần ôn và bài cần luyện lại, sau đó gợi ý bài mới. Bạn có thể đổi trình độ và thời gian học bất cứ lúc nào.'}

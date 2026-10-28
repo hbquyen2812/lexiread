@@ -12,7 +12,7 @@ from .core import InputError
 
 ENDPOINT = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
 COMMONS_API = 'https://commons.wikimedia.org/w/api.php'
-USER_AGENT = 'LexiRead/1.0 (https://github.com/hbquyen2812/lexiread)'
+USER_AGENT = 'Lexivela/1.0 (https://github.com/hbquyen2812/lexiread)'
 
 
 def lookup_word(value):

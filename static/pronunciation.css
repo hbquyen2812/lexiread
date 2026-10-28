@@ -12,3 +12,11 @@
 .collection-grid .word-select+.pronunciation{margin:0 0 8px}.topic-flashcard .pronunciation{margin-bottom:10px}
 .local-dictionary-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}.local-dictionary-item .local-dictionary-row{min-width:0;width:100%}.local-dictionary-item>.pronunciation{max-width:250px}
 @media(max-width:600px){.pronunciation-button{width:42px;height:42px}.pronunciation-heading{gap:8px}.pronunciation-controls{flex-wrap:wrap}}
+
+.pronunciation:has(.word-ipa){display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:100%}
+.word-ipa{font-family:"Segoe UI","Arial",sans-serif;font-size:15px;line-height:1.65;font-weight:400;color:#536e61;letter-spacing:.01em;overflow-wrap:anywhere}
+.ipa-lookup{border:0;background:transparent;color:var(--green);font:inherit;font-size:12px;padding:3px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ipa-lookup:focus-visible{outline:2px solid var(--green);outline-offset:3px}.pronunciation-heading{flex-wrap:wrap}.pronunciation-status:empty{display:none}
+.collection-word .word-ipa{font-size:16px}.pronunciation-controls .word-ipa{font-size:18px}.topic-flashcard>.pronunciation{justify-content:center;margin:0 auto 16px}
+
+.vocab-word-heading .pronunciation-heading{display:block}.vocab-word-heading .pronunciation-heading>.pronunciation{margin:6px 0}

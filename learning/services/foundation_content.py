@@ -231,5 +231,5 @@ def word_entry(word, unit):
     return {'word':word['word'],'meaning_vi':word['meaning_vi'],'pos':word['part_of_speech'],
             'example':word['example'],'example_vi':word['example_translation'],'usage_pattern':word['usage_pattern'],
             'context':word.get('context',''),
-            'source_label':'LexiRead · '+unit['title'],'tags':[unit['title'],unit['level']],
+            'source_label':'Lexivela · '+unit['title'],'tags':[unit['title'],unit['level']],
             'origin':'curated','verified':False}

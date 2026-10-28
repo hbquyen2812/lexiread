@@ -500,7 +500,7 @@ def toeic_catalog(request):
         'parts':[{'part':5,'name':'Incomplete Sentences','questions':30},
                  {'part':6,'name':'Text Completion','questions':16},
                  {'part':7,'name':'Reading Comprehension','questions':54}],
-        'note':'Bộ luyện trong LexiRead là nội dung tự biên soạn theo dạng bài, không phải đề ETS chính thức và không quy đổi điểm TOEIC.'}})
+        'note':'Bộ luyện trong Lexivela là nội dung tự biên soạn theo dạng bài, không phải đề ETS chính thức và không quy đổi điểm TOEIC.'}})
 
 
 @api('GET')
@@ -604,7 +604,7 @@ def open_lesson(request,slug):
     from .services.catalog import validate_lesson
     snapshot=validate_lesson(lesson.content)
     r,created=Reading.objects.get_or_create(owner=request.user,catalog_slug=slug,
-        defaults={'title':snapshot['title'],'text':snapshot['text'],'source_name':'LexiRead · bài soạn sẵn',
+        defaults={'title':snapshot['title'],'text':snapshot['text'],'source_name':'Lexivela · bài soạn sẵn',
                   'analysis':snapshot['analysis'],'lesson_snapshot':snapshot,'progress':{'paragraph':0,'completed':False}})
     return JsonResponse(serial_reading(r),status=201 if created else 200)
 

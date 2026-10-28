@@ -128,9 +128,54 @@
     throw new Error('Chưa đủ thẻ phù hợp. Đổi bộ lọc hoặc bổ sung nghĩa, synonym/câu ví dụ cho thẻ.');
   }
   function parseJSON(s){return JSON.parse(s.trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/,''));}
+  function readingDeck(r, create=false){
+    let created=0;
+    if(create){
+      // Offline preview uses its bundled bilingual examples; the server also has dictionary forms.
+      const authored=r.analysis?.vocabulary||[],bank=new Map();
+      for(const entry of [...authored,...PREVIEW_SEED.words,...PREVIEW_SEED.lessons.flatMap(l=>l.analysis?.vocabulary||[])]){
+        if(!entry.word||!entry.meaning_vi)continue;
+        const key=norm(entry.word);
+        if(key.length<3||key.split(' ').length>5)continue;
+        if(!bank.has(key))bank.set(key,[]);
+        bank.get(key).push(entry);
+      }
+      const chosen=[];
+      for(const [key,entries] of bank){
+        const match=new RegExp("(?<![A-Za-z'’-])"+regex(key).replace(/ /g,'[ \\t]+')+"(?![A-Za-z'’-])",'i').exec(r.text);
+        if(!match)continue;
+        const authoredEntry=authored.find(v=>norm(v.word)===key);
+        if(!authoredEntry&&new Set(entries.map(v=>norm(v.meaning_vi))).size!==1)continue;
+        const left=Math.max(...['. ','! ','? ','\n'].map(mark=>{const pos=r.text.lastIndexOf(mark,match.index);return pos<0?0:pos+mark.length;}));
+        const ends=['.','!','?','\n'].map(mark=>r.text.indexOf(mark,match.index+match[0].length)).filter(i=>i>=0);
+        let right=ends.length?Math.min(...ends)+1:r.text.length;
+        const context=r.text.slice(Math.max(left,match.index-500),Math.min(right,match.index+match[0].length+500)).trim();
+        chosen.push({entry:authoredEntry||entries[0],context,priority:!!authoredEntry,key});
+      }
+      chosen.sort((a,b)=>Number(b.priority)-Number(a.priority)||b.key.length-a.key.length);
+      for(const {entry,context} of chosen.slice(0,20)){
+        const [,isNew]=addWord({...entry,reading_id:r.id,source_label:r.title,context,example:context,example_vi:'',origin:'auto',verified:false,tags:['Bài đọc · '+r.title.slice(0,90)]});
+        created+=Number(isNew);
+      }
+    }
+    const cards=db.words.filter(w=>w.reading_id===r.id||w.occurrences.some(o=>o.reading_id===r.id)).sort((a,b)=>Date.parse(a.due_at)-Date.parse(b.due_at));
+    if(create&&!cards.length)throw new Error('Chưa tìm thấy từ có nghĩa sẵn trong bài này. Bạn có thể bôi đen từ để tra và lưu.');
+    if(create)save();
+    return {reading:{id:r.id,title:r.title},created,total:cards.length,items:cards.slice(0,100).map(w=>{
+      const context=w.occurrences.filter(o=>o.reading_id===r.id&&o.context&&r.text.includes(o.context)).at(-1)?.context||'';
+      return {...V(w),reading_id:r.id,source_label:r.title,context,example:context,example_vi:''};
+    })};
+  }
   async function api(path,{method='GET',data=null}={}){
     await new Promise(r=>setTimeout(r,40));
     const u=new URL(path,'http://preview'),p=u.pathname,q=u.searchParams;
+    const readingDeckMatch=p.match(/^\/readings\/([^/]+)\/vocabulary-deck\/$/);
+    if(readingDeckMatch){
+      if(!['GET','POST'].includes(method))throw new Error('Phương thức không được hỗ trợ.');
+      const reading=db.readings.find(r=>r.id===readingDeckMatch[1]);
+      if(!reading)throw new Error('Không tìm thấy bài đọc.');
+      return clone(readingDeck(reading,method==='POST'));
+    }
     if(p==='/community/')return null; // Offline files have no system-wide usage data.
     if(p==='/bootstrap/'){
       const day=localDay;const today=day(new Date()),overdueBefore=Date.now()-86400000;

@@ -131,6 +131,22 @@ def lookup_local(word):
     return {'status': 'not_found' if ready else 'not_ready', 'entries': [], 'storage': 'database'}
 
 
+def pronunciation_batch(words):
+    """Read exact headwords in one query; an inflected word must not inherit a lemma's IPA."""
+    normalized = {key(word) for word in words}
+    result = {word: [] for word in normalized}
+    for row in DictionaryEntry.objects.filter(pk__in=normalized).only('word', 'content'):
+        seen = set()
+        for entry in row.content:
+            for phonetic in entry.get('phonetics', []):
+                ipa = phonetic.get('ipa', '')
+                if isinstance(ipa, str) and ipa and len(ipa) <= 160 and ipa not in seen:
+                    seen.add(ipa)
+                    result[row.word].append(ipa)
+        result[row.word] = result[row.word][:4]
+    return result
+
+
 def import_recordings():
     path = DATA/'pronunciation-pack.json.gz'
     if not path.exists():

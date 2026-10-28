@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "sha256": "61289878bd1563fbd8edb5af11e45221dc0f47071efc7ad24950ed6c31c0bee1",
+  "counts": {
+    "family": 22143,
+    "collocation": 689,
+    "corpus": 1887
+  },
+  "files": [
+    {
+      "path": "reference.jsonl.gz",
+      "sha256": "61289878bd1563fbd8edb5af11e45221dc0f47071efc7ad24950ed6c31c0bee1"
+    },
+    {
+      "path": "ewt/phrases.jsonl.gz",
+      "sha256": "13ae43a94bf2719cc98fec175d05ec46bcbe38f1cfefc4c7de127c5bd88b7b6c"
+    }
+  ],
+  "sources": [
+    {
+      "id": "collocaid-v2",
+      "title": "ColloCaid Sample Data (version 2)",
+      "url": "https://doi.org/10.6084/m9.figshare.13028207.v2",
+      "license": "CC BY 4.0",
+      "attribution": "Ana Frankenberg-Garcia, Geraint Rees, Robert Lew, Jonathan Roberts, Peter Butcher",
+      "archive_sha256": "9c9689ab83653f76765979107423e193ebb281739ec47a1f7e1cf211bd42d880",
+      "downloaded_at": "2026-10-28",
+      "download_url": "https://ndownloader.figshare.com/files/26706641",
+      "scope": "Public sample only. 691 populated rows, 689 unique records; source description reports 692. Two exact duplicates removed. No access to the full database."
+    },
+    {
+      "id": "oewn-2025",
+      "title": "Open English WordNet 2025",
+      "url": "https://en-word.net/",
+      "license": "CC BY 4.0 + Princeton WordNet license",
+      "attribution": "Open English WordNet Team; Princeton University WordNet",
+      "scope": "Direct derivation/pertainym edges only; sense evidence retained. Not CEFR-rated teaching families."
+    },
+    {
+      "id": "ewt-2.18",
+      "title": "UD English Web Treebank 2.18",
+      "url": "https://universaldependencies.org/treebanks/en_ewt/index.html",
+      "license": "CC BY-SA 4.0",
+      "attribution": "UD English EWT contributors; full credits and license in data/lexical/ewt/README.md and LICENSE.txt",
+      "revision": "b7711cce01cdd4f5fcc0a8199b8a50d951b16c0c",
+      "scope": "Automatically extracted dependency pairs appearing in at least two eligible sentences; retained examples and sentence IDs. Not curated collocations or CEFR ratings. Derived corpus file is CC BY-SA 4.0, separate from other sources."
+    }
+  ]
+}

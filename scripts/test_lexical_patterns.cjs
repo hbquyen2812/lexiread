@@ -1,0 +1,72 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const {environment}=require('./dom_test_env.cjs');
+const tick=()=>new Promise(r=>setImmediate(r));
+async function run(){
+  const dom=environment(),{window}=dom,root=window.document.querySelector('main');
+  const units=JSON.parse(fs.readFileSync('data/lexical/lessons.json','utf8')).collections;
+  const items=units.map(u=>({id:u.id,title:u.title,level:u.level,kind:u.pattern_kind,relation:u.relation,count:u.words.length,preview:u.words.slice(0,3).map(w=>w.word),terms:u.words.map(w=>w.word).join(' ')}));
+  let active=true,sequence=0,calls=[];
+  const context={window,document:window.document,URL,URLSearchParams,FormData:window.FormData,location:window.location,
+    state:{routeEpoch:1,studySettings:{}},uid:()=>String(++sequence),refreshBoot:async()=>{},
+    api:async(url,options)=>{calls.push([url,options]);return {items};}};
+  vm.createContext(context);
+  for(const module of ['visuals','academy','lexical_patterns'])vm.runInContext(fs.readFileSync('static/'+module+'.js','utf8'),context);
+  const ui=window.LexiPatterns;
+  await ui.page(root,()=>active);
+  assert.equal(root.querySelectorAll('.pattern-lesson').length,8);
+  assert.equal(new Set(Array.from(root.querySelectorAll('.pattern-art'),i=>i.getAttribute('src'))).size,3);
+  root.querySelector('[data-next]').click();assert.equal(root.querySelectorAll('.pattern-lesson').length,8);
+  root.querySelector('[data-kind=families]').click();assert.equal(root.querySelector('[data-relation-label]').hidden,true);
+  const q=root.querySelector('[data-pattern-query]');q.value='creative';q.dispatchEvent(new window.Event('input'));
+  assert.equal(root.querySelectorAll('.pattern-lesson').length,1);
+  assert.match(root.querySelector('.pattern-lesson').textContent,/create/);
+  let resolveOld;
+  context.api=url=>url.includes('q=old')?new Promise(r=>resolveOld=r):Promise.resolve({items:[],page:1});
+  const form=root.querySelector('[data-reference-form]');form.elements.q.value='old';form.dispatchEvent(new window.Event('submit',{cancelable:true}));
+  form.elements.q.value='new';form.dispatchEvent(new window.Event('submit',{cancelable:true}));await tick();
+  resolveOld({items:[{headword:'old',related:'data',detail:{},relation:'modifier'}],page:1});await tick();
+  assert.doesNotMatch(root.querySelector('[data-reference-results]').textContent,/old · data/);
+  root.replaceChildren(window.LexiDOM.fragment(ui.referenceHTML({items:[{source:'ewt-2.18',relation:'noun-noun',headword:'shop',related:'coffee',detail:{pattern:'coffee shop',examples:['There is a coffee shop nearby.']}}]},'corpus')));
+  assert.match(root.textContent,/EWT · CC BY-SA 4.0/);
+  assert.match(root.textContent,/không phải cụm nào/);
+  const attack='<img src=x onerror=alert(1)><script>alert(2)</script>';
+  root.replaceChildren(window.LexiDOM.fragment(ui.referenceHTML({query:'word',items:[{headword:attack,related:'other',relation:attack,detail:{examples:[attack],pattern:attack}}]},'collocation')));
+  assert.equal(root.querySelector('img,script'),null);assert.match(root.textContent,/<img/);
+  assert.match(ui.referenceHTML({items:[{headword:'access',related:'easy',relation:'modifier',detail:{}}]},'collocation'),/>easy access</);
+  assert.match(ui.referenceHTML({items:[{headword:'access',related:'to',relation:'preposition',detail:{}}]},'collocation'),/>access to</);
+  const data=structuredClone(units[0]);data.version='test-version';data.questions=data.questions.map(({answer,explanation_vi,...q})=>q);
+  ui.lesson(root,data,()=>active);
+  assert.equal(root.querySelectorAll('.pattern-word').length,6);
+  assert.equal(root.querySelector('[data-pattern-quiz]').hidden,true);
+  root.querySelector('[data-view=quiz]').click();assert.equal(root.querySelector('[data-learning]').hidden,true);
+  assert.equal(root.querySelectorAll('.pattern-hint').length,6);
+  for(const fieldset of root.querySelectorAll('fieldset'))fieldset.querySelector('input').checked=true;
+  let submitted;
+  context.api=async(url,options)=>{
+    submitted=options.data;
+    return {score:6,total:6,percent:100,results:units[0].questions.map(q=>({...q,submitted:q.answer,correct:true}))};
+  };
+  root.querySelector('.academy-quiz').dispatchEvent(new window.Event('submit',{cancelable:true}));await tick();
+  assert.equal(Object.keys(submitted.answers).length,6);assert.equal(submitted.version,'test-version');
+  assert.ok(root.querySelector('.academy-result'));
+  const firstToken=submitted.token;root.querySelector('[data-academy=retry]').click();assert.ok(sequence>Number(firstToken));
+  let saved;
+  context.api=async(url,options)=>{saved={url,data:options.data};return {created:6,existing:0};};
+  root.querySelector('[data-save-pattern]').click();await tick();await tick();
+  assert.equal(saved.url,'/learn/vocabulary/'+data.id+'/save/');assert.deepEqual(Array.from(saved.data.indices),[0,1,2,3,4,5]);
+  assert.equal(window.location.hash,'#pattern-cards/'+data.id);
+  context.api=async()=>({id:data.id,title:data.title,items:data.words.map((w,i)=>({...w,id:i}))});
+  let rendered=0;context.renderStage=()=>{rendered++;};
+  await ui.cards(root,data.id,1);assert.equal(rendered,1);assert.equal(context.state.study.cards.length,6);
+  assert.equal(context.state.studySettings.tag,data.title);assert.ok(root.querySelector('#study-stage'));
+  context.state.study.done=6;context.state.study.finished=true;
+  await ui.cards(root,data.id,1,true);assert.equal(context.state.study.done,0);
+  // Navigating away while save/submit is pending must not redirect or replace the new view.
+  let resolveSave;active=true;ui.lesson(root,data,()=>active);context.api=()=>new Promise(r=>resolveSave=r);
+  root.querySelector('[data-save-pattern]').click();active=false;window.location.hash='home';root.textContent='New page';
+  resolveSave({created:6});await tick();assert.equal(window.location.hash,'#home');assert.equal(root.textContent,'New page');
+  dom.window.close();console.log('PASS lexical filters, pagination, stale search/save, escaping, quiz/retry and whole-phrase deck flow');
+}
+run().catch(error=>{console.error(error);process.exitCode=1;});

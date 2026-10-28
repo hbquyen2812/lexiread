@@ -38,6 +38,36 @@ class OfflineDictionaryTests(TestCase):
             self.assertEqual(audio['Content-Type'],'audio/ogg')
             self.assertEqual(self.client.get('/api/dictionary/',{'word':'missing'}).json()['dictionary']['status'],'not_found')
 
+    def test_batch_ipa_is_local_bounded_and_never_substitutes_inflected_words(self):
+        with self.assertNumQueries(1):
+            self.assertEqual(service.pronunciation_batch([' Run ', 'ran', 'missing']),
+                             {'run': ['/rʌn/'], 'ran': [], 'missing': []})
+        with patch('httpx.Client', side_effect=AssertionError('No network dictionary')):
+            response = self.client.post('/api/dictionary/pronunciations/',
+                data=json.dumps({'words': ['RUN', 'ran', 'missing']}), content_type='application/json')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()['items'], {'run': ['/rʌn/'], 'ran': [], 'missing': []})
+        self.assertEqual(response['Cache-Control'], 'private, no-store')
+        for words in (None, 'run', ['run']*101, [None], [{}], [''], ['x'*161]):
+            self.assertEqual(self.client.post('/api/dictionary/pronunciations/',
+                data=json.dumps({'words': words}), content_type='application/json').status_code, 400)
+        self.assertEqual(self.client.post('/api/dictionary/pronunciations/',
+            data=json.dumps({'words': [], 'extra': 'x'*24001}), content_type='application/json').status_code, 400)
+        self.assertEqual(self.client.get('/api/dictionary/pronunciations/').status_code, 405)
+        self.client.logout()
+        self.assertEqual(self.client.post('/api/dictionary/pronunciations/',
+            data=json.dumps({'words': ['run']}), content_type='application/json').status_code, 401)
+
+    def test_ipa_batch_preserves_variants_and_requires_csrf(self):
+        self.entry.content[0]['phonetics'] += [{'ipa':'/rʌn/'}, {'ipa':'/ɹʌn/'}]
+        self.entry.save()
+        self.assertEqual(service.pronunciation_batch(['run'])['run'], ['/rʌn/', '/ɹʌn/'])
+        from django.test import Client
+        secured = Client(enforce_csrf_checks=True)
+        secured.force_login(self.user)
+        self.assertEqual(secured.post('/api/dictionary/pronunciations/',
+            data=json.dumps({'words': ['run']}), content_type='application/json').status_code, 403)
+
     def test_dictionary_pagination_is_bounded_and_empty_query_is_lightweight(self):
         DictionaryEntry.objects.bulk_create([DictionaryEntry(word=f'test{i:02}',display_word=f'test{i:02}',
             definition='Definition',release=self.release,content=[]) for i in range(25)])

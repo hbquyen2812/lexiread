@@ -74,3 +74,11 @@
   .deck-workflow .deck-step { padding:20px; }
   .deck-file-zone input { font-size:16px; }
 }
+
+/* A real desktop drawer: closed content cannot receive keyboard focus. */
+.sidebar-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:8px 12px;flex:none;border:1px solid var(--line);border-radius:10px;background:#fffef9;color:var(--green);font:500 14px var(--font-ui);cursor:pointer}
+.sidebar-toggle:hover{background:#edf2e8}.sidebar-toggle:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.topbar{gap:18px}.topbar .top-actions{margin-left:auto}.sidebar .brand-mark svg{display:block}.sidebar .brand{white-space:nowrap;font-size:24px}
+@media(min-width:881px){.nav-collapsed .sidebar{transform:translateX(-100%);visibility:hidden}.nav-collapsed .workspace{margin-left:0}.sidebar{transition:transform .2s ease,visibility .2s}.workspace{transition:margin-left .2s ease}}
+@media(max-width:880px){.sidebar-toggle{display:none}}
+@media(prefers-reduced-motion:reduce){.sidebar,.workspace{transition:none}}

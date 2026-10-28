@@ -58,7 +58,7 @@ def overview(request):
 def unit_detail(request, kind, unit_id):
     unit=find_unit(kind,unit_id); snapshot=quiz_snapshot(unit,kind)
     result=copy.deepcopy(unit);result.pop('questions',None)
-    result['questions']=[{k:q[k] for k in ('id','prompt','options','prompt_lang') if k in q} for q in snapshot['questions']]
+    result['questions']=[{k:q[k] for k in ('id','prompt','options','prompt_lang','hint_vi') if k in q} for q in snapshot['questions']]
     result['version']=revision(snapshot)
     result['progress']=progress_for(request.user).get(kind+'/'+unit_id)
     if kind == 'grammar':

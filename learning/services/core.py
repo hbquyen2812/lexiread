@@ -42,7 +42,7 @@ def validate_entry(data):
         out[k]=list(dict.fromkeys(clean_text(v,300) for v in values if v))
     if len(out['word'].split())>16: raise InputError('Chọn tối đa 16 từ cho một từ/cụm từ.')
     out['verified']=data.get('verified',False) is True
-    out['origin']=data.get('origin','manual') if data.get('origin') in {'ai','manual','seed','import','curated'} else 'manual'
+    out['origin']=data.get('origin','manual') if data.get('origin') in {'ai','manual','seed','import','curated','auto'} else 'manual'
     return out
 
 def parse_json(text):
