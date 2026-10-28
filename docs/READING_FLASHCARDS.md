@@ -2,6 +2,14 @@
 
 Mở bài đọc cá nhân hoặc bài đã mở từ thư viện, bấm **Flashcard bài này**. Website lưu bộ từ và mở thẻ đầu tiên ngay. **Xem bộ từ** mở kho từ với bộ lọc của đúng bài. Thẻ hỗ trợ lật, nghe phát âm, IPA khi có dữ liệu, câu gốc và đánh giá để hẹn ôn lại.
 
+## Nhập bằng prompt: ưu tiên cụm từ
+
+Trong **Nhập bộ từ cá nhân**, prompt ưu tiên collocations, phrasal verbs và cụm diễn đạt trước từ đơn; mặc định tối đa 40 mục, vẫn chọn được 20/60/100. Ngưỡng CEFR áp dụng cho nghĩa của cả cụm, không loại cụm vì các từ thành phần dễ. Không ép số lượng hay tỷ lệ cụm nếu bài không có đủ mục phù hợp.
+
+Trường `word` chứa trọn cụm ở dạng chuẩn, giữ giới từ cần thiết; `context` giữ nguyên câu trong bài kể cả khi động từ chia thì hoặc có thành phần chen giữa. Ví dụ mẫu JSON dùng `meet a deadline` và `take responsibility for`. Không tách các từ thành phần thành nhiều thẻ cùng nghĩa. Synonyms/paraphrases/ghi chú là tùy chọn; không yêu cầu tạo IPA hoặc dịch cả bài.
+
+Đây là hướng dẫn cho AI do người học chọn, không phải bộ nhận diện collocations mới chạy trên máy chủ. Luồng **Flashcard bài này** vẫn chỉ dùng các mục có sẵn trong dữ liệu cục bộ. Đã kiểm tra prompt, ví dụ JSON, nhập/xuất nguyên cụm, chống trùng và 4 ngôn ngữ giao diện; chưa gọi AI trả phí để đánh giá chất lượng trích cụm của từng nhà cung cấp.
+
 ## Chọn từ và lưu dữ liệu
 
 - `POST /api/readings/<uuid>/vocabulary-deck/` chọn tối đa 20 từ/cụm từ có nghĩa tiếng Việt sẵn trong phần từ vựng của bài hoặc các bộ từ công khai đã nhập vào database. Ưu tiên từ của bài, cụm từ và từ xuất hiện nhiều lần. Không gọi AI hoặc dịch vụ từ điển bên ngoài.

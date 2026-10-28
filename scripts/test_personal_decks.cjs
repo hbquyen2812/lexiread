@@ -42,6 +42,24 @@ const decks=scope.window.LexiDecks,api=scope.window.LEXIREAD_PREVIEW.api;
   assert.equal(source(decks.prompt('Topic','Work','B1',40,reading,'topic')).reading,undefined,'topic mode never includes the hidden passage');
   for(const args of [['Deck','','B1',20,'','reading'],['Deck','Work','Z9',20],['Deck','Work','B1',999],['Deck','','B1',20,'x'.repeat(20001),'reading']])assert.throws(()=>decks.prompt(...args));
   assert.match(decks.prompt('Deck','','C2',20,reading,'reading'),/không tạo file JSON rỗng/);
+  // Prompt examples must themselves be importable as complete phrase cards, without
+  // requiring optional enrichment or losing the original inflected sentence.
+  const phrasePrompt=decks.prompt('Cụm từ trong bài','','B1',40,'We met a tight deadline. She took responsibility for checking the report.','reading');
+  assert.match(phrasePrompt,/phần lớn bộ từ cho các cụm/);
+  assert.match(phrasePrompt,/Không loại một cụm đáng học chỉ vì từng từ thành phần đều dễ/);
+  assert.match(phrasePrompt,/Không tách thêm các từ thành phần/);
+  assert.match(phrasePrompt,/Không ép đủ tỷ lệ/);
+  const example=JSON.parse(phrasePrompt.slice(phrasePrompt.lastIndexOf('\n{')+1));
+  const phrases=decks.normalize(example).items;
+  assert.deepEqual(Array.from(phrases,v=>v.word),['meet a deadline','take responsibility for']);
+  assert.equal(phrases[0].context,'We met a tight deadline.');
+  assert.equal(phrases[1].usage_pattern,'take responsibility for + noun / V-ing');
+  assert.equal(phrases[0].synonyms.length,0);
+  assert.equal((await post(example)).created,2);
+  const phraseExport=await api('/vocabulary/deck/?name='+encodeURIComponent(example.deck.name));
+  assert.equal(phraseExport.vocabulary.length,2);
+  assert.ok(phraseExport.vocabulary.some(v=>v.word==='take responsibility for'));
+  assert.equal((await post(phraseExport)).created,0,'phrase re-import does not create component-word cards');
 
   const {environment}=require('./dom_test_env.cjs'),dom=environment(),win=dom.window,doc=win.document;
   let copied='',calls=0;
@@ -53,6 +71,7 @@ const decks=scope.window.LexiDecks,api=scope.window.LEXIREAD_PREVIEW.api;
   const clickPrompt=async()=>{root.querySelector('[data-deck-action=prompt]').click();await tick();};
   assert.equal(el('deck-source').value,'reading');assert.equal(el('deck-topic').disabled,true);
   assert.equal(el('deck-level').selectedOptions[0].textContent,'B1 trở lên');
+  assert.equal(el('deck-count').value,'40');
   el('deck-name').value='My reading';await clickPrompt();assert.match(root.querySelector('[data-deck-prompt-error]').textContent,/dán bài đọc/);assert.equal(copied,'');
   el('deck-reading').value=reading;el('deck-reading').dispatchEvent(new win.Event('input',{bubbles:true}));await clickPrompt();
   assert.equal(source(copied).reading,reading);assert.ok(!el('deck-prompt-details').hidden);assert.equal(calls,0);

@@ -60,6 +60,9 @@ const rows=[
 ];
 // Existing screens use Vietnamese source labels. Exact matches avoid changing learning content.
 const legacy=[
+['Ưu tiên collocations và cụm diễn đạt trong bài, kèm câu gốc để ôn.','Prioritize collocations and useful phrases from the reading, with the original sentence for review.','Privilégiez les collocations et expressions du texte, avec la phrase originale pour réviser.','优先选择文章中的搭配和实用短语，并保留原句供复习。'],
+['Số mục (từ / cụm)','Items (words / phrases)','Nombre de mots / expressions','数量（单词／短语）'],
+['B1 trở lên gồm B1–C2, xét theo nghĩa của cả từ hoặc cụm. Bài ít mục phù hợp thì lấy ít hơn.','B1 and above includes B1–C2, based on the meaning of the whole word or phrase. Return fewer items if the reading has fewer suitable ones.','B1 et plus comprend B1–C2, selon le sens du mot ou de l’expression entière. Retenez moins d’éléments si le texte en contient moins.','B1 及以上包括 B1–C2，按整个词语或短语的含义判断。合适的词项较少时，可少选。'],
 ['Đã lưu','Saved','Enregistré','已保存'],
 ['Ôn tiếp','Next review:','Prochaine révision :','下次复习：'],
 ['khoảng {0} phút nữa','in about {0} minutes','dans environ {0} minutes','约 {0} 分钟后'],
