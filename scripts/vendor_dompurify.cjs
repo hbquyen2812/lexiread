@@ -5,7 +5,11 @@ const root = path.resolve(__dirname, '..');
 const source = path.join(root, 'node_modules/dompurify');
 const target = path.join(root, 'static/vendor');
 fs.mkdirSync(target, { recursive: true });
-for (const [from, to] of [['dist/purify.min.js', 'purify.min.js'], ['LICENSE', 'DOMPurify-LICENSE']]) {
+for (const [from, to] of [
+  ['dist/purify.min.js', 'purify.min.js'],
+  ['dist/purify.min.js.map', 'purify.min.js.map'],
+  ['LICENSE', 'DOMPurify-LICENSE'],
+]) {
   fs.copyFileSync(path.join(source, from), path.join(target, to));
 }
 console.log('Vendored DOMPurify ' + require(path.join(source, 'package.json')).version);

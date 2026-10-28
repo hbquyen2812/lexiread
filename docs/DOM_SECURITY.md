@@ -25,15 +25,26 @@ Use Node 22.22.2+, 24.15.0+, or 26+ as specified in `package.json`.
 npm ci --ignore-scripts
 npm run vendor:dompurify
 npm run test:security
+python manage.py test learning.test_static_build --settings=config.test_settings
 python scripts/build_preview.py
 ```
 
 Update the pinned DOMPurify dependency and lockfile before regenerating the vendor
-copy; also update its versioned script URL. Retain `static/vendor/DOMPurify-LICENSE`.
+copy; also update its versioned script URL. Retain `static/vendor/DOMPurify-LICENSE`
+and `static/vendor/purify.min.js.map`. The minified JS references this map;
+omitting it makes production `collectstatic` fail before Gunicorn starts. The
+vendor script copies all three files unchanged from the pinned npm package.
 The browser loads no CDN or model service for sanitization. Tests use the real
 vendored sanitizer with jsdom, verify the vendor bytes against the locked package,
 exercise the 11 reported render paths with hostile input, and reject new raw HTML
 writes in these modules. Audio integration tests also use this real sanitizer.
+
+The production-static regression test runs the complete WhiteNoise manifest and
+compression pipeline in a temporary directory, checks the rewritten source-map
+reference and serves hashed JS, source map, CSS, font and SVG through WhiteNoise.
+It uses isolated test settings without reading `.env` or connecting to a database.
+The GitHub Actions `Production static assets` check runs this test on pull requests
+and pushes to `main`. Keep strict manifest validation enabled.
 
 Validated on 2026-10-27: all 17 Node suites, the HTTP QA smoke suite, and a Chromium
 import preview containing image event handlers, script tags and SVG handlers.
